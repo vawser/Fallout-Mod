@@ -1,0 +1,48 @@
+namespace = jacobstown
+
+country_event = {
+	id = jacobstown.1
+	title = jacobstown.1.title
+	desc = jacobstown.1.desc
+	picture = JACOBSTOWN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAC
+		2986 = {
+		    NOT = {
+			    owner = { technology_group = tech_super_mutant }
+			}
+            NOT = { is_empty = yes }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - jacobstown.1" }
+        }
+    }
+	
+	option = {
+		name = jacobstown.1.option.a
+		2986 = {
+		    add_base_manpower = 1
+            add_base_production = 1
+            add_base_tax = 1 
+		}
+	}
+	
+    option = {
+		name = jacobstown.1.option.b
+        
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50 
+	}
+}
+

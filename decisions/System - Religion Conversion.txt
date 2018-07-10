@@ -1,0 +1,601 @@
+country_decisions = {
+    adopt_secular = {
+        potential = {
+            NOT = { religion = secular }
+            dominant_religion = secular
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = secular
+        }
+        effect = {
+            add_stability = -3
+            change_religion = secular
+            capital_scope = {
+                change_religion = secular
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    
+    adopt_atomic_worship = {
+        potential = {
+            NOT = { religion = atomic_worship }
+            dominant_religion = atomic_worship
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = atomic_worship
+        }
+        effect = {
+            add_stability = -3
+            change_religion = atomic_worship
+            capital_scope = {
+                change_religion = atomic_worship
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_animism = {
+        potential = {
+            NOT = { religion = animism }
+            dominant_religion = animism
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = animism
+        }
+        effect = {
+            add_stability = -3
+            change_religion = animism
+            capital_scope = {
+                change_religion = animism
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_fetishism = {
+        potential = {
+            NOT = { religion = fetishism }
+            dominant_religion = fetishism
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = fetishism
+        }
+        effect = {
+            add_stability = -3
+            change_religion = fetishism
+            capital_scope = {
+                change_religion = fetishism
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_totemism = {
+        potential = {
+            NOT = { religion = totemism }
+            dominant_religion = totemism
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = totemism
+        }
+        effect = {
+            add_stability = -3
+            change_religion = totemism
+            capital_scope = {
+                change_religion = totemism
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_tengri = {
+        potential = {
+            NOT = { religion = tengri }
+            dominant_religion = tengri
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = tengri
+        }
+        effect = {
+            add_stability = -3
+            change_religion = tengri
+            capital_scope = {
+                change_religion = tengri
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_norse = {
+        potential = {
+            NOT = { religion = norse }
+            dominant_religion = norse
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = norse
+        }
+        effect = {
+            add_stability = -3
+            change_religion = norse
+            capital_scope = {
+                change_religion = norse
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_zoroastrian = {
+        potential = {
+            NOT = { religion = zoroastrian }
+            dominant_religion = zoroastrian
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = zoroastrian
+        }
+        effect = {
+            add_stability = -3
+            change_religion = zoroastrian
+            capital_scope = {
+                change_religion = zoroastrian
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_mormon = {
+        potential = {
+            NOT = { religion = mormon }
+            dominant_religion = mormon
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = mormon
+        }
+        effect = {
+            add_stability = -3
+            change_religion = mormon
+            capital_scope = {
+                change_religion = mormon
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_catholic = {
+        potential = {
+            NOT = { religion = catholic }
+            dominant_religion = catholic
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = catholic
+        }
+        effect = {
+            add_stability = -3
+            change_religion = catholic
+            capital_scope = {
+                change_religion = catholic
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_baptist = {
+        potential = {
+            NOT = { religion = baptist }
+            dominant_religion = baptist
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = baptist
+        }
+        effect = {
+            add_stability = -3
+            change_religion = baptist
+            capital_scope = {
+                change_religion = baptist
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_orthodox = {
+        potential = {
+            NOT = { religion = orthodox }
+            dominant_religion = orthodox
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = orthodox
+        }
+        effect = {
+            add_stability = -3
+            change_religion = orthodox
+            capital_scope = {
+                change_religion = orthodox
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_coptic = {
+        potential = {
+            NOT = { religion = coptic }
+            dominant_religion = coptic
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = coptic
+        }
+        effect = {
+            add_stability = -3
+            change_religion = coptic
+            capital_scope = {
+                change_religion = coptic
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_sunni = {
+        potential = {
+            NOT = { religion = sunni }
+            dominant_religion = sunni
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = sunni
+        }
+        effect = {
+            add_stability = -3
+            change_religion = sunni
+            capital_scope = {
+                change_religion = sunni
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_shia = {
+        potential = {
+            NOT = { religion = shia }
+            dominant_religion = shia
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = shia
+        }
+        effect = {
+            add_stability = -3
+            change_religion = shia
+            capital_scope = {
+                change_religion = shia
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_ibadi = {
+        potential = {
+            NOT = { religion = ibadi }
+            dominant_religion = ibadi
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = ibadi
+        }
+        effect = {
+            add_stability = -3
+            change_religion = ibadi
+            capital_scope = {
+                change_religion = ibadi
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_theravada = {
+        potential = {
+            NOT = { religion = theravada }
+            dominant_religion = theravada
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = theravada
+        }
+        effect = {
+            add_stability = -3
+            change_religion = theravada
+            capital_scope = {
+                change_religion = theravada
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_vajrayana = {
+        potential = {
+            NOT = { religion = vajrayana }
+            dominant_religion = vajrayana
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = vajrayana
+        }
+        effect = {
+            add_stability = -3
+            change_religion = vajrayana
+            capital_scope = {
+                change_religion = vajrayana
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_mahayana = {
+        potential = {
+            NOT = { religion = mahayana }
+            dominant_religion = mahayana
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = mahayana
+        }
+        effect = {
+            add_stability = -3
+            change_religion = mahayana
+            capital_scope = {
+                change_religion = mahayana
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_taoism = {
+        potential = {
+            NOT = { religion = taoism }
+            dominant_religion = taoism
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = taoism
+        }
+        effect = {
+            add_stability = -3
+            change_religion = taoism
+            capital_scope = {
+                change_religion = taoism
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_shinto = {
+        potential = {
+            NOT = { religion = shinto }
+            dominant_religion = shinto
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = shinto
+        }
+        effect = {
+            add_stability = -3
+            change_religion = shinto
+            capital_scope = {
+                change_religion = shinto
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_hinduism = {
+        potential = {
+            NOT = { religion = hinduism }
+            dominant_religion = hinduism
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = hinduism
+        }
+        effect = {
+            add_stability = -3
+            change_religion = hinduism
+            capital_scope = {
+                change_religion = hinduism
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_sikhism = {
+        potential = {
+            NOT = { religion = sikhism }
+            dominant_religion = sikhism
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = sikhism
+        }
+        effect = {
+            add_stability = -3
+            change_religion = sikhism
+            capital_scope = {
+                change_religion = sikhism
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    adopt_jewish = {
+        potential = {
+            NOT = { religion = jewish }
+            dominant_religion = jewish
+            NOT = { has_country_modifier = fm_conversion_zeal }
+        }
+        allow = {
+            dominant_religion = jewish
+        }
+        effect = {
+            add_stability = -3
+            change_religion = jewish
+            capital_scope = {
+                change_religion = jewish
+            }
+            add_country_modifier = {
+                name = "fm_conversion_zeal"
+                duration = 3650
+            }	
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

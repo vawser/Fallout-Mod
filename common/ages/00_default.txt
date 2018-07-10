@@ -1,0 +1,175 @@
+post_war_age = {
+	start = 2260
+	
+	can_start = {
+		always = yes
+	}
+
+    religious_conflicts = yes
+    absolutism = {
+        harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -3
+		war_exhaustion = -1
+	}
+
+	abilities = {
+		ab_swarm = {
+			modifier = {
+				land_forcelimit_modifier = 0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_colony_boost_development = {
+			rule = {
+				can_colony_boost_development = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_attack_bonus_in_capital_terrain = {
+			rule = {
+				attack_bonus_in_capital_terrain = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_backrow_artillery = {
+			modifier = {
+				backrow_artillery_damage = 0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_gift_of_the_gab = {
+			modifier = {
+				diplomatic_reputation = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_yearly_purges = {
+			modifier = {
+				yearly_corruption = -0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_unity_through_faith = {
+			modifier = {
+				tolerance_own = 2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_free_war_taxes = {
+			modifier = {
+				war_taxes_cost_modifier = -1.0
+			}
+			ai_will_do = {
+				factor = 10
+			}	
+		}
+        
+        ab_adm_efficiency = {
+			modifier = {
+				administrative_efficiency = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_yearly_absolutism = {
+			modifier = {
+				yearly_absolutism = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+        
+        ab_colonial_growth = {
+			modifier = {
+				global_colonial_growth = 15
+			}
+			ai_will_do = {
+				factor = 50
+			}
+		}
+	}
+    
+	objectives = {
+		# Prestigious Capital
+		obj_prestigious_capital = {
+            capital_scope = {
+                development = 50
+            }
+            capital_scope = {
+                religion = ROOT
+            }
+            capital_scope = {
+                culture = ROOT
+            }
+            capital_scope = {
+                NOT = { devastation = 5 }
+            }
+        }
+        # Wise Ruler
+		obj_wise_ruler = {
+            OR = {
+                adm = 6
+                dip = 6
+                mil = 6
+            }
+        }
+        # Religious Defender
+        obj_religious_defender = {
+            is_defender_of_faith = yes
+            religious_unity = 1.0
+        }
+        obj_colossal_fleet = {
+            naval_forcelimit = 100
+            navy_size_percentage = 0.9
+        }
+        obj_colossal_army = {
+            land_forcelimit = 100
+            army_size_percentage = 0.9
+        }
+        obj_realm_of_virtues = {
+            prestige = 100
+            NOT = { corruption = 5 }
+            OR = {
+                legitimacy = 100
+                horde_unity = 100
+                devotion = 100
+                republican_tradition = 100
+                meritocracy = 100
+            }
+        }
+        obj_diplomatic_connections = {
+            num_of_royal_marriages = 5
+        }	
+	}		
+}

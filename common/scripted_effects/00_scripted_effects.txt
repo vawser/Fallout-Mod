@@ -1,0 +1,21 @@
+#General effect for extending or adding province modifier
+#Province Scope
+add_or_extend_province_modifier_effect = {
+	if = {
+		limit = {
+			has_province_modifier = $MODIFIER$
+		}
+		extend_province_modifier = { name = $MODIFIER$ duration = $DURATION$ }
+	}
+	else = {
+		add_province_modifier = { name = $MODIFIER$ duration = $DURATION$ }
+	}
+}
+
+
+grant_immortality = {
+    add_ruler_modifier = {
+        name = immortality
+        duration = -1
+    }
+}

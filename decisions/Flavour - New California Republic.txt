@@ -1,0 +1,100 @@
+country_decisions = {
+	the_great_western_peace = {
+		potential = {
+			OR = {
+				tag = NCR
+				tag = X03
+				tag = GD1
+			}
+			NOT = { has_country_modifier = the_great_western_peace }
+			capital_scope = {
+				region = california_region
+			}
+		}
+		allow =  {
+			own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_PHOENIX
+                130 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SANTA_FE
+                335 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SHADY_SANDS
+                2956 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HOOVER_DAM
+                267 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+		}
+	  	effect = {
+			add_country_modifier = {
+				name = the_great_western_peace
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+    form_ranger_regiment = {
+        potential = {
+			has_dlc = "Third Rome"
+#            NOT = { has_dlc = "The Cossacks" }
+            OR = {
+				tag = NCR
+				tag = GD1
+			}
+		}
+		allow =  {
+			manpower = 5
+            years_of_income = 5
+		}
+	  	effect = {
+			add_manpower = -5
+            add_years_of_income = -5
+            
+            custom_tooltip = RANGER_RECRUITMENT
+            hidden_effect = {
+                capital_scope = {
+                    ROOT = {
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                    }
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 10
+                years_of_income = 10
+            }
+            
+            modifier = {
+                factor = 0
+                army_size_percentage = 0.9
+            }
+		}
+    }
+}

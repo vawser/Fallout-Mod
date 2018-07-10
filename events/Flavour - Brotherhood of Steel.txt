@@ -1,0 +1,337 @@
+namespace = brotherhood_of_steel
+
+# "A Knight's Quarrel"
+country_event = {
+	id = brotherhood_of_steel.1
+	title = brotherhood_of_steel.1.title
+	desc = brotherhood_of_steel.1.desc
+    picture = BOS_WORKSHOP_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        OR = {
+            government = administrative_brotherhood_order
+            government = diplomatic_brotherhood_order
+            government = fascist_brotherhood_order
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel.1" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel.1.option.a
+
+        add_devotion = -20
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                devotion = 80
+            }
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel.1.option.b
+
+        add_devotion = 20
+        add_stability = -1
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                NOT = { devotion = 50 }
+            }
+        }
+	}
+}
+
+# "Clumsy Scribe"
+country_event = {
+	id = brotherhood_of_steel.2
+	title = brotherhood_of_steel.2.title
+	desc = brotherhood_of_steel.2.desc
+    picture = BOS_LAB_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        OR = {
+            government = administrative_brotherhood_order
+            government = diplomatic_brotherhood_order
+            government = fascist_brotherhood_order
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel.2" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel.2.option.a
+
+        add_devotion = 10
+        add_adm_power = -50
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                NOT = { devotion = 50 }
+            }
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel.2.option.b
+
+        add_devotion = 5
+        add_adm_power = -25
+        
+        ai_chance = {
+            factor = 50
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel.2.option.c
+
+        add_devotion = -10
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                devotion = 90
+            }
+        }
+	}
+}
+
+# "Discontent within the Paladins"
+country_event = {
+	id = brotherhood_of_steel.3
+	title = brotherhood_of_steel.3.title
+	desc = brotherhood_of_steel.3.desc
+    picture = BOS_CAFETERIA_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        OR = {
+            government = administrative_brotherhood_order
+            government = diplomatic_brotherhood_order
+            government = fascist_brotherhood_order
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel.3" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel.3.option.a
+
+        add_devotion = -25
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                devotion = 90
+            }
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel.3.option.b
+
+        add_devotion = 25
+        add_mil_power = -100
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                NOT = { devotion = 50 }
+            }
+        }
+	}
+}
+
+# "Clash of Ideology"
+country_event = {
+	id = brotherhood_of_steel.4
+	title = brotherhood_of_steel.4.title
+	desc = brotherhood_of_steel.4.desc
+    picture = BOS_CHAT_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        OR = {
+            government = administrative_brotherhood_order
+            government = diplomatic_brotherhood_order
+            government = fascist_brotherhood_order
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel.4" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel.4.option.a
+
+        add_devotion = 15
+        add_adm_power = -50
+        add_dip_power = -50
+        add_mil_power = -50
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                NOT = { devotion = 50 }
+            }
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel.4.option.b
+
+        add_devotion = 5
+        add_adm_power = -25
+        add_dip_power = -25
+        add_mil_power = -25
+        
+        ai_chance = {
+            factor = 50
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel.4.option.c
+
+        add_devotion = -25
+        add_adm_power = 50
+        add_dip_power = 50
+        add_mil_power = 50
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                devotion = 90
+            }
+        }
+	}
+}
+
+# "Supply Troubles"
+country_event = {
+	id = brotherhood_of_steel.5
+	title = brotherhood_of_steel.5.title
+	desc = brotherhood_of_steel.5.desc
+    picture = BOS_CAFETERIA_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        OR = {
+            government = administrative_brotherhood_order
+            government = diplomatic_brotherhood_order
+            government = fascist_brotherhood_order
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel.5" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel.5.option.a
+
+        add_devotion = -20
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                devotion = 90
+            }
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel.5.option.b
+
+        add_devotion = -10
+        
+        random_list = {
+            33 = {
+               add_adm_power = -50
+            }
+            33 = {
+               add_dip_power = -50
+            }
+            33 = {
+               add_mil_power = -50
+            }
+        }
+        
+        ai_chance = {
+            factor = 50
+        }  
+	}
+    
+    option = {
+		name = brotherhood_of_steel.5.option.c
+
+        add_devotion = 25
+        add_stability = -1
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                NOT = { devotion = 50 }
+            }
+        }
+	}
+}

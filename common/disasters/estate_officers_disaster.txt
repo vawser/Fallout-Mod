@@ -1,0 +1,124 @@
+estate_officers_disaster = {
+	potential = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_officers
+		estate_influence = {
+			estate = estate_officers
+			influence = 60
+		}
+        NOT = { has_country_modifier = disaster_cooldown }
+	}
+
+
+	can_start = {
+		has_any_disaster = no
+		estate_influence = {
+			estate = estate_officers
+			influence = 80
+		}
+	}
+	
+	can_stop = {
+		NOT = {
+			estate_influence = {
+				estate = estate_officers
+				influence = 80
+			}		
+		}
+	}
+	
+	down_progress = {
+		factor = 1
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			estate_influence = {
+				estate = estate_officers
+				influence = 80
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_officers
+						influence = 85
+					}			
+				}			
+			}
+		}
+		modifier = {
+			factor = 2
+			estate_influence = {
+				estate = estate_officers
+				influence = 85
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_officers
+						influence = 90
+					}			
+				}			
+			}
+		}
+		modifier = {
+			factor = 3
+			estate_influence = {
+				estate = estate_officers
+				influence = 90
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_officers
+						influence = 95
+					}			
+				}			
+			}
+		}	
+		modifier = {
+			factor = 4
+			estate_influence = {
+				estate = estate_officers
+				influence = 95
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_officers
+						influence = 100
+					}			
+				}			
+			}
+		}	
+		modifier = {
+			factor = 5
+			estate_influence = {
+				estate = estate_officers
+				influence = 100
+			}
+		}		
+	}
+	
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = EST_CRUSHED_OFFICERS
+			
+            NOT = { has_country_flag = in_officers_disaster }					
+		}
+	}
+	
+	modifier = {	
+		discipline = -0.1
+        siege_ability = -0.1
+        infantry_cost = 0.25
+	}
+
+	on_start = fallout_estates.24
+	on_end = fallout_estates.25
+	
+	on_monthly = {
+	}
+}
+

@@ -1,0 +1,41 @@
+# set_variable = { which = province_id value = 564  }
+
+native_size = 2
+native_ferocity = 2
+native_hostileness = 2
+is_city = no
+
+base_tax = 4
+base_production = 3
+base_manpower = 4
+
+culture = raider
+religion = tribalism
+
+trade_goods = unknown
+hre = no
+
+# The Hub founded
+2093.1.1 = {
+    add_core = TUB
+    owner = TUB
+    controller = TUB
+    is_city = yes
+    
+    base_tax = 4
+    base_production = 3
+    base_manpower = 4
+    
+    culture = new_california
+    religion = secular
+    
+    trade_goods = munitions
+}
+
+# NCR Incorporation (adjust date)
+2189.1.1 = {
+    add_core = NCR
+    owner = NCR
+    controller = NCR
+}
+

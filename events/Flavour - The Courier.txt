@@ -1,0 +1,217 @@
+namespace = courier
+
+# "Difficult Choices"
+country_event = {
+    id = courier.1
+    title = courier.1.title
+    desc = courier.1.desc
+    picture = DOC_MITCHELL_eventPicture
+
+    fire_only_once = yes
+    
+    trigger = {
+        tag = NVG
+	}
+	
+    mean_time_to_happen = {
+		months = 60
+	}
+    
+    # NCR
+    option = {
+        name = courier.1.option.a
+        
+        NCR = { country_event = { id = courier.3 } }
+        
+        ai_chance = { factor = 45 }
+    }
+    
+    # Legion
+    option = {
+        name = courier.1.option.b
+        
+        CAE = { country_event = { id = courier.2 } }
+        
+        ai_chance = { factor = 45 }
+    }
+    
+    # Self
+    option = {
+        name = courier.1.option.c
+    
+        add_prestige = 25
+        hidden_effect = { set_global_flag = courier_event_may_fire }
+
+        ai_chance = { factor = 10 }
+    }
+}
+
+# Legion Alliance Request
+country_event = {
+    id = courier.2
+    title = courier.2.title
+    desc = courier.2.desc
+    picture = DOC_MITCHELL_eventPicture
+
+    is_triggered_only = yes
+
+    after = {
+        hidden_effect = { set_global_flag = courier_event_may_fire }
+        hidden_effect = { set_global_flag = courier_new_vegas_with_legion }
+    }
+
+    option = {
+        name = courier.2.option.a
+
+        hidden_effect = { remove_historical_rival = CAE }
+        create_alliance = NVG
+        add_opinion = {
+            who = NVG
+            modifier = good_relations
+        }
+        reverse_add_opinion = {
+            who = NVG
+            modifier = good_relations
+        }
+
+        ai_chance = {
+            factor = 50
+
+            modifier = {
+                factor = 0
+                NOT = {
+                    has_opinion = {
+                        who = NVG
+                        value = 0
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = courier.2.option.b
+
+        add_prestige = 10
+
+        hidden_effect = {
+            set_country_flag = rejected_courier
+        }
+
+        ai_chance = {
+            factor = 50
+        }
+    }
+}
+
+# NCR Alliance Request
+country_event = {
+    id = courier.3
+    title = courier.3.title
+    desc = courier.3.desc
+    picture = DOC_MITCHELL_eventPicture
+
+    is_triggered_only = yes
+
+    after = {
+        hidden_effect = { set_global_flag = courier_event_may_fire }
+        hidden_effect = { set_global_flag = courier_new_vegas_with_ncr }
+    }
+
+    option = {
+        name = courier.3.option.a
+
+        hidden_effect = { remove_historical_rival = NCR }
+        create_alliance = NVG
+        add_opinion = {
+            who = NVG
+            modifier = good_relations
+        }
+        reverse_add_opinion = {
+            who = NVG
+            modifier = good_relations
+        }
+
+        ai_chance = {
+            factor = 50
+
+            modifier = {
+                factor = 0
+                NOT = {
+                    has_opinion = {
+                        who = NVG
+                        value = 0
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = courier.3.option.b
+
+        add_prestige = 10
+
+        ai_chance = {
+            factor = 50
+        }
+    }
+}
+
+# Platinum Chip
+country_event = {
+    id = courier.4
+    title = courier.4.title
+    desc = courier.4.desc
+    picture = HOOVER_DAM_eventPicture
+    
+    trigger = {
+        OR = {
+            tag = CAE
+            tag = NCR
+            tag = NVG
+        }
+        NOT = { has_country_flag = courier_offer_done }
+        NOT = { 
+            any_country = {
+                has_country_modifier = power_of_the_courier
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+		months = 12
+	}
+
+    after = { hidden_effect = { set_country_flag = courier_offer_done } }
+    
+    option = {
+        name = courier.4.option.a
+
+        add_years_of_income = -5
+
+        add_country_modifier = {
+            name = power_of_the_courier
+            duration = 3650
+        }
+
+        hidden_effect = { set_global_flag = power_of_courier_given }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+                NOT = { years_of_income = 5 }
+            }
+        }
+    }
+
+    option = {
+        name = courier.4.option.b
+
+        ai_chance = {
+            factor = 50
+        }
+    }
+}
+

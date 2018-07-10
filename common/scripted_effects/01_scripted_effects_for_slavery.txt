@@ -1,0 +1,23 @@
+lose_slaves_effect = {
+    hidden_effect = {
+        if = { 
+            limit = { NOT = { check_variable = { which = slave_count value = $AMOUNT$ } } }
+            set_variable = { which = slave_count value = 0 }
+        }
+           
+        if = { 
+            limit = { check_variable = { which = slave_count value = $AMOUNT$ } }
+            subtract_variable = { which = slave_count value = $AMOUNT$ }
+        }
+    }
+}
+
+add_slaves_effect = {
+    hidden_effect = {
+        change_variable = {
+            which = slave_count
+            value = $AMOUNT$
+        }
+    }
+}
+

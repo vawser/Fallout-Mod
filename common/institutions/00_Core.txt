@@ -1,0 +1,1316 @@
+# Institutions
+# Each one symbolises the nation "learning" of the institution, not that it has occured
+
+# Bottlecaps
+bottlecaps = {
+	penalty = 0.5
+
+	bonus = {
+		advisor_pool = 1
+        max_states = 5
+	}
+	history = {
+        owner = {
+            OR = {
+                technology_group = tech_wastelander
+                technology_group = tech_robot
+                technology_group = tech_ghoul
+                technology_group = tech_bos
+                technology_group = tech_commonwealth
+                technology_group = tech_new_vegas
+                technology_group = tech_ncr
+                technology_group = tech_caesars_legion
+                technology_group = tech_enclave
+                technology_group = tech_shi
+                technology_group = tech_alien
+                technology_group = tech_vault_dweller
+                technology_group = tech_the_kings
+                technology_group = tech_triggermen
+                technology_group = tech_children_of_the_atom
+                technology_group = tech_hubologist
+            }
+        }
+	}
+    
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+        # --------- Base
+        modifier = {
+			factor = 0.5
+			scale = yes
+            
+            potential = {
+                any_friendly_coast_border_province = {
+                    bottlecaps = 100
+                }
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = tt_base_bottlecaps
+                any_friendly_coast_border_province = {
+                    bottlecaps = 100
+                }
+            }
+		}
+        
+        # --------- Circumstantial
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_robot }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_robotic_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_robot }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_bos }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_bos_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_bos }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_commonwealth }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_institute_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_commonwealth }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_new_vegas }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_vegas_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_new_vegas }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_ncr }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_ncr_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_ncr }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_enclave }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_enclave_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_enclave }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_shi }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_shi_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_shi }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_alien }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_alien_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_alien }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_vault_dweller }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_vault_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_vault_dweller }
+			}
+		}
+        
+        # --------- Within Country
+        modifier = {
+			factor = 1
+			potential = {
+				owner = {
+					any_owned_province = {
+                        bottlecaps = 100
+                    }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_presence_bottlecaps
+				owner = {
+					any_owned_province = {
+                        bottlecaps = 100
+                    }
+				}
+			}
+		}
+        
+        # --------- Embraced
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = bottlecaps
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_embraced_bottlecaps
+				owner = {
+					has_institution = bottlecaps
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { 
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+# RobCo Industries
+robco = {
+	penalty = 0.5
+	
+	bonus = {
+		state_maintenance_modifier = -0.1
+        global_trade_goods_size_modifier = 0.1
+	}
+    
+    historical_start_date = 2300.1.1
+	historical_start_province = 2954
+    
+    history = {
+        always = no
+        # owner = {
+            # OR = {
+                # technology_group = tech_robot
+                # technology_group = tech_bos
+                # technology_group = tech_commonwealth
+                # technology_group = tech_new_vegas
+                # technology_group = tech_ncr
+                # technology_group = tech_enclave
+                # technology_group = tech_shi
+                # technology_group = tech_alien
+                # technology_group = tech_vault_dweller
+            # }
+        # }
+	}
+    
+    can_start = {
+		is_year = 2300
+		is_state = yes
+		is_island = no
+        development = 15
+	}
+	start_chance = 5
+    on_start = fallout_institutions.10
+    
+	can_embrace = {
+		owner = { has_institution = bottlecaps }
+	}
+	
+    embracement_speed = {
+        # --------- Base
+        modifier = {
+			factor = 0.5
+			scale = yes
+            
+            potential = {
+                any_friendly_coast_border_province = {
+                    robco = 100
+                }
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = tt_base_robco
+                any_friendly_coast_border_province = {
+                    robco = 100
+                }
+            }
+		}
+        
+        # --------- Circumstantial
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_robot }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_robotic_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_robot }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_bos }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_bos_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_bos }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_commonwealth }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_institute_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_commonwealth }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_enclave }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_enclave_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_enclave }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_shi }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_shi_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_shi }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_alien }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_alien_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_alien }
+			}
+		}
+        
+        # --------- Within Country
+        modifier = {
+			factor = 1
+			potential = {
+				owner = {
+					any_owned_province = {
+                        robco = 100
+                    }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_presence_robco
+				owner = {
+					any_owned_province = {
+                        robco = 100
+                    }
+				}
+			}
+		}
+        
+        # --------- Embraced
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = robco
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_embraced_robco
+				owner = {
+					has_institution = robco
+				}
+			}
+		}
+	}
+    
+	ai_will_do = { 
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+# REPCONN Aerospace
+repconn = {
+	penalty = 0.5
+
+	bonus = {
+		reinforce_cost_modifier = -0.05
+        movement_speed = 0.05
+	}
+
+    historical_start_date = 2330.1.1
+	historical_start_province = 2954
+    
+    history = {
+        always = no
+        # owner = {
+            # OR = {
+                # technology_group = tech_robot
+                # technology_group = tech_bos
+                # technology_group = tech_commonwealth
+                # technology_group = tech_new_vegas
+                # technology_group = tech_ncr
+                # technology_group = tech_enclave
+                # technology_group = tech_shi
+                # technology_group = tech_alien
+                # technology_group = tech_vault_dweller
+            # }
+        # }
+	}
+
+    can_start = {
+		is_year = 2330
+		is_state = yes
+		is_island = no
+		development = 15
+	}
+	start_chance = 5
+    on_start = fallout_institutions.11
+    
+	can_embrace = {
+		owner = { has_institution = robco }
+	}
+	
+    embracement_speed = {
+        # --------- Base
+        modifier = {
+			factor = 0.5
+			scale = yes
+            
+            potential = {
+                any_friendly_coast_border_province = {
+                    repconn = 100
+                }
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = tt_base_repconn
+                any_friendly_coast_border_province = {
+                    repconn = 100
+                }
+            }
+		}
+        
+        # --------- Circumstantial
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_robot }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_robotic_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_robot }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_bos }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_bos_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_bos }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_commonwealth }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_institute_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_commonwealth }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_enclave }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_enclave_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_enclave }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_shi }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_shi_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_shi }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_alien }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_alien_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_alien }
+			}
+		}
+        
+        # --------- Within Country
+        modifier = {
+			factor = 1
+			potential = {
+				owner = {
+					any_owned_province = {
+                        repconn = 100
+                    }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_presence_repconn
+				owner = {
+					any_owned_province = {
+                        repconn = 100
+                    }
+				}
+			}
+		}
+        
+        # --------- Embraced
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = repconn
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_embraced_repconn
+				owner = {
+					has_institution = repconn
+				}
+			}
+		}
+	}
+    
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+# Rads
+rads = {
+	penalty = 0.5
+
+	bonus = {
+        shock_damage = 0.05
+        siege_ability = 0.05
+	}
+    
+	history = {
+        always = no
+        # owner = {
+            # OR = {
+                # technology_group = tech_super_mutant
+                # technology_group = tech_commonwealth
+                # technology_group = tech_enclave
+            # }
+        # }
+	}
+
+    historical_start_date = 2360.1.1
+	historical_start_province = 253
+    
+    can_start = {
+		is_year = 2360
+		is_state = yes
+		is_island = no
+		development = 15
+	}
+	start_chance = 5
+    on_start = fallout_institutions.12
+    
+	can_embrace = {
+        owner = { has_institution = repconn }
+	}
+	
+	embracement_speed = {
+        # --------- Base
+        modifier = {
+			factor = 0.5
+			scale = yes
+            
+            potential = {
+                any_friendly_coast_border_province = {
+                    rads = 100
+                }
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = tt_base_rads
+                any_friendly_coast_border_province = {
+                    rads = 100
+                }
+            }
+		}
+        
+        # --------- Circumstantial
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_robot }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_robotic_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_robot }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_bos }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_bos_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_bos }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_commonwealth }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_institute_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_commonwealth }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_enclave }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_enclave_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_enclave }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_shi }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_shi_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_shi }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_alien }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_alien_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_alien }
+			}
+		}
+        
+        # --------- Within Country
+        modifier = {
+			factor = 1
+			potential = {
+				owner = {
+					any_owned_province = {
+                        rads = 100
+                    }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_presence_rads
+				owner = {
+					any_owned_province = {
+                        rads = 100
+                    }
+				}
+			}
+		}
+        
+        # --------- Embraced
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = rads
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_embraced_rads
+				owner = {
+					has_institution = rads
+				}
+			}
+		}
+	}
+    
+	ai_will_do = { 
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+# Power Armor
+power_armor = {
+	penalty = 0.5
+	
+	bonus = {
+		infantry_power = 0.05
+        army_tradition_decay = -0.01
+	}
+	
+    historical_start_date = 2390.1.1
+	historical_start_province = 424
+    
+	history = {
+        always = no
+		# owner = {
+            # OR = {
+                # technology_group = tech_bos
+                # technology_group = tech_shi
+                # technology_group = tech_commonwealth
+                # technology_group = tech_enclave
+            # }
+        # }
+	}
+	
+    can_start = {
+		is_year = 2390
+		is_state = yes
+		is_island = no
+		development = 15
+	}
+	start_chance = 5
+    on_start = fallout_institutions.13
+    
+	can_embrace = {
+        owner = { has_institution = rads }
+	}
+	
+    embracement_speed = {
+        # --------- Base
+        modifier = {
+			factor = 0.5
+			scale = yes
+            
+            potential = {
+                any_friendly_coast_border_province = {
+                    power_armor = 100
+                }
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = tt_base_power_armor
+                any_friendly_coast_border_province = {
+                    power_armor = 100
+                }
+            }
+		}
+        
+        # --------- Circumstantial
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_bos }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_bos_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_bos }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_commonwealth }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_institute_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_commonwealth }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_enclave }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_enclave_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_enclave }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_alien }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_alien_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_alien }
+			}
+		}
+        
+        # --------- Within Country
+        modifier = {
+			factor = 1
+			potential = {
+				owner = {
+					any_owned_province = {
+                        power_armor = 100
+                    }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_presence_power_armor
+				owner = {
+					any_owned_province = {
+                        power_armor = 100
+                    }
+				}
+			}
+		}
+        
+        # --------- Embraced
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = power_armor
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_embraced_power_armor
+				owner = {
+					has_institution = power_armor
+				}
+			}
+		}
+	}
+    
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+# Vault-Tec Industries
+vault_tec = {
+	penalty = 0.5
+    
+	bonus = {
+		stability_cost_modifier = -0.05
+        production_efficiency = 0.05
+	}
+	
+    historical_start_date = 2420.1.1
+	historical_start_province = 2982
+    
+	history = {     
+        always = no
+		# owner = {
+            # OR = {
+                # technology_group = tech_commonwealth
+                # technology_group = tech_enclave
+                # technology_group = tech_vault_dweller
+            # }
+        # }
+	}
+
+    can_start = {
+		is_year = 2420
+		is_state = yes
+		is_island = no
+		development = 15
+	}
+	start_chance = 5
+    on_start = fallout_institutions.14
+    
+	can_embrace = {
+        owner = { has_institution = power_armor }
+	}
+	
+    embracement_speed = {
+        # --------- Base
+        modifier = {
+			factor = 0.5
+			scale = yes
+            
+            potential = {
+                any_friendly_coast_border_province = {
+                    vault_tec = 100
+                }
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = tt_base_vault_tec
+                any_friendly_coast_border_province = {
+                    vault_tec = 100
+                }
+            }
+		}
+        
+        # --------- Circumstantial
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_commonwealth }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_institute_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_commonwealth }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_enclave }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_enclave_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_enclave }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_alien }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_alien_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_alien }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_vault_dweller }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_vault_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_vault_dweller }
+			}
+		}
+        
+        # --------- Within Country
+        modifier = {
+			factor = 1
+			potential = {
+				owner = {
+					any_owned_province = {
+                        vault_tec = 100
+                    }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_presence_vault_tec
+				owner = {
+					any_owned_province = {
+                        vault_tec = 100
+                    }
+				}
+			}
+		}
+        
+        # --------- Embraced
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = vault_tec
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_embraced_vault_tec
+				owner = {
+					has_institution = vault_tec
+				}
+			}
+		}
+	}
+    
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+# G.E.C.K
+geck = {
+	penalty = 0.5
+
+	bonus = {
+		development_cost = -0.05
+        technology_cost = -0.05
+	}
+
+    historical_start_date = 2450.1.1
+	historical_start_province = 542
+    
+	history = {
+        always = no
+		# owner = {
+            # OR = {
+                # technology_group = tech_commonwealth
+                # technology_group = tech_enclave
+            # }
+        # }
+	}
+	
+    can_start = {
+		is_year = 2450
+		is_state = yes
+		is_island = no
+		development = 15
+	}
+	start_chance = 5
+    on_start = fallout_institutions.15
+    
+	can_embrace = {
+		owner = { has_institution = vault_tec }
+	}
+	
+    embracement_speed = {
+        # --------- Base
+        modifier = {
+			factor = 0.5
+			scale = yes
+            
+            potential = {
+                any_friendly_coast_border_province = {
+                    geck = 100
+                }
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = tt_base_geck
+                any_friendly_coast_border_province = {
+                    geck = 100
+                }
+            }
+		}
+        
+        # --------- Circumstantial
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_commonwealth }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_institute_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_commonwealth }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_enclave }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_enclave_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_enclave }
+			}
+		}
+        
+        modifier = {
+			factor = 1
+			potential = {
+				owner = { technology_group = tech_alien }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_alien_knowledge
+				is_capital = yes
+				owner = { technology_group = tech_alien }
+			}
+		}
+        
+        # --------- Within Country
+        modifier = {
+			factor = 1
+			potential = {
+				owner = {
+					any_owned_province = {
+                        geck = 100
+                    }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_presence_geck
+				owner = {
+					any_owned_province = {
+                        geck = 100
+                    }
+				}
+			}
+		}
+        
+        # --------- Embraced
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = geck
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tt_embraced_geck
+				owner = {
+					has_institution = geck
+				}
+			}
+		}
+	}
+    
+	ai_will_do = { 
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}

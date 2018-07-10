@@ -1,0 +1,1457 @@
+#----------------------------------------------------------------------
+# Religions
+#----------------------------------------------------------------------
+# Postwar
+    # secular:          papacy
+    # creatorism:       orthodox_icons
+    # cult_of_mars:     piety
+    # hubology:         fervor
+    # robotics:         fervor
+    
+# Atom
+    # atomic_worship:   uses_church_power
+
+# Pagan
+    # tribalism:        personal_deity
+    # ghoul_tribalism:  personal_deity
+    # mutant_tribalism: personal_deity
+    # swamp_tribalism:  personal_deity
+    # zion_tribal:      can_have_secondary_religion
+    # animism:          fetishist_cult
+    # fetishism:        fetishist_cult
+    # totemism:         fetishist_cult
+
+# Unused:
+    # holy_sites = { } / blessings = { }
+    # uses_karma = yes
+    # uses_harmony = yes
+    # uses_isolationism = yes
+    # personal_deity = yes
+
+religion_group_postwar = {
+	defender_of_faith = yes
+	can_form_personal_unions = no
+
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 1 18 }
+    
+    secular = {
+		color = { 0.6 0.33 0.5 }
+		icon = 1
+
+		country = { 
+            development_cost = -0.1
+            trade_efficiency = 0.05
+		}
+        country_as_secondary = { 
+            stability_cost_modifier = -0.1
+		}
+        
+        harmonized_modifier = harmonized_secular
+        
+        # State Decrees
+        papacy = {
+            # Irrelevant
+			papal_tag = X04
+			election_cost = 1000
+			seat_of_papacy = 1
+		
+            # Common
+			civic_investment = {
+				cost = 50
+				potential = {
+                
+				}
+				allow = {
+				
+				}
+				effect = {
+					add_adm_power = 100
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            mercantile_investment = {
+				cost = 50
+				potential = {
+                
+				}
+				allow = {
+				
+				}
+				effect = {
+					add_dip_power = 100
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            military_investmenet = {
+				cost = 50
+				potential = {
+                
+				}
+				allow = {
+                        
+				}
+				effect = {
+					add_mil_power = 100
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            sell_state_bonds = {
+				cost = 25
+				potential = {
+                
+				}
+				allow = {
+                    NOT = { num_of_loans = 1 }
+				}
+				effect = {
+					add_years_of_income = 1
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            mandate_limited_conscription = {
+				cost = 25
+				potential = {
+                
+				}
+				allow = {
+
+				}
+				effect = {
+					add_yearly_manpower = 1
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            garner_legitimacy = {
+				cost = 25
+				potential = {
+
+				}
+				allow = {
+                    
+				}
+				effect = {
+					if = {
+                        limit = { government = monarchy }
+                        
+                        add_legitimacy = 10
+                    }
+                    if = {
+                        limit = { government = republic }
+                        
+                        add_republican_tradition = 10
+                    }
+                    if = {
+                        limit = { government = theocracy }
+                        
+                        add_devotion = 10
+                    }
+                    if = {
+                        limit = { government = tribal }
+                        
+                        add_horde_unity = 10
+                    }
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            purge_upper_echelons = {
+				cost = 50
+				potential = {
+                    
+				}
+				allow = {
+                    corruption = 0.001
+				}
+				effect = {
+					add_corruption = -2
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            restructure_finances = {
+				cost = 25
+				potential = {
+                
+				}
+				allow = {
+                    inflation = 0.001
+				}
+				effect = {
+					add_inflation = -4
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            expand_market_availability = {
+				cost = 25
+				potential = {
+                
+				}
+				allow = {
+                    NOT = { mercantilism = 100 }
+				}
+				effect = {
+					add_mercantilism = 2.5
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            disseminate_propaganda = {
+				cost = 25
+				potential = {
+                
+				}
+				allow = {
+                    NOT = { prestige = 100 }
+				}
+				effect = {
+					add_prestige = 10
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            soothe_population = {
+				cost = 50
+				potential = {
+                
+				}
+				allow = {
+                    NOT = { stability = 3 }
+				}
+				effect = {
+					add_stability = 1
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            enforce_military_service = {
+				cost = 50
+				potential = {
+                
+				}
+				allow = {
+                    NOT = { army_tradition = 100 }
+				}
+				effect = {
+					add_army_tradition = 10
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            enforce_naval_service = {
+				cost = 50
+				potential = {
+                
+				}
+				allow = {
+                    NOT = { navy_tradition = 100 }
+				}
+				effect = {
+					add_navy_tradition = 10
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+            }
+            
+            promote_freethinking = {
+				cost = 100
+				potential = {
+
+				}
+				allow = {
+                    NOT = { has_country_modifier = promoted_freethinking }
+				}
+				effect = {
+					add_country_modifier = {
+                        name = promoted_freethinking
+                        duration = 1825
+                    }
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            cultivate_bureaucracy = {
+				cost = 100
+				potential = {
+
+				}
+				allow = {
+                    NOT = { has_country_modifier = cultivated_bureaucracy }
+				}
+				effect = {
+					add_country_modifier = {
+                        name = cultivated_bureaucracy
+                        duration = 1825
+                    }
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            bolster_frontier = {
+				cost = 100
+				potential = {
+                    
+				}
+				allow = {
+                    NOT = { has_country_modifier = bolstered_frontier }
+				}
+				effect = {
+					add_country_modifier = {
+                        name = bolstered_frontier
+                        duration = 1825
+                    }
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            explore_wastelands = {
+				cost = 100
+				potential = {
+                    
+				}
+				allow = {
+                    NOT = { has_country_modifier = exploring_the_wastes }
+				}
+				effect = {  
+                    create_conquistador = 25
+                    
+					add_country_modifier = {
+                        name = exploring_the_wastes
+                        duration = 1825
+                    }
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            extol_virtues = {
+				cost = 100
+				potential = {
+                    
+				}
+				allow = {
+                    NOT = { has_country_modifier = extolled_virtues }
+				}
+				effect = {
+					add_country_modifier = {
+                        name = extolled_virtues
+                        duration = 1825
+                    }
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+            
+            call_parades = {
+				cost = 100
+				potential = {
+                    
+				}
+				allow = {
+                    NOT = { has_country_modifier = called_parades }
+				}
+				effect = {  
+					add_country_modifier = {
+                        name = called_parades
+                        duration = 1825
+                    }
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}
+        }
+
+		on_convert = {
+			add_prestige = -100
+			add_stability = -3
+            change_religion = secular
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		} 
+	}
+    
+    creatorism = {
+		color = { 0.3 0.5 0.3 }
+		icon = 2
+
+		country = { 
+            technology_cost = -0.05
+            embracement_cost = -0.1
+		}
+        country_as_secondary = { 
+            technology_cost = -0.05
+		}
+        
+        has_patriarchs = yes
+        
+        harmonized_modifier = harmonized_creatorism
+        
+        orthodox_icons = {
+			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
+
+            focus_production = {
+				production_efficiency = 0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = yes
+					}
+				}
+			}
+            
+			focus_construction = {
+				build_time = -0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = yes
+					}
+				}
+			}
+            
+            focus_transport = {
+				movement_speed = 0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+            
+            focus_trade = {
+				global_own_trade_power = 0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = yes
+					}
+				}
+			}
+            
+            focus_air_support = {
+				hostile_attrition = 1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+            
+            focus_naval_support = {
+				naval_morale = 0.25
+				
+				allow = {
+					num_of_ports = 1
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+            
+            focus_naval_defence = {
+				ship_durability = 0.05
+				
+				allow = {
+					num_of_ports = 1
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+            
+            focus_land_defence = {
+				defensiveness = 0.25
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+            
+            focus_air_defence = {
+				land_attrition = -0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+            
+            focus_infrastructure = {
+				development_cost = -0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = yes
+					}
+				}
+			}
+            
+            focus_communication = {
+				ae_impact = -0.05
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 1.5
+						is_at_war = yes
+					}
+                    modifier = {
+						factor = 3
+						is_in_important_war = yes
+					}
+				}
+			}
+            
+            focus_bombardment = {
+				siege_ability = 0.05
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						is_at_war = yes
+					}
+                    modifier = {
+						factor = 4
+						is_in_important_war = yes
+					}
+				}
+			}
+            
+            focus_technology = {
+				technology_cost = -0.05
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = yes
+					}
+				}
+			}
+        }
+    }
+    
+    # Cult of Mars (unique)
+    cult_of_mars = {
+		color = { 0.3 0.1 0.1 }
+		icon = 3
+
+		country = { 
+            infantry_cost = -0.1
+            global_manpower_modifier = 0.1
+		}
+        country_as_secondary = { 
+            infantry_power = 0.1
+		}
+        
+        harmonized_modifier = harmonized_cult_of_mars
+        
+        uses_piety = yes
+        
+		on_convert = {
+			add_prestige = -100
+			add_stability = -3
+            change_religion = cult_of_mars
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		} 
+    }
+    
+    hubology = {
+		color = { 0.2 0.3 0.6 }
+		icon = 4
+
+		country = { 
+            advisor_pool = 1
+            advisor_cost = -0.25
+		}
+        country_as_secondary = { 
+            missionaries = 1
+		}
+        
+        harmonized_modifier = harmonized_hubology
+        
+		on_convert = {
+			add_prestige = -100
+			add_stability = -3
+            change_religion = hubology
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		} 
+        
+        fervor = yes
+	}
+    
+    robotics = {
+		color = { 0.75 0.23 0.55 }
+		icon = 37
+
+		country = { 
+            technology_cost = -0.1
+            idea_cost = -0.1
+		}
+        country_as_secondary = { 
+            idea_cost = -0.15
+		}
+        
+        harmonized_modifier = harmonized_robotics
+        
+        fervor = yes
+	}
+
+	renewal = {
+		icon = 8
+		color = { 123 81 82 }
+		province = {
+			local_missionary_strength = -0.03
+			local_hostile_attrition = 0.5
+		}
+		country = {
+			diplomatic_reputation = 2
+			tolerance_heathen = 3
+		}
+		country_as_secondary = {
+			monthly_splendor = 0.1
+			diplomatic_reputation = 1
+		}	
+        
+       		fervor = yes
+	}
+    
+    crusade_name = CRUSADE
+    harmonized_modifier = harmonized_postwar
+}
+
+# Atom
+religion_group_atomic = {
+	defender_of_faith = yes
+	can_form_personal_unions = no
+
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 1 18 }
+    
+    atomic_worship = {
+		color = { 0.523 0.0244 0.282 }
+		icon = 6
+		
+		country = { 
+			land_morale = 0.05
+            yearly_corruption = -0.025
+		}
+        province = {
+            local_hostile_attrition = 1
+            local_missionary_strength = -0.02
+        }
+        country_as_secondary = { 
+            local_hostile_attrition = 1
+		}
+        
+		uses_church_power = yes
+		aspects = {
+			atom_vigor
+			atom_fury
+			atom_love
+			atom_rebirth
+			atom_pilgrimage
+			atom_devotion
+			atom_strength
+			atom_charm
+		}
+		aspects_name = ATOMIC_ASPECTS
+	}
+    
+    crusade_name = CRUSADE
+    harmonized_modifier = harmonized_atomic
+}
+
+religion_group_pagan = {
+	defender_of_faith = yes
+	can_form_personal_unions = no
+
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 1 18 }
+
+    # For non-religious raider states
+    tribalism = {
+		color = { 0.204 0.22 0.32 }
+		icon = 5
+
+		country = { 
+			global_manpower_modifier = 0.1
+            tolerance_heretic = -1
+            tolerance_heathen = -1
+		}
+		province = {
+			local_missionary_strength = 0.03
+		}
+        country_as_secondary = { 
+			global_manpower_modifier = 0.1
+		}
+        
+        personal_deity = yes
+	}
+    
+    # For raider ghouls and feral ghouls. Peaceful ghoul states should use Secular
+    ghoul_tribalism = {
+		color = { 0.98 0.77 0.87 }
+		icon = 8
+
+		country = { 
+			land_attrition = -0.25
+            tolerance_heretic = -1
+            tolerance_heathen = -1
+		}
+		province = {
+			local_missionary_strength = 0.03
+		}
+        country_as_secondary = { 
+			land_attrition = -0.1
+		}
+        
+        personal_deity = yes
+	}
+    
+    # For Super mutants and other mutant states
+    mutant_tribalism = {
+		color = { 0.76 0.46 0.21 }
+		icon = 9
+
+		country = { 
+			shock_damage = 0.05
+            tolerance_heretic = -3
+            tolerance_heathen = -3
+		}
+		province = {
+			local_missionary_strength = 0.03
+		}
+        country_as_secondary = { 
+			shock_damage = 0.05
+		}
+        
+        personal_deity = yes
+	}
+    
+    # For swamp people states
+    swamp_tribalism = {
+		color = { 0.54 0.40 0.67 }
+		icon = 31
+
+		country = { 
+			global_regiment_recruit_speed = -0.1
+            tolerance_heretic = -1
+		}
+		province = {
+			local_missionary_strength = 0.03
+		}
+        country_as_secondary = { 
+			global_regiment_recruit_speed = -0.1
+		}
+        
+        fetishist_cult = yes
+	}
+    
+    zion_tribal = {
+		color = { 0.145 0.188 0.195 }
+		icon = 7
+
+		country = { 
+			tolerance_heathen = 1
+			tolerance_heretic = 1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+        country_as_secondary = { 
+			core_creation = -0.1
+			tolerance_heretic = -1
+		}
+        
+        can_have_secondary_religion = yes
+	}
+
+    # 20
+    # Animist
+    animism = {
+		color = { 0.374 0.418 0.252 }
+		icon = 20
+
+		country = { 
+			core_creation = -0.1
+			tolerance_heretic = -2
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+        country_as_secondary = { 
+			core_creation = -0.1
+			tolerance_heretic = -2
+		}
+        
+        fetishist_cult = yes
+	}
+    
+    # 21
+    # Fetishist
+    fetishism = {
+		color = { 0.374 0.418 0.252 }
+		icon = 21
+
+		country = { 
+            core_creation = -0.1
+            global_unrest = -1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+        country_as_secondary = { 
+            global_unrest = -1
+		}
+        
+		fetishist_cult = yes
+	}
+    
+    # 22
+    # Totemist
+    totemism = {
+		color = { 0.374 0.418 0.252 }
+		icon = 22
+
+		country = { 
+            yearly_corruption = -0.05
+            global_unrest = -1
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+        country_as_secondary = { 
+            yearly_corruption = -0.02
+		}
+        
+        fetishist_cult = yes
+	}
+    
+    tengri = {
+        color = { 0.1 0.3 0.85 }
+		icon = 36
+
+		country = {
+			global_unrest = -2
+			global_regiment_cost = -0.1
+		}
+        country_as_secondary = { 
+            migration_cooldown = -0.1
+            native_uprising_chance = -0.10
+		}
+		can_have_secondary_religion = yes
+        
+		heretic = { OLD_TENGRI }
+	}
+    
+    norse = {
+		icon = 30
+		color = { 0.75 0.75 0.75 }
+		country = {
+			land_forcelimit_modifier = 0.10
+			naval_forcelimit_modifier = 0.10
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			galley_power = 0.2
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		personal_deity = yes
+		
+		heretic = { OLD_NORSE }	
+	}
+    
+	crusade_name = CRUSADE
+    
+    harmonized_modifier = harmonized_pagan
+}
+
+# Christians and Mormons
+religion_group_christianity = {
+	defender_of_faith = yes
+	can_form_personal_unions = no
+
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 1 18 }
+
+    catholic = {
+		color = { 0.8 0.8 0 }
+		icon = 10
+
+		country = {
+			tolerance_own = 1
+			tolerance_heretic = -1
+		}
+		
+		country_as_secondary = {
+			diplomatic_reputation = 1
+			advisor_pool = 1
+		}
+		
+		on_convert = {
+			change_religion = catholic
+			add_prestige = -100
+
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}			
+		}
+        
+        fervor = yes
+		
+		misguided_heretic = yes # Other christians hate them less
+	}
+    
+    baptist = {
+		color = { 0.33 0.2 0.5 }
+		icon = 11
+
+		country = {
+			improve_relation_modifier = 0.1
+            global_unrest = -1
+		}
+		
+		country_as_secondary = { 
+            improve_relation_modifier = 0.1
+		}
+		
+		on_convert = {
+			change_religion = baptist
+			add_prestige = -100
+
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}			
+		}
+        
+        fervor = yes
+		
+		misguided_heretic = yes # Other christians hate them less
+	}
+	
+	protestant = {
+		color = { 0.33 0.2 0.5 }
+		icon = 11
+
+		country = {
+			improve_relation_modifier = 0.1
+            global_unrest = -1
+		}
+		
+		country_as_secondary = { 
+            improve_relation_modifier = 0.1
+		}
+		
+		on_convert = {
+			change_religion = protestant
+			add_prestige = -100
+
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}			
+		}
+        
+        fervor = yes
+		
+		misguided_heretic = yes # Other christians hate them less
+	}
+    
+	mormon = {
+		color = { 0.353 0.0913 0.438 }
+		icon = 12
+
+		country = { 
+			tolerance_own = 1
+			infantry_power = 0.05
+		}
+
+        country_as_secondary = { 
+            horde_unity = 0.5
+			legitimacy = 1
+		}
+        
+        on_convert = {
+			change_religion = mormon
+			add_prestige = -100
+
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}			
+		}
+        
+		fervor = yes
+	}
+    
+    orthodox = {
+		color = { 0.7 0.5 0 }
+		icon = 13
+		country = {
+			stability_cost_modifier = -0.1
+			tolerance_own = 1
+		}
+		country_as_secondary = {
+			global_colonial_growth = 10
+			tolerance_own = 1
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		
+		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY ICONOCLAST }
+		
+        fervor = yes
+		misguided_heretic = yes		# Other christians hate them less
+	}
+    
+    coptic = {
+		color = { 0.7 0.5 0.5 }
+		icon = 23
+		country = {
+			defensiveness = 0.1
+			tolerance_own = 1
+		}
+		country_as_secondary = {
+			siege_ability = 0.1
+			defensiveness = 0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
+
+        fervor = yes
+		misguided_heretic = yes		# Other christians hate them less
+	}
+    
+    harmonized_modifier = harmonized_christian
+}
+
+religion_group_muslim = {
+	defender_of_faith = yes
+
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 97 106 } #Including Star of David / Seal of Suleyman
+    
+    sunni = {
+		color = { 0 0.6 0 }
+		icon = 14
+		country = {
+			tolerance_own = 1
+			heir_chance = 1.0
+		}
+		country_as_secondary = {
+			trade_efficiency = 0.1
+			heir_chance = 1.0
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+        fervor = yes
+        
+		heretic = { BEKTASHI AHMADI ZIKRI YAZIDI }
+	}
+
+	shia = {
+		color = { 0 0.8 0 }
+		icon = 15
+		country = {
+			heir_chance = 1.0
+			land_morale = 0.05
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			advisor_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+        fervor = yes
+        
+		heretic = { DRUZE HURUFI ZAIDI }
+	}
+	
+	ibadi = {
+		color = { 0 0.4 0 }
+		icon = 25
+		country = {
+			heir_chance = 1.0
+			naval_morale = 0.1
+		}
+		country_as_secondary = {
+			global_ship_cost = -0.1
+			advisor_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+        fervor = yes
+        
+		heretic = { HARURI SUFRI NAJADAT AZRAQI }
+	}
+	
+	crusade_name = JIHAD
+    
+    harmonized_modifier = harmonized_muslim
+}
+
+religion_group_eastern = {
+	defender_of_faith = yes
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 58 80 }
+
+	theravada = { 
+		color = { 0.8 0.3 0 }
+		icon = 33
+		allowed_conversion = {
+			vajrayana
+			mahayana
+		}
+		country = {
+			tolerance_heretic = 2
+			advisor_cost = -0.1
+		}
+		country_as_secondary = {
+			development_cost = -0.1
+			diplomats = 1
+		}
+		on_convert = {
+			add_prestige = -100
+			add_stability = -1
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { ZEN }
+		
+		fervor = yes
+	}
+	
+	vajrayana = {
+		color = { 0.8 0.3 0.3 }
+		icon = 34
+		allowed_conversion = {
+			mahayana
+			theravada
+		}
+		country = {
+			tolerance_heretic = 1
+			land_morale = 0.05
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			tolerance_own = 1
+		}
+		on_convert = {
+			add_prestige = -100
+			add_stability = -1
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { ZEN }
+		
+		fervor = yes
+	}
+	
+	mahayana = {
+		color = { 0.8 0.3 0.5 }
+		icon = 32
+		allowed_conversion = {
+			vajrayana
+			theravada
+		}
+		country = {
+			tolerance_heretic = 2
+			idea_cost = -0.05
+		}
+		country_as_secondary = {
+			global_tax_modifier = 0.1
+			tolerance_heathen = 2
+		}
+		on_convert = {
+			add_prestige = -100
+			add_stability = -1
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { ZEN }
+		
+		fervor = yes
+	}
+
+	taoism = {
+		color = { 0.84 0.9 0.55 }
+		icon = 18
+		country = {
+			tolerance_heretic = 2
+			adm_tech_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			adm_tech_cost_modifier = -0.1
+			stability_cost_modifier = -0.1
+		}
+		heretic = { TAOIST }
+        
+        fervor = yes
+	}
+
+	shinto = {
+		color = { 0.8 0 0 }
+		icon = 19
+		country = {
+			land_morale = 0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = {
+			discipline = 0.05
+			global_unrest = -1
+		}
+		heretic = { SHUGENDO }
+        
+        fervor = yes
+	}
+	
+	crusade_name = CRUSADE
+    
+    harmonized_modifier = harmonized_eastern
+}
+
+religion_group_dharmic = {
+	defender_of_faith = yes
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 61 82 } #Many shared with Eastern
+
+	hinduism = {
+		color = { 0 0.8 0.8 }
+		icon = 17
+		allowed_conversion = {
+			sikhism
+		}
+		country = {
+			tolerance_heathen = 1
+			tolerance_own = 1
+		}
+		country_as_secondary = {
+			tolerance_heretic = 1
+			tolerance_heathen = 2
+		}
+		
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = sikhism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { BHAKTI }
+	}
+
+	sikhism = {
+		color = { 0 0.6 0.6 }
+		icon = 24
+		allowed_conversion = {
+			hinduism
+		}
+		country = {
+			mil_tech_cost_modifier = -0.1
+			land_morale = 0.1
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			global_unrest = -1
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		
+		on_convert = {
+			change_religion = sikhism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}
+		}
+
+        fervor = yes
+        
+		heretic = { MASANDIS }
+	}
+	
+	crusade_name = CRUSADE
+    
+    harmonized_modifier = harmonized_dharmic
+}
+
+religion_group_jewish = {
+	defender_of_faith = yes
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 106 107 }
+
+	jewish = {
+		icon = 29
+		color = { 0.6 0.1 0.4 }
+		country = {
+			tolerance_own = 2
+			advisor_pool = 1
+		}
+		country_as_secondary = {
+			advisor_pool = 1
+			advisor_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+		heretic = { SAMARITAN KARAITE }
+        
+        fervor = yes
+	}
+	
+	crusade_name = HOLY_WAR
+	
+    harmonized_modifier = harmonized_jewish
+}
+
+religion_group_zoroastrian = {
+	defender_of_faith = yes
+	flag_emblem_index_range = { 110 110 }
+    
+	zoroastrian = {
+		icon = 35
+		color = { 0.5 0.7 0.2 }
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country = {
+			tolerance_own = 2
+			trade_efficiency = 0.1
+		}
+		country_as_secondary = {
+			merchants = 1
+			tolerance_own = 1
+		}
+		
+		heretic = { MAZDAKI MANICHEAN }	
+        
+        fervor = yes
+	}
+	
+	crusade_name = HOLY_WAR
+	
+    harmonized_modifier = harmonized_zoroastrian
+}

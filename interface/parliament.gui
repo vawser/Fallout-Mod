@@ -1,0 +1,360 @@
+guiTypes = {
+	windowType = {
+		name = "parliament_window"
+		backGround="parliament_bg"
+		position = { x=-530 y= -400 }	
+		size = { x=548 y=691 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		upsound = papacy
+		downsound = ""
+
+		guiButtonType =
+		{
+			name ="parliament_bg"
+			spriteType = "GFX_parliament_default"
+			position = { x= 0 y = 0 }
+		}
+		
+		instantTextBoxType= {
+			position = { x=235 y =22}
+			name = "title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 548
+			maxHeight = 20
+			text = "English Parliament"	
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		guiButtonType = {
+			name = "start_issue"
+			position = { x=400 y =100}
+			quadTextureSprite ="GFX_parliament_button_default"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "START_DEBATE"
+			buttonFont = "vic_18"
+		}
+		
+#####	present_debate_slot should only be visible when there is an active debate.  		
+		iconType = {
+			name = "present_debate_slot"
+			position = { x=70 y =220}
+			quadTextureSprite ="GFX_parliament_button_400"	
+		}	
+
+#####	previous_debate_slot should only be visible when there is a previous debate.  		
+		iconType = {
+			name = "previous_debate_slot"
+			position = { x=70 y =220}
+			quadTextureSprite ="GFX_parliament_button_400"	
+		}		
+
+		instantTextBoxType= {
+			position = { x=0 y =230}
+			name = "current_issue"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 548
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		instantTextBoxType= {
+			position = { x=70 y =260}
+			name = "current_issue_effect"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 460
+			maxHeight = 92
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		instantTextBoxType= {
+			position = { x=0 y=230}
+			name = "enacted_modifiers_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 548 
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		instantTextBoxType= {
+			position = { x=70 y =260 }
+			name = "enacted_modifiers_effect"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 460
+			maxHeight = 92
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		instantTextBoxType= {
+			position = { x=340 y =260}
+			name = "chance_to_win_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 150
+			maxHeight = 30
+			text = "PARLIAMENT_CHANCE_TO_WIN"
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=410 y =260}
+			name = "chance_to_win"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 50
+			maxHeight = 30
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+
+		instantTextBoxType= {
+			position = { x=340 y=280}
+			name = "chance_to_end_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 150
+			maxHeight = 30
+			text = "PARLIAMENT_CHANCE_DEBATE_ENDS"
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=410 y =280}
+			name = "chance_to_end"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 50
+			maxHeight = 30
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+		
+		instantTextBoxType= {
+			position = { x=60 y =34}
+			name = "num_seats"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 120
+			maxHeight = 20
+			text = "XX Seats"	
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		listboxType = 
+		{
+			name ="seats_listbox"
+			position = { x=580 y =220}
+			backGround=""
+			size = { x=400 y =290}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 1
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 10 y = 10}
+		}
+
+		
+		guiButtonType = {
+				name = "close_button"
+				position = { x=400 y =527}
+				quadTextureSprite ="GFX_parliament_button_default"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "PAPACY_CLOSE"
+				buttonFont = "vic_18"
+				clicksound = close_window
+				shortcut = "ESCAPE"
+		}
+		
+        #------------------------------------
+        # Issue Window
+        #------------------------------------
+		windowType = {
+			name = "select_new_issue_window"
+			position = { x=1020 y=-45 }	
+			size = { x=300 y=400 }
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+		
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_parliament_new_issue_box"
+				position = { x= 20 y = 43 }
+				Orientation = "UPPER_LEFT"
+			}
+	
+			instantTextBoxType= {
+				position = { x=36 y =52}
+				name = "title"
+				font = "vic_29"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 440
+				maxHeight = 20
+				text = "PARL_ISSUE_TITLE"	
+				orientation = "UPPER_LEFT"
+				format = center
+			}			
+			
+			
+					
+			listboxType = 
+			{
+				name ="list"
+				position = { x = 40 y = 100 }
+				backGround=""
+				size = { x=400 y = 480}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+			
+			guiButtonType = {
+				name = "back"
+				position = { x= 155 y = 576 }
+				quadTextureSprite ="GFX_parliament_button_default"	
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+				clicksound = back_click
+			}
+		}
+	
+
+		
+	}
+	
+	
+	#------------------------------------
+    # Seat 
+    #------------------------------------
+	windowType = {
+		name = "seat_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=300 y= 40 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		iconType = {
+			name = "seat_banner"
+			spriteType ="GFX_parliament_button_default"	
+			position = { x= 170 y = 0 }
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType= {
+			position = { x=200 y =10}
+			name = "province"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 170
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		guiButtonType = {
+			name = "bribe_button"
+			position = { x=-50 y =0}
+			quadTextureSprite ="GFX_parliament_bribe_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "bribe text here"
+			buttonFont = "vic_18"
+
+			clicksound = decision
+		}
+	}	
+	
+	#------------------------------------
+    # Issue
+    #------------------------------------
+	windowType = {
+		name = "new_issue_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=300 y= 120 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		iconType = {
+			name = "banner"
+			spriteType ="GFX_nation_decisions_banner"	
+			position = { x= -26 y = -9999 }
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType= {
+			position = { x=20 y =40}
+			name = "effect"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 280
+			maxHeight = 60
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		guiButtonType = {
+			name = "select_button"
+			position = { x=0 y =0}
+			quadTextureSprite ="GFX_parliament_button_400"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "vic_18"
+
+		}
+        
+        instantTextBoxType= {
+			position = { x=20 y =5}
+			name = "name"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 180
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+
+	}	
+}

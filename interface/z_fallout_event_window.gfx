@@ -1,0 +1,71 @@
+spriteTypes = {	
+    #-----------------------------------------------
+    # Event Window
+    #-----------------------------------------------
+    spriteType = {
+		name = "GFX_event_blank_bg"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_blank.dds"
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_event_bg_overlay"
+		texturefile = "gfx//interface//ui//event_window//browser_overlay.dds"
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_event_bg"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg.dds"
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_event_bg_top"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_top.dds"
+		allwaystransparent = yes
+	}
+    
+    # This part is repeated vertically depending on the Description text length. 
+    # The image should be tileable vertically and the vertical height is the smallest increment the tile will grow at
+    spriteType = {
+		name = "GFX_event_bg_middle"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_middle.dds"
+		allwaystransparent = yes
+	}
+    
+    # The game picks between _S, _M, _L depending on number of options:
+    # It is the filename that is checked, with _M or _L appended, not the definitions
+    # That means the filenames need to be the same other than the appended part
+    spriteType = {
+		name = "GFX_event_bg_bottom"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_bottom.dds"
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_event_bg_bottom_S"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_bottom_S.dds"
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_event_bg_bottom_M"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_bottom_M.dds"
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_event_bg_bottom_L"
+		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_bottom_L.dds"
+		allwaystransparent = yes
+	}
+    
+    # Option Button
+    spriteType = {
+		name = "GFX_event_button_600"
+		texturefile = "gfx//interface//ui//button//event_button_600.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		clicksound = click
+	}
+}

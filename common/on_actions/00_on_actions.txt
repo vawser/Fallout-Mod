@@ -1,0 +1,1064 @@
+# country
+on_startup = {
+    events = {
+        startup.1    		# Global flags
+        startup.2    		# Country flags
+        processor.1		# Processor assignment for Caravan system		
+        discovery.1 		# Initial FoW setup
+		fds.1				# Initial FDS variable setup
+        cults.100       	# Initial cult setup
+        immortality.1  	# Setup immortal rulers
+        caravans.1     	# Initial caravan placement
+        zion.7 			# Revert Sorrows/Dead Horses to Mormon if the Cossacks isn't installed
+        
+    }
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_startup" }
+}
+
+# country
+on_religion_change = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_religion_change" }
+}
+
+# country. Spawned when Enforcing Rebel Demands through a Support Rebels-war.
+on_enforce_rebel_demands = {
+    set_country_flag = helped_rebels_win_war
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_enforce_rebel_demands" }
+}
+
+# country
+on_colonial_liberation = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_colonial_liberation" }
+}
+
+# country
+on_colonial_reintegration = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_colonial_reintegration" }
+}
+
+# country
+on_peace_actor = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_peace_actor" }
+}
+
+# country
+on_peace_recipient = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_peace_recipient" }
+}
+
+# country
+# root = winning country, from = loser country
+on_war_won = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [Root.GetName] - loser : [From.GetName] - on_war_won" }
+}
+
+# country
+# root = loser country, from = winner country
+on_war_lost = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [From.GetName] - loser : [Root.GetName] - on_war_lost" }
+}
+
+# country
+# root = winning country, from = loser country
+on_battle_won_country = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [Root.GetName] - loser : [From.GetName] - on_battle_won_country" }
+    
+    events = {
+		
+	}
+	random_events = {
+		1000 = 0
+		100 = slavery.1
+		100 = slavery.2
+	}
+}
+
+# country
+# root = loser country, from = winner country
+on_battle_lost_country = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [From.GetName] - loser : [Root.GetName] - on_battle_lost_country" }
+    
+    # Cults
+    if = {
+        limit = { has_dlc = "Rights of Man" }
+        
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_ancestor_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_ancestor_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.1 } }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_nature_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_nature_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.2 } }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_viper_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_viper_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.3 } }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_technology_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_technology_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.4 } }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_lovecraftian_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_lovecraftian_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.5 } }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_fire_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_fire_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.6 } }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_cannibalism_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_cannibalism_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.7 } }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_radiation_worship }
+                }
+                FROM = {
+                    religion = fetishism
+                    has_unlocked_cult = tribal_radiation_worship
+                }
+            }
+            ROOT = { country_event = { id = cults.8 } }
+        }
+        # Special
+        if = {
+            limit = {
+                ROOT = {
+                    religion = fetishism
+                    NOT = { has_unlocked_cult = tribal_mormon_worship }
+                }
+                FROM = {
+                    religion = mormon
+                }
+            }
+            ROOT = { country_event = { id = cults.9 } }
+        }
+    }
+}
+
+# province
+# root = location, from = loser country
+on_battle_won_province = {
+   if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - loser : [From.GetName] - on_battle_won_province" }
+}
+
+# province
+# root = location, from = winner country
+on_battle_lost_province = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - winner : [From.GetName] - on_battle_lost_province" }
+}
+
+#Unit Scope OnAction for Battle Won
+on_battle_won_unit = {
+	if = {
+		limit = {
+			unit_owner = { ai = no } #Scopes to Unit Owner from Unit Scope
+			general_with_steam_name = yes #Unit Scope Trigger
+		}
+		unit_owner = { set_country_flag = general_with_steam_name_won_battle }
+	}
+}
+
+# #Unit Scope OnAction for Battle Lost
+on_battle_lost_unit = {
+	
+}
+
+# province
+# root = location, from = country doing it
+on_added_to_trade_company ={
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_added_to_trade_company" }
+}
+
+# province
+# root = location, from = country doing it
+on_removed_from_company ={
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_removed_from_company" }
+}
+
+# province
+# root = location, from = country doing it
+on_company_formed ={
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_company_formed" }
+}
+
+# province
+# root = location, from = country doing it
+on_company_disolved ={
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_company_disolved" }
+}
+
+
+# country
+# root = winning country, from = location
+on_siege_won_country = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [From.GetName] - winner : [Root.GetName] - on_siege_won_country" }
+}
+
+# country
+# root = losing country, from = location
+on_siege_lost_country = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [From.GetName] - loser : [Root.GetName] - on_siege_lost_country" }
+}
+
+# province
+# root = location, from = losing country
+on_siege_won_province = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - loser : [From.GetName] - on_siege_won_province" }
+}
+
+# province
+# root = location, from = winning country
+on_siege_lost_province =  {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - winner : [From.GetName] - on_siege_lost_province" }
+}
+
+# province
+# root = location, from = country that abandons colony
+# Fired right before the colony is abandoned.
+on_abandon_colony = {   
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_abandon_colony" }
+}
+
+# country
+on_new_monarch = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_monarch" }
+
+    if = {
+        limit = {
+            OR = {
+                tag = NVG
+                tag = SHI
+                tag = X02
+	   government = the_think_tank
+            }
+        }
+        add_ruler_modifier = {
+            name = immortality
+            duration = -1
+        }
+    }
+}
+
+on_new_consort = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_consort" }
+}
+
+on_monarch_death = { 
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_monarch_death" }
+}
+
+# country 
+on_regent = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_regent" }
+}
+
+# country 
+on_new_term_election = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_term_election" }
+    events = {
+        elections.1
+    }
+}
+
+# country 
+on_death_election = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_election" }
+    events = {
+        elections.2
+    }
+}
+
+# country
+on_death_foreign_slave_ruler = {
+	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_foreign_slave_ruler" }
+	events = {
+		wolf.0 # Choose new for the Pack
+	}
+}
+
+# country 
+on_replace_governor = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_replace_governor" }
+}
+
+# country
+on_bankruptcy = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bankruptcy" }
+}
+
+# country (country annexing, root = target)
+on_diplomatic_annex = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_diplomatic_annex" }
+    events = {
+        fm_subjects.1
+    }
+}
+
+#country
+on_heir_death = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - country" }
+
+}
+
+# country
+on_queen_death = {  
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_queen_death" }
+}
+
+# When a non-native changes government type
+on_government_change = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_government_change" }
+}
+
+# country
+on_new_heir = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_heir" }
+}
+
+# country 
+on_weak_heir_claim = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_weak_heir_claim" }
+    events = {
+        fm_government.1
+    }
+}
+
+on_heir_needed_theocracy = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_heir_needed_theocracy" }
+	events = {
+		brotherhood_of_steel_government.1 # For Brotherhood of Steal temples
+		theocracy.1 # For every other religion
+	}
+}
+
+# Emperor from same dynasty
+on_successive_emperor = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_successive_emperor" }
+}
+
+# HRE Prince released by the emperor
+on_released_hre_member = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_released_hre_member" }
+}
+
+# HRE Prince converts to non-Emperor religion
+on_hre_member_false_religion = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_member_false_religion" }
+}
+
+# HRE Prince converts to Emperor religion
+on_hre_member_true_religion = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_member_true_religion" }
+}
+
+# Emperor wins HRE defensive war
+on_hre_wins_defensive_war = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_wins_defensive_war" }
+}
+
+# HRE member annexed by non-HRE country
+on_hre_member_annexed = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_member_annexed" }
+}
+
+# HRE member released from non-HRE vassalage
+on_hre_released_vassal = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_released_vassal" }
+}
+
+# Emperor coming to the defense of a HRE member
+on_hre_defense = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_defense" }
+}
+
+# Emperor NOT coming to the defense of a HRE member
+on_hre_non_defense = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_non_defense" }
+}
+
+# HRE Member takes a HRE province from an outs100e country in a peace (province scope)
+on_hre_province_reconquest = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_province_reconquest" }
+}
+
+on_lock_hre_religion = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_lock_hre_religion" }
+}
+
+on_change_hre_religion = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_change_hre_religion" }
+}
+
+on_hre_religion_white_peace = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_religion_white_peace" }
+}
+
+
+# When a native changes government after filling all their advancement groups.
+on_native_change_government = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_native_change_government" }
+}
+
+# Nation is integrated after being in union
+on_integrate = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_integrate" }
+    events = {
+        fm_subjects.1
+    }
+}
+
+# Nation annexed
+on_annexed = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_annexed" }
+}
+
+# When the chinese empire gets dismantled (e.g. when the emperor is annexed)
+# FROM = Emperor, ROOT = Current Nation
+on_chinese_empire_dismantled = {
+	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_chinese_empire_dismantled" }
+}
+
+# When a nation gains the Mandate of Heaven (becomes the Emperor of China)
+# FROM = Old Emperor, ROOT = New Emperor
+on_mandate_of_heaven_gained = {
+	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - old emperor: [From.GetName] - new emperor: [Root.GetName] - on_mandate_of_heaven_gained" }
+}
+
+# When a nation loses the Mandate of Heaven
+# FROM = New Emperor, ROOT = Old Emperor
+on_mandate_of_heaven_lost = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - old emperor: [Root.GetName] - new emperor: [From.GetName] - on_mandate_of_heaven_lost" }
+}
+
+on_dismantle_revolution = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_dismantle_revolution" }
+    kill_ruler = yes
+    set_revolution_target = xxx
+    if = {
+        limit = { has_heir = yes }
+        kill_heir = yes
+    }
+}
+
+# province
+on_adm_development = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_adm_development" }
+}
+
+# province
+on_dip_development = {  
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_dip_development" }
+}
+
+# province
+on_mil_development = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_mil_development" }
+}
+
+on_overextension_pulse = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_overextension_pulse" }
+
+    random_events = {
+		100 = overextension.1
+		100 = overextension.2
+		100 = overextension.3
+		100 = overextension.4
+		100 = overextension.5
+		100 = overextension.6
+		100 = overextension.7
+		100 = overextension.8
+		100 = overextension.9
+        # 100% any event will be picked per pulse
+	}
+}
+
+on_siberian_pulse = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_siberian_pulse" }
+    
+    random_events = {
+		10 = colonial_pulse.1 # "Settlement founded"
+		10 = colonial_pulse.2 # "Attracting Ghouls"
+		10 = colonial_pulse.3 # "Super Mutants!"
+		10 = colonial_pulse.4 # "Raiders!"
+		10 = colonial_pulse.5 # "Colonial Migration"
+		10 = colonial_pulse.6 # "Colonial Expansion"
+        
+        10 = wasteland_discoveries.1
+        10 = wasteland_discoveries.2
+        10 = wasteland_discoveries.3
+        10 = wasteland_discoveries.4
+        10 = wasteland_discoveries.5
+        10 = wasteland_discoveries.6
+        10 = wasteland_discoveries.7
+        10 = wasteland_discoveries.8
+        10 = wasteland_discoveries.9
+        10 = wasteland_discoveries.10
+        10 = wasteland_discoveries.11
+        10 = wasteland_discoveries.12
+        10 = wasteland_discoveries.13
+        10 = wasteland_discoveries.14
+        10 = wasteland_discoveries.15
+		
+        2000 = 0
+        # 10% any event will be picked per pulse
+	}
+}
+
+on_colonial_pulse = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_colonial_pulse" }
+    
+    random_events = {
+		10 = colonial_pulse.1 # "Settlement founded"
+		10 = colonial_pulse.2 # "Attracting Ghouls"
+		10 = colonial_pulse.3 # "Super Mutants!"
+		10 = colonial_pulse.4 # "Raiders!"
+		10 = colonial_pulse.5 # "Colonial Migration"
+		10 = colonial_pulse.6 # "Colonial Expansion"
+        
+        10 = wasteland_discoveries.1
+        10 = wasteland_discoveries.2
+        10 = wasteland_discoveries.3
+        10 = wasteland_discoveries.4
+        10 = wasteland_discoveries.5
+        10 = wasteland_discoveries.6
+        10 = wasteland_discoveries.7
+        10 = wasteland_discoveries.8
+        10 = wasteland_discoveries.9
+        10 = wasteland_discoveries.10
+        10 = wasteland_discoveries.11
+        10 = wasteland_discoveries.12
+        10 = wasteland_discoveries.13
+        10 = wasteland_discoveries.14
+        10 = wasteland_discoveries.15
+		
+        2000 = 0
+        # 10% any event will be picked per pulse
+	}
+}
+
+# country random events
+on_bi_yearly_pulse = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse" }
+    
+    # Update missions
+    swap_non_generic_missions = yes
+    
+    random_events = {
+		## TRIBAL FLAVOR ##
+		100 = randomeventsstapehordes.1
+		100 = randomeventsstapehordes.2
+		100 = randomeventsstapehordes.3
+		100 = randomeventsstapehordes.4
+		100 = randomeventsstapehordes.5
+		100 = randomeventsstapehordes.6
+		100 = randomeventsstapehordes.7
+		100 = randomeventsstapehordes.8
+		100 = randomeventsstapehordes.13
+		100 = randomeventsstapehordes.14
+		50 = randomeventsstapehordes.15
+		20 = randomeventsstapehordes.16
+		90 = randomeventsstapehordes.17
+		15 = randomeventsstapehordes.18
+		10 = randomeventsstapehordes.19
+		100 = randomeventsstapehordes.20
+		100 = randomeventsstapehordes.21
+		100 = randomeventsstapehordes.22
+		100 = randomeventsstapehordes.23
+		100 = randomeventsstapehordes.24
+    }
+}
+
+on_bi_yearly_pulse_2 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse_2" }
+
+}
+
+on_bi_yearly_pulse_3 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse_3" }
+    
+    random_events = {
+        10 = fallout_institutions.1
+        10 = fallout_institutions.2
+        10 = fallout_institutions.3
+        10 = fallout_institutions.4
+        10 = fallout_institutions.5
+        10 = fallout_institutions.6
+        10 = fallout_institutions.7
+        1400 = 0
+        # 5% any event will be picked per pulse
+    }
+}
+
+on_bi_yearly_pulse_4 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse_4" }
+
+    random_events = {
+        10 = warlust.1
+        10 = warlust.2
+        10 = warlust.3
+        
+        1200 = 0
+        # 5% any event will be picked per pulse
+    }
+}
+
+# country random events
+on_thri_yearly_pulse = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse" }
+}
+
+on_thri_yearly_pulse_2 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse_2" }
+}
+
+on_thri_yearly_pulse_3 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse_3" }
+}
+
+on_thri_yearly_pulse_4 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse_4" }
+}
+
+on_four_year_pulse = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse" }
+    
+    random_events = {
+        10 = leader_big_mountain.1
+        10 = leader_big_mountain.2
+        10 = leader_big_mountain.3
+        10 = leader_big_mountain.4
+        10 = leader_big_mountain.5
+        10 = leader_big_mountain.6
+        120 = 0
+        # 50% any event will be picked per pulse
+    }
+}
+
+on_four_year_pulse_2 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_2" }
+    
+    random_events = {
+		10 = new_vegas.1 # Profits at the Gomorrah
+		10 = new_vegas.2 # Top profits at the Tops
+		10 = new_vegas.3 # Elegance at the Ultra-Luxe
+		10 = new_vegas.4 # Family Disputes 
+		80 = 0
+        # 50% any event will be picked per pulse
+	}
+}
+
+on_four_year_pulse_3 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_3" }
+    
+     random_events = {
+        10 = subject_nations.1		# Discontent on the Frontier
+		10 = subject_nations.2		# Upset in New Reno
+        10 = ruler_choices.1
+        10 = vault_government.1
+        160 = 0
+        # 25% any event will be picked per pulse
+     }
+}
+
+on_four_year_pulse_4 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_4" }
+    
+    random_events = {
+        10 = fallout_legitimacy.1
+        10 = fallout_legitimacy.2
+        10 = brotherhood_of_steel.1
+        10 = brotherhood_of_steel.2
+        10 = brotherhood_of_steel.3
+        10 = brotherhood_of_steel.4
+        10 = brotherhood_of_steel.5
+        280 = 0
+        # 25% any event will be picked per pulse
+    }
+}
+
+on_five_year_pulse = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse" }
+
+    random_events = {
+        10 = fallout_estates.1
+        10 = fallout_estates.2
+        10 = fallout_estates.3
+        10 = fallout_estates.4
+        10 = fallout_estates.5
+        10 = fallout_estates.6
+        10 = fallout_estates.7
+        10 = fallout_estates.8
+        10 = fallout_estates.9
+        10 = fallout_estates.10
+        
+        200 = 0
+        # 50% any event will be picked per pulse
+	}
+}
+
+on_five_year_pulse_2 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse_2" }
+}
+
+on_five_year_pulse_3 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse_3" }
+}
+
+on_five_year_pulse_4 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse_4" }
+    
+}
+
+# El Dorado
+on_explore_coast = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_explore_coast" }
+}
+
+on_conquistador_empty = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_conquistador_empty" }
+}
+
+on_conquistador_native = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_conquistador_native" }
+}
+
+on_buy_religious_reform = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_buy_religious_reform" }
+}
+
+on_circumnavigation = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_circumnavigation" }
+}
+
+on_become_free_city = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_become_free_city" }
+}
+
+on_remove_free_city = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_remove_free_city" }
+}
+
+on_revoke_estate_land = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_revoke_estate_land_ai" }
+    
+    if = {
+		limit = {
+			has_estate = estate_bureaucrats
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_bureaucrats
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 1
+		}
+	}
+    if = {
+		limit = {
+			has_estate = estate_settlers
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_settlers
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 1
+		}
+	}
+    if = {
+		limit = {
+			has_estate = estate_officers
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_officers
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 1
+		}
+	}
+    if = {
+		limit = {
+			has_estate = estate_caravanners
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_caravanners
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = anti_tax_rebels
+			size = 1
+		}
+	}
+    if = {
+		limit = {
+			has_estate = estate_scientists
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_scientists
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 1
+		}
+	}
+    if = {
+		limit = {
+			has_estate = estate_slavers
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_slavers
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 1
+		}
+	}
+}
+
+on_revoke_estate_land_ai = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_revoke_estate_land" }
+}
+
+on_grant_estate_land = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_grant_estate_land" }
+}
+
+on_death_has_harem = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_has_harem" }
+}
+
+on_select_heir_from_harem = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_select_heir_from_harem" }
+}
+
+on_fetishist_cult_change = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_fetishist_cult_change" }
+}
+
+# country
+on_gain_great_power_status = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_gain_great_power_status" }
+
+    if = {
+        limit = {
+            NOT = { has_country_flag = became_great_power_flag }
+        }
+        set_country_flag = became_great_power_flag
+    }
+}
+
+# country
+on_lose_great_power_status = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_lose_great_power_status" }
+}
+
+# province
+on_province_religion_converted = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_province_religion_converted" }
+}
+
+# province
+on_province_culture_converted = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_province_culture_converted" }
+}
+
+# province
+# FROM = old owner
+on_province_owner_change = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - owner : [Owner.GetName] - old owner : [From.GetName] - on_province_owner_change" }
+}
+
+# country
+on_parliament_debate_failed = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_parliament_debate_failed" }
+}
+
+# country
+on_parliament_debate_succeeded = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_parliament_debate_succeeded" }
+}
+
+#on_harmonized_<religion>
+
+# country. from = overlord
+on_accept_tribute = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_accept_tribute" }
+}
+
+# country. from = overlord
+on_refuse_tribute = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_refuse_tribute" }
+}
+
+# country
+on_leader_recruited = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_leader_recruited" }
+}
+
+# country
+on_general_recruited = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_general_recruited" }
+    
+	add_army_professionalism = 0.01
+}
+
+# country
+on_admiral_recruited = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_admiral_recruited" }
+}
+
+# country
+on_conquistador_recruited = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_conquistador_recruited" }
+}
+
+# country
+on_explorer_recruited = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_explorer_recruited" }
+}
+
+# THIS = Province, FROM = Country
+on_regiment_recruited = {
+	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_regiment_recruited" }
+}
+
+# THIS = Province, FROM = Country
+on_mercenary_recruited = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_mercenary_recruited" }
+    
+	FROM = {
+		add_army_professionalism = -0.0015
+	}
+}
+
+# THIS = One province in the state
+on_add_pasha = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_add_pasha" }
+}
+
+# THIS = One province in the state
+on_remove_pasha = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_remove_pasha" }
+}
+
+# THIS = Province
+on_janissaries_raised = {
+	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_janissaries_raised" }
+}
+
+# country
+on_russian_subednik = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_russian_subednik" }
+}
+
+# country
+on_russian_oprichnina = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_russian_oprichnina" }
+}
+
+# country
+on_russian_streltsy = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_russian_streltsy" }
+}
+
+# province
+on_consecrate_patriarch = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_consecrate_patriarch" }
+}

@@ -1,0 +1,249 @@
+country_decisions = {
+    destroy_the_fence = {
+		potential = {
+            OR = {
+				capital_scope = { area = big_mt_area }
+				capital_scope = { region = big_mt_region }
+				has_country_flag = the_new_think_tank
+			}
+            has_discovered = 4015
+            NOT = { has_country_flag = destroying_fence }
+        }
+        
+		allow =  {
+            OR = {
+                adm_tech = 10
+                dip_tech = 10
+                mil_tech = 10
+            }
+			4015 = {
+                has_province_modifier = bmt_block
+            }
+			years_of_income = 2
+		}
+	  	effect = {
+            set_country_flag = destroying_fence
+			add_years_of_income = -2
+            hidden_effect = {
+                west_coast_superregion = {
+                    discover_country = ROOT
+                }
+            }
+            
+            4015 = {
+                remove_province_modifier = bmt_block
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	drive_out_the_think_tank = {
+		potential = {
+			OR = {
+				has_country_flag = destroying_fence
+				any_owned_province = {
+					OR = {
+						area = big_mt_area
+						region = big_mt_region
+					}
+				}
+			}
+			NOT = {
+				tag = TNK
+				tag = FBZ
+				government = the_think_tank
+			}
+			NOT = { has_country_flag = can_now_think_tank_yourself }
+			NOT = { has_country_flag = expulsor_of_the_think_tanks }
+		}
+		allow = {
+			owns_core_province = 4010
+			owns_core_province = 4016
+			NOT = {
+				TNK = { any_owned_province = { region = big_mt_region } }
+				FBZ = { any_owned_province = { area = big_mt_area } }
+			}
+		}
+		effect = {
+			set_global_flag = think_tanks_expelled
+			set_country_flag = she_blinded_me_with_science
+			set_country_flag = expulsor_of_the_think_tanks
+			add_stability = 1
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = big_mt_region
+						area = big_mt_area
+					}
+				}
+				remove_core = TNK
+				remove_core = FBZ
+			}
+		}
+	}
+	
+	shut_down_think_tank = {
+		potential = {
+			OR = {
+				has_global_flag = think_tanks_expelled
+				has_country_flag = expulsor_of_the_think_tanks
+			}
+			owns_core_province = 4010
+			owns_core_province = 4016
+			NOT = { has_global_flag = think_tanks_killed }
+			NOT = { has_country_flag = gibs_me_dat_science }
+			NOT = {
+				tag = TNK
+				tag = FBZ
+			}
+		}
+		allow = {
+			NOT = {
+				TNK = { any_owned_province = { region = big_mt_region } }
+				FBZ = { any_owned_province = { area = big_mt_area } }
+			}
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 50
+			set_global_flag = think_tanks_killed
+			set_country_flag = gibs_me_dat_science
+			custom_tooltip = SUBJUGATED_SCIENTISTS
+			hidden_effect = {
+				# Your nation has absorbed some of the technology and skill of the Sink's machinery, you now have to deal with the flocks of subjugated scientists you have in your employ!
+				add_faction = robotics
+				add_faction = facilities
+				add_faction = advanced_systems
+			}
+			
+			TNK = {
+				kill_ruler = yes
+			}
+			FBZ = {
+				kill_ruler = yes
+			}
+		}
+	}
+	
+	blind_yourself_with_science = {
+		potential = {
+			has_country_flag = think_tanks_killed
+			OR = {
+				has_country_flag = she_blinded_me_with_science
+				has_country_flag = gibs_me_dat_science
+			}
+			NOT = {
+				government = the_institute
+				government = bastardized_institute
+				government = the_think_tank
+			}
+			owns_core_province = 4010
+			owns_core_province = 4016
+#			NOT = {
+#				has_country_flag = can_now_think_tank_yourself
+#			}
+		}
+		allow = {
+			OR = {
+				adm_tech = 10
+				dip_tech = 10
+			}
+		}
+		effect = {
+			set_country_flag = can_now_think_tank_yourself
+			country_event = {
+				id = big_mountain.10
+				tooltip = BLINDED_ME_WITH_SCIENCE
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					government = steppe_horde
+					government = religious_tribe
+					government = trade_tribe
+					government = war_tribe
+					government = legion
+					government = wolf_government
+					government = federal_republic
+					tag = GRK
+				}
+			}
+		}
+	}
+	
+	upgrade_no_go_back_i_said_go_back = {
+		major = yes
+		potential = {
+			has_country_flag = can_now_think_tank_yourself
+			NOT = { government = the_think_tank }
+			has_global_flag = think_tanks_killed
+			has_global_flag = think_tanks_expelled
+			NOT = { has_country_flag = the_new_think_tank }
+			OR = {
+				NOT = {
+					religion_group = religion_group_christianity
+					religion_group = religion_group_muslim
+					religion_group = religion_group_eastern
+					religion_group = religion_group_dharmic
+					religion_group = religion_group_jewish
+					religion_group = religion_group_zoroastrian
+				}
+				religion = animism
+				religion = shinto
+				culture_group = robot_group
+			}
+		}
+		allow = {
+			NOT = { government = the_think_tank }
+		}
+		effect = {
+			custom_tooltip = BECOME_THINK_TANK
+			hidden_effect = {
+				set_ruler_culture = think_tank
+				set_heir_culture = think_tank
+				convert_heir_to_general = yes
+				convert_female_heir_to_general = yes
+				set_consort_culture = think_tank
+#				change_technology_group = tech_robot
+				add_accepted_culture = think_tank
+				add_accepted_culture = robot
+				add_accepted_culture = lobotomite
+				add_accepted_culture = robo_scorpion
+				country_event = {
+					id = big_mountain.11
+				}
+			}
+			#add_ruler_personality = immortal_personality
+			#add_heir_personality = immortal_personality
+			#add_queen_personality = immortal_personality
+			change_government = the_think_tank
+			add_stability = -6
+			clr_global_flag = think_tanks_killed
+			clr_global_flag = think_tanks_expelled
+			clr_country_flag = expulsor_of_the_think_tanks
+			set_country_flag = the_new_think_tank
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					religion_group = religion_group_postwar
+					religion = robotics
+				}
+			}
+		}
+	}
+}

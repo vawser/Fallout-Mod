@@ -1,0 +1,284 @@
+
+##################################################################
+### Terrain Categories
+###
+###
+
+categories =  {
+	    pti = {
+		type = pti
+	}
+    
+    ocean = {
+		movement_cost = 1.0
+		is_water = yes
+		sound_type = sea
+		color = { 255 255 255 }
+	}
+
+	inland_ocean = {
+		movement_cost = 1.0
+		is_water = yes
+		inland_sea = yes
+		sound_type = sea
+		color = { 0 0 200 }
+	}
+    
+    impassable_mountains = {
+		movement_cost = 8.0
+		defence = 6
+		local_development_cost = 10
+		sound_type = desert
+		
+		color = { 128 128 128 }
+	}
+    
+    marsh = {
+		movement_cost = 1.3
+		defence = 1
+		local_development_cost = 0.25
+		combat_width = -0.25
+		nation_designer_cost_multiplier = 0.85
+		supply_limit = 5
+
+        type = marsh
+		sound_type = forest
+		color = { 76 112 105 }
+        
+        terrain_override = {
+			2987 2554 3027
+		}
+	}
+    
+    desert = {
+		movement_cost = 1.05
+		supply_limit = 4
+		sound_type = desert
+		local_development_cost = 0.35
+		nation_designer_cost_multiplier = 0.8
+
+        type = desert
+		color = { 220 210 0 }
+        
+        terrain_override = {
+			867 422 4002 45
+		}
+	}
+    
+    irradiated_wasteland = {
+		movement_cost = 3
+		supply_limit = 1
+		local_development_cost = 1
+		
+        type = plains
+		sound_type = plains
+		color = { 0 0 0  }
+		
+		terrain_override = {
+			2963 3035 377 547 45
+            4047 4049 4045 4046 4048
+		}	
+	}
+    
+    irradiated_ruins = {
+		movement_cost = 1.0
+		supply_limit = 5
+		allowed_num_of_buildings = 2
+		nation_designer_cost_multiplier = 1
+
+		sound_type = plains
+		color = { 124 153 152 }
+	
+        terrain_override = {
+			283 194 309 252 433 354 255 544 550 552 558 561 3062 562 4007 4009 4023 4024
+            17 272 3045 430 432 2978 2966 545 549 551 405 3052 3053 3054 3055 3056 3057 3058 4008
+            47 2965 2967 887 879 2958 890 3004 2997 2993 2989 2008 2972 273 258 3043
+			259 256 257 265 424 2958
+            492 495 543 540 263
+            557 871 4022 
+		}	
+	}
+    
+    ruins = {
+		movement_cost = 1.0
+		supply_limit = 10
+		allowed_num_of_buildings = 3
+		nation_designer_cost_multiplier = 1
+
+		sound_type = plains
+		color = { 108 196 192 }
+        
+        terrain_override = {
+			264 14 2556 3001 73 388 387 66 385 3042 2491 119 2955
+			882 491 496 497 541 545 553 260 3024 556 555 2975
+			3051 3060 3063 3064 278 4021 144 145 4025
+            3007 299 121 120 122 123 282 954 49 2986 2985 
+			965 203 2 889 2988 3002 328 274 2478 
+			3009 130 493 494 554 546 548 431 559
+            563 564 565 3047 3049 3065 3066 3067 893 180 146 4018 3005
+            953 383 968 3048 117 251 118 20 280 1 2983 329 318 311 312 384 3 2959 2968
+			2971 2970 2981 102 2962 353 128 124 2494 
+            560 561 3071 2976 2954 261 284 2021 382 281 3016 3041 2476
+			425 409 74 405 408 407 2956 3017 868 2670 539
+		}
+	}
+    
+    irradiated_grasslands = {
+		movement_cost = 1.0
+		supply_limit = 4
+		allowed_num_of_buildings = 1
+		nation_designer_cost_multiplier = 1
+
+        type = plains
+		sound_type = plains
+		color = { 211 201 184 }
+	
+	}
+    
+    grasslands = {
+		movement_cost = 1.0
+		supply_limit = 8
+		allowed_num_of_buildings = 1
+		nation_designer_cost_multiplier = 1
+
+        type = plains
+		sound_type = plains
+		color = { 211 201 184 }
+        
+        terrain_override = {
+			
+		}
+	}
+    
+    irradiated_forest = {
+        movement_cost = 1.25
+		combat_width = -0.20
+		supply_limit = 1
+		local_development_cost = 0.2
+		nation_designer_cost_multiplier = 0.9
+		
+        type = forest
+		sound_type = forest
+		color = { 187 232 186 } 
+
+        terrain_override = {
+			
+		}
+	}
+    
+    forest = {
+        movement_cost = 1.25
+		defence = 1
+		combat_width = -0.20
+		supply_limit = 3
+		local_development_cost = 0.2
+		nation_designer_cost_multiplier = 0.9
+		
+        type = forest
+		sound_type = forest
+		color = { 91 123 45 }   
+
+        terrain_override = {
+			
+		}
+	}
+    
+    irradiated_mountains = {
+        movement_cost = 1.5
+		defence = 1
+		local_defensiveness = 0.25
+		local_development_cost = 0.5
+		combat_width = -0.50
+		nation_designer_cost_multiplier = 0.75
+		supply_limit = 2
+
+		color = { 66 184 62 }
+	
+        type = mountains
+		sound_type = mountain     
+
+        terrain_override = {
+			
+		}
+	}
+    
+    mountains = {
+		movement_cost = 1.5
+		defence = 2
+		local_defensiveness = 0.25
+		local_development_cost = 0.5
+		combat_width = -0.50
+		nation_designer_cost_multiplier = 0.75
+		supply_limit = 4
+
+		color = { 117 108 119 }
+	
+        type = mountains
+		sound_type = mountain
+        
+        terrain_override = {
+			2969 3011 111 285
+			412 413 427 426 429 428 115 347 340 338
+			113 342 54 56 55 3014 417 3015 878 875 337 125 126 415 129
+			414 2964 254 4050
+		}
+	}
+}
+	
+##################################################################
+### Graphical terrain
+###		type	=	refers to the terrain defined above, "terrain category"'s 
+### 	color 	= 	index in bitmap color table (see terrain.bmp)
+###
+
+terrain
+{
+	grasslands			= { type = irradiated_grasslands		color = { 	0	 } }
+	hills				= { type = irradiated_mountains			color = { 	1	 } }
+	desert_mountain		= { type = irradiated_mountains			color = { 	2	 } }
+	desert				= { type = desert			            color = { 	3	 } }
+
+	plains				= { type = irradiated_grasslands		color = { 	4	 } }
+	terrain_5			= { type = irradiated_grasslands		color = { 	5	 } }
+	mountain			= { type = irradiated_mountains			color = { 	6	 } }
+	desert_mountain_low	= { type = desert			            color = { 	7	 } }
+
+	terrain_8			= { type = irradiated_mountains			color = { 	8	 } }
+    marsh				= { type = marsh			            color = { 	9	 } } 
+	terrain_10			= { type = grasslands		            color = { 	10	 } }
+	terrain_11			= { type = grasslands		            color = { 	11	 } }
+
+	forest_12			= { type = irradiated_forest			color = { 	12	 } }
+	forest_13			= { type = irradiated_forest			color = { 	13	 } }
+	forest_14			= { type = irradiated_forest			color = { 	14	 } }
+	ocean				= { type = ocean			            color = { 	15	 } }
+
+	snow				= { type = irradiated_mountains 		color = { 	16	 } } # (SPECIAL CASE) Used to identify permanent snow
+	inland_ocean_17 	= { type = inland_ocean		            color = {	17	 } }
+
+	coastal_desert_18	= { type = desert	                    color = { 	19	 } }
+	coastline			= { type = grasslands		            color = { 	35	 } }
+	
+	savannah			= { type = irradiated_grasslands 		color = {	20	 } }
+	drylands			= { type = irradiated_grasslands	    color = {	22	 } }
+	highlands			= { type = irradiated_mountains		    color = {	23	 } }
+	dry_highlands		= { type = irradiated_mountains		    color = {	24	 } }
+	
+	woods				= { type = irradiated_forest		    color = { 	255	 } }
+	terrain_21			= { type = irradiated_grasslands	    color = { 	21	 } }	
+}
+
+##################################################################
+### Tree terrain
+###		terrain	=	refers to the terrain tag defined above
+### 	color 	= 	index in bitmap color table (see tree.bmp)
+###
+
+tree
+{
+	forest				= { terrain = forest 			color = { 	3 4 6 7 19 20	} }
+	woods				= { terrain = forest 			color = { 	2 5 8 18	} }
+	jungle				= { terrain = ocean 			color = { 	13 14 15	} }
+	palms				= { terrain = desert 			color = { 	12	} }
+	savana				= { terrain = grasslands 		color = { 	27 28 29 30	} }
+}

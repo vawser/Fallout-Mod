@@ -1,0 +1,124 @@
+estate_slavers_disaster = {
+	potential = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_slavers
+		estate_influence = {
+			estate = estate_slavers
+			influence = 60
+		}
+        NOT = { has_country_modifier = disaster_cooldown }
+	}
+
+
+	can_start = {
+		has_any_disaster = no
+		estate_influence = {
+			estate = estate_slavers
+			influence = 80
+		}
+	}
+	
+	can_stop = {
+		NOT = {
+			estate_influence = {
+				estate = estate_slavers
+				influence = 80
+			}		
+		}
+	}
+	
+	down_progress = {
+		factor = 1
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			estate_influence = {
+				estate = estate_slavers
+				influence = 80
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_slavers
+						influence = 85
+					}			
+				}			
+			}
+		}
+		modifier = {
+			factor = 2
+			estate_influence = {
+				estate = estate_slavers
+				influence = 85
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_slavers
+						influence = 90
+					}			
+				}			
+			}
+		}
+		modifier = {
+			factor = 3
+			estate_influence = {
+				estate = estate_slavers
+				influence = 90
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_slavers
+						influence = 95
+					}			
+				}			
+			}
+		}	
+		modifier = {
+			factor = 4
+			estate_influence = {
+				estate = estate_slavers
+				influence = 95
+			}
+			hidden_trigger = {
+				NOT = {
+					estate_influence = {
+						estate = estate_slavers
+						influence = 100
+					}			
+				}			
+			}
+		}	
+		modifier = {
+			factor = 5
+			estate_influence = {
+				estate = estate_slavers
+				influence = 100
+			}
+		}		
+	}
+	
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = EST_CRUSHED_SLAVERS
+			
+            NOT = { has_country_flag = in_slavers_disaster }					
+		}
+	}
+	
+	modifier = {	
+		global_manpower_modifier = -0.5
+        global_regiment_cost = 1.0
+        global_regiment_recruit_speed = 1.0
+	}
+
+	on_start = fallout_estates.30
+	on_end = fallout_estates.31
+	
+	on_monthly = {
+	}
+}
+

@@ -1,0 +1,77 @@
+legion_turmoil = {
+	potential = {	
+		tag = CAE
+        NOT = { has_country_modifier = disaster_cooldown }
+	}
+	
+	can_start = {
+		has_any_disaster = no
+		NOT = { legitimacy = 50 }
+	}
+    
+    can_stop = {
+		legitimacy = 50
+	}
+    
+	progress = {
+        factor = 1
+        
+		modifier = {
+			factor = 1
+			war_exhaustion = 10
+			is_at_war = no
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+			is_at_war = no
+		}		
+		modifier = {
+			factor = 1
+			num_of_loans = 10
+			is_at_war = no
+		}	
+		modifier = {
+			factor = 2
+			is_bankrupt = yes
+			is_at_war = no
+		}		
+		modifier = {
+			factor = 0.5
+			overextension_percentage = 0.25
+			NOT = { 
+				overextension_percentage = 0.5
+			}
+			is_at_war = no
+		}
+		modifier = {
+			factor = 1.0
+			overextension_percentage = 0.5
+			is_at_war = no
+		}
+	}
+	
+	can_end = {
+		NOT = { num_of_revolts = 1 }
+		stability = 0
+	}
+	
+	modifier = {
+        legitimacy = -0.5
+		global_unrest = 10
+		stability_cost_modifier = 0.50
+		global_manpower_modifier = -0.25
+	}
+	
+	on_start = legion_turmoil.1
+	on_end = legion_turmoil.2
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			25000 = 0
+			100 = legion_turmoil.3
+		}
+	}
+}

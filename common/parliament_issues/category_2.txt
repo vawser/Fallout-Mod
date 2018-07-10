@@ -1,0 +1,384 @@
+# Regional
+#---------------------------------------------------------
+# Generic
+#---------------------------------------------------------
+permit_ghoul_migrants = {
+	category = 2
+
+	allow = {
+		any_province = {
+            culture_group = ghoul_group 
+        }
+	}
+	
+	on_issue_taken = {
+		every_owned_province = {
+			clr_province_flag = permit_ghoul_migrants_flag
+		}
+		random_owned_province = {
+			limit = {
+				is_in_capital_area = yes
+			}
+			set_province_flag = permit_ghoul_migrants_flag
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = permit_ghoul_migrants_flag
+				}
+                NOT = { culture_group = ghoul_group }
+			}
+			tooltip = {
+				every_owned_province = {
+					limit = { has_province_flag = permit_ghoul_migrants_flag }
+					add_province_modifier = {
+						name = "ghoul_migrants"
+						duration = 3650
+					}
+                    change_culture = ghoul
+				}
+			}
+		}
+        if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = permit_ghoul_migrants_flag
+				}
+                culture_group = ghoul_group
+			}
+			tooltip = {
+				every_owned_province = {
+					limit = { has_province_flag = permit_ghoul_migrants_flag }
+                    change_culture = ghoul
+				}
+			}
+		}
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	modifier = {
+		improve_relation_modifier = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 10
+				has_owner_religion = no
+			}
+		}	
+	}
+}
+
+enforce_religious_tolerance = {
+	category = 2
+
+	allow = {
+		any_owned_province = {
+			has_owner_religion = no
+		}
+	}
+	
+	on_issue_taken = {
+		every_owned_province = {
+			clr_province_flag = guarantee_religious_tolerance_flag
+		}
+		random_owned_province = {
+			limit = {
+				is_in_capital_area = yes
+			}
+			set_province_flag = guarantee_religious_tolerance_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_owner_religion = no
+				}
+				add_province_modifier = {
+					name = "provincial_religious_migration"
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_owned_province = {
+						has_province_flag = guarantee_religious_tolerance_flag
+					}
+				}
+			}
+			tooltip = {
+				custom_tooltip = guarantee_religious_tolerance_tooltip
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = guarantee_religious_tolerance_flag
+				}
+			}
+			tooltip = {
+				every_owned_province = {
+					limit = { has_province_flag = guarantee_religious_tolerance_flag }
+					add_province_modifier = {
+						name = "provincial_religious_migration"
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.5 }
+		}
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 10
+				has_owner_religion = no
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 20
+				has_owner_religion = no
+			}
+		}
+	}
+	
+	modifier = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 10
+				has_owner_religion = no
+			}
+		}	
+	}
+}
+
+establish_settlements = {
+	category = 2
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+	}
+	
+	modifier = {
+		colonists = 1
+		global_colonial_growth = 20
+	}
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2
+			NOT = { num_of_colonies = 10 }
+		}
+	}
+
+
+	ai_will_do = {
+		factor = 1
+	}	
+}
+
+#---------------------------------------------------------
+# Country-specific
+#---------------------------------------------------------
+support_the_crimson_caravan_co = {
+	category = 2
+
+	allow = {
+        technology_group = tech_ncr
+	}
+	
+	effect = {
+
+	}
+	
+	modifier = {    
+        merchants = 1
+		global_trade_power = 0.1
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+support_the_far_go_traders = {
+	category = 2
+
+	allow = {
+		technology_group = tech_ncr
+	}
+	
+	effect = {
+
+	}
+	
+	modifier = {    
+        merchants = 1
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+support_the_gun_runners = {
+	category = 2
+
+	allow = {
+		technology_group = tech_ncr
+	}
+	
+	effect = {
+
+	}
+	
+	modifier = {    
+        merchants = 1
+		shock_damage = 0.05
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+support_the_stockmens_association = {
+	category = 2
+
+	allow = {
+		technology_group = tech_ncr
+	}
+	
+	effect = {
+		add_republican_tradition = -10
+	}
+	
+	modifier = {
+		global_tax_income = 24
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+restrict_the_stockmens_association = {
+	category = 2
+
+	allow = {
+		technology_group = tech_ncr
+	}
+	
+	effect = {
+		add_republican_tradition = 15
+	}
+	
+	modifier = {
+		global_tax_modifier = -0.05
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+support_the_republican_farmers_committee = {
+	category = 2
+
+	allow = {
+		technology_group = tech_ncr
+	}
+	
+	effect = {
+		add_republican_tradition = -10
+	}
+	
+	modifier = {
+		global_tax_income = 24
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+restrict_the_republican_farmers_committee = {
+	category = 2
+
+	allow = {
+		technology_group = tech_ncr
+	}
+	
+	effect = {
+		add_republican_tradition = 15
+	}
+	
+	modifier = {
+		global_tax_modifier = -0.05
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}

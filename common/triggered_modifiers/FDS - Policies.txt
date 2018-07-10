@@ -1,0 +1,161 @@
+# Economy
+fds_traditional_economy = {
+    potential 	= { is_variable_equal = { which = fds_economy value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_economy value = 1 } }
+	
+	global_tax_modifier = -0.25
+	production_efficiency = 0.5
+    trade_efficiency = -0.25
+}
+
+fds_command_economy = {
+    potential 	= { is_variable_equal = { which = fds_economy value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_economy value = 2 } }
+	
+    global_tax_modifier = 0.25
+	production_efficiency = 0.25
+    trade_efficiency = -0.5
+}
+
+fds_market_economy = {
+    potential 	= { is_variable_equal = { which = fds_economy value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_economy value = 3 } }
+	
+	global_tax_modifier = -0.5
+	production_efficiency = 0.25
+    trade_efficiency = 0.25
+}
+
+fds_mixed_economy = {
+    potential 	= { is_variable_equal = { which = fds_economy value = 4 } }
+	trigger 	= { is_variable_equal = { which = fds_economy value = 4 } }
+	
+	global_tax_modifier = 0.05
+	production_efficiency = 0.05
+    trade_efficiency = 0.05
+}
+
+# Law
+fds_democratic_law = {
+    potential 	= { is_variable_equal = { which = fds_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_law value = 1 } }
+	
+	diplomatic_reputation = 1
+}
+
+fds_oligarchic_law = {
+    potential 	= { is_variable_equal = { which = fds_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_law value = 2 } }
+	
+	advisor_cost = -0.1
+}
+
+fds_autocratic_law = {
+    potential 	= { is_variable_equal = { which = fds_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_law value = 3 } }
+	
+	administrative_efficiency = 0.05
+}
+
+# Justice
+fds_court_justice = {
+    potential 	= { is_variable_equal = { which = fds_justice value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_justice value = 1 } }
+	
+	yearly_corruption = -0.05
+}
+
+fds_community_justice = {
+    potential 	= { is_variable_equal = { which = fds_justice value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_justice value = 2 } }
+	
+	years_of_nationalism = -5
+}
+
+fds_state_justice = {
+    potential 	= { is_variable_equal = { which = fds_justice value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_justice value = 3 } }
+	
+	global_autonomy = -0.05
+}
+
+# Punishment
+fds_fine_punishment = {
+    potential 	= { is_variable_equal = { which = fds_punishment value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_punishment value = 1 } }
+	
+    advisor_cost = -0.1
+}
+
+fds_imprisonment_punishment = {
+    potential 	= { is_variable_equal = { which = fds_punishment value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_punishment value = 2 } }
+	
+    diplomatic_reputation = 1
+	global_unrest = -1
+}
+
+fds_execution_punishment = {
+    potential 	= { is_variable_equal = { which = fds_punishment value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_punishment value = 3 } }
+	
+	yearly_corruption = -0.05
+    global_unrest = -1
+}
+
+fds_slavery_punishment = {
+    potential 	= { is_variable_equal = { which = fds_punishment value = 4 } }
+	trigger 	= { is_variable_equal = { which = fds_punishment value = 4 } }
+	
+    global_manpower_modifier = 0.1
+	global_unrest = -1
+}
+
+# Innovation
+fds_individual_innovation = {
+    potential 	= { is_variable_equal = { which = fds_innovation value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_innovation value = 1 } }
+	
+	global_institution_spread = 0.5
+    embracement_cost = 1
+}
+
+fds_state_sponsored_innovation = {
+    potential 	= { is_variable_equal = { which = fds_innovation value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_innovation value = 2 } }
+	
+	global_institution_spread = 0.1
+}
+
+fds_state_innovation = {
+    potential 	= { is_variable_equal = { which = fds_innovation value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_innovation value = 3 } }
+	
+	global_institution_spread = -0.5
+    embracement_cost = -0.5
+}
+
+# Conscription
+fds_volunteer_conscription = {
+    potential 	= { is_variable_equal = { which = fds_conscription value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_conscription value = 1 } }
+	
+	global_manpower_modifier = -0.5
+    global_unrest = -2
+}
+
+fds_limited_conscription = {
+    potential 	= { is_variable_equal = { which = fds_conscription value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_conscription value = 2 } }
+	
+	global_manpower_modifier = 0.05
+}
+
+fds_full_conscription = {
+    potential 	= { is_variable_equal = { which = fds_conscription value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_conscription value = 3 } }
+	
+	global_manpower_modifier = 0.5
+    global_unrest = 2
+}
+

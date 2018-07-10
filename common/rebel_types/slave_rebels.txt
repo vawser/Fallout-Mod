@@ -1,0 +1,170 @@
+slave_rebels = {
+
+	color = { 120 100 170 }
+
+	area = nation_rebel_tag 			
+	government = any				    
+	defection = none			        
+	independence = none
+	defect_delay = 60				# Can spontaneously declare independence after 60 months (earliest)
+	unit_transfer = yes				# Units switch allegiance after enforcing demands.
+	gfx_type = culture_owner	
+	will_relocate = no
+	
+	resilient = no
+	reinforcing = no
+	general = no
+	smart = no
+	
+	artillery = 0.0
+	infantry = 1.0
+	cavalry = 0.0
+	
+	morale = 1.1
+
+	# Possible handle actions
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no		
+	handle_action_change_culture = no
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+
+        modifier = {
+			factor = 50
+            owner = { has_country_flag = slave_rebellion_underway }
+		}
+	 	modifier = {
+			factor = 0.001
+			is_colony = yes
+		}
+		modifier = {
+			factor = 0.05
+			is_overseas = yes
+			has_owner_religion = yes
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { is_core = owner }
+		}		
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { stability = 0 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { stability = -2 }
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				NOT = { legitimacy_or_horde_unity = 66 }
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				NOT = { legitimacy_or_horde_unity = 75 }
+			}
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+ 		culture = REB
+ 	}
+	siege_won_effect = {
+        if = { limit = { has_global_flag = enable_common_logging } log = "slave_rebels.txt - siege_won_effect - [Root.GetName]" }
+		add_nationalism = 10 # Add ten extra years of nationalism
+        add_local_autonomy = 100
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		is_at_war = no
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "slave_rebels_demand"
+	
+	# Country scope
+	demands_enforced_effect = {
+        if = { limit = { has_global_flag = enable_common_logging } log = "slave_rebels.txt - demands_enforced_effect - [Root.GetName]" }
+		add_prestige = -10	
+        every_owned_province = {
+            limit = {
+                has_rebel_faction = REB
+            }			
+            add_local_autonomy = 100
+        }			
+
+        if = {
+            limit = {
+                NOT = { has_country_modifier = slave_superiority }
+            }
+            add_country_modifier = {
+                name = slave_superiority
+                duration = 1800
+            }
+        }
+        
+        if = {
+            limit = {
+                stability = -3
+            }
+            add_stability = -1
+            else = {
+                add_adm_power = -100
+            }
+        }
+	}
+}

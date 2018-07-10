@@ -1,0 +1,28 @@
+namespace = fm_subjects
+
+country_event = {
+	id = fm_subjects.1
+	title = fm_subjects.1.title
+	desc = fm_subjects.1.desc
+	picture = GOODSPRINGS_eventPicture
+	
+	is_triggered_only = yes
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fm_subjects.1" }
+        }
+    }
+    
+	option = {
+		name = fm_subjects.1.option.a
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fm_subjects.1.option.a" }
+
+		add_country_modifier = {
+			name = "annexers_legacy"
+			duration = 3650
+		}
+	}
+}
+

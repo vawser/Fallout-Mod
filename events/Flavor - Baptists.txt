@@ -1,0 +1,101 @@
+namespace = baptist
+
+country_event = { # If a Baptist Theocracy exists, it immediately converts to the autonomous, voluntary structure of the RL Southern Baptist Convention
+	id = baptist.1
+	title = baptist.1.title
+	desc = baptist.1.desc
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		religion = baptist
+		OR = {
+			government = theocracy
+			government = feudal_theocracy
+			government = monastic_order
+		}
+		NOT = { government = baptist_convention }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option  = {
+		name = baptist.1.a
+		change_government = baptist_convention
+	}
+
+	option = {
+		name = baptist.1.b
+		change_religion = protestant
+	
+		if = {
+			limit = {
+				OR = {
+					government = theocracy 
+					government = feudal_theocracy
+				}
+			}
+			change_government = theocracy
+		}
+
+		if = {
+			limit = { government = monastic_order }
+			change_government = monastic_order
+		}
+
+		add_stability = -6
+		add_devotion = -50
+		every_owned_province = { add_local_autonomy = -20 }
+
+		if = {
+			limit = {
+				any_owned_province = {
+					religion = baptist
+				}
+			}
+			random_owned_province = {
+				limit = { religion = baptist }
+				baptist_rebels = 6
+			}
+		}
+	}
+}
+
+country_event = { # If a Baptist Convention is no longer Baptist, it becomes a Theocracy
+	id = baptist.2
+ 	title = baptist.2.title
+	desc = baptist.2.desc
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		NOT = { religion = baptist }
+		government = baptist_convention
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option  = {
+		name = ASSUMING_DIRECT_CONTROL
+		change_government = theocracy
+		every_owned_province = { add_local_autonomy = -20 }
+		hidden_effect = { add_stability = 2 }
+		if = {
+			limit = {
+				any_owned_province = {
+					religion = baptist
+				}
+			}
+			random_owned_province = {
+				limit = { religion = baptist }
+				baptist_rebels = 3
+			}
+		}
+		if = {
+ 			limit = {
+				NOT = {
+					any_owned_province = { religion = baptist }
+				}
+			}
+			capital_scope = { baptist_rebels = 1 }
+		}
+	}
+}

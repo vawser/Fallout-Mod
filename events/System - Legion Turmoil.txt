@@ -1,0 +1,105 @@
+namespace = legion_turmoil
+
+# "Legion Turmoil"
+country_event = {
+	id = legion_turmoil.1
+	title = legion_turmoil.1.title
+	desc = legion_turmoil.1.desc
+	picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - legion_turmoil.1" }
+        }
+        
+        hidden_effect = {
+            capital_scope = {
+                spawn_rebels = {
+                    type = pretender_rebels
+                    size = 4
+                    win = yes
+                    unrest = 15
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = legion_turmoil.1.option.a
+		
+        set_country_flag = legion_turmoil_underway
+
+        add_stability = -3
+	}
+}
+
+# "Pax Legionum"
+country_event = {
+	id = legion_turmoil.2
+	title = legion_turmoil.2.title
+	desc = legion_turmoil.2.desc
+	picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - legion_turmoil.2" }
+        }
+    }
+    
+	option = {
+		name = legion_turmoil.2.option.a
+		
+        add_stability = 3
+        
+        clr_country_flag = legion_turmoil_underway
+
+        hidden_effect = {
+            add_country_modifier = {
+                name = disaster_cooldown
+                duration = 3650
+                hidden = yes
+            }
+        }
+	}
+}
+
+# "Pretenders Arise!"
+country_event = {
+	id = legion_turmoil.3
+	title = legion_turmoil.3.title
+	desc = legion_turmoil.3.desc
+	picture = LEGION_CAMP_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        NOT = { num_of_revolts = 3 }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - legion_turmoil.3" }
+        }
+    }
+    
+	option = {
+		name = legion_turmoil.3.option.a
+		
+        random_owned_province = {
+            limit = {
+                is_capital = no
+            }
+            spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+				win = yes
+				unrest = 15
+			}
+        }
+	}
+}
+

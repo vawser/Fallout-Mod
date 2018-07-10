@@ -1,0 +1,130 @@
+namespace = slavery
+
+# "Victory over $FROMCOUNTRY$"
+country_event = {
+	id = slavery.1
+	title = slavery.1.title
+	desc = slavery.1.desc
+	picture = ENCAMPMENT_eventPicture
+	
+    is_triggered_only = yes
+    
+    trigger = {
+        OR = {
+			has_slavery_allowed = yes
+			has_slavery_licensed = yes
+		}
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - slavery.2" }
+        }
+    }
+    
+	option = {
+		name = slavery.1.option.a
+		
+		trigger = {
+			has_dlc = "The Cossacks"
+			has_estate = estate_slavers
+		}
+		
+		add_estate_loyalty = {
+			estate = estate_slavers
+			loyalty = 10
+		}
+		
+        add_prestige = -5
+	}
+    
+    option = {
+		name = slavery.1.option.b
+		
+        add_years_of_income = 1
+	}
+    
+    option = {
+		name = slavery.1.option.c
+		
+        add_prestige = 5
+	}
+}
+
+# "Slaves of War"
+country_event = {
+	id = slavery.2
+	title = slavery.2.title
+	desc = slavery.2.desc
+	picture = ENCAMPMENT_eventPicture
+	
+    is_triggered_only = yes
+    
+    trigger = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_slavers
+        OR = {
+			has_slavery_allowed = yes
+			has_slavery_licensed = yes
+		}
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - slavery.3" }
+        }
+    }
+    
+	option = {
+		name = slavery.2.option.a
+		
+        add_estate_loyalty = {
+            estate = estate_slavers
+            loyalty = 5
+        }
+	}
+}
+
+# "Slaver's Haul"
+country_event = {
+	id = slavery.3
+	title = slavery.3.title
+	desc = slavery.3.desc
+	picture = ENCAMPMENT_eventPicture
+    
+    trigger = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_slavers
+		OR = {
+			has_slavery_allowed = yes
+			has_slavery_licensed = yes
+		}
+        treasury = 100
+    }
+    
+    mean_time_to_happen = {
+		months = 120
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - slavery.4" }
+        }
+    }
+    
+	option = {
+		name = slavery.3.option.a
+		
+        add_treasury = -100
+        
+        add_estate_loyalty = {
+            estate = estate_slavers
+            loyalty = 10
+        }
+	}
+    
+    option = {
+		name = slavery.3.option.b
+	}
+}
+

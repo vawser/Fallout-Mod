@@ -1,0 +1,22 @@
+namespace = missions
+
+country_event = {
+	id = missions.1
+	title = missions.1.title
+	desc = missions.1.desc
+    picture = LEGION_CAMP_eventPicture
+	
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = mission_in_action
+        }
+    }
+    
+	option = {
+		name = missions.1.option.a
+
+        add_claim = 118
+	}
+}

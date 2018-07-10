@@ -1,0 +1,94 @@
+country_decisions = {
+    claim_vault = {
+		potential = {
+			OR = {
+				government = war_tribe
+                government = trade_tribe
+                government = religious_tribe
+				government = steppe_horde
+			}
+            NOT = { num_of_cities = 5 } # Four cities or less, roughly the same size in terms of land as Vault City
+		}
+		allow =  {
+			any_owned_province = {
+                has_province_modifier = pf_vault
+            }
+		}
+	  	effect = {
+			change_government = vault
+            add_stability = -3
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+	assemble_a_raiding_party = {
+		potential = {
+			OR = {
+				technology_group = tech_tribal
+				government = war_tribe
+                government = trade_tribe
+                government = religious_tribe
+				government = steppe_horde
+				tag = GRK
+				tag = GD1
+				tag = GD2
+			}
+			NOT = { has_country_modifier = assembled_raiding_party }
+		}
+		allow =  {
+#			technology_group = tech_tribal
+			is_at_war = yes
+		}
+	  	effect = {
+			capital_scope = {
+				infantry = ROOT
+				cavalry = ROOT
+			}
+			add_country_modifier = { 
+				name = assembled_raiding_party
+				duration = 3650
+				hidden = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	construct_chem_lab = {
+		potential = {
+			OR = {
+				technology_group = tech_tribal
+				government = steppe_horde
+				tag = GRK
+				tag = GD1
+				tag = GD2
+			}
+			NOT = { has_country_modifier = chem_lab }
+			NOT = {
+				tag = TWM
+				religion_group = religion_group_christianity
+			}
+		}
+		allow =  {
+#			technology_group = tech_tribal
+			treasury = 500
+			OR = {
+				has_narcotics_allowed = yes
+				has_narcotics_licensed = yes
+			}
+		}
+	  	effect = {
+			add_treasury = -500
+			add_country_modifier = { 
+				name = chem_lab
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,1623 @@
+namespace = caravans
+
+# West Coast
+# Crimson Caravans
+# Griffin Wares
+# Durable Dunns
+# Cassidy Caravans
+# Happy Trails Caravan Company
+
+# Elsewhere
+# Al's Traveling Wares
+# Eybo Wares
+# Grayson Caravans
+# Putts Wares
+# Kalico's Caravan Company
+# Iron's Munitions Company
+# Gleeson Caravans
+
+# Initial placement
+country_event = {
+	id = caravans.1
+	title = caravans.1.title
+	desc = caravans.1.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+    
+    trigger = {
+        ai = no
+        NOT = { has_global_flag = set_caravan_markers }
+    }
+    
+    immediate = {
+        set_global_flag = set_caravan_markers
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.1" }
+        }
+    }
+    
+	option = {
+		name = caravans.1.option.a
+        
+        # West Coast
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                OR = {
+                    region = california_region
+                    region = nevada_region
+                    region = utah_region
+                    region = arizona_region
+                    region = new_mexico_region
+                }
+            }
+            log = "Crimson Caravans placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = crimson_caravans_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                OR = {
+                    region = california_region
+                    region = nevada_region
+                    region = utah_region
+                    region = arizona_region
+                    region = new_mexico_region
+                }
+            }
+            log = "Griffin Wares placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = griffin_wares_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                OR = {
+                    region = california_region
+                    region = nevada_region
+                    region = utah_region
+                    region = arizona_region
+                    region = new_mexico_region
+                }
+            }
+            log = "Durable Dunns placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = durable_dunns_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                OR = {
+                    region = california_region
+                    region = nevada_region
+                    region = utah_region
+                    region = arizona_region
+                    region = new_mexico_region
+                }
+            }
+            log = "Cassidy Caravans placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = cassidy_caravans_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                OR = {
+                    region = california_region
+                    region = nevada_region
+                    region = utah_region
+                    region = arizona_region
+                    region = new_mexico_region
+                }
+            }
+            log = "Happy Trail Caravan Company placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = happy_trails_caravan_company_marker
+                duration = -1
+            }
+        }
+        
+        # Other
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                superregion = east_coast_superregion
+            }
+            log = "Al's Travelling Wares placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = als_travelling_wares_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                superregion = east_coast_superregion
+            }
+            log = "Eybo's Wares placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = eybo_wares_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                superregion = east_coast_superregion
+            }
+            log = "Grayson Caravans placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = grayson_caravans_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                superregion = east_coast_superregion
+            }
+            log = "Putts Wares placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = putts_wares_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                superregion = east_coast_superregion
+            }
+            log = "Kalico's Caravan Company placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = kalicos_caravan_company_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                superregion = east_coast_superregion
+            }
+            log = "Gam's Munition Company placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = irons_munition_company_marker
+                duration = -1
+            }
+        }
+        
+        random_province = {
+            limit = {
+                is_valid_caravan_province = yes
+                superregion = east_coast_superregion
+            }
+            log = "Gleeson Caravans placed in [This.GetName]"
+            add_permanent_province_modifier = {
+                name = gleeson_caravans_marker
+                duration = -1
+            }
+        }
+	}
+}
+
+# Crimson Caravan
+country_event = {
+	id = caravans.2
+	title = caravans.2.title
+	desc = caravans.2.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.2" }
+        }
+    }
+    
+	option = {
+		name = caravans.2.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = crimson_caravans_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = crimson_caravans_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Crimson Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = crimson_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Crimson Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = crimson_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = crimson_caravans_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = crimson_caravans_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Griffin Wares
+country_event = {
+	id = caravans.3
+	title = caravans.3.title
+	desc = caravans.3.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.3" }
+        }
+    }
+    
+	option = {
+		name = caravans.3.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = griffin_wares_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = griffin_wares_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Griffin Wares moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = griffin_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Griffin Wares moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = griffin_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = griffin_wares_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = griffin_wares_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Durable Dunns
+country_event = {
+	id = caravans.4
+	title = caravans.4.title
+	desc = caravans.4.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.4" }
+        }
+    }
+    
+	option = {
+		name = caravans.4.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = durable_dunns_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = durable_dunns_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Durable Dunns moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = durable_dunns_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Durable Dunns moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = durable_dunns_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = durable_dunns_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = durable_dunns_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Cassidy Caravans
+country_event = {
+	id = caravans.5
+	title = caravans.5.title
+	desc = caravans.5.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.5" }
+        }
+    }
+    
+	option = {
+		name = caravans.5.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = cassidy_caravans_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = cassidy_caravans_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Cassidy Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = cassidy_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Cassidy Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = cassidy_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = cassidy_caravans_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = cassidy_caravans_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Happy Trails Caravan Company
+country_event = {
+	id = caravans.6
+	title = caravans.6.title
+	desc = caravans.6.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.6" }
+        }
+    }
+    
+	option = {
+		name = caravans.6.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = happy_trails_caravan_company_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = happy_trails_caravan_company_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Happy Trails Caravan Company moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = happy_trails_caravan_company_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Happy Trails Caravan Company moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = happy_trails_caravan_company_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = happy_trails_caravan_company_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = happy_trails_caravan_company_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Al's Traveling Wares
+country_event = {
+	id = caravans.7
+	title = caravans.7.title
+	desc = caravans.7.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.7" }
+        }
+    }
+    
+	option = {
+		name = caravans.7.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = als_travelling_wares_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = als_travelling_wares_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Al's Traveling Wares moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = als_travelling_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Al's Traveling Wares moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = als_travelling_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = als_travelling_wares_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = als_travelling_wares_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Eybo's Caravans
+country_event = {
+	id = caravans.8
+	title = caravans.8.title
+	desc = caravans.8.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.8" }
+        }
+    }
+    
+	option = {
+		name = caravans.8.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = eybo_wares_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = eybo_wares_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Eybo's Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = eybo_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Eybo's Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = eybo_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = eybo_wares_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = eybo_wares_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Grayson Caravans
+country_event = {
+	id = caravans.9
+	title = caravans.9.title
+	desc = caravans.9.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.9" }
+        }
+    }
+    
+	option = {
+		name = caravans.9.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = grayson_caravans_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = grayson_caravans_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Grayson Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = grayson_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Grayson Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = grayson_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = grayson_caravans_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = grayson_caravans_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Putts Wares
+country_event = {
+	id = caravans.10
+	title = caravans.10.title
+	desc = caravans.10.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.10" }
+        }
+    }
+    
+	option = {
+		name = caravans.10.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = putts_wares_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = putts_wares_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Putts Wares moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = putts_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Putts Wares moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = putts_wares_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = putts_wares_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = putts_wares_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Kalico's Caravan Company
+country_event = {
+	id = caravans.11
+	title = caravans.11.title
+	desc = caravans.11.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.11" }
+        }
+    }
+    
+	option = {
+		name = caravans.11.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = kalicos_caravan_company_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = kalicos_caravan_company_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Kalico's Caravan Company moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = kalicos_caravan_company_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Kalico's Caravan Company moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = kalicos_caravan_company_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = kalicos_caravan_company_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = kalicos_caravan_company_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Gam's Munitions Company
+country_event = {
+	id = caravans.12
+	title = caravans.12.title
+	desc = caravans.12.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.12" }
+        }
+    }
+    
+	option = {
+		name = caravans.12.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = irons_munition_company_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = irons_munition_company_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Gam's Munitions Company moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = irons_munition_company_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Gam's Munitions Company moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = irons_munition_company_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = irons_munition_company_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = irons_munition_company_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+# Gleeson Caravans
+country_event = {
+	id = caravans.13
+	title = caravans.13.title
+	desc = caravans.13.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	hidden = yes
+    
+    trigger = {
+        has_country_flag = processor
+    }
+    
+    mean_time_to_happen = {
+        months = 3
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.13" }
+        }
+    }
+    
+	option = {
+		name = caravans.13.option.a
+
+        every_province = {
+            limit = {
+                has_province_modifier = gleeson_caravans_marker
+            }
+           
+            save_event_target_as = current_province
+            remove_province_modifier = gleeson_caravans_marker
+        }
+        
+        # Change location
+        event_target:current_province = {
+            random_list = {
+                50 = {
+                    random_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Gleeson Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = gleeson_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+                50 = {
+                    random_empty_neighbor_province = {
+                        limit = { is_valid_caravan_province = yes }
+                                
+                        log = "Gleeson Caravans moved to [This.GetName]"
+                        add_permanent_province_modifier = {
+                            name = gleeson_caravans_marker
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+        
+        # If no valid location found, restore original location
+        if = {
+            limit = {
+                NOT = { any_province = { has_province_modifier = gleeson_caravans_marker } }
+            }
+            event_target:current_province = {
+                add_permanent_province_modifier = {
+                    name = gleeson_caravans_marker
+                    duration = -1
+                }
+            }
+        }
+	}
+}
+
+#---------------------------------
+# Buy Menus
+#---------------------------------
+country_event = {
+	id = caravans.20
+	title = caravans.20.title
+	desc = caravans.20.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	is_triggered_only = yes
+	
+    trigger = {
+        NOT = { has_country_flag = in_buy_menu }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = in_buy_menu 
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.20" }
+        }
+    }
+    
+    # Combat armour
+	option = {
+		name = caravans.20.option.a
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_combat_armour }
+            treasury = 25000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -25000
+        
+        add_country_modifier = {
+            name = mass_combat_armour
+            duration = -1
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.a
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_combat_armour }
+            NOT = { treasury = 25000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = YOU_NEED_25K_TO_PURCHASE
+        tooltip = {
+            add_country_modifier = {
+                name = mass_combat_armour
+                duration = -1
+            }
+        }
+	}
+    
+    # Ballistic Weaponry
+	option = {
+		name = caravans.20.option.b
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_ballistic_weaponry }
+            treasury = 25000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -25000
+        
+        add_country_modifier = {
+            name = mass_ballistic_weaponry
+            duration = -1
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.b
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_ballistic_weaponry }
+            NOT = { treasury = 25000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = YOU_NEED_25K_TO_PURCHASE
+        tooltip = {
+            add_country_modifier = {
+                name = mass_ballistic_weaponry
+                duration = -1
+            }
+        }
+	}
+    
+    # Laser Weaponry
+	option = {
+		name = caravans.20.option.c
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_laser_weaponry }
+            treasury = 25000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -25000
+        
+        add_country_modifier = {
+            name = mass_laser_weaponry
+            duration = -1
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.c
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_laser_weaponry }
+            NOT = { treasury = 25000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = YOU_NEED_25K_TO_PURCHASE
+        tooltip = {
+            add_country_modifier = {
+                name = mass_laser_weaponry
+                duration = -1
+            }
+        }
+	}
+    
+    # Medical Supplies
+	option = {
+		name = caravans.20.option.d
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_medical_supplies }
+            treasury = 25000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -25000
+        
+        add_country_modifier = {
+            name = mass_medical_supplies
+            duration = -1
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.d
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_medical_supplies }
+            NOT = { treasury = 25000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = YOU_NEED_25K_TO_PURCHASE
+        tooltip = {
+            add_country_modifier = {
+                name = mass_medical_supplies
+                duration = -1
+            }
+        }
+	}
+    
+    # Agricultural Supplies
+	option = {
+		name = caravans.20.option.e
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_agricultural_supplies }
+            treasury = 25000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -25000
+        
+        add_country_modifier = {
+            name = mass_agricultural_supplies
+            duration = -1
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.e
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_agricultural_supplies }
+            NOT = { treasury = 25000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = YOU_NEED_25K_TO_PURCHASE
+        tooltip = {
+            add_country_modifier = {
+                name = mass_agricultural_supplies
+                duration = -1
+            }
+        }
+	}
+    
+    # Fission Cells
+	option = {
+		name = caravans.20.option.f
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_fission_cells }
+            treasury = 25000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -25000
+        
+        add_country_modifier = {
+            name = mass_fission_cells
+            duration = -1
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.f
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_fission_cells }
+            NOT = { treasury = 25000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = YOU_NEED_25K_TO_PURCHASE
+        tooltip = {
+            add_country_modifier = {
+                name = mass_fission_cells
+                duration = -1
+            }
+        }
+	}
+    
+    # Death Ray (joke)
+    option = {
+		name = caravans.20.option.g
+        
+        trigger = {
+            NOT = { has_country_modifier = death_ray }
+            treasury = 999999
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -999999
+        
+        add_country_modifier = {
+            name = death_ray
+            duration = -1
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.g
+        
+        trigger = {
+            NOT = { has_country_modifier = death_ray }
+            NOT = { treasury = 999999 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = YOU_NEED_999K_TO_PURCHASE
+        tooltip = {
+            add_country_modifier = {
+                name = death_ray
+                duration = -1
+            }
+        }
+	}
+    
+    option = {
+		name = caravans.20.option.exit
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+	}
+}
+
+#---------------------------------
+# Actions
+#---------------------------------
+# Investment in Local Caravans
+# -ducats
+# +trade value modifier in current province
+country_event = {
+	id = caravans.21
+	title = caravans.21.title
+	desc = caravans.21.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+    trigger = {
+        capital_scope = {
+            any_province = {
+                region = PREV
+                has_caravan_marker = yes
+            }
+        }
+        NOT = { has_country_modifier = local_caravan_investment }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.21" }
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 120
+        
+        modifier = {
+            factor = 0.25
+            
+            treasury = 1000
+        }
+    }
+    
+	option = {
+		name = caravans.21.option.a
+        
+        add_treasury = -200
+        
+        add_country_modifier = {
+            name = local_caravan_investment
+            duration = 1800
+        }
+	}
+    
+    option = {
+		name = caravans.21.option.b
+        
+        
+	}
+}
+
+# X feels safe
+# > 1 stab
+# +trade value global for 1800
+country_event = {
+	id = caravans.22
+	title = caravans.22.title
+	desc = caravans.22.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+
+    trigger = {
+        capital_scope = {
+            any_province = {
+                region = PREV
+                has_caravan_marker = yes
+            }
+        }
+        NOT = { has_country_modifier = local_caravan_safe }
+        stability = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.22" }
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 360
+        
+        modifier = {
+            factor = 0.33
+            tag = CAE # Legion safety
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+    }
+    
+	option = {
+		name = caravans.22.option.a
+
+        add_country_modifier = {
+            name = local_caravan_safe
+            duration = 1800
+        }
+	}
+}
+
+# x feels unsafe
+# < 1 stab
+# -trade value global for 1800
+country_event = {
+	id = caravans.23
+	title = caravans.23.title
+	desc = caravans.23.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+
+    trigger = {
+        capital_scope = {
+            any_province = {
+                region = PREV
+                has_caravan_marker = yes
+            }
+        }
+        NOT = { has_country_modifier = local_caravan_unsafe }
+        NOT = { stability = 0 }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caravans.23" }
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 360
+        
+        modifier = {
+            factor = 2
+            tag = CAE # Legion safety
+        }
+        
+        modifier = {
+            factor = 0.5
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.5
+            NOT = { stability = -2 }
+        }
+    }
+    
+	option = {
+		name = caravans.23.option.a
+
+        add_country_modifier = {
+            name = local_caravan_unsafe
+            duration = 1800
+        }
+	}
+}
+
+# caravan spats
+# multiple markers in provinces
+# 1. mediate, +dip -gold
+# 2. favour one side +gold -dip
+# 3. ignore

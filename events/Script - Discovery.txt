@@ -1,0 +1,231 @@
+namespace = discovery
+
+country_event = {
+	id = discovery.1
+	title = discovery.1.title
+	desc = discovery.1.desc
+    picture = GOODS_eventPicture
+	
+    is_triggered_only = yes
+    hidden = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - discovery.1" }
+        }
+    }
+    
+	option = {
+		name = discovery.1.option.a
+    
+        # West Coast
+        if = {
+            limit = {
+                capital_scope = {
+                    superregion = west_coast_superregion
+                }
+            }
+            
+            west_coast_superregion = {
+                discover_country = ROOT
+            }
+            west_coastline_superregion = {
+                discover_country = ROOT
+            }
+            mexico_superregion = {
+                discover_country = ROOT
+            }
+            
+            6 = {
+                discover_country = ROOT
+            }
+            45 = {
+                discover_country = ROOT
+            }
+            1922 = {
+                discover_country = ROOT
+            }
+            4001 = {
+                discover_country = ROOT
+            }
+            8 = {
+                discover_country = ROOT
+            }
+        }
+        
+        # East Coast
+        if = {
+            limit = {
+                capital_scope = {
+                    superregion = east_coast_superregion
+                }
+            }
+            
+            east_coast_superregion = {
+                discover_country = ROOT
+            }
+            east_coastline_superregion = {
+                discover_country = ROOT
+            }
+            1659 = {
+                discover_country = ROOT
+            }
+            1663 = {
+                discover_country = ROOT
+            }
+            1661 = {
+                discover_country = ROOT
+            }
+            1662 = {
+                discover_country = ROOT
+            }
+            1660 = {
+                discover_country = ROOT
+            }
+        }
+        
+        # Midwest
+        if = {
+            limit = {
+                capital_scope = {
+                    superregion = midwest_superregion
+                }
+            }
+            
+            midwest_superregion = {
+                discover_country = ROOT
+            }
+            1659 = {
+                discover_country = ROOT
+            }
+            1663 = {
+                discover_country = ROOT
+            }
+            1661 = {
+                discover_country = ROOT
+            }
+            1662 = {
+                discover_country = ROOT
+            }
+            1660 = {
+                discover_country = ROOT
+            }
+        }
+        
+        # Gulf
+        if = {
+            limit = {
+                capital_scope = {
+                    superregion = gulf_superregion
+                }
+            }
+            
+            gulf_superregion = {
+                discover_country = ROOT
+            }
+            gulf_coastline_superregion = {
+                discover_country = ROOT
+            }
+            8 = {
+                discover_country = ROOT
+            }
+        }
+        
+        if = {
+            limit = {
+                capital_scope = {
+                    region = big_mt_region
+                }
+            }
+            big_mt_region = {
+                discover_country = ROOT
+            }
+        }
+        
+        # Mexico
+        if = {
+            limit = {
+                capital_scope = {
+                    superregion = mexico_superregion
+                }
+            }
+            mexico_superregion = {
+                discover_country = ROOT
+            }
+            baja_california_region = {
+                discover_country = ROOT
+            }
+            west_coastline_superregion = {
+                discover_country = ROOT
+            }
+            gulf_coastline_superregion = {
+                discover_country = ROOT
+            }
+            45 = {
+                discover_country = ROOT
+            }
+            8 = {
+                discover_country = ROOT
+            }
+        }
+        
+        # Canada
+        if = {
+            limit = {
+                capital_scope = {
+                    superregion = canada_superregion
+                }
+            }
+            canada_superregion = {
+                discover_country = ROOT
+            }
+            east_coast_superregion = {
+                discover_country = ROOT
+            }  
+            1659 = {
+                discover_country = ROOT
+            }
+            1663 = {
+                discover_country = ROOT
+            }
+            1661 = {
+                discover_country = ROOT
+            }
+            1662 = {
+                discover_country = ROOT
+            }
+            1660 = {
+                discover_country = ROOT
+            }
+        }  
+
+        # Hide Sierra Madre
+        if = {
+            limit = { 
+                NOT = {
+                    capital_scope = {
+                        area = sierra_madre_area
+                    }
+                }
+            }
+            sierra_madre_area = {
+                undiscover_country = ROOT
+            }
+        }
+        
+        # Hide The Divide
+        if = {
+            limit = { 
+                NOT = {
+                    capital_scope = {
+                        area = divide_area
+                    }
+                }
+            }
+            divide_area = {
+                undiscover_country = ROOT
+            }
+        }
+    }
+}
+

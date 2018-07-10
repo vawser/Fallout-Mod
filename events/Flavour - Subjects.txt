@@ -1,0 +1,143 @@
+namespace = subject_nations
+
+# Discontent on the Frontier
+# Our dominon over our smaller subjects is faltering. There is talk of revolt and many treat our citizens with contempt. We will need to use force to deal with this matter, lest these ingrates get the wrong idea.
+# Setup military checkpoints in our rebellious subject's settlements
+# Attempt to negotiate with the rebellious subject
+# Ignore the threats
+country_event = {
+	id = subject_nations.1
+	title = subject_nations.1.title
+	desc = subject_nations.1.desc
+    picture = GOODSPRINGS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_subject_country = {  
+			liberty_desire = 10
+		}
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - subject_nations.1" }
+        }
+    }
+    
+	option = {
+		name = subject_nations.1.option.a
+	
+		add_mil_power = -100
+		
+		random_subject_country = {
+			limit = {
+				liberty_desire = 10
+			}
+			
+			add_liberty_desire = 25
+		}
+	}
+	
+	option = {
+		name = subject_nations.1.option.b
+	
+		add_dip_power = -100
+		
+		random_subject_country = {
+			limit = {
+				liberty_desire = 10
+			}
+			
+			add_liberty_desire = 10
+		}
+	}
+	
+	option = {
+		name = subject_nations.1.option.c
+	
+		random_subject_country = {
+			limit = {
+				liberty_desire = 10
+			}
+			
+			add_liberty_desire = 50
+		}
+	}
+}
+
+# Upset in New Reno
+# Although technically under the juristiction of the New California Republic, the families of New Reno are uncooperative and seek independance in any way they can. Reports from officers stationed there suggest the families are planning something big that may threaten the stability of the northern part of the New California Republic.
+# Station military forces in New Reno to squash any dissent
+# Attempt to negotiate with the families
+# Ignore the reports
+country_event = {
+	id = subject_nations.2
+	title = subject_nations.2.title
+	desc = subject_nations.2.desc
+    picture = CITYSTREET_POLLUTED_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = NCR
+		
+		NRN = {
+			is_subject_of = NCR
+		}
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - subject_nations.2" }
+        }
+    }
+    
+	option = {
+		name = subject_nations.2.option.a
+	
+		add_mil_power = -100
+		
+		NRN = {
+			add_liberty_desire = 50
+		}
+	}
+	
+	option = {
+		name = subject_nations.2.option.b
+	
+		add_dip_power = -100
+		
+		random_list = {
+			50 = {
+				NRN = {
+					add_liberty_desire = 75
+				}
+			}
+			30 = {
+				NRN = {
+					add_liberty_desire = 50
+				}
+			}
+			20 = {
+				NRN = {
+					add_liberty_desire = 25
+				}
+			}
+			10 = {
+				NRN = {
+					add_liberty_desire = 5
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = subject_nations.2.option.c
+	
+		NRN = {
+			add_liberty_desire = 90
+		}
+	}
+}
+

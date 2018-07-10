@@ -1,0 +1,145 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new buildings, make sure they are uniquely named.
+
+# cost = x #==> cost in $ to build (subject to other modifiers)
+# time = x #==> number of months to build.
+# modifier = m # a modifier on the province that the building gives
+# trigger = t # an and trigger that needs to be fullfilled to build and keep the building
+# one_per_country = yes/no # if yes, only one of these can exist in a country
+# manufactory = { trade_good trade_good } # list of trade goods that get a production bonus
+# onmap = yes/no # show as a sprite on the map
+
+# FROM = owner
+# ROOT = province
+
+# AI will consider buildings it does not have the tech for at 20% of scripted AI weight (in case it wants to save slots)
+	
+fbs_research_lab = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		institution_growth = 1
+	}
+
+	ai_will_do = {
+		factor = 1	
+        
+        modifier = {
+			factor = 210
+			is_state = yes
+		}
+        
+        modifier = {
+            factor = 500
+            NOT = { current_institution = 1 }
+        }
+        
+        modifier = {
+            factor = 0
+            is_territory = yes
+        }
+	}
+}
+
+fbs_bank = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+        local_state_maintenance_modifier = -0.25
+		local_development_cost = -0.25
+	}
+    
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 210
+			is_state = yes
+            development = 10
+		}
+        
+        modifier = {
+            factor = 0
+            is_territory = yes
+        }
+	}
+}
+
+fbs_office = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		local_tax_modifier = 1.0
+	}
+    
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_factory = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		local_production_efficiency = 1.0
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_marketplace = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		province_trade_power_modifier = 1.0
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+
+fbs_police_station = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		local_unrest = -5
+	}
+    
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 210
+            
+            unrest = 20
+		}
+	}
+}
+
+fbs_religious_centre = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		local_missionary_strength = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 210
+            FROM = { NOT = { religious_unity = 0.9 } }
+		}
+	}
+}
+

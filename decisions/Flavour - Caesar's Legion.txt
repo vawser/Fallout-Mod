@@ -1,0 +1,393 @@
+country_decisions = {
+	the_glory_of_rome = {
+		potential = {
+			OR = {
+				tag = CAE
+				tag = X01
+				government = legion
+			}
+			NOT = { has_country_modifier = the_glory_of_rome }
+		}
+		allow =  {
+			own_header = yes
+			custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SHADY_SANDS
+                2956 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HOOVER_DAM
+                267 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+		}
+	  	effect = {
+			add_country_modifier = {
+				name = the_glory_of_rome
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+    form_veteran_legionary_regiment = {
+        potential = {
+			has_dlc = "Third Rome"
+            NOT = { has_dlc = "The Cossacks" }
+            OR = {
+				tag = CAE
+				government = legion
+			}
+		}
+		allow =  {
+			manpower = 5
+            years_of_income = 5
+		}
+	  	effect = {
+			add_manpower = -5
+            add_years_of_income = -5
+            
+            custom_tooltip = VETERAN_LEGIONARIES_RECRUITMENT
+            hidden_effect = {
+                capital_scope = {
+                    ROOT = {
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                        streltsy_infantry = PREV
+                    }
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 10
+                years_of_income = 10
+            }
+            
+            modifier = {
+                factor = 0
+                army_size_percentage = 0.9
+            }
+		}
+    }
+    
+    conduct_enslavement_sweep = {
+        potential = {
+            tag = CAE
+            NOT = { has_dlc = "The Cossacks" }
+            OR = {
+                has_slavery_allowed = yes
+                has_slavery_licensed = yes
+            }
+            NOT = { has_country_modifier = decision_cooldown }
+		}
+		allow =  {
+			any_owned_province = {
+                NOT = { has_province_modifier = enslavement }
+                OR = {
+                    NOT = { culture = ROOT }
+                    NOT = { religion = ROOT }
+                }
+            }
+            mil_power = 50
+		}
+	  	effect = {
+			add_mil_power = -50
+            hidden_effect = {
+                add_country_modifier = {
+                    name = decision_cooldown
+                    duration = 1800
+                    hidden = yes
+                }
+            }
+            
+            custom_tooltip = ENSLAVEMENT_EFFECT
+            hidden_effect = {
+                set_variable = { which = counter value = 0 }
+                
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            NOT = { culture = ROOT }
+                            NOT = { religion = ROOT }
+                        }
+                    }
+                    add_province_modifier = {
+                        name = enslavement
+                        duration = 3650
+                    }
+                    ROOT = { change_variable = { which = counter value = 1 } }
+                }
+
+                #log = "DEBUG: Counter - [Root.counter.GetValue]"
+                
+                if = {
+                    limit = { check_variable = { which = counter value = 5 } }
+                    
+                    country_event = { id = the_legion.5 days = 30 }
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 1
+                NOT = { religious_unity = 0.75 }
+            }
+		}
+    }
+    
+    conduct_extermination_sweep = {
+        potential = {
+            tag = CAE
+            NOT = { has_dlc = "The Cossacks" }
+            OR = {
+                has_slavery_allowed = yes
+                has_slavery_licensed = yes
+            }
+            NOT = { has_country_modifier = decision_cooldown }
+		}
+		allow =  {
+			any_owned_province = {
+                OR = {
+                    NOT = { culture = ROOT }
+                    NOT = { religion = ROOT }
+                }
+            }
+            mil_power = 250
+		}
+	  	effect = {
+            hidden_effect = {
+                add_country_modifier = {
+                    name = decision_cooldown
+                    duration = 1800
+                    hidden = yes
+                }
+            }
+			add_mil_power = -250
+            
+            custom_tooltip = EXTERMINATION_EFFECT
+            hidden_effect = {
+                set_variable = { which = counter value = 0 }
+                
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            NOT = { culture = ROOT }
+                            NOT = { religion = ROOT }
+                        }
+                    }
+                    change_culture = ROOT
+                    change_religion = ROOT
+                    
+                    if = {
+                        limit = {
+                            NOT = { is_core = ROOT }
+                        }
+                        add_core = ROOT
+                    }
+                    
+                    while = {
+                        limit = { base_tax = 2 }
+                        add_base_tax = -1
+                    }
+                    
+                    while = {
+                        limit = { base_production = 2 }
+                        add_base_production = -1
+                    }
+                    
+                    while = {
+                        limit = { base_manpower = 2 }
+                        add_base_manpower = -1
+                    }
+
+                    ROOT = { change_variable = { which = counter value = 1 } }
+                }
+                
+                #log = "DEBUG: Counter - [Root.counter.GetValue]"
+
+                if = {
+                    limit = { check_variable = { which = counter value = 5 } }
+                    
+                    country_event = { id = the_legion.6 days = 30 }
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 1
+                NOT = { religious_unity = 0.5 }
+            }
+		}
+    }
+    
+    mint_aureaus = {
+        potential = {
+            tag = CAE
+            NOT = { has_dlc = "The Cossacks" }
+            NOT = { has_country_modifier = minting_cooldown }
+		}
+		allow =  {
+			NOT = { inflation = 10 }
+		}
+	  	effect = {
+            hidden_effect = {
+                add_country_modifier = { 
+                    name = minting_cooldown
+                    duration = 365
+                    hidden = yes
+                }
+            }
+			add_inflation = 5
+            add_years_of_income = 1
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 1
+                NOT = { years_of_income = 0.2 }
+            }
+            
+            modifier = {
+                factor = 0
+                NOT = { inflation = 20 }
+            }
+		}
+    }
+    
+    mint_denarius = {
+        potential = {
+            tag = CAE
+            NOT = { has_dlc = "The Cossacks" }
+            NOT = { has_country_modifier = minting_cooldown }
+		}
+		allow =  {
+			NOT = { inflation = 10 }
+		}
+	  	effect = {
+            hidden_effect = {
+                add_country_modifier = { 
+                    name = minting_cooldown
+                    duration = 365
+                    hidden = yes
+                }
+            }
+			add_inflation = 2
+            add_years_of_income = 0.25
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 1
+                NOT = { years_of_income = 0.2 }
+            }
+            
+            modifier = {
+                factor = 0
+                NOT = { inflation = 20 }
+            }
+		}
+    }
+    
+    purge_drug_manufacturing = {
+        potential = {
+			OR = {
+				AND = {
+					has_narcotics_forbidden = yes
+					any_owned_province = {
+						trade_goods = drugs
+					}
+				}
+				tag = CAE
+			}
+#           NOT = { has_dlc = "The Cossacks" }
+            NOT = { has_country_modifier = drug_purge_cooldown }
+		}
+		allow =  {
+			any_owned_province = {
+                trade_goods = drugs
+            }
+		}
+	  	effect = {
+            hidden_effect = {
+                add_country_modifier = { 
+                    name = drug_purge_cooldown
+                    duration = 3650
+                    hidden = yes
+                }
+            }
+            custom_tooltip = DRUG_GOODS_CHANGE
+            hidden_effect = {
+                every_owned_province = {
+                    limit = { trade_goods = drugs }
+                    
+                    random_list = {
+                        20 = { change_trade_goods = meat }
+                        20 = { change_trade_goods = steel }
+                        20 = { change_trade_goods = food }
+                        20 = { change_trade_goods = weaponry }
+                        20 = { change_trade_goods = munitions }
+                    }
+                }
+            }
+            
+            add_dip_power = 50
+			
+            random = {
+                chance = 50
+                country_event = { id = fallout_tradegoods.1 }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+    }
+    
+    indoctrinated_by_mars = {
+		major = yes
+        potential = {
+            OR = {
+				religion = cult_of_mars
+				tag = CAE
+			}
+            NOT = { has_country_modifier = indoctrinated_by_mars }
+		}
+
+		allow =  {
+			adm_power = 50
+			legitimacy_equivalent = 100
+            NOT = { has_country_modifier = indoctrinated_by_mars }
+		}
+	  	effect = {
+			add_adm_power = -50
+            add_country_modifier = {
+                name = indoctrinated_by_mars
+                duration = 365
+            }
+		}
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {
+                factor = 10
+                NOT = { religious_unity = 0.5 }
+            }
+		}
+    }
+}

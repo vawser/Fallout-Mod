@@ -1,0 +1,57 @@
+namespace = startup
+
+country_event = {
+	id = startup.1
+	title = startup.1.title
+	desc = startup.1.desc
+	picture = ASSASSINATION_eventPicture
+	
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_global_flag = completed_startup }
+    }
+
+    immediate = {
+        set_global_flag = completed_startup
+    }
+
+    option = {
+        name = startup.1.option.a
+        
+        # --- Logging flags
+        #   Comment these for release builds
+        #   Enabling these will spam the game.log
+        #set_global_flag = enable_onaction_logging
+        #set_global_flag = enable_event_logging
+        #set_global_flag = enable_common_logging
+        
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - Global startup" }
+    }  
+}
+
+country_event = {
+	id = startup.2
+	title = startup.1.title
+	desc = startup.1.desc
+	picture = ASSASSINATION_eventPicture
+	
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_country_flag = completed_country_startup }
+    }
+
+    immediate = {
+        set_country_flag = completed_country_startup
+    }
+
+    option = {
+        name = startup.1.option.a
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - Start startup" }
+    }  
+}
+

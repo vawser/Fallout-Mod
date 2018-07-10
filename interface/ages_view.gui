@@ -1,0 +1,250 @@
+guiTypes = {
+	WindowType = {
+		name = "ages_view"
+		background = "background"	
+		position = { x = -400 y = -400 }	
+		size = { x = 512 y = 512 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder = ""
+		verticalBorder = ""
+		fullScreen = no
+		Orientation = "CENTER"
+        
+		iconType = {
+			name ="picture"
+			spriteType = "GFX_event_event_test"
+			position = { x = 188 y = 86 } # temp
+			Orientation = "UPPER_LEFT"
+		}
+		guiButtonType = {
+			name ="background"
+			spriteType = "GFX_age_fallout_bg"
+			position = { x = 0 y = 0 }
+		}
+        
+		WindowType = {
+			name = "post_war_age"
+			position = { x = 0 y = -9999 }
+			upsound = age_of_discovery
+
+			iconType = {
+				name ="frame"
+				spriteType = "GFX_age_indicator_4"
+				position = { x = 0 y = 7 }
+            }
+			iconType = {
+				name ="icon_post_war_age"
+				spriteType = "GFX_icon_age_l"
+				position = { x = -30 y = 18 }
+				frame = 1
+			}
+		}		
+        
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 185 y = 30 }
+			font = "garamond_16"
+			borderSize = { x = 0 y = 0}
+			text = ""
+			maxWidth = 400
+			maxHeight = 32
+			format = centre
+		}
+		iconType = {
+			name ="icon_absolutism"
+			spriteType = "GFX_icon_absolutism"
+			position = { x = 105 y = 220 }
+        }			
+		iconType = {
+			name ="icon_religious"
+			spriteType = "GFX_icon_religious"
+			position = { x = 65 y = 220 }
+        }		
+		iconType = {
+			name ="splendor_icon"
+			spriteType = "GFX_icon_splendor_tiny"
+			position = { x = 65 y = 258 }
+        }
+		instantTextBoxType = {
+			name = "splendor"
+			position = { x = 92 y = 260 }
+			font = "garamond_16"
+			borderSize = { x = 0 y = 0}
+			text = ""
+			maxWidth = 44
+			maxHeight = 32
+			format = right
+		}
+		guiButtonType = {
+			name = "golden_age"
+			quadTextureSprite ="GFX_frontend_button"
+			position = { x = 30 y = 130  }
+			buttonText = "START_GOLDEN_AGE"
+			buttonFont = "garamond_16"
+		}
+		iconType = {
+			name = "in_golden_age_banner"
+			spriteType = "GFX_main_lobby_button"
+			position = { x = 320 y = -9999 }
+			alwaystransparent = yes 
+		}
+		iconType = {
+			name = "after_golden_age_banner"
+			spriteType = "GFX_main_lobby_button"
+			position = { x = 320 y = -9999 }
+			alwaystransparent = yes 
+		}
+		instantTextBoxType = {
+			name = "in_or_after_golden_age_text"
+			position = { x = 35 y = 135 }
+			font = "garamond_16"
+			borderSize = { x = 4 y = 4}
+			text = ""
+			maxWidth = 120
+			maxHeight = 60
+			format = center
+		}
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 100 y = -9999 }
+			font = "garamond_16"
+			borderSize = { x = 0 y = 0}
+			text = ""
+			maxWidth = 460
+			maxHeight = 50
+			format = left
+		}
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 30 y = 84 }
+			quadTextureSprite = "GFX_frontend_button"
+			buttonText = "Close"	
+			buttonFont = "garamond_16"
+			shortcut = "ESCAPE"
+		}
+		listboxType = {
+			name = "objectives"
+			position = { x = 20 y = 375 }
+			backGround = ""
+			size = { x = 700 y = 560}
+			Orientation = "UPPER_LEFT"
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0}
+		}
+		listboxType = {
+			name = "abilities"
+			position = { x = 38 y = 312 }
+			backGround =""
+			size = { x = 600 y = 600 }
+			Orientation = "UPPER_LEFT"
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0}
+			horizontal = 1
+			alwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "age_objectives_entry"
+		backGround = ""
+		position = { x = 0 y = 0 }	
+		size = { x = 600 y = 52 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		verticalBorder = ""
+		fullScreen = no
+		
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_idea_unknown"
+			position = { x = 22 y = -9999 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 15 y = 14 }
+			font = "garamond_16"
+			borderSize = { x = 0 y = 0 }
+			text = "name"	
+			maxWidth = 600
+			maxHeight = 32
+			fixedsize = yes
+			format = left			
+		}
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 15 y = 36 }
+			font = "garamond_16"
+			borderSize = { x = 0 y = 0 }
+			text = "desc"	
+			maxWidth = 600
+			maxHeight = 32
+			format = left			
+		}
+		iconType = {
+			name ="progress"
+			spriteType = "achievement_progress"
+			position = { x = 469 y = -9999 }
+			Orientation = "UPPER_LEFT"
+			
+		}
+		iconType = {
+			name ="progress_overlay"
+			spriteType = "GFX_achievement_progress_frame"
+			position = { x = 454 y = -9999 }
+			Orientation = "UPPER_LEFT"
+			
+		}
+		instantTextBoxType = {
+			name = "progress_text"
+			position = { x = 620 y = 33 }
+			font = "garamond_16"
+			borderSize = { x = 0 y = 0 }
+			text = "7/14"	
+			maxWidth = 70
+			maxHeight = 32
+			format = centre			
+		}
+	}
+
+	windowType = {
+		name = "age_ability_entry"
+		backGround = ""
+		position = { x = 0 y = 0 }	
+		size = { x = 64 y = 50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		verticalBorder = ""
+		fullScreen = no
+		
+		iconType = {
+			name ="icon"
+			spriteType = "GFX_idea_empty"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="can_unlock"
+			spriteType = "GFX_age_can_unlock"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="cannot_unlock"
+			spriteType = "GFX_age_cannot_unlock"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		guiButtonType = {
+			name ="button"
+			quadTextureSprite = "GFX_idea_empty"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+    }
+}

@@ -1,0 +1,124 @@
+bunker_outpost = {
+	local_defensiveness = 0.5
+}
+
+weaponry_cache = {
+	local_regiment_cost = -0.25
+}
+
+bountiful_harvest = {
+	local_tax_modifier = 0.25
+	local_manpower_modifier = 0.25
+	local_production_efficiency = 0.25
+}
+
+lessons_of_the_trog = {
+	land_morale = 0.05
+}
+
+munition_analysis = {
+	local_regiment_cost = -0.25
+}
+
+illicit_profits = {
+	local_tax_modifier = 1
+}
+
+illicit_dealings = {
+    local_unrest = 5
+}
+
+prewar_administration_unit = {
+    local_state_maintenance_modifier = -0.25
+}
+
+state_sponsored_slavery = {
+	local_manpower_modifier = 0.25
+	local_production_efficiency = 0.25
+}
+
+hospital_supplies = {
+    local_monthly_devastation = -0.25
+}
+
+water_source = {
+    supply_limit_modifier = 0.5
+    local_development_cost = -0.25
+}
+
+prewar_construction_blueprints = {
+    local_build_cost = -0.5
+    local_build_time = -0.5
+}
+
+# Good
+discovery_medics = {
+    local_manpower_modifier = 1.0
+}
+
+discovery_farmers = {
+    local_tax_modifier = 1.0
+}
+
+discovery_mechanics = {
+    local_production_efficiency = 1.0
+}
+
+discovery_demolitionists = {
+    local_hostile_attrition = 2
+}
+
+discovery_utility_robots = {
+    local_build_time = -0.5
+}
+
+discovery_survivalists = {
+    supply_limit_modifier = 1.0
+}
+
+discovery_builders = {
+    local_build_cost = -0.5
+}
+
+discovery_scavengers = {
+    local_regiment_cost = -0.5
+}
+
+discovery_engineers = {
+    local_development_cost = -0.5
+}
+
+# Bad
+discovery_fungal_infestation = {
+    local_development_cost = 1.0
+    attrition = 1
+}
+
+discovery_ghoul_infestation = {
+    local_monthly_devastation = 0.05
+    attrition = 1
+}
+
+discovery_mole_rat_infestation = {
+    trade_goods_size_modifier = -0.5
+    attrition = 1
+}
+
+discovery_low_level_radiation = {
+    attrition = 1
+    max_attrition = 1
+}
+
+discovery_poor_groundsoil = {
+    local_build_cost = 1.0
+}
+
+discovery_poor_access = {
+    local_hostile_movement_speed = -0.5
+    local_friendly_movement_speed = -0.5
+}
+
+autodoc = {
+	legitimacy = -0.5
+	republican_tradition = -0.5
+}

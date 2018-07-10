@@ -1,0 +1,61 @@
+# Economy
+has_traditional_economy     = { is_variable_equal = { which = fds_economy value = 1 } }
+has_command_economy         = { is_variable_equal = { which = fds_economy value = 2 } }
+has_market_economy             = { is_variable_equal = { which = fds_economy value = 3 } }
+has_mixed_economy             = { is_variable_equal = { which = fds_economy value = 4 } }
+
+# Law
+has_democratic_law             = { is_variable_equal = { which = fds_law value = 1 } }
+has_oligarchic_law             = { is_variable_equal = { which = fds_law value = 2 } }
+has_autocratic_law             = { is_variable_equal = { which = fds_law value = 3 } }
+
+# Justice
+has_state_courts                 = { is_variable_equal = { which = fds_justice value = 1 } }
+has_community_courts             = { is_variable_equal = { which = fds_justice value = 2 } }
+has_secret_courts             = { is_variable_equal = { which = fds_justice value = 3 } }
+
+# Punishment
+has_fine_punishment            = { is_variable_equal = { which = fds_punishment value = 1 } }
+has_imprisonment_punishment = { is_variable_equal = { which = fds_punishment value = 2 } }
+has_execution_punishment       = { is_variable_equal = { which = fds_punishment value = 3 } }
+has_slavery_punishment         = { is_variable_equal = { which = fds_punishment value = 4 } }
+
+# Innovation
+has_individual_innovation    = { is_variable_equal = { which = fds_innovation value = 1 } }
+has_sponsored_innovation    = { is_variable_equal = { which = fds_innovation value = 2 } }
+has_state_innovation         = { is_variable_equal = { which = fds_innovation value = 3 } }
+
+# Conscription
+has_volunteer_conscription     = { is_variable_equal = { which = fds_conscription value = 1 } }
+has_limited_conscription     = { is_variable_equal = { which = fds_conscription value = 2 } }
+has_full_conscription         = { is_variable_equal = { which = fds_conscription value = 3 } }
+
+# Slavery
+has_slavery_allowed         = { is_variable_equal = { which = fds_slavery_regulation value = 1 } }
+has_slavery_licensed         = { is_variable_equal = { which = fds_slavery_regulation value = 2 } }
+has_slavery_forbidden         = { is_variable_equal = { which = fds_slavery_regulation value = 3 } }
+
+# Gambling
+has_gambling_allowed         = { is_variable_equal = { which = fds_gambling_regulation value = 1 } }
+has_gambling_licensed         = { is_variable_equal = { which = fds_gambling_regulation value = 2 } }
+has_gambling_forbidden         = { is_variable_equal = { which = fds_gambling_regulation value = 3 } }
+
+# Prostitution
+has_prostitution_allowed     = { is_variable_equal = { which = fds_prostitution_regulation value = 1 } }
+has_prostitution_licensed     = { is_variable_equal = { which = fds_prostitution_regulation value = 2 } }
+has_prostitution_forbidden     = { is_variable_equal = { which = fds_prostitution_regulation value = 3 } }
+
+# Firearms
+has_firearms_allowed         = { is_variable_equal = { which = fds_firearms_regulation value = 1 } }
+has_firearms_licensed         = { is_variable_equal = { which = fds_firearms_regulation value = 2 } }
+has_firearms_forbidden         = { is_variable_equal = { which = fds_firearms_regulation value = 3 } }
+
+# Narcotics
+has_narcotics_allowed         = { is_variable_equal = { which = fds_narcotics_regulation value = 1 } }
+has_narcotics_licensed         = { is_variable_equal = { which = fds_narcotics_regulation value = 2 } }
+has_narcotics_forbidden     = { is_variable_equal = { which = fds_narcotics_regulation value = 3 } }
+
+# Scavenging
+has_scavenging_allowed         = { is_variable_equal = { which = fds_scavenging_regulation value = 1 } }
+has_scavenging_licensed     = { is_variable_equal = { which = fds_scavenging_regulation value = 2 } }
+has_scavenging_forbidden     = { is_variable_equal = { which = fds_scavenging_regulation value = 3 } }

@@ -1,0 +1,153 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+# Combative
+combative_attitude = {
+    sprite = 13
+    
+    # Modifiers
+    unjustified_demands = -0.1
+    province_warscore_cost = -0.1
+    
+	allow = { 
+        OR = {
+            religion = tribalism
+            religion = ghoul_tribalism
+            religion = mutant_tribalism
+            religion = swamp_tribalism
+        }
+    }
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}		
+	}
+}
+
+# Vengeful
+vengeful_attitude = {
+    sprite = 14
+    
+    # Modifiers
+    manpower_recovery_speed = 0.1
+    reinforce_speed = 0.15
+    
+	allow = { 
+        OR = {
+            religion = tribalism
+            religion = ghoul_tribalism
+            religion = mutant_tribalism
+            religion = swamp_tribalism
+        }
+    }
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+            OR = {
+                personality = ai_colonialist
+                personality = ai_diplomat
+            }
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}		
+	}
+}
+
+# Diplomatic
+diplomatic_attitude = {
+    sprite = 15
+    
+    # Modifiers
+    diplomatic_reputation = 1
+    improve_relation_modifier = 0.1
+    
+	allow = { 
+        OR = {
+            religion = tribalism
+            religion = ghoul_tribalism
+            religion = mutant_tribalism
+            religion = swamp_tribalism
+        }
+    }
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+            OR = {
+                personality = ai_colonialist
+                personality = ai_diplomat
+            }
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+# Defensive
+defensive_attitude = {
+    sprite = 16
+    
+    # Modifiers
+    defensiveness = 0.15
+    global_garrison_growth = 0.25
+    
+	allow = { 
+        OR = {
+            religion = tribalism
+            religion = ghoul_tribalism
+            religion = mutant_tribalism
+            religion = swamp_tribalism
+        }
+    }
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+            personality = ai_colonialist
+		}			
+	}
+}
+
+# Domineering
+domineering_attitude = {
+    sprite = 17
+    
+    # Modifiers
+    ae_impact = -0.1
+    harsh_treatment_cost = -0.2
+    
+	allow = { 
+        OR = {
+            religion = tribalism
+            religion = ghoul_tribalism
+            religion = mutant_tribalism
+            religion = swamp_tribalism
+        }
+    }
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+            OR = {
+                personality = ai_colonialist
+                personality = ai_diplomat
+            }
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+	}
+}

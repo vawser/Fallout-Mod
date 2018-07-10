@@ -1,0 +1,35 @@
+country_decisions = {
+	fds_hide_menus = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+		}
+		effect = {
+			set_country_flag = fds_hide_menus
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fds_show_menus = {
+		major = yes
+		potential = {
+			ai = no
+			has_country_flag = fds_hide_menus
+		}
+		allow = {	
+			ai = no
+		}
+		effect = {
+			clr_country_flag = fds_hide_menus
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+

@@ -1,0 +1,109 @@
+namespace = fallout_legitimacy
+
+# Legitimacy Questioned
+country_event = {
+	id = fallout_legitimacy.1
+	title = fallout_legitimacy.1.title
+	desc = fallout_legitimacy.1.desc
+    picture = DOC_MITCHELL_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        government = monarchy
+        NOT = { government = tribal }
+        is_nomad = no
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_legitimacy.1" }
+        }
+    }
+    
+	option = {
+		name = fallout_legitimacy.1.option.a
+
+        add_legitimacy = -25
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                legitimacy = 90
+            }
+        }
+	}
+    
+    option = {
+		name = fallout_legitimacy.1.option.b
+
+        add_stability = -1
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                NOT = { legitimacy = 50 }
+            }
+        }
+	}
+}
+
+# Legitimate Rule
+country_event = {
+	id = fallout_legitimacy.2
+	title = fallout_legitimacy.2.title
+	desc = fallout_legitimacy.2.desc
+    picture = HOOVER_DAM_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        government = monarchy
+        NOT = { government = tribal }
+        is_nomad = no
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_legitimacy.2" }
+        }
+    }
+    
+	option = {
+		name = fallout_legitimacy.2.option.a
+
+        add_legitimacy = 25
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                NOT = { legitimacy = 50 }
+            }
+        }
+	}
+    
+    option = {
+		name = fallout_legitimacy.2.option.b
+
+        add_stability = 1
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 2
+                
+                legitimacy = 50
+            }
+        }
+	}
+}

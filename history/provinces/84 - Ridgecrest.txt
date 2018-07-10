@@ -1,0 +1,38 @@
+# set_variable = { which = province_id value = 84  }
+
+native_size = 18
+native_ferocity = 2
+native_hostileness = 18
+is_city = no
+
+base_tax = 2
+base_production = 4
+base_manpower = 3
+
+culture = raider
+religion = tribalism
+
+trade_goods = unknown
+hre = no
+
+# Vault 15 Opens
+2121.1.1 = {
+    owner = GRK
+    controller = GRK
+    add_core = GRK
+    is_city = yes
+    
+    base_tax = 2
+    base_production = 4
+    base_manpower = 3
+
+    trade_goods = weaponry
+}
+
+# Creation of the NCR
+2186.1.1 = {
+    remove_core = GRK
+    owner = NCR
+    controller = NCR
+    add_core = NCR
+}

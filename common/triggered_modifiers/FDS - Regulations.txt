@@ -1,0 +1,157 @@
+# Slavery
+fds_slavery_allowed = {
+    potential 	= { is_variable_equal = { which = fds_slavery_regulation value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_slavery_regulation value = 1 } }
+	
+	global_regiment_cost = -0.25
+    global_regiment_recruit_speed = -0.25
+    
+    diplomatic_reputation = -2
+}
+
+fds_slavery_licensed = {
+    potential 	= { is_variable_equal = { which = fds_slavery_regulation value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_slavery_regulation value = 2 } }
+
+	global_regiment_cost = -0.1
+    global_regiment_recruit_speed = -0.1
+    
+    diplomatic_reputation = -1
+}
+
+fds_slavery_forbidden = {
+    potential 	= { is_variable_equal = { which = fds_slavery_regulation value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_slavery_regulation value = 3 } }
+	
+	diplomatic_reputation = 1
+}
+
+# Gambling
+fds_gambling_allowed = {
+    potential 	= { is_variable_equal = { which = fds_gambling_regulation value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_gambling_regulation value = 1 } }
+	
+	global_tax_modifier = 0.2
+    global_unrest = 1
+}
+
+fds_gambling_licensed = {
+    potential 	= { is_variable_equal = { which = fds_gambling_regulation value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_gambling_regulation value = 2 } }
+	
+	global_tax_modifier = 0.1
+    global_unrest = 0.5
+}
+
+fds_gambling_forbidden = {
+    potential 	= { is_variable_equal = { which = fds_gambling_regulation value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_gambling_regulation value = 3 } }
+	
+	global_unrest = -1
+}
+
+# Prostitution
+fds_prostitution_allowed = {
+    potential 	= { is_variable_equal = { which = fds_prostitution_regulation value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_prostitution_regulation value = 1 } }
+	
+	yearly_corruption = -0.1
+    global_unrest = 1
+}
+
+fds_prostitution_licensed = {
+    potential 	= { is_variable_equal = { which = fds_prostitution_regulation value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_prostitution_regulation value = 2 } }
+	
+	yearly_corruption = -0.05
+    global_unrest = 0.5
+}
+
+fds_prostitution_forbidden = {
+    potential 	= { is_variable_equal = { which = fds_prostitution_regulation value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_prostitution_regulation value = 3 } }
+	
+	global_unrest = -1
+}
+
+# Firearms
+fds_firearms_allowed = {
+    potential 	= { is_variable_equal = { which = fds_firearms_regulation value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_firearms_regulation value = 1 } }
+	
+	reinforce_cost_modifier = -0.25
+    years_of_nationalism = 5
+}
+
+fds_firearms_licensed = {
+    potential 	= { is_variable_equal = { which = fds_firearms_regulation value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_firearms_regulation value = 2 } }
+	
+	reinforce_cost_modifier = -0.1
+    years_of_nationalism = 3
+}
+
+fds_firearms_forbidden = {
+    potential 	= { is_variable_equal = { which = fds_firearms_regulation value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_firearms_regulation value = 3 } }
+	
+	years_of_nationalism = -5
+}
+
+# Narcotics
+fds_narcotics_allowed = {
+    potential 	= { is_variable_equal = { which = fds_narcotics_regulation value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_narcotics_regulation value = 1 } }
+	
+	shock_damage_received = -0.1
+    global_unrest = 1
+}
+
+fds_narcotics_licensed = {
+    potential 	= { is_variable_equal = { which = fds_narcotics_regulation value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_narcotics_regulation value = 2 } }
+	
+	shock_damage_received = -0.05
+    global_unrest = 0.5
+}
+
+fds_narcotics_forbidden = {
+    potential 	= { is_variable_equal = { which = fds_narcotics_regulation value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_narcotics_regulation value = 3 } }
+	
+	global_unrest = -1
+}
+
+# Scavenging
+fds_scavenging_allowed = {
+    potential 	= { is_variable_equal = { which = fds_scavenging_regulation value = 1 } }
+	trigger 	= { is_variable_equal = { which = fds_scavenging_regulation value = 1 } }
+	
+    global_trade_goods_size_modifier = 0.1
+	build_cost = 0.2
+}
+
+fds_scavenging_licensed = {
+    potential 	= { is_variable_equal = { which = fds_scavenging_regulation value = 2 } }
+	trigger 	= { is_variable_equal = { which = fds_scavenging_regulation value = 2 } }
+	
+	global_trade_goods_size_modifier = 0.05
+	build_cost = 0.1
+}
+
+fds_scavenging_forbidden = {
+    potential 	= { is_variable_equal = { which = fds_scavenging_regulation value = 3 } }
+	trigger 	= { is_variable_equal = { which = fds_scavenging_regulation value = 3 } }
+	
+	build_cost = -0.2
+}
+
+
+
+
+
+
+
+
+
+

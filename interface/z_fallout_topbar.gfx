@@ -1,0 +1,163 @@
+spriteTypes = {	
+    #-----------------------------------
+    # Topbar
+    #-----------------------------
+    spriteType = {
+		name = "GFX_topbar_background"
+		texturefile = "gfx//interface//ui//background//topbar_bg.dds"
+		transparencecheck = yes
+	}
+    
+    spriteType = {
+		name = "GFX_topbar_background_debug"
+		texturefile = "gfx//interface//ui//button//production_button.dds"
+		transparencecheck = yes
+	}
+    
+    spriteType = {
+		name = "GFX_topbar_production"
+		texturefile = "gfx//interface//ui//button//production_button.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_generic_w_box_smallest"
+		texturefile = "gfx/interface/ui//background//generic_w_box_smallest.dds"
+	}	
+    
+    spriteType = {
+		name = "GFX_pause_button_bg"
+		texturefile = "gfx//interface//ui//background//pause_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_mechanic_button_down"
+		texturefile = "gfx//interface//ui//background//mechanic_bar_down_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_frontend_button"
+		texturefile = "gfx//interface//ui//button//frontend_panel_button_center.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_frontend_background"
+		texturefile = "gfx//interface//ui//background//frontend_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_time_bar_top"
+		texturefile = "gfx//interface//ui//background//time_bar_top_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_world_tension_icon"
+		texturefile = "gfx//interface//ui//icons//world_tension_icon.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_age_banner"
+		texturefile = "gfx//interface//ui//background//age_banner.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_age_frame_addon"
+		texturefile = "gfx//interface//ui//background//ages_banner_long.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_fallout_ledger_button"
+		texturefile = "gfx//interface//ui//button//ledger_button.dds"
+	}
+    
+    # Golden Age switches several elements in topbar.gui around when taken.
+    # Lacking these will cause a CTD on a Golden Age ingame
+    
+    spriteType = {
+		name = "GFX_age_frame_addon_golden"
+		texturefile = "gfx//interface//ui//background//ages_banner_long.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_age_button_golden"
+		texturefile = "gfx//interface//ui//icons//world_tension_icon.dds"
+		transparencecheck = yes
+	}		
+	
+	spriteType = {
+		name = "GFX_topbar_bg_golden"
+		texturefile = "gfx//interface//ui//background//topbar_bg.dds"
+		transparencecheck = yes
+	}	
+	
+	spriteType = {
+		name = "GFX_topbar_portrait_value_bg_golden"
+		texturefile = "gfx/interface/ages/topbar_portrait_value_bg_golden.dds"
+	}
+    
+    #-----------------------------
+    # Speed Controls
+    #-----------------------------
+    spriteType = {
+		name = "GFX_date_background"
+		texturefile = "gfx//interface//ui//background//speed_indicator_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_date_pause_button_bg"
+		texturefile = "gfx//interface//ui//background//speed_indicator_button_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_date_pause_button"
+		texturefile = "gfx/interface/ui/button//speed_indicator_button.dds"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+    
+    spriteType = {
+		name = "GFX_zoom_in"
+		texturefile = "gfx//interface//ui//icons//zoom_in.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_zoom_out"
+		texturefile = "gfx//interface//ui//icons//zoom_out.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+    
+    spriteType = {
+		name = "GFX_fallout_speed_indicator"
+		texturefile = "gfx//interface//ui//speed_indicator//speed_indicator.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+    
+    spriteType = {
+		name = "GFX_fallout_menu_button"
+		texturefile = "gfx//interface//ui//button//button_menu.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_fallout_help_button"
+		texturefile = "gfx//interface//ui//button//button_help.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+    
+	spriteType = {
+		name = "GFX_fallout_achievements_button"
+		texturefile = "gfx//interface//ui//button//achievements_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+    
+    spriteType = {
+		name = "GFX_fallout_playlist_button"
+		texturefile = "gfx//interface//ui//button//playlist_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

@@ -1,0 +1,21 @@
+country_decisions = {
+	establish_ghoul_sanctuary = {
+		potential = {
+			technology_group = tech_ghoul
+			NOT = { has_country_modifier = ghoul_sanctuary }
+		}
+		allow =  {
+			total_development = 50
+		}
+	  	effect = {
+			add_country_modifier = { 
+				name = ghoul_sanctuary
+				duration = -1
+			}
+			add_stability = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

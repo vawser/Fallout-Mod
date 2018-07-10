@@ -1,0 +1,343 @@
+
+taxation_focus = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = administrative_organisation_ideas
+            full_idea_group = banking_ideas
+        }
+	}
+	
+	global_tax_modifier = 0.1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+accountability_focus = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = advisor_ideas
+            full_idea_group = administration_ideas
+        }
+	}
+	
+	yearly_corruption = -0.05
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+conversion_focus = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        full_idea_group = religion_ideas
+	}
+	
+	missionaries = 1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+diversity_focus = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        full_idea_group = tolerance_ideas
+	}
+	
+	num_accepted_cultures = 1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+suppression_focus = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = stability_ideas
+            full_idea_group = espionage_ideas
+        }
+	}
+	
+	years_of_nationalism = -5
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+expansion_focus = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = monarchy_ideas
+            full_idea_group = primitive_ideas
+            full_idea_group = republic_ideas
+        }
+	}
+	
+	core_creation = -0.1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+colonisation_focus = {
+	monarch_power = DIP
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        full_idea_group = exploration_ideas
+        full_idea_group = naval_trade_ideas
+	}
+	
+	global_colonial_growth = 20
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+trade_focus = {
+	monarch_power = DIP
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = foreign_trade_ideas
+            full_idea_group = domestic_trade_ideas
+        }
+	}
+	
+	merchants = 1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+construction_focus = {
+	monarch_power = DIP
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        full_idea_group = manufacturing_ideas
+        full_idea_group = civil_organisation_ideas
+	}
+	
+	build_time = -0.25
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+diplomacy_focus = {
+	monarch_power = DIP
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = aggressive_diplomacy_ideas
+            full_idea_group = peaceful_diplomacy_ideas
+        }
+	}
+	
+	diplomats = 1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+naval_focus = {
+	monarch_power = DIP
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = navy_combat_ideas
+            full_idea_group = raiding_ideas
+        }
+	}
+	
+	ship_durability = 0.1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+naval_recruitment_focus = {
+    monarch_power = DIP
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = navy_recruitment_ideas
+            full_idea_group = navy_organisation_ideas
+            full_idea_group = navy_leadership_ideas
+        }
+	}
+	
+	global_ship_recruit_speed = -0.33
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+aggressive_combat_focus = {
+    monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = infantry_ideas
+            full_idea_group = cavalry_ideas
+        }
+	}
+	
+	land_morale = 0.05
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+defensive_combat_focus = {
+    monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = siege_ideas
+            full_idea_group = fortification_ideas
+        }
+	}
+	
+	siege_ability = 0.1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+tactical_focus = {
+    monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        full_idea_group = army_organisation_ideas
+	}
+	
+	land_attrition = -0.1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+leadership_focus = {
+    monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        full_idea_group = army_leadership_ideas
+	}
+	
+	army_tradition = 1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+operational_focus = {
+    monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        OR = {
+            full_idea_group = army_recruitment_ideas
+            full_idea_group = army_infrastructure_ideas
+        }
+	}
+	
+	recover_army_morale_speed = 0.05
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+mercenary_focus = {
+    monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        full_idea_group = merc_ideas
+	}
+	
+	mercenary_cost = -0.1
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -1,0 +1,573 @@
+namespace = fds_policies
+
+# Economy
+country_event = {
+	id = fds_policies.1
+	title = fds_policies.1.title
+	desc = fds_policies.1.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+    is_triggered_only = yes
+
+	option = {
+		name = fds_policies.1.option.a
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_economy_set_flag }
+			}
+			set_traditional_economy = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_economy_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_traditional_economy = yes
+            add_adm_power = -100
+			
+		}
+	}
+	option = {
+		name = fds_policies.1.option.b
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_economy_set_flag }
+			}
+			set_command_economy = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_economy_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_command_economy = yes
+            add_adm_power = -100
+			
+		}
+	}
+	option = {
+		name = fds_policies.1.option.c
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_economy_set_flag }
+			}
+			set_market_economy = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_economy_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_market_economy = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.1.option.d
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_economy_set_flag }
+			}
+			set_mixed_economy = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_economy_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_mixed_economy = yes
+            add_adm_power = -100
+			
+		}
+	}
+	option = {
+		name = event_exit
+	}
+}
+
+# Law
+country_event = {
+	id = fds_policies.2
+	title = fds_policies.2.title
+	desc = fds_policies.2.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = fds_policies.2.option.a
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_law_set_flag }
+			}
+			set_democratic_law = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_law_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_democratic_law = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.2.option.b
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_law_set_flag }
+			}
+			set_oligarchic_law = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_law_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_oligarchic_law = yes
+            add_adm_power = -100
+			
+		}
+	}
+	option = {
+		name = fds_policies.2.option.c
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_law_set_flag }
+			}
+			set_autocratic_law = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_law_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_autocratic_law = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = event_exit
+	}
+}
+
+# Justice
+country_event = {
+	id = fds_policies.3
+	title = fds_policies.3.title
+	desc = fds_policies.3.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = fds_policies.3.option.a
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_justice_set_flag }
+			}
+			set_state_courts = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_justice_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_state_courts = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.3.option.b
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_justice_set_flag }
+			}
+			set_community_courts = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_justice_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_community_courts = yes
+            add_adm_power = -100
+			
+		}
+	}
+	option = {
+		name = fds_policies.3.option.c
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_justice_set_flag }
+			}
+			set_secret_courts = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_justice_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_economic_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_secret_courts = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = event_exit
+	}
+}
+
+# Punishment
+country_event = {
+	id = fds_policies.4
+	title = fds_policies.4.title
+	desc = fds_policies.4.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = fds_policies.4.option.a
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_punishment_set_flag }
+			}
+			set_fine_punishment = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_punishment_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_fine_punishment = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.4.option.b
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_punishment_set_flag }
+			}
+			set_imprisonment_punishment = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_punishment_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			} 
+			set_imprisonment_punishment = yes
+            add_adm_power = -100
+			
+		}
+	}
+	option = {
+		name = fds_policies.4.option.c
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_punishment_set_flag }
+			}
+			set_execution_punishment = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_punishment_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_execution_punishment = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.4.option.d
+		
+		trigger = {
+			NOT = { has_slavery_forbidden = yes }
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_punishment_set_flag }
+			}
+			set_slavery_punishment = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_punishment_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_slavery_punishment = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = event_exit
+	}
+}
+
+# Innovation
+country_event = {
+	id = fds_policies.5
+	title = fds_policies.5.title
+	desc = fds_policies.5.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+    is_triggered_only = yes
+
+	option = {
+		name = fds_policies.5.option.a
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_innovation_set_flag }
+			}
+			set_individual_innovation = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_innovation_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_individual_innovation = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.5.option.b
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_innovation_set_flag }
+			}
+			set_sponsored_innovation = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_innovation_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_sponsored_innovation = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.5.option.c
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_innovation_set_flag }
+			}
+			set_state_innovation = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_innovation_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_state_innovation = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = event_exit
+	}
+}
+
+# Conscription
+country_event = {
+	id = fds_policies.6
+	title = fds_policies.6.title
+	desc = fds_policies.6.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+    is_triggered_only = yes
+
+	option = {
+		name = fds_policies.6.option.a
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_conscription_set_flag }
+			}
+			set_volunteer_conscription = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_conscription_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_volunteer_conscription = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.6.option.b
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_conscription_set_flag }
+			}
+			set_limited_conscription = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_conscription_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_limited_conscription = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = fds_policies.6.option.c
+		if = {
+			limit = {
+				NOT = { has_country_flag = fds_conscription_set_flag }
+			}
+			set_full_conscription = yes
+            add_adm_power = -100
+		}
+		if = {
+			limit = {
+				has_country_flag = fds_conscription_set_flag
+				ai = no
+			}
+#			custom_tooltip = FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING
+#			hidden_effect = {
+#				set_country_flag = fds_political_disaster_allowed
+#				set_country_flag = changed_policy_early
+#			}
+			set_full_conscription = yes
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = event_exit
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

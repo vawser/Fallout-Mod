@@ -1,0 +1,1167 @@
+namespace = province_discoveries
+
+# Bunker Uncovered
+province_event = {
+	id = province_discoveries.1
+	title = province_discoveries.1.title
+	desc = province_discoveries.1.desc
+    picture = ARMY_BUNKER_eventPicture
+	
+    trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+        OR = {
+            is_city = yes
+            is_colony = yes
+        }
+        NOT = { has_province_modifier = bunker_outpost }
+    }
+    
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.1" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.1.option.a
+
+		owner = { add_mil_power = 50 }
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = province_discoveries.1.option.b
+
+		add_province_modifier = {
+			name = bunker_outpost
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Bountiful Harvest
+province_event = {
+	id = province_discoveries.2
+	title = province_discoveries.2.title
+	desc = province_discoveries.2.desc
+    picture = FARMSTEAD_eventPicture
+	
+    trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+        OR = {
+            is_city = yes
+            is_colony = yes
+        }
+        trade_goods = food
+        NOT = { has_province_modifier = bountiful_harvest }
+        owner = {
+            capital_scope = {
+                NOT = { has_province_modifier = bountiful_harvest }
+            }
+        }
+    }
+    
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.2" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.2.option.a
+		
+		owner = {
+			capital_scope = {
+				add_province_modifier = {
+					name = bountiful_harvest
+					duration = 1800
+				}
+                
+                add_prosperity = 25
+			}
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.2.option.b
+		
+		add_scaled_local_dip_power = 50
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.2.option.c
+		
+		add_province_modifier = {
+			name = bountiful_harvest
+			duration = 1800
+		}
+		
+        add_prosperity = 25
+        
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Weaponry Cache
+province_event = {
+	id = province_discoveries.3
+	title = province_discoveries.3.title
+	desc = province_discoveries.3.desc
+    picture = VAULT_LASERS_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = weaponry
+        NOT = { has_province_modifier = weaponry_cache }
+        owner = {
+            capital_scope = {
+                NOT = { has_province_modifier = weaponry_cache }
+            }
+        }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.3" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.3.option.a
+		
+		owner = {
+			capital_scope = {
+				add_province_modifier = {
+					name = weaponry_cache
+					duration = 1800
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.3.option.b
+		
+		add_province_modifier = {
+			name = weaponry_cache
+			duration = 1800
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Pre-war Munitions
+province_event = {
+	id = province_discoveries.4
+	title = province_discoveries.4.title
+	desc = province_discoveries.4.desc
+    picture = ARMY_STOREROOM_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = munitions
+		NOT = { has_province_modifier = munition_analysis }
+        owner = {
+            capital_scope = {
+                NOT = { has_province_modifier = munition_analysis }
+            }
+        }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.4" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+	option = {
+		name = province_discoveries.4.option.a
+		
+		owner = {
+			capital_scope = {
+				add_province_modifier = {
+					name = munition_analysis
+					duration = 1800
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.4.option.b
+		
+		add_province_modifier = {
+			name = munition_analysis
+			duration = 1800
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Chemist Cabal
+province_event = {
+	id = province_discoveries.5
+	title = province_discoveries.5.title
+	desc = province_discoveries.5.desc
+    picture = ENCAMPMENT_eventPicture
+
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = drugs
+        NOT = { has_province_modifier = illicit_dealings }
+        NOT = { has_province_modifier = illicit_profits }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.5" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.5.option.a
+		
+		random_list = {
+            75 = {
+                add_province_modifier = {
+                    name = illicit_dealings
+                    duration = 1800
+                }
+            }
+            25 = {
+                add_province_modifier = {
+                    name = illicit_profits
+                    duration = 1800
+                }
+            }
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.5.option.b
+		
+		add_scaled_local_adm_power = 50
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.5.option.c
+		
+		add_scaled_local_mil_power = 50
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Pre-war Wonders
+province_event = {
+	id = province_discoveries.6
+	title = province_discoveries.6.title
+	desc = province_discoveries.6.desc
+    picture = INS_CONSOLE_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = prewar_technology
+        NOT = { has_province_modifier = prewar_administration_unit }
+        owner = {
+            capital_scope = {
+                NOT = { has_province_modifier = prewar_administration_unit }
+            }
+        }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.6" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.6.option.a
+		
+		owner = {
+			capital_scope = {
+				add_province_modifier = {
+					name = prewar_administration_unit
+					duration = -1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.6.option.b
+		
+		owner = {
+			add_years_of_income = 0.5
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.6.option.c
+		
+		add_province_modifier = {
+			name = prewar_administration_unit
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Sponsored Slavery
+province_event = {
+	id = province_discoveries.7
+	title = province_discoveries.7.title
+	desc = province_discoveries.7.desc
+    picture = PRISONERS_eventPicture
+
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = slaves
+        owner = { 
+            OR = {
+                has_slavery_allowed = yes
+                has_slavery_licensed = yes
+            }
+        }
+        NOT = { has_province_modifier = state_sponsored_slavery }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.7" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.7.option.a
+		
+		add_province_modifier = {
+			name = state_sponsored_slavery
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.7.option.b
+		
+		add_scaled_local_dip_power = 25
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Abandoned Foundry
+# The ruins of a pre-war foundry have been sighted by $PROVINCENAME$. Scout reports from the area suggest that the foundry could be restored back to partial functionality if the right investment and research is done.
+# Invest heavily into the foundry
+# Invest sufficiently into the foundry
+# Ignore the foundry
+province_event = {
+	id = province_discoveries.8
+	title = province_discoveries.8.title
+	desc = province_discoveries.8.desc
+    picture = FACTORY_RAINY_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		OR = {
+			trade_goods = steel
+			trade_goods = tools
+		}
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.8" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.8.option.a
+		
+		owner = {
+			add_years_of_income = -0.25
+		}
+		
+		add_base_production = 2
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.8.option.b
+		
+		owner = {
+			add_years_of_income = -0.1
+		}
+		
+		add_base_production = 1
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.8.option.c
+		
+		if = {
+            limit = {
+                base_production = 2
+            }
+            add_base_production = -1
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Oilfield
+# A potential oilfield has been discovered by miners in $PROVINCENAME$. Oil has been found seeping from the roof of the mines in this area. With investment this crude oil could be extracted and refined into a usable product.
+# Invest heavily into the oilfield
+# Invest sufficiently into the oilfield
+# Ignore the oilfield
+province_event = {
+	id = province_discoveries.9
+	title = province_discoveries.9.title
+	desc = province_discoveries.9.desc
+    picture = WASTELAND_GOODSPRINGS_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = oil
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.9" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.9.option.a
+		
+		owner = {
+			add_years_of_income = -0.25
+		}
+		
+		add_base_production = 2
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.9.option.b
+		
+		owner = {
+			add_years_of_income = -0.1
+		}
+		
+		add_base_production = 1
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.9.option.c
+		
+		if = {
+            limit = {
+                base_production = 2
+            }
+            add_base_production = -1
+        }
+        
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Pre-war Hospital
+# A rountine patrol in $PROVINCENAME$ has led to the discovery of a pre-war hospital. The hospital contains valuable medical equipment and preserved medical supplies, which would be of great use to many of our people.
+# Order all equipment and supplies be sent to the capital
+# Organise a fair distribution of the supplies
+# Allow the locals of $PROVINCENAME$ free usage of the supplies
+province_event = {
+	id = province_discoveries.10
+	title = province_discoveries.10.title
+	desc = province_discoveries.10.desc
+    picture = VAULT_SCANNER_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = medical_supplies
+        NOT = { has_province_modifier = hospital_supplies }
+        owner = {
+            capital_scope = {
+                NOT = { has_province_modifier = hospital_supplies }
+            }
+        }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.10" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.10.option.a
+		
+		owner = {
+			capital_scope = {
+				add_province_modifier = {
+					name = hospital_supplies
+					duration = 1800
+				}
+			}
+            
+            random = {
+                chance = 50
+                
+                custom_tooltip = AUTODOC_TOOLTIP
+                add_ruler_modifier = {
+                    name = autodoc
+                    duration = -1
+                }
+            }
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.10.option.b
+		
+		owner = {
+			random_owned_province = {
+				add_province_modifier = {
+                    name = hospital_supplies
+                    duration = 600
+                }
+			}
+			
+			random_owned_province = {
+				add_province_modifier = {
+                    name = hospital_supplies
+                    duration = 600
+                }
+			}
+			
+			random_owned_province = {
+				add_province_modifier = {
+                    name = hospital_supplies
+                    duration = 600
+                }
+			}
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.10.option.c
+		
+		add_province_modifier = {
+            name = hospital_supplies
+            duration = 1800
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Natural Spring
+# During the past month there have been reports from $PROVINCENAME$ suggesting the re-apperance of a natural spring, with clean, potable water. With the correct amount of investment, this spring could provide water to many of the surrounding settlements.
+# Invest heavily into the spring
+# Invest sufficiently into the spring
+# Ignore the spring
+province_event = {
+	id = province_discoveries.11
+	title = province_discoveries.11.title
+	desc = province_discoveries.11.desc
+    picture = RIVER_RAINY_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = clean_water
+        NOT = { has_province_modifier = water_source }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.11" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.11.option.a
+		
+		owner = {
+			add_years_of_income = -0.25
+		}
+		
+		random = {
+            chance = 75
+            add_province_modifier = {
+                name = water_source
+                duration = -1
+            }
+            
+            add_prosperity = 25
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.11.option.b
+		
+		owner = {
+			add_years_of_income = -0.1
+		}
+		
+		random = {
+            chance = 25
+            add_province_modifier = {
+                name = water_source
+                duration = -1
+            }
+            
+            add_prosperity = 25
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.11.option.c
+
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Polluted Spring
+# During the past month there have been reports from $PROVINCENAME$ suggesting the re-apperance of a natural spring, with polluted water. With the correct amount of investment, this spring could provide non-potable water to many of the surrounding settlements.
+# Invest heavily into the spring
+# Invest sufficiently into the spring
+# Ignore the spring
+province_event = {
+	id = province_discoveries.12
+	title = province_discoveries.12.title
+	desc = province_discoveries.12.desc
+    picture = WASTE_BY_WATER_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = irradiated_water
+        NOT = { has_province_modifier = water_source }
+	}
+
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.12" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+	option = {
+		name = province_discoveries.12.option.a
+		
+		owner = {
+			add_years_of_income = -0.5
+		}
+		
+		random = {
+            chance = 75
+            add_province_modifier = {
+                name = water_source
+                duration = -1
+            }
+            
+            add_prosperity = 25
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.12.option.b
+		
+		owner = {
+			add_years_of_income = -0.25
+		}
+		
+		random = {
+            chance = 25
+            add_province_modifier = {
+                name = water_source
+                duration = -1
+            }
+            
+            add_prosperity = 25
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.12.option.c
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Pre-war Library
+# A pre-war library has been uncovered in $PROVINCENAME$. The tomes of knowledge found within could help our people rediscover the technological secrets that powered the pre-war society. With sufficient investment, our scientists and researchers could learn a great deal here.
+# Invest heavily into research
+# Invest sufficiently into research
+# Ignore the library
+province_event = {
+	id = province_discoveries.13
+	title = province_discoveries.13.title
+	desc = province_discoveries.13.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+	trigger = {
+        owner = { NOT = { has_country_modifier = discovery_cooldown } }
+		OR = {
+            is_city = yes
+            is_colony = yes
+        }
+		trade_goods = prewar_books
+        NOT = { has_province_modifier = prewar_construction_blueprints }
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - province_discoveries.13" }
+        }
+        hidden_effect = {
+            owner = {
+                add_country_modifier = {
+                    name = discovery_cooldown
+                    duration = 730
+                    hidden = yes
+                }
+            }
+        }
+    }
+    
+    is_mtth_scaled_to_size = 1
+    
+	mean_time_to_happen = {
+		months = 1200
+        modifier = {
+            factor = 0.5
+            
+            owner = { stability = 2 }
+        }
+	}
+	
+	option = {
+		name = province_discoveries.13.option.a
+		
+		owner = {
+			add_years_of_income = -0.5
+		}
+		
+		random = {
+            chance = 75
+            add_province_modifier = {
+                name = prewar_construction_blueprints
+                duration = -1
+            }
+            
+            add_prosperity = 25
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.13.option.b
+		
+		owner = {
+			add_years_of_income = -0.25
+		}
+		
+		random = {
+            chance = 25
+            add_province_modifier = {
+                name = prewar_construction_blueprints
+                duration = -1
+            }
+            
+            add_prosperity = 25
+        }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = province_discoveries.13.option.c
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}

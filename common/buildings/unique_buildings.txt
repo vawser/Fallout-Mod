@@ -1,0 +1,353 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new buildings, make sure they are uniquely named.
+
+# cost = x #==> cost in $ to build (subject to other modifiers)
+# time = x #==> number of months to build.
+# modifier = m # a modifier on the province that the building gives
+# trigger = t # an and trigger that needs to be fullfilled to build and keep the building
+# one_per_country = yes/no # if yes, only one of these can exist in a country
+# manufactory = { trade_good trade_good } # list of trade goods that get a production bonus
+# onmap = yes/no # show as a sprite on the map
+
+# FROM = owner
+# ROOT = province
+
+# AI will consider buildings it does not have the tech for at 20% of scripted AI weight (in case it wants to save slots)
+
+fbs_army_command = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        army_tradition = 1
+		free_leader_pool = 1
+	}
+	
+    on_built = {
+        FROM = { 
+            add_army_tradition = 10
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_navy_command = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        navy_tradition = 1
+		free_leader_pool = 1
+	}
+	
+    on_built = {
+        FROM = { 
+            add_navy_tradition = 10
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_planning_command = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        land_attrition = -0.1
+	}
+	
+    on_built = {
+        FROM = { 
+            add_army_professionalism = 0.1
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_infantry_recruitment_centre = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        land_forcelimit_modifier = 0.25
+	}
+	
+    on_built = {
+        FROM = { 
+            add_yearly_manpower = 1
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_sailor_recruitment_centre = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        naval_forcelimit_modifier = 0.25
+	}
+	
+    on_built = {
+        FROM = { 
+            add_yearly_sailors = 1
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_propaganda_centre = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        ae_impact = -0.1
+	}
+	
+    on_built = {
+        FROM = { 
+            add_stability = 1
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_centre_of_harmony = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        yearly_absolutism = 1
+        max_absolutism = 20
+	}
+	
+    on_built = {
+        FROM = { 
+            add_absolutism = 20
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_casino = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+    trigger = {
+        FROM = {
+            OR = {
+                has_gambling_allowed = yes
+                has_gambling_licensed = yes
+            }
+        }
+    }
+    
+	modifier = {
+        global_tax_income = 120
+	}
+	
+    on_built = {
+        FROM = { 
+            add_prestige = 25
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_slave_pit = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+    trigger = {
+        FROM = {
+            OR = {
+                has_slavery_allowed = yes
+                has_slavery_licensed = yes
+            }
+        }
+    }
+    
+	modifier = {
+        land_maintenance_modifier = -0.2
+	}
+	
+    on_built = {
+        FROM = { 
+            add_yearly_manpower = 1
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_brothel = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+    trigger = {
+        FROM = {
+            OR = {
+                has_prostitution_allowed = yes
+                has_prostitution_licensed = yes
+            }
+        }
+    }
+    
+	modifier = {
+        global_institution_spread = 0.25
+	}
+	
+    on_built = {
+        FROM = { 
+            add_corruption = -5
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_shooting_range = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+    trigger = {
+        FROM = {
+            OR = {
+                has_firearms_allowed = yes
+                has_firearms_licensed = yes
+            }
+        }
+    }
+    
+	modifier = {
+        fire_damage = 0.05
+	}
+	
+    on_built = {
+        FROM = { 
+            add_army_tradition = 10
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_chem_lab = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+    trigger = {
+        FROM = {
+            OR = {
+                has_narcotics_allowed = yes
+                has_narcotics_licensed = yes
+            }
+        }
+    }
+    
+	modifier = {
+        shock_damage_received = -0.05
+        fire_damage_received = -0.05
+	}
+	
+    on_built = {
+        FROM = { 
+            add_army_tradition = 10
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_junkyard = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	
+    trigger = {
+        FROM = {
+            OR = {
+                has_scavenging_allowed = yes
+                has_scavenging_licensed = yes
+            }
+        }
+    }
+    
+	modifier = {
+        development_cost = -0.2
+	}
+	
+    on_built = {
+        add_prosperity = 50
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_science_centre = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+    
+	modifier = {
+        technology_cost = -0.05
+	}
+	
+    on_built = {
+        FROM = { 
+            add_adm_power = 100
+            add_dip_power = 100
+            add_mil_power = 100
+        }
+    }
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}

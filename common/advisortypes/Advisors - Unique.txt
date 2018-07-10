@@ -1,0 +1,81 @@
+# Slavery only
+fm_slave_jockey = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	reinforce_cost_modifier = -0.1
+
+	chance = {
+		factor = 1
+        
+        modifier = {
+            factor = 0 
+            has_slavery_forbidden = yes
+        }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fm_slave_driver = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	reinforce_speed = 0.1
+
+	chance = {
+		factor = 1
+        
+        modifier = {
+            factor = 0 
+            has_slavery_forbidden = yes
+        }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Tribal only
+fm_tracker = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	movement_speed = 0.1
+
+	chance = {
+		factor = 1
+
+        modifier = {
+            factor = 0 
+            NOT = { technology_group = tech_tribal }
+        }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fm_brahmin_whisperer = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	war_exhaustion = -0.03
+
+	chance = {
+		factor = 1
+
+        modifier = {
+            factor = 0 
+            NOT = { technology_group = tech_tribal }
+        }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

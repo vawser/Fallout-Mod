@@ -1,0 +1,193 @@
+﻿l_english:
+ #----------------------------
+ # Variables / Flags
+ #----------------------------
+ scientific_knowledge_level: "Scientific Knowledge"
+ research_progress: "Research Progress"
+ scientific_knowledge_enabled: "Scientific Knowledge enabled"
+ 
+ #----------------------------
+ # Tooltips
+ #----------------------------
+ research_progress_tt: "Research Progress controls your nation's Technology Cost modifier.\n\nThis is expressed through your nation's Scientific Knowledge, which is viewable in the Triggered Modifiers window."
+ research_collection_tt: "\n§YCollection§!\nResearch Progress is generated through the §Y'Focus on Scientific Advancement'§! decision and random events."
+ research_usage_tt: "\n§YUsage§!\nOnce you have acquired a number of Research Progress points, you may use them to conduct research with the §Y'Conduct Groundbreaking Research'§! decision. This gives you a chance to increase your Scientific Knowledge, reducing your technology cost modifier."
+ research_knowledge_tt: "\n§YScientific Knowledge§!\nYou can see your current level of Scientific Knowledge in the triggered modifiers window. As you increase your level, your technology cost modifier will go down by 10% each time, until you have zero additional cost."
+ current_scientific_knowledge_tt: "[Root.scientific_knowledge_level.GetName]: [Root.scientific_knowledge_level.GetValue]"
+ current_research_progress_tt: "[Root.research_progress.GetName]: [Root.research_progress.GetValue]"
+ 
+ add_knowledge_level_tt: "Gain §G1§! rank in Scientific Knowledge."
+ lose_knowledge_level_tt: "Lose §R1§! rank in Scientific Knowledge."
+ reset_research_progress_tt: "Research Progress is exhausted."
+ 
+ lose_research_progress_5_tt: "You lose §R5§! Research Progress"
+ lose_research_progress_10_tt: "You lose §R10§! Research Progress"
+ lose_research_progress_15_tt: "You lose §R15§! Research Progress"
+ lose_research_progress_20_tt: "You lose §R20§! Research Progress"
+ lose_research_progress_25_tt: "You lose §R25§! Research Progress"
+ lose_research_progress_30_tt: "You lose §R30§! Research Progress"
+ lose_research_progress_35_tt: "You lose §R35§! Research Progress"
+ lose_research_progress_40_tt: "You lose §R40§! Research Progress"
+ lose_research_progress_45_tt: "You lose §R45§! Research Progress"
+ lose_research_progress_50_tt: "You lose §R50§! Research Progress"
+ lose_research_progress_55_tt: "You lose §R55§! Research Progress"
+ lose_research_progress_60_tt: "You lose §R60§! Research Progress"
+ lose_research_progress_65_tt: "You lose §R65§! Research Progress"
+ lose_research_progress_70_tt: "You lose §R70§! Research Progress"
+ lose_research_progress_75_tt: "You lose §R75§! Research Progress"
+ lose_research_progress_80_tt: "You lose §R80§! Research Progress"
+ lose_research_progress_85_tt: "You lose §R85§! Research Progress"
+ lose_research_progress_90_tt: "You lose §R90§! Research Progress"
+ lose_research_progress_95_tt: "You lose §R95§! Research Progress"
+ lose_research_progress_100_tt: "You lose §R100§! Research Progress"
+ 
+ gain_research_progress_5_tt: "You gain §G5§! Research Progress"
+ gain_research_progress_10_tt: "You gain §G10§! Research Progress"
+ gain_research_progress_15_tt: "You gain §G15§! Research Progress"
+ gain_research_progress_20_tt: "You gain §G20§! Research Progress"
+ gain_research_progress_25_tt: "You gain §G25§! Research Progress"
+ gain_research_progress_30_tt: "You gain §G30§! Research Progress"
+ gain_research_progress_35_tt: "You gain §G35§! Research Progress"
+ gain_research_progress_40_tt: "You gain §G40§! Research Progress"
+ gain_research_progress_45_tt: "You gain §G45§! Research Progress"
+ gain_research_progress_50_tt: "You gain §G50§! Research Progress"
+ gain_research_progress_55_tt: "You gain §G55§! Research Progress"
+ gain_research_progress_60_tt: "You gain §G60§! Research Progress"
+ gain_research_progress_65_tt: "You gain §G65§! Research Progress"
+ gain_research_progress_70_tt: "You gain §G70§! Research Progress"
+ gain_research_progress_75_tt: "You gain §G75§! Research Progress"
+ gain_research_progress_80_tt: "You gain §G80§! Research Progress"
+ gain_research_progress_85_tt: "You gain §G85§! Research Progress"
+ gain_research_progress_90_tt: "You gain §G90§! Research Progress"
+ gain_research_progress_95_tt: "You gain §G95§! Research Progress"
+ gain_research_progress_100_tt: "You gain §G100§! Research Progress"
+ 
+ #----------------------------
+ # Decisions
+ #----------------------------
+ conduct_experimental_research_title: "Conduct Groundbreaking Research"
+ conduct_experimental_research_desc: "Undergo a program of groundbreaking science, delving deeper into the mysteries of the world. Success will improve our scientific knowledge across our nation."
+ 
+ focus_on_scientific_advancement_title: "Focus on Scientific Advancement"
+ focus_on_scientific_advancement_desc: "Invest our energies into scientific research solely. Will reduce the effectiveness of our administrative, diplomatic and military sectors."
+ 
+ research_check_title: "Administration of Science"
+ research_check_desc: "Hover to check Research Progress and technology level, as well as an explanation of how the system works."
+ 
+ #----------------------------
+ # Events
+ #----------------------------
+ scientific_knowledge.2.title: "Experimental Research"
+ scientific_knowledge.2.desc: "Our scientists are researching vigorously, and all efforts are focused on their current speciality. Let us see if they produce any novel research and if so what effect it will have on our nation."
+ scientific_knowledge.2.option.a: "Await the report"
+ 
+ scientific_knowledge.3.title: "Discovery!"
+ scientific_knowledge.3.desc: "Our scientists have succeeded in their research and our nation benefits collectively from their findings."
+ scientific_knowledge.3.option.a: "Ooo, interesting..."
+ 
+ scientific_knowledge.4.title: "Failure!"
+ scientific_knowledge.4.desc: "Our scientists have failed in their research. Our research capacity has been wasted in this fruitless endeavour."
+ scientific_knowledge.4.option.a: "Waste of time..."
+ 
+ scientific_knowledge.5.title: "Discovery in Mathematics"
+ scientific_knowledge.5.desc: "A proof for the Navier-Stokes smoothness has been produced. This will help improve our understanding of turbulence and will improve the capabilities of our air fleet."
+ scientific_knowledge.5.option.a: "Ooo, interesting..."
+ 
+ scientific_knowledge.6.title: "Discovery in Biology"
+ scientific_knowledge.6.desc: "The link between biology and consciousness has been resolved. The once elusive problem has been solved, and our biological interfaces can now integrate with humans far better."
+ scientific_knowledge.6.option.a: "Ooo, interesting..."
+
+ scientific_knowledge.7.title: "Discovery in Chemistry"
+ scientific_knowledge.7.desc: "The existence of an element with an atomic number of 138 has been discovered. The implications of this are far-reaching, as such an element has elections travelling faster than the speed of light."
+ scientific_knowledge.7.option.a: "Ooo, interesting..."
+
+ scientific_knowledge.8.title: "Discovery in Computer Science"
+ scientific_knowledge.8.desc: "P versus NP asks whether every problem whose solution can be quickly verified by a computer can also be quickly solved by a computer. A proof regarding this problem has been created and has proved P equals NP. This discovery means we can easily bypass enemy cryptographical systems, and many of our prediction algorithms are vastly more efficient."
+ scientific_knowledge.8.option.a: "Ooo, interesting..."
+
+ scientific_knowledge.9.title: "Discovery in Physics"
+ scientific_knowledge.9.desc: "Conclusive proof of why time has a direction has been discovered. This understanding will greatly help our research into other areas."
+ scientific_knowledge.9.option.a: "Ooo, interesting..."
+ 
+ scientific_knowledge.10.title: "Eureka!"
+ scientific_knowledge.10.desc: "One of our prominent scientists has had an eureka moment. Their insight has greatly increased our research capacity.\n\nCurrent Research Progress: [Root.research_progress.GetValue]"
+ scientific_knowledge.10.option.a: "Wonderful"
+
+ scientific_knowledge.11.title: "Knowledge Rot"
+ scientific_knowledge.11.desc: "Our scientists have become complacent, and their thoughts rigid. Their lack of motivation has decreased our research capacity.\n\nCurrent Research Progress: [Root.research_progress.GetValue]"
+ scientific_knowledge.11.option.a: "Oh dear."
+ 
+ scientific_knowledge.12.title: "Feuding Scientists"
+ scientific_knowledge.12.desc: "Two teams of scientists have begun feuding over who originally thought of the experiment they're working on. Both want to claim ownership, and therefore recognition for the success of the project.\n\nCurrent Research Progress: [Root.research_progress.GetValue]"
+ scientific_knowledge.12.option.a: "Acknowledge both"
+ scientific_knowledge.12.option.b: "Acknowledge neither"
+ 
+ scientific_knowledge.13.title: "Divergent Thoughts"
+ scientific_knowledge.13.desc: "A group of rogue scientists have begun spreading rebellious thoughts within our scientific circles. Unfortunately, many of our best scientists have been ensnared by this rhetoric, and cutting them out would harm our efforts.\n\nCurrent Research Progress: [Root.research_progress.GetValue]"
+ scientific_knowledge.13.option.a: "Accept the influences for now"
+ scientific_knowledge.13.option.b: "Purge the rogue scientists"
+ 
+ scientific_knowledge.14.title: "Dangerous Implications"
+ scientific_knowledge.14.desc: "A top-secret research group has made an unsettling discovery regarding the behaviour of humans. To allow this information out would damage the stability of our nation, but the head of the research group insists the information should be public.\n\nCurrent Research Progress: [Root.research_progress.GetValue]"
+ scientific_knowledge.14.option.a: "Let it go public"
+ scientific_knowledge.14.option.b: "Suppress the information"
+ 
+ scientific_knowledge.15.title: "Unified Efforts"
+ scientific_knowledge.15.desc: "Too often our scientific efforts are duplicated due to inefficient organisation due to poor bureaucracy. Let us reform the management in our science divisions and unify our efforts.\n\nCurrent Research Progress: [Root.research_progress.GetValue]"
+ scientific_knowledge.15.option.a: "Reform"
+ scientific_knowledge.15.option.b: "Continue as normal"
+
+ #----------------------------
+ # Modifiers
+ #----------------------------
+ discovery_mathematics: "Navier-Stokes smoothness"
+ desc_discovery_mathematics: "A proof for the Navier-Stokes smoothness has been produced. This will help improve our understanding of turbulence and will improve the capabilities of our air fleet."
+ 
+ discovery_biology: "Origin of Consciousness"
+ desc_discovery_biology: "The link between biology and consciousness has been resolved. The once elusive problem has been solved, and our biological interfaces can now integrate with humans far better."
+ 
+ discovery_chemistry: "Element 138"
+ desc_discovery_chemistry: "The existence of an element with an atomic number of 138 has been discovered. The implications of this are far-reaching, as such an element has elections travelling faster than the speed of light."
+ 
+ discovery_computing: "P equals NP"
+ desc_discovery_computing: "P versus NP asks whether every problem whose solution can be quickly verified by a computer can also be quickly solved by a computer. A proof regarding this problem has been created and has proved P equals NP. This discovery means we can easily bypass enemy cryptographical systems, and many of our prediction algorithms are vastly more efficient."
+ 
+ discovery_physics: "Arrow of Time"
+ desc_discovery_physics: "Conclusive proof of why time has a direction has been discovered. This understanding will greatly help our research into other areas."
+
+ #----------------------------
+ # Triggered modifiers
+ #----------------------------
+ technology_rank_0: "Scientific Knowledge"
+ desc_technology_rank_0: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_1: "Scientific Knowledge"
+ desc_technology_rank_1: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_2: "Scientific Knowledge"
+ desc_technology_rank_2: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_3: "Scientific Knowledge"
+ desc_technology_rank_3: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_4: "Scientific Knowledge"
+ desc_technology_rank_4: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_5: "Scientific Knowledge"
+ desc_technology_rank_5: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_6: "Scientific Knowledge"
+ desc_technology_rank_6: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_7: "Scientific Knowledge"
+ desc_technology_rank_7: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_8: "Scientific Knowledge"
+ desc_technology_rank_8: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_9: "Scientific Knowledge"
+ desc_technology_rank_9: "Our current scientific knowledge and its effect on our technology costs."
+ 
+ technology_rank_10: "Scientific Knowledge"
+ desc_technology_rank_10: "We have reached the maximum level of scientific knowledge available."
+ 

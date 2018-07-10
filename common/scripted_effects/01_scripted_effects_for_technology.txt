@@ -1,0 +1,110 @@
+set_scientific_knowledge_level = {
+    set_variable = {
+        which = scientific_knowledge_level
+        value = $LEVEL$
+    }
+}
+
+add_scientific_knowledge_level = {
+    custom_tooltip = add_knowledge_level_tt
+    
+    hidden_effect = {
+        if = { 
+            limit = { NOT = { check_variable = { which = tech_level value = 10 } } }
+            change_variable = {
+                which = scientific_knowledge_level
+                value = 1
+            }
+        }
+    }
+}
+
+lose_scientific_knowledge_level = {
+    custom_tooltip = lose_knowledge_level_tt
+    
+    hidden_effect = {
+        if = { 
+            limit = { check_variable = { which = tech_level value = 1 } }
+            subtract_variable = {
+                which = scientific_knowledge_level
+                value = 1
+            }
+        }
+    }
+}
+
+reset_research_progress = {
+    custom_tooltip = reset_research_progress_tt
+    
+    hidden_effect = {
+        set_variable = { which = research_progress value = 0 }
+    }
+}
+
+gain_research_progress = {
+    hidden_effect = {
+        change_variable = { which = research_progress value = $AMOUNT$ }
+        
+        if = {
+            limit = {
+                check_variable = {
+                    which = research_progress 
+                    value = 100
+                }
+            }
+            set_variable = { which = research_progress value = 100 }
+            add_adm_power = 50
+        }
+    }
+}
+
+lose_research_progress = {
+    hidden_effect = {
+        subtract_variable = { which = research_progress value = $AMOUNT$ }
+        
+        if = {
+            limit = {
+                NOT = {
+                    check_variable = {
+                        which = research_progress 
+                        value = 0
+                    }
+                }
+            }
+            set_variable = { which = research_progress value = 0 }
+        }
+    }
+}
+
+update_research_progress = {
+    export_to_variable = {
+        which = research_progress_mod
+        value = modifier:imperial_authority_value
+    }
+    
+    if = {
+        limit = {
+            check_variable = {
+                which = research_progress_mod
+                value = 0
+            }
+        }
+        # Positive
+        change_variable = {
+            which = research_progress
+            value = research_progress_mod
+        }
+        
+        # Negative
+        else = {
+            multiply_variable = {
+                which = research_progress_mod
+                value = -1
+            }
+            subtract_variable = {
+                which = research_progress
+                value = research_progress_mod
+            }
+        }
+    }
+}

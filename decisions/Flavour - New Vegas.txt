@@ -1,0 +1,24 @@
+country_decisions = {
+    activate_securitron_bunker = {
+        major = yes
+		potential = {
+			tag = NVG
+            NOT = { has_country_modifier = securitron_bunker }
+		}
+		allow =  {
+            #has_country_modifier = power_of_the_courier
+            owns_core_province = 258
+		}
+	  	effect = {
+            custom_tooltip = UNLOCK_MKII_SECURITRONS
+            
+			add_country_modifier = {
+                name = securitron_bunker
+                duration = -1
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

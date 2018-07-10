@@ -1,0 +1,116 @@
+guiTypes = {
+	windowType = {
+		name = "EventWindow"
+		backGround="Background"
+		position = { x=-337 y=-400 }	
+		size = { x=674 y=455 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite ="GFX_event_bg_transparency"
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+		}
+
+        iconType =
+		{
+			name ="event_bg_top"
+			spriteType = "GFX_event_bg_top"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="event_bg_middle"
+			spriteType = "GFX_event_bg_middle"
+			position = { x = 0 y = 455 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+        # The game picks between _S, _M, _L depending on number of options:
+        # 1 - 2: small (default)
+        # 3 - 5: medium
+        # 6+   : large
+		iconType =
+		{
+			name ="event_bg_bottom"
+			spriteType = "GFX_event_bg_bottom"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+
+        iconType =
+		{
+			name ="event_picture"
+			spriteType = "GFX_event_event_test"
+			position = { x = 18 y = 50 } # 220
+			Orientation = "UPPER_LEFT"
+		}
+        
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 188  y = 14 }
+			font = "garamond_16"
+			borderSize = {x = 0 y = 0}
+			text = "Long text here!"	
+			maxWidth = 300
+			maxHeight = 32
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "Description"
+			position = { x = 40 y = 360 }
+			font = "garamond_16"
+			borderSize = {x = 0 y = 0}
+			text = "Long text here!"	
+			maxWidth = 600
+			maxHeight = 100
+			format = left
+			#fixedsize = yes
+		}
+		
+		listboxType = 
+		{
+			name = "event_option_listbox"
+			position = { x = 0 y = 0 }
+			size = { x = 665 y = 100 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 1
+			scrollbartype = "standardlistbox_noslider"
+			borderSize = { x = 0 y = 0 }
+		}
+	}
+	
+	### Listbox entry for events
+	windowType = {
+		name = "event_option_entry"
+		backGround = ""
+		size = { x = 600 y = 50 }
+		moveable = 0
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "event_option_button"
+            position = { x = 70 y = 0 }
+			quadTextureSprite = "GFX_event_button_600"
+			buttonFont = "garamond_16"
+		}
+	}
+	
+    # The game picks adjusts the y position depending on the size of the text in the Description object
+    # This should be the position for when the text is empty
+	positionType = {
+		name = "event_option_start"
+		position = { x = -30 y = -80 }
+	}
+}

@@ -1,0 +1,168 @@
+country_decisions = {
+	fds_economy_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_policy_early }
+		}
+		effect = {
+			country_event = { id = fds_policies.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	fds_law_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_policy_early }
+		}
+		effect = {
+			country_event = { id = fds_policies.2 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_justice_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_policy_early }
+		}
+		effect = {
+			country_event = { id = fds_policies.3 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_punishment_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_policy_early }
+		}
+		effect = {
+			country_event = { id = fds_policies.4 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_innovation_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_policy_early }
+		}
+		effect = {
+			country_event = { id = fds_policies.5 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_conscription_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_policy_early }
+		}
+		effect = {
+			country_event = { id = fds_policies.6 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Tribal
+	
+	# Settlement
+	
+	# Raider
+	
+	# Utah Tribals
+	
+	# Super Mutant
+	
+	# Ghoul
+
+	# NCR
+	#? Expansion Policy
+	# Isolationist
+	# Reactive
+	# Proactive
+	
+	#? Immigration Policy
+	# Closed
+	# Heritage
+	# Open
+	
+	# Legion
+	
+	
+	# New Vegas
+	#? Tourist Policy
+	# Any
+	# Credit check
+	# None
+	
+	# Shi
+	
+	# Brotherhood of Steel
+	
+	# Brotherhood of Steel (East)
+	
+	# Boomers
+	
+	# New Reno
+	
+	# Great Khans
+	
+	# Vault City
+	
+	# Enclave
+	
+	# Institute
+	
+
+}
+

@@ -1,0 +1,32 @@
+spriteTypes = {	
+    spriteType = {
+		name = "GFX_parliament_default"
+		texturefile = "gfx//interface//ui//background//parliament_bg.dds"
+		transparencecheck = yes
+	}
+    
+    spriteType = {
+		name = "GFX_parliament_new_issue_box"
+		texturefile = "gfx//interface//ui//background//new_issue_bg.dds"
+		transparencecheck = yes
+	}
+    
+    spriteType = {
+		name = "GFX_parliament_button_default"
+		texturefile = "gfx//interface//ui//button//200_block_button.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_parliament_button_400"
+		texturefile = "gfx//interface//ui//button//400_block_button.dds"
+	}
+    
+    textSpriteType = {
+		name = "GFX_parliament_bribe_button"
+		texturefile = "gfx//interface//ui//button//200_toggle_button.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate.lua"
+		
+		clicksound = click
+	}
+}

@@ -1,0 +1,179 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new buildings, make sure they are uniquely named.
+
+# cost = x #==> cost in $ to build (subject to other modifiers)
+# time = x #==> number of months to build.
+# modifier = m # a modifier on the province that the building gives
+# trigger = t # an and trigger that needs to be fullfilled to build and keep the building
+# one_per_country = yes/no # if yes, only one of these can exist in a country
+# manufactory = { trade_good trade_good } # list of trade goods that get a production bonus
+# onmap = yes/no # show as a sprite on the map
+
+# FROM = owner
+# ROOT = province
+
+# AI will consider buildings it does not have the tech for at 20% of scripted AI weight (in case it wants to save slots)
+
+fbs_military_camp = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		local_manpower_modifier = 1.0
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_barracks = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		land_forcelimit = 2
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 205 # Little above build cost
+			FROM = { army_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_armory = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		local_regiment_cost = -0.5
+        regiment_recruit_speed = -0.5
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 205 # Little above build cost
+			FROM = { army_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_dock = {
+    cost = 200
+	time = 12
+	
+    trigger = { has_port = yes }
+    
+	modifier = {
+		local_sailors_modifier = 0.5
+        ship_recruit_speed = -0.5
+	}
+
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 205 # Little above build cost
+			FROM = { navy_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_shipyard = {
+	cost = 200
+	time = 12
+	
+    trigger = { has_port = yes }
+    
+	modifier = {
+		local_ship_repair = 0.5
+        local_ship_cost = -0.5
+	}
+    
+	ai_will_do = {
+		factor = 1
+        
+		modifier = {
+			factor = 205 # Little above build cost
+			FROM = { navy_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_arsenal = {
+	cost = 200
+    time = 12
+    
+    trigger = { has_port = yes }
+    
+	modifier = {
+		naval_forcelimit = 2
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 205 # Little above build cost
+			FROM = { navy_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+
+fbs_highway = {
+	cost = 200
+    time = 12
+    
+	modifier = {
+		local_friendly_movement_speed = 1.0
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+            factor = 1000
+            owner = { treasury = 1000 }
+        }
+	}
+}
+
+fbs_outpost = {
+    cost = 200
+	time = 12
+	
+	modifier = {
+		supply_limit_modifier = 1.0
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}

@@ -1,0 +1,76 @@
+administrative_settlement = {
+	monarchy = yes
+	
+	valid_for_new_country = yes
+	allow_convert = yes
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	ai_will_do = {
+		factor = 0
+	}
+	ai_importance = 100
+    
+	max_states = 3
+    
+	rank = {
+		2 = {
+			inflation_action_cost = -0.15
+			advisor_cost = -0.05
+		}
+	}
+    fixed_rank = 2
+}
+
+diplomatic_settlement = {
+	monarchy = yes
+	
+	valid_for_new_country = yes
+	allow_convert = yes
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	ai_will_do = {
+		factor = 0
+	}
+	ai_importance = 100
+
+	max_states = 3
+    
+	rank = {
+		2 = {
+			ae_impact = -0.05
+			diplomatic_upkeep = 1
+            max_absolutism = -5
+		}
+	}
+    fixed_rank = 2
+}
+
+military_settlement = {
+	monarchy = yes
+	
+	valid_for_new_country = yes
+	allow_convert = yes
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	ai_will_do = {
+		factor = 0
+	}
+	ai_importance = 100
+
+    max_states = 3
+    
+	rank = {
+		2 = {
+			recover_army_morale_speed = 0.1
+			max_absolutism = 5
+		}
+	}
+    fixed_rank = 2
+}
+

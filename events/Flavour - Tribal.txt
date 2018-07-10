@@ -1,0 +1,1111 @@
+##############################################################################
+# Vanilla Rendition Flavor events for Steppe Countries & Some other Tribals  #
+##############################################################################
+
+namespace = randomeventsstapehordes
+
+
+#-----------------------------
+# Born To Be Wild
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.1
+	title = "randomeventsstapehordes.1.EVTNAME"
+	desc = "randomeventsstapehordes.1.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+
+	is_triggered_only = yes	
+	
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			government = wolf_government
+		}
+		is_at_war = no
+		NOT = { religion_group = religion_group_christianity }
+		NOT = { had_recent_war = 2 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 1.1
+			NOT = { MIL = 3 }
+		}			
+	}
+
+	option = {
+		name = "randomeventsstapehordes.1.EVTOPTA"
+		ai_chance = { factor = 10 }
+		add_prestige = 5
+	}
+}
+ 
+#-----------------------------
+# Exhaustion is for the Weak
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.2
+	title = "randomeventsstapehordes.2.EVTNAME"
+	desc = "randomeventsstapehordes.2.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			government = wolf_government
+			religion = cult_of_mars
+			tag = PIT
+		}
+		war_exhaustion = 2
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.2.EVTOPTA"
+		ai_chance = { factor = 10 }
+		add_war_exhaustion = -2.5
+		add_prestige = 5
+	}
+	option = {
+		name = "randomeventsstapehordes.2.EVTOPTB"
+		trigger = { has_idea_group = espionage_ideas }		
+		ai_chance = { factor = 90 }
+		add_war_exhaustion = -5
+		add_prestige = 10
+	}	
+} 
+
+#-----------------------------
+# This is a Good Day to Die
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.3
+	title = "randomeventsstapehordes.3.EVTNAME"
+	desc = "randomeventsstapehordes.3.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = wolf_government
+		}
+		is_at_war = yes
+		NOT = { manpower_percentage = 0.9 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.3.EVTOPTA"
+		ai_chance = { factor = 10 }
+		add_yearly_manpower = 1.00
+	}
+	option = {
+		name = "randomeventsstapehordes.3.EVTOPTB"
+		trigger = { has_idea_group = army_organisation_ideas }		
+		ai_chance = { factor = 90 }
+		add_army_tradition = 15
+		add_prestige = 5
+	}	
+}
+
+#-----------------------------
+#	Friendly Migrating Tribes
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.4
+	title = "randomeventsstapehordes.4.EVTNAME"
+	desc = "randomeventsstapehordes.4.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = wolf_government
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.4.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_yearly_manpower = 0.5
+		add_treasury = 50
+	}
+}
+
+#-----------------------------
+#	Hostile Migrating Tribes
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.5
+	title = "randomeventsstapehordes.5.EVTNAME"
+	desc = "randomeventsstapehordes.5.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		NOT = {
+			tag = GD1
+			tag = GD2
+		}
+		any_neighbor_country = {  
+			NOT = { has_opinion = { who = ROOT value = 50 } }
+			NOT = { religion_group = religion_group_christianity }
+			OR = {
+				NOT = {	has_slavery_forbidden = yes	}
+				tag = GD1
+				tag = GD2
+				government = legion
+				government = wolf_government
+			}
+			OR = {
+				government = steppe_horde
+				government = religious_tribe
+				government = trade_tribe
+				government = war_tribe
+				government = wolf_government
+				government = legion
+				tag = GD1
+				tag = GD2
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+
+	}
+
+	option = {
+		name = "randomeventsstapehordes.5.EVTOPTA"
+		ai_chance = { factor = 100 }
+		random_list = {
+			40 = { add_stability = -1 }
+			60 = { add_prestige = -5 }
+		}
+		if = {
+			limit = { ai = no } # This will repeatedly bankrupt the AI, so it has to go
+			add_treasury = -10
+		}
+	}
+}
+
+#-----------------------------
+#	Migrating Herdsmen
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.6
+	title = "randomeventsstapehordes.6.EVTNAME"
+	desc = "randomeventsstapehordes.6.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = wolf_government
+		}
+		any_neighbor_country = {  
+			has_opinion = { who = ROOT value = 0 }
+			OR = {
+				government = steppe_horde
+				government = religious_tribe
+				government = trade_tribe
+				government = war_tribe
+				government = wolf_government
+				is_tribe_government = yes
+			}
+		}
+		any_owned_province = { 
+			trade_goods = meat
+			any_neighbor_province = {  
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					trade_goods = meat
+					any_neighbor_province = {  
+						NOT = { owned_by = ROOT }
+					}
+				}
+				save_event_target_as = migration_province
+			}
+		}
+	}
+
+	option = {
+		name = "randomeventsstapehordes.6.EVTOPTA"
+		ai_chance = { factor = 100 }
+		event_target:migration_province = {
+			add_base_production = 2
+		}
+	}
+}
+
+#-----------------------------
+#	Migrating Cartels
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.7
+	title = "randomeventsstapehordes.7.EVTNAME"
+	desc = "randomeventsstapehordes.7.EVTDESC"
+	picture = DEAD_JUNKIE_eventPicture
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		has_narcotics_allowed = yes # Drug Policy is unrestricted
+		any_neighbor_country = {  
+			has_opinion = { who = ROOT value = 50 }
+			OR = {
+				has_narcotics_licensed = yes
+				has_narcotics_forbidden = yes
+				tag = CAE
+			}
+		}
+		any_owned_province = { 
+			trade_goods = drugs
+			any_neighbor_province = {  
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					trade_goods = drugs
+					any_neighbor_province = {  
+						NOT = { owned_by = ROOT }
+					}
+				}
+				save_event_target_as = migration_province
+			}
+		}
+	}
+	
+	option = {
+		name = "randomeventsstapehordes.7.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_treasury = 25
+		event_target:migration_province = {
+			add_base_production = 1
+		}		
+	}
+}
+
+#-----------------------------
+#	War Games
+#-----------------------------
+
+country_event = { # War Games begin
+	id = randomeventsstapehordes.8
+	title = "randomeventsstapehordes.8.EVTNAME"
+	desc = "randomeventsstapehordes.8.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = wolf_government
+			government = militia_gov
+			tag = GD1
+			tag = GD2
+			AND = {
+				religion = cult_of_mars
+				NOT = { government = legion }
+			}
+		}
+		is_at_war = no
+		has_regency = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.8.EVTOPTA"
+		ai_chance = { factor = 100 }
+		random_list = {
+			25 = {
+				country_event = { id = randomeventsstapehordes.9 days = 3 random = 2 }
+			}
+			25 = {
+				country_event = { id = randomeventsstapehordes.10 days = 3 random = 2 }
+			}
+			25 = {
+				country_event = { id = randomeventsstapehordes.11 days = 3 random = 2 }
+			}
+			25 = {
+				country_event = { id = randomeventsstapehordes.12 days = 3 random = 2 }
+			}
+			15 = {
+				country_event = { id = randomeventsstapehordes.15 days = 3 random = 2 }
+			}
+			5 = {
+				country_event = { id = randomeventsstapehordes.16 days = 3 random = 2 }
+			}			
+		}		
+	}
+}
+
+#-----------------------------
+#	Glorious Khan
+#-----------------------------
+
+country_event = { # The Khan wins!
+	id = randomeventsstapehordes.9
+	title = "randomeventsstapehordes.9.EVTNAME"
+	desc = "randomeventsstapehordes.9.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					trade_goods = drugs
+				}
+				save_event_target_as = khan_gets_high
+			}
+		}
+	}
+
+	option = {
+		name = "randomeventsstapehordes.9.EVTOPTA"
+		ai_chance = { factor = 33 }
+		add_horde_unity = 40
+		hidden_effect = {
+			add_legitimacy = 40
+			add_devotion = 40
+			add_militarised_society = 10
+		}
+	}
+	option = {
+		name = "randomeventsstapehordes.9.EVTOPTB"
+		ai_chance = { factor = 33 }
+		add_prestige = 30
+	}
+	option = {
+		name = "randomeventsstapehordes.9.EVTOPTC"
+		ai_chance = { factor = 17 }
+		trigger = {
+			
+		}
+		event_target:khan_gets_high = {
+			add_base_production = 1
+		}
+		random_list = {
+			35 = { add_stability = 1 }
+			65 = { add_horde_unity = 15}
+		}
+	}
+}
+
+#-----------------------------
+#	Successful Games
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.10
+	title = "randomeventsstapehordes.10.EVTNAME"
+	desc = "randomeventsstapehordes.10.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.10.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_stability_or_adm_power = yes
+		add_army_tradition = 5
+		hidden_effect = {
+			add_militarised_society = 3
+		}
+	}
+}
+
+#-----------------------------
+#	Ruinous Games
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.11
+	title = "randomeventsstapehordes.11.EVTNAME"
+	desc = "randomeventsstapehordes.11.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.11.EVTOPTA"
+		ai_chance = { factor = 75 }
+		add_stability = -1
+		add_army_tradition = -5		
+		add_horde_unity = -5
+		hidden_effect = {
+			add_legitimacy = -5
+			add_devotion = -5
+			add_militarised_society = -5
+		}
+	}
+	
+	option = {
+		name = "randomeventsstapehordes.11.EVTOPTB"
+		ai_chance = { factor = 25 }
+
+		custom_tooltip = randomeventsstapehordes.11.EVTOPTB2
+		add_treasury = -150
+		hidden_effect = { 
+			add_horde_unity = -5
+			add_devotion = -5
+			add_army_tradition = -5
+			add_militarised_society = -5
+		}
+		add_prestige = -10
+		trigger = {
+			OR = {
+				any_owned_province = { 
+					trade_goods = drugs
+				}
+				has_narcotics_allowed = yes # Drug Policy is unrestricted
+			}
+			NOT = { has_narcotics_forbidden = yes }
+			NOT = { religion_group = religion_group_christianity }
+		}
+	}
+}
+
+#-----------------------------
+#	Legendary Games
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.12
+	title = "randomeventsstapehordes.12.EVTNAME"
+	desc = "randomeventsstapehordes.12.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.12.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_prestige = 20
+		add_yearly_manpower = 0.25
+	}
+}
+
+#-----------------------------
+#	Clansmen Flock our Hosts
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.13
+	title = "randomeventsstapehordes.13.EVTNAME"
+	desc = "randomeventsstapehordes.13.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = wolf_government
+			AND = {
+				religion = cult_of_mars
+				NOT = { government = legion }
+			}
+		}
+		NOT = { manpower_percentage = 0.5 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.13.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_yearly_manpower = 0.2
+	}
+}
+
+#-----------------------------
+#	Restless Nomads
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.14
+	title = "randomeventsstapehordes.14.EVTNAME"
+	desc = "randomeventsstapehordes.14.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = wolf_government
+			AND = {
+				government = legion
+				NOT = {
+					tag = GD1
+					tag = GD2
+				}
+			}
+			AND = {
+				religion = cult_of_mars
+				NOT = { government = legion }
+			}
+		}
+		NOT = { manpower_percentage = 0.5 }
+		NOT = { religion_group = religion_group_christianity }
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+
+	}
+
+	option = {
+		name = "randomeventsstapehordes.14.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_yearly_manpower = -0.45
+		add_prestige = -5
+	}
+}
+
+
+#-----------------------------
+#	Rising Star
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.15
+	title = "randomeventsstapehordes.15.EVTNAME"
+	desc = "randomeventsstapehordes.15.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = wolf_government
+			government = militia_gov
+			tag = GD1
+			tag = GD2
+			AND = {
+				religion = cult_of_mars
+				NOT = { government = legion }
+			}
+		}
+	}
+
+	option = {
+		name = "randomeventsstapehordes.15.EVTOPTA"
+		ai_chance = { factor = 85 }
+		add_prestige = 2
+		create_general = 50
+	}
+	option = {
+		name = "randomeventsstapehordes.15.EVTOPTB"
+		ai_chance = {
+			factor = 15
+		}
+	}
+}
+
+#-----------------------------
+#	Shining Star
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.16
+	title = "randomeventsstapehordes.16.EVTNAME"
+	desc = "randomeventsstapehordes.16.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	mean_time_to_happen = {
+		days = 1
+
+	}
+	
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = militia_gov
+			tag = GD1
+			tag = GD2
+			AND = {
+				religion = cult_of_mars
+				NOT = { government = legion }
+			}
+		}
+	}
+
+	option = {
+		name = "randomeventsstapehordes.16.EVTOPTA"
+		ai_chance = {
+			factor = 50
+		}
+		add_prestige = 5
+		create_general = 75
+	}
+	option = {
+		name = "randomeventsstapehordes.15.EVTOPTB"
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+#-----------------------------
+#	Tribal Feud
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.17
+	title = "randomeventsstapehordes.17.EVTNAME"
+	desc = "randomeventsstapehordes.17.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			government = wolf_government
+			religion = cult_of_mars
+		}
+		NOT = {
+			tag = GD1
+			tag = GD2
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.17.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_prestige = -5		
+		add_stability = -1
+	}
+	
+	option = {
+		name = "randomeventsstapehordes.17.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_prestige = -15	
+		add_horde_unity = -5
+	}
+}
+
+#-----------------------------
+#	Tribal Feud
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.18
+	title = "randomeventsstapehordes.18.EVTNAME"
+	desc = "randomeventsstapehordes.18.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			government = wolf_government
+			religion = cult_of_mars
+		}
+		NOT = {
+			tag = GD1
+			tag = GD2
+		}
+		has_heir = yes
+		is_lesser_in_union = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.18.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_horde_unity = -20
+		add_stability = -1
+		kill_heir = yes
+	}
+}
+
+#-----------------------------
+#	Hunting Accident
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.19
+	title = "randomeventsstapehordes.19.EVTNAME"
+	desc = "randomeventsstapehordes.19.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			government = wolf_government
+			religion = cult_of_mars
+			tag = PIT
+			religion = ghoul_tribalism
+			religion = tribalism
+		}
+		NOT = {
+			tag = TWM
+		}
+		has_heir = yes
+		heir_age = 11
+		is_lesser_in_union = no
+		NOT = { legitimacy_equivalent = 50 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.19.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_prestige = 15
+		add_stability = -1
+		kill_heir = yes
+	}
+}
+
+#-----------------------------
+#	We Look Weak
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.20
+	title = "randomeventsstapehordes.20.EVTNAME"
+	desc = "randomeventsstapehordes.20.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			religion = cult_of_mars
+			tag = ENC
+			tag = MTM
+			tag = GUN
+			government = militia_gov
+			government = wolf_government
+		}
+		NOT = { army_size_percentage = 0.5 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+
+	}
+
+	option = {
+		name = "randomeventsstapehordes.20.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_prestige = -10
+	}
+}
+
+#-----------------------------
+#	Authority Undermined
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.21
+	title = "randomeventsstapehordes.21.EVTNAME"
+	desc = "randomeventsstapehordes.21.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			religion = cult_of_mars
+			tag = MTM
+			tag = GUN
+			tag = ENC
+			government = militia_gov
+			government = wolf_government
+		}
+		NOT = {
+			tag = GD1
+			tag = GD2
+		}
+		NOT = { army_size_percentage = 0.5 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+
+	}
+
+	option = {
+		name = "randomeventsstapehordes.21.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_horde_unity = -5
+		add_prestige = -10
+	}
+}
+
+#-----------------------------
+#	Military Tradition Scorned
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.22
+	title = "randomeventsstapehordes.22.EVTNAME"
+	desc = "randomeventsstapehordes.22.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			government = wolf_government
+			religion = cult_of_mars
+			tag = MTM
+			tag = GUN
+			tag = ENC
+			government = militia_gov
+		}
+		NOT = {
+			tag = GD1
+			tag = GD2
+		}
+		NOT = { army_size_percentage = 0.5 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.22.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_army_tradition = -5
+		random = {
+			chance = 15
+			add_stability = -1
+		}
+	}
+}
+
+#-----------------------------
+#	Military Tradition Scorned
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.23
+	title = "randomeventsstapehordes.23.EVTNAME"
+	desc = "randomeventsstapehordes.23.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		OR = {
+			government = steppe_horde
+			government = religious_tribe
+			government = trade_tribe
+			government = war_tribe
+			government = legion
+			government = wolf_government
+			religion = cult_of_mars
+			tag = ENC
+		}
+		NOT = {
+			tag = GD1
+			tag = GD2
+		}
+		NOT = { army_size_percentage = 0.5 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.23.EVTOPTA"
+		ai_chance = { factor = 100 }
+		add_prestige = -2		
+		add_yearly_manpower = -0.3
+		random = {
+			chance = 15
+			add_stability = -1
+		}
+	}
+}
+
+#-----------------------------
+#	War, What is it Good For
+#-----------------------------
+
+country_event = {
+	id = randomeventsstapehordes.24
+	title = "randomeventsstapehordes.24.EVTNAME"
+	desc = "randomeventsstapehordes.24.EVTDESC"
+	picture = GFX_event_blood_soaked_tribal_hall	
+	
+	is_triggered_only = yes	
+
+	trigger = {
+		legitimacy_equivalent = 100
+		is_at_war = yes	
+		NOT = {
+			tag = TWM
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "randomeventsstapehordes.24.EVTOPTA"
+		add_prestige = 5
+		add_stability_or_adm_power = yes
+		add_mil_power = 100
+	}
+}

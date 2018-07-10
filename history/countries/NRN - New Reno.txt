@@ -1,0 +1,36 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = military_settlement
+technology_group = tech_wastelander
+religion = secular
+primary_culture = new_reno
+capital = 2978
+
+add_faction = the_mordinos
+add_faction = the_bishops
+add_faction = the_wrights
+add_faction = the_van_graffs
+
+#--------------------------------
+# Relationships
+#--------------------------------
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Tiaret"
+		dynasty = "Van Graff"
+		adm = 3
+		dip = 4
+		mil = 3
+		female = yes
+	}
+
+	add_country_modifier = {
+		name = "the_abolish_slavery_act"
+		duration = -1
+	}
+}

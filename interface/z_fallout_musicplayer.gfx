@@ -1,0 +1,143 @@
+spriteTypes = {	
+    spriteType = {
+		name = "GFX_playlist_bg"
+		texturefile = "gfx//interface//ui//musicplayer//playlist_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_music_pause_button"
+		texturefile = "gfx//interface//ui//musicplayer//music_pause_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_music_next_button"
+		texturefile = "gfx//interface//ui//musicplayer//music_next_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_musicplayer_button"
+        texturefile = "gfx//interface//ui//musicplayer//musicplayer_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+     
+    #spriteType = {
+	#	name = "GFX_musicplayer_megaphone"
+	#	textureFile = "gfx/interface/ui/musicplayer/icon_megaphone.dds"
+	#}
+	
+	#spriteType = {
+	#	name = "GFX_musicplayer_entry_bg"
+	#	textureFile = "gfx/interface/ui/musicplayer/music_player_entry_bg.dds"
+	#}
+	
+	#spriteType = {
+	#	name = "GFX_musicplayer_bottom_bar"
+	#	texturefile = "gfx//interface//ui/musicplayer/musicplayer_bottom_bar.dds"
+	#}
+
+	#spriteType = {
+	#	name = "GFX_musicplayer_list_bg2"
+	#	texturefile = "gfx//interface//ui/musicplayer/musicplayer_list_bg2.dds"
+	#}
+
+	#spriteType = {
+	#	name = "GFX_musicplayer_list_bg"
+	#	texturefile = "gfx//interface//ui/musicplayer/musicplayer_list_bg.dds"
+	#}
+
+	#spriteType = {
+	#	name = "GFX_selected_song"
+	#	texturefile = "gfx//interface//ui/musicplayer/selected_song.dds"
+	#}
+	
+	#spriteType = {
+	#	name = "GFX_disabled_song"
+	#	texturefile = "gfx//interface//ui/musicplayer/disabled_song.dds"
+	#}
+
+	#spriteType = {
+	#	name = "GFX_musicplayer_play_pause_button"
+	#	texturefile = "gfx//interface//ui/musicplayer/musicplayer_play_pause_button.dds"
+	#	effectFile = "gfx/FX/buttonstate.lua"	
+	#	noOfFrames = 2			
+	#}
+
+	#spriteType = {
+	#	name = "GFX_musicplayer_stop_button"
+	#	texturefile = "gfx//interface//ui//musicplayer_stop_button.dds"
+	#	effectFile = "gfx/FX/buttonstate.lua"
+	#}
+
+	#spriteType = {
+	#	name = "GFX_musicplayer_next_button"
+	#	texturefile = "gfx//interface//ui/musicplayer/musicplayer_next_button.dds"
+	#	effectFile = "gfx/FX/buttonstate.lua"	
+	#}
+
+	#spriteType = {
+	#	name = "GFX_musicplayer_previous_button"
+	#	texturefile = "gfx//interface//ui/musicplayer/musicplayer_previous_button.dds"
+	#	effectFile = "gfx/FX/buttonstate.lua"	
+	#}
+
+	#spriteType = {
+	#	name = "GFX_toggle_shuffle_buttons"
+	#	texturefile = "gfx//interface//ui/musicplayer/toggle_shuffle_buttons.dds"
+	#	effectFile = "gfx/FX/buttonstate.lua"
+	#	noOfFrames = 3			
+	#}
+	
+	#spriteType = {
+	#	name = "GFX_musicplayer_bar"
+    #    texturefile = "gfx//interface//ui/musicplayer/musicplayer_bar.dds"
+	#}	
+	
+	#spriteType = {
+	#	name = "GFX_musicplayer_header_bg"
+	#	texturefile = "gfx//interface//ui/musicplayer/musicplayer_header_bg.dds"
+	#}	
+
+	#progressbartype = {
+	#	name = "GFX_volume_track"
+	#	color = { 1.0 1.0 1.0 }
+	#	colortwo = { 1.0 1.0 1.0 }
+	#	textureFile1 = "gfx/interface/ui/musicplayer/music_vol_progress.dds"
+	#	textureFile2 = "gfx/interface/ui/musicplayer/music_vol_progress_bg.dds"
+	#	size = { x = 75 y = 16 }
+	#	effectFile = "gfx/FX/progress.lua"
+	#}
+    
+    #spriteType = {
+	#	name = "GFX_closebutton"
+	#	texturefile = "gfx//interface//ui//closebutton.dds"
+	#	noOfFrames = 1
+	#	effectFile = "gfx/FX/buttonstate.shader"
+	#}
+    
+    #corneredTileSpriteType = {
+	#	name = "GFX_tiled_paper_w_frame_one_border"
+	#	size= { x=192 y=192 }
+	#	textureFile = "gfx//interface//ui//tiled_paper_w_frame_one_border.dds"
+	#	borderSize = { x=64 y=64 }
+	#	tilingCenter = yes
+	#	effectFile = "gfx/FX/buttonstate_nodowneffect.lua"	
+	#}	
+    
+    #spriteType = {
+	#	name = "GFX_scroll_drager"
+	#	texturefile = "gfx/interface/ui/scroll_drager.dds"
+	#	effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	#}
+
+    #corneredTileSpriteType = {
+	#	name = "GFX_tiled_window_transparent"
+	#	size= { x=3 y=3 }
+	#	textureFile = "gfx//interface//ui//tiled_window_transparent.dds"
+	#	borderSize = { x=1 y=1 }
+	#	tilingCenter = no
+	#	effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	#}
+}

@@ -1,0 +1,33 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = new_vegas
+technology_group = tech_new_vegas
+religion = secular
+primary_culture = new_vegas
+capital = 2954
+
+add_faction = the_omertas
+add_faction = the_chairmen
+add_faction = the_white_glove_society
+
+#--------------------------------
+# Relationships
+#--------------------------------
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Robert"
+		dynasty = "House"
+		adm = 5
+		dip = 5
+		mil = 5
+		birth_date = 2020.6.25
+        death_date = 3000.1.1
+	}
+    clear_scripted_personalities = yes
+    add_ruler_personality = immortal_personality
+}

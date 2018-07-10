@@ -1,0 +1,578 @@
+estate_caravanners =
+{
+	icon = 4
+	
+	color = { 120 65 180 }
+	
+    keep_on_conquest = no 							
+	always_remove_on_religious_conquest = yes 		
+			
+	min_autonomy = 25								
+    autonomy_does_not_affect = province_trade_power_modifier
+
+    custom_name = {
+		desc = estate_mercantores
+		trigger = {
+			tag = CAE
+		}
+	}
+    
+	# ----- Conditions -----
+	trigger = {	
+        NOT = { technology_group = tech_robot }
+        NOT = { technology_group = tech_super_mutant }
+        NOT = { technology_group = tech_rodent }
+        NOT = { technology_group = tech_swampfolk }
+	}
+	
+	province_trigger = {
+		is_overseas = no
+	}
+
+    # ----- Country -----
+	country_modifier_happy = {
+		global_own_trade_power = 0.1
+        trade_efficiency = 0.1
+		caravan_power = 0.1
+	}
+	country_modifier_neutral = {
+		trade_efficiency = 0.05
+	}	
+	country_modifier_angry = {
+		global_own_trade_power = -0.1
+        trade_efficiency = -0.1
+		caravan_power = -0.1
+	}
+	
+	# ----- Province -----
+	province_modifier_happy = {
+		province_trade_power_modifier = 0.5
+        local_unrest = -5
+	}
+	province_modifier_neutral = {
+		province_trade_power_modifier = 0.25
+        local_unrest = -1
+	}	
+	province_modifier_angry = {
+        province_trade_power_modifier = -0.5
+		local_unrest = 5
+	}		
+	
+    ai_grant_province = {
+        factor = 1    
+        modifier = {
+            factor = 2
+            development = 20
+        }
+        modifier = {
+            factor = 0.5
+            NOT = { development = 10 }
+        }  
+        modifier = {
+            factor = 2
+            province_trade_power = 10
+        } 
+        modifier = {
+            factor = 1
+            has_owner_culture = yes
+        }
+        modifier = {
+            factor = 4
+            local_autonomy = 25
+        }
+        modifier = {
+            factor = 0.25
+            NOT = { local_autonomy = 25 }
+        }
+    }
+    
+	# ----- Territory -----
+    min_territory = 10
+    min_provinces_to_want_territory = 10
+    
+	# ----- Influence -----
+	base_influence = 20
+    
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_bureaucrats_disaster
+				has_disaster = estate_settlers_disaster
+                has_disaster = estate_officers_disaster
+                has_disaster = estate_scientists_disaster
+                has_disaster = estate_slavers_disaster
+			}
+		}	
+		influence = -40
+	}
+	
+	# ----- Loyalty -----
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_bureaucrats_disaster
+				has_disaster = estate_settlers_disaster
+                has_disaster = estate_officers_disaster
+                has_disaster = estate_scientists_disaster
+                has_disaster = estate_slavers_disaster
+			}
+		}
+		loyalty = -40
+	}
+
+	loyalty_modifier = {
+		desc = EST_VAL_HIGH_MERCANTILISM
+        trigger = {
+            mercantilism = 50
+		}
+		loyalty = 5
+	}
+    
+	loyalty_modifier = {
+		desc = EST_VAL_LOW_MERCANTILISM
+        trigger = {
+            NOT = { mercantilism = 20 }
+		}
+		loyalty = -5
+	}
+
+    # ----- Interactions -----
+    
+    # Demand Backing
+    interaction = {
+        name = "DEMAND_BACKING"
+        icon = 1
+        
+        years_between_use = 20
+        
+        potential = { }
+        
+        trigger = {        
+            estate_loyalty = {
+                estate = estate_caravanners
+                loyalty = 30
+            }    
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 25
+            }            
+        }
+        
+        effect = {
+            add_scaled_dip_power = { ESTATE = estate_caravanners }
+            
+            add_estate_loyalty = {
+                estate = estate_caravanners
+                loyalty = -20
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0 
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_caravanners
+                        loyalty = 60
+                    }
+                }
+            }
+        }
+    }
+    
+    # Bribe Merchants 
+    interaction = {
+        name = "BRIBE_MERCHANTS"
+        icon = 1
+        
+        years_between_use = 10
+        
+        potential = { }
+        
+        trigger = {
+            always = yes
+        }
+        
+        effect = {
+            add_years_of_income = -0.5
+            
+            add_estate_loyalty = {
+                estate = estate_caravanners
+                loyalty = 15
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_loyalty = {
+                    estate = estate_caravanners
+                    loyalty = 60
+                }
+            }
+            
+            modifier = {
+                factor = 0
+                NOT = { years_of_income = 0.5 }                
+            }         
+        }        
+    }
+    
+    # Seek Support of Caravanners
+    interaction = {
+        name = "SEEK_SUPPORT_OF_CARAVANNERS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            always = yes
+        }
+        
+        effect = {
+            add_estate_loyalty = {
+                estate = estate_caravanners
+                loyalty = 10
+            }
+            add_estate_influence_modifier = {
+                estate = estate_caravanners
+                desc = EST_VAL_SOUGHT_SUPPORT
+                influence = 10
+                duration = 7300
+            }
+        }
+    
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_loyalty = {
+                    estate = estate_caravanners
+                    loyalty = 60
+                }
+            }
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_caravanners
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Recruit Merchant
+    interaction = {
+        name = "RECRUIT_MERCHANT"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_caravanners 
+                ADVISOR = fm_merchant
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_caravanners
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_caravanners
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Recruit Caravanner
+    interaction = {
+        name = "RECRUIT_CARAVANNER"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_caravanners 
+                ADVISOR = fm_caravanner
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_caravanners
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_caravanners
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Recruit Spy
+    interaction = {
+        name = "RECRUIT_SPY"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_caravanners 
+                ADVISOR = fm_spy
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_caravanners
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_caravanners
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Demand Contribution
+    interaction = {
+        name = "DEMAND_CONTRIBUTION"
+        icon = 1
+        
+        years_between_use = 15
+        
+        trigger = {        
+            estate_loyalty = {
+                estate = estate_caravanners
+                loyalty = 30
+            }    
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 25
+            }            
+        }
+        
+        effect = {
+            add_scaled_yearly_gold = { ESTATE = estate_caravanners }
+            
+            add_estate_loyalty = {
+                estate = estate_caravanners
+                loyalty = -20
+            }
+        }
+    
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_caravanners
+                        loyalty = 60
+                    }
+                }
+            }
+        }
+    }
+    
+    # Promote Mercantilism
+    interaction = {
+        name = "PROMOTE_MERCANTILISM"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 15
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_mercantilism = { ESTATE = estate_caravanners }
+            
+            add_estate_influence_modifier = {
+                estate = estate_caravanners
+                desc = EST_VAL_PROMOTED_MERCANTILISM
+                influence = 10
+                duration = 5475
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_caravanners
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Employ Merchant
+    interaction = {
+        name = "EMPLOY_MERCHANT"
+        icon = 1
+        
+        potential = { 
+            NOT = { has_country_modifier = additional_merchants }
+        }
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = additional_merchants
+                duration = 7300
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_caravanners
+                desc = EST_VAL_ADDITIONAL_MERCHANTS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_caravanners
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Enact Mercantile Propaganda
+    interaction = {
+        name = "ENACT_MARKET_PROPAGANDA"
+        icon = 1
+        
+        potential = { 
+            NOT = { has_country_modifier = persuasive_merchants }
+        }
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_caravanners
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = persuasive_merchants
+                duration = 7300
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_caravanners
+                desc = EST_VAL_MERCANTILE_PROPAGANDA
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_caravanners
+                    influence = 55
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+legion_missions_slot_1 = {
+    slot = 1
+    has_country_shield = yes
+    
+    potential = {
+        tag = CAE
+    }
+    
+    claim_primm = {
+		icon = mission_assemble_an_army
+        
+		required_missions = { }
+        
+		trigger = {
+            custom_trigger_tooltip = {
+                tooltip = NO_MISSION_IN_ACTION
+                NOT = { has_country_flag = mission_in_action }
+            }
+		}
+		effect = {
+			hidden_effect = {
+                set_country_flag = mission_in_action
+            }
+            custom_tooltip = MISSION_IN_ACTION
+            country_event = { id = missions.1 days = 30 }
+		}
+    }
+}
+

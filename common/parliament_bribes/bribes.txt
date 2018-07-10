@@ -1,0 +1,139 @@
+lose_adm = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		FROM = { add_scaled_local_adm_power = -4 }
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+lose_dip = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		FROM = { add_scaled_local_dip_power = -4 }
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+lose_mil = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		FROM = { add_scaled_local_mil_power = -4 }
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+gain_local_autonomy = {
+	trigger = {
+		FROM = { is_capital = no }
+	}
+	
+	effect = {
+		FROM = { add_local_autonomy = 20 }
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}	
+}
+
+lose_army_tradition_fm = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		add_army_tradition = -5
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_at_war = yes
+		}
+	}
+}
+
+lose_prestige_fm = {
+	trigger = {
+		prestige = 10
+	}
+	
+	effect = {
+		add_prestige = -10
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+lose_ducats = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		add_years_of_income = -0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+gain_corruption = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		add_corruption = 0.2
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			corruption = 10
+		}
+	}
+}
+
+lose_republican_tradition = {
+	trigger = {
+		government = republic
+	}
+	
+	effect = {
+		add_republican_tradition = -2
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { republican_tradition = 60 }
+		}
+	}
+}
+

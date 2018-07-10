@@ -1,0 +1,645 @@
+estate_officers =
+{
+	icon = 3
+	
+	color = { 33 50 100 }
+	
+    keep_on_conquest = no 							
+	always_remove_on_religious_conquest = yes 		
+			
+	min_autonomy = 25								
+    autonomy_does_not_affect = local_manpower_modifier
+    
+    custom_name = {
+		desc = estate_knights
+		trigger = {
+			technology_group = tech_bos
+		}
+	}
+    
+    custom_name = {
+		desc = estate_legionarii
+		trigger = {
+			tag = CAE
+		}
+	}
+    
+	# ----- Conditions -----
+	trigger = {	
+        NOT = { technology_group = tech_robot }
+        NOT = { technology_group = tech_super_mutant }
+        NOT = { technology_group = tech_rodent }
+        NOT = { technology_group = tech_swampfolk }
+	}
+	
+	province_trigger = {
+		is_overseas = no
+	}
+
+    # ----- Country -----
+	country_modifier_happy = {
+		army_tradition = 1
+        yearly_army_professionalism = 0.01
+        land_maintenance_modifier = -0.1
+	}
+	country_modifier_neutral = {
+		land_maintenance_modifier = -0.05
+	}	
+	country_modifier_angry = {
+		army_tradition = -1
+        yearly_army_professionalism = -0.01
+        land_maintenance_modifier = 0.1
+	}
+	
+	# ----- Province -----
+	province_modifier_happy = {
+		local_manpower_modifier = 0.5
+        local_unrest = -5
+	}
+	province_modifier_neutral = {
+		local_manpower_modifier = 0.25
+        local_unrest = -1
+	}	
+	province_modifier_angry = {
+        local_manpower_modifier = -0.5
+		local_unrest = 5
+	}		
+	
+    ai_grant_province = {
+        factor = 1    
+        modifier = {
+            factor = 2
+            development = 20
+        }
+        modifier = {
+            factor = 0.5
+            NOT = { development = 10 }
+        }  
+        modifier = {
+            factor = 2
+            base_manpower = 10
+        } 
+        modifier = {
+            factor = 1
+            has_owner_culture = yes
+        }
+        modifier = {
+            factor = 4
+            local_autonomy = 25
+        }
+        modifier = {
+            factor = 0.25
+            NOT = { local_autonomy = 25 }
+        }
+    }
+    
+	# ----- Territory -----
+    min_territory = 10
+    min_provinces_to_want_territory = 10
+    
+	# ----- Influence -----
+	base_influence = 20
+
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_bureaucrats_disaster
+				has_disaster = estate_settlers_disaster
+                has_disaster = estate_caravanners_disaster
+                has_disaster = estate_scientists_disaster
+                has_disaster = estate_slavers_disaster
+			}
+		}	
+		influence = -40
+	}
+	
+    influence_modifier = {
+		desc = EST_VAL_LEGION_INFLUENCE
+		trigger = {
+			technology_group = tech_caesars_legion
+		}	
+		influence = 5
+	}		
+    
+	# ----- Loyalty -----
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_bureaucrats_disaster
+				has_disaster = estate_settlers_disaster
+                has_disaster = estate_caravanners_disaster
+                has_disaster = estate_scientists_disaster
+                has_disaster = estate_slavers_disaster
+			}
+		}
+		loyalty = -40
+	}
+
+	loyalty_modifier = {
+		desc = EST_VAL_HIGH_TRADITION
+        trigger = {
+            army_tradition = 75
+		}
+		loyalty = 5
+	}
+    
+	loyalty_modifier = {
+		desc = EST_VAL_LOW_TRADITION
+        trigger = {
+            NOT = { army_tradition = 15 }
+		}
+		loyalty = -5
+	}
+
+    # ----- Interactions -----
+    
+    # Demand Backing
+    interaction = {
+        name = "DEMAND_BACKING"
+        icon = 1
+        
+        years_between_use = 20
+        
+        potential = { }
+        
+        trigger = {        
+            estate_loyalty = {
+                estate = estate_officers
+                loyalty = 30
+            }    
+            estate_influence = {
+                estate = estate_officers
+                influence = 25
+            }            
+        }
+        
+        effect = {
+            add_scaled_mil_power = { ESTATE = estate_officers }
+            
+            add_estate_loyalty = {
+                estate = estate_officers
+                loyalty = -20
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0 
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_officers
+                        loyalty = 60
+                    }
+                }
+            }
+        }
+    }
+    
+    # Corrupt Officers
+    interaction = {
+        name = "CORRUPT_OFFICERS"
+        icon = 1
+        
+        years_between_use = 10
+        
+        potential = { }
+        
+        trigger = {
+            always = yes
+        }
+        
+        effect = {
+            add_years_of_income = -0.5
+            
+            add_estate_loyalty = {
+                estate = estate_officers
+                loyalty = 15
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_loyalty = {
+                    estate = estate_officers
+                    loyalty = 60
+                }
+            }
+            
+            modifier = {
+                factor = 0
+                NOT = { years_of_income = 0.5 }                
+            }
+        }       
+    }
+    
+    # Seek Support of Officers
+    interaction = {
+        name = "SEEK_SUPPORT_OF_OFFICERS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            always = yes
+        }
+        
+        effect = {
+            add_estate_loyalty = {
+                estate = estate_officers
+                loyalty = 10
+            }
+            add_estate_influence_modifier = {
+                estate = estate_officers
+                desc = EST_VAL_SOUGHT_SUPPORT
+                influence = 10
+                duration = 7300
+            }
+        }
+    
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_loyalty = {
+                    estate = estate_officers
+                    loyalty = 60
+                }
+            }
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_officers
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Recruit Army Officer
+    interaction = {
+        name = "RECRUIT_ARMY_OFFICER"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_officers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_officers 
+                ADVISOR = fm_army_officer
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_officers
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_officers
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Recruit Army Recruiter
+    interaction = {
+        name = "RECRUIT_ARMY_RECRUITER"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_officers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_officers 
+                ADVISOR = fm_recruiter
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_officers
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_officers
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Recruit Sharpshooter
+    interaction = {
+        name = "RECRUIT_SHARPSHOOTER"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_officers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_officers 
+                ADVISOR = fm_sharpshooter
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_officers
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_officers
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Uphold Tradition
+    interaction = {
+        name = "ESTABLISH_TRADITIONS"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_officers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_army_tradition = { ESTATE = estate_officers }
+
+            add_estate_influence_modifier = {
+                estate = estate_officers
+                desc = EST_VAL_UPHELD_TRADITION
+                influence = 15
+                duration = 7200
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_officers
+                    influence = 55
+                }
+            }
+        }
+    }
+    
+    # Appoint General
+    interaction = {
+        name = "APPOINT_GENERAL"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 15
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_officers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_general = { ESTATE = estate_officers }
+            
+            add_estate_influence_modifier = {
+                estate = estate_officers
+                desc = EST_VAL_RECRUITED_LEADER
+                influence = 20
+                duration = 5475
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_officers
+                    influence = 55
+                }
+            }
+            
+            modifier = {
+                factor = 0
+                
+                num_of_generals = 3
+            }
+        }
+    }
+    
+    # Appoint Admiral
+    interaction = {
+        name = "APPOINT_ADMIRAL"
+        icon = 1
+        
+        potential = { }
+        
+        years_between_use = 15
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_officers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_admiral = { ESTATE = estate_officers }
+            
+            add_estate_influence_modifier = {
+                estate = estate_officers
+                desc = EST_VAL_RECRUITED_LEADER
+                influence = 20
+                duration = 5475
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                estate_influence = {
+                    estate = estate_officers
+                    influence = 55
+                }
+            }
+            
+            modifier = {
+                factor = 0
+                
+                num_of_admirals = 1
+            }
+        }
+    }
+    
+    # Muster Soldiers
+    interaction = {
+        name = "MUSTER_SOLDIERS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {        
+            estate_loyalty = {
+                estate = estate_officers
+                loyalty = 30
+            }    
+            estate_influence = {
+                estate = estate_officers
+                influence = 25
+            }            
+        }
+        
+        effect = {
+            add_scaled_yearly_manpower = { ESTATE = estate_officers }
+            
+            add_estate_loyalty = {
+                estate = estate_officers
+                loyalty = -20
+            }
+        }
+    
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_officers
+                        loyalty = 60
+                    }
+                }
+            }
+            
+            modifier = {
+                factor = 0
+                manpower_percentage = 0.5
+            }
+        }
+    }
+    
+    # Muster Sailors
+    interaction = {
+        name = "MUSTER_SAILORS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {        
+            estate_loyalty = {
+                estate = estate_officers
+                loyalty = 30
+            }    
+            estate_influence = {
+                estate = estate_officers
+                influence = 25
+            }            
+        }
+        
+        effect = {
+            add_scaled_yearly_sailors = { ESTATE = estate_officers }
+            
+            add_estate_loyalty = {
+                estate = estate_officers
+                loyalty = -20
+            }
+        }
+    
+        ai_will_do = {
+            factor = 1
+            
+            modifier = { 
+                factor = 0 
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_officers
+                        loyalty = 60
+                    }
+                }
+            }
+            
+            modifier = {
+                factor = 0
+                sailors_percentage = 0.5
+            }
+        }
+    }
+}

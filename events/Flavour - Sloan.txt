@@ -1,0 +1,176 @@
+namespace = sloan
+
+# "Don't Make a Beggar of Me"
+country_event = {
+	id = sloan.1
+	title = sloan.1.title
+	desc = sloan.1.desc
+    picture = WASTELAND_HILLS_eventPicture
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 16
+	}	
+	
+	trigger = {
+        tag = SLN 		
+		owns_core_province = 4052 
+		has_ruler_flag = chomps_living
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - sloan.1" }
+        }
+    }
+    
+	option = {
+		name = sloan.1.option.a
+		4052 = {
+			change_trade_goods = drugs 
+		}
+		set_global_flag = chomps_path_sln
+		ai_chance = {
+			factor = 33
+		}        
+	}
+	
+	option = {
+		name = sloan.1.option.b
+		define_ruler = {
+			name = "Jas"
+			dynasty = "Wilkins"
+    		adm = 2
+    		dip = 2
+    		mil = 0
+    		female = yes
+		}		
+		4052 = {
+			add_base_production = 1
+			change_trade_goods = brew
+		}
+		set_ruler_flag = wilkins_jas_rules
+		add_stability = -1
+		change_primary_culture = new_california 
+		set_country_flag = bar_sln
+		ai_chance = {
+			factor = 33
+		}    
+	}
+	
+	option = {
+		name = sloan.1.option.c
+		define_ruler = {
+			name = "Paul"
+    		adm = 1
+    		dip = 0
+    		mil = 0
+		}		
+		4052 = {
+			add_base_production = 2
+		}
+		set_ruler_flag = sloan_event1_randomruleroption
+		add_stability = -1
+		ai_chance = {
+			factor = 33
+		}    
+	}
+}
+
+# "A Pitstop to New Vegas"
+country_event = {
+	id = sloan.2
+	title = sloan.2.title
+	desc = sloan.2.desc
+    picture = WASTELAND_HILLS_eventPicture
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 30
+	}	
+	
+	trigger = {
+        tag = SLN 		
+		owns_core_province = 4052 
+		has_country_flag = bar_sln
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - sloan.2" }
+        }
+    }
+    
+	option = {
+		name = sloan.2.option.a
+		trigger = {	NOT = { has_ruler_flag = wilkins_jas_rules } }
+		4052 = {
+			add_base_production = 1
+		}
+		clr_country_flag = bar_sln
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				has_ruler_flag = wilkins_jas_rules
+			}
+		}        
+	}
+	
+	option = {
+		name = sloan.2.option.b	
+		trigger = {	has_ruler_flag = wilkins_jas_rules }
+		4052 = {
+			add_base_production = 3
+		}
+		clr_country_flag = bar_sln
+		ai_chance = {
+			factor = 100
+		}    
+	}
+}
+
+# "Chem Package Arrived"
+country_event = {
+	id = sloan.3
+	title = sloan.3.title
+	desc = sloan.3.desc
+    picture = WASTELAND_HILLS_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 30
+	}	
+	
+	trigger = {
+        tag = GRK 		
+		SLN = { 
+		    owns_core_province = 4052 
+		    exists = yes
+		}
+		has_global_flag = chomps_path_sln
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - sloan.3" }
+        }
+    }
+    
+	option = {
+		name = sloan.3.option.a
+		
+		change_price = {
+    		trade_goods = drugs
+    		key = sloan_khan_drugroute
+    		value = 0.1
+    		duration = -1
+		}
+		clr_global_flag = chomps_path_sln   
+	}
+}

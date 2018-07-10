@@ -1,0 +1,1316 @@
+node_manitoba={
+	location=613
+	inland=yes
+	outgoing={
+		name="node_north_dakota"
+		path={
+			655 658 477 476 472 471 
+		}
+		control={
+			2890.000000 1583.000000 
+		}
+	}
+	outgoing={
+		name="node_saskatchewan"
+		path={
+			653 682 612 
+		}
+		control={
+			2775.000000 1692.000000 
+		}
+	}
+	outgoing={
+		name="node_minnesota"
+		path={
+			655 663 908 475 2512 
+		}
+		control={
+			3041.000000 1492.000000 
+		}
+	}
+	outgoing={
+		name="node_ontario"
+		path={
+			647 664 1007 2015 1001 2671 988 2670 
+		}
+		control={
+			3461.000000 1659.000000 3801.000000 1465.000000 3876.000000 1394.000000 
+		}
+	}
+	members={
+		613 647 655 650 649 651 653 657 648 656 654 652 
+	}
+}
+node_newfoundland_and_labrador={
+	location=615
+	outgoing={
+		name="node_quebec"
+		path={
+			1490 175 
+		}
+		control={
+			4448.000000 1540.000000 
+		}
+	}
+	outgoing={
+		name="node_nova_scotia"
+		path={
+			1491 181 171 
+		}
+		control={
+			4708.000000 1467.000000 
+		}
+	}
+	members={
+		614 615 
+	}
+}
+node_quebec={
+	location=175
+	outgoing={
+		name="node_ontario"
+		path={
+			187 177 189 179 989 2670 
+		}
+		control={
+			3984.000000 1408.000000 
+		}
+	}
+	outgoing={
+		name="node_the_commonwealth"
+		path={
+			185 2564 993 3040 3025 553 544 545 539 
+		}
+		control={
+			4168.000000 1346.000000 
+		}
+	}
+	members={
+		627 625 628 626 624 622 619 623 616 617 621 618 620 182 183 184 186 175 177 185 187 188 
+	}
+}
+node_nova_scotia={
+	location=171
+	outgoing={
+		name="node_new_brunswick"
+		path={
+			181 169 176 
+		}
+		control={
+			4440.000000 1432.000000 
+		}
+	}
+	outgoing={
+		name="node_the_commonwealth"
+		path={
+			1492 1499 968 539 
+		}
+		control={
+			4320.000000 1283.000000 
+		}
+	}
+	members={
+		170 171 172 173 181 
+	}
+}
+node_new_brunswick={
+	location=176
+	outgoing={
+		name="node_ontario"
+		path={
+			2565 2564 2563 995 752 745 736 737 749 739 958 741 298 2670 
+		}
+		control={
+			4112.000000 1411.000000 
+		}
+	}
+	outgoing={
+		name="node_the_commonwealth"
+		path={
+			2565 2564 993 3040 3025 553 544 545 539 
+		}
+		control={
+			4228.000000 1342.000000 
+		}
+	}
+	members={
+		169 174 176 
+	}
+}
+node_ontario={
+	location=2670
+	inland=yes
+	outgoing={
+		name="node_minnesota"
+		path={
+			987 180 2521 2522 246 149 483 3016 2992 2991 151 904 2512 
+		}
+		control={
+			3806.000000 1409.000000 3530.000000 1606.000000 3256.000000 1623.000000 
+		}
+	}
+	outgoing={
+		name="node_michigan"
+		path={
+			987 180 944 2522 
+		}
+		control={
+			3656.000000 1259.000000 
+		}
+	}
+	outgoing={
+		name="node_new_york"
+		path={
+			989 179 744 736 735 3058 732 733 163 965 
+		}
+		control={
+			3896.000000 1229.000000 
+		}
+	}
+	members={
+		298 987 989 2586 2587 2670 178 179 189 190 988 1001 2671 910 1007 2015 630 631 629 633 632 634 637 636 639 638 640 635 642 645 643 646 641 644 
+	}
+}
+node_saskatchewan={
+	location=612
+	inland=yes
+	outgoing={
+		name="node_alberta"
+		path={
+			686 702 695 611 
+		}
+		control={
+			2466.000000 1748.000000 
+		}
+	}
+	outgoing={
+		name="node_montana"
+		path={
+			678 667 669 462 245 
+		}
+		control={
+			2439.000000 1529.000000 
+		}
+	}
+	outgoing={
+		name="node_north_dakota"
+		path={
+			677 657 659 477 
+		}
+		control={
+			2698.000000 1586.000000 
+		}
+	}
+	members={
+		678 677 679 687 612 686 685 682 681 680 683 684 691 690 689 688 
+	}
+}
+node_north_dakota={
+	location=477
+	inland=yes
+	outgoing={
+		name="node_minnesota"
+		path={
+			906 475 2512 
+		}
+		control={
+			2979.000000 1401.000000 
+		}
+	}
+	outgoing={
+		name="node_south_dakota"
+		path={
+			476 472 471 
+		}
+		control={
+			2815.000000 1342.000000 
+		}
+	}
+	outgoing={
+		name="node_montana"
+		path={
+			242 666 668 466 462 245 
+		}
+		control={
+			2583.000000 1390.000000 
+		}
+	}
+	members={
+		469 661 660 477 906 476 663 658 659 662 241 242 666 
+	}
+}
+node_south_dakota={
+	location=471
+	inland=yes
+	outgoing={
+		name="node_wyoming"
+		path={
+			456 2625 3006 
+		}
+		control={
+			2706.000000 1212.000000 
+		}
+	}
+	outgoing={
+		name="node_nebraska"
+		path={
+			490 448 898 
+		}
+		control={
+			2904.000000 1171.000000 
+		}
+	}
+	outgoing={
+		name="node_iowa"
+		path={
+			490 450 453 449 
+		}
+		control={
+			2991.000000 1205.000000 
+		}
+	}
+	members={
+		420 2008 419 665 472 470 471 473 903 
+	}
+}
+node_alberta={
+	location=611
+	inland=yes
+	outgoing={
+		name="node_british_columbia"
+		path={
+			699 703 722 723 721 719 717 716 231 
+		}
+		control={
+			1848.000000 1747.000000 
+		}
+	}
+	outgoing={
+		name="node_montana"
+		path={
+			695 692 693 671 674 675 245 
+		}
+		control={
+			2270.000000 1499.000000 
+		}
+	}
+	members={
+		692 696 693 694 695 702 701 611 697 698 700 703 699 
+	}
+}
+node_montana={
+	location=245
+	inland=yes
+	outgoing={
+		name="node_wyoming"
+		path={
+			2504 461 458 2507 418 3006 
+		}
+		control={
+			2448.000000 1276.000000 
+		}
+	}
+	outgoing={
+		name="node_idaho"
+		path={
+			6 3108 3110 
+		}
+		control={
+			2093.000000 1360.000000 
+		}
+	}
+	members={
+		3117 3116 3115 3114 245 239 240 243 461 2504 462 459 467 2505 460 237 468 466 668 672 671 674 676 675 673 670 669 667 
+	}
+}
+node_minnesota={
+	location=2512
+	inland=yes
+	outgoing={
+		name="node_wisconsin"
+		path={
+			913 487 
+		}
+		control={
+			3249.000000 1332.000000 
+		}
+	}
+	outgoing={
+		name="node_iowa"
+		path={
+			904 2513 449 
+		}
+		control={
+			3110.000000 1256.000000 
+		}
+	}
+	members={
+		904 2512 474 2517 475 908 664 
+	}
+}
+node_michigan={
+	location=2522
+	inland=yes
+	outgoing={
+		name="node_indiana"
+		path={
+			246 235 943 
+		}
+		control={
+			3469.000000 1145.000000 
+		}
+	}
+	outgoing={
+		name="node_wisconsin"
+		path={
+			246 149 483 3016 152 487 
+		}
+		control={
+			3405.000000 1292.000000 
+		}
+	}
+	outgoing={
+		name="node_ohio"
+		path={
+			70 29 946 
+		}
+		control={
+			3564.000000 1171.000000 
+		}
+	}
+	members={
+		485 911 180 944 2522 2521 945 
+	}
+}
+node_wisconsin={
+	location=487
+	inland=yes
+	outgoing={
+		name="node_illinois"
+		path={
+			152 3016 
+		}
+		control={
+			3355.000000 1280.000000 
+		}
+	}
+	members={
+		478 488 913 912 2518 487 4021 914 
+	}
+}
+node_west_virginia={
+	location=948
+	inland=yes
+	outgoing={
+		name="node_kentucky"
+		path={
+			378 344 2526 
+		}
+		control={
+			3597.050049 1003.929993 
+		}
+	}
+	outgoing={
+		name="node_ohio"
+		path={
+			378 89 946 
+		}
+		control={
+			3632.000000 1067.000000 
+		}
+	}
+	outgoing={
+		name="node_pennsylvania"
+		path={
+			375 289 386 379 282 283 
+		}
+		control={
+			3732.000000 1070.000000 
+		}
+	}
+	members={
+		2551 372 375 296 2555 289 371 948 378 373 376 374 951 271 233 2548 
+	}
+}
+node_ohio={
+	location=946
+	inland=yes
+	outgoing={
+		name="node_indiana"
+		path={
+			76 116 232 943 
+		}
+		control={
+			3531.000000 1106.000000 
+		}
+	}
+	outgoing={
+		name="node_pennsylvania"
+		path={
+			295 381 294 281 283 
+		}
+		control={
+			3692.000000 1132.000000 
+		}
+	}
+	members={
+		77 89 295 297 946 29 53 70 10 76 2525 
+	}
+}
+node_british_columbia={
+	location=231
+	outgoing={
+		name="node_washington"
+		path={
+			874 229 275 276 2485 
+		}
+		control={
+			1704.000000 1577.000000 
+		}
+	}
+	outgoing={
+		name="node_idaho"
+		path={
+			6 3108 3110 
+		}
+		control={
+			1884.420044 1514.489990 
+		}
+	}
+	members={
+		230 231 715 714 704 705 706 717 716 719 718 720 708 713 711 710 709 707 712 723 721 722 
+	}
+}
+node_washington={
+	location=2485
+	outgoing={
+		name="node_oregon"
+		path={
+			276 873 3091 3092 
+		}
+		control={
+			1655.000000 1484.000000 
+		}
+	}
+	outgoing={
+		name="node_idaho"
+		path={
+			276 3089 3088 2483 3077 3076 3106 3110 
+		}
+		control={
+			1819.000000 1389.000000 
+		}
+	}
+	members={
+		3081 3085 3079 3077 3078 3080 3090 274 275 229 874 873 276 2485 3099 725 724 2488 3087 3095 3084 3097 2486 3096 3094 277 3089 3088 3082 3086 2483 
+	}
+}
+node_idaho={
+	location=3110
+	inland=yes
+	outgoing={
+		name="node_oregon"
+		path={
+			3109 3111 3075 2481 3072 3073 3092 
+		}
+		control={
+			1811.000000 1277.000000 
+		}
+	}
+	outgoing={
+		name="node_utah"
+		path={
+			3113 6 51 3009 
+		}
+		control={
+			2020.000000 1260.000000 
+		}
+	}
+	outgoing={
+		name="node_nevada"
+		path={
+			3113 109 3131 3130 101 100 3013 569 428 340 115 412 121 2954
+		}
+		control={
+			2064.000000 945.000000 
+		}
+	}
+	members={
+		108 3128 3129 3126 3124 2020 3125 3119 131 3118 3123 3010 3131 3132 109 3130 103 110 61 3110 3113 3112 3109 250 3107 3108 3105 3106 3076 3104 249 3101 3103 2487 3098 3102 3100 4054 4055 4056 4057
+	}
+}
+node_wyoming={
+	location=3006
+	inland=yes
+	outgoing={
+		name="node_utah"
+		path={
+			6 51 3009 
+		}
+		control={
+			2386.000000 1135.000000 
+		}
+	}
+	outgoing={
+		name="node_colorado"
+		path={
+			348 3007 
+		}
+		control={
+			2625.000000 1088.000000 
+		}
+	}
+	members={
+		464 3138 465 3139 2506 2490 2507 458 3137 463 3006 455 421 418 
+	}
+}
+node_nebraska={
+	location=898
+	inland=yes
+	outgoing={
+		name="node_iowa"
+		path={
+			145 4025 449 
+		}
+		control={
+			3050.000000 1120.000000 
+		}
+	}
+	outgoing={
+		name="node_kansas"
+		path={
+			774 446 
+		}
+		control={
+			2991.000000 1067.000000 
+		}
+	}
+	outgoing={
+		name="node_colorado"
+		path={
+			325 2672 435 135 3007 
+		}
+		control={
+			2764.000000 1055.000000 
+		}
+	}
+	members={
+		438 898 436 447 448 490 452 457 2508 2625 456 2009 
+	}
+}
+node_kansas={
+	location=446
+	inland=yes
+	outgoing={
+		name="node_colorado"
+		path={
+			774 4022 2672 435 135 3007 
+		}
+		control={
+			2870.000000 1013.000000 
+		}
+	}
+	outgoing={
+		name="node_oklahoma"
+		path={
+			147 773 165 837 831 143 
+		}
+		control={
+			2954.000000 906.000000 
+		}
+	}
+	outgoing={
+		name="node_missouri"
+		path={
+			146 771 762 3000 
+		}
+		control={
+			3117.000000 1011.000000 
+		}
+	}
+	members={
+		437 164 2672 3002 4022 446 325 142 890 440 2988 141 3005 4023 165 772 4018 147 2515 773 446 774 
+	}
+}
+node_iowa={
+	location=449
+	inland=yes
+	outgoing={
+		name="node_illinois"
+		path={
+			902 479 150 4020 3016 
+		}
+		control={
+			3177.000000 1173.000000 
+		}
+	}
+	outgoing={
+		name="node_missouri"
+		path={
+			454 758 753 2995 3000 
+		}
+		control={
+			3146.000000 1078.000000 
+		}
+	}
+	members={
+		449 4025 145 454 902 2513 453 450 
+	}
+}
+node_colorado={
+	location=3007
+	inland=yes
+	outgoing={
+		name="node_new_mexico"
+		path={
+			138 416 331 57 333 336 335 
+		}
+		control={
+			2495.000000 867.000000 
+		}
+	}
+	outgoing={
+		name="node_texas"
+		path={
+			4006 880 832 974 901 316 891 900 328 
+		}
+		control={
+			2682.000000 864.000000 
+		}
+	}
+	members={
+		331 57 333 571 3015 878 875 55 417 570 3014 137 416 3007 138 54 56 337 348 133 134 880 139 136 889 4009 4007 4006 135 435 434 349 4031
+	}
+}
+node_oklahoma={
+	location=143
+	inland=yes
+	outgoing={
+		name="node_new_mexico"
+		path={
+			831 838 974 979 140 136 139 137 416 331 57 333 336 335 
+		}
+		control={
+			2615.000000 827.000000 
+		}
+	}
+	outgoing={
+		name="node_texas"
+		path={
+			314 892 148 891 900 328 
+		}
+		control={
+			2884.000000 700.000000 
+		}
+	}
+	outgoing={
+		name="node_arkansas"
+		path={
+			840 834 894 826 895 
+		}
+		control={
+			3033.000000 773.000000 
+		}
+	}
+	members={
+		839 327 828 834 840 836 829 832 140 314 315 892 838 830 831 143 835 837 
+	}
+}
+node_caribbean={
+	location=216
+	outgoing={
+		name="node_florida"
+		path={
+			1505 1506 928 
+		}
+		control={
+			3576.000000 431.000000 
+		}
+	}
+	members={
+		227 226 225 224 222 223 221 220 219 218 217 216 215 213 214 
+	}
+}
+node_florida={
+	location=928
+	outgoing={
+		name="node_alabama"
+		path={
+			592 590 589 
+		}
+		control={
+			3502.000000 601.000000 
+		}
+	}
+	outgoing={
+		name="node_georgia"
+		path={
+			2537 585 583 580 
+		}
+		control={
+			3581.000000 641.000000 
+		}
+	}
+	members={
+		596 2536 2535 926 594 595 2534 927 593 928 592 923 
+	}
+}
+node_georgia={
+	location=580
+	outgoing={
+		name="node_south_carolina"
+		path={
+			579 573 
+		}
+		control={
+			3667.000000 764.000000 
+		}
+	}
+	outgoing={
+		name="node_tennessee"
+		path={
+			931 2527 787 934 
+		}
+		control={
+			3531.000000 803.000000 
+		}
+	}
+	members={
+		2539 2538 2537 929 2542 585 583 582 588 580 930 931 578 579 2540 581 584 
+	}
+}
+node_alabama={
+	location=589
+	outgoing={
+		name="node_tennessee"
+		path={
+			924 791 787 934 
+		}
+		control={
+			3452.000000 749.000000 
+		}
+	}
+	outgoing={
+		name="node_mississippi"
+		path={
+			2532 789 804 2529 
+		}
+		control={
+			3352.000000 668.000000 
+		}
+	}
+	members={
+		922 788 789 586 590 591 2532 790 2531 587 589 924 925 792 791 
+	}
+}
+node_mississippi={
+	location=2529
+	outgoing={
+		name="node_tennessee"
+		path={
+			919 802 800 786 778 934 
+		}
+		control={
+			3363.000000 755.000000 
+		}
+	}
+	outgoing={
+		name="node_arkansas"
+		path={
+			798 821 895 
+		}
+		control={
+			3220.000000 708.000000 
+		}
+	}
+	outgoing={
+		name="node_louisiana"
+		path={
+			2528 794 921 
+		}
+		control={
+			3257.000000 623.000000 
+		}
+	}
+	members={
+		2530 793 795 803 794 2528 2529 707 797 796 804 920 800 802 799 919 798 801 
+	}
+}
+node_tennessee={
+	location=934
+	inland=yes
+	outgoing={
+		name="node_kentucky"
+		path={
+			368 339 2526 
+		}
+		control={
+			3509.000000 929.000000 
+		}
+	}
+	outgoing={
+		name="node_arkansas"
+		path={
+			778 784 918 801 827 824 895 
+		}
+		control={
+			3290.000000 820.000000 
+		}
+	}
+	outgoing={
+		name="node_missouri"
+		path={
+			365 366 2514 443 3000 
+		}
+		control={
+			3334.000000 925.000000 
+		}
+	}
+	members={
+		775 935 776 785 777 779 778 934 785 2527 787 783 918 781 782 786 784 780 
+	}
+}
+node_kentucky={
+	location=2526
+	inland=yes
+	outgoing={
+		name="node_indiana"
+		path={
+			345 232 943 
+		}
+		control={
+			3506.000000 1026.000000 
+		}
+	}
+	outgoing={
+		name="node_illinois"
+		path={
+			345 232 943 235 246 149 483 3016 
+		}
+		control={
+			3414.000000 1044.000000 
+		}
+	}
+	outgoing={
+		name="node_missouri"
+		path={
+			940 346 369 2514 443 3000 
+		}
+		control={
+			3334.000000 966.000000 
+		}
+	}
+	members={
+		367 2514 366 346 365 369 339 370 940 368 345 2526 344 332 
+	}
+}
+node_missouri={
+	location=3000
+	inland=yes
+	outgoing={
+		name="node_illinois"
+		path={
+			326 769 766 2994 480 2990 486 3016 
+		}
+		control={
+			3288.000000 1070.000000 
+		}
+	}
+	outgoing={
+		name="node_arkansas"
+		path={
+			3003 444 825 895 
+		}
+		control={
+			3159.000000 851.000000 
+		}
+	}
+	members={
+		917 441 444 3003 757 2999 443 326 144 4008 4024 324 3001 756 754 755 3004 3000 2995 762 771 753 758 760 759 770 761 445 146 
+	}
+}
+node_south_carolina={
+	location=573
+	outgoing={
+		name="node_north_carolina"
+		path={
+			574 937 598 
+		}
+		control={
+			3778.000000 837.000000 
+		}
+	}
+	members={
+		573 2543 932 574 933 577 2546 
+	}
+}
+node_north_carolina={
+	location=598
+	outgoing={
+		name="node_virginia"
+		path={
+			950 608 
+		}
+		control={
+			3868.000000 916.000000 
+		}
+	}
+	members={
+		597 575 576 949 604 600 598 937 602 2547 599 938 601 
+	}
+}
+node_indiana={
+	location=943
+	inland=yes
+	outgoing={
+		name="node_illinois"
+		path={
+			235 246 149 483 3016 
+		}
+		control={
+			3412.000000 1129.000000 
+		}
+	}
+	members={
+		238 270 269 246 149 942 234 943 114 235 2524 96 232 116 112 95 66 2523 
+	}
+}
+node_arkansas={
+	location=895
+	inland=yes
+	outgoing={
+		name="node_texas"
+		path={
+			822 820 313 489 859 857 328 
+		}
+		control={
+			3001.000000 678.000000 
+		}
+	}
+	outgoing={
+		name="node_louisiana"
+		path={
+			821 797 794 921 
+		}
+		control={
+			3188.000000 635.000000 
+		}
+	}
+	members={
+		827 821 819 820 822 894 895 825 323 826 824 823 897 
+	}
+}
+node_louisiana={
+	location=921
+	outgoing={
+		name="node_texas"
+		path={
+			816 818 854 855 856 857 328 
+		}
+		control={
+			3048.000000 577.000000 
+		}
+	}
+	members={
+		893 806 807 2516 805 814 921 808 817 809 816 815 810 818 813 812 2014 811 
+	}
+}
+node_texas={
+	location=328
+	outgoing={
+		name="node_mexico"
+		path={
+			27 35 317 321 842 191 980 517 195 528 199 531 533 203 
+		}
+		control={
+			2819.000000 393.000000 
+		}
+	}
+	outgoing={
+		name="node_new_mexico"
+		path={
+			900 899 329 318 936 941 959 983 25 882 358 359 360 351 335 
+		}
+		control={
+			2663.000000 701.000000 
+		}
+	}
+	members={
+		191 841 842 33 37 320 321 846 844 843 524 2500 317 34 35 885 319 2497 881 888 884 876 865 527 867 509 355 508 31 26 36 851 852 853 2665 850 848 849 847 328 27 858 857 859 856 855 489 854 313 861 863 862 2669 148 887 860 899 900 891 896 869 864 870 318 886 329 901 316 907 883 939 936 312 311 909 915 978 961 941 963 959 977 979 972 974 310 971 975 976 
+	}
+}
+node_utah={
+	location=3009
+	inland=yes
+	outgoing={
+		name="node_nevada"
+		path={
+			341 52 342 568 428 340 115 412 121 2954 
+		}
+		control={
+			2127.000000 915.000000 
+		}
+	}
+	outgoing={
+		name="node_arizona"
+		path={
+			341 52 342 560 113 3011 2969 414 126 415 129 493 879 130 
+		}
+		control={
+			2239.000000 872.000000 
+		}
+	}
+	members={
+		113 342 560 111 2969 3011 414 423 3009 3049 100 102 105 106 3013 52 99 104 341 60 101 107 51 343 330 3136 3135 59 58 3133 3134 3121 3120 132 3122 3127 
+	}
+}
+node_new_mexico={
+	location=335
+	inland=yes
+	outgoing={
+		name="node_arizona"
+		path={
+			334 350 357 359 358 362 498 491 130 
+		}
+		control={
+			2363.000000 761.000000 
+		}
+	}
+	outgoing={
+		name="node_mexico"
+		path={
+			351 360 359 358 882 509 8 203 
+		}
+		control={
+			2524.000000 618.000000 
+		}
+	}
+	members={
+		334 335 336 350 351 364 2496 25 362 363 498 361 358 507 882 359 360 357 364 2496 25 982 983 
+	}
+}
+node_mexico={
+	location=203
+	outgoing={
+		name="node_baja_california"
+		path={
+			8 192 1553 83 
+		}
+		control={
+			2440.000000 128.000000 
+		}
+	}
+	outgoing={
+		name="node_arizona"
+		path={
+			8 491 130 
+		}
+		control={
+			2453.000000 473.000000 
+		}
+	}
+	members={
+		203 532 533 535 200 205 530 531 199 196 529 528 195 514 517 204 202 207 206 534 201 513 211 210 192 537 536 198 23 501 503 504 21 499 500 506 505 502 22 28 512 511 212 510 193 197 209 520 521 518 519 981 980 208 322 515 32 984 525 526 985 523 24 522 30 
+	}
+}
+node_baja_california={
+	location=83
+	outgoing={
+		name="node_california"
+		path={
+			866 11 88 45 562 563 3 2959 2980 2956 
+		}
+		control={
+			2077.000000 517.000000 
+		}
+	}
+	outgoing={
+		name="node_arizona"
+		path={
+			866 11 4005 496 497 130 
+		}
+		control={
+			2252.000000 552.000000 
+		}
+	}
+	members={
+		166 78 79 167 2620 80 81 82 866 83 
+	}
+}
+node_arizona={
+	location=130
+	outgoing={
+		name="node_nevada"
+		path={
+			356 2493 4000 260 120 263 2954 
+		}
+		control={
+			2142.000000 757.000000 
+		}
+	}
+	outgoing={
+		name="node_california"
+		path={
+			356 2493 4000 260 120 123 121 412 115 340 428 426 429 84 2959 2980 2956 
+		}
+		control={
+			2101.000000 737.000000 
+		}
+	}
+	members={
+		356 492 493 879 129 415 87 130 352 491 124 125 126 128 353 354 2494 88 496 4005 4003 4004 497 2493 259 258 3059 4000 494 877 495 
+	}
+}
+node_nevada={
+	location=2954
+	inland=yes
+	outgoing={
+		name="node_california"
+		path={
+			121 412 115 340 428 426 429 84 2959 2980 2956 
+		}
+		control={
+			1987.000000 884.000000 
+		}
+	}
+	members={
+		430 431 432 2974 2978 433 2972 2973 426 427 429 567 568 428 569 84 566 2975 3012 4026 93 94 556 2983 91 92 98 2982 3044 3045 71 72 2970 62 90 97 555 2981 121 412 117 118 265 261 262 263 284 309 2954 251 252 2965 2966 119 255 256 2955 127 254 266 2491 122 267 273 2964 2967 120 257 260 272 253 264 268 123 285 557 2968 413 115 347 338 340 4010 4011 4012 4013 4014 4015 4016 4017 4052 4053 4051 4050 4032 4038 4041 4040 4035  
+	}
+}
+node_oregon={
+	location=3092
+	outgoing={
+		name="node_california"
+		path={
+			3073 3072 3050 236 244 2479 396 2 67 75 2977 2956 
+		}
+		control={
+			1706.000000 1216.000000 
+		}
+	}
+	members={
+		2481 3075 3111 1808 3074 3072 247 3073 3093 278 3091 3083 3092 279 872 
+	}
+}
+node_new_jersey={
+	location=299
+	outgoing={
+		name="node_new_york"
+		path={
+			729 728 731 163 965 
+		}
+		control={
+			4034.000000 1111.000000 
+		}
+	}
+	outgoing={
+		name="node_the_capital_wasteland"
+		path={
+			957 300 159 3063 39 14 17 2985 
+		}
+		control={
+			3943.000000 1076.000000 
+		}
+	}
+	members={
+		731 730 728 729 299 3047 726 962 727 
+	}
+}
+node_new_york={
+	location=965
+	outgoing={
+		name="node_pennsylvania"
+		path={
+			163 731 730 956 955 306 404 292 2556 283 
+		}
+		control={
+			3912.000000 1141.000000 
+		}
+	}
+	outgoing={
+		name="node_the_commonwealth"
+		path={
+			163 845 833 967 3035 542 540 3028 539 
+		}
+		control={
+			4142.000000 1190.000000 
+		}
+	}
+	members={
+		3046 965 163 732 733 2558 2639 735 734 960 964 745 752 736 744 747 746 748 737 743 738 749 739 740 958 742 741 750 751 
+	}
+}
+node_pennsylvania={
+	location=283
+	outgoing={
+		name="node_the_capital_wasteland"
+		path={
+			2556 292 404 305 2553 303 39 14 17 2985 
+		}
+		control={
+			3864.000000 1084.000000 
+		}
+	}
+	members={
+		2556 379 386 389 947 381 294 380 404 290 292 393 293 394 451 2557 439 516 402 2023 305 291 306 301 300 957 308 955 956 307 283 282 281 954 
+	}
+}
+node_virginia={
+	location=608
+	outgoing={
+		name="node_the_capital_wasteland"
+		path={
+			572 2985 
+		}
+		control={
+			3881.000000 983.000000 
+		}
+	}
+	members={
+		950 608 952 603 2549 606 607 609 605 610 160 2550 286 287 161 288 2552 2011 
+	}
+}
+node_bermuda={
+	location=228
+	outgoing={
+		name="node_the_commonwealth"
+		path={
+			1572 1570 1499 968 539 
+		}
+		control={
+			4286.000000 1088.000000 
+		}
+	}
+	members={
+		228 
+	}
+}
+node_the_commonwealth={
+	location=539
+	members={
+		539 968 3041 545 546 547 548 549 538 541 3028 540 542 2561 3027 3035 552 553 3025 554 544 551 3060 543 3026 3032 3064 550 3024 3061 3062 969 2562 2563 2564 3029 3030 3031 3036 967 2010 2560 3037 966 3038 3033 3040 3039 3034 168 970 2013 2565 3051 3052 3053 3054 3055 3056 3057 3058 833 845 986 990 992 991 993 995 994 
+	}
+	end=yes
+}
+node_the_capital_wasteland={
+	location=2985
+	members={
+		156 157 158 2554 2987 50 3043 5 3048 19 280 302 3063 46 162 304 2985 2986 953 49 47 18 39 303 13 16 17 3017 43 44 48 248 14 15 20 38 40 41 42 194 4 2553 159 4042 4033 4034 4039 4044 4037 4043 
+	}
+	end=yes
+}
+node_illinois={
+	location=3016
+	inland=yes
+	members={
+		3016 486 4020 483 153 4019 152 2992 151 2991 154 484 2989 2990 150 2996 155 479 763 2994 905 2997 766 481 2519 480 2993 2998 482 442 767 764 765 769 768 
+	}
+	end=yes
+}
+node_california={
+	location=2956
+	members={
+		3065 3066 3067 3068 3069 2 67 68 395 396 398 63 73 382 383 384 387 388 2021 2956 2977 2980 74 405 407 408 409 425 868 406 411 424 2960 2961 2976 558 559 2478 3 86 2959 3070 1 401 3042 3050 410 561 2963 2476 3071 65 385 391 2958 562 563 564 565 2962 64 236 244 2479 2971 69 397 399 400 871 75 390 392 403 2979 377 422 85 45 4030 4027 4036 4048 4049 4047 4046 4045 4029 4028 
+	}
+	end=yes
+}

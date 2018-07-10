@@ -1,0 +1,21 @@
+# set_variable = { which = province_id value = 548  }
+
+add_core = BKH
+owner = BKH
+controller = BKH
+is_city = yes
+
+base_tax = 5
+base_production = 6
+base_manpower = 4
+
+culture = boston_settlers
+religion = secular
+
+hre = no
+trade_goods = food
+
+	add_permanent_province_modifier = {
+		name = caravan_post
+		duration = -1 
+	}

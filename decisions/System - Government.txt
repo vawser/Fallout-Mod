@@ -1,0 +1,69 @@
+country_decisions = {
+	establish_settlement = {
+		potential = {
+			OR = {
+				government = war_tribe
+				government = trade_tribe
+				government = religious_tribe
+			}
+			NOT = { tag = GRK }
+		}
+		allow =  {
+			stability = 3
+			total_development = 100
+		}
+	  	effect = {
+			add_stability = -6
+
+			if = {
+                limit = { government =  war_tribe }
+                change_government = military_settlement
+            }
+            if = {
+                limit = { government =  trade_tribe }
+                change_government = diplomatic_settlement
+            }
+			if = {
+                limit = { government =  religious_tribe }
+                change_government = administrative_settlement
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+    establish_republic = {
+		potential = {
+			OR = {
+				government = war_tribe
+				government = trade_tribe
+				government = religious_tribe
+			}
+			NOT = { tag = GRK }
+		}
+		allow =  {
+			stability = 3
+			total_development = 100
+		}
+	  	effect = {
+			add_stability = -6
+
+			if = {
+                limit = { government =  war_tribe }
+                change_government = military_republic
+            }
+            if = {
+                limit = { government =  trade_tribe }
+                change_government = diplomatic_republic
+            }
+			if = {
+                limit = { government =  religious_tribe }
+                change_government = administrative_republic
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

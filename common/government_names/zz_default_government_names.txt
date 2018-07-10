@@ -1,0 +1,77 @@
+# Fallback defaults
+# Will pick the first valid one it finds in list
+
+default_monarchy = {
+	rank = {
+		1 = war_tribe
+		2 = war_tribe
+		3 = war_tribe
+	}	
+	
+	ruler_male = {
+		1 = FM_CHIEF
+		2 = FM_CHIEF
+		3 = FM_CHIEF
+	}
+	
+	ruler_female = {
+		1 = FM_CHIEFESS
+		2 = FM_CHIEFESS
+		3 = FM_CHIEFESS
+	}
+	
+	trigger = {
+		government = monarchy
+	}
+}
+
+default_republic = {
+	rank = {
+		1 = military_republic
+		2 = military_republic
+		3 = military_republic
+	}		
+	
+	ruler_male = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	trigger = {
+		government = republic
+	}
+}
+
+default_theocracy = {
+	rank = {
+		1 = religious_tribe
+		2 = religious_tribe
+		3 = religious_tribe
+	}	
+	
+	ruler_male = {
+		1 = REVEREND
+		2 = REVEREND
+		3 = REVEREND
+	}
+	
+	ruler_female = {
+		1 = REVEREND_MOTHER
+		2 = REVEREND_MOTHER
+		3 = REVEREND_MOTHER
+	}
+	
+	trigger = {
+		OR = {
+			government = theocracy
+			government = feudal_theocracy
+		}
+	}
+}

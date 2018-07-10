@@ -1,0 +1,545 @@
+namespace = lost_religions
+
+country_event = {
+	id = lost_religions.1
+	title = lost_religions.1.title
+	desc = lost_religions.1.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	trigger = {
+        has_country_flag = search_for_lost_texts
+    }
+    
+    immediate = {
+        clr_country_flag = search_for_lost_texts
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.1" }
+        }
+    }
+
+	option = {
+		name = lost_religions.1.option.a
+	
+        random_list = {
+            # Failure
+            50 = { country_event = { id = lost_religions.2 days = 30 random = 365 } }
+            # religion_tengri
+            2 = { country_event = { id = lost_religions.3 days = 30 random = 365 } }
+            # religion_norse
+            2 = { country_event = { id = lost_religions.4 days = 30 random = 365 } }
+            # religion_catholic
+            6 = { country_event = { id = lost_religions.5 days = 30 random = 365 } }
+            # religion_baptist
+            6 = { country_event = { id = lost_religions.6 days = 30 random = 365 } }
+            # religion_mormon
+            6 = { country_event = { id = lost_religions.7 days = 30 random = 365 } }
+            # religion_orthodox
+            4 = { country_event = { id = lost_religions.8 days = 30 random = 365 } }
+            # religion_coptic
+            2 = { country_event = { id = lost_religions.9 days = 30 random = 365 } }
+            # religion_sunni
+            4 = { country_event = { id = lost_religions.10 days = 30 random = 365 } }
+            # religion_shia
+            4 = { country_event = { id = lost_religions.11 days = 30 random = 365 } }
+            # religion_ibadi 
+            2 = { country_event = { id = lost_religions.12 days = 30 random = 365 } }
+            # religion_theravada
+            2 = { country_event = { id = lost_religions.13 days = 30 random = 365 } }
+            # religion_vajrayana
+            2 = { country_event = { id = lost_religions.14 days = 30 random = 365 } }
+            # religion_mahayana
+            2 = { country_event = { id = lost_religions.15 days = 30 random = 365 } }
+            # religion_taoism
+            2 = { country_event = { id = lost_religions.16 days = 30 random = 365 } }
+            # religion_shinto
+            2 = { country_event = { id = lost_religions.17 days = 30 random = 365 } }
+            # religion_hinduism
+            4 = { country_event = { id = lost_religions.18 days = 30 random = 365 } }
+            # religion_sikhism
+            2 = { country_event = { id = lost_religions.19 days = 30 random = 365 } }
+            # religion_jewish
+            4 = { country_event = { id = lost_religions.20 days = 30 random = 365 } }
+            # religion_zoroastrian
+            2 = { country_event = { id = lost_religions.21 days = 30 random = 365 } }
+        }
+	}
+}
+
+# Failure
+country_event = {
+	id = lost_religions.2
+	title = lost_religions.2.title
+	desc = lost_religions.2.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.2" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.bad
+	
+        add_prestige = -5
+	}
+}
+
+# Tengri
+country_event = {
+	id = lost_religions.3
+	title = lost_religions.3.title
+	desc = lost_religions.3.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.3" }
+        }
+    }
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = tengri
+        }
+	}
+}
+
+# Norse
+country_event = {
+	id = lost_religions.4
+	title = lost_religions.4.title
+	desc = lost_religions.4.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.4" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = norse
+        }
+	}
+}
+
+# Catholic
+country_event = {
+	id = lost_religions.5
+	title = lost_religions.5.title
+	desc = lost_religions.5.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.5" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = catholic
+        }
+	}
+}
+
+# Baptist
+country_event = {
+	id = lost_religions.6
+	title = lost_religions.6.title
+	desc = lost_religions.6.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.6" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = baptist
+        }
+	}
+}
+
+# Mormon
+country_event = {
+	id = lost_religions.7
+	title = lost_religions.7.title
+	desc = lost_religions.7.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.7" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = mormon
+        }
+	}
+}
+
+# Orthodoxy
+country_event = {
+	id = lost_religions.8
+	title = lost_religions.8.title
+	desc = lost_religions.8.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.8" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = orthodox
+        }
+	}
+}
+
+# Coptic
+country_event = {
+	id = lost_religions.9
+	title = lost_religions.9.title
+	desc = lost_religions.9.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.9" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = coptic
+        }
+	}
+}
+
+# Sunni
+country_event = {
+	id = lost_religions.10
+	title = lost_religions.10.title
+	desc = lost_religions.10.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.10" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = sunni
+        }
+	}
+}
+
+# Shia
+country_event = {
+	id = lost_religions.11
+	title = lost_religions.11.title
+	desc = lost_religions.11.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.11" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = shia
+        }
+	}
+}
+
+# Ibadi
+country_event = {
+	id = lost_religions.12
+	title = lost_religions.12.title
+	desc = lost_religions.12.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.12" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = ibadi
+        }
+	}
+}
+
+# Theravada
+country_event = {
+	id = lost_religions.13
+	title = lost_religions.13.title
+	desc = lost_religions.13.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.13" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = theravada
+        }
+	}
+}
+
+# Vajrayana
+country_event = {
+	id = lost_religions.14
+	title = lost_religions.14.title
+	desc = lost_religions.14.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.14" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = vajrayana
+        }
+	}
+}
+
+# Mahayana
+country_event = {
+	id = lost_religions.15
+	title = lost_religions.15.title
+	desc = lost_religions.15.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.15" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = mahayana
+        }
+	}
+}
+
+# Taoism
+country_event = {
+	id = lost_religions.16
+	title = lost_religions.16.title
+	desc = lost_religions.16.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.16" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = taoism
+        }
+	}
+}
+
+# Shinto
+country_event = {
+	id = lost_religions.17
+	title = lost_religions.17.title
+	desc = lost_religions.17.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.17" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = shinto
+        }
+	}
+}
+
+# Hinduism
+country_event = {
+	id = lost_religions.18
+	title = lost_religions.18.title
+	desc = lost_religions.18.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.18" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = hinduism
+        }
+	}
+}
+
+# Sikhism
+country_event = {
+	id = lost_religions.19
+	title = lost_religions.19.title
+	desc = lost_religions.19.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.19" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = sikhism
+        }
+	}
+}
+
+# Jewish
+country_event = {
+	id = lost_religions.20
+	title = lost_religions.20.title
+	desc = lost_religions.20.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.20" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = jewish
+        }
+	}
+}
+
+
+# Zoroastrian
+country_event = {
+	id = lost_religions.21
+	title = lost_religions.21.title
+	desc = lost_religions.21.desc
+    picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.21" }
+        }
+    }
+    
+	option = {
+		name = lost_religions.option.good
+	
+        random_owned_province = {
+            change_religion = zoroastrian
+        }
+	}
+}
+

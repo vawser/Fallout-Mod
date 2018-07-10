@@ -1,0 +1,37 @@
+namespace = fallout_tradegoods
+
+# Drug Shortage
+country_event = {
+	id = fallout_tradegoods.1
+	title = "fallout_tradegoods.1.title"
+	desc = "fallout_tradegoods.1.desc"
+	picture = DIXON_eventPicture
+    
+    is_triggered_only = yes
+    major = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_tradegoods.1" }
+        }
+    }
+    
+	option = {
+		name = fallout_tradegoods.1.option.a
+        
+        change_price = {
+            trade_goods = drugs
+            key = drug_shortage
+            value = 5.0
+            duration = 3650
+        }
+	}	
+}	
+
+# Surplus Grains
+
+# Surplus Meats
+
+# Lack of Grains
+
+# Lack of Meats

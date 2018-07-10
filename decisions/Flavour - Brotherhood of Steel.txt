@@ -1,0 +1,87 @@
+country_decisions = {
+    unify_the_brotherhood = {
+		potential = {
+			technology_group = tech_bos
+			NOT = { has_country_modifier = unified_brotherhood }
+		}
+		allow =  {
+			NOT = { 
+                any_country = {
+                    technology_group = tech_bos
+                    NOT = { tag = ROOT }
+                }
+            }   
+			total_development = 100
+		}
+	  	effect = {
+			add_country_modifier = {
+				name = unified_brotherhood
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+	follow_the_original_directive = {
+		potential = {
+			OR = {
+				government = administrative_brotherhood_order
+				government = diplomatic_brotherhood_order
+			}
+			NOT = { has_country_modifier = original_directive }
+			NOT = { has_country_modifier = brotherhood_fascist_directive }
+		}
+		allow =  {
+			OR = {
+				government = administrative_brotherhood_order
+				government = diplomatic_brotherhood_order
+			}
+		}
+	  	effect = {
+			add_country_modifier = { 
+				name = original_directive
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				NOT = { tag = BRO }
+			}
+		}
+	}
+	
+	adopt_a_more_fascist_directive = {
+		potential = {	
+			OR = {
+				government = administrative_brotherhood_order
+				government = diplomatic_brotherhood_order
+			}
+			NOT = { has_country_modifier = original_directive }
+			NOT = { has_country_modifier = brotherhood_fascist_directive }
+		}
+		allow =  {
+			OR = {
+				government = administrative_brotherhood_order
+				government = diplomatic_brotherhood_order
+			}
+		}
+	  	effect = {
+			add_country_modifier = { 
+				name = brotherhood_fascist_directive
+				duration = -1
+			}
+			change_government = fascist_brotherhood_order
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = BRO
+			}
+		}
+	}
+}

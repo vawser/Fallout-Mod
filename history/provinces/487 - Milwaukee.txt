@@ -1,0 +1,25 @@
+# set_variable = { which = province_id value = 487  }
+
+native_size = 12
+native_ferocity = 10
+native_hostileness = 12
+is_city = no
+
+base_tax = 1
+base_production = 3
+base_manpower = 4
+
+culture = raider
+religion = tribalism
+
+hre = no
+trade_goods = unknown
+
+2000.1.1 = {
+	add_permanent_province_modifier = {
+		name = trade_post
+		duration = -1 
+	}
+}
+
+

@@ -1,0 +1,110 @@
+namespace = ruler_choices
+
+# Traveling Salesman
+country_event = {
+	id = ruler_choices.1
+	title = ruler_choices.1.title
+	desc = ruler_choices.1.desc
+    picture = VICTOR_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        OR = {
+            NOT = { has_ruler_modifier = intelligence_implant }
+            NOT = { has_ruler_modifier = charisma_implant }
+            NOT = { has_ruler_modifier = strength_implant }
+            NOT = { has_ruler_modifier = lucky_implant }
+        }
+    }
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - ruler_choices.1" }
+        }
+    }
+    
+	option = {
+		name = ruler_choices.1.option.a
+		
+        trigger = {
+            NOT = { has_ruler_modifier = intelligence_implant }
+        }
+        
+        add_years_of_income = -1
+        
+        add_ruler_modifier = {
+            name = intelligence_implant
+            duration = -1
+        }
+        
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+    option = {
+		name = ruler_choices.1.option.b
+		
+        trigger = {
+            NOT = { has_ruler_modifier = charisma_implant }
+        }
+        
+        add_years_of_income = -1
+        
+        add_ruler_modifier = {
+            name = charisma_implant
+            duration = -1
+        }
+        
+		ai_chance = {
+			factor = 20
+		}
+	}
+    
+    option = {
+		name = ruler_choices.1.option.c
+		
+        trigger = {
+            NOT = { has_ruler_modifier = strength_implant }
+        }
+        
+        add_years_of_income = -1
+        
+        add_ruler_modifier = {
+            name = strength_implant
+            duration = -1
+        }
+        
+		ai_chance = {
+			factor = 20
+		}
+	}
+    
+    option = {
+		name = ruler_choices.1.option.d
+		
+        trigger = {
+            NOT = { has_ruler_modifier = lucky_implant }
+        }
+        
+        add_years_of_income = -1
+        
+        add_ruler_modifier = {
+            name = lucky_implant
+            duration = -1
+        }
+        
+		ai_chance = {
+			factor = 20
+		}
+	}
+    
+    option = {
+		name = ruler_choices.1.option.e
+
+		ai_chance = {
+			factor = 20
+		}
+	}
+}

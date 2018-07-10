@@ -1,0 +1,49 @@
+namespace = brotherhood_of_steel_west
+
+# "Resuming the Resource War"
+country_event = {
+	id = brotherhood_of_steel_west.1
+	title = brotherhood_of_steel_west.1.title
+	desc = brotherhood_of_steel_west.1.desc
+    picture = BOS_CHAT_eventPicture
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 2
+	}	
+	
+	trigger = {
+		is_in_war = {
+            attacker_leader = NCR 
+            defender_leader = BOS
+        }
+        tag = BOS 		
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel_west.1" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel_west.1.option.a
+        hidden_effect = {
+		    NCR = {
+                country_event = { id = ncr.4 days = 5 }
+			}
+		}
+        custom_tooltip = bos_strike_ncr_economy_tt
+		ai_chance = {
+			factor = 100
+		}        
+	}
+	
+	option = {
+		name = brotherhood_of_steel_west.1.option.b
+		ai_chance = {
+			factor = 0
+		}    
+	}
+}

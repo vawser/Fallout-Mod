@@ -1,0 +1,161 @@
+namespace = elections
+
+# Election!
+country_event = {
+	id = elections.1
+	title = elections.1.title
+	desc = elections.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.1" }
+        }
+    }
+    
+	option = {
+		name = elections.1.option.d
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - EVTOPTA700" }
+
+		trigger = {
+			has_regency = no
+		}
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				NOT = { republican_tradition = 0.25 }
+			}	
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 0.5 }
+			}				
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 0.75 }
+			}	
+			modifier = {
+				factor = 2.0
+				republican_tradition = 0.9
+			}		
+		}
+		custom_tooltip = remains_ruler
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		
+		add_scaled_republican_tradition = -0.10
+		random_list = {
+			33 = {
+				add_adm_power = 50
+			}
+			33 = {
+				add_dip_power = 50
+			}
+			33 = {
+				add_mil_power = 50
+			}
+		}
+	}
+	option = {
+		name = elections.1.option.a
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.1.option.a" }
+
+		ai_chance = { factor = 20 }
+		define_ruler = {
+			mil = 1
+			adm = 4
+			dip = 1					
+			fixed = yes
+		}
+
+	}
+	option = {
+		name = elections.1.option.b
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.1.option.b" }
+
+		ai_chance = { factor = 20 }
+		define_ruler = {
+			dip = 4
+			adm = 1
+			mil = 1					
+			fixed = yes
+		}
+	
+	}
+	option = {
+		name = elections.1.option.c
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.1.option.c" }
+
+		ai_chance = { factor = 20 }
+		define_ruler = {
+			mil = 4
+			adm = 1
+			dip = 1					
+			fixed = yes
+		}
+	
+	}
+}
+
+# Election!
+country_event = {
+	id = elections.2
+	title = elections.2.title
+	desc = elections.2.desc
+	picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.2" }
+        }
+    }
+    
+	option = {
+		name = elections.2.option.a
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.2.option.a" }
+
+		ai_chance = { factor = 40 }
+		define_ruler = {
+			mil = 1
+			adm = 4
+			dip = 1					
+			fixed = yes
+		}
+	}
+	option = {
+		name = elections.2.option.b
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.2.option.b" }
+
+		ai_chance = { factor = 30 }
+		define_ruler = {
+			dip = 4
+			adm = 1
+			mil = 1					
+			fixed = yes
+		}	
+	}
+	option = {
+		name = elections.2.option.c
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.2.option.c" }
+
+		ai_chance = { factor = 30 }
+		define_ruler = {
+			mil = 4
+			adm = 1
+			dip = 1					
+			fixed = yes
+		}		
+	}
+}

@@ -1,0 +1,64 @@
+country_decisions = {
+	one_capital_wasteland = {
+		potential = {
+			OR = { 
+				tag = MEG
+				tag = RIV
+			}
+			NOT = { has_country_modifier = the_capitol }
+		}
+		allow =  {
+            own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_WASHINGTON_DC
+                the_capital_wasteland_region = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                    type = all
+                }
+            }
+		}
+	  	effect = {
+			add_country_modifier = { 
+				name = the_capitol
+				duration = -1
+			}
+			add_stability = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+    # Add nuke ambient object, with event to remove it 3 months later
+    sabotage_megaton = {
+		potential = {
+			NOT = { tag = MEG }
+            NOT = { religion = atomic_worship }
+			3017 = { has_province_modifier = megaton_bomb }
+            capital_scope = {
+                region = the_capital_wasteland_region
+            }
+		}
+		allow =  {
+            mil_power = 100
+		}
+	  	effect = {
+            add_mil_power = -100
+            
+            random_list = {
+                50 = {
+                    custom_tooltip = MEGATON_IS_SAFE
+                    hidden_effect = { add_prestige = -25 }
+                }
+                50 = {
+                    custom_tooltip = MEGATON_IS_LIVE
+                    hidden_effect = { country_event = { id = megaton.1 } }
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
