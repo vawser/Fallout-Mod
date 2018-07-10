@@ -5,23 +5,21 @@ guiTypes = {
 	positionType =
 	{
 		name ="countrymissionsview_scaling_large_min_inc"
-		position = { x= 900 y = 155 }
+		position = { x= 9999 y = 155 }
 	}
 
 	#x is minimum resolution height for this country view to increase to huge size
 	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
 	positionType = {
 		name ="countrymissionsview_scaling_huge_min_inc"
-		position = { x= 1080 y = 335 }
+		position = { x= 9999 y = 335 }
 	}
 
 	windowType = {
 		name = "countrymissionsview"
-		position = { x = -600 y = 140 }	
-		show_position = { x = 180 y = 140 }
-		hide_position = { x = -600 y = 140 }
-		animation_type = "decelerated"
-		animation_time = 300
+		position = { x = 320 y = 100 }
+        show_position = { x = 320 y = 100 }
+        hide_position = { x = -9999  y = 100 }
 		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"

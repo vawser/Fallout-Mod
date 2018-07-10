@@ -5,14 +5,14 @@ guiTypes = {
 	positionType =
 	{
 		name ="countryestatesview_scaling_large_min_inc"
-		position = { x= 900 y = 150 }
+		position = { x= 9999 y = 150 }
 	}
 	
 	#x is minimum resolution height for this country view to increase to huge size
 	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
 	positionType = {
 		name ="countryestatesview_scaling_huge_min_inc"
-		position = { x= 1080 y = 314 }
+		position = { x= 9999 y = 314 }
 	}
 
 	### ESTATE
@@ -176,11 +176,9 @@ guiTypes = {
 	### MAIN WINDOW
 	windowType = {
 		name = "countryestatesview"
-		position = { x = -600 y = 140 }	
-		show_position = { x = 180 y = 140 }
-		hide_position = { x = -600 y = 140 }
-		animation_type = "decelerated"
-		animation_time = 300	
+		position = { x = 320 y = 100 }
+        show_position = { x = 320 y = 100 }
+        hide_position = { x = -9999  y = 100 }
 		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
@@ -232,23 +230,17 @@ guiTypes = {
 			position = { x = 440 y = 121 }
 		}	
 
-#		guiButtonType =	{
-#			name ="actions_sort_button"
-#			spriteType = "GFX_sort_actions"
-#			position = { x = 484 y = 121 }
-#		}		
-		
 		listboxType = {
-				name = "estates_listbox"
-				backGround = ""
-				position = { x=30 y=140 }
-				size = { x=394 y=410 }
-				Orientation = "UPPER_LEFT"
-				horizontal = 0
-				spacing = 1.5
-				scrollbartype = "standardlistbox_slider"
-				borderSize = {x = 0 y = 0}
-			}
+            name = "estates_listbox"
+            backGround = ""
+            position = { x=30 y=140 }
+            size = { x=500 y=500 }
+            Orientation = "UPPER_LEFT"
+            horizontal = 0
+            spacing = 1.5
+            scrollbartype = "standardlistbox_slider"
+            borderSize = {x = 0 y = 0}
+        }
 	
 		guiButtonType = {
 			name = "close_button"

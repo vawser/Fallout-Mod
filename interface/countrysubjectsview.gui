@@ -5,14 +5,14 @@ guiTypes = {
 	positionType =
 	{
 		name ="countrysubjectsview_scaling_large_min_inc"
-		position = { x= 900 y = 148 }
+		position = { x= 9999 y = 148 }
 	}
 	
 	#x is minimum resolution height for this country view to increase to huge size
 	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
 	positionType = {
 		name ="countrysubjectsview_scaling_huge_min_inc"
-		position = { x = 1080 y = 328 }
+		position = { x = 9999 y = 328 }
 	}
 	
 	positionType = {
@@ -305,11 +305,9 @@ guiTypes = {
 	### MAIN WINDOW
 	windowType = {
 		name = "countrysubjectview"
-		position = { x = -600 y = 140 }	
-		show_position = { x = 180 y = 140 }
-		hide_position = { x = -600 y = 140 }
-		animation_type = "decelerated"
-		animation_time = 300	
+		position = { x = 320 y = 100 }
+        show_position = { x = 320 y = 100 }
+        hide_position = { x = -9999  y = 100 }
 		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
@@ -397,21 +395,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "tribute_desc"
-
-            if_resolution = {
-                max_height = 867
-				position = { x = 20 y = 350 }
-            }
-            if_resolution = {
-                min_height = 868
-                max_height = 1047
-				position = { x = 20 y = 500 }
-            }
-            if_resolution = {
-                min_height = 1048
-				position = { x = 20 y = 680 }
-
-            }			
+            position = { x = 20 y = 350 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
@@ -861,14 +845,7 @@ guiTypes = {
 		
 			iconType = {
 				name ="subject_actions_bg"
-				if_resolution = {
-					max_height = 1079
-					spriteType = "GFX_subjects_extension_bg"
-				}
-				if_resolution = {
-					min_height = 1080
-					spriteType = "GFX_subjects_extension_bg_huge"
-				}
+				spriteType = "GFX_subjects_extension_bg"
 				position = { x= 0 y = 0 }
 				Orientation = "UPPER_LEFT"
 			}
@@ -893,14 +870,7 @@ guiTypes = {
 				name = "list"
 				backGround = ""
 				position = { x = 12 y = 210 }
-				if_resolution = {
-					max_height = 1079
-					size = { x = 255 y = 216 }
-				}
-				if_resolution = {
-					min_height = 1080
-					size = { x = 255 y = 396 }
-				}
+				size = { x = 255 y = 216 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 2.5

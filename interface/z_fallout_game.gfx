@@ -1,0 +1,60 @@
+spriteTypes = {	
+    #-----------------------------------------------
+    # These entries are changing vanilla entries
+    #-----------------------------------------------
+    spriteType = {
+		name = "GFX_advisor_noAdvisorType"
+		texturefile = "gfx//interface//advisors//hire_button.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+    
+    # Unit Types
+    spriteType = {	
+		name = "GFX_unit_types_strip_mil_view"
+		texturefile = "gfx//interface//ui//icons//unit_types_strip.tga"
+		noOfFrames = 9
+		loadType = "INGAME"
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		transparencecheck = no
+		#allwaystransparent = yes
+	}
+	
+	spriteType = {	
+		name = "GFX_unit_types_strip_mil_center_view"
+		texturefile = "gfx//interface//ui//icons//unit_types_center_strip.tga"
+		noOfFrames = 8
+		loadType = "INGAME"
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		transparencecheck = no
+		#allwaystransparent = yes
+	}
+
+    spriteType = {	
+		name = "GFX_unit_types_strip"
+		texturefile = "gfx//interface//ui//icons//unit_types_strip.tga"
+		noOfFrames = 9
+		loadType = "INGAME"
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
+	}
+
+	spriteType = {	
+		name = "GFX_unit_types_strip_nontransp"
+		texturefile = "gfx//interface//ui//icons//unit_types_strip.tga"
+		noOfFrames = 9
+		loadType = "INGAME"
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+    
+    #-----------------------------------------------
+    # These entries are used for custom gameplay graphics
+    #-----------------------------------------------
+}
+

@@ -3,11 +3,7 @@ guiTypes = {
 	windowType = {
 		name = "countryview"
 		backGround = ""
-		position = { x = -578 y = 0 }	
-		show_position = { x = 95 y = 0 }
-		hide_position = { x = -578 y = 0 }	
-		animation_type = "decelerated"
-		animation_time = 300	
+		position = { x = 160 y = 95 }
 		size = { x = 1024 y = 100 }
 		moveable = 0
 		dontRender = ""
@@ -18,7 +14,7 @@ guiTypes = {
 		windowType = {
             name = "countryview_tabs"
             backGround =""
-            position = { x = 95 y = 3 }	
+            position = { x = 160 y = 95 }
             size = { x = 1024 y = 100 }
             moveable = 0
             dontRender = ""
@@ -28,106 +24,136 @@ guiTypes = {
         
             iconType = {
                 name = " "
-                spriteType = "GFX_tab_detail"
-                position = { x= 15 y = 168 }
+                spriteType = "GFX_province_sidebar"
+                position = { x= 0 y = 0 }
                 Orientation = "UPPER_LEFT"
             }		
         
+            @button_x = 26
+        
             guiButtonType = {
                 name ="tab_court"
-                quadTextureSprite = "GFX_tab_court"
-                position = { x = -3 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Court"
+                position = { x = @button_x y = 20 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "1"
             }		
             guiButtonType = {
                 name ="tab_gov"
-                quadTextureSprite = "GFX_tab_local_government"
-                position = { x = 35 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Government"
+                position = { x = @button_x y = 60 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "2"
             }
             guiButtonType = {
                 name ="tab_diplomacy"
-                quadTextureSprite = "GFX_tab_policies"
-                position = { x = 73 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Diplomacy"
+                position = { x = @button_x y = 100 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "3"
             }			
             guiButtonType = {
                 name ="tab_economy"
-                quadTextureSprite = "GFX_tab_economy"
-                position = { x = 112 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Economy"
+                position = { x = @button_x y = 140 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "4"
             }
             guiButtonType = {
                 name ="tab_trade"
-                quadTextureSprite = "GFX_tab_domestic_trade"
-                position = { x = 150 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Trade"
+                position = { x = @button_x y = 180 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "5"
             }
             guiButtonType = {
                 name ="tab_technology"
-                quadTextureSprite = "GFX_tab_domestic_technology"
-                position = { x = 188 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Technology"
+                position = { x = @button_x y = 220 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "6"
             }	
             guiButtonType = {
                 name ="tab_ideas"
-                quadTextureSprite = "GFX_tab_domestic_ideas"
-                position = { x = 227 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Ideas"
+                position = { x = @button_x y = 260 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "7"
             }
             guiButtonType = {
                 name ="tab_missions"
-                quadTextureSprite = "GFX_tab_domestic_mission"
-                position = { x = 264 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Missions"
+                position = { x = @button_x y = 300 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "8"
             }
             guiButtonType = {
                 name ="tab_decisions"
-                quadTextureSprite = "GFX_tab_decisions"
-                position = { x = 303 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Decisions"
+                position = { x = @button_x y = 340 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "9"
             }
             guiButtonType = {
                 name ="tab_stability"
-                quadTextureSprite = "GFX_tab_domestic_government"
-                position = { x = 340 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Stability"
+                position = { x = @button_x y = 380 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "0"
             }
             guiButtonType = {
                 name ="tab_religion"
-                quadTextureSprite = "GFX_tab_religion"
-                position = { x = 379 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Religion"
+                position = { x = @button_x y = 420 }
                 Orientation = "UPPER_LEFT"
                 shortcut = ","
             }
             guiButtonType = {
                 name ="tab_military"
-                quadTextureSprite = "GFX_tab_military" 
-                position = { x = 417 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Military"
+                position = { x = @button_x y = 460 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "."
             }
             guiButtonType = {
                 name ="tab_subjects"
-                quadTextureSprite = "GFX_tab_subjects"
-                position = { x = 456 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Subjects"
+                position = { x = @button_x y = 500 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "'"
             }
             guiButtonType = {
                 name ="tab_estates"
-                quadTextureSprite = "GFX_tab_estates"
-                position = { x = 494 y = 168 }
+                quadTextureSprite ="GFX_fm_button_states_button"
+                buttonFont = "garamond_16"
+                buttonText = "Estates"
+                position = { x = @button_x y = 540 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "k"
             }

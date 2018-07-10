@@ -4,21 +4,19 @@ guiTypes = {
 	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
 	positionType = {
 		name = "gov_view_scaling_large_min_inc"
-		position = { x= 900 y = 152 }
+		position = { x= 9999 y = 152 }
 	}
 	positionType = {
 		name = "gov_view_scaling_huge_min_inc"
-		position = { x= 1080 y = 330 }
+		position = { x= 9999 y = 330 }
 	}
 
 
 	windowType = {
 		name = "countrygovernmentview"
-		position = { x = -600 y = 140 }	
-		show_position = { x = 180 y = 140 }
-		hide_position = { x = -600 y = 140 }
-		animation_type = "decelerated"
-		animation_time = 300	
+		position = { x = 320 y = 100 }
+        show_position = { x = 320 y = 100 }
+        hide_position = { x = -9999  y = 100 }
 		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
