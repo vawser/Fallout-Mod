@@ -154,10 +154,10 @@ fds_limited_conscription = {
     potential 	= { is_variable_equal = { which = fds_conscription value = 2 } }
 	trigger 	= { is_variable_equal = { which = fds_conscription value = 2 } }
 	
-	building_time = 0.02
-	bulding_cost = 0.02
+	build_time = 0.02
+	build_cost = 0.02
 	global_manpower_modifier = 0.15
-	land_force_limit = 2
+	land_forcelimit = 2
 	land_morale = -0.1
 	discipline = -0.05
 }
@@ -170,12 +170,12 @@ fds_full_conscription = {
 	global_manpower_modifier = 1
 	land_morale = -0.1
 	discipline = -0.15
-	building_time = 1
-	building_cost = 0.15
+	build_time = 1
+	build_cost = 0.15
 	army_tradition = 0.25
 	infantry_cost = -0.5
 	drill_gain_modifier = -0.5
-	land_force_limit = 5
+	land_forcelimit = 5
     global_unrest = 2
 }
 

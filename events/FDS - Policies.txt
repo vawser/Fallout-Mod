@@ -11,52 +11,34 @@ country_event = {
 
 	option = {
 		name = fds_policies.1.option.a
-		if = {
-			limit = {
-				NOT = { has_country_flag = fds_economy_set_flag }
-			}
-			set_traditional_economy = yes
+        
+        if = {
+            limit = {
+                has_traditional_economy = yes
+            }
+            custom_tooltip = ALREADY_TRADITIONAL_ECONOMY
+        }
+        else = {
+            set_traditional_economy = yes
 			add_adm_power = -100
-		}
-		if = {
-			limit = {
-				has_country_flag = fds_economy_set_flag
-				ai = no
-			}
-#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
-#			hidden_effect = {
-#				set_country_flag = fds_economic_disaster_allowed
-#				set_country_flag = changed_policy_early
-#			}
-			set_traditional_economy = yes
-			add_adm_power = -100
-		}
-		custom_tooltip = TRADITIONAL_ECONOMY_EXPLANATION
+            custom_tooltip = TRADITIONAL_ECONOMY_EXPLANATION
+        }
 	}
 	option = {
 		name = fds_policies.1.option.b
-		if = {
-			limit = {
-				NOT = { has_country_flag = fds_economy_set_flag }
-			}
-			set_command_economy = yes
+        
+
+        if = {
+            limit = {
+                has_command_economy = yes
+            }
+            custom_tooltip = ALREADY_COMMAND_ECONOMY
+        }
+        else = {
+            set_command_economy = yes
 			add_adm_power = -100
-		}
-		if = {
-			limit = {
-				has_country_flag = fds_economy_set_flag
-				ai = no
-			}
-#			custom_tooltip = FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING
-#			hidden_effect = {
-#				set_country_flag = fds_economic_disaster_allowed
-#				set_country_flag = changed_policy_early
-#			}
-			set_command_economy = yes
-			add_adm_power = -100
-			
-		}
-		custom_tooltip = COMMAND_ECONOMY_EXPLANATION
+            custom_tooltip = COMMAND_ECONOMY_EXPLANATION
+        }
 	}
 	option = {
 		name = fds_policies.1.option.c

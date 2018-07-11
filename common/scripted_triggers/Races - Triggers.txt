@@ -1,0 +1,165 @@
+# race_id:
+# 1 - Wastelander
+# 2 - Raider
+# 3 - Tribal
+# 4 - Robot
+# 5 - Super Mutant
+# 6 - Ghoul
+# 7 - Swampfolk
+# 8 - Synth
+# 9 - Mutant
+# 10 - Beastlord
+# 11 - Alien 
+# 12 - Deathclaw
+# 13 - Fungal
+# 14 - Dwarf
+
+# FROM is target
+is_same_race = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SAME_RACE
+        OR = {
+            AND = {
+                is_wastelander = yes
+                FROM = { is_wastelander = yes }
+            }
+            AND = {
+                is_raider = yes
+                FROM = { is_raider = yes }
+            }
+            AND = {
+                is_tribal_race = yes
+                FROM = { is_tribal_race = yes }
+            }
+            AND = {
+                is_robot = yes
+                FROM = { is_robot = yes }
+            }
+            AND = {
+                is_super_mutant = yes
+                FROM = { is_super_mutant = yes }
+            }
+            AND = {
+                is_ghoul = yes
+                FROM = { is_ghoul = yes }
+            }
+            AND = {
+                is_swampfolk = yes
+                FROM = { is_swampfolk = yes }
+            }
+            AND = {
+                is_synth = yes
+                FROM = { is_synth = yes }
+            }
+            AND = {
+                is_mutant = yes
+                FROM = { is_mutant = yes }
+            }
+            AND = {
+                is_beastlord = yes
+                FROM = { is_beastlord = yes }
+            }
+            AND = {
+                is_alien = yes
+                FROM = { is_alien = yes }
+            }
+            AND = {
+                is_deathclaw = yes
+                FROM = { is_deathclaw = yes }
+            }
+            AND = {
+                is_fungal = yes
+                FROM = { is_fungal = yes }
+            }
+            AND = {
+                is_dwarf = yes
+                FROM = { is_dwarf = yes }
+            }
+        }
+    }
+}
+
+is_wastelander = {
+    custom_trigger_tooltip = {
+        tooltip = IS_WASTELANDER
+        check_variable = { which = race_id value = 1 }
+    }
+}
+is_raider = {
+    custom_trigger_tooltip = {
+        tooltip = IS_RAIDER
+        check_variable = { which = race_id value = 2 }
+    }
+}
+is_tribal_race = {
+    custom_trigger_tooltip = {
+        tooltip = IS_TRIBAL
+        check_variable = { which = race_id value = 3 }
+    }
+}
+is_robot = {
+    custom_trigger_tooltip = {
+        tooltip = IS_ROBOT
+        check_variable = { which = race_id value = 4 }
+    }
+}
+is_super_mutant = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SUPER_MUTANT
+        check_variable = { which = race_id value = 5 }
+    }
+}
+is_ghoul = {
+    custom_trigger_tooltip = {
+        tooltip = IS_GHOUL
+        check_variable = { which = race_id value = 6 }
+    }
+}
+is_swampfolk = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SWAMPFOLK
+        check_variable = { which = race_id value = 7 }
+    }
+}
+is_synth = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SYNTH
+        check_variable = { which = race_id value = 8 }
+    }
+}
+is_mutant = {
+    custom_trigger_tooltip = {
+        tooltip = IS_MUTANT
+        check_variable = { which = race_id value = 9 }
+    }
+}
+is_beastlord = {
+    custom_trigger_tooltip = {
+        tooltip = IS_BEASTLORD
+        check_variable = { which = race_id value = 10 }
+    }
+}
+is_alien = {
+    custom_trigger_tooltip = {
+        tooltip = IS_ALIEN
+        check_variable = { which = race_id value = 11 }
+    }
+}
+is_deathclaw = {
+    custom_trigger_tooltip = {
+        tooltip = IS_DEATHCLAW
+        check_variable = { which = race_id value = 12 }
+    }
+}
+is_fungal = {
+    custom_trigger_tooltip = {
+        tooltip = IS_FUNGAL
+        check_variable = { which = race_id value = 13 }
+    }
+}
+is_dwarf = {
+    custom_trigger_tooltip = {
+        tooltip = IS_DWARF
+        check_variable = { which = race_id value = 14 }
+    }
+}

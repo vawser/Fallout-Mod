@@ -1,0 +1,164 @@
+namespace = fds
+
+country_event = {
+	id = fds.1
+	title = fds.1.title
+	desc = fds.1.desc
+	picture = BOS_CHAT_eventPicture
+	
+	hidden = yes
+    is_triggered_only = yes
+
+	trigger = {
+        NOT = { has_country_flag = fds_setup }
+        check_variable = { which = race_id value = 0 } # Has no race set
+    }
+
+    immediate = {
+        set_country_flag = fds_setup
+    }
+
+	option = {
+		name = fds.1.option.a
+
+		# Default FDS setups
+		if = {
+			limit = {
+				technology_group = tech_wastelander
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_raider
+			}
+			set_raider_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_tribal
+			}
+			set_tribal_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_super_mutant
+			}
+			set_super_mutant_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_robot
+			}
+			set_robot_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_ghoul
+			}
+			set_ghoul_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_bos
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_commonwealth
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_new_vegas
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_ncr
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_caesars_legion
+			}
+			set_raider_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_enclave
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_shi
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_great_khan
+			}
+			set_tribal_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_swampfolk
+			}
+			set_swampfolk_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_rodent
+			}
+			set_mutant_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_alien
+			}
+			set_alien_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_vault_dweller
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_children
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_triggermen
+			}
+			set_raider_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_the_kings
+			}
+			set_wastelander_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_children_of_the_atom
+			}
+			set_tribal_race = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_hubologist
+			}
+			set_wastelander_race = yes
+		}
+	}
+}
