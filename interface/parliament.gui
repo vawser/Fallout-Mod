@@ -199,7 +199,7 @@ guiTypes = {
         #------------------------------------
 		windowType = {
 			name = "select_new_issue_window"
-			position = { x=1020 y=-45 }	
+			position = { x=250 y=-45 }	
 			size = { x=300 y=400 }
 			moveable = 0
 			Orientation = "UPPER_LEFT"
@@ -213,9 +213,9 @@ guiTypes = {
 			}
 	
 			instantTextBoxType= {
-				position = { x=36 y =52}
+				position = { x=34 y = 56 }
 				name = "title"
-				font = "monofonto_20"
+				font = "monofonto_18"
 				borderSize = {x = 0 y = 0}	
 				maxWidth = 440
 				maxHeight = 20
@@ -345,11 +345,11 @@ guiTypes = {
 		}
         
         instantTextBoxType= {
-			position = { x=20 y =5}
+			position = { x=20 y = 7 }
 			name = "name"
-			font = "vic_22"
+			font = "monofonto_18"
 			borderSize = {x = 0 y = 0}	
-			maxWidth = 180
+			maxWidth = 300
 			maxHeight = 20
 			text = ""	
 			orientation = "UPPER_LEFT"
