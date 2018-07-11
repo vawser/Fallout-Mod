@@ -49,7 +49,7 @@ guiTypes = {
 			position = { x = 300 y =18 }
 			format = centre
 			textureFile = ""
-			font = "vic_29"
+			font = "monofonto_26"
 			borderSize = {x = 4 y = 4}
 			text = "IDEOLOGICAL_DECREES"	
 			maxWidth = 400
@@ -215,10 +215,9 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "influence_label"
-			position = { x = 430 y = 130 }
-
+			position = { x = 430 y = 132 }
 			textureFile = ""
-			font = "vic_22"
+			font = "monofonto_16"
 			borderSize = {x = 4 y = 4}
 			text = "STATE_INFLUENCE"	
 			maxWidth = 130
@@ -231,7 +230,7 @@ guiTypes = {
 			name = "influence_value"
 			position = { x = 446 y = 80 }
 			textureFile = ""
-			font = "vic_36"
+			font = "monofonto_30"
 			borderSize = {x = 4 y = 4}
 			text = ""	
 			maxWidth = 100
@@ -298,24 +297,10 @@ guiTypes = {
             tooltipText =""
             delayedTooltipText = ""
             buttonText = "PAPACY_CLOSE"
-            buttonFont = "vic_18"
+            buttonFont = "monofonto_20"
             clicksound = close_window
             shortcut = "ESCAPE"
         }
-        
-        instantTextBoxType = {
-			name = "influence_hint_text"
-			position = { x = 220 y = 460 }
-
-			textureFile = ""
-			font = "vic_22"
-			borderSize = {x = 4 y = 4}
-			text = "State Influence is gained over time and when you sway a province to your ideology."	
-			maxWidth = 600
-			maxHeight = 32	
-			format = centre
-			hint_tag = "hint_papalinfluence"
-		}
 	}
     
     # Cardinal Window
