@@ -21,9 +21,9 @@ guiTypes = {
 		}
 		
 		instantTextBoxType= {
-			position = { x=235 y =22}
+			position = { x=235 y = 26 }
 			name = "title"
-			font = "monofonto_24"
+			font = "monofonto_outline_18"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 548
 			maxHeight = 20
@@ -40,7 +40,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "START_DEBATE"
-			buttonFont = "monofonto_18"
+			buttonFont = "monofonto_outline_16"
 		}
 		
 #####	present_debate_slot should only be visible when there is an active debate.  		
@@ -60,7 +60,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=0 y = 228 }
 			name = "current_issue"
-			font = "monofonto_18"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 548
 			maxHeight = 20
@@ -72,7 +72,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=70 y =260}
 			name = "current_issue_effect"
-			font = "monofonto_16"
+			font = "monofonto_outline_14"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 460
 			maxHeight = 92
@@ -85,7 +85,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=0 y=230}
 			name = "enacted_modifiers_label"
-			font = "monofonto_16"
+			font = "monofonto_outline_14"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 548 
 			maxHeight = 20
@@ -97,7 +97,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=70 y =260 }
 			name = "enacted_modifiers_effect"
-			font = "monofonto_16"
+			font = "monofonto_outline_14"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 460
 			maxHeight = 92
@@ -110,7 +110,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x = 70 y = 450 }
 			name = "chance_to_win_label"
-			font = "monofonto_16"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 150
 			maxHeight = 30
@@ -122,7 +122,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x= 200 y = 450 }
 			name = "chance_to_win"
-			font = "monofonto_16"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 50
 			maxHeight = 30
@@ -134,7 +134,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=70 y= 470 }
 			name = "chance_to_end_label"
-			font = "monofonto_16"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 150
 			maxHeight = 30
@@ -146,7 +146,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=200 y = 470 }
 			name = "chance_to_end"
-			font = "monofonto_16"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 50
 			maxHeight = 30
@@ -158,7 +158,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=60 y =34}
 			name = "num_seats"
-			font = "monofonto_20"
+			font = "monofonto_outline_18"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 120
 			maxHeight = 20
@@ -189,7 +189,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "PAPACY_CLOSE"
-				buttonFont = "monofonto_20"
+				buttonFont = "monofonto_outline_18"
 				clicksound = close_window
 				shortcut = "ESCAPE"
 		}
@@ -215,7 +215,7 @@ guiTypes = {
 			instantTextBoxType= {
 				position = { x=34 y = 56 }
 				name = "title"
-				font = "monofonto_18"
+				font = "monofonto_outline_16"
 				borderSize = {x = 0 y = 0}	
 				maxWidth = 440
 				maxHeight = 20
@@ -244,7 +244,7 @@ guiTypes = {
 				position = { x= 155 y = 576 }
 				quadTextureSprite ="GFX_parliament_button_default"	
 				buttonText = "BACK"
-				buttonFont = "monofonto_20"
+				buttonFont = "monofonto_outline_18"
 				clicksound = back_click
 			}
 		}
@@ -276,9 +276,9 @@ guiTypes = {
 		}
 		
 		instantTextBoxType= {
-			position = { x=200 y = 8 }
+			position = { x=200 y = 10 }
 			name = "province"
-			font = "monofonto_16"
+			font = "monofonto_outline_14"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 170
 			maxHeight = 20
@@ -294,7 +294,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "bribe text here"
-			buttonFont = "monofonto_16"
+			buttonFont = "monofonto_outline_14"
 
 			clicksound = decision
 		}
@@ -324,7 +324,7 @@ guiTypes = {
 		instantTextBoxType= {
 			position = { x=20 y =40}
 			name = "effect"
-			font = "monofonto_16"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 280
 			maxHeight = 60
@@ -340,14 +340,14 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = ""
-			buttonFont = "monofonto_16"
+			buttonFont = "monofonto_outline_16"
 
 		}
         
         instantTextBoxType= {
 			position = { x=20 y = 7 }
 			name = "name"
-			font = "monofonto_18"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 300
 			maxHeight = 20
