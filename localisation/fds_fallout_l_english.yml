@@ -7,11 +7,11 @@
  fds_innovation: "Innovation Policy"
  fds_conscription: "Conscription Policy"
  
- fds_slavery_regulation: "Slavery Regulation"
- fds_gambling_regulation: "Slavery Regulation"
- fds_prostitution_regulation: "Slavery Regulation"
- fds_firearms_regulation: "Slavery Regulation"
- fds_narcotics_regulation: "Slavery Regulation"
+ fds_slavery_regulation: "Slave Code"
+ fds_gambling_regulation: "Gambling Regulation"
+ fds_prostitution_regulation: "Prostitution Regulation"
+ fds_firearms_regulation: "Gun Control"
+ fds_narcotics_regulation: "Hard Drug Regulation"
  fds_scavenging_regulation: "Scavenging Regulation"
  
  # Flags
@@ -22,18 +22,18 @@
  fds_innovation_set_flag: "Innovation Policy Set"
  fds_conscription_set_flag: "Conscription Policy Set"
  
- fds_slavery_regulation_set_flag: "Slavery Regulation Set"
- fds_gambling_regulation_set_flag: "Slavery Regulation Set"
- fds_prostitution_regulation_set_flag: "Slavery Regulation Set"
- fds_firearms_regulation_set_flag: "Slavery Regulation Set"
- fds_narcotics_regulation_set_flag: "Slavery Regulation Set"
+ fds_slavery_regulation_set_flag: "Slave Code Altered"
+ fds_gambling_regulation_set_flag: "Gambling Regulation Set"
+ fds_prostitution_regulation_set_flag: "Prostitution Regulation Set"
+ fds_firearms_regulation_set_flag: "Firearms Regulation Set"
+ fds_narcotics_regulation_set_flag: "Hard Drug Regulation Set"
  fds_scavenging_regulation_set_flag: "Scavenging Regulation Set"
  
  political_disaster_active: "Political Disaster"
  economic_disaster_active: "Economic Disaster"
  regulatory_disaster_active: "Regulatory Disaster"
- changed_policy_early: "Changed Policy Early."
- changed_regulation_early: "Changed Regulation Early."
+ changed_policy_early: "Changed Policy Early"
+ changed_regulation_early: "Changed Regulation Early"
  
  # Customizable Localization
  loc_fds_not_set: "is not set."
@@ -155,136 +155,174 @@
  # Triggered Modifiers
  # Economy
  fds_traditional_economy: "Traditional Economy"
- desc_fds_traditional_economy: "A traditional economy is a local economy, with farming at the centre of all economic activity. For members of the wasteland, this means they live a economically deprived existence. But such locality fosters strong communal bonds.\n\nAllows X events to occur."
+ desc_fds_traditional_economy: "A traditional economy is a local economy, with farming at the centre of all economic activity. For members of the wasteland, this means they live a economically deprived existence. Even so, such locality fosters strong communal bonds."
+ TRADITIONAL_ECONOMY: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will maintain the usual, post-apocalyptic, local economy centered around bartering, subsistence agriculture, local merchants, and communal bonds. Enacting this policy will grant a §Rtwenty five percent decrease§! in the tax income, a §Gfifty percent increase§! in production of all goods, and a §Rtwenty five percent§! decrease in trade efficiency in $COUNTRY$.''"
  
  fds_command_economy: "Command Economy"
  desc_fds_command_economy: "A command economy is ruled by a central authority, for most this means the government. For members of the wasteland, this grants little to no autonomy to the individual, but permits the state fast mobilization of goods when needed.\n\nAllows X events to occur."
+ COMMAND_ECONOMY_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will establish an authoritarian, state-controlled economy from the top-down. Industry and goods production will be nationalized. This will benefit us as a government, but will stifle freedom of the Settlers, who likely won't be happy about it. Enacting this policy will grant a §Gtwenty five percent increase§! in tax revenue, a §Gten percent increase§! in production of all goods, and a §Rfifty percent decrease§! in trade efficiency in $COUNTRY$.''"
  
  fds_market_economy: "Market Economy"
- desc_fds_market_economy: "A market economy is dictated by individuals, who are unbound by any central authority, fostering competition. For members of the wasteland, this means vital goods such as food are competitively priced, but niche industries such as medicine are often lacking.\n\nAllows X events to occur."
+ desc_fds_market_economy: "A market economy is dictated by individuals, who are unbound by any central authority, fostering competition. For members of the wasteland, this means vital goods such as food are competitively priced, but niche industries such as medicine are often lacking."
+ FREE_MARKET_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will enshrine the true American way of economics- the Free Market -in $COUNTRY_ADJ$ law.  This will greatly benefit the Settlers but cost us dearly in terms of taxation, niche goods like medicine, and control over the economy. Enacting this policy will grant a §Rthirty five percent decrease§! in tax revenue, a §Gtwenty five percent increase§! in production of all goods, and a §Gtwenty five percent increase§! in trade effiency in $COUNTRY$.''"
  
  fds_mixed_economy: "Mixed Economy"
- desc_fds_mixed_economy: "A combination of command and market, where the market is bound by regulations, but otherwise free to operate. For members of the wasteland, this can often be the best of both worlds, but lacks the extremes found in either.\n\nAllows X events to occur."
+ desc_fds_mixed_economy: "A combination of command and market, where the market is bound by regulations, but otherwise free to operate. For members of the wasteland, this is a mixed bag, and lacks the extremes found in either form."
+ MIXED_ECONOMY_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will create a mixed economy, which was common in most nations before the Great War. A limited Free Market with heavy regulations will be the norm and will offer few, if any, benefits to the state. Enacting this policy will grant us a §Gfive percent increase§ in tax revenue, production of all goods, and trade efficiency in $COUNTRY$.''"
  
  # Law
- fds_democratic_law: "Democratic Law"
- desc_fds_democratic_law: "The legislature (or regional equivalent) operates in a democratic manner, allowing democratic input in one way or another. For members of the wasteland, this is a fair, but slow system.\n\nAllows X events to occur."
+ fds_democratic_law: "Fair Law"
+ desc_fds_democratic_law: "The making of laws- regardless of how this is done -is intended for the good of all and for justice, and, in extremely rare cases, is even vested in a truly democratic legislature. Even if laws are made by decree or without lay input, they nonetheless retain the antebellum principles of the pursuit of justice and fairness for all. For members of the wasteland, this is a fair, but slow system."
+ FAIR_LAW_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will center laws around the benefit of the Settlers and of justice. Obviously, your influence over them will not wane if we don't have a Congress, but be aware that anything we pass will be written and enforced similar to antebellum America. The Settlers will love this, and it will give us a §Gpostive one§! increase in our Diplomatic Reputation.''"
  
  fds_oligarchic_law: "Oligarchic Law"
- desc_fds_oligarchic_law: "The legislature (or regional equivalent) is controlled by an oligarchy of sorts. This deprived much of the populance from input, but for those allied with the oligarchs, there is much to gain.\n\nAllows X events to occur."
+ desc_fds_oligarchic_law: "The making of laws is controlled by an oligarchy, either openly or in secret, and largely for its benefit. This deprives much of the populance from input, but for those allied with the oligarchs, there is much to gain."
+ OLIGARCHY_LAW_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will center laws around an oligarchy of elites- selected by you, of course -for their benefit. It isn't the most honest policy on the earth, but it is the most lucrative! Enacting this policy will grant us a §Gtwenty percent decrease§! in the cost of hiring Advisors.''"
  
  fds_autocratic_law: "Autocratic Law"
- desc_fds_autocratic_law: "The legislature (or regional equivalent) is controlled by a strongman. The whims of the autocrat are capricious, but an autocrat with a vision can achieve greatness, no matter the costs.\n\nAllows X events to occur."
+ desc_fds_autocratic_law: "All executive and legislative authority is controlled by a strongman, who rules by decree. The whims of the autocrat are capricious, but an exemplary autocrat with a vision can achieve greatness, no matter the costs."
+ STRONGMAN_EXPLANATION: "You ask a loyal retainer to explain the policy . \n \n ''Hail $MONARCHTITLE$ $MONARCH$, may you live forever!'' \n \n You cock an eyebrow at the brown-nosing, but soon understand the reason why. \n \n ''Enacting this decree will give you total control over the legislative process. Your will be done. This, of course, can be disasterous if you aren't a good leader, but of course, there is absolutely no way this would happen under you, estemmed and rightful ruler of $COUNTRY$! Enacting this policy will give us a §Gten percent increase§ in £adm£Administrative Efficiency.''"
  
  # Justice
- fds_court_justice: "State Courts"
- desc_fds_court_justice: "Justice is sought through the courts, granting those accused a fair and just trial.\n\nAllows X events to occur."
+ fds_court_justice: "Due Process"
+ desc_fds_court_justice: "Justice is sought through an impartial and possibly even independent judiciary, granting those accused a fair and just trial."
+ FAIR_TRIAL_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will retain a judiciary focused on the antebellum American ideas of a fair and impartial justice system. Matters like reasonable doubt, due process, and a right to legal counsel will exist. This will enable us to significantly and more quickly crack down on Corruption.''"
  
- fds_community_justice: "Community Courts"
- desc_fds_community_justice: "Justice is sought through local communal courts. Local practices mean trials can ranged from fair and just to mock trials, where the community enacts what it sees as justice.\n\nAllows X events to occur."
+ fds_community_justice: "Mob Rule"
+ desc_fds_community_justice: "Justice is sought through local communal courts, mob rule, and vigilantism. Local practices mean trials can ranged from fair and just to mock trials, where the community enacts what it sees as justice."
+ MOB_RULE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will largely wash the state's hands of justice and turn it over to the people. You will see a lot more vigilantism and 'democractic' control of the justice system, which may result in things like lynchings. However, this is an extremely popular move among the Settlers and isn't inherently bad: local practices can range from fair and just to mock trials, where the community enacts what it deems to be justice. Enacting this policy will help integrate conquered peoples into our realm and help them see eothers as equals, reducing their desire to revolt in the name of their former lands by §Gfive years§!.''"
  
  fds_state_justice: "Secret Courts"
- desc_fds_state_justice: "Justice is sought only by the state, where trials are conducted in secret. Scant true justice can be found in such courtrooms.\n\nAllows X events to occur."
+ desc_fds_state_justice: "Justice is sought only by the state, where trials are conducted in secret. Scant true justice can be found in such courtrooms."
+ SECRET_COURTS_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will end public trials and pesky incoveniences like double jeopardy, neutral judges, and letting people go on technicalities. The state will get its view of justice, and it will get it fast. Enacting this decree will greatly reduce the level of control held by the Settlers and take law into your capable hands, reducing Autonomy on all provinces by §Gfive points§! per month.''"
  
  # Punishment
  fds_fine_punishment: "Fines"
- desc_fds_fine_punishment: "Punishment for crimes is served through the issue of a fine (or bribe) in the majority of cases. \n\nAllows X events to occur."
+ desc_fds_fine_punishment: "Punishment for most crimes is served through the issue of a fine (or bribe) in the majority of cases."
+ TRUDEAU_PUNISHMENT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will make monetary payments the primary means of convicting criminals for all but the most serious of crimes. Enacting this policy will be very lucrative to us, giving us a §Gten percent increase§ in tax revenue.''"
  
- fds_imprisonment_punishment: "Prison"
- desc_fds_imprisonment_punishment: "Punishment for crimes is served through imprisonment in the majority of cases. \n\nAllows X events to occur."
+ fds_imprisonment_punishment: "Prison Labor"
+ desc_fds_imprisonment_punishment: "Punishment for crimes is served through imprisonment in the majority of cases."
+ BIG_HOUSE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will make incarceration the primary method of dealing with the scum of the Wasteland for all but the most serious of crimes. Enacting this policy will calm the Settlers, §Gslightly decreasing Unrest§!. Furthermore, the use of prisoners for state labor will decrease Development Costs and Building Time by §Gten percent§!.''"
  
  fds_execution_punishment: "Execution"
- desc_fds_execution_punishment: "Punishment for crimes is execution in the majority of cases. \n\nAllows X events to occur."
+ desc_fds_execution_punishment: "Punishment for crimes is execution in the majority of cases."
+ CAPITAL_PUNISHMENT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will retain the traditional Wasteland method of justice: six feet under with no one to miss them and no one to cry. Enacting this policy will calm the Settlers, reducing Unrest by §Gone§!.''"
  
  fds_slavery_punishment: "Slavery"
- desc_fds_slavery_punishment: "Punishment for crimes is served through slavery to the state in the majority of cases. \n\nAllows X events to occur."
+ desc_fds_slavery_punishment: "Criminals are enslaved by the state in the majority of cases."
+ ENSLAVEMENT_SENTENCE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, scumbag criminals are good for nothing but their backs and their hands, working for their betters. While many nations use prison labor, our slave codes allow for us to sell the convicted into slavery, to work for the rest of their lives for their misdeeds. Enacting this policy will increase our Manpower rolls by §Gten percent§! through slave-soldiers, and our Building Cost by §Gten percent§! thanks to slave labor.''"
  
  # Innovation
  fds_individual_innovation: "Individual Innovation"
- desc_fds_individual_innovation: "Innovation in the sciences is funded and enacted by the individual, with no state support. \n\nAllows X events to occur."
+ desc_fds_individual_innovation: "Innovation, research and development, and advancement in the sciences is mainly funded and enacted by the individual, with no state support."
+ CHEAP_INNOVATION_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will turn research and development over to the Scientists and lay Settlers at no cost to us. Enacting this policy will significantly increase our rate of acquiring Institutions by §Gfifty percent§! but §Rdouble the price§! to Embrace it.''"
  
  fds_state_sponsored_innovation: "State-sponsored Innovation"
- desc_fds_state_sponsored_innovation: "Innovation in the sciences is funded by the state and enacted by the individual and the state.\n\nAllows X events to occur."
+ desc_fds_state_sponsored_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and largely enacted by the individual."
+ NORMAL_INNOVATION_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will involve state subsidies to Scientists and lay Settlers, and is a hybrid between state R&D and an untouched research system. Enacting this policy will increase our rate of acquiring Institutions by §Gten percent§! and, because of our search for competent advisors, increase the number of possible Advisors by §Gtwo§!. To pay for the subsidies, we will have to pay §R-0.16§W Bottlecaps a month.''"
  
  fds_state_innovation: "State Innovation"
- desc_fds_state_innovation: "Innovation in the sciences is funded by the state and enacted by the state, with individuals dissaded from such activities.\n\nAllows X events to occur."
+ desc_fds_state_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and enacted by the state, with individuals dissaded from such activities."
+ STATE_SCIENCE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will nationalize our nation's research and development, at the cost of the common man. This will make it easier for us to advance in technological profiency and general Innovation, but it will be expensive. Enacting this policy will cost us a §Rfifteen percent decrease§! in tax revenue (to pay for our R&D fields) and slow our rate of acquiring Institutions by §Rthirty three percent§!, but it will make it §Gfifty percent cheaper§! to Embrace Institutions and §Gdouble§! our Innovativeness Point gain.''"
  
  # Conscription
  fds_volunteer_conscription: "Volunteer Conscription"
- desc_fds_volunteer_conscription: "The manpower of our armies is mainly fueled by volunteers.\n\nAllows X events to occur."
+ desc_fds_volunteer_conscription: "The manpower of our armies is mainly fueled by volunteers."
+ NO_DRAFT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will make our armies an all-volunteer force outside of a full-on invasaion. This will §Rhalve§! our total Manpower pool, but it will greatly please the Settlers, reducing Unrest by §Gtwo§!. In addition, as volunteer forces are always more eager to fight and serve, our Discipline will increase by §Gfive percent§! and our Morale will increase by §Gten percent§!.''"
  
  fds_limited_conscription: "Limited Conscription"
- desc_fds_limited_conscription: "The manpower of our armies is fueled by the recruitment of able-bodied men.\n\nAllows X events to occur."
+ desc_fds_limited_conscription: "The manpower of our armies is fueled by the recruitment of able-bodied, adult men."
+ FAIR_DRAFT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will allow us to draft all able-bodied, adult men to serve in our military. Enacting this policy will increase our Building Time and Building Costs by §Rfive percent§! due to a labor shortage, but will increase our total Manpower pool by §Gfifteen percent§!. This will also benefit our Army Tradition through a monthly §G0.05§! gain. Conscripts naturally have lower Morale and Discipline, and each will be reduced by §Rten§! and §Rfifteen§! percent, respectively.''"
  
  fds_full_conscription: "Full Conscription"
- desc_fds_full_conscription: "The manpower of our armies is fueled by the recruitment of all citizens old enough to walk.\n\nAllows X events to occur."
+ desc_fds_full_conscription: "The manpower of our armies is fueled by the recruitment of all citizens old enough to walk."
+ CAESAR_DRAFT_EXPLANATION: "You ask a nervous retainer to explain this policy. \n \n ''Exalted $MONARCHTITLE$ $MONARCH$, are you sure you want to do this? Enacting this decree will conscript §Reveryone§!, including children and women, to a period of service. While this will §Gdouble§! our total Manpower Pool and §Gnoticibly increase§! our gains in Army Tradition, §Ghalve§! the cost of recruiting new infantrymen, and §Gincrease our Force Limit by five brigades§! This is an extremely unpopular policy, increasing nationwide Unrest by §Rtwo§! and §Rcosting us penalties§! in Discipline, Morale, and Army Professionalism Drilling. In addition, due to a severe labor shortage, this will §Rdouble§! the time it takes to erect new Buildings and inflate their costs by §Rfifteen percent§!. We will have a §Rtwenty percent§! decrease in tax revenue to pay for this.''"
  
  # Slavery
  fds_slavery_allowed: "Slavery Allowed"
- desc_fds_slavery_allowed: "Slavery is practicable by any citizen, and the state if it so pleases. \n\nAllows X events to occur."
+ desc_fds_slavery_allowed: "Slavery is practicable by any citizen, and the state if it so pleases."
+ YES_SLAVERY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, the consequences of this decree are obvious. In addition to fully legalizing slavery, this will decrease our cost of recruiting all types of regiments by §Gtwenty five percent§!, and decrease the time to muster them by the same amount. Other nations- including other slavers -will despise us for this, reducing our Diplomatic Reputation by §Rtwo§!."
  
  fds_slavery_licensed: "Slavery Licensed"
- desc_fds_slavery_licensed: "Slavery is practicable by the state and individuals it deems worthy. \n\nAllows X events to occur."
+ desc_fds_slavery_licensed: "Slavery is primarily practiced by the state."
+ STATE_SLAVERY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, this decree enacts a limited approach to slavery. Slave labor is primarily employed by the state for economic and punitive purposes and supplements the labor of freemen. There are few, if any private slavers under this system. As slavery is still allowed, this measure is still unpopular and will reduce our Diplomatic Reputation by §Rone§!. Slave labor will also allow us to decrease our Building Costs by §Gten percent§! and slightly increase the cost and time of mustering all types of regiments."
  
  fds_slavery_forbidden: "Slavery Forbidden"
- desc_fds_slavery_forbidden: "Slavery is forbidden. \n\nAllows X events to occur."
+ desc_fds_slavery_forbidden: "Slavery is forbidden."
+ NO_SLAVERY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, this decree outlaws slavery and strictly enforces the ban. This is an extremely prestigious and noble act in the eyes of other nations, increasing your Diplomatic Reputation by §Gone§! and your monthly Prestige gain by §Gone tenth§!.''"
  
  # Gambling
  fds_gambling_allowed: "Gambling Allowed"
- desc_fds_gambling_allowed: "Gambling is allowed anywhere without restriction.\n\nAllows X events to occur."
+ desc_fds_gambling_allowed: "Gambling is allowed anywhere without restriction."
+ VEGAS_BABY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, this decree allows for unrestricted gambling throughout $COUNTRY$. This significantly boosts our income, earning us an extra §G0.5§W Bottlecaps a month and increasing our overall income by §Gfifteen percent§!. However, due to the populace spending their money and wasting time at casinoes, our Production Efficiency will be reduced by §Rtwenty percent§!.''"
  
  fds_gambling_licensed: "Gambling Licensed"
- desc_fds_gambling_licensed: "Gambling only allowed in state-sanctioned venues. Other forms are prosecuted.\n\nAllows X events to occur."
+ desc_fds_gambling_licensed: "Gambling only allowed in state-sanctioned venues. Other forms are prosecuted."
+ NEW_ORLEANS_BABY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''MY $MONARCHTITLE$, enacting this decree allows for limited gambling operations throughout $COUNTRY$. This significantly boosts our income, increasing our overall tax revenue by §Gten percent§!. However, due to the populace spending their money, our Production Efficiency will be reduced by §Rten percent§!.''"
  
  fds_gambling_forbidden: "Gambling Forbidden"
  desc_fds_gambling_allowed: "Gambling is forbidden.\n\nAllows X events to occur."
+ KEBAB_BABY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree outlaws gambling. This is considered a very noble act, increasing our montly Prestige by §Gone tenth§! and, due to the lack of waste, our Production Efficiency will increase by §Gten percent§!. A society without gambling has less chance for organized crime fronts to spawn, which will §Gsomewhat decrease§! our Unrest.''"
  
  # Prostitution
  fds_prostitution_allowed: "Prostitution Allowed"
- desc_fds_prostitution_allowed: "Prostitution is allowed anywhere without restriction.\n\nAllows X events to occur."
+ desc_fds_prostitution_allowed: "Prostitution is allowed anywhere without restriction."
+ GIRLS_GIRLS_GIRLS_EXPLANATION: "You ask a loyal retainer to explain this policy. He is beaming. \n \n ''Hey hey, $MONARCHTITLE$, enacting this decree will get me- uh, I mean you, some FINE WOMEN! These FINE WOMEN will decrease our Unrest by §Gone§!! Sure, enacting this policy will mean there's a bit of a §RCorruption hit§!, and §Rthis isn't a prestigous act§!, but there are very literal, §Gfamilial benefits§! to House $DYNASTY$ if the $MONARCHTITLE$ has a few side hoes.'' He winks. ''§GIf you know what I mean.§!''"
  
  fds_prostitution_licensed: "Prostitution Licensed"
- desc_fds_prostitution_licensed: "Prostitution is licensed by the state.\n\nAllows X events to occur."
+ desc_fds_prostitution_licensed: "Brothels are strictly licensed by the state."
+ GOV_GOV_GIRLS_EXPLANATION: "You ask a loyal retainer to explain this policy. He is beaming. \n \n ''$My MONARCHTITLE$, enacting this decree will get me- uh, I mean us, some FINE WOMEN. These FINE WOMEN will decrease our Unrest by §Rfive tenths§!. The $COUNTRY_ADJ$ will handle all brothels and, as state pimp, we will receive a §Gfifteen percent§! boost in tax revenue. Enacting this policy §Ris not a prestigious act§!, and, of course, we take on a risk of somewhat §Rincreasing our Corruption§!.''"
  
  fds_prostitution_forbidden: "Prostitution Forbidden"
- desc_fds_prostitution_forbidden: "Prostitution is forbidden.\n\nAllows X events to occur."
+ desc_fds_prostitution_forbidden: "Prostitution is forbidden."
+ NO_SEXUAL_EXPLOITATION_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will protect the womenfolk of $COUNTRY$, especially the poor, from selling their bodies into prostitution. Enacting this policy will increase our monthly Prestige gain by §Gone tenth§! and give us slight leg up in §Greducing Corruption§!. This policy is preferred by $COUNTRY_ADJ$ Settlers of multiple Old World religious.''"
  
  # Firearms
- fds_firearms_allowed: "Open Carry Allowed"
- desc_fds_firearms_allowed: "Open carry of firearms is allowed.\n\nAllows X events to occur."
+ fds_firearms_allowed: "Constitutional Carry"
+ desc_fds_firearms_allowed: "The right to keep and bare arms is not infringed."
+ SECOND_AMENDMENT_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n '''A well regulated militia, neccesary for the security, the Right to Keep Bear Arms Shall Not Be Infringed.' That's what I remember about the antebellum America's stance on guns, though I'm not sure what bears have to do with that.''\n ''Anyway, this policy will allow the $COUNTRY_ADJ$ people the right to protect themselves from the torrent of hostile mutants that roam the Wasteland, and will significantly reduce our Unrest by §Gone§. However, this law also enables conquered peoples to put up a longer and harder resistance than they could if we disarmed them. Rebel attempts to return to the country we conquered, should conquest happen, will last §Rfive years longer§! than normal. It will also be §Rharder to Harshly Treat§! an armed population who is willing to defend themselves.''"
  
- fds_firearms_licensed: "Open Carry Licensed"
- desc_fds_firearms_licensed: "Open carry of firearms is allowed with license.\n\nAllows X events to occur."
+ fds_firearms_licensed: "Gun Registry"
+ desc_fds_firearms_licensed: "Possession of firearms is allowed with a license."
+ FEINSTEIN_GUNS_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will allow for guns to be owned by the $COUNTRY_ADJa$ population with state permission. This is somewhat effective in keeping lethal weaponry out of the hands of rebels, stupid people, and the conquered Settlers we may take, but criminals never follow laws, so it's not perfect. Enacting this policy reduces Unrest by §Rfive tenths§! but conquered peoples will put up a slightly longer resistance than they could if we disarmed them. Rebel attempts by conquered peoples to break free will take §three years longer§! than normal.''"
  
- fds_firearms_forbidden: "Open Carry Forbidden"
- desc_fds_firearms_forbidden: "Open carry of firearms is forbidden.\n\nAllows X events to occur."
+ fds_firearms_forbidden: "Gun Control"
+ desc_fds_firearms_forbidden: "The state is attempting to disarm its civilian populace."
+ HOGG_GUNS_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, guns are as dangerous as ideas when the state is seeking to control its people. We shouldn't be letting them have ideas against $COUNTRY$, so why would we let them have guns?\n Enacting this decree will restrict guns to the police, military, and elites like you and me. The peasants won't like this, as the difficulty to defend themselves from mutant horros in the Wasteland will harm them, thus increasing their Unrest by §Rtwo§!. However, as a disarmed populace is a submissive populace unable to resist our control, the ability of conquered peoples to reist our rule will be extremely reduced. Rebel attempts to return to the country we conquered, should conquest happen, will last §Ga decade shorter than normal$!. It will also be §Geasier to Harshly Treat§! the defenseless citizenry, keeping rebels at bay.''"
  
  # Narcotics
- fds_narcotics_allowed: "Narcotics Allowed"
- desc_fds_narcotics_allowed: "Narcotics production and usage are allowed without restriction.\n\nAllows X events to occur."
+ fds_narcotics_allowed: "Hard Drugs Allowed"
+ desc_fds_narcotics_allowed: "Hard drug production and usage are allowed without restriction."
+ WOODSTOCK_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will legalize all hard drugs, such as Jet, narcotics, methamphetamine, and heroin, and allow their free use. As doped up men are far more resistant to pain than sober men, enacting this policy will reduce the damage we take by Shock attacks by §Gfifteen percent§!. In addition, by laying out drugs and sedatives across the region, the dangers of muntant attacks on our colonists are reduced by §Rtwenty percent§!. This move is unpopular in the eyes of most of the population, and will increase their Unrest by §Rone§!. Needless to say, enacting this policy §Ris not a prestigious act§!.''"
  
- fds_narcotics_licensed: "Narcotics Licensed"
- desc_fds_narcotics_licensed: "Narcotics production and usage are allowed with license.\n\nAllows X events to occur."
+ fds_narcotics_licensed: "Hard Drugs Licensed"
+ desc_fds_narcotics_licensed: "Hard drug production and usage are allowed with license."
+ COLORADO_EXPLANATION: "You ask a loyal advisor to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will legalize hard drugs, such as Jet, narcotics, methamphetamine, and heroin, but restrict their usage to state dispensaries. It's a rather cruel way to profit, but it's very effective, increasing our tax income by §Gfive percent§!. Needless to say, enacting this policy §Ris not a prestigious act§!, but our doped up warriors' immunity to Shock pain will be reduced by §Gfive percent§!, and the use of hard drug traps and sedatives will reduce mutant attacks in our colonies by §Gfive percent§!. This move is unpopular in the eyes of most of the population, and will increase their Unrest by §Rfive tenths§!.''"
  
- fds_narcotics_forbidden: "Narcotics Forbidden"
- desc_fds_narcotics_forbidden: "Narcotics production and usage are forbidden.\n\nAllows X events to occur."
+ fds_narcotics_forbidden: "Hard Drugs Forbidden"
+ desc_fds_narcotics_forbidden: "The production and usage of hard drugs (and, in some states, lesser drugs like alcohol) are forbidden."
+ BUZZ_KILL_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will forbid the production, sale, possession, and distribution of all hard drugs, such as Jet, narcotics, methamphetamine, and heroin. §GThis is a highly prestigious act§! and will please the population, reducing their Unrest by §Gone§. However, due to the dominance of the drug trade and the infamous Jet Roaad in much of America, our persuasion with merchants and traders will diminish, reducing our Caravan Power by §Rten percent§!.''"
  
  # Scavenging
  fds_scavenging_allowed: "Scavenging Allowed"
- desc_fds_scavenging_allowed: "Scavenging is allowed without restriction.\n\nAllows X events to occur."
+ desc_fds_scavenging_allowed: "Scavenging is allowed without restriction."
+ YES_SCAVENGING_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will preserve the traditional rights of all men to scavenge any Old World metals, technology, or whatever else from the ruins of America. This will increase all goods found in our region by §Gten percent§!, but the looting of ruins will require us to purchase goods to erect structures, increasing our Building Cost by §Rtwenty percent§!.''"
  
  fds_scavenging_licensed: "Scavenging Licensed"
- desc_fds_scavenging_licensed: "Scavenging is only allowed by the state and state-sanctioned individuals.\n\nAllows X events to occur."
+ desc_fds_scavenging_licensed: "Scavenging is only allowed by the state and state-sanctioned individuals."
+ SCAVENGING_LIMITED_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will restrict the traditional rights of all men to scavenge any Old World metals, technology, or whatever else from the ruins of America. Only the state and licensed hunters with quotas on their scavenging will be allowed to do this. This will increase all goods found in our region by §Gfive percent§!, but the looting of ruins will require us to purchase goods to erect structures, increasing our Building Cost by §Rten percent§!.''"
  
  fds_scavenging_forbidden: "Scavenging Forbidden"
- desc_fds_scavenging_forbidden: "Scavenging is only allowed by the state.\n\nAllows X events to occur."
+ desc_fds_scavenging_forbidden: "Scavenging is only allowed by the state."
+ NO_SCAVENGING_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will terminate the traditional rights of all men to scavenge any Old World metals, technology, or whatever else, without exception. All ruins and antebellum structures are the property of $COUNTRY$ and may only be scavenged by state actors. Enacting this policy will allow us to efficiently and directly use the resources of old to erect new structures and maintain a supply line, significantly reducing our Building Cost by §Rtwenty percent§!.''"
  
  # Events
  event_exit: "Return"
 
  fds.1.title: "Setup"
- fds.1.desc: ""
- fds.1.option.a: ""
+ fds.1.desc: "Pre-coded Policies and Regulations will now be assigned to each nation based on their technological group, background, and/or religion."
+ fds.1.option.a: "Begin!"
  
  fds_policies.1.title: "Economic Policy"
  fds_policies.1.desc: "Current policy [Root.GetCurrentEconomyPolicy].\n\nYour economic policy controls how your country primarily operates in the economic sphere.\n\nYou may change your policy at anytime, but unless §YEconomic Reforms§! occur, your country will suffer an §YEconomic Disaster§! in the process."
@@ -294,7 +332,7 @@
  fds_policies.1.option.d: "Mixed Economy"
  
  fds_policies.2.title: "Law Policy"
- fds_policies.2.desc: "Current policy [Root.GetCurrentLawPolicy].\n\nYour law policy controls how your country primarily deals with its legislature and the extent of which citizens can influence the process.\n\nYou may change your policy at anytime, but unless §YLaw Reforms§! occur, your country will suffer an §YPolitical Disaster§! in the process."
+ fds_policies.2.desc: "Current policy [Root.GetCurrentLawPolicy].\n\nYour law policy controls how your country primarily deals with lawmaker and the extent of which citizens can influence the process.\n\nYou may change your policy at anytime, but unless §YLaw Reforms§! occur, your country will suffer a §YPolitical Disaster§! in the process."
  fds_policies.2.option.a: "Democratic Law"
  fds_policies.2.option.b: "Oligarchic Law"
  fds_policies.2.option.c: "Autocratic Law"
@@ -310,7 +348,7 @@
  fds_policies.4.option.a: "Fines"
  fds_policies.4.option.b: "Prison"
  fds_policies.4.option.c: "Execution"
- fds_policies.4.option.d: "Slavery"
+ fds_policies.4.option.d: "Enslavement"
  
  fds_policies.5.title: "Innovation Policy"
  fds_policies.5.desc: "Current policy [Root.GetCurrentInnovationPolicy].\n\nYour innovation policy controls how your country primarily deals with research and innovation.\n\nYou may change your policy at anytime, but unless §YInnovation Reforms§! occur, your country will suffer an §YPolitical Disaster§! in the process."
@@ -343,13 +381,13 @@
  fds_regulations.3.option.c: "Forbidden"
  
  fds_regulations.4.title: "Firearms Regulation"
- fds_regulations.4.desc: "Current policy [Root.GetCurrentFirearmsPolicy].\n\nYour firearms regulation controls how your country views the carrying of firearms and the presence of non-state firearms-related activities within the country.\n\nYou may change your policy at anytime, but unless §YFirearms Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
+ fds_regulations.4.desc: "Current policy [Root.GetCurrentFirearmsPolicy].\n\nYour firearms regulation controls how your country views the carrying of firearms and the presence of non-state firearms-related activities and possession within the country.\n\nYou may change your policy at anytime, but unless §YFirearms Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
  fds_regulations.4.option.a: "Allowed"
  fds_regulations.4.option.b: "Licensed"
  fds_regulations.4.option.c: "Forbidden"
  
  fds_regulations.5.title: "Narcotics Regulation"
- fds_regulations.5.desc: "Current policy [Root.GetCurrentNarcoticsPolicy].\n\nYour narcotics regulation controls how your country views narcotics and the presence of narcotic-related activities within the country.\n\nYou may change your policy at anytime, but unless §YNarcotics Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
+ fds_regulations.5.desc: "Current policy [Root.GetCurrentNarcoticsPolicy].\n\nYour narcotics regulation controls how your country views hard drugs and the presence of drug activities within the country.\n\nYou may change your policy at anytime, but unless §YNarcotics Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
  fds_regulations.5.option.a: "Allowed"
  fds_regulations.5.option.b: "Licensed"
  fds_regulations.5.option.c: "Forbidden"
@@ -362,7 +400,7 @@
  
  # Economy Events
  fds_economy.1.title: "Local Developments"
- fds_economy.1.desc: "Locals in one of our many provinces have taken initative and started developing their land, making it more suitable for farmig and other such activities."
+ fds_economy.1.desc: "Locals in one of our many provinces have taken initative and started developing their land, making it more suitable for farming and other such activities."
  fds_economy.1.option.a: "Excellent"
  
  fds_economy.2.title: "Enterprising Individual"

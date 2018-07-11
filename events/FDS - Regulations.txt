@@ -5,9 +5,9 @@ country_event = {
 	id = fds_regulations.1
 	title = fds_regulations.1.title
 	desc = fds_regulations.1.desc
-    picture = GOV_RUINS_CLEAR_eventPicture
+	picture = GOV_RUINS_CLEAR_eventPicture
 	
-    is_triggered_only = yes
+	is_triggered_only = yes
 	
 	option = {
 		name = fds_regulations.1.option.a
@@ -16,7 +16,7 @@ country_event = {
 				NOT = { has_country_flag = fds_slavery_regulation_set_flag }
 			}
 			set_slavery_allowed = yes
-            add_dip_power = -100
+			add_mil_power = -100
 		}
 		if = {
 			limit = {
@@ -29,9 +29,9 @@ country_event = {
 #				set_country_flag = changed_regulation_early
 #			}
 			set_slavery_allowed = yes
-            add_dip_power = -100
-			
+			add_mil_power = -100
 		}
+		custom_tooltip = YES_SLAVERY_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.1.option.b
@@ -40,7 +40,7 @@ country_event = {
 				NOT = { has_country_flag = fds_slavery_regulation_set_flag }
 			}
 			set_slavery_licensed = yes
-            add_dip_power = -100
+			add_mil_power = -100
 		}
 		if = {
 			limit = {
@@ -53,8 +53,9 @@ country_event = {
 #				set_country_flag = changed_regulation_early
 #			}
 			set_slavery_licensed = yes
-			add_dip_power = -100
+			add_mil_power = -100
 		}
+		custom_tooltip = STATE_SLAVERY_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.1.option.c
@@ -63,7 +64,7 @@ country_event = {
 				NOT = { has_country_flag = fds_slavery_regulation_set_flag }
 			}
 			set_slavery_forbidden = yes
-            add_dip_power = -100
+			add_mil_power = -100
 		}
 		if = {
 			limit = {
@@ -76,8 +77,9 @@ country_event = {
 #				set_country_flag = changed_regulation_early
 #			}
 			set_slavery_forbidden = yes
-			add_dip_power = -100
+			add_mil_power = -100
 		}
+		custom_tooltip = NO_SLAVERY_EXPLANATION
 	}
 	option = {
 		name = event_exit
@@ -89,9 +91,9 @@ country_event = {
 	id = fds_regulations.2
 	title = fds_regulations.2.title
 	desc = fds_regulations.2.desc
-    picture = GOV_RUINS_CLEAR_eventPicture
+	picture = GOV_RUINS_CLEAR_eventPicture
 	
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = fds_regulations.2.option.a
@@ -100,7 +102,7 @@ country_event = {
 				NOT = { has_country_flag = fds_gambling_regulation_set_flag }
 			}
 			set_gambling_allowed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -115,6 +117,7 @@ country_event = {
 			set_gambling_allowed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = VEGAS_BABY_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.2.option.b
@@ -123,7 +126,7 @@ country_event = {
 				NOT = { has_country_flag = fds_gambling_regulation_set_flag }
 			}
 			set_gambling_licensed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -138,6 +141,7 @@ country_event = {
 			set_gambling_licensed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = NEW_ORLEANS_BABY_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.2.option.c
@@ -146,7 +150,7 @@ country_event = {
 				NOT = { has_country_flag = fds_gambling_regulation_set_flag }
 			}
 			set_gambling_forbidden = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -161,6 +165,7 @@ country_event = {
 			set_gambling_forbidden = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = KEBAB_BABY_EXPLANATION
 	}
 	option = {
 		name = event_exit
@@ -172,9 +177,9 @@ country_event = {
 	id = fds_regulations.3
 	title = fds_regulations.3.title
 	desc = fds_regulations.3.desc
-    picture = GOV_RUINS_CLEAR_eventPicture
+	picture = GOV_RUINS_CLEAR_eventPicture
 	
-    is_triggered_only = yes
+	is_triggered_only = yes
 	
 	option = {
 		name = fds_regulations.3.option.a
@@ -183,7 +188,7 @@ country_event = {
 				NOT = { has_country_flag = fds_prostitution_regulation_set_flag }
 			}
 			set_prostitution_allowed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -198,6 +203,7 @@ country_event = {
 			set_prostitution_allowed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = GIRLS_GIRLS_GIRLS_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.3.option.b
@@ -206,7 +212,7 @@ country_event = {
 				NOT = { has_country_flag = fds_prostitution_regulation_set_flag }
 			}
 			set_prostitution_licensed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -221,6 +227,7 @@ country_event = {
 			set_prostitution_licensed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = GOV_GOV_GIRLS_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.3.option.c
@@ -229,7 +236,7 @@ country_event = {
 				NOT = { has_country_flag = fds_prostitution_regulation_set_flag }
 			}
 			set_prostitution_forbidden = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -244,6 +251,7 @@ country_event = {
 			set_prostitution_forbidden = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = NO_SEXUAL_EXPLOITATION_EXPLANATION
 	}
 	option = {
 		name = event_exit
@@ -255,9 +263,9 @@ country_event = {
 	id = fds_regulations.4
 	title = fds_regulations.4.title
 	desc = fds_regulations.4.desc
-    picture = GOV_RUINS_CLEAR_eventPicture
+	picture = GOV_RUINS_CLEAR_eventPicture
 	
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = fds_regulations.4.option.a
@@ -266,7 +274,7 @@ country_event = {
 				NOT = { has_country_flag = fds_firearms_regulation_set_flag }
 			}
 			set_firearms_allowed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -281,6 +289,7 @@ country_event = {
 			set_firearms_allowed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = SECOND_AMENDMENT_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.4.option.b
@@ -289,7 +298,7 @@ country_event = {
 				NOT = { has_country_flag = fds_firearms_regulation_set_flag }
 			}
 			set_firearms_licensed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -304,6 +313,7 @@ country_event = {
 			set_firearms_licensed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = FEINSTEIN_GUNS_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.4.option.c
@@ -312,7 +322,7 @@ country_event = {
 				NOT = { has_country_flag = fds_firearms_regulation_set_flag }
 			}
 			set_firearms_forbidden = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -327,6 +337,7 @@ country_event = {
 			set_firearms_forbidden = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = HOGG_GUNS_EXPLANATION
 	}
 	option = {
 		name = event_exit
@@ -338,9 +349,9 @@ country_event = {
 	id = fds_regulations.5
 	title = fds_regulations.5.title
 	desc = fds_regulations.5.desc
-    picture = GOV_RUINS_CLEAR_eventPicture
+	picture = GOV_RUINS_CLEAR_eventPicture
 	
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = fds_regulations.5.option.a
@@ -349,7 +360,7 @@ country_event = {
 				NOT = { has_country_flag = fds_narcotics_regulation_set_flag }
 			}
 			set_narcotics_allowed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -364,6 +375,7 @@ country_event = {
 			set_narcotics_allowed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = WOODSTOCK_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.5.option.b
@@ -372,7 +384,7 @@ country_event = {
 				NOT = { has_country_flag = fds_narcotics_regulation_set_flag }
 			}
 			set_narcotics_licensed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -387,6 +399,7 @@ country_event = {
 			set_narcotics_licensed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = COLORADO_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.5.option.c
@@ -395,7 +408,7 @@ country_event = {
 				NOT = { has_country_flag = fds_narcotics_regulation_set_flag }
 			}
 			set_narcotics_forbidden = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -410,6 +423,7 @@ country_event = {
 			set_narcotics_forbidden = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = BUZZ_KILL_EXPLANATION
 	}
 	option = {
 		name = event_exit
@@ -432,7 +446,7 @@ country_event = {
 				NOT = { has_country_flag = fds_scavenging_regulation_set_flag }
 			}
 			set_scavenging_allowed = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -447,6 +461,7 @@ country_event = {
 			set_scavenging_allowed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = YES_SCAVENGING_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.6.option.b
@@ -455,7 +470,7 @@ country_event = {
 				NOT = { has_country_flag = fds_scavenging_regulation_set_flag }
 			}
 			set_scavenging_licensed = yes
-            add_dip_power = -100
+ 			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -470,6 +485,7 @@ country_event = {
 			set_scavenging_licensed = yes
 			add_dip_power = -100
 		}
+		custom_tooltip = SCAVENGING_LIMITED_EXPLANATION
 	}
 	option = {
 		name = fds_regulations.6.option.c
@@ -478,7 +494,7 @@ country_event = {
 				NOT = { has_country_flag = fds_scavenging_regulation_set_flag }
 			}
 			set_scavenging_forbidden = yes
-            add_dip_power = -100
+			add_dip_power = -100
 		}
 		if = {
 			limit = {
@@ -492,7 +508,8 @@ country_event = {
 #			}
 			set_scavenging_forbidden = yes
 			add_dip_power = -100
-		}
+		} 
+		custom_tooltip = NO_SCAVENGING_EXPLANATION
 	}
 	option = {
 		name = event_exit

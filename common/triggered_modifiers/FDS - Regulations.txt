@@ -5,6 +5,7 @@ fds_slavery_allowed = {
 	
 	global_regiment_cost = -0.25
     global_regiment_recruit_speed = -0.25
+	production_efficiency = 0.05
     
     diplomatic_reputation = -2
 }
@@ -15,6 +16,7 @@ fds_slavery_licensed = {
 
 	global_regiment_cost = -0.1
     global_regiment_recruit_speed = -0.1
+	build_cost = -0.1
     
     diplomatic_reputation = -1
 }
@@ -24,6 +26,7 @@ fds_slavery_forbidden = {
 	trigger 	= { is_variable_equal = { which = fds_slavery_regulation value = 3 } }
 	
 	diplomatic_reputation = 1
+	prestige = 0.1
 }
 
 # Gambling
@@ -31,8 +34,9 @@ fds_gambling_allowed = {
     potential 	= { is_variable_equal = { which = fds_gambling_regulation value = 1 } }
 	trigger 	= { is_variable_equal = { which = fds_gambling_regulation value = 1 } }
 	
-	global_tax_modifier = 0.2
-    global_unrest = 1
+	global_tax_income = 6 # Guarenteed +0.5 Bottlecaps per month
+	global_tax_modifier = 0.15
+    production_efficiency = -0.2
 }
 
 fds_gambling_licensed = {
@@ -40,38 +44,48 @@ fds_gambling_licensed = {
 	trigger 	= { is_variable_equal = { which = fds_gambling_regulation value = 2 } }
 	
 	global_tax_modifier = 0.1
-    global_unrest = 0.5
+    production_efficiency = -0.1
 }
 
 fds_gambling_forbidden = {
     potential 	= { is_variable_equal = { which = fds_gambling_regulation value = 3 } }
 	trigger 	= { is_variable_equal = { which = fds_gambling_regulation value = 3 } }
 	
-	global_unrest = -1
+	global_unrest = -0.5
+	production_efficiency = 0.1
+	prestige = 0.1
 }
 
 # Prostitution
 fds_prostitution_allowed = {
     potential 	= { is_variable_equal = { which = fds_prostitution_regulation value = 1 } }
 	trigger 	= { is_variable_equal = { which = fds_prostitution_regulation value = 1 } }
-	
-	yearly_corruption = -0.1
-    global_unrest = 1
+
+	yearly_corruption = 0.05
+	heir_chance = 0.25 # If you know what I mean
+    global_unrest = -1
+	prestige = -0.1
+	prestige_decay = 0.05
 }
 
 fds_prostitution_licensed = {
     potential 	= { is_variable_equal = { which = fds_prostitution_regulation value = 2 } }
 	trigger 	= { is_variable_equal = { which = fds_prostitution_regulation value = 2 } }
 	
-	yearly_corruption = -0.05
-    global_unrest = 0.5
+	yearly_corruption = 0.05
+    global_unrest = -0.5
+	prestige_decay = 0.05
+	prestige = -0.1
+	global_tax_modifier = 0.15
 }
 
 fds_prostitution_forbidden = {
     potential 	= { is_variable_equal = { which = fds_prostitution_regulation value = 3 } }
 	trigger 	= { is_variable_equal = { which = fds_prostitution_regulation value = 3 } }
 	
-	global_unrest = -1
+	yearly_corruption = -0.03
+	prestige = 0.1
+	prestige_per_development_from_conversion = 0.05
 }
 
 # Firearms
@@ -79,6 +93,8 @@ fds_firearms_allowed = {
     potential 	= { is_variable_equal = { which = fds_firearms_regulation value = 1 } }
 	trigger 	= { is_variable_equal = { which = fds_firearms_regulation value = 1 } }
 	
+	global_unrest = -1 # Crime reduction
+	harsh_treatment_cost = 0.2
 	reinforce_cost_modifier = -0.25
     years_of_nationalism = 5
 }
@@ -87,6 +103,8 @@ fds_firearms_licensed = {
     potential 	= { is_variable_equal = { which = fds_firearms_regulation value = 2 } }
 	trigger 	= { is_variable_equal = { which = fds_firearms_regulation value = 2 } }
 	
+	global_unrest = -0.5 # Crime reduction
+	harsh_treatment_cost = 0.1
 	reinforce_cost_modifier = -0.1
     years_of_nationalism = 3
 }
@@ -95,7 +113,9 @@ fds_firearms_forbidden = {
     potential 	= { is_variable_equal = { which = fds_firearms_regulation value = 3 } }
 	trigger 	= { is_variable_equal = { which = fds_firearms_regulation value = 3 } }
 	
-	years_of_nationalism = -5
+	years_of_nationalism = -10
+	harsh_treatment_cost = -0.1
+	global_unrest = 2 # In a world as deadly as the Wasteland, a disarmed populace is an angry populace
 }
 
 # Narcotics
@@ -103,8 +123,10 @@ fds_narcotics_allowed = {
     potential 	= { is_variable_equal = { which = fds_narcotics_regulation value = 1 } }
 	trigger 	= { is_variable_equal = { which = fds_narcotics_regulation value = 1 } }
 	
-	shock_damage_received = -0.1
+	shock_damage_received = -0.15
+	native_uprising_chance = -0.2
     global_unrest = 1
+	prestige = -0.1
 }
 
 fds_narcotics_licensed = {
@@ -113,6 +135,9 @@ fds_narcotics_licensed = {
 	
 	shock_damage_received = -0.05
     global_unrest = 0.5
+	native_uprising_chance = -0.05
+	global_tax_modifier = 0.05
+	prestige = -0.05
 }
 
 fds_narcotics_forbidden = {
@@ -120,6 +145,8 @@ fds_narcotics_forbidden = {
 	trigger 	= { is_variable_equal = { which = fds_narcotics_regulation value = 3 } }
 	
 	global_unrest = -1
+	prestige = 0.15
+	caravan_power = -0.1
 }
 
 # Scavenging
