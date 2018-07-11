@@ -39,6 +39,14 @@ spriteTypes = {
     #-------------------------------------------------------------------------------------
     # Generic Buttons
     #-------------------------------------------------------------------------------------
+    spriteType = {
+		name = "GFX_menubar_floating_strip"
+		texturefile = "gfx//interface//ui//button//menubar_buttons.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		clicksound = click
+		noOfFrames = 8
+	}
+    
     textSpriteType = {
 		name = "GFX_fm_button_states_button"
 		texturefile = "gfx//interface//ui//button//province_states_button.dds"
