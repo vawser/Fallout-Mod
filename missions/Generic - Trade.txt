@@ -1,0 +1,153 @@
+trade_missions = {
+    slot = 3
+    generic = yes
+
+    potential = {
+        always = yes
+    }
+    
+    dominate_home_tradenode_mission = {
+		icon = mission_dominate_home_trade_node
+		required_missions = {  }
+        
+		trigger = {
+			home_trade_node = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				random_active_trade_node = {
+					limit = {
+						any_trade_node_member_province = {
+							is_capital = yes
+							owned_by = ROOT
+						}
+					}
+					capital_scope = {
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = dominant_trade_centre
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+    
+    mercantile_nation_mission = {
+		icon = mission_establish_high_seas_navy
+        
+		required_missions = {
+            dominate_home_tradenode_mission
+        }
+        
+		trigger = {
+			mercantilism = 25
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercantile_nation
+				duration = -1
+			}
+		}
+	}
+    
+    wasteland_merchants_mission = {
+		icon = mission_high_income
+        
+		required_missions = {
+            mercantile_nation_mission
+        }
+        
+		trigger = {
+			num_of_merchants = 5
+		}
+		effect = {
+			add_country_modifier = {
+				name = wasteland_merchants
+				duration = -1
+			}
+		}
+	}
+    
+    trade_income_mission = {
+		icon = mission_war_chest
+        
+		required_missions = {
+            wasteland_merchants_mission
+        }
+        
+		trigger = {
+			trade_income_percentage = 0.5
+		}
+		effect = {
+			add_mercantilism = 10
+		}
+	}
+    
+    trademeister_mission = {
+		icon = mission_monarch_in_throne_room
+        
+		required_missions = {
+            trade_income_mission
+        }
+        
+		trigger = {
+			num_of_trading_bonuses = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = trademeister
+				duration = -1
+			}
+		}
+	}
+}

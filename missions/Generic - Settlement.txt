@@ -1,0 +1,1241 @@
+settlement_missions = {
+    slot = 5
+    generic = yes
+
+    potential = {
+        always = yes
+    }
+    
+    settle_washington_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = washington_region
+        }
+
+		trigger = {
+            washington_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = washington_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_oregon_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = oregon_region
+        }
+
+		trigger = {
+            oregon_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = oregon_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_california_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = california_region
+        }
+
+		trigger = {
+            california_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = california_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_nevada_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = nevada_region
+        }
+
+		trigger = {
+            nevada_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = nevada_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_utah_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = utah_region
+        }
+
+		trigger = {
+            utah_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = utah_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_idaho_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = idaho_region
+        }
+
+		trigger = {
+            idaho_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = idaho_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_montana_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = montana_region
+        }
+
+		trigger = {
+            montana_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = montana_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_wyoming_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = wyoming_region
+        }
+
+		trigger = {
+            wyoming_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = wyoming_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_baja_california_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = baja_california_region
+        }
+
+		trigger = {
+            baja_california_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = baja_california_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_arizona_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = arizona_region
+        }
+
+		trigger = {
+            arizona_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = arizona_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_new_mexico_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = new_mexico_region
+        }
+
+		trigger = {
+            new_mexico_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = new_mexico_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_colorado_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = colorado_region
+        }
+
+		trigger = {
+            colorado_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = colorado_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_north_dakota_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = north_dakota_region
+        }
+
+		trigger = {
+            north_dakota_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = north_dakota_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_south_dakota_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = south_dakota_region
+        }
+
+		trigger = {
+            south_dakota_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = south_dakota_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_nebraska_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = nebraska_region
+        }
+
+		trigger = {
+            nebraska_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = nebraska_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_kansas_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = kansas_region
+        }
+
+		trigger = {
+            kansas_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = kansas_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_missouri_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = missouri_region
+        }
+
+		trigger = {
+            missouri_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = missouri_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_iowa_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = iowa_region
+        }
+
+		trigger = {
+            iowa_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = iowa_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_kentucky_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = kentucky_region
+        }
+
+		trigger = {
+            kentucky_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = kentucky_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_west_virginia_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = west_virginia_region
+        }
+
+		trigger = {
+            west_virginia_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = west_virginia_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_ohio_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = ohio_region
+        }
+
+		trigger = {
+            ohio_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = ohio_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_indiana_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = indiana_region
+        }
+
+		trigger = {
+            indiana_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = indiana_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_michigan_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = michigan_region
+        }
+
+		trigger = {
+            michigan_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = michigan_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_minnesota_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = minnesota_region
+        }
+
+		trigger = {
+            minnesota_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = minnesota_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_wisconsin_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = wisconsin_region
+        }
+
+		trigger = {
+            wisconsin_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = wisconsin_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_illinois_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = illinois_region
+        }
+
+		trigger = {
+            illinois_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = illinois_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_oklahoma_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = oklahoma_region
+        }
+
+		trigger = {
+            oklahoma_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = oklahoma_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_arkansas_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = arkansas_region
+        }
+
+		trigger = {
+            arkansas_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = arkansas_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_texas_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = texas_region
+        }
+
+		trigger = {
+            texas_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = texas_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_louisiana_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = louisiana_region
+        }
+
+		trigger = {
+            louisiana_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = louisiana_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_mississippi_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = mississippi_region
+        }
+
+		trigger = {
+            mississippi_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = mississippi_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_alabama_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = alabama_region
+        }
+
+		trigger = {
+            alabama_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = alabama_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_tennessee_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = tennessee_region
+        }
+
+		trigger = {
+            tennessee_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = tennessee_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_florida_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = florida_region
+        }
+
+		trigger = {
+            florida_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = florida_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_georgia_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = georgia_region
+        }
+
+		trigger = {
+            georgia_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = georgia_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_south_carolina_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = south_carolina_region
+        }
+
+		trigger = {
+            south_carolina_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = south_carolina_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_north_carolina_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = north_carolina_region
+        }
+
+		trigger = {
+            north_carolina_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = north_carolina_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_virginia_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = virginia_region
+        }
+
+		trigger = {
+            virginia_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = virginia_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_new_york_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = new_york_region
+        }
+
+		trigger = {
+            new_york_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = new_york_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_new_jersey_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = new_jersey_region
+        }
+
+		trigger = {
+            new_jersey_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = new_jersey_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_pennsylvania_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = pennsylvania_region
+        }
+
+		trigger = {
+            pennsylvania_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = pennsylvania_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_the_capital_wasteland_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = the_capital_wasteland_region
+        }
+
+		trigger = {
+            the_capital_wasteland_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = the_capital_wasteland_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_the_commonwealth_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = the_commonwealth_region
+        }
+
+		trigger = {
+            the_commonwealth_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = the_commonwealth_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_british_columbia_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = british_columbia_region
+        }
+
+		trigger = {
+            british_columbia_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = british_columbia_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_alberta_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = alberta_region
+        }
+
+		trigger = {
+            alberta_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = alberta_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_saskatchewan_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = saskatchewan_region
+        }
+
+		trigger = {
+            saskatchewan_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = saskatchewan_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_manitoba_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = manitoba_region
+        }
+
+		trigger = {
+            manitoba_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = manitoba_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_ontario_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = ontario_region
+        }
+
+		trigger = {
+            ontario_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = ontario_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_quebec_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = quebec_region
+        }
+
+		trigger = {
+            quebec_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = quebec_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_newfoundland_and_labrador_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = newfoundland_and_labrador_region
+        }
+
+		trigger = {
+            newfoundland_and_labrador_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = newfoundland_and_labrador_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_new_brunswick_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = new_brunswick_region
+        }
+
+		trigger = {
+            new_brunswick_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = new_brunswick_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_nova_scotia_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = nova_scotia_region
+        }
+
+		trigger = {
+            nova_scotia_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = nova_scotia_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_big_mt_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = big_mt_region
+        }
+
+		trigger = {
+            big_mt_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = big_mt_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_mexico_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = mexico_region
+        }
+
+		trigger = {
+            mexico_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = mexico_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_bermuda_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = bermuda_region
+        }
+
+		trigger = {
+            bermuda_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = bermuda_settlements
+				duration = -1
+			}
+		}
+	}
+    settle_caribbean_mission = {
+		icon = mission_colonial
+
+		required_missions = { }
+
+        provinces_to_highlight = {
+            region = caribbean_region
+        }
+
+		trigger = {
+            caribbean_region = {
+                type = all
+                owned_by = ROOT
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = caribbean_settlements
+				duration = -1
+			}
+		}
+	}
+}

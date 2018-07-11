@@ -1,0 +1,112 @@
+military_missions = {
+    slot = 6
+    generic = yes
+    
+    potential = {
+        always = yes
+    }
+    
+    build_armysize_mission = { 
+		icon = mission_build_up_to_force_limit
+		required_missions = {  } 
+        
+		trigger = {
+			army_size_percentage = 1 
+		}
+        
+		effect = { 
+			add_country_modifier = {
+				name = smooth_operation
+				duration = -1
+			}
+		}
+	}
+	
+	expand_countrysize_mission = {
+		icon = mission_conquer_50_development
+        
+		required_missions = { 
+            build_armysize_mission 
+        }
+        
+		trigger = { 
+            grown_by_development = 50 
+        }
+        
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	
+	conquer_states_mission = {
+		icon = mission_cannons_firing
+        
+		required_missions = { 
+            expand_countrysize_mission
+        }
+        
+		trigger = { 
+            grown_by_states = 5 
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = frontier_fighters
+				duration = -1 
+			}
+		}
+	}
+	
+	veteran_general_mission = {
+		icon = mission_assemble_an_army
+        
+		required_missions = { 
+            conquer_states_mission
+        }
+        
+		trigger = { 
+            has_commanding_three_star = yes
+        }
+            
+		effect = {
+			add_country_modifier = {
+				name = veteran_general
+				duration = -1 
+			}
+		}
+	}
+	
+	unite_home_region_mission = {
+		icon = mission_unite_home_region
+        
+		required_missions = {
+            veteran_general_mission
+        }
+        
+		provinces_to_highlight = {
+			region_for_scope_province = {
+				is_capital_of = ROOT
+			}
+			NOT = { owned_by = ROOT }
+		}
+        
+		trigger = {
+			capital_scope = {
+				region_for_scope_province = {
+					type = all
+					owned_by = ROOT 
+				}
+			}
+		}
+        
+		effect = {
+			add_dip_power = 100
+			add_adm_power = 100
+			add_mil_power = 100
+		}
+	}
+}

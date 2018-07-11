@@ -1,29 +1,134 @@
-legion_missions_slot_1 = {
-    slot = 1
+legion_missions_slot_6 = {
+    slot = 6
     has_country_shield = yes
     
     potential = {
         tag = CAE
     }
     
-    claim_primm = {
+    prepare_forces_mission = {
 		icon = mission_assemble_an_army
         
 		required_missions = { }
         
 		trigger = {
-            custom_trigger_tooltip = {
-                tooltip = NO_MISSION_IN_ACTION
-                NOT = { has_country_flag = mission_in_action }
+            army_size_percentage = 1
+		}
+		effect = {
+			267 = { add_core = CAE }
+			273 = { add_permanent_claim = CAE }
+			2954 = { add_permanent_claim = CAE }
+			260 = { add_permanent_claim =  CAE }
+			2966 = { add_permanent_claim = CAE }
+			257 = { add_permanent_claim = CAE }
+			266 = { add_permanent_claim = CAE }
+			422 = { add_permanent_claim = CAE }
+			263 = { add_permanent_claim = CAE }
+			122 = { add_permanent_claim = CAE }
+			2695 = { add_permanent_claim = CAE }
+			252 = { add_permanent_claim = CAE }
+			120 = { add_permanent_claim = CAE }
+			121 = { add_permanent_claim = CAE }
+			309 = { add_permanent_claim = CAE }
+			262 = { add_permanent_claim = CAE }
+			2964 = { add_permanent_claim = CAE }
+			2967 = { add_permanent_claim = CAE }
+		}
+    }
+    
+    control_new_vegas_mission = {
+		icon = mission_assemble_an_army
+        
+		required_missions = { 
+            prepare_forces_mission
+        }
+        
+		trigger = {
+            num_of_owned_provinces_with = {
+                value = 30
+                region = nevada_region
+            }
+            owns_core_province = 267
+		}
+		effect = {
+			california_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2956 = { add_core = CAE }
+		}
+	}
+    
+    ncr_retreat_mission = {
+		icon = mission_assemble_an_army
+        
+		required_missions = { 
+            control_new_vegas_mission
+        }
+        
+		trigger = {
+            OR = {
+                AND = {
+                    exists = NCR
+                    war_with = NCR
+                    war_score = 80
+                }
+                NOT = { exists = NCR }
             }
 		}
 		effect = {
-			hidden_effect = {
-                set_country_flag = mission_in_action
+			NCR = {
+                every_owned_province = {
+                    add_permanent_claim = ROOT
+                }
             }
-            custom_tooltip = MISSION_IN_ACTION
-            country_event = { id = missions.1 days = 30 }
+            add_country_modifier = {
+				name = legion_victory
+				duration = -1
+			}
 		}
-    }
+	}
+    
+    eradicate_ncr_mission = {
+		icon = mission_empire
+        
+		required_missions = { 
+            ncr_retreat_mission
+        }
+        
+		trigger = {
+            NOT = { exists = NCR }
+		}
+		effect = {
+			add_country_modifier = {
+				name = legion_domination
+				duration = -1
+			}
+		}
+	}
 }
 
+legion_missions_slot_7 = {
+    slot = 7
+    has_country_shield = yes
+    
+    potential = {
+        tag = CAE
+    }
+    
+    
+}
+
+legion_missions_slot_8 = {
+    slot = 8
+    has_country_shield = yes
+    
+    potential = {
+        tag = CAE
+    }
+    
+    
+}
