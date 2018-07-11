@@ -994,30 +994,49 @@ religion_group_christianity = {
 		misguided_heretic = yes # Other christians hate them less
 	}
     
-    baptist = {
+	baptist = {
 		color = { 0.33 0.2 0.5 }
 		icon = 11
 
 		country = {
 			improve_relation_modifier = 0.1
-            global_unrest = -1
+			global_unrest = -1
+			global_autonomy = 0.02
 		}
 		
 		country_as_secondary = { 
-            improve_relation_modifier = 0.1
+			can_transfer_vassal_wargoal = yes
+			liberty_desire_from_subject_development = -0.05
+			global_autonomy = 0.02
+		}
+
+		province = {
+			local_autonomy = 0.02
 		}
 		
 		on_convert = {
 			change_religion = baptist
 			add_prestige = -100
 
+			every_owned_province = {
+				limit = {
+					OR = {
+						religion_group = religion_group_christianity
+						religion = secular
+					}
+				}
+				set_local_autonomy = 75
+			}
+
 			add_country_modifier = {
 				name = "fm_conversion_zeal"
 				duration = 3650
-			}			
+			}
 		}
+
+		heretic = { TRAIL_OF_BLOOD }
         
-        fervor = yes
+		fervor = yes
 		
 		misguided_heretic = yes # Other christians hate them less
 	}
@@ -1027,12 +1046,12 @@ religion_group_christianity = {
 		icon = 11
 
 		country = {
-			improve_relation_modifier = 0.1
-            global_unrest = -1
+			global_tax_modifier = 0.1
+			improve_relation_modifier = 0.15
 		}
 		
-		country_as_secondary = { 
-            improve_relation_modifier = 0.1
+		country_as_secondary = {
+			idea_cost = -0.1
 		}
 		
 		on_convert = {
@@ -1092,7 +1111,7 @@ religion_group_christianity = {
 			local_missionary_strength = -0.01
 		}
 		
-		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY ICONOCLAST }
+		heretic = { OLD_BELIEVER ICONOCLAST }
 		
         fervor = yes
 		misguided_heretic = yes		# Other christians hate them less
@@ -1113,7 +1132,6 @@ religion_group_christianity = {
 			local_missionary_strength = -0.02
 		}
 		
-		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
 
         fervor = yes
 		misguided_heretic = yes		# Other christians hate them less
@@ -1145,7 +1163,6 @@ religion_group_muslim = {
 		
         fervor = yes
         
-		heretic = { BEKTASHI AHMADI ZIKRI YAZIDI }
 	}
 
 	shia = {
@@ -1165,7 +1182,6 @@ religion_group_muslim = {
 		
         fervor = yes
         
-		heretic = { DRUZE HURUFI ZAIDI }
 	}
 	
 	ibadi = {

@@ -7,15 +7,15 @@ country_event = {
 	picture = BOS_CHAT_eventPicture
 	
 	hidden = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	trigger = {
-        NOT = { has_country_flag = fds_setup }
-    }
+		NOT = { has_country_flag = fds_setup }
+	}
 
-    immediate = {
-        set_country_flag = fds_setup
-    }
+	immediate = {
+		set_country_flag = fds_setup
+	}
 
 	option = {
 		name = fds.1.option.a
@@ -98,13 +98,13 @@ country_event = {
 			set_secret_courts = yes
 			set_slavery_punishment = yes
 			set_state_innovation = yes
-			set_full_conscription = yes
+			set_limited_conscription = yes
 			set_slavery_allowed = yes
 			set_gambling_allowed = yes
-			set_prostitution_allowed = yes
+			set_prostitution_forbidden = yes
 			set_firearms_allowed = yes
 			set_narcotics_allowed = yes
-			set_scavenging_allowed = yes
+			set_scavenging_forbidden = yes
 		}
 		if = {
 			limit = {
@@ -167,8 +167,8 @@ country_event = {
 			set_execution_punishment = yes
 			set_state_innovation = yes
 			set_limited_conscription = yes
-			set_slavery_licensed = yes
-			set_gambling_licensed = yes
+			set_slavery_forbidden = yes
+			set_gambling_allowed = yes
 			set_prostitution_licensed = yes
 			set_firearms_licensed = yes
 			set_narcotics_licensed = yes
@@ -251,7 +251,7 @@ country_event = {
 			set_community_courts = yes
 			set_execution_punishment = yes
 			set_individual_innovation = yes
-			set_full_conscription = yes
+			set_limited_conscription = yes
 			set_slavery_allowed = yes
 			set_gambling_allowed = yes
 			set_prostitution_allowed = yes
@@ -268,8 +268,8 @@ country_event = {
 			set_community_courts = yes
 			set_execution_punishment = yes
 			set_individual_innovation = yes
-			set_full_conscription = yes
-			set_slavery_allowed = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
 			set_gambling_allowed = yes
 			set_prostitution_allowed = yes
 			set_firearms_allowed = yes
@@ -306,9 +306,9 @@ country_event = {
 			set_slavery_allowed = yes
 			set_gambling_forbidden = yes
 			set_prostitution_forbidden = yes
-			set_firearms_allowed = yes
+			set_firearms_forbidden = yes
 			set_narcotics_forbidden = yes
-			set_scavenging_allowed = yes
+			set_scavenging_forbidden = yes
 		}
 		if = {
 			limit = {
@@ -334,14 +334,14 @@ country_event = {
 			set_traditional_economy = yes
 			set_democratic_law = yes
 			set_community_courts = yes
-			set_imprisonment_punishment = yes
+			set_fine_punishment = yes # Actual punishment was expulsion, but not modelled
 			set_individual_innovation = yes
 			set_volunteer_conscription = yes
 			set_slavery_forbidden = yes
 			set_gambling_allowed = yes
 			set_prostitution_forbidden = yes
-			set_firearms_allowed = yes
-			set_narcotics_allowed = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
 			set_scavenging_allowed = yes
 		}
 		if = {
@@ -387,12 +387,12 @@ country_event = {
 			set_community_courts = yes
 			set_execution_punishment = yes
 			set_individual_innovation = yes
-			set_full_conscription = yes
+			set_limited_conscription = yes
 			set_slavery_forbidden = yes
 			set_gambling_forbidden = yes
 			set_prostitution_forbidden = yes
 			set_firearms_licensed = yes
-			set_narcotics_forbidden = yes
+			set_narcotics_licensed = yes
 			set_scavenging_allowed = yes
 		}
 		if = {
@@ -412,6 +412,78 @@ country_event = {
 			set_narcotics_forbidden = yes
 			set_scavenging_allowed = yes
 		}
+
+		if = {
+			limit = {
+				OR = {
+					religion_group = religion_group_christianity
+					religion_group = religion_group_jewish
+					tag = RNC
+					religion = renewal
+				}
+			}
+			set_prostitution_forbidden = yes
+			set_community_courts = yes
+			set_slavery_forbidden = yes
+			set_narcotics_forbidden = yes
+			set_democratic_law = yes
+			set_execution_punishment = yes
+			set_community_courts = yes
+			set_firearms_allowed = yes
+			set_volunteer_conscription = yes
+		}
+
+		if = {
+			limit = {
+				religion_group = religion_group_muslim
+			}
+			set_traditional_economy = yes
+			set_limited_conscription = yes
+			set_prostitution_forbidden = yes
+			set_community_courts = yes
+			set_slavery_allowed = yes
+			set_narcotics_forbidden = yes
+			set_oligarchic_law = yes
+			set_execution_punishment = yes
+			set_community_courts = yes
+			set_mixied_economy = yes
+			set_gambling_forbidden = yes
+			set_firearms_forbidden = yes
+		}
+
+		if = {
+			limit = {
+				OR = {
+					religion = mormon
+					secondary_religion = mormon
+					AND = {
+						religion = zion_tribalism
+						NOT = { tag = WLS }
+					}
+				}
+			}
+			set_market_economy = yes
+			set_gambling_licensed = yes
+		}
+
+		if = {
+			limit = {
+				tag = TWM
+			}
+			set_traditional_economy = yes
+			set_autocratic_law = yes
+			set_state_courts = yes
+			set_fine_punishment = yes
+			set_state_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_licensed = yes
+			set_scavenging_licensed = yes
+		}
+
         # Add setup if history is missing them
         if = {
             limit = {
