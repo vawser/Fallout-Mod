@@ -1,0 +1,550 @@
+﻿l_english:
+ #--------------------------------------------
+ # General
+ #--------------------------------------------
+ SPACER: "\n"
+ event_exit: "Return"
+ NO_VALID_KEY: "not set."
+ 
+ law_setup.1.title: "Setup"
+ law_setup.1.desc: "Pre-coded Policies and Regulations will now be assigned to each nation based on their technological group, background, and/or religion."
+ law_setup.1.option.a: "Begin!"
+ 
+ #--------------------------------------------
+ # Disaster
+ #--------------------------------------------
+ civil_unrest: "Civil Unrest"
+ 
+ civil_unrest_disaster: "Civil Unrest"
+ desc_civil_unrest_disaster: "We have changed our stance on national policy and regulations too much, leading to mass unrest."
+ 
+ civil_unrest_events.1.title: "Civil Unrest"
+ civil_unrest_events.1.desc: "Rapid changes to our nation's policies and regulations has lead to a collapse in civilian confidence. They have taken to the streets and made their discontent known to us"
+ civil_unrest_events.1.option.a: "Oh no!"
+ 
+ civil_unrest_events.2.title: "Civil Order Restored"
+ civil_unrest_events.2.desc: "[Root.GetName] has weathered the mass unrest, and through blood and sweat, restored order to the fractured people of [Root.GetName]."
+ civil_unrest_events.2.option.a: "Hurrah"
+ 
+ civil_unrest_events.3.title: "Citizen Revolt"
+ civil_unrest_events.3.desc: "A group of citizens have risen up in anger. They must be silenced lest their sentiments spread elsewhere."
+ civil_unrest_events.3.option.a: "Pay them to keep quiet"
+ civil_unrest_events.3.option.b: "Crush them!"
+ 
+ civil_unrest_events.4.title: "Vocal Protest"
+ civil_unrest_events.4.desc: "Many of our citizens have denigrated and denounced [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s rule as ineffectual. [Root.Monarch.GetName] may have to answer these statements lest they whip more of our citizens in to a frenzy."
+ civil_unrest_events.4.option.a: "Make a grovelling speech"
+ civil_unrest_events.4.option.b: "Crush them!"
+ 
+ CIVIL_UNREST_BELOW_1: "Reduce §YCivil Unrest§! (§Y[Root.civil_unrest.GetValue]§!) below §Y1§!."
+ REDUCE_CIVIL_UNREST_BY_ONE: "Reduces §YCivil Unrest§! by 1."
+ INCREASE_CIVIL_UNREST_BY_ONE: "Increases §YCivil Unrest§! by 1."
+ 
+ CIVIL_UNREST_EXPLANATION: "\n§YCivil Unrest§! is a measure of how angry your citizens are. Each time a policy or regulation is changed, §YCivil Unrest§! increases. Once above §Y10§!, the §YCivil Unrest§! disaster will occur.\n\n§YCivil Unrest§! decays naturally and can be reduced immediately by developing a province, which will reduce it by §G1§! for each development added.\n"
+ 
+ INCREASE_CIVIL_UNREST_BY_FIVE: "Increases §YCivil Unrest§! by 5."
+ INCREASE_CIVIL_UNREST_BY_THREE: "Increases §YCivil Unrest§! by 3."
+
+ #--------------------------------------------
+ # Economy
+ #--------------------------------------------
+ current_economy_law: "Economy Policy"
+ 
+ economy_selection.1.title: "Economic Policy"
+ economy_selection.1.desc: "Your economic policy controls how your country primarily operates in the economic sphere."
+ economy_selection.1.option.a: "Traditional Economy"
+ economy_selection.1.option.b: "Command Economy"
+ economy_selection.1.option.c: "Market Economy"
+ economy_selection.1.option.d: "Mixed Economy"
+ 
+ law_traditional_economy: "Traditional Economy"
+ desc_law_traditional_economy: "A traditional economy is a local economy, with farming at the centre of all economic activity. For members of the wasteland, this means they live a economically deprived existence. Even so, such locality fosters strong communal bonds."
+ law_command_economy: "Command Economy"
+ desc_law_command_economy: "A command economy is ruled by a central authority, for most this means the government. For members of the wasteland, this grants little to no autonomy to the individual, but permits the state fast mobilization of goods when needed."
+ law_market_economy: "Market Economy"
+ desc_law_market_economy: "A market economy is dictated by individuals, who are unbound by any central authority, fostering competition. For members of the wasteland, this means vital goods such as food are competitively priced, but niche industries such as medicine are often lacking."
+ law_mixed_economy: "Mixed Economy"
+ desc_law_mixed_economy: "A combination of command and market, where the market is bound by regulations, but otherwise free to operate. For members of the wasteland, this is a mixed bag, and lacks the extremes found in either form."
+ 
+ SET_TRADITIONAL_ECONOMY: "Set §YEconomy Policy§! to §YTraditional Economy§!."
+ SET_COMMAND_ECONOMY: "Set §YEconomy Policy§! to §YCommand Economy§!."
+ SET_MARKET_ECONOMY: "Set §YEconomy Policy§! to §YMarket Economy§!."
+ SET_MIXED_ECONOMY: "Set §YEconomy Policy§! to §YMixed Economy§!."
+ 
+ TRADITIONAL_ECONOMY: "Traditional Economy"
+ COMMAND_ECONOMY: "Command Economy"
+ MARKET_ECONOMY: "Market Economy"
+ MIXED_ECONOMY: "Mixed Economy"
+ 
+ ALREADY_TRADITIONAL_ECONOMY: "Our §YEconomic Policy§! is already set to §YTraditional Economy§!."
+ ALREADY_COMMAND_ECONOMY: "Our §YEconomic Policy§! is already set to §YCommand Economy§!."
+ ALREADY_MARKET_ECONOMY: "Our §YEconomic Policy§! is already set to §YMarket Economy§!."
+ ALREADY_MIXED_ECONOMY: "Our §YEconomic Policy§! is already set to §YMixed Economy§!."
+
+ TRADITIONAL_ECONOMY_EXPLANATION: "\nBy enacting this law we will maintain the usual, post-apocalyptic, local economy centered around bartering, subsistence agriculture, local merchants, and communal bonds. \n\nEnacting this policy will grant:\n§G50%§! increase in production of all goods.\n§R25%§! decrease in tax revenue.\n§R25%§! decrease in trade efficiency."
+ 
+ COMMAND_ECONOMY_EXPLANATION: "\nBy enacting this law we will establish an authoritarian, state-controlled economy from the top-down. Industry and goods production will be nationalized. This will benefit us as a government, but will stifle freedom of the Settlers, who likely won't be happy about it. \n\nEnacting this policy will grant:\n §G25%§! increase in tax revenue.\n§G10%§! increase in production of all goods.\n§R50%§! decrease in trade efficiency."
+ 
+ MARKET_ECONOMY_EXPLANATION: "\nBy enacting this law we will enshrine the true American way of economics - the Free Market - in law.  This will greatly benefit the Settlers but cost us dearly in terms of taxation, niche goods like medicine, and control over the economy. \n\nEnacting this policy will grant:\n§R35%§! decrease in tax revenue.\n§G25%§! increase in production of all goods,\n§G25%§! increase in trade efficiency."
+ 
+ MIXED_ECONOMY_EXPLANATION: "\nBy enacting this law we will create a mixed economy, which was common in most nations before the Great War. A limited Free Market with heavy regulations will be the norm and will offer few, if any, benefits to the state. \n\nEnacting this policy will grant:\n§G5%§! increase in tax revenue.\n§G5%§! increase in production of all goods.\n§G5%§! increase in trade efficiency."
+ 
+ 
+ #--------------------------------------------
+ # Law
+ #--------------------------------------------
+ current_law_law: "Law Policy"
+ 
+ law_selection.1.title: "Law Policy"
+ law_selection.1.desc: "Your law policy controls how your country primarily deals with law-making and the extent of which citizens can influence the process."
+ law_selection.1.option.a: "Democratic Law"
+ law_selection.1.option.b: "Oligarchic Law"
+ law_selection.1.option.c: "Autocratic Law"
+ 
+ law_democratic_law: "Fair Law"
+ desc_law_democratic_law: "The making of laws - regardless of how this is done -is intended for the good of all and for justice, and, in extremely rare cases, is even vested in a truly democratic legislature. Even if laws are made by law or without lay input, they nonetheless retain the antebellum principles of the pursuit of justice and fairness for all. For members of the wasteland, this is a fair, but slow system."
+ law_oligarchic_law: "Oligarchic Law"
+ desc_law_oligarchic_law: "The making of laws is controlled by an oligarchy, either openly or in secret, and largely for its benefit. This deprives much of the populance from input, but for those allied with the oligarchs, there is much to gain."
+ law_autocratic_law: "Autocratic Law"
+ desc_law_autocratic_law: "All executive and legislative authority is controlled by a strongman, who rules by law. The whims of the autocrat are capricious, but an exemplary autocrat with a vision can achieve greatness, no matter the costs."
+ 
+ SET_DEMOCRATIC_LAW: "Set §YLaw Policy§! to §YDemocratic Law§!."
+ SET_OLIGARCHIC_LAW: "Set §YLaw Policy§! to §YOligarchic Law§!."
+ SET_AUTOCRATIC_LAW: "Set §YLaw Policy§! to §YAutocratic Law§!."
+ 
+ DEMOCRATIC_LAW: "Democratic Law"
+ OLIGARCHIC_LAW: "Oligarchic Law"
+ AUTOCRATIC_LAW: "Autocratic Law"
+ 
+ ALREADY_DEMOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YDemocratic Law§!."
+ ALREADY_OLIGARCHIC_LAW: "Our §YLaw Policy§! is already set to §YOligarchic Law§!."
+ ALREADY_AUTOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YAutocratic Law§!."
+ 
+ DEMOCRATIC_LAW_EXPLANATION: "\nBy enacting this law we enacting this law will center laws around the benefit of the Settlers and of justice. Obviously, your influence over them will not wane if we don't have a Congress, but be aware that anything we pass will be written and enforced similar to antebellum America. \n\nEnacting this policy will grant:\n§G1§! increase in our Diplomatic Reputation."
+
+ OLIGARCHIC_LAW_EXPLANATION: "\nBy enacting this law we enacting this law will center laws around an oligarchy of elites- selected by you, of course - for their benefit. It isn't the most honest policy on the earth, but it is the most lucrative! \n\nEnacting this policy will grant:\n§G20%§! dcrease in the cost of hiring Advisors."
+ 
+ AUTOCRATIC_LAW_EXPLANATION: "\nBy enacting this law we will gain total control over the legislative process. Your will be done as you see fit. This, of course, can be disasterous if you aren't a good leader, but of course, there is absolutely no way this would happen under you.\n\nEnacting this policy will grant:\n§G5%§ in Administrative Efficiency."
+ 
+ 
+ #--------------------------------------------
+ # Justice
+ #--------------------------------------------
+ current_justice_law: "Justice Policy"
+ 
+ justice_selection.1.title: "Justice Policy"
+ justice_selection.1.desc: "Your justice policy controls how your country primarily deals with establishing criminality."
+ justice_selection.1.option.a: "State Courts"
+ justice_selection.1.option.b: "Community Courts"
+ justice_selection.1.option.c: "Secret Courts"
+ 
+ law_court_justice: "Due Process"
+ desc_law_court_justice: "Justice is sought through an impartial and possibly even independent judiciary, granting those accused a fair and just trial."
+ law_community_justice: "Mob Rule"
+ desc_law_community_justice: "Justice is sought through local communal courts, mob rule, and vigilantism. Local practices mean trials can ranged from fair and just to mock trials, where the community enacts what it sees as justice."
+ law_state_justice: "Secret Courts"
+ desc_law_state_justice: "Justice is sought only by the state, where trials are conducted in secret. Scant true justice can be found in such courtrooms."
+ 
+ 
+ SET_STATE_COURTS: "Set §YJustice Policy§! to §YState Courts§!."
+ SET_COMMUNITY_COURTS: "Set §YJustice Policy§! to §YCommunity Courts§!."
+ SET_SECRET_COURTS: "Set §YJustice Policy§! to §YSecret Courts§!."
+ 
+ STATE_COURTS: "State Courts"
+ COMMUNITY_COURTS: "Community Courts"
+ SECRET_COURTS: "Secret Courts"
+ 
+ ALREADY_COURT_JUSTICE: "Our §YJustice Policy§! is already set to §YState courts§!."
+ ALREADY_COMMUNITY_JUSTICE: "Our §YJusitce Policy§! is already set to §YCommunity Courts§!."
+ ALREADY_STATE_JUSTICE: "Our §YJustice Policy§! is already set to §YSecret Courts§!."
+ 
+ COURT_JUSTICE_EXPLANATION: "\nBy enacting this law we will retain a judiciary focused on the antebellum American ideas of a fair and impartial justice system. Matters like reasonable doubt, due process, and a right to legal counsel will exist. \n\nEnacting this policy will grant:\n§G0.05%§! reduction in Corruption each month."
+ 
+ COMMUNITY_JUSTICE_EXPLANATION: "\nBy enacting this law we will largely wash the state's hands of justice and turn it over to the people. You will see a lot more vigilantism and 'democractic' control of the justice system, which may result in things like lynchings. However, this is an extremely popular move among the Settlers and isn't inherently bad: local practices can range from fair and just to mock trials, where the community enacts what it deems to be justice. \n\nEnacting this policy will grant:\n§G5§! points of reduction in Nationalism in newly conquered provinces."
+ 
+ STATE_JUSTICE_EXPLANATION: "\nBy enacting this law we will end public trials and pesky incoveniences like double jeopardy, neutral judges, and letting people go on technicalities. The state will get its view of justice, and it will get it fast. \n\nEnacting this policy will grant:\n§G0.05§! points of reduction in autonomy every month for all owned provinces."
+ 
+ #--------------------------------------------
+ # Punishment
+ #--------------------------------------------
+ current_punishment_law: "Punishment Policy"
+ 
+ punishment_selection.1.title: "Punishment Policy"
+ punishment_selection.1.desc: "Your punishment policy controls how your country primarily deals with sentencing criminals and their punishment."
+ punishment_selection.1.option.a: "Fines"
+ punishment_selection.1.option.b: "Prison"
+ punishment_selection.1.option.c: "Execution"
+ punishment_selection.1.option.d: "Enslavement"
+ 
+ law_fine_punishment: "Fines"
+ desc_law_fine_punishment: "Punishment for most crimes is served through the issue of a fine (or bribe) in the majority of cases."
+ law_imprisonment_punishment: "Prison Labor"
+ desc_law_imprisonment_punishment: "Punishment for crimes is served through imprisonment in the majority of cases."
+ law_execution_punishment: "Execution"
+ desc_law_execution_punishment: "Punishment for crimes is execution in the majority of cases."
+ law_slavery_punishment: "Slavery"
+ desc_law_slavery_punishment: "Criminals are enslaved by the state in the majority of cases."
+ 
+ SET_FINE_PUNISHMENT: "Set §YPunishment Policy§! to §YFine§!."
+ SET_IMPRISONMENT_PUNISHMENT: "Set §YPunishment Policy§! to §YImprisonment§!."
+ SET_EXECUTION_PUNISHMENT: "Set §YPunishment Policy§! to §YExecution§!."
+ SET_SLAVERY_PUNISHMENT: "Set §YPunishment Policy§! to §YSlavery§!."
+ 
+ FINE_PUNISHMENT: "Fines"
+ IMPRISONMENT_PUNISHMENT: "Imprisonment"
+ EXECUTION_PUNISHMENT: "Execution"
+ SLAVERY_PUNISHMENT: "Slavery"
+ 
+ ALREADY_FINE_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YFines§!."
+ ALREADY_IMPRISONMENT_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YImprisonment§!."
+ ALREADY_EXECUTION_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YExecution§!."
+ ALREADY_SLAVERY_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YSlavery§!."
+ 
+ FINE_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will make monetary payments the primary means of convicting criminals for all but the most serious of crimes. \n\nEnacting this policy will grant:\n§G10%§! increase in tax revenue."
+ 
+ IMPRISONMENT_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will make incarceration the primary method of dealing with the scum of the Wasteland for all but the most serious of crimes. \n\nEnacting this policy will grant:\n§G0.1§! reduction in unrest.\n§G10%§! reduction in development costs.\n§G10%§! reduction in construction time."
+ 
+ EXECUTION_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will retain the traditional Wasteland method of justice: six feet under with no one to miss them and no one to cry. \n\nEnacting this policy will grant:\n§G1§! point of reduction in unrest."
+ 
+ SLAVERY_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will ensure scumbag criminals will be working for their betters. While many nations use prison labor, our slave codes allow for us to sell the convicted into slavery, to work for the rest of their lives for their misdeeds. \n\nEnacting this policy will grant:\n§G10%§! increase in manpower recruitment.\n§G10%§! reduction in construction costs."
+ 
+ #--------------------------------------------
+ # Innovation
+ #--------------------------------------------
+ current_innovation_law: "Innovation Policy"
+ 
+ innovation_selection.1.title: "Innovation Policy"
+ innovation_selection.1.desc: "Your innovation policy controls how your country primarily deals with research and innovation."
+ innovation_selection.1.option.a: "Individual Innovation"
+ innovation_selection.1.option.b: "State-sponsored Innovation"
+ innovation_selection.1.option.c: "State Innovation"
+ 
+ law_individual_innovation: "Individual Innovation"
+ desc_law_individual_innovation: "Innovation, research and development, and advancement in the sciences is mainly funded and enacted by the individual, with no state support."
+ law_state_sponsored_innovation: "State-sponsored Innovation"
+ desc_law_state_sponsored_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and largely enacted by the individual."
+ law_state_innovation: "State Innovation"
+ desc_law_state_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and enacted by the state, with individuals dissaded from such activities."
+ 
+ SET_INDIVIDUAL_INNOVATION: "Set §YInnovation Policy§! to §YIndividual§!."
+ SET_SPONSORED_INNOVATION: "Set §YInnovation Policy§! to §YState-sponsored§!."
+ SET_STATE_INNOVATION: "Set §YInnovation Policy§! to §YState§!."
+ 
+ INDIVIDUAL_INNOVATION: "Individual Innovation"
+ SPONSORED_INNOVATION: "Sponsored Innovation"
+ STATE_INNOVATION: "State Innovation"
+ 
+ ALREADY_INDIVIDUAL_INNOVATION: "Our §YInnovation Policy§! is already set to §YIndividual§!."
+ ALREADY_SPONSORED_INNOVATION: "Our §YInnovation Policy§! is already set to §YState-sponsored§!."
+ ALREADY_STATE_INNOVATION: "Our §YInnovation Policy§! is already set to §YState§!."
+ 
+ CHEAP_INNOVATION_EXPLANATION: "\nBy enacting this law we will turn research and development over to the Scientists and lay Settlers at no cost to us. \n\nEnacting this policy will grant:\n§G50%§! increases in the spread of institutions.\n§R100%§! increase in the cost of embracing an institution."
+ 
+ NORMAL_INNOVATION_EXPLANATION: "\nBy enacting this law we will involve state subsidies to Scientists and lay Settlers, and is a hybrid between state R&D and an untouched research system. \n\nEnacting this policy will grant:\n§R-2§! ducat loss per year.\n§G10%§! increase in institution spread.\n§G2§! increases in the size of our advisor pool."
+ 
+ STATE_SCIENCE_EXPLANATION: "\nBy enacting this law we will nationalize our nation's research and development, at the cost of the common man. This will make it easier for us to advance in technological profiency and general Innovation, but it will be expensive. \n\nEnacting this policy will grant:\n§R15%§! decrease in tax revenue.\n§R33%§! decrease in the spread of institutions.\n§G50%§! decrease in the cost of embracing an institution.\n§G1§! point of innovativeness per year."
+ 
+ #--------------------------------------------
+ # Conscription
+ #--------------------------------------------
+ current_conscription_law: "Conscription Policy"
+ 
+ conscription_selection.1.title: "Conscription Policy"
+ conscription_selection.1.desc: "Your conscription policy controls how your country handles supplying its armies with soldiers."
+ conscription_selection.1.option.a: "Volunteer Conscription"
+ conscription_selection.1.option.b: "Limited Conscription"
+ conscription_selection.1.option.c: "Full Conscription"
+ 
+ law_volunteer_conscription: "Volunteer Conscription"
+ desc_law_volunteer_conscription: "The manpower of our armies is mainly fueled by volunteers."
+ law_limited_conscription: "Limited Conscription"
+ desc_law_limited_conscription: "The manpower of our armies is fueled by the recruitment of able-bodied, adult men."
+ law_full_conscription: "Full Conscription"
+ desc_law_full_conscription: "The manpower of our armies is fueled by the recruitment of all citizens old enough to walk."
+ 
+ SET_VOLUNTEER_CONSCRIPTION: "Set §YConscription Policy§! to §YVolunteer§!."
+ SET_LIMITED_CONSCRIPTION: "Set §YConscription Policy§! to §YLimited§!."
+ SET_FULL_CONSCRIPTION: "Set §YConscription Policy§! to §YFull§!."
+ 
+ VOLUNTEER_CONSCRIPTION: "Volunteer Conscription"
+ LIMITED_CONSCRIPTION: "Limited Conscription"
+ FULL_CONSCRIPTION: "Full Conscription"
+ 
+ ALREADY_VOLUNTEER_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YVolunteer§!."
+ ALREADY_LIMITED_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YLimited§!."
+ ALREADY_FULL_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YFull§!."
+ 
+ VOLUNTEER_CONSCRIPTION_EXPLANATION: "\nBy enacting this law we will make our armies an all-volunteer force outside of a full-on invasaion. \n\nEnacting this policy will grant:\n§R50%§! decrease in the size of our manpower pool.\n§G2§! points of unrest reduction.\n§G10%§! increase in our troop morale.\n§G5%§! increase in our troop discipline."
+ 
+ LIMITED_CONSCRIPTION_EXPLANATION: "\nBy enacting this law we will allow us to draft all able-bodied, adult men to serve in our military. \n\nEnacting this policy will grant:\n§G15%§! increase in the size of our manpower pool.\n§R2%§! decrease in our construction speed.\n§R2%§! increase in our construction costs.\n§G2§! points added to our land forcelimit.\n§R10%§! decrease in our troop morale.\n§R5%§! decrease in our troop discipline."
+ 
+ FULL_CONSCRIPTION_EXPLANATION: "\nBy enacting this law er will conscript §Reveryone§!, including children and women, to a period of service. \n\nEnacting this policy will grant:\n§R20%§! decrease in tax revenue.\n§G100%§! increase in the size of our manpower pool.\n§R10%§! decrease in troop morale.\n§R15%§! decrease in troop discipline.\n§R100%§! decrease in construction speed.\n§R15%§! increase in construction costs.\n§G0.25§! points of Army Tradition per year.\n§G50%§! decrease in the cost of infantry.\n§R50§! decrease in drilling effectiveness.\n§G5§! points in land forcelimit.\n§R2§! points of unrest."
+ 
+ #--------------------------------------------
+ # Slavery
+ #--------------------------------------------
+ current_slavery_law: "Slavery Regulation"
+ 
+ slavery_selection.1.title: "Slavery Regulation"
+ slavery_selection.1.desc: "Your slavery regulation controls how your country views slavery and the usage of slavery within the country."
+ slavery_selection.1.option.a: "Allowed"
+ slavery_selection.1.option.b: "Licensed"
+ slavery_selection.1.option.c: "Forbidden"
+ 
+ law_slavery_allowed: "Slavery Allowed"
+ desc_law_slavery_allowed: "Slavery is practicable by any citizen, and the state if it so pleases."
+ law_slavery_licensed: "Slavery Licensed"
+ desc_law_slavery_licensed: "Slavery is primarily practiced by the state."
+ law_slavery_forbidden: "Slavery Forbidden"
+ desc_law_slavery_forbidden: "Slavery is forbidden."
+ 
+ SET_SLAVERY_ALLOWED: "Set §YSlavery Regulation§! to §YAllowed§!."
+ SET_SLAVERY_LICENSED: "Set §YSlavery Regulation§! to §YLicensed§!."
+ SET_SLAVERY_FORBIDDEN: "Set §YSlavery Regulation§! to §YForbidden§!."
+ 
+ SLAVERY_ALLOWED: "Allowed"
+ SLAVERY_LICENSED: "Licensed"
+ SLAVERY_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_SLAVERY: "Our §YSlavery Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SLAVERY: "Our §YSlavery Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SLAVERY: "Our §YSlavery Regulation§! is already set to §YForbidden§!."
+ 
+ SLAVERY_ALLOWED_EXPLANATION: "\nBy enacting this law, slavery is legalized for all citizens. \n\nEnacting this policy will grant:\n§G25%§! decrease in the cost of troops.\n§G25%§! decrease in the time to train troops.\n§G5%§! increase in production of goods.\n§R2§! point decrease in our diplomatic repuation."
+ 
+ SLAVERY_LICENSED_EXPLANATION: "\nBy enacting this law we adopt a limited approach to slavery. Slave labor is primarily employed by the state for economic and punitive purposes and supplements the labor of freemen. There are few, if any private slavers under this system. \n\nEnacting this policy will grant:\n§G10%§! decrease in the cost of troops.\n§G10%§! decrease in the time to train troops.\n§G10%§! decrease in construction costs\n§R1§! point decrease in our diplomatic repuation."
+ 
+ SLAVERY_FORBIDDEN_EXPLANATION: "\nBy enacting this law we outlaw slavery and strictly enforces the ban. This is an extremely prestigious and noble act in the eyes of other nations. \n\nEnacting this policy will grant:\n§G1§! point increase in our diplomatic reputation.\n§G0.1§! increase in yearly prestige gain."
+ 
+ #--------------------------------------------
+ # Gambling
+ #--------------------------------------------
+ current_gambling_law: "Gambling Regulation"
+ 
+ gambling_selection.1.title: "Gambling Regulation"
+ gambling_selection.1.desc: "Your gambling regulation controls how your country views gambling and the presence of gambling-related activities within the country."
+ gambling_selection.1.option.a: "Allowed"
+ gambling_selection.1.option.b: "Licensed"
+ gambling_selection.1.option.c: "Forbidden"
+
+ law_gambling_allowed: "Gambling Allowed"
+ desc_law_gambling_allowed: "Gambling is allowed anywhere without restriction."
+ law_gambling_licensed: "Gambling Licensed"
+ desc_law_gambling_licensed: "Gambling only allowed in state-sanctioned venues. Other forms are prosecuted."
+ law_gambling_forbidden: "Gambling Forbidden"
+ desc_law_gambling_allowed: "Gambling is forbidden."
+ 
+ SET_GAMBLING_ALLOWED: "Set §YGambling Regulation§! to §YAllowed§!."
+ SET_GAMBLING_LICENSED: "Set §YGambling Regulation§! to §YLicensed§!."
+ SET_GAMBLING_FORBIDDEN: "Set §YGambling Regulation§! to §YForbidden§!."
+ 
+ GAMBLING_ALLOWED: "Allowed"
+ GAMBLING_LICENSED: "Licensed"
+ GAMBLING_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_GAMBLING: "Our §YGambling Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_GAMBLING: "Our §YGambling Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_GAMBLING: "Our §YGambling Regulation§! is already set to §YForbidden§!."
+ 
+ GAMBLING_ALLOWED_EXPLANATION: "\nBy enacting this law we allow for unrestricted gambling throughout our provinces. This significantly boosts our income, but due to the populace spending their money and wasting time at casinoes, our production output will be lowered.\n\nEnacting this policy will grant:\nThe 'The House Wins!' event.\n§G15%§! increase in tax revenue.\n§R20%§! decrease in production of goods."
+ 
+ GAMBLING_LICENSED_EXPLANATION: "\nBy enacting this law we allow for limited gambling operations throughout our provinces. \n\nEnacting this policy will grant:\nThe 'The House Wins!' event.\n§G10%§! increase in tax revenue.\n§R10%§! decrease in production of goods."
+ 
+ GAMBLING_FORBIDDEN_EXPANATION: "\nBy enacting this law we outlaw gambling. This is considered a very noble act, increasing our prestige amougst our peers.\n\nEnacting this policy will grant:\n§G0.5§! decrease in unrest.\n§G10%§! increase in production of goods.\n§G0.1§! increase in yearly prestige."
+ 
+ gambling_flavour.1.title: "The House Wins!"
+ gambling_flavour.1.desc: "An unfortunate loser has lost big in one of our casinos, supplying the house, and therefore us with their losses."
+ gambling_flavour.1.option.a: "Excellent"
+ 
+ #--------------------------------------------
+ # Prostitution
+ #--------------------------------------------
+ current_prostitution_law: "Prostitution Regulation"
+ 
+ prostitution_selection.1.title: "Prostitution Regulation"
+ prostitution_selection.1.desc: "Your prostitution regulation controls how your country views prostitution and the presence of prostitution-related activities within the country."
+ prostitution_selection.1.option.a: "Allowed"
+ prostitution_selection.1.option.b: "Licensed"
+ prostitution_selection.1.option.c: "Forbidden"
+ 
+ law_prostitution_allowed: "Prostitution Allowed"
+ desc_law_prostitution_allowed: "Prostitution is allowed anywhere without restriction."
+ law_prostitution_licensed: "Prostitution Licensed"
+ desc_law_prostitution_licensed: "Brothels are strictly licensed by the state."
+ law_prostitution_forbidden: "Prostitution Forbidden"
+ desc_law_prostitution_forbidden: "Prostitution is forbidden."
+ 
+ SET_PROSTITUTION_ALLOWED: "Set §YProstitution Regulation§! to §YAllowed§!."
+ SET_PROSTITUTION_LICENSED: "Set §YProstitution Regulation§! to §YLicensed§!."
+ SET_PROSTITUTION_FORBIDDEN: "Set §YProstitution Regulation§! to §YForbidden§!."
+ 
+ PROSTITUTION_ALLOWED: "Allowed"
+ PROSTITUTION_LICENSED: "Licensed"
+ PROSTITUTION_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_PROSTITUTION: "Our §YProstitution Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_PROSTITUTION: "Our §YProstitution Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_PROSTITUTION: "Our §YProstitution Regulation§! is already set to §YForbidden§!."
+ 
+ PROSTITUTION_ALLOWED_EXPLANATION: "\nBy enacting this law we will permit the 'exploits' of ambitious young women and their 'noble' courtiers.\n\nEnacting this policy will grant:\n§R0.05§! points of corruption each year.\n§G25%§! increase in heir production.\n§G1§! point decrease in unrest.\n§R0.1§! decrease in yearly prestige."
+ 
+ PROSTITUTION_LICENSED_EXPLANATION: "\nBy enacting this law we will permit the exploitation of women by state-licensed businesses.\n\nEnacting this policy will grant:\n§R0.05§! points of corruption each year.\n§G0.5§! point decrease in unrest.\n§R0.1§! decrease in yearly prestige.\n§G15%§! increase in tax revenue."
+ 
+ PROSTITUTION_FORBIDDEN_EXPLANATION: "\nBy enacting this law we will protect the womenfolk of our country, especially the poor, from selling their bodies into prostitution. \n\nEnacting this policy will grant:\n§G0.03§! decrease in yearly corruption.\n§G0.1§! increase in yearly prestige.\n§G0.05§! increase in prestige from conversion."
+ 
+ #--------------------------------------------
+ # Firearms
+ #--------------------------------------------
+ current_firearms_law: "Gun Control"
+ 
+ firearms_selection.1.title: "Firearms Regulation"
+ firearms_selection.1.desc: "Your firearms regulation controls how your country views the carrying of firearms and the presence of non-state firearms-related activities and possession within the country."
+ firearms_selection.1.option.a: "Allowed"
+ firearms_selection.1.option.b: "Licensed"
+ firearms_selection.1.option.c: "Forbidden"
+ 
+ law_firearms_allowed: "Constitutional Carry"
+ desc_law_firearms_allowed: "The right to keep and bare arms is not infringed."
+ law_firearms_licensed: "Gun Registry"
+ desc_law_firearms_licensed: "Possession of firearms is allowed with a license."
+ law_firearms_forbidden: "Gun Control"
+ desc_law_firearms_forbidden: "The state is attempting to disarm its civilian populace."
+ 
+ SET_FIREARMS_ALLOWED: "Set §YFirearms Regulation§! to §YAllowed§!."
+ SET_FIREARMS_LICENSED: "Set §YFirearms Regulation§! to §YLicensed§!."
+ SET_FIREARMS_FORBIDDEN: "Set §YFirearms Regulation§! to §YForbidden§!."
+ 
+ FIREARMS_ALLOWED: "Allowed"
+ FIREARMS_LICENSED: "Licensed"
+ FIREARMS_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_FIREARMS: "Our §YFirearms Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_FIREARMS: "Our §YFirearms Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_FIREARMS: "Our §YFirearms Regulation§! is already set to §YForbidden§!."
+ 
+ FIREARMS_ALLOWED_EXPLANATION: "\nBy enacting this law, we will institute a well regulated militia, neccesary for the security. \n\nEnacting this policy will grant:\n§G1§! point decrease in unrest.\n§R20%§! increase in the cost of harsh treatment.\n§G25%§! decrease in the cost of reinforcements.\n§R5§! point increase in nationalism in newly conquered provinces."
+ 
+ FIREARMS_LICENSED_EXPLANATION: "\nBy enacting this law we will be restricting the ownership of guns to those licensed by state officials.\n\nEnacting this policy will grant:\n§G0.5§! point decrease in unrest.\n§R10%§! increase in the cost of harsh treatment.\n§G10%§! decrease in the cost of reinforcements.\n§R3§! point increase in nationalism in newly conquered provinces."
+ 
+ FIREARMS_FORBIDDEN_EXPLANATION: "\nBy enacting this law will be be restricting the ownership of guns to the state only. This will anger many of our citizens.\n\nEnacting this policy will grant:\n§G10§! point decrease in nationalism in newly conquered provinces.\n§G10%§! decrease in the cost of harsh treatment.\n§R2§! point increase in unrest."
+ 
+ #--------------------------------------------
+ # Narcotics
+ #--------------------------------------------
+ current_narcotics_law: "Hard Drug Regulation"
+ 
+ narcotics_selection.1.title: "Narcotics Regulation"
+ narcotics_selection.1.desc: "Your narcotics regulation controls how your country views hard drugs and the presence of drug activities within the country."
+ narcotics_selection.1.option.a: "Allowed"
+ narcotics_selection.1.option.b: "Licensed"
+ narcotics_selection.1.option.c: "Forbidden"
+ 
+ law_narcotics_allowed: "Hard Drugs Allowed"
+ desc_law_narcotics_allowed: "Hard drug production and usage are allowed without restriction."
+ law_narcotics_licensed: "Hard Drugs Licensed"
+ desc_law_narcotics_licensed: "Hard drug production and usage are allowed with license."
+ law_narcotics_forbidden: "Hard Drugs Forbidden"
+ desc_law_narcotics_forbidden: "The production and usage of hard drugs (and, in some states, lesser drugs like alcohol) are forbidden."
+ 
+ SET_NARCOTICS_ALLOWED: "Set §YNarcotics Regulation§! to §YAllowed§!."
+ SET_NARCOTICS_LICENSED: "Set §YNarcotics Regulation§! to §YLicensed§!."
+ SET_NARCOTICS_FORBIDDEN: "Set §YNarcotics Regulation§! to §YForbidden§!."
+ 
+ NARCOTICS_ALLOWED: "Allowed"
+ NARCOTICS_LICENSED: "Licensed"
+ NARCOTICS_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_NARCOTICS: "Our §YNarcotics Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_NARCOTICS: "Our §YNarcotics Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_NARCOTICS: "Our §YNarcotics Regulation§! is already set to §YForbidden§!."
+ 
+ NARCOTICS_ALLOWED_EXPLANATION: "\nBy enacting this law we will legalize the consumption and production of many drugs, such as jet, methamphetamine, etc.\n\nEnacting this policy will grant:\n§G15%§! decrease in shock damage taken by troops.\n§G20%§! decrease in native uprisings.\n§R1§! point increase in unrest.\n§R0.1§! decrease in yearly prestige."
+ 
+ NARCOTICS_LICENSED_EXPLANATION: "\nBy enacting this law we will legalize the consumption of drugs, and restrict the production of drugs to state-sponsored businesses.\n\nEnacting this policy will grant:\n§G5%§! decrease in shock damage taken by troops.\n§R0.5§! point increase in unrest.\n§G5%§! decrease in native uprisings.\n§G5%§! increase in tax revenue.\n§R0.05§! decrease in yearly prestige."
+ 
+ NARCOTICS_FORBIDDEN_EXPLANATION: "\nBy enacting this law we will crimilize the consumption and production of drugs by anybody other than the state.\n\nEnacting this policy will grant:\n§G1§! point decrease in unrest.\n§G0.15§! increase in yearly prestige.\n§R10%§! decrease in caravan effectiveness."
+ 
+ #--------------------------------------------
+ # Scavenging
+ #--------------------------------------------
+ current_scavenging_law: "Scavenging Regulation"
+ 
+ scavenging_selection.1.title: "Scavenging Regulation"
+ scavenging_selection.1.desc: "Your scavenging regulation controls how your country views scavenging and the presence of non-state scavenging-related activities within the country."
+ scavenging_selection.1.option.a: "Allowed"
+ scavenging_selection.1.option.b: "Licensed"
+ scavenging_selection.1.option.c: "Forbidden"
+ 
+ law_scavenging_allowed: "Scavenging Allowed"
+ desc_law_scavenging_allowed: "Scavenging is allowed without restriction."
+ law_scavenging_licensed: "Scavenging Licensed"
+ desc_law_scavenging_licensed: "Scavenging is only allowed by the state and state-sanctioned individuals."
+ law_scavenging_forbidden: "Scavenging Forbidden"
+ desc_law_scavenging_forbidden: "Scavenging is only allowed by the state."
+ 
+ SET_SCAVENGING_ALLOWED: "Set §YScavenging Regulation§! to §YAllowed§!."
+ SET_SCAVENGING_LICENSED: "Set §YScavenging Regulation§! to §YLicensed§!."
+ SET_SCAVENGING_FORBIDDEN: "Set §YScavenging Regulation§! to §YForbidden§!."
+ 
+ SCAVENGING_ALLOWED: "Allowed"
+ SCAVENGING_LICENSED: "Licensed"
+ SCAVENGING_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_SCAVENGING: "Our §YScavenging Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SCAVENGING: "Our §YScavenging Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SCAVENGING: "Our §YScavenging Regulation§! is already set to §YForbidden§!."
+ 
+ SCAVENGING_ALLOWED_EXPLANATION: "\nBy enacting this law we will permit all citizens to scavenge for parts as many wastelanders seek to do.\n\nEnacting this policy will grant:\n§G10%§! increase in the extraction of resources.\n§R20%§! increase in construction costs."
+ 
+ SCAVENGING_LICENSED_EXPLANATION: "\nBy enacting this law we will restrict scavenging to specific businesses, and require sole scavengers to register or face charges.\n\nEnacting this policy will grant:\n§G5%§! increase in the extraction of resources.\n§R10%§! increase in construction costs."
+ 
+ SCAVENGING_FORBIDDEN_EXPLANATION: "\nBy enacting this law we will forbide scavenging by anybody other than the state.\n\nEnacting this policy will grant:\n§G20%§! decrease in construction costs."
+ 
+ #--------------------------------------------
+ # Decisions
+ #--------------------------------------------
+ law_hide_menus_title: "Hide Laws"
+ law_hide_menus_desc: "Toggle visibility of policy and regulation decisions."
+ 
+ law_show_menus_title: "Show Laws"
+ law_show_menus_desc: "Toggle visibility of policy and regulation decisions."
+ 
+ law_economy_selection_title: "Enact Economic Policy"
+ law_economy_selection_desc: "Change your economic policy."
+ 
+ law_law_selection_title: "Enact Law Policy"
+ law_law_selection_desc: "Change your law policy."
+ 
+ law_justice_selection_title: "Enact Justice Policy"
+ law_justice_selection_desc: "Change your justice policy."
+ 
+ law_punishment_selection_title: "Enact Punishment Policy"
+ law_punishment_selection_desc: "Change your punishment policy."
+ 
+ law_innovation_selection_title: "Enact Innovation Policy"
+ law_innovation_selection_desc: "Change your innovation policy."
+ 
+ law_conscription_selection_title: "Enact Conscription Policy"
+ law_conscription_selection_desc: "Change your conscription policy."
+ 
+ law_slavery_selection_title: "Pass Slavery Regulation"
+ law_slavery_selection_desc: "Change your slavery regulation."
+ 
+ law_gambling_selection_title: "Pass Gambling Regulation"
+ law_gambling_selection_desc: "Change your gambling regulation."
+ 
+ law_prostitution_selection_title: "Pass Prostitution Regulation"
+ law_prostitution_selection_desc: "Change your prostitution regulation."
+ 
+ law_firearms_selection_title: "Pass Firearms Regulation"
+ law_firearms_selection_desc: "Change your firearms regulation."
+ 
+ law_narcotics_selection_title: "Pass Narcotics Regulation"
+ law_narcotics_selection_desc: "Change your narcotics regulation."
+ 
+ law_scavenging_selection_title: "Pass Scavenging Regulation"
+ law_scavenging_selection_desc: "Change your scavenging regulation."
+ 
+ 
+ 
+ 

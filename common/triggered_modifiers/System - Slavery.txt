@@ -1,0 +1,31 @@
+# Slavery
+law_slavery_allowed = {
+    potential 	= { is_variable_equal = { which = current_slavery_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = current_slavery_law value = 1 } }
+	
+	global_regiment_cost = -0.25
+    global_regiment_recruit_speed = -0.25
+	production_efficiency = 0.05
+    
+    diplomatic_reputation = -2
+}
+
+law_slavery_licensed = {
+    potential 	= { is_variable_equal = { which = current_slavery_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = current_slavery_law value = 2 } }
+
+	global_regiment_cost = -0.1
+    global_regiment_recruit_speed = -0.1
+	build_cost = -0.1
+    
+    diplomatic_reputation = -1
+}
+
+law_slavery_forbidden = {
+    potential 	= { is_variable_equal = { which = current_slavery_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = current_slavery_law value = 3 } }
+	
+	diplomatic_reputation = 1
+	prestige = 0.1
+}
+

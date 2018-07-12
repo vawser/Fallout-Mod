@@ -1,0 +1,22 @@
+# Law
+law_democratic_law = {
+    potential 	= { is_variable_equal = { which = current_law_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = current_law_law value = 1 } }
+	
+	diplomatic_reputation = 1
+}
+
+law_oligarchic_law = {
+    potential 	= { is_variable_equal = { which = current_law_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = current_law_law value = 2 } }
+	
+	advisor_cost = -0.2
+}
+
+law_autocratic_law = {
+    potential 	= { is_variable_equal = { which = current_law_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = current_law_law value = 3 } }
+	
+	administrative_efficiency = 0.05
+}
+

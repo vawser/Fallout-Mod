@@ -7,7 +7,7 @@ country_decisions = {
 			OR = {
 				tag = CAE
 				tag = GD2
-				tag = CAE
+				government = legion
 			}
 		}
 		
@@ -56,6 +56,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_tag = X01
+			set_government_rank = 3
 		}
 	}
 	
@@ -101,6 +102,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_tag = X02
+			set_government_rank = 3
 		}
 	}
 	
@@ -112,6 +114,7 @@ country_decisions = {
             NOT = { exists = X12 }
 			OR = {
 				technology_group = tech_ncr
+				tag = NCR
 				tag = D01
 			}
 		}
@@ -203,6 +206,8 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_tag = X03
+			set_government_rank = 3
+			change_government = grand_republic
 		}
 	}
 	
@@ -577,6 +582,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 100
+			set_government_rank = 3
 			change_tag = X04
 		}
 	}
@@ -585,11 +591,17 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			technology_group = tech_bos
+			OR = {
+				technology_group = tech_bos
+				religion = creatorism
+				government = administrative_brotherhood_chapter
+				government = diplomatic_brotherhood_chapter
+				government = fascist_brotherhood_chapter
+			}
 		}
 		allow =  {
 			has_country_modifier = unified_brotherhood
-            religion = creatorism
+#            religion = creatorism
 			total_development = 250
 			num_of_cities = 20
 		}
@@ -601,6 +613,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_tag = X05
+			set_government_rank = 3
 		}
 	}
 	
@@ -616,7 +629,11 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			religion = mormon
+			OR = {
+				tag = DED
+				tag = SOR
+				religion = mormon
+			}
 			custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_NEW_CANAAN
                 3009 = {
@@ -633,6 +650,7 @@ country_decisions = {
 			}
 			add_prestige = 50
 			change_tag = X06
+			change_religion = mormon
 			swap_free_idea_group = yes
 			
 			change_government = theocracy
@@ -695,6 +713,7 @@ country_decisions = {
 			add_prestige = 25
 			change_tag = X07
 			swap_free_idea_group = yes
+			set_government_rank = 3
 		}
 	}
     
@@ -782,6 +801,81 @@ country_decisions = {
 			add_prestige = 25
 			change_tag = X08
 			swap_free_idea_group = yes
+			set_government_rank = 3
+		}
+	}
+
+	establish_empire = {
+		major = yes
+		potential = {
+			OR = {
+				government = administrative_settlement
+				government = diplomatic_settlement
+				government = military_settlement
+				government = administrative_monarchy
+				government = constitutional_monarchy
+				government = elective_monarchy
+				government = patriarchy
+				government = iqta
+				is_hereditary_government = yes
+			}
+			NOT = { has_country_flag = got_empire }
+			NOT = {
+				tag = ENC
+				government = enclave_gov
+			}
+		}
+		allow =  {
+			stability = 3
+			total_development = 700
+		}
+	  	effect = {
+			add_stability = -3
+			add_country_modifier = {
+				name = unstable_state
+				duration = 3650
+			}
+			set_government_rank = 3
+			change_government = fm_empire
+			set_country_flag = got_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	establish_grand_republic = {
+		major = yes
+		potential = {
+			OR = {
+				government = administrative_republic
+				government = trade_republic
+				government = military_republic
+				government = federal_republic
+				government = dictatorship
+				government = merchant_republic
+				government = constitutional_republic
+				is_republic_government = yes
+			}
+			NOT = { has_country_flag = basically_merica }
+			NOT = { tag = ENC }
+			NOT = { government = enclave_gov }
+		}
+		allow =  {
+			stability = 3
+			total_development = 700
+		}
+	  	effect = {
+			add_stability = -3
+			add_country_modifier = {
+				name = unstable_state
+				duration = 3650
+			}
+			set_country_flag = basically_merica
+			change_government = grand_republic
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

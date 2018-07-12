@@ -1,0 +1,28 @@
+# Innovation
+law_individual_innovation = {
+    potential 	= { is_variable_equal = { which = current_innovation_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = current_innovation_law value = 1 } }
+	
+	global_institution_spread = 0.5
+    embracement_cost = 1
+}
+
+law_state_sponsored_innovation = {
+    potential 	= { is_variable_equal = { which = current_innovation_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = current_innovation_law value = 2 } }
+	
+	global_tax_income = -2 # §0.16 monthly
+	global_institution_spread = 0.1
+	advisor_pool = 2
+}
+
+law_state_innovation = {
+    potential 	= { is_variable_equal = { which = current_innovation_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = current_innovation_law value = 3 } }
+	
+	global_tax_modifier = -0.15
+	global_institution_spread = -0.33
+    embracement_cost = -0.5
+	innovativeness_gain = 1
+}
+

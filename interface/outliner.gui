@@ -3,8 +3,8 @@ guiTypes = {
 		name = "outliner"
 		backGround=""
 		position = { x=10 y=80 }	
-		show_position = { x=-256 y=120 }
-		hide_position = { x=500 y=120 }	
+		show_position = { x=-255 y=100 }
+		hide_position = { x=500 y=100 }	
 		animation_type = "decelerated"
 		animation_time = 0	
 		size = { x=256 y=100 }
@@ -18,16 +18,13 @@ guiTypes = {
 		iconType = {
 			name ="outliner_top"
 			spriteType = "GFX_outliner_top"
-			position = { x= 0 y = 9 }
+			position = { x= -1 y = 9 }
 		}
 
 		guiButtonType = {
 			name = "button_outliner_options"
-			quadTextureSprite ="GFX_button_plus"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
-			position = { x = 14 y = 9 }
+			quadTextureSprite ="GFX_fallout_menu_button"
+			position = { x = 224 y = 10 }
 		}
 		
 		listboxType = {
@@ -38,7 +35,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 2
-			scrollbartype = "standardlistbox_slider"
+			scrollbartype = "standardlistbox_noslider"
 			offset = { x=-16 y=0 }
 			borderSize = {x = 0 y = 0}
 		}
@@ -47,13 +44,13 @@ guiTypes = {
 	iconType = {
 	 	name ="outliner_bottom"
 		spriteType = "GFX_outliner_bottom"
-		position = { x= -83 y = 45 }
+		position = { x= -84 y = 45 }
 	}
 	
 	windowType = {
 		name = "outliner_configuration"
 		backGround="Background"
-		position = { x=-430 y= 200 }	
+		position = { x=-502 y= 110 }	
 		size = { x=192 y=345 }
 		moveable = 0
 		dontRender = ""
@@ -63,72 +60,66 @@ guiTypes = {
 		orientation = "UPPER_RIGHT"
 
 		guiButtonType = {
-				name = "Background"	
-				quadTextureSprite ="opaque_blue"
-				tooltip = ""	
-				tooltipText =""
-				delayedTooltipText = ""
-			}	
+            name = "Background"	
+            quadTextureSprite ="opaque_blue"
+        }	
 
-			listboxType = {
-				name ="outliner_configuration_list"
-				position = { x = 30 y = 40 }
-				backGround=""
-				size = { x= 135 y = 255}
-				Orientation = "UPPER_LEFT"
-				horizontal = 0
-				spacing = 2
-				scrollbartype = "standardlistbox_slider"
-				offset = { x=0 y=0 }
-				borderSize = {x = 0 y = 0}
-			}
-
-			guiButtonType = {
-				name = "close_button"	
-				position = {x = 22 y = 294 }
-				quadTextureSprite ="button_type_7"
-				tooltip = ""	
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "CLOSE"
-				buttonFont = "vic_18"
-				clicksound = close_window
-			}
-		}
-        
-        windowType = {
-            name = "outliner_configuration_entry"
+        listboxType = {
+            name ="outliner_configuration_list"
+            position = { x = 30 y = 20 }
             backGround=""
-            position = { x=0 y=0 }	
-            size = { x=256 y=16 }
-            moveable = 0
-            dontRender = ""
-            horizontalBorder= ""
-            verticalBorder= ""
-            fullScreen = no	
-
-			checkboxType = {
-				name = "outliner_checkbox"
-				position = { x = -11  y = 0 }
-				quadTextureSprite ="GFX_checkbox_small"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "vic_18"
-			}
-
-			instantTextBoxType = {
-				position = {x = 10 y = 0 }
-				name = "outliner_list_text"
-				font = "vic_18"
-				borderSize = {x = 0 y = 0}	
-				maxWidth = 172
-				maxHeight = 18
-				text = ""	
-				orientation = "UPPER_LEFT"
-				format = left
-			}
+            size = { x= 120 y = 255}
+            Orientation = "UPPER_LEFT"
+            horizontal = 0
+            spacing = 2
+            scrollbartype = "standardlistbox_noslider"
+            offset = { x=0 y=0 }
+            borderSize = {x = 0 y = 0}
         }
+
+        guiButtonType = {
+            name = "close_button"	
+            position = {x = 55 y = 294 }
+            quadTextureSprite ="GFX_fm_button_94x31"
+            tooltip = ""	
+            tooltipText =""
+            delayedTooltipText = ""
+            buttonText = "Close"
+            buttonFont = "monofonto_outline_14"
+            clicksound = close_window
+        }
+    }
+        
+    windowType = {
+        name = "outliner_configuration_entry"
+        backGround=""
+        position = { x=0 y=0 }	
+        size = { x=256 y=16 }
+        moveable = 0
+        fullScreen = no	
+
+        checkboxType = {
+            name = "outliner_checkbox"
+            position = { x = -11  y = 10 }
+            quadTextureSprite ="GFX_checkbox_small"	
+            tooltip = ""
+            tooltipText =""
+            delayedTooltipText = ""
+            buttonFont = "monofonto_outline_12"
+        }
+
+        instantTextBoxType = {
+            position = {x = 10 y = 10 }
+            name = "outliner_list_text"
+            font = "monofonto_outline_12"
+            borderSize = {x = 0 y = 0}	
+            maxWidth = 172
+            maxHeight = 18
+            text = ""	
+            orientation = "UPPER_LEFT"
+            format = left
+        }
+    }
 
         windowType = {
             name = "outliner_standard_entry"
@@ -155,7 +146,7 @@ guiTypes = {
                 name = "entry_text"
                 position = { x = 76 y = 0 }
                 textureFile = ""
-                font = "vic_18"
+                font = "monofonto_outline_12"
                 borderSize = {x = 4 y = 0}
                 text = ""	
                 maxWidth = 154
@@ -169,7 +160,7 @@ guiTypes = {
                 name = "info_text"
                 position = { x = 36 y = 0 }
                 textureFile = ""
-                font = "vic_18"
+                font = "monofonto_outline_12"
                 borderSize = {x = 4 y = 0}
                 text = ""
                 maxWidth = 97
@@ -198,14 +189,14 @@ guiTypes = {
                 tooltip = ""
                 tooltipText =""
                 delayedTooltipText = ""
-                buttonFont = "vic_18"
+                buttonFont = "monofonto_outline_12"
             }
 
             instantTextBoxType = {
 				name = "entry_text"
 				position = { x = 76 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -219,7 +210,7 @@ guiTypes = {
 				name = "occupied"
 				position = { x = 36 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 52
@@ -253,14 +244,14 @@ guiTypes = {
                 tooltip = ""
                 tooltipText =""
                 delayedTooltipText = ""
-                buttonFont = "vic_18"
+                buttonFont = "monofonto_outline_12"
             }
 
             instantTextBoxType = {
 				name = "entry_text"
 				position = { x = 76 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -274,7 +265,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 36 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 120
@@ -309,7 +300,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 36 y = 0 }
 				textureFile = "" 
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 120
@@ -323,7 +314,7 @@ guiTypes = {
 				name = "entry_text"
 				position = { x = 76  y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -367,7 +358,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 36 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth =102
@@ -380,7 +371,7 @@ guiTypes = {
 				name = "entry_text"
 				position = { x = 76 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -424,7 +415,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 36 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 100
@@ -437,7 +428,7 @@ guiTypes = {
 				name = "entry_text"
 				position = { x = 76 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -473,7 +464,7 @@ guiTypes = {
 				name = "entry_text"
 				position = { x = 76 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -487,7 +478,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 36 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 100
@@ -522,7 +513,7 @@ guiTypes = {
 				name = "entry_text"
 				position = { x = 119 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 110
@@ -536,7 +527,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 34 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 80
@@ -580,7 +571,7 @@ guiTypes = {
 				name = "entry_text"
 				position = { x = 76 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -594,7 +585,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 36 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 100
@@ -647,7 +638,7 @@ guiTypes = {
                 name = "entry_text"
                 position = { x = 106 y = 0 }
                 textureFile = ""
-                font = "vic_18"
+                font = "monofonto_outline_12"
                 borderSize = {x = 4 y = 0}
                 text = ""	
                 maxWidth = 136
@@ -662,7 +653,7 @@ guiTypes = {
                 name = "info_text"
                 position = { x = 36 y = 0 }
                 textureFile = ""
-                font = "vic_18"
+                font = "monofonto_outline_12"
                 borderSize = {x = 4 y = 0}
                 text = ""	
                 maxWidth = 96
@@ -692,14 +683,14 @@ guiTypes = {
                 tooltip = ""
                 tooltipText =""
                 delayedTooltipText = ""
-                buttonFont = "vic_18"
+                buttonFont = "monofonto_outline_12"
             }
 
             instantTextBoxType = {
 				name = "entry_text"
 				position = { x = 76 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 154
@@ -713,7 +704,7 @@ guiTypes = {
 				name = "info_text"
 				position = { x = 36 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 256
@@ -736,15 +727,15 @@ guiTypes = {
             
             iconType = {
                 name ="outliner_header"
-                spriteType = "GFX_outliner_header"
-                position = { x= -9 y = -6 }
+                spriteType = "GFX_outliner_standard"
+                position = { x= 0 y = 0 }
             }
 
             instantTextBoxType = {
 				name = "entry_text"
-				position = { x = 28 y = 1 }
+				position = { x = 15 y = -2 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_16"
 				borderSize = {x = 4 y = 0}
 				text = ""	
 				maxWidth = 180

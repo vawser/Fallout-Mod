@@ -54,15 +54,7 @@ protestant_rebels = {
 		modifier = {
 			factor = 0.5
 			tolerance_to_this = 2
-		}
-		modifier = {
-			factor = 5.0
-			owner = { has_disaster = religious_turmoil }
 		}	
-		modifier = {
-			factor = 10.0
-			owner = { has_disaster = french_wars_of_religion }
-		}			
 		modifier = {
 			factor = 2000
 			has_missionary = yes
@@ -246,18 +238,6 @@ protestant_rebels = {
 			add_country_modifier = {
 				name = "heretic_tolerance"
 				duration = 3650
-			}
-		}
-		if = {
-			limit = { has_disaster = french_wars_of_religion }
-			end_disaster = french_wars_of_religion
-			remove_country_modifier = french_catholics
-			remove_country_modifier = french_protestants
-			remove_country_modifier = support_heretics
-			set_country_flag = FRA_had_event_3199
-			set_country_flag = FRA_wars_of_religion_ended
-			capital_scope = {
-				remove_province_modifier = religious_fanatics
 			}
 		}
 	}

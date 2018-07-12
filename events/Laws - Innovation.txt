@@ -1,0 +1,64 @@
+namespace = innovation_selection
+namespace = innovation_flavour
+
+country_event = {
+	id = innovation_selection.1
+	title = innovation_selection.1.title
+	desc = innovation_selection.1.desc
+	picture = GOV_RUINS_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = innovation_selection.1.option.a
+        
+        if = {
+            limit = {
+                has_individual_innovation = yes
+            }
+            custom_tooltip = ALREADY_INDIVIDUAL_INNOVATION
+        }
+        else = {
+            set_individual_innovation = yes
+			add_adm_power = -100
+            custom_tooltip = CHEAP_INNOVATION_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = innovation_selection.1.option.b
+        
+        if = {
+            limit = {
+                has_sponsored_innovation = yes
+            }
+            custom_tooltip = ALREADY_SPONSORED_INNOVATION
+        }
+        else = {
+            set_sponsored_innovation = yes
+			add_adm_power = -100
+            custom_tooltip = NORMAL_INNOVATION_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = innovation_selection.1.option.c
+		
+        if = {
+            limit = {
+                has_state_innovation = yes
+            }
+            custom_tooltip = ALREADY_STATE_INNOVATION
+        }
+        else = {
+            set_state_innovation = yes
+			add_adm_power = -100
+            custom_tooltip = STATE_SCIENCE_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = event_exit
+	}
+}
+

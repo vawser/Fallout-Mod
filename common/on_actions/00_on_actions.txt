@@ -3,13 +3,14 @@ on_startup = {
     events = {
         startup.1    		# Global flags
         startup.2    		# Country flags
-        processor.1		# Processor assignment for Caravan system		
-        discovery.1 		# Initial FoW setup
-		fds.1				# Initial FDS variable setup
-        cults.100       	# Initial cult setup
-        immortality.1  	# Setup immortal rulers
-        caravans.1     	# Initial caravan placement
-        zion.7 			# Revert Sorrows/Dead Horses to Mormon if the Cossacks isn't installed
+        processor.1		    # Processor assignment for Caravan system		
+        discovery.1 		    # Initial FoW setup
+		law_setup.1			# Fallback law setup
+        race.1               # Fallback race setup
+        cults.100       	    # Initial cult setup
+        immortality.1  	    # Setup immortal rulers
+        caravans.1      	    # Initial caravan placement
+        zion.7 			    # Revert Sorrows/Dead Horses to Mormon if the Cossacks isn't installed
         
     }
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_startup" }
@@ -296,7 +297,7 @@ on_new_monarch = {
                 tag = NVG
                 tag = SHI
                 tag = X02
-	   government = the_think_tank
+                government = the_think_tank
             }
         }
         add_ruler_modifier = {
@@ -510,16 +511,22 @@ on_dismantle_revolution = {
 # province
 on_adm_development = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_adm_development" }
+    
+    owner = { subtract_variable = { which = civil_unrest value = 1 } }
 }
 
 # province
 on_dip_development = {  
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_dip_development" }
+    
+    owner = { subtract_variable = { which = civil_unrest value = 1 } }
 }
 
 # province
 on_mil_development = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_mil_development" }
+    
+    owner = { subtract_variable = { which = civil_unrest value = 1 } }
 }
 
 on_overextension_pulse = {
@@ -609,6 +616,10 @@ on_bi_yearly_pulse = {
     
     # Update missions
     swap_non_generic_missions = yes
+    
+    events = {
+        civil_unrest_events.100
+    }
     
     random_events = {
 		## TRIBAL FLAVOR ##

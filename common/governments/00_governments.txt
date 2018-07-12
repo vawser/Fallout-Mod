@@ -16,7 +16,9 @@ administrative_monarchy = {
 	
 	color = { 179 75 75 }
 	
-	valid_for_new_country = yes	
+	valid_for_new_country = yes
+
+	royal_marriage = yes
 	
 	ai_will_do = {
 		factor = 0
@@ -61,6 +63,8 @@ constitutional_monarchy = {
 	ai_importance = 0
 	
 	has_parliament = yes
+
+	royal_marriage = yes
 
 	#bonus
 	
@@ -257,8 +261,8 @@ tribal_kingdom = {
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	
-	republican_name = yes
+
+	royal_marriage = yes
 	
 	ai_will_do = {
 		factor = 0
@@ -297,6 +301,7 @@ tribal_federation = {
 	color = { 185 175 45 }
 
 	tribal = yes
+	royal_marriage = yes
 	allow_convert = no
 	
 	valid_for_new_country = no
@@ -403,7 +408,6 @@ native_council = {
 #
 #################################################################
 
-#Special for Poland
 elective_monarchy = {
 	monarchy = yes
 	
@@ -417,6 +421,7 @@ elective_monarchy = {
 	nation_designer_cost = 0		
 	
 	is_elective = yes
+	royal_marriage = yes
 	
 	max_states = 2
 	
@@ -455,7 +460,6 @@ trading_city = {
 	republican_name = yes
 	royal_marriage = no
 
-
 	can_use_trade_post = yes
 	can_form_trade_league = no
 	is_trading_city = yes
@@ -481,51 +485,11 @@ trading_city = {
 	}
 }
 
-#Special for Milan
-ambrosian_republic = {
-	republic = yes
-	
-	color = { 210 140 150 }
-	
-	unique_government = yes
-
-	valid_for_new_country = no
-	allow_convert = yes
-	duration = 4
-	
-	republican_name = yes
-	royal_marriage = no
-	
-	valid_for_nation_designer = yes
-	nation_designer_cost = 10	
-	max_states = 2
-
-	rank = {
-		1 = {
-			global_tax_modifier = 0.10
-			land_morale = 0.05
-			max_absolutism = -30
-		}
-		2 = {
-			global_tax_modifier = 0.10
-			land_morale = 0.05
-			global_autonomy = -0.025	
-			max_absolutism = -30
-		}
-		3 = {	
-			global_tax_modifier = 0.10
-			land_morale = 0.05
-			global_autonomy = -0.05	
-			max_absolutism = -30
-		}
-	}
-}
-
-
 # Arab Countries, Earlygame
 iqta = {
 	monarchy = yes
-	queen = no
+
+	royal_marriage = yes
 	
 	color = { 65 160 60 }
 	
@@ -564,39 +528,6 @@ iqta = {
 	}
 }
 
-# Colonial Nations
-colonial_government = {
-	republic = yes
-	
-	color = { 80 120 180 }
-	
-	unique_government = yes
-
-	valid_for_new_country = no
-	allow_convert = no
-	valid_for_nation_designer = no
-
-	duration = 8
-	
-	republican_name = yes
-	royal_marriage = no
-	
-	max_states = 2
-	
-	ai_will_do = {
-		factor = 0
-	}
-
-	rank = {
-		1 = {
-			global_autonomy = -0.05
-			recover_army_morale_speed = 0.02
-			embracement_cost = -0.1
-		}
-	}
-	fixed_rank = 1
-}
-
 ### USA specific governments ###
 
 american_republic = {
@@ -611,10 +542,12 @@ american_republic = {
 	allow_convert = no
 	has_parliament = yes
 	valid_for_nation_designer = yes
-	nation_designer_cost = 15
-	nation_designer_trigger = {
-		has_dlc = "American Dream"
-	}
+	nation_designer_cost = 0
+
+#	nation_designer_trigger = {
+#		has_dlc = "American Dream"
+#	}
+
 	rank = {
 		1 = {
 			stability_cost_modifier = -0.1

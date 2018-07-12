@@ -1,0 +1,195 @@
+# Branch connections can only be one row below or one column across
+# Re-do missions once new map is complete
+# test_slot_1 = {
+    # slot = 1
+    # generic = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # mission_1_1 = {
+		# icon = dummy
+		# required_missions = {  }
+        
+		# trigger = {
+			# NOT = { tag = CAE }
+		# }
+		# effect = {
+            # add_treasury = 100
+        # }
+	# }
+    # mission_1_2 = {
+		# icon = dummy
+		# required_missions = {  
+            # mission_1_1
+        # }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+        
+	# }
+    # mission_1_3 = {
+		# icon = dummy
+		# required_missions = {  
+            # mission_1_3
+            # mission_2_2
+        # }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+    # mission_1_4 = {
+		# icon = dummy
+		# required_missions = { 
+            # mission_1_3
+        # }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+# }
+
+# test_slot_2 = {
+    # slot = 2
+    # generic = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # mission_2_1 = {
+		# icon = dummy
+		# required_missions = {  }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+    # mission_2_2 = {
+		# icon = dummy
+		# required_missions = { 
+            # mission_2_1
+            # mission_4_1
+        # }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+    # mission_2_3 = {
+		# icon = dummy
+		# required_missions = { 
+            # mission_2_2
+        # }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+    # mission_2_4 = {
+		# icon = dummy
+		# required_missions = { 
+            # mission_2_3
+        # }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+# }
+
+# test_slot_3 = {
+    # slot = 3
+    # generic = yes
+
+    # potential = {
+        # always = yes
+    # }
+
+    # mission_3_4 = {
+		# icon = dummy
+        # position = 4
+		# required_missions = { 
+            # mission_2_3
+        # }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+# }
+
+# test_slot_4 = {
+    # slot = 4
+    # generic = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # mission_4_1 = {
+		# icon = dummy
+		# required_missions = {  }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+    
+    # mission_4_4 = {
+		# icon = dummy
+        # position = 4
+		# required_missions = { mission_4_1 }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+    
+    # mission_4_5 = {
+		# icon = dummy
+        # position = 5
+		# required_missions = { mission_4_4 }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+    
+    # mission_4_6 = {
+		# icon = dummy
+        # position = 6
+		# required_missions = { mission_3_4 }
+        
+		# trigger = {
+			
+		# }
+		# effect = { }
+			
+	# }
+# }

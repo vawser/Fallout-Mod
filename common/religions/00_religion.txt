@@ -702,6 +702,33 @@ religion_group_postwar = {
         
        		fervor = yes
 	}
+
+	lord_of_the_pitt = {
+		color = { 0.659 0.487 0.145 }
+		icon = 9
+		
+		country = { 
+			global_manpower_modifier = 0.05
+			hostile_attrition = 1
+		}
+		
+		country_as_secondary = { 
+			global_manpower_modifier = 0.05
+			hostile_attrition = 1
+		}
+        
+		on_convert = {
+			change_religion = religion_lord_of_the_pitt
+			add_prestige = -100
+
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		}
+        
+		fervor = yes
+	}
     
     crusade_name = CRUSADE
     harmonized_modifier = harmonized_postwar
