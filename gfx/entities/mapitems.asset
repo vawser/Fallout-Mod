@@ -1,0 +1,128 @@
+entity = {
+	name = "selection"
+	pdxmesh = "selection"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "selection_navy"
+	pdxmesh = "selection_navy"
+	state = { name = "idle" 		animation = "idle" }
+}	
+
+entity = {
+	name = "flag"
+	pdxmesh = "flag"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "construction_building"
+	pdxmesh = "construction_building"
+	scale = 1.0
+    
+    default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.1 node="factorysmoke" particle = "factory_smoke_particle" }
+	}
+}
+
+entity = {
+	name = "construction_military"
+	pdxmesh = "construction_military"
+    
+    state = { name = "idle" animation = "idle" animation_blend_time = 0.0 animation_speed = 1.0  }
+    
+    scale = 2.0
+}
+
+entity = {
+	name = "construction_navalmilitary"
+	pdxmesh = "construction_navalmilitary"
+    
+    state = { name = "idle" animation = "idle" animation_blend_time = 0.0 animation_speed = 1.0  }
+    
+    scale = 2.0
+}
+
+entity = {
+	name = "construction_colony"
+	pdxmesh = "construction_building"
+	scale = 1.0
+    
+    default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.1 node="factorysmoke" particle = "factory_smoke_particle" }
+	}
+}
+
+entity = {
+	name = "siege"
+	pdxmesh = "siege_howitzer_mesh"
+
+    default_state = "idle"
+	state = { name = "idle"			animation = "idle" 					animation_blend_time = 0.0 animation_speed = 1.0 
+		event = { time = 0 node="muzzle" particle = "explosion_particle"  keep_particle = yes } 
+	}
+
+	scale = 0.5
+}
+
+entity = {
+	name = "tradenode"
+	pdxmesh = "tradenode"
+	state = { name = "idle" 		animation = "idle" }
+}
+
+entity = {
+	name = "tradenode_terrain"
+	pdxmesh = "tradenode_terrain"
+}
+
+entity = {
+	name = "coin"
+	pdxmesh = "coin"
+}
+
+# Battleship attacking  
+entity = {
+	name = "port_blockade"
+	pdxmesh = "port_blockade"
+}
+
+entity = {
+	name = "capital_indicator"
+	pdxmesh = "capital_indicator"
+}
+
+entity = {
+	name = "frame_bottom_left_entity"
+	pdxmesh = "frame_bottom_left_mesh"
+}
+
+entity = {
+	name = "frame_bottom_right_entity"
+	pdxmesh = "frame_bottom_right_mesh"
+}
+
+entity = {
+	name = "frame_top_center_entity"
+	pdxmesh = "frame_top_center_mesh"
+}
+
+entity = {
+	name = "frame_top_left_entity"
+	pdxmesh = "frame_top_left_mesh"
+}
+
+entity = {
+	name = "frame_top_right_entity"
+	pdxmesh = "frame_top_right_mesh"
+}
+
+entity = {
+	name = "combat_result_background_entity"
+	pdxmesh = "combat_result_background_mesh"
+	default_state = "idle"
+	scale = 4.3
+}

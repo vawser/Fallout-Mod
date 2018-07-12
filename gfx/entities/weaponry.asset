@@ -1,0 +1,213 @@
+entity = {
+	name = "american_rifle_weapon_righthand"
+	pdxmesh = "american_rifle_mesh"
+	scale = 0.45
+}	
+
+entity = {
+	name = "american_rifle_weapon_lefthand"
+	pdxmesh = "american_rifle_mesh"
+	scale = 0.45
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+    
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { 
+        name = "attack"	animation = "attack" 
+        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
+    }
+}
+
+entity = {
+	name = "ncr_rifle_weapon_righthand"
+	pdxmesh = "NCR_rifle_mesh"
+	scale = 0.45
+}	
+
+entity = {
+	name = "ncr_rifle_weapon_lefthand"
+	pdxmesh = "NCR_rifle_mesh"
+	scale = 0.45
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+    
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { 
+        name = "attack"	animation = "attack" 
+        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
+    }
+}
+
+entity = {
+	name = "laser_rifle_weapon_righthand"
+	pdxmesh = "laser_rifle_mesh"
+	scale = 0.45
+}	
+
+entity = {
+	name = "laser_rifle_weapon_lefthand"
+	pdxmesh = "laser_rifle_mesh"
+	scale = 0.45
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+    
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { 
+        name = "attack"	animation = "attack" 
+        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
+    }
+}
+
+entity = {
+	name = "laser_musket_weapon_righthand"
+	pdxmesh = "laser_musket_mesh"
+	scale = 0.45
+}	
+
+entity = {
+	name = "laser_musket_weapon_lefthand"
+	pdxmesh = "laser_musket_mesh"
+	scale = 0.45
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+    
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { 
+        name = "attack"	animation = "attack" 
+        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
+    }
+}
+
+entity = {
+	name = "pipe_rifle_weapon_righthand"
+	pdxmesh = "pipe_rifle_mesh"
+	scale = 0.45
+}	
+
+entity = {
+	name = "pipe_rifle_weapon_lefthand"
+	pdxmesh = "pipe_rifle_mesh"
+	scale = 0.45
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+    
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { 
+        name = "attack"	animation = "attack" 
+        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
+    }
+}
+
+entity = {
+	name = "institute_rifle_weapon_righthand"
+	pdxmesh = "institute_rifle_mesh"
+	scale = 0.45
+}	
+
+entity = {
+	name = "institute_rifle_weapon_lefthand"
+	pdxmesh = "institute_rifle_mesh"
+	scale = 0.45
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+    
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { 
+        name = "attack"	animation = "attack" 
+        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
+    }
+}
+
+entity = {
+	name = "chinese_rifle_weapon_righthand"
+	pdxmesh = "chinese_rifle_mesh"
+	scale = 0.45
+}	
+
+entity = {
+	name = "chinese_rifle_weapon_lefthand"
+	pdxmesh = "chinese_rifle_mesh"
+	scale = 0.45
+	
+	get_state_from_parent = yes
+	default_state = "idle"
+    
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { 
+        name = "attack"	animation = "attack" 
+        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
+    }
+}
+
+entity = {
+	name = "soviet_ppsh_weapon_righthand"
+	pdxmesh = "ppsh_mesh"
+	scale = 0.45
+    
+    get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "walk"	}
+	
+	state = { name = "attack"	animation = "attack" 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes } 
+	}
+}	
+
+entity = {
+	name = "soviet_ppsh_weapon_lefthand"
+	pdxmesh = "ppsh_mesh"
+	scale = 0.45
+}
+
+# Artillery
+# Particles need fixing (to appear)
+entity = {
+	name = "howitzer_gun_entity"
+	pdxmesh = "unit_howitzer_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.0 animation_speed = 1.0 
+		event = { time = 0 node="muzzle" particle = "explosion_particle"  keep_particle = yes } 
+	}
+	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	
+	scale = 2
+}
