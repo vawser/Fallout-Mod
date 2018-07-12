@@ -31,7 +31,40 @@ tribal_moose_worship = {
 	}
 		
 	ai_will_do = {
+		factor = 0.1
+		modifier = {
+			factor = 9999
+			tag = HAW
+		}
+	}
+}
+
+tribal_lincoln_worship = {
+	sprite = 2
+
+	global_unrest = -1
+
+	allow = {
+		has_slavery_forbidden = yes
+		OR = {
+			tag = TOU
+			has_unlocked_cult = tribal_lincoln_worship
+		}
+	}
+
+	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_slavery_allowed = yes
+				has_slavery_licensed = yes
+			}
+		}
+		modifier = {
+			factor = 999
+			tag = TOU
+		}
 	}
 }
 
@@ -111,6 +144,10 @@ tribal_viper_worship = {
 		
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 20
+			tag = VIP
+		}
 	}
 }
 
