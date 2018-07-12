@@ -16,7 +16,9 @@ administrative_monarchy = {
 	
 	color = { 179 75 75 }
 	
-	valid_for_new_country = yes	
+	valid_for_new_country = yes
+
+	royal_marriage = yes
 	
 	ai_will_do = {
 		factor = 0
@@ -61,6 +63,8 @@ constitutional_monarchy = {
 	ai_importance = 0
 	
 	has_parliament = yes
+
+	royal_marriage = yes
 
 	#bonus
 	
@@ -257,8 +261,8 @@ tribal_kingdom = {
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	
-	republican_name = yes
+
+	royal_marriage = yes
 	
 	ai_will_do = {
 		factor = 0
@@ -297,6 +301,7 @@ tribal_federation = {
 	color = { 185 175 45 }
 
 	tribal = yes
+	royal_marriage = yes
 	allow_convert = no
 	
 	valid_for_new_country = no
@@ -403,7 +408,6 @@ native_council = {
 #
 #################################################################
 
-#Special for Poland
 elective_monarchy = {
 	monarchy = yes
 	
@@ -417,6 +421,7 @@ elective_monarchy = {
 	nation_designer_cost = 0		
 	
 	is_elective = yes
+	royal_marriage = yes
 	
 	max_states = 2
 	
@@ -455,7 +460,6 @@ trading_city = {
 	republican_name = yes
 	royal_marriage = no
 
-
 	can_use_trade_post = yes
 	can_form_trade_league = no
 	is_trading_city = yes
@@ -484,7 +488,8 @@ trading_city = {
 # Arab Countries, Earlygame
 iqta = {
 	monarchy = yes
-	queen = no
+
+	royal_marriage = yes
 	
 	color = { 65 160 60 }
 	
