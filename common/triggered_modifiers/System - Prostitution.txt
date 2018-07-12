@@ -1,0 +1,29 @@
+# Prostitution
+law_prostitution_allowed = {
+    potential 	= { is_variable_equal = { which = current_prostitution_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = current_prostitution_law value = 1 } }
+
+	yearly_corruption = 0.05
+	heir_chance = 0.25 # If you know what I mean
+    global_unrest = -1
+	prestige = -0.1
+}
+
+law_prostitution_licensed = {
+    potential 	= { is_variable_equal = { which = current_prostitution_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = current_prostitution_law value = 2 } }
+	
+	yearly_corruption = 0.05
+    global_unrest = -0.5
+	prestige = -0.1
+	global_tax_modifier = 0.15
+}
+
+law_prostitution_forbidden = {
+    potential 	= { is_variable_equal = { which = current_prostitution_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = current_prostitution_law value = 3 } }
+	
+	yearly_corruption = -0.03
+	prestige = 0.1
+	prestige_per_development_from_conversion = 0.05
+}

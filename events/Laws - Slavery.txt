@@ -1,0 +1,64 @@
+namespace = slavery_selection
+namespace = slavery_flavour
+
+country_event = {
+	id = slavery_selection.1
+	title = slavery_selection.1.title
+	desc = slavery_selection.1.desc
+	picture = GOV_RUINS_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = slavery_selection.1.option.a
+        
+        if = {
+            limit = {
+                has_slavery_allowed = yes
+            }
+            custom_tooltip = ALREADY_ALLOW_SLAVERY
+        }
+        else = {
+            set_slavery_allowed = yes
+			add_dip_power = -100
+            custom_tooltip = SLAVERY_ALLOWED_EXPLANATION
+            add_civil_unrest_3 = yes
+        }
+	}
+	option = {
+		name = slavery_selection.1.option.b
+        
+        if = {
+            limit = {
+                has_slavery_licensed = yes
+            }
+            custom_tooltip = ALREADY_LICENSE_SLAVERY
+        }
+        else = {
+            set_slavery_licensed = yes
+			add_dip_power = -100
+            custom_tooltip = SLAVERY_LICENSED_EXPLANATION
+            add_civil_unrest_3 = yes
+        }
+	}
+	option = {
+		name = slavery_selection.1.option.c
+		
+        if = {
+            limit = {
+                has_slavery_forbidden = yes
+            }
+            custom_tooltip = ALREADY_FORBID_SLAVERY
+        }
+        else = {
+            set_slavery_forbidden = yes
+			add_dip_power = -100
+            custom_tooltip = SLAVERY_FORBIDDEN_EXPLANATION
+            add_civil_unrest_3 = yes
+        }
+	}
+	option = {
+		name = event_exit
+	}
+}
+

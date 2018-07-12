@@ -1,1180 +1,549 @@
 ﻿l_english:
- # Variables
- fds_economy: "Economy Policy"
- fds_law: "Law Policy"
- fds_justice: "Justice Policy"
- fds_punishment: "Punishment Policy"
- fds_innovation: "Innovation Policy"
- fds_conscription: "Conscription Policy"
- 
- fds_slavery_regulation: "Slave Code"
- fds_gambling_regulation: "Gambling Regulation"
- fds_prostitution_regulation: "Prostitution Regulation"
- fds_firearms_regulation: "Gun Control"
- fds_narcotics_regulation: "Hard Drug Regulation"
- fds_scavenging_regulation: "Scavenging Regulation"
- 
- # Flags
- fds_economy_set_flag: "Economy Policy Set"
- fds_law_set_flag: "Law Policy Set"
- fds_justice_set_flag: "Justice Policy Set"
- fds_punishment_set_flag: "Punishment Policy Set"
- fds_innovation_set_flag: "Innovation Policy Set"
- fds_conscription_set_flag: "Conscription Policy Set"
- 
- fds_slavery_regulation_set_flag: "Slave Code Altered"
- fds_gambling_regulation_set_flag: "Gambling Regulation Set"
- fds_prostitution_regulation_set_flag: "Prostitution Regulation Set"
- fds_firearms_regulation_set_flag: "Firearms Regulation Set"
- fds_narcotics_regulation_set_flag: "Hard Drug Regulation Set"
- fds_scavenging_regulation_set_flag: "Scavenging Regulation Set"
- 
- political_disaster_active: "Political Disaster"
- economic_disaster_active: "Economic Disaster"
- regulatory_disaster_active: "Regulatory Disaster"
- changed_policy_early: "Changed Policy Early"
- changed_regulation_early: "Changed Regulation Early"
- 
- # Customizable Localization
- loc_fds_not_set: "is not set."
- 
- loc_fds_traditional_economy: "is Traditional Economy"
- loc_fds_command_economy: "is Command Economy"
- loc_fds_market_economy: "is Market Economy"
- loc_fds_mixed_economy: "is Mixed Economy"
-
- loc_fds_democratic_law: "is Democratic Law"
- loc_fds_oligarchic_law: "is Oligarchic Law"
- loc_fds_autocratic_law: "is Autocratic Law"
- 
- loc_fds_state_courts: "is State Courts"
- loc_fds_community_courts: "is Community Courts"
- loc_fds_secret_courts: "is Secret Courts"
- 
- loc_fds_fines_punishment: "is Fines"
- loc_fds_imprisonment_punishment: "is Imprisonment"
- loc_fds_execution_punishment: "is Execution"
- loc_fds_slavery_punishment: "is Slavery"
- 
- loc_fds_individual_innovation: "is Individual Innovation"
- loc_fds_sponsored_innovation: "is Sponsored Innovation"
- loc_fds_state_innovation: "is State Innovation"
- 
- loc_fds_volunteer_conscription: "is Volunteer Conscription"
- loc_fds_limited_conscription: "is Limited Conscription"
- loc_fds_full_conscription: "is Full Conscription"
- 
- loc_fds_slavery_allowed: "is Allowed"
- loc_fds_slavery_licensed: "is Licensed"
- loc_fds_slavery_forbidden: "is Forbidden"
- 
- loc_fds_gambling_allowed: "is Allowed"
- loc_fds_gambling_licensed: "is Licensed"
- loc_fds_gambling_forbidden: "is Forbidden"
- 
- loc_fds_prostitution_allowed: "is Allowed"
- loc_fds_prostitution_licensed: "is Licensed"
- loc_fds_prostitution_forbidden: "is Forbidden"
- 
- loc_fds_firearms_allowed: "is Allowed"
- loc_fds_firearms_licensed: "is Licensed"
- loc_fds_firearms_forbidden: "is Forbidden"
- 
- loc_fds_narcotics_allowed: "is Allowed"
- loc_fds_narcotics_licensed: "is Licensed"
- loc_fds_narcotics_forbidden: "is Forbidden"
- 
- loc_fds_scavenging_allowed: "is Allowed"
- loc_fds_scavenging_licensed: "is Licensed"
- loc_fds_scavenging_forbidden: "is Forbidden"
- 
- # Tooltips
- fds_economy_traditional_set: "Set §YEconomy Policy§! to §YTraditional§!."
- fds_economy_command_set: "Set §YEconomy Policy§! to §YCommand§!."
- fds_economy_market_set: "Set §YEconomy Policy§! to §YMarket§!."
- fds_economy_mixed_set: "Set §YEconomy Policy§! to §YMixed§!."
- 
- fds_law_democratic_set: "Set §YLaw Policy§! to §YDemocratic§!."
- fds_law_oligarchic_set: "Set §YLaw Policy§! to §YOligarchic§!."
- fds_law_autocratic_set: "Set §YLaw Policy§! to §YAutocratic§!."
- 
- fds_justice_courts_set: "Set §YJustice Policy§! to §YState Courts§!."
- fds_justice_community_set: "Set §YJustice Policy§! to §YCommunity Courts§!."
- fds_justice_state_set: "Set §YJustice Policy§! to §YSecret Courts§!."
-
- fds_punishment_fine_set: "Set §YPunishment Policy§! to §YFine§!."
- fds_punishment_imprisonment_set: "Set §YPunishment Policy§! to §YImprisonment§!."
- fds_punishment_execution_set: "Set §YPunishment Policy§! to §YExecution§!."
- fds_punishment_slavery_set: "Set §YPunishment Policy§! to §YSlavery§!."
- 
- fds_innovation_individual_set: "Set §YInnovation Policy§! to §YIndividual§!."
- fds_innovation_sponsored_set: "Set §YInnovation Policy§! to §YState-sponsored§!."
- fds_innovation_state_set: "Set §YInnovation Policy§! to §YState§!."
- 
- fds_conscription_volunteer_set: "Set §YConscription Policy§! to §YVolunteer§!."
- fds_conscription_limited_set: "Set §YConscription Policy§! to §YLimited§!."
- fds_conscription_full_set: "Set §YConscription Policy§! to §YFull§!."
- 
- fds_slavery_regulation_allowed_set: "Set §YSlavery Regulation§! to §YAllowed§!."
- fds_slavery_regulation_licensed_set: "Set §YSlavery Regulation§! to §YLicensed§!."
- fds_slavery_regulation_forbidden_set: "Set §YSlavery Regulation§! to §YForbidden§!."
- 
- fds_gambling_regulation_allowed_set: "Set §YGambling Regulation§! to §YAllowed§!."
- fds_gambling_regulation_licensed_set: "Set §YGambling Regulation§! to §YLicensed§!."
- fds_gambling_regulation_forbidden_set: "Set §YGambling Regulation§! to §YForbidden§!."
- 
- fds_prostitution_regulation_allowed_set: "Set §YProstitution Regulation§! to §YAllowed§!."
- fds_prostitution_regulation_licensed_set: "Set §YProstitution Regulation§! to §YLicensed§!."
- fds_prostitution_regulation_forbidden_set: "Set §YProstitution Regulation§! to §YForbidden§!."
- 
- fds_firearms_regulation_allowed_set: "Set §YFirearms Regulation§! to §YAllowed§!."
- fds_firearms_regulation_licensed_set: "Set §YFirearms Regulation§! to §YLicensed§!."
- fds_firearms_regulation_forbidden_set: "Set §YFirearms Regulation§! to §YForbidden§!."
- 
- fds_narcotics_regulation_allowed_set: "Set §YNarcotics Regulation§! to §YAllowed§!."
- fds_narcotics_regulation_licensed_set: "Set §YNarcotics Regulation§! to §YLicensed§!."
- fds_narcotics_regulation_forbidden_set: "Set §YNarcotics Regulation§! to §YForbidden§!."
- 
- fds_scavenging_regulation_allowed_set: "Set §YScavenging Regulation§! to §YAllowed§!."
- fds_scavenging_regulation_licensed_set: "Set §YScavenging Regulation§! to §YLicensed§!."
- fds_scavenging_regulation_forbidden_set: "Set §YScavenging Regulation§! to §YForbidden§!."
- 
- fds_economy_reset_notice: "You may now change your §YEconomy Policy§! freely."
- fds_law_reset_notice: "You may now change your §YLaw Policy§! freely."
- fds_justice_reset_notice: "You may now change your §YJustice Policy§! freely."
- fds_punishment_reset_notice: "You may now change your §YPunishment Policy§! freely."
- fds_innovation_reset_notice: "You may now change your §YInnovation Policy§! freely."
- fds_conscription_reset_notice: "You may now change your §YConscription Policy§! freely."
- fds_slavery_reset_notice: "You may now change your §YSlavery Regulation§! freely."
- fds_gambling_reset_notice: "You may now change your §YGambling Regulation§! freely."
- fds_prostitution_reset_notice: "You may now change your §YProstitution Regulation§! freely."
- fds_firearms_reset_notice: "You may now change your §YFirearms Regulation§! freely."
- fds_narcotics_reset_notice: "You may now change your §YNarcotics Regulation§! freely."
- fds_scavenging_reset_notice: "You may now change your §YScavenging Regulation§! freely."
- 
- # Triggered Modifiers
- # Economy
- fds_traditional_economy: "Traditional Economy"
- desc_fds_traditional_economy: "A traditional economy is a local economy, with farming at the centre of all economic activity. For members of the wasteland, this means they live a economically deprived existence. Even so, such locality fosters strong communal bonds."
- TRADITIONAL_ECONOMY_EXPLANATION: "\nBy enacting this decree we will maintain the usual, post-apocalyptic, local economy centered around bartering, subsistence agriculture, local merchants, and communal bonds. \n\nEnacting this policy will grant:\n§G50%§! increase in production of all goods.\n§R25%§! decrease in tax income.\n§R25%§! decrease in trade efficiency."
- ALREADY_TRADITIONAL_ECONOMY: "Our §YEconomic Policy§! is already set to §YTraditional Economy§!."
- 
- fds_command_economy: "Command Economy"
- desc_fds_command_economy: "A command economy is ruled by a central authority, for most this means the government. For members of the wasteland, this grants little to no autonomy to the individual, but permits the state fast mobilization of goods when needed.\n\nAllows X events to occur."
- COMMAND_ECONOMY_EXPLANATION: "\nBy enacting this decree will establish an authoritarian, state-controlled economy from the top-down. Industry and goods production will be nationalized. This will benefit us as a government, but will stifle freedom of the Settlers, who likely won't be happy about it. \n\nEnacting this policy will grant:\n §G25%§! increase in tax income.\n\n§G10%§! increase in production of all goods.\n\n§R50%§! decrease in trade efficiency."
- ALREADY_COMMAND_ECONOMY: "Our §YEconomic Policy§! is already set to §YCommand Economy§!."
- 
- fds_market_economy: "Market Economy"
- desc_fds_market_economy: "A market economy is dictated by individuals, who are unbound by any central authority, fostering competition. For members of the wasteland, this means vital goods such as food are competitively priced, but niche industries such as medicine are often lacking."
- FREE_MARKET_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will enshrine the true American way of economics- the Free Market -in $COUNTRY_ADJ$ law.  This will greatly benefit the Settlers but cost us dearly in terms of taxation, niche goods like medicine, and control over the economy. Enacting this policy will grant a §Rthirty five percent decrease§! in tax revenue, a §Gtwenty five percent increase§! in production of all goods, and a §Gtwenty five percent increase§! in trade effiency in $COUNTRY$.''"
- 
- fds_mixed_economy: "Mixed Economy"
- desc_fds_mixed_economy: "A combination of command and market, where the market is bound by regulations, but otherwise free to operate. For members of the wasteland, this is a mixed bag, and lacks the extremes found in either form."
- MIXED_ECONOMY_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will create a mixed economy, which was common in most nations before the Great War. A limited Free Market with heavy regulations will be the norm and will offer few, if any, benefits to the state. Enacting this policy will grant us a §Gfive percent increase§ in tax revenue, production of all goods, and trade efficiency in $COUNTRY$.''"
- 
- # Law
- fds_democratic_law: "Fair Law"
- desc_fds_democratic_law: "The making of laws- regardless of how this is done -is intended for the good of all and for justice, and, in extremely rare cases, is even vested in a truly democratic legislature. Even if laws are made by decree or without lay input, they nonetheless retain the antebellum principles of the pursuit of justice and fairness for all. For members of the wasteland, this is a fair, but slow system."
- FAIR_LAW_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will center laws around the benefit of the Settlers and of justice. Obviously, your influence over them will not wane if we don't have a Congress, but be aware that anything we pass will be written and enforced similar to antebellum America. The Settlers will love this, and it will give us a §Gpostive one§! increase in our Diplomatic Reputation.''"
- 
- fds_oligarchic_law: "Oligarchic Law"
- desc_fds_oligarchic_law: "The making of laws is controlled by an oligarchy, either openly or in secret, and largely for its benefit. This deprives much of the populance from input, but for those allied with the oligarchs, there is much to gain."
- OLIGARCHY_LAW_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will center laws around an oligarchy of elites- selected by you, of course -for their benefit. It isn't the most honest policy on the earth, but it is the most lucrative! Enacting this policy will grant us a §Gtwenty percent decrease§! in the cost of hiring Advisors.''"
- 
- fds_autocratic_law: "Autocratic Law"
- desc_fds_autocratic_law: "All executive and legislative authority is controlled by a strongman, who rules by decree. The whims of the autocrat are capricious, but an exemplary autocrat with a vision can achieve greatness, no matter the costs."
- STRONGMAN_EXPLANATION: "You ask a loyal retainer to explain the policy . \n \n ''Hail $MONARCHTITLE$ $MONARCH$, may you live forever!'' \n \n You cock an eyebrow at the brown-nosing, but soon understand the reason why. \n \n ''Enacting this decree will give you total control over the legislative process. Your will be done. This, of course, can be disasterous if you aren't a good leader, but of course, there is absolutely no way this would happen under you, estemmed and rightful ruler of $COUNTRY$! Enacting this policy will give us a §Gten percent increase§ in £adm£Administrative Efficiency.''"
- 
- # Justice
- fds_court_justice: "Due Process"
- desc_fds_court_justice: "Justice is sought through an impartial and possibly even independent judiciary, granting those accused a fair and just trial."
- FAIR_TRIAL_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will retain a judiciary focused on the antebellum American ideas of a fair and impartial justice system. Matters like reasonable doubt, due process, and a right to legal counsel will exist. This will enable us to significantly and more quickly crack down on Corruption.''"
- 
- fds_community_justice: "Mob Rule"
- desc_fds_community_justice: "Justice is sought through local communal courts, mob rule, and vigilantism. Local practices mean trials can ranged from fair and just to mock trials, where the community enacts what it sees as justice."
- MOB_RULE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will largely wash the state's hands of justice and turn it over to the people. You will see a lot more vigilantism and 'democractic' control of the justice system, which may result in things like lynchings. However, this is an extremely popular move among the Settlers and isn't inherently bad: local practices can range from fair and just to mock trials, where the community enacts what it deems to be justice. Enacting this policy will help integrate conquered peoples into our realm and help them see eothers as equals, reducing their desire to revolt in the name of their former lands by §Gfive years§!.''"
- 
- fds_state_justice: "Secret Courts"
- desc_fds_state_justice: "Justice is sought only by the state, where trials are conducted in secret. Scant true justice can be found in such courtrooms."
- SECRET_COURTS_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will end public trials and pesky incoveniences like double jeopardy, neutral judges, and letting people go on technicalities. The state will get its view of justice, and it will get it fast. Enacting this decree will greatly reduce the level of control held by the Settlers and take law into your capable hands, reducing Autonomy on all provinces by §Gfive points§! per month.''"
- 
- # Punishment
- fds_fine_punishment: "Fines"
- desc_fds_fine_punishment: "Punishment for most crimes is served through the issue of a fine (or bribe) in the majority of cases."
- TRUDEAU_PUNISHMENT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will make monetary payments the primary means of convicting criminals for all but the most serious of crimes. Enacting this policy will be very lucrative to us, giving us a §Gten percent increase§ in tax revenue.''"
- 
- fds_imprisonment_punishment: "Prison Labor"
- desc_fds_imprisonment_punishment: "Punishment for crimes is served through imprisonment in the majority of cases."
- BIG_HOUSE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will make incarceration the primary method of dealing with the scum of the Wasteland for all but the most serious of crimes. Enacting this policy will calm the Settlers, §Gslightly decreasing Unrest§!. Furthermore, the use of prisoners for state labor will decrease Development Costs and Building Time by §Gten percent§!.''"
- 
- fds_execution_punishment: "Execution"
- desc_fds_execution_punishment: "Punishment for crimes is execution in the majority of cases."
- CAPITAL_PUNISHMENT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will retain the traditional Wasteland method of justice: six feet under with no one to miss them and no one to cry. Enacting this policy will calm the Settlers, reducing Unrest by §Gone§!.''"
- 
- fds_slavery_punishment: "Slavery"
- desc_fds_slavery_punishment: "Criminals are enslaved by the state in the majority of cases."
- ENSLAVEMENT_SENTENCE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, scumbag criminals are good for nothing but their backs and their hands, working for their betters. While many nations use prison labor, our slave codes allow for us to sell the convicted into slavery, to work for the rest of their lives for their misdeeds. Enacting this policy will increase our Manpower rolls by §Gten percent§! through slave-soldiers, and our Building Cost by §Gten percent§! thanks to slave labor.''"
- 
- # Innovation
- fds_individual_innovation: "Individual Innovation"
- desc_fds_individual_innovation: "Innovation, research and development, and advancement in the sciences is mainly funded and enacted by the individual, with no state support."
- CHEAP_INNOVATION_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will turn research and development over to the Scientists and lay Settlers at no cost to us. Enacting this policy will significantly increase our rate of acquiring Institutions by §Gfifty percent§! but §Rdouble the price§! to Embrace it.''"
- 
- fds_state_sponsored_innovation: "State-sponsored Innovation"
- desc_fds_state_sponsored_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and largely enacted by the individual."
- NORMAL_INNOVATION_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will involve state subsidies to Scientists and lay Settlers, and is a hybrid between state R&D and an untouched research system. Enacting this policy will increase our rate of acquiring Institutions by §Gten percent§! and, because of our search for competent advisors, increase the number of possible Advisors by §Gtwo§!. To pay for the subsidies, we will have to pay §R-0.16§W Bottlecaps a month.''"
- 
- fds_state_innovation: "State Innovation"
- desc_fds_state_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and enacted by the state, with individuals dissaded from such activities."
- STATE_SCIENCE_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will nationalize our nation's research and development, at the cost of the common man. This will make it easier for us to advance in technological profiency and general Innovation, but it will be expensive. Enacting this policy will cost us a §Rfifteen percent decrease§! in tax revenue (to pay for our R&D fields) and slow our rate of acquiring Institutions by §Rthirty three percent§!, but it will make it §Gfifty percent cheaper§! to Embrace Institutions and §Gdouble§! our Innovativeness Point gain.''"
- 
- # Conscription
- fds_volunteer_conscription: "Volunteer Conscription"
- desc_fds_volunteer_conscription: "The manpower of our armies is mainly fueled by volunteers."
- NO_DRAFT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will make our armies an all-volunteer force outside of a full-on invasaion. This will §Rhalve§! our total Manpower pool, but it will greatly please the Settlers, reducing Unrest by §Gtwo§!. In addition, as volunteer forces are always more eager to fight and serve, our Discipline will increase by §Gfive percent§! and our Morale will increase by §Gten percent§!.''"
- 
- fds_limited_conscription: "Limited Conscription"
- desc_fds_limited_conscription: "The manpower of our armies is fueled by the recruitment of able-bodied, adult men."
- FAIR_DRAFT_EXPLANATION: "You ask a loyal retainer to explain the policy. \n \n ''My $MONARCHTITLE$, enacting this decree will allow us to draft all able-bodied, adult men to serve in our military. Enacting this policy will increase our Building Time and Building Costs by §Rfive percent§! due to a labor shortage, but will increase our total Manpower pool by §Gfifteen percent§!. This will also benefit our Army Tradition through a monthly §G0.05§! gain. Conscripts naturally have lower Morale and Discipline, and each will be reduced by §Rten§! and §Rfifteen§! percent, respectively.''"
- 
- fds_full_conscription: "Full Conscription"
- desc_fds_full_conscription: "The manpower of our armies is fueled by the recruitment of all citizens old enough to walk."
- CAESAR_DRAFT_EXPLANATION: "You ask a nervous retainer to explain this policy. \n \n ''Exalted $MONARCHTITLE$ $MONARCH$, are you sure you want to do this? Enacting this decree will conscript §Reveryone§!, including children and women, to a period of service. While this will §Gdouble§! our total Manpower Pool and §Gnoticibly increase§! our gains in Army Tradition, §Ghalve§! the cost of recruiting new infantrymen, and §Gincrease our Force Limit by five brigades§! This is an extremely unpopular policy, increasing nationwide Unrest by §Rtwo§! and §Rcosting us penalties§! in Discipline, Morale, and Army Professionalism Drilling. In addition, due to a severe labor shortage, this will §Rdouble§! the time it takes to erect new Buildings and inflate their costs by §Rfifteen percent§!. We will have a §Rtwenty percent§! decrease in tax revenue to pay for this.''"
- 
- # Slavery
- fds_slavery_allowed: "Slavery Allowed"
- desc_fds_slavery_allowed: "Slavery is practicable by any citizen, and the state if it so pleases."
- YES_SLAVERY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, the consequences of this decree are obvious. In addition to fully legalizing slavery, this will decrease our cost of recruiting all types of regiments by §Gtwenty five percent§!, and decrease the time to muster them by the same amount. Other nations- including other slavers -will despise us for this, reducing our Diplomatic Reputation by §Rtwo§!."
- 
- fds_slavery_licensed: "Slavery Licensed"
- desc_fds_slavery_licensed: "Slavery is primarily practiced by the state."
- STATE_SLAVERY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, this decree enacts a limited approach to slavery. Slave labor is primarily employed by the state for economic and punitive purposes and supplements the labor of freemen. There are few, if any private slavers under this system. As slavery is still allowed, this measure is still unpopular and will reduce our Diplomatic Reputation by §Rone§!. Slave labor will also allow us to decrease our Building Costs by §Gten percent§! and slightly increase the cost and time of mustering all types of regiments."
- 
- fds_slavery_forbidden: "Slavery Forbidden"
- desc_fds_slavery_forbidden: "Slavery is forbidden."
- NO_SLAVERY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, this decree outlaws slavery and strictly enforces the ban. This is an extremely prestigious and noble act in the eyes of other nations, increasing your Diplomatic Reputation by §Gone§! and your monthly Prestige gain by §Gone tenth§!.''"
- 
- # Gambling
- fds_gambling_allowed: "Gambling Allowed"
- desc_fds_gambling_allowed: "Gambling is allowed anywhere without restriction."
- VEGAS_BABY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, this decree allows for unrestricted gambling throughout $COUNTRY$. This significantly boosts our income, earning us an extra §G0.5§W Bottlecaps a month and increasing our overall income by §Gfifteen percent§!. However, due to the populace spending their money and wasting time at casinoes, our Production Efficiency will be reduced by §Rtwenty percent§!.''"
- 
- fds_gambling_licensed: "Gambling Licensed"
- desc_fds_gambling_licensed: "Gambling only allowed in state-sanctioned venues. Other forms are prosecuted."
- NEW_ORLEANS_BABY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''MY $MONARCHTITLE$, enacting this decree allows for limited gambling operations throughout $COUNTRY$. This significantly boosts our income, increasing our overall tax revenue by §Gten percent§!. However, due to the populace spending their money, our Production Efficiency will be reduced by §Rten percent§!.''"
- 
- fds_gambling_forbidden: "Gambling Forbidden"
- desc_fds_gambling_allowed: "Gambling is forbidden.\n\nAllows X events to occur."
- KEBAB_BABY_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree outlaws gambling. This is considered a very noble act, increasing our montly Prestige by §Gone tenth§! and, due to the lack of waste, our Production Efficiency will increase by §Gten percent§!. A society without gambling has less chance for organized crime fronts to spawn, which will §Gsomewhat decrease§! our Unrest.''"
- 
- # Prostitution
- fds_prostitution_allowed: "Prostitution Allowed"
- desc_fds_prostitution_allowed: "Prostitution is allowed anywhere without restriction."
- GIRLS_GIRLS_GIRLS_EXPLANATION: "You ask a loyal retainer to explain this policy. He is beaming. \n \n ''Hey hey, $MONARCHTITLE$, enacting this decree will get me- uh, I mean you, some FINE WOMEN! These FINE WOMEN will decrease our Unrest by §Gone§!! Sure, enacting this policy will mean there's a bit of a §RCorruption hit§!, and §Rthis isn't a prestigous act§!, but there are very literal, §Gfamilial benefits§! to House $DYNASTY$ if the $MONARCHTITLE$ has a few side hoes.'' He winks. ''§GIf you know what I mean.§!''"
- 
- fds_prostitution_licensed: "Prostitution Licensed"
- desc_fds_prostitution_licensed: "Brothels are strictly licensed by the state."
- GOV_GOV_GIRLS_EXPLANATION: "You ask a loyal retainer to explain this policy. He is beaming. \n \n ''$My MONARCHTITLE$, enacting this decree will get me- uh, I mean us, some FINE WOMEN. These FINE WOMEN will decrease our Unrest by §Rfive tenths§!. The $COUNTRY_ADJ$ will handle all brothels and, as state pimp, we will receive a §Gfifteen percent§! boost in tax revenue. Enacting this policy §Ris not a prestigious act§!, and, of course, we take on a risk of somewhat §Rincreasing our Corruption§!.''"
- 
- fds_prostitution_forbidden: "Prostitution Forbidden"
- desc_fds_prostitution_forbidden: "Prostitution is forbidden."
- NO_SEXUAL_EXPLOITATION_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will protect the womenfolk of $COUNTRY$, especially the poor, from selling their bodies into prostitution. Enacting this policy will increase our monthly Prestige gain by §Gone tenth§! and give us slight leg up in §Greducing Corruption§!. This policy is preferred by $COUNTRY_ADJ$ Settlers of multiple Old World religious.''"
- 
- # Firearms
- fds_firearms_allowed: "Constitutional Carry"
- desc_fds_firearms_allowed: "The right to keep and bare arms is not infringed."
- SECOND_AMENDMENT_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n '''A well regulated militia, neccesary for the security, the Right to Keep Bear Arms Shall Not Be Infringed.' That's what I remember about the antebellum America's stance on guns, though I'm not sure what bears have to do with that.''\n ''Anyway, this policy will allow the $COUNTRY_ADJ$ people the right to protect themselves from the torrent of hostile mutants that roam the Wasteland, and will significantly reduce our Unrest by §Gone§. However, this law also enables conquered peoples to put up a longer and harder resistance than they could if we disarmed them. Rebel attempts to return to the country we conquered, should conquest happen, will last §Rfive years longer§! than normal. It will also be §Rharder to Harshly Treat§! an armed population who is willing to defend themselves.''"
- 
- fds_firearms_licensed: "Gun Registry"
- desc_fds_firearms_licensed: "Possession of firearms is allowed with a license."
- FEINSTEIN_GUNS_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will allow for guns to be owned by the $COUNTRY_ADJa$ population with state permission. This is somewhat effective in keeping lethal weaponry out of the hands of rebels, stupid people, and the conquered Settlers we may take, but criminals never follow laws, so it's not perfect. Enacting this policy reduces Unrest by §Rfive tenths§! but conquered peoples will put up a slightly longer resistance than they could if we disarmed them. Rebel attempts by conquered peoples to break free will take §three years longer§! than normal.''"
- 
- fds_firearms_forbidden: "Gun Control"
- desc_fds_firearms_forbidden: "The state is attempting to disarm its civilian populace."
- HOGG_GUNS_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, guns are as dangerous as ideas when the state is seeking to control its people. We shouldn't be letting them have ideas against $COUNTRY$, so why would we let them have guns?\n Enacting this decree will restrict guns to the police, military, and elites like you and me. The peasants won't like this, as the difficulty to defend themselves from mutant horros in the Wasteland will harm them, thus increasing their Unrest by §Rtwo§!. However, as a disarmed populace is a submissive populace unable to resist our control, the ability of conquered peoples to reist our rule will be extremely reduced. Rebel attempts to return to the country we conquered, should conquest happen, will last §Ga decade shorter than normal$!. It will also be §Geasier to Harshly Treat§! the defenseless citizenry, keeping rebels at bay.''"
- 
- # Narcotics
- fds_narcotics_allowed: "Hard Drugs Allowed"
- desc_fds_narcotics_allowed: "Hard drug production and usage are allowed without restriction."
- WOODSTOCK_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will legalize all hard drugs, such as Jet, narcotics, methamphetamine, and heroin, and allow their free use. As doped up men are far more resistant to pain than sober men, enacting this policy will reduce the damage we take by Shock attacks by §Gfifteen percent§!. In addition, by laying out drugs and sedatives across the region, the dangers of muntant attacks on our colonists are reduced by §Rtwenty percent§!. This move is unpopular in the eyes of most of the population, and will increase their Unrest by §Rone§!. Needless to say, enacting this policy §Ris not a prestigious act§!.''"
- 
- fds_narcotics_licensed: "Hard Drugs Licensed"
- desc_fds_narcotics_licensed: "Hard drug production and usage are allowed with license."
- COLORADO_EXPLANATION: "You ask a loyal advisor to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will legalize hard drugs, such as Jet, narcotics, methamphetamine, and heroin, but restrict their usage to state dispensaries. It's a rather cruel way to profit, but it's very effective, increasing our tax income by §Gfive percent§!. Needless to say, enacting this policy §Ris not a prestigious act§!, but our doped up warriors' immunity to Shock pain will be reduced by §Gfive percent§!, and the use of hard drug traps and sedatives will reduce mutant attacks in our colonies by §Gfive percent§!. This move is unpopular in the eyes of most of the population, and will increase their Unrest by §Rfive tenths§!.''"
- 
- fds_narcotics_forbidden: "Hard Drugs Forbidden"
- desc_fds_narcotics_forbidden: "The production and usage of hard drugs (and, in some states, lesser drugs like alcohol) are forbidden."
- BUZZ_KILL_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will forbid the production, sale, possession, and distribution of all hard drugs, such as Jet, narcotics, methamphetamine, and heroin. §GThis is a highly prestigious act§! and will please the population, reducing their Unrest by §Gone§. However, due to the dominance of the drug trade and the infamous Jet Roaad in much of America, our persuasion with merchants and traders will diminish, reducing our Caravan Power by §Rten percent§!.''"
- 
- # Scavenging
- fds_scavenging_allowed: "Scavenging Allowed"
- desc_fds_scavenging_allowed: "Scavenging is allowed without restriction."
- YES_SCAVENGING_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will preserve the traditional rights of all men to scavenge any Old World metals, technology, or whatever else from the ruins of America. This will increase all goods found in our region by §Gten percent§!, but the looting of ruins will require us to purchase goods to erect structures, increasing our Building Cost by §Rtwenty percent§!.''"
- 
- fds_scavenging_licensed: "Scavenging Licensed"
- desc_fds_scavenging_licensed: "Scavenging is only allowed by the state and state-sanctioned individuals."
- SCAVENGING_LIMITED_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will restrict the traditional rights of all men to scavenge any Old World metals, technology, or whatever else from the ruins of America. Only the state and licensed hunters with quotas on their scavenging will be allowed to do this. This will increase all goods found in our region by §Gfive percent§!, but the looting of ruins will require us to purchase goods to erect structures, increasing our Building Cost by §Rten percent§!.''"
- 
- fds_scavenging_forbidden: "Scavenging Forbidden"
- desc_fds_scavenging_forbidden: "Scavenging is only allowed by the state."
- NO_SCAVENGING_EXPLANATION: "You ask a loyal retainer to explain this policy. \n \n ''My $MONARCHTITLE$, enacting this decree will terminate the traditional rights of all men to scavenge any Old World metals, technology, or whatever else, without exception. All ruins and antebellum structures are the property of $COUNTRY$ and may only be scavenged by state actors. Enacting this policy will allow us to efficiently and directly use the resources of old to erect new structures and maintain a supply line, significantly reducing our Building Cost by §Rtwenty percent§!.''"
- 
- # Events
+ #--------------------------------------------
+ # General
+ #--------------------------------------------
+ SPACER: "\n"
  event_exit: "Return"
+ NO_VALID_KEY: "not set."
+ 
+ law_setup.1.title: "Setup"
+ law_setup.1.desc: "Pre-coded Policies and Regulations will now be assigned to each nation based on their technological group, background, and/or religion."
+ law_setup.1.option.a: "Begin!"
+ 
+ #--------------------------------------------
+ # Disaster
+ #--------------------------------------------
+ civil_unrest: "Civil Unrest"
+ 
+ civil_unrest_disaster: "Civil Unrest"
+ desc_civil_unrest_disaster: "We have changed our stance on national policy and regulations too much, leading to mass unrest."
+ 
+ civil_unrest_events.1.title: "Civil Unrest"
+ civil_unrest_events.1.desc: "Rapid changes to our nation's policies and regulations has lead to a collapse in civilian confidence. They have taken to the streets and made their discontent known to us"
+ civil_unrest_events.1.option.a: "Oh no!"
+ 
+ civil_unrest_events.2.title: "Civil Order Restored"
+ civil_unrest_events.2.desc: "[Root.GetName] has weathered the mass unrest, and through blood and sweat, restored order to the fractured people of [Root.GetName]."
+ civil_unrest_events.2.option.a: "Hurrah"
+ 
+ civil_unrest_events.3.title: "Citizen Revolt"
+ civil_unrest_events.3.desc: "A group of citizens have risen up in anger. They must be silenced lest their sentiments spread elsewhere."
+ civil_unrest_events.3.option.a: "Pay them to keep quiet"
+ civil_unrest_events.3.option.b: "Crush them!"
+ 
+ civil_unrest_events.4.title: "Vocal Protest"
+ civil_unrest_events.4.desc: "Many of our citizens have denigrated and denounced [Root.Monarch.GetTitle] [Root.Monarch.GetName]'s rule as ineffectual. [Root.Monarch.GetName] may have to answer these statements lest they whip more of our citizens in to a frenzy."
+ civil_unrest_events.4.option.a: "Make a grovelling speech"
+ civil_unrest_events.4.option.b: "Crush them!"
+ 
+ CIVIL_UNREST_BELOW_1: "Reduce §YCivil Unrest§! (§Y[Root.civil_unrest.GetValue]§!) below §Y1§!."
+ REDUCE_CIVIL_UNREST_BY_ONE: "Reduces §YCivil Unrest§! by 1."
+ INCREASE_CIVIL_UNREST_BY_ONE: "Increases §YCivil Unrest§! by 1."
+ 
+ CIVIL_UNREST_EXPLANATION: "\n§YCivil Unrest§! is a measure of how angry your citizens are. Each time a policy or regulation is changed, §YCivil Unrest§! increases. Once above §Y10§!, the §YCivil Unrest§! disaster will occur.\n\n§YCivil Unrest§! decays naturally and can be reduced immediately by developing a province, which will reduce it by §G1§! for each development added.\n"
+ 
+ INCREASE_CIVIL_UNREST_BY_FIVE: "Increases §YCivil Unrest§! by 5."
+ INCREASE_CIVIL_UNREST_BY_THREE: "Increases §YCivil Unrest§! by 3."
 
- fds.1.title: "Setup"
- fds.1.desc: "Pre-coded Policies and Regulations will now be assigned to each nation based on their technological group, background, and/or religion."
- fds.1.option.a: "Begin!"
- 
- fds_policies.1.title: "Economic Policy"
- fds_policies.1.desc: "Current policy [Root.GetCurrentEconomyPolicy].\n\nYour economic policy controls how your country primarily operates in the economic sphere.\n\nYou may change your policy at anytime, but unless §YEconomic Reforms§! occur, your country will suffer an §YEconomic Disaster§! in the process."
- fds_policies.1.option.a: "Traditional Economy"
- fds_policies.1.option.b: "Command Economy"
- fds_policies.1.option.c: "Market Economy"
- fds_policies.1.option.d: "Mixed Economy"
- 
- fds_policies.2.title: "Law Policy"
- fds_policies.2.desc: "Current policy [Root.GetCurrentLawPolicy].\n\nYour law policy controls how your country primarily deals with lawmaker and the extent of which citizens can influence the process.\n\nYou may change your policy at anytime, but unless §YLaw Reforms§! occur, your country will suffer a §YPolitical Disaster§! in the process."
- fds_policies.2.option.a: "Democratic Law"
- fds_policies.2.option.b: "Oligarchic Law"
- fds_policies.2.option.c: "Autocratic Law"
- 
- fds_policies.3.title: "Justice Policy"
- fds_policies.3.desc: "Current policy [Root.GetCurrentJusticePolicy].\n\nYour justice policy controls how your country primarily deals with establishing criminality.\n\nYou may change your policy at anytime, but unless §YJustice Reforms§! occur, your country will suffer an §YPolitical Disaster§! in the process."
- fds_policies.3.option.a: "State Courts"
- fds_policies.3.option.b: "Community Courts"
- fds_policies.3.option.c: "Secret Courts"
- 
- fds_policies.4.title: "Punishment Policy"
- fds_policies.4.desc: "Current policy [Root.GetCurrentPunishmentPolicy].\n\nYour punishment policy controls how your country primarily deals with sentencing criminals and their punishment.\n\nYou may change your policy at anytime, but unless §YPunishment Reforms§! occur, your country will suffer an §YPolitical Disaster§! in the process."
- fds_policies.4.option.a: "Fines"
- fds_policies.4.option.b: "Prison"
- fds_policies.4.option.c: "Execution"
- fds_policies.4.option.d: "Enslavement"
- 
- fds_policies.5.title: "Innovation Policy"
- fds_policies.5.desc: "Current policy [Root.GetCurrentInnovationPolicy].\n\nYour innovation policy controls how your country primarily deals with research and innovation.\n\nYou may change your policy at anytime, but unless §YInnovation Reforms§! occur, your country will suffer an §YPolitical Disaster§! in the process."
- fds_policies.5.option.a: "Individual Innovation"
- fds_policies.5.option.b: "State-sponsored Innovation"
- fds_policies.5.option.c: "State Innovation"
- 
- fds_policies.6.title: "Conscription Policy"
- fds_policies.6.desc: "Current policy [Root.GetCurrentConscriptionPolicy].\n\nYour conscription policy controls how your country handles supplying its armies with soldiers.\n\nYou may change your policy at anytime, but unless §YConscription Reforms§! occur, your country will suffer an §YPolitical Disaster§! in the process."
- fds_policies.6.option.a: "Volunteer Conscription"
- fds_policies.6.option.b: "Limited Conscription"
- fds_policies.6.option.c: "Full Conscription"
- 
- fds_regulations.1.title: "Slavery Regulation"
- fds_regulations.1.desc: "Current policy [Root.GetCurrentSlaveryPolicy].\n\nYour slavery regulation controls how your country views slavery and the usage of slavery within the country.\n\nYou may change your policy at anytime, but unless §YSlavery Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
- fds_regulations.1.option.a: "Allowed"
- fds_regulations.1.option.b: "Licensed"
- fds_regulations.1.option.c: "Forbidden"
- 
- fds_regulations.2.title: "Gambling Regulation"
- fds_regulations.2.desc: "Current policy [Root.GetCurrentGamblingPolicy].\n\nYour gambling regulation controls how your country views gambling and the presence of gambling-related activities within the country.\n\nYou may change your policy at anytime, but unless §YGambling Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
- fds_regulations.2.option.a: "Allowed"
- fds_regulations.2.option.b: "Licensed"
- fds_regulations.2.option.c: "Forbidden"
- 
- fds_regulations.3.title: "Prostitution Regulation"
- fds_regulations.3.desc: "Current policy [Root.GetCurrentProstitutionPolicy].\n\nYour prostitution regulation controls how your country views prostitution and the presence of prostitution-related activities within the country.\n\nYou may change your policy at anytime, but unless §YProstitution Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
- fds_regulations.3.option.a: "Allowed"
- fds_regulations.3.option.b: "Licensed"
- fds_regulations.3.option.c: "Forbidden"
- 
- fds_regulations.4.title: "Firearms Regulation"
- fds_regulations.4.desc: "Current policy [Root.GetCurrentFirearmsPolicy].\n\nYour firearms regulation controls how your country views the carrying of firearms and the presence of non-state firearms-related activities and possession within the country.\n\nYou may change your policy at anytime, but unless §YFirearms Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
- fds_regulations.4.option.a: "Allowed"
- fds_regulations.4.option.b: "Licensed"
- fds_regulations.4.option.c: "Forbidden"
- 
- fds_regulations.5.title: "Narcotics Regulation"
- fds_regulations.5.desc: "Current policy [Root.GetCurrentNarcoticsPolicy].\n\nYour narcotics regulation controls how your country views hard drugs and the presence of drug activities within the country.\n\nYou may change your policy at anytime, but unless §YNarcotics Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
- fds_regulations.5.option.a: "Allowed"
- fds_regulations.5.option.b: "Licensed"
- fds_regulations.5.option.c: "Forbidden"
- 
- fds_regulations.6.title: "Scavenging Regulation"
- fds_regulations.6.desc: "Current policy [Root.GetCurrentScavengingPolicy].\n\nYour scavenging regulation controls how your country views scavenging and the presence of non-state scavenging-related activities within the country.\n\nYou may change your policy at anytime, but unless §YScavenging Reforms§! occur, your country will suffer an §YRegulatory Disaster§! in the process."
- fds_regulations.6.option.a: "Allowed"
- fds_regulations.6.option.b: "Licensed"
- fds_regulations.6.option.c: "Forbidden"
- 
- # Economy Events
- fds_economy.1.title: "Local Developments"
- fds_economy.1.desc: "Locals in one of our many provinces have taken initative and started developing their land, making it more suitable for farming and other such activities."
- fds_economy.1.option.a: "Excellent"
- 
- fds_economy.2.title: "Enterprising Individual"
- fds_economy.2.desc: ""
- fds_economy.2.option.a: ""
- 
- fds_economy.3.title: "Famine"
- fds_economy.3.desc: ""
- fds_economy.3.option.a: ""
- 
- fds_economy.4.title: "Slumlords"
- fds_economy.4.desc: ""
- fds_economy.4.option.a: ""
- 
- fds_economy.5.title: "Utopian Visions"
- fds_economy.5.desc: ""
- fds_economy.5.option.a: ""
- 
- fds_economy.6.title: "Fast Mobilization"
- fds_economy.6.desc: ""
- fds_economy.6.option.a: ""
+ #--------------------------------------------
+ # Economy
+ #--------------------------------------------
+ current_economy_law: "Economy Policy"
+ 
+ economy_selection.1.title: "Economic Policy"
+ economy_selection.1.desc: "The current economic policy in [Root.GetName] is [Root.GetCurrentEconomyPolicy].\n\nYour economic policy controls how your country primarily operates in the economic sphere."
+ economy_selection.1.option.a: "Traditional Economy"
+ economy_selection.1.option.b: "Command Economy"
+ economy_selection.1.option.c: "Market Economy"
+ economy_selection.1.option.d: "Mixed Economy"
+ 
+ law_traditional_economy: "Traditional Economy"
+ desc_law_traditional_economy: "A traditional economy is a local economy, with farming at the centre of all economic activity. For members of the wasteland, this means they live a economically deprived existence. Even so, such locality fosters strong communal bonds."
+ law_command_economy: "Command Economy"
+ desc_law_command_economy: "A command economy is ruled by a central authority, for most this means the government. For members of the wasteland, this grants little to no autonomy to the individual, but permits the state fast mobilization of goods when needed."
+ law_market_economy: "Market Economy"
+ desc_law_market_economy: "A market economy is dictated by individuals, who are unbound by any central authority, fostering competition. For members of the wasteland, this means vital goods such as food are competitively priced, but niche industries such as medicine are often lacking."
+ law_mixed_economy: "Mixed Economy"
+ desc_law_mixed_economy: "A combination of command and market, where the market is bound by regulations, but otherwise free to operate. For members of the wasteland, this is a mixed bag, and lacks the extremes found in either form."
+ 
+ SET_TRADITIONAL_ECONOMY: "Set §YEconomy Policy§! to §YTraditional Economy§!."
+ SET_COMMAND_ECONOMY: "Set §YEconomy Policy§! to §YCommand Economy§!."
+ SET_MARKET_ECONOMY: "Set §YEconomy Policy§! to §YMarket Economy§!."
+ SET_MIXED_ECONOMY: "Set §YEconomy Policy§! to §YMixed Economy§!."
+ 
+ TRADITIONAL_ECONOMY: "Traditional Economy"
+ COMMAND_ECONOMY: "Command Economy"
+ MARKET_ECONOMY: "Market Economy"
+ MIXED_ECONOMY: "Mixed Economy"
+ 
+ ALREADY_TRADITIONAL_ECONOMY: "Our §YEconomic Policy§! is already set to §YTraditional Economy§!."
+ ALREADY_COMMAND_ECONOMY: "Our §YEconomic Policy§! is already set to §YCommand Economy§!."
+ ALREADY_MARKET_ECONOMY: "Our §YEconomic Policy§! is already set to §YMarket Economy§!."
+ ALREADY_MIXED_ECONOMY: "Our §YEconomic Policy§! is already set to §YMixed Economy§!."
+
+ TRADITIONAL_ECONOMY_EXPLANATION: "\nBy enacting this law we will maintain the usual, post-apocalyptic, local economy centered around bartering, subsistence agriculture, local merchants, and communal bonds. \n\nEnacting this policy will grant:\n§G50%§! increase in production of all goods.\n§R25%§! decrease in tax revenue.\n§R25%§! decrease in trade efficiency."
+ 
+ COMMAND_ECONOMY_EXPLANATION: "\nBy enacting this law we will establish an authoritarian, state-controlled economy from the top-down. Industry and goods production will be nationalized. This will benefit us as a government, but will stifle freedom of the Settlers, who likely won't be happy about it. \n\nEnacting this policy will grant:\n §G25%§! increase in tax revenue.\n§G10%§! increase in production of all goods.\n§R50%§! decrease in trade efficiency."
+ 
+ MARKET_ECONOMY_EXPLANATION: "\nBy enacting this law we will enshrine the true American way of economics - the Free Market - in law.  This will greatly benefit the Settlers but cost us dearly in terms of taxation, niche goods like medicine, and control over the economy. \n\nEnacting this policy will grant:\n§R35%§! decrease in tax revenue.\n§G25%§! increase in production of all goods,\n§G25%§! increase in trade efficiency."
+ 
+ MIXED_ECONOMY_EXPLANATION: "\nBy enacting this law we will create a mixed economy, which was common in most nations before the Great War. A limited Free Market with heavy regulations will be the norm and will offer few, if any, benefits to the state. \n\nEnacting this policy will grant:\n§G5%§! increase in tax revenue.\n§G5%§! increase in production of all goods.\n§G5%§! increase in trade efficiency."
+ 
+ 
+ #--------------------------------------------
+ # Law
+ #--------------------------------------------
+ current_law_law: "Law Policy"
+ 
+ law_selection.1.title: "Law Policy"
+ law_selection.1.desc: "The current legislative policy in [Root.GetName] is [Root.GetCurrentLawPolicy].\n\nYour law policy controls how your country primarily deals with law-making and the extent of which citizens can influence the process."
+ law_selection.1.option.a: "Democratic Law"
+ law_selection.1.option.b: "Oligarchic Law"
+ law_selection.1.option.c: "Autocratic Law"
+ 
+ law_democratic_law: "Fair Law"
+ desc_law_democratic_law: "The making of laws - regardless of how this is done -is intended for the good of all and for justice, and, in extremely rare cases, is even vested in a truly democratic legislature. Even if laws are made by law or without lay input, they nonetheless retain the antebellum principles of the pursuit of justice and fairness for all. For members of the wasteland, this is a fair, but slow system."
+ law_oligarchic_law: "Oligarchic Law"
+ desc_law_oligarchic_law: "The making of laws is controlled by an oligarchy, either openly or in secret, and largely for its benefit. This deprives much of the populance from input, but for those allied with the oligarchs, there is much to gain."
+ law_autocratic_law: "Autocratic Law"
+ desc_law_autocratic_law: "All executive and legislative authority is controlled by a strongman, who rules by law. The whims of the autocrat are capricious, but an exemplary autocrat with a vision can achieve greatness, no matter the costs."
+ 
+ SET_DEMOCRATIC_LAW: "Set §YLaw Policy§! to §YDemocratic Law§!."
+ SET_OLIGARCHIC_LAW: "Set §YLaw Policy§! to §YOligarchic Law§!."
+ SET_AUTOCRATIC_LAW: "Set §YLaw Policy§! to §YAutocratic Law§!."
+ 
+ DEMOCRATIC_LAW: "Democratic Law"
+ OLIGARCHIC_LAW: "Oligarchic Law"
+ AUTOCRATIC_LAW: "Autocratic Law"
+ 
+ ALREADY_DEMOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YDemocratic Law§!."
+ ALREADY_OLIGARCHIC_LAW: "Our §YLaw Policy§! is already set to §YOligarchic Law§!."
+ ALREADY_AUTOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YAutocratic Law§!."
+ 
+ DEMOCRATIC_LAW_EXPLANATION: "\nBy enacting this law we enacting this law will center laws around the benefit of the Settlers and of justice. Obviously, your influence over them will not wane if we don't have a Congress, but be aware that anything we pass will be written and enforced similar to antebellum America. \n\nEnacting this policy will grant:\n§G1§! increase in our Diplomatic Reputation."
+
+ OLIGARCHIC_LAW_EXPLANATION: "\nBy enacting this law we enacting this law will center laws around an oligarchy of elites- selected by you, of course - for their benefit. It isn't the most honest policy on the earth, but it is the most lucrative! \n\nEnacting this policy will grant:\n§G20%§! dcrease in the cost of hiring Advisors."
+ 
+ AUTOCRATIC_LAW_EXPLANATION: "\nBy enacting this law we will gain total control over the legislative process. Your will be done as you see fit. This, of course, can be disasterous if you aren't a good leader, but of course, there is absolutely no way this would happen under you.\n\nEnacting this policy will grant:\n§G5%§ in Administrative Efficiency."
+ 
+ 
+ #--------------------------------------------
+ # Justice
+ #--------------------------------------------
+ current_justice_law: "Justice Policy"
+ 
+ justice_selection.1.title: "Justice Policy"
+ justice_selection.1.desc: "The current justicial policy in [Root.GetName] is [Root.GetCurrentJusticePolicy].\n\nYour justice policy controls how your country primarily deals with establishing criminality."
+ justice_selection.1.option.a: "State Courts"
+ justice_selection.1.option.b: "Community Courts"
+ justice_selection.1.option.c: "Secret Courts"
+ 
+ law_court_justice: "Due Process"
+ desc_law_court_justice: "Justice is sought through an impartial and possibly even independent judiciary, granting those accused a fair and just trial."
+ law_community_justice: "Mob Rule"
+ desc_law_community_justice: "Justice is sought through local communal courts, mob rule, and vigilantism. Local practices mean trials can ranged from fair and just to mock trials, where the community enacts what it sees as justice."
+ law_state_justice: "Secret Courts"
+ desc_law_state_justice: "Justice is sought only by the state, where trials are conducted in secret. Scant true justice can be found in such courtrooms."
+ 
+ 
+ SET_STATE_COURTS: "Set §YJustice Policy§! to §YState Courts§!."
+ SET_COMMUNITY_COURTS: "Set §YJustice Policy§! to §YCommunity Courts§!."
+ SET_SECRET_COURTS: "Set §YJustice Policy§! to §YSecret Courts§!."
  
- fds_economy.7.title: "Low Wages"
- fds_economy.7.desc: ""
- fds_economy.7.option.a: ""
+ STATE_COURTS: "State Courts"
+ COMMUNITY_COURTS: "Community Courts"
+ SECRET_COURTS: "Secret Courts"
  
- fds_economy.8.title: "Poor Planning"
- fds_economy.8.desc: ""
- fds_economy.8.option.a: ""
+ ALREADY_COURT_JUSTICE: "Our §YJustice Policy§! is already set to §YState courts§!."
+ ALREADY_COMMUNITY_JUSTICE: "Our §YJusitce Policy§! is already set to §YCommunity Courts§!."
+ ALREADY_STATE_JUSTICE: "Our §YJustice Policy§! is already set to §YSecret Courts§!."
  
- fds_economy.9.title: "Bull Market"
- fds_economy.9.desc: ""
- fds_economy.9.option.a: ""
+ COURT_JUSTICE_EXPLANATION: "\nBy enacting this law we will retain a judiciary focused on the antebellum American ideas of a fair and impartial justice system. Matters like reasonable doubt, due process, and a right to legal counsel will exist. \n\nEnacting this policy will grant:\n§G0.05%§! reduction in Corruption each month."
+ 
+ COMMUNITY_JUSTICE_EXPLANATION: "\nBy enacting this law we will largely wash the state's hands of justice and turn it over to the people. You will see a lot more vigilantism and 'democractic' control of the justice system, which may result in things like lynchings. However, this is an extremely popular move among the Settlers and isn't inherently bad: local practices can range from fair and just to mock trials, where the community enacts what it deems to be justice. \n\nEnacting this policy will grant:\n§G5§! points of reduction in Nationalism in newly conquered provinces."
+ 
+ STATE_JUSTICE_EXPLANATION: "\nBy enacting this law we will end public trials and pesky incoveniences like double jeopardy, neutral judges, and letting people go on technicalities. The state will get its view of justice, and it will get it fast. \n\nEnacting this policy will grant:\n§G0.05§! points of reduction in autonomy every month for all owned provinces."
+ 
+ #--------------------------------------------
+ # Punishment
+ #--------------------------------------------
+ current_punishment_law: "Punishment Policy"
+ 
+ punishment_selection.1.title: "Punishment Policy"
+ punishment_selection.1.desc: "The current punishment policy in [Root.GetName] is [Root.GetCurrentPunishmentPolicy].\n\nYour punishment policy controls how your country primarily deals with sentencing criminals and their punishment."
+ punishment_selection.1.option.a: "Fines"
+ punishment_selection.1.option.b: "Prison"
+ punishment_selection.1.option.c: "Execution"
+ punishment_selection.1.option.d: "Enslavement"
+ 
+ law_fine_punishment: "Fines"
+ desc_law_fine_punishment: "Punishment for most crimes is served through the issue of a fine (or bribe) in the majority of cases."
+ law_imprisonment_punishment: "Prison Labor"
+ desc_law_imprisonment_punishment: "Punishment for crimes is served through imprisonment in the majority of cases."
+ law_execution_punishment: "Execution"
+ desc_law_execution_punishment: "Punishment for crimes is execution in the majority of cases."
+ law_slavery_punishment: "Slavery"
+ desc_law_slavery_punishment: "Criminals are enslaved by the state in the majority of cases."
  
- fds_economy.10.title: "Land of Business"
- fds_economy.10.desc: ""
- fds_economy.10.option.a: ""
+ SET_FINE_PUNISHMENT: "Set §YPunishment Policy§! to §YFine§!."
+ SET_IMPRISONMENT_PUNISHMENT: "Set §YPunishment Policy§! to §YImprisonment§!."
+ SET_EXECUTION_PUNISHMENT: "Set §YPunishment Policy§! to §YExecution§!."
+ SET_SLAVERY_PUNISHMENT: "Set §YPunishment Policy§! to §YSlavery§!."
  
- fds_economy.11.title: "Bear Market"
- fds_economy.11.desc: ""
- fds_economy.11.option.a: ""
+ FINE_PUNISHMENT: "Fines"
+ IMPRISONMENT_PUNISHMENT: "Imprisonment"
+ EXECUTION_PUNISHMENT: "Execution"
+ SLAVERY_PUNISHMENT: "Slavery"
+ 
+ ALREADY_FINE_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YFines§!."
+ ALREADY_IMPRISONMENT_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YImprisonment§!."
+ ALREADY_EXECUTION_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YExecution§!."
+ ALREADY_SLAVERY_PUNISHMENT: "Our §YPunishment Policy§! is already set to §YSlavery§!."
+ 
+ FINE_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will make monetary payments the primary means of convicting criminals for all but the most serious of crimes. \n\nEnacting this policy will grant:\n§G10%§! increase in tax revenue."
+ 
+ IMPRISONMENT_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will make incarceration the primary method of dealing with the scum of the Wasteland for all but the most serious of crimes. \n\nEnacting this policy will grant:\n§G0.1§! reduction in unrest.\n§G10%§! reduction in development costs.\n§G10%§! reduction in construction time."
+ 
+ EXECUTION_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will retain the traditional Wasteland method of justice: six feet under with no one to miss them and no one to cry. \n\nEnacting this policy will grant:\n§G1§! point of reduction in unrest."
+ 
+ SLAVERY_PUNISHMENT_EXPLANATION: "\nBy enacting this law we will ensure scumbag criminals will be working for their betters. While many nations use prison labor, our slave codes allow for us to sell the convicted into slavery, to work for the rest of their lives for their misdeeds. \n\nEnacting this policy will grant:\n§G10%§! increase in manpower recruitment.\n§G10%§! reduction in construction costs."
+ 
+ #--------------------------------------------
+ # Innovation
+ #--------------------------------------------
+ current_innovation_law: "Innovation Policy"
  
- fds_economy.12.title: "People in Poverty"
- fds_economy.12.desc: ""
- fds_economy.12.option.a: ""
+ innovation_selection.1.title: "Innovation Policy"
+ innovation_selection.1.desc: "The current innovation policy in [Root.GetName] is [Root.GetCurrentInnovationPolicy].\n\nYour innovation policy controls how your country primarily deals with research and innovation."
+ innovation_selection.1.option.a: "Individual Innovation"
+ innovation_selection.1.option.b: "State-sponsored Innovation"
+ innovation_selection.1.option.c: "State Innovation"
  
- enterprising_individual: "Enterprising Individual"
- desc_enterprising_individual: ""
+ law_individual_innovation: "Individual Innovation"
+ desc_law_individual_innovation: "Innovation, research and development, and advancement in the sciences is mainly funded and enacted by the individual, with no state support."
+ law_state_sponsored_innovation: "State-sponsored Innovation"
+ desc_law_state_sponsored_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and largely enacted by the individual."
+ law_state_innovation: "State Innovation"
+ desc_law_state_innovation: "Innovation, research and development, and advancement in the sciences is funded by the state and enacted by the state, with individuals dissaded from such activities."
  
- slumlords: "Slumlords"
- desc_slumlords: ""
+ SET_INDIVIDUAL_INNOVATION: "Set §YInnovation Policy§! to §YIndividual§!."
+ SET_SPONSORED_INNOVATION: "Set §YInnovation Policy§! to §YState-sponsored§!."
+ SET_STATE_INNOVATION: "Set §YInnovation Policy§! to §YState§!."
+ 
+ INDIVIDUAL_INNOVATION: "Individual Innovation"
+ SPONSORED_INNOVATION: "Sponsored Innovation"
+ STATE_INNOVATION: "State Innovation"
+ 
+ ALREADY_INDIVIDUAL_INNOVATION: "Our §YInnovation Policy§! is already set to §YIndividual§!."
+ ALREADY_SPONSORED_INNOVATION: "Our §YInnovation Policy§! is already set to §YState-sponsored§!."
+ ALREADY_STATE_INNOVATION: "Our §YInnovation Policy§! is already set to §YState§!."
+ 
+ CHEAP_INNOVATION_EXPLANATION: "\nBy enacting this law we will turn research and development over to the Scientists and lay Settlers at no cost to us. \n\nEnacting this policy will grant:\n§G50%§! increases in the spread of institutions.\n§R100%§! increase in the cost of embracing an institution."
+ 
+ NORMAL_INNOVATION_EXPLANATION: "\nBy enacting this law we will involve state subsidies to Scientists and lay Settlers, and is a hybrid between state R&D and an untouched research system. \n\nEnacting this policy will grant:\n§R-2§! ducat loss per year.\n§G10%§! increase in institution spread.\n§G2§! increases in the size of our advisor pool."
+ 
+ STATE_SCIENCE_EXPLANATION: "\nBy enacting this law we will nationalize our nation's research and development, at the cost of the common man. This will make it easier for us to advance in technological profiency and general Innovation, but it will be expensive. \n\nEnacting this policy will grant:\n§R15%§! decrease in tax revenue.\n§R33%§! decrease in the spread of institutions.\n§G50%§! decrease in the cost of embracing an institution.\n§G1§! point of innovativeness per year."
+ 
+ #--------------------------------------------
+ # Conscription
+ #--------------------------------------------
+ current_conscription_law: "Conscription Policy"
+ 
+ conscription_selection.1.title: "Conscription Policy"
+ conscription_selection.1.desc: "The current conscription policy in [Root.GetName] is [Root.GetCurrentConscriptionPolicy].\n\nYour conscription policy controls how your country handles supplying its armies with soldiers."
+ conscription_selection.1.option.a: "Volunteer Conscription"
+ conscription_selection.1.option.b: "Limited Conscription"
+ conscription_selection.1.option.c: "Full Conscription"
+ 
+ law_volunteer_conscription: "Volunteer Conscription"
+ desc_law_volunteer_conscription: "The manpower of our armies is mainly fueled by volunteers."
+ law_limited_conscription: "Limited Conscription"
+ desc_law_limited_conscription: "The manpower of our armies is fueled by the recruitment of able-bodied, adult men."
+ law_full_conscription: "Full Conscription"
+ desc_law_full_conscription: "The manpower of our armies is fueled by the recruitment of all citizens old enough to walk."
  
- utopian_vision: "Utopian Vision"
- desc_utopian_vision: ""
+ SET_VOLUNTEER_CONSCRIPTION: "Set §YConscription Policy§! to §YVolunteer§!."
+ SET_LIMITED_CONSCRIPTION: "Set §YConscription Policy§! to §YLimited§!."
+ SET_FULL_CONSCRIPTION: "Set §YConscription Policy§! to §YFull§!."
+ 
+ VOLUNTEER_CONSCRIPTION: "Volunteer Conscription"
+ LIMITED_CONSCRIPTION: "Limited Conscription"
+ FULL_CONSCRIPTION: "Full Conscription"
+ 
+ ALREADY_VOLUNTEER_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YVolunteer§!."
+ ALREADY_LIMITED_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YLimited§!."
+ ALREADY_FULL_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YFull§!."
+ 
+ VOLUNTEER_CONSCRIPTION_EXPLANATION: "\nBy enacting this law we will make our armies an all-volunteer force outside of a full-on invasaion. \n\nEnacting this policy will grant:\n§R50%§! decrease in the size of our manpower pool.\n§G2§! points of unrest reduction.\n§G10%§! increase in our troop morale.\n§G5%§! increase in our troop discipline."
+ 
+ LIMITED_CONSCRIPTION_EXPLANATION: "\nBy enacting this law we will allow us to draft all able-bodied, adult men to serve in our military. \n\nEnacting this policy will grant:\n§G15%§! increase in the size of our manpower pool.\n§R2%§! decrease in our construction speed.\n§R2%§! increase in our construction costs.\n§G2§! points added to our land forcelimit.\n§R10%§! decrease in our troop morale.\n§R5%§! decrease in our troop discipline."
+ 
+ FULL_CONSCRIPTION_EXPLANATION: "\nBy enacting this law er will conscript §Reveryone§!, including children and women, to a period of service. \n\nEnacting this policy will grant:\n§R20%§! decrease in tax revenue.\n§G100%§! increase in the size of our manpower pool.\n§R10%§! decrease in troop morale.\n§R15%§! decrease in troop discipline.\n§R100%§! decrease in construction speed.\n§R15%§! increase in construction costs.\n§G0.25§! points of Army Tradition per year.\n§G50%§! decrease in the cost of infantry.\n§R50§! decrease in drilling effectiveness.\n§G5§! points in land forcelimit.\n§R2§! points of unrest."
+ 
+ #--------------------------------------------
+ # Slavery
+ #--------------------------------------------
+ current_slavery_law: "Slavery Regulation"
+ 
+ slavery_selection.1.title: "Slavery Regulation"
+ slavery_selection.1.desc: "The current slave regulation in [Root.GetName] is [Root.GetCurrentSlaveryPolicy].\n\nYour slavery regulation controls how your country views slavery and the usage of slavery within the country."
+ slavery_selection.1.option.a: "Allowed"
+ slavery_selection.1.option.b: "Licensed"
+ slavery_selection.1.option.c: "Forbidden"
+ 
+ law_slavery_allowed: "Slavery Allowed"
+ desc_law_slavery_allowed: "Slavery is practicable by any citizen, and the state if it so pleases."
+ law_slavery_licensed: "Slavery Licensed"
+ desc_law_slavery_licensed: "Slavery is primarily practiced by the state."
+ law_slavery_forbidden: "Slavery Forbidden"
+ desc_law_slavery_forbidden: "Slavery is forbidden."
  
- fast_mobilization: "Fast Mobilization"
- desc_fast_mobilization: ""
+ SET_SLAVERY_ALLOWED: "Set §YSlavery Regulation§! to §YAllowed§!."
+ SET_SLAVERY_LICENSED: "Set §YSlavery Regulation§! to §YLicensed§!."
+ SET_SLAVERY_FORBIDDEN: "Set §YSlavery Regulation§! to §YForbidden§!."
+ 
+ SLAVERY_ALLOWED: "Allowed"
+ SLAVERY_LICENSED: "Licensed"
+ SLAVERY_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_SLAVERY: "Our §YSlavery Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SLAVERY: "Our §YSlavery Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SLAVERY: "Our §YSlavery Regulation§! is already set to §YForbidden§!."
+ 
+ SLAVERY_ALLOWED_EXPLANATION: "\nBy enacting this law, slavery is legalized for all citizens. \n\nEnacting this policy will grant:\n§G25%§! decrease in the cost of troops.\n§G25%§! decrease in the time to train troops.\n§G5%§! increase in production of goods.\n§R2§! point decrease in our diplomatic repuation."
+ 
+ SLAVERY_LICENSED_EXPLANATION: "\nBy enacting this law we adopt a limited approach to slavery. Slave labor is primarily employed by the state for economic and punitive purposes and supplements the labor of freemen. There are few, if any private slavers under this system. \n\nEnacting this policy will grant:\n§G10%§! decrease in the cost of troops.\n§G10%§! decrease in the time to train troops.\n§G10%§! decrease in construction costs\n§R1§! point decrease in our diplomatic repuation."
+ 
+ SLAVERY_FORBIDDEN_EXPLANATION: "\nBy enacting this law we outlaw slavery and strictly enforces the ban. This is an extremely prestigious and noble act in the eyes of other nations. \n\nEnacting this policy will grant:\n§G1§! point increase in our diplomatic reputation.\n§G0.1§! increase in yearly prestige gain."
+ 
+ #--------------------------------------------
+ # Gambling
+ #--------------------------------------------
+ current_gambling_law: "Gambling Regulation"
+ 
+ gambling_selection.1.title: "Gambling Regulation"
+ gambling_selection.1.desc: "The current gambling regulation in [Root.GetName] is [Root.GetCurrentGamblingPolicy].\n\nYour gambling regulation controls how your country views gambling and the presence of gambling-related activities within the country."
+ gambling_selection.1.option.a: "Allowed"
+ gambling_selection.1.option.b: "Licensed"
+ gambling_selection.1.option.c: "Forbidden"
+
+ law_gambling_allowed: "Gambling Allowed"
+ desc_law_gambling_allowed: "Gambling is allowed anywhere without restriction."
+ law_gambling_licensed: "Gambling Licensed"
+ desc_law_gambling_licensed: "Gambling only allowed in state-sanctioned venues. Other forms are prosecuted."
+ law_gambling_forbidden: "Gambling Forbidden"
+ desc_law_gambling_allowed: "Gambling is forbidden."
  
- low_wages: "Low Wages"
- desc_low_wages: ""
+ SET_GAMBLING_ALLOWED: "Set §YGambling Regulation§! to §YAllowed§!."
+ SET_GAMBLING_LICENSED: "Set §YGambling Regulation§! to §YLicensed§!."
+ SET_GAMBLING_FORBIDDEN: "Set §YGambling Regulation§! to §YForbidden§!."
+ 
+ GAMBLING_ALLOWED: "Allowed"
+ GAMBLING_LICENSED: "Licensed"
+ GAMBLING_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_GAMBLING: "Our §YGambling Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_GAMBLING: "Our §YGambling Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_GAMBLING: "Our §YGambling Regulation§! is already set to §YForbidden§!."
+ 
+ GAMBLING_ALLOWED_EXPLANATION: "\nBy enacting this law we allow for unrestricted gambling throughout our provinces. This significantly boosts our income, but due to the populace spending their money and wasting time at casinoes, our production output will be lowered.\n\nEnacting this policy will grant:\nThe 'The House Wins!' event.\n§G15%§! increase in tax revenue.\n§R20%§! decrease in production of goods."
+ 
+ GAMBLING_LICENSED_EXPLANATION: "\nBy enacting this law we allow for limited gambling operations throughout our provinces. \n\nEnacting this policy will grant:\nThe 'The House Wins!' event.\n§G10%§! increase in tax revenue.\n§R10%§! decrease in production of goods."
+ 
+ GAMBLING_FORBIDDEN_EXPANATION: "\nBy enacting this law we outlaw gambling. This is considered a very noble act, increasing our prestige amougst our peers.\n\nEnacting this policy will grant:\n§G0.5§! decrease in unrest.\n§G10%§! increase in production of goods.\n§G0.1§! increase in yearly prestige."
+ 
+ gambling_flavour.1.title: "The House Wins!"
+ gambling_flavour.1.desc: "An unfortunate loser has lost big in one of our casinos, supplying the house, and therefore us with their losses."
+ gambling_flavour.1.option.a: "Excellent"
+ 
+ #--------------------------------------------
+ # Prostitution
+ #--------------------------------------------
+ current_prostitution_law: "Prostitution Regulation"
+ 
+ prostitution_selection.1.title: "Prostitution Regulation"
+ prostitution_selection.1.desc: "The current prostitution regulation in [Root.GetName] is [Root.GetCurrentProstitutionPolicy].\n\nYour prostitution regulation controls how your country views prostitution and the presence of prostitution-related activities within the country."
+ prostitution_selection.1.option.a: "Allowed"
+ prostitution_selection.1.option.b: "Licensed"
+ prostitution_selection.1.option.c: "Forbidden"
+ 
+ law_prostitution_allowed: "Prostitution Allowed"
+ desc_law_prostitution_allowed: "Prostitution is allowed anywhere without restriction."
+ law_prostitution_licensed: "Prostitution Licensed"
+ desc_law_prostitution_licensed: "Brothels are strictly licensed by the state."
+ law_prostitution_forbidden: "Prostitution Forbidden"
+ desc_law_prostitution_forbidden: "Prostitution is forbidden."
+ 
+ SET_PROSTITUTION_ALLOWED: "Set §YProstitution Regulation§! to §YAllowed§!."
+ SET_PROSTITUTION_LICENSED: "Set §YProstitution Regulation§! to §YLicensed§!."
+ SET_PROSTITUTION_FORBIDDEN: "Set §YProstitution Regulation§! to §YForbidden§!."
+ 
+ PROSTITUTION_ALLOWED: "Allowed"
+ PROSTITUTION_LICENSED: "Licensed"
+ PROSTITUTION_FORBIDDEN: "Forbidden"
+ 
+ ALREADY_ALLOW_PROSTITUTION: "Our §YProstitution Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_PROSTITUTION: "Our §YProstitution Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_PROSTITUTION: "Our §YProstitution Regulation§! is already set to §YForbidden§!."
+ 
+ PROSTITUTION_ALLOWED_EXPLANATION: "\nBy enacting this law we will permit the 'exploits' of ambitious young women and their 'noble' courtiers.\n\nEnacting this policy will grant:\n§R0.05§! points of corruption each year.\n§G25%§! increase in heir production.\n§G1§! point decrease in unrest.\n§R0.1§! decrease in yearly prestige."
+ 
+ PROSTITUTION_LICENSED_EXPLANATION: "\nBy enacting this law we will permit the exploitation of women by state-licensed businesses.\n\nEnacting this policy will grant:\n§R0.05§! points of corruption each year.\n§G0.5§! point decrease in unrest.\n§R0.1§! decrease in yearly prestige.\n§G15%§! increase in tax revenue."
+ 
+ PROSTITUTION_FORBIDDEN_EXPLANATION: "\nBy enacting this law we will protect the womenfolk of our country, especially the poor, from selling their bodies into prostitution. \n\nEnacting this policy will grant:\n§G0.03§! decrease in yearly corruption.\n§G0.1§! increase in yearly prestige.\n§G0.05§! increase in prestige from conversion."
+ 
+ #--------------------------------------------
+ # Firearms
+ #--------------------------------------------
+ current_firearms_law: "Gun Control"
+ 
+ firearms_selection.1.title: "Firearms Regulation"
+ firearms_selection.1.desc: "The current firearms regulation in [Root.GetName] is [Root.GetCurrentFirearmsPolicy].\n\nYour firearms regulation controls how your country views the carrying of firearms and the presence of non-state firearms-related activities and possession within the country."
+ firearms_selection.1.option.a: "Allowed"
+ firearms_selection.1.option.b: "Licensed"
+ firearms_selection.1.option.c: "Forbidden"
  
- poor_planning: "Poor Planning"
- desc_poor_planning: ""
+ law_firearms_allowed: "Constitutional Carry"
+ desc_law_firearms_allowed: "The right to keep and bare arms is not infringed."
+ law_firearms_licensed: "Gun Registry"
+ desc_law_firearms_licensed: "Possession of firearms is allowed with a license."
+ law_firearms_forbidden: "Gun Control"
+ desc_law_firearms_forbidden: "The state is attempting to disarm its civilian populace."
  
- economic_boom: "Economic Boom"
- desc_economic_boom: ""
+ SET_FIREARMS_ALLOWED: "Set §YFirearms Regulation§! to §YAllowed§!."
+ SET_FIREARMS_LICENSED: "Set §YFirearms Regulation§! to §YLicensed§!."
+ SET_FIREARMS_FORBIDDEN: "Set §YFirearms Regulation§! to §YForbidden§!."
  
- preferred_market: "Preferred Market"
- desc_preferred_market: ""
+ FIREARMS_ALLOWED: "Allowed"
+ FIREARMS_LICENSED: "Licensed"
+ FIREARMS_FORBIDDEN: "Forbidden"
  
- economic_depression: "Economic Depression"
- desc_economic_depression: ""
+ ALREADY_ALLOW_FIREARMS: "Our §YFirearms Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_FIREARMS: "Our §YFirearms Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_FIREARMS: "Our §YFirearms Regulation§! is already set to §YForbidden§!."
  
- people_in_poverty: "People in Poverty"
- desc_people_in_poverty: ""
+ FIREARMS_ALLOWED_EXPLANATION: "\nBy enacting this law, we will institute a well regulated militia, neccesary for the security. \n\nEnacting this policy will grant:\n§G1§! point decrease in unrest.\n§R20%§! increase in the cost of harsh treatment.\n§G25%§! decrease in the cost of reinforcements.\n§R5§! point increase in nationalism in newly conquered provinces."
  
- # Law Events
- fds_law.1.title: "Citizen Representation"
- fds_law.1.desc: ""
- fds_law.1.option.a: ""
+ FIREARMS_LICENSED_EXPLANATION: "\nBy enacting this law we will be restricting the ownership of guns to those licensed by state officials.\n\nEnacting this policy will grant:\n§G0.5§! point decrease in unrest.\n§R10%§! increase in the cost of harsh treatment.\n§G10%§! decrease in the cost of reinforcements.\n§R3§! point increase in nationalism in newly conquered provinces."
  
- fds_law.2.title: "Self-determination"
- fds_law.2.desc: ""
- fds_law.2.option.a: ""
+ FIREARMS_FORBIDDEN_EXPLANATION: "\nBy enacting this law will be be restricting the ownership of guns to the state only. This will anger many of our citizens.\n\nEnacting this policy will grant:\n§G10§! point decrease in nationalism in newly conquered provinces.\n§G10%§! decrease in the cost of harsh treatment.\n§R2§! point increase in unrest."
  
- fds_law.3.title: "Tyranny of the Majority"
- fds_law.3.desc: ""
- fds_law.3.option.a: ""
+ #--------------------------------------------
+ # Narcotics
+ #--------------------------------------------
+ current_narcotics_law: "Hard Drug Regulation"
  
- fds_law.4.title: "Cumbersome Bureaucracy"
- fds_law.4.desc: ""
- fds_law.4.option.a: ""
+ narcotics_selection.1.title: "Narcotics Regulation"
+ narcotics_selection.1.desc: "The current narcotics regulation in [Root.GetName] is [Root.GetCurrentNarcoticsPolicy].\n\nYour narcotics regulation controls how your country views hard drugs and the presence of drug activities within the country."
+ narcotics_selection.1.option.a: "Allowed"
+ narcotics_selection.1.option.b: "Licensed"
+ narcotics_selection.1.option.c: "Forbidden"
  
- fds_law.5.title: "Industrial Favours"
- fds_law.5.desc: ""
- fds_law.5.option.a: ""
+ law_narcotics_allowed: "Hard Drugs Allowed"
+ desc_law_narcotics_allowed: "Hard drug production and usage are allowed without restriction."
+ law_narcotics_licensed: "Hard Drugs Licensed"
+ desc_law_narcotics_licensed: "Hard drug production and usage are allowed with license."
+ law_narcotics_forbidden: "Hard Drugs Forbidden"
+ desc_law_narcotics_forbidden: "The production and usage of hard drugs (and, in some states, lesser drugs like alcohol) are forbidden."
  
- fds_law.6.title: "Cabal of Elites"
- fds_law.6.desc: ""
- fds_law.6.option.a: ""
+ SET_NARCOTICS_ALLOWED: "Set §YNarcotics Regulation§! to §YAllowed§!."
+ SET_NARCOTICS_LICENSED: "Set §YNarcotics Regulation§! to §YLicensed§!."
+ SET_NARCOTICS_FORBIDDEN: "Set §YNarcotics Regulation§! to §YForbidden§!."
  
- fds_law.7.title: "Misguided Judgments"
- fds_law.7.desc: ""
- fds_law.7.option.a: ""
+ NARCOTICS_ALLOWED: "Allowed"
+ NARCOTICS_LICENSED: "Licensed"
+ NARCOTICS_FORBIDDEN: "Forbidden"
  
- fds_law.8.title: "Fractured Cadre"
- fds_law.8.desc: ""
- fds_law.8.option.a: ""
+ ALREADY_ALLOW_NARCOTICS: "Our §YNarcotics Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_NARCOTICS: "Our §YNarcotics Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_NARCOTICS: "Our §YNarcotics Regulation§! is already set to §YForbidden§!."
  
- fds_law.9.title: "Dictatorial Vision"
- fds_law.9.desc: ""
- fds_law.9.option.a: ""
+ NARCOTICS_ALLOWED_EXPLANATION: "\nBy enacting this law we will legalize the consumption and production of many drugs, such as jet, methamphetamine, etc.\n\nEnacting this policy will grant:\n§G15%§! decrease in shock damage taken by troops.\n§G20%§! decrease in native uprisings.\n§R1§! point increase in unrest.\n§R0.1§! decrease in yearly prestige."
  
- fds_law.10.title: "Glory Above All"
- fds_law.10.desc: ""
- fds_law.10.option.a: ""
+ NARCOTICS_LICENSED_EXPLANATION: "\nBy enacting this law we will legalize the consumption of drugs, and restrict the production of drugs to state-sponsored businesses.\n\nEnacting this policy will grant:\n§G5%§! decrease in shock damage taken by troops.\n§R0.5§! point increase in unrest.\n§G5%§! decrease in native uprisings.\n§G5%§! increase in tax revenue.\n§R0.05§! decrease in yearly prestige."
  
- fds_law.11.title: "A Intolerable Recluse"
- fds_law.11.desc: ""
- fds_law.11.option.a: ""
+ NARCOTICS_FORBIDDEN_EXPLANATION: "\nBy enacting this law we will crimilize the consumption and production of drugs by anybody other than the state.\n\nEnacting this policy will grant:\n§G1§! point decrease in unrest.\n§G0.15§! increase in yearly prestige.\n§R10%§! decrease in caravan effectiveness."
  
- fds_law.12.title: "Grassroot Rebellion"
- fds_law.12.desc: ""
- fds_law.12.option.a: ""
+ #--------------------------------------------
+ # Scavenging
+ #--------------------------------------------
+ current_scavenging_law: "Scavenging Regulation"
  
- # Justice Events
- fds_justice.1.title: "Just Arbitration"
- fds_justice.1.desc: ""
- fds_justice.1.option.a: ""
+ scavenging_selection.1.title: "Scavenging Regulation"
+ scavenging_selection.1.desc: "The current scavenging regulation in [Root.GetName] is [Root.GetCurrentScavengingPolicy].\n\nYour scavenging regulation controls how your country views scavenging and the presence of non-state scavenging-related activities within the country."
+ scavenging_selection.1.option.a: "Allowed"
+ scavenging_selection.1.option.b: "Licensed"
+ scavenging_selection.1.option.c: "Forbidden"
  
- fds_justice.2.title: "Respected Courts"
- fds_justice.2.desc: ""
- fds_justice.2.option.a: ""
+ law_scavenging_allowed: "Scavenging Allowed"
+ desc_law_scavenging_allowed: "Scavenging is allowed without restriction."
+ law_scavenging_licensed: "Scavenging Licensed"
+ desc_law_scavenging_licensed: "Scavenging is only allowed by the state and state-sanctioned individuals."
+ law_scavenging_forbidden: "Scavenging Forbidden"
+ desc_law_scavenging_forbidden: "Scavenging is only allowed by the state."
  
- fds_justice.3.title: "Judicial Scandal"
- fds_justice.3.desc: ""
- fds_justice.3.option.a: ""
+ SET_SCAVENGING_ALLOWED: "Set §YScavenging Regulation§! to §YAllowed§!."
+ SET_SCAVENGING_LICENSED: "Set §YScavenging Regulation§! to §YLicensed§!."
+ SET_SCAVENGING_FORBIDDEN: "Set §YScavenging Regulation§! to §YForbidden§!."
  
- fds_justice.4.title: "Clogged Courts"
- fds_justice.4.desc: ""
- fds_justice.4.option.a: ""
+ SCAVENGING_ALLOWED: "Allowed"
+ SCAVENGING_LICENSED: "Licensed"
+ SCAVENGING_FORBIDDEN: "Forbidden"
  
- fds_justice.5.title: "Communal Beatings"
- fds_justice.5.desc: ""
- fds_justice.5.option.a: ""
+ ALREADY_ALLOW_SCAVENGING: "Our §YScavenging Regulation§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SCAVENGING: "Our §YScavenging Regulation§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SCAVENGING: "Our §YScavenging Regulation§! is already set to §YForbidden§!."
  
- fds_justice.6.title: "Communal Judgment"
- fds_justice.6.desc: ""
- fds_justice.6.option.a: ""
+ SCAVENGING_ALLOWED_EXPLANATION: "\nBy enacting this law we will permit all citizens to scavenge for parts as many wastelanders seek to do.\n\nEnacting this policy will grant:\n§G10%§! increase in the extraction of resources.\n§R20%§! increase in construction costs."
  
- fds_justice.7.title: "Arbitrary Justice"
- fds_justice.7.desc: ""
- fds_justice.7.option.a: ""
+ SCAVENGING_LICENSED_EXPLANATION: "\nBy enacting this law we will restrict scavenging to specific businesses, and require sole scavengers to register or face charges.\n\nEnacting this policy will grant:\n§G5%§! increase in the extraction of resources.\n§R10%§! increase in construction costs."
  
- fds_justice.8.title: "Reprehensible Violence"
- fds_justice.8.desc: ""
- fds_justice.8.option.a: ""
+ SCAVENGING_FORBIDDEN_EXPLANATION: "\nBy enacting this law we will forbide scavenging by anybody other than the state.\n\nEnacting this policy will grant:\n§G20%§! decrease in construction costs."
  
- fds_justice.9.title: "State Secrecy"
- fds_justice.9.desc: ""
- fds_justice.9.option.a: ""
- 
- fds_justice.10.title: "Supression of Rebellion"
- fds_justice.10.desc: ""
- fds_justice.10.option.a: ""
- 
- fds_justice.11.title: "Obscurantism"
- fds_justice.11.desc: ""
- fds_justice.11.option.a: ""
- 
- fds_justice.12.title: "State Censorship"
- fds_justice.12.desc: ""
- fds_justice.12.option.a: ""
- 
- # Punishment Events
- fds_punishment.1.title: "Bulging Coffers"
- fds_punishment.1.desc: ""
- fds_punishment.1.option.a: ""
- 
- fds_punishment.2.title: "Vanity Projects"
- fds_punishment.2.desc: ""
- fds_punishment.2.option.a: ""
- 
- fds_punishment.3.title: "Corruption Accepted"
- fds_punishment.3.desc: ""
- fds_punishment.3.option.a: ""
- 
- fds_punishment.4.title: "Arbitrary Fines"
- fds_punishment.4.desc: ""
- fds_punishment.4.option.a: ""
- 
- fds_punishment.5.title: "Suburban Communities"
- fds_punishment.5.desc: ""
- fds_punishment.5.option.a: ""
- 
- fds_punishment.6.title: "Criminality Drops!"
- fds_punishment.6.desc: ""
- fds_punishment.6.option.a: ""
- 
- fds_punishment.7.title: "Prisons at Capacity"
- fds_punishment.7.desc: ""
- fds_punishment.7.option.a: ""
- 
- fds_punishment.8.title: "Appalling Conditions"
- fds_punishment.8.desc: ""
- fds_punishment.8.option.a: ""
- 
- fds_punishment.9.title: "Safe and Secure"
- fds_punishment.9.desc: ""
- fds_punishment.9.option.a: ""
- 
- fds_punishment.10.title: "Revolt Crushed"
- fds_punishment.10.desc: ""
- fds_punishment.10.option.a: ""
- 
- fds_punishment.11.title: "Arbitrary Punishment"
- fds_punishment.11.desc: ""
- fds_punishment.11.option.a: ""
- 
- fds_punishment.12.title: "Irrevocable Actions"
- fds_punishment.12.desc: ""
- fds_punishment.12.option.a: ""
- 
- fds_punishment.13.title: "Soldiers in Chains"
- fds_punishment.13.desc: ""
- fds_punishment.13.option.a: ""
- 
- fds_punishment.14.title: "Labour without Expense"
- fds_punishment.14.desc: ""
- fds_punishment.14.option.a: ""
- 
- fds_punishment.15.title: "Slaver's Dilemna"
- fds_punishment.15.desc: ""
- fds_punishment.15.option.a: ""
- 
- fds_punishment.16.title: "Dead to Rights"
- fds_punishment.16.desc: ""
- fds_punishment.16.option.a: ""
- 
- # Innovation Events
- fds_innovation.1.title: "Eureka!"
- fds_innovation.1.desc: ""
- fds_innovation.1.option.a: ""
- 
- fds_innovation.2.title: "Entrepreneurship"
- fds_innovation.2.desc: ""
- fds_innovation.2.option.a: ""
- 
- fds_innovation.3.title: "Lack of Innovation"
- fds_innovation.3.desc: ""
- fds_innovation.3.option.a: ""
- 
- fds_innovation.4.title: "Brain Drain"
- fds_innovation.4.desc: ""
- fds_innovation.4.option.a: ""
- 
- fds_innovation.5.title: "Sponsored Success"
- fds_innovation.5.desc: ""
- fds_innovation.5.option.a: ""
- 
- fds_innovation.6.title: "Aspiring Gradutes"
- fds_innovation.6.desc: ""
- fds_innovation.6.option.a: ""
- 
- fds_innovation.7.title: "Swindle Merchants"
- fds_innovation.7.desc: ""
- fds_innovation.7.option.a: ""
- 
- fds_innovation.8.title: "Academic Layabouts"
- fds_innovation.8.desc: ""
- fds_innovation.8.option.a: ""
- 
- fds_innovation.9.title: "State Investments"
- fds_innovation.9.desc: ""
- fds_innovation.9.option.a: ""
- 
- fds_innovation.10.title: "Research Success"
- fds_innovation.10.desc: ""
- fds_innovation.10.option.a: ""
- 
- fds_innovation.11.title: "Innovation Deprioritized"
- fds_innovation.11.desc: ""
- fds_innovation.11.option.a: ""
- 
- fds_innovation.12.title: "Rigid Thinkers"
- fds_innovation.12.desc: ""
- fds_innovation.12.option.a: ""
- 
- # Conscription Events
- fds_conscription.1.title: "Eager Beavers"
- fds_conscription.1.desc: ""
- fds_conscription.1.option.a: ""
- 
- fds_conscription.2.title: "Soldiers of a Caliber"
- fds_conscription.2.desc: ""
- fds_conscription.2.option.a: ""
- 
- fds_conscription.3.title: "Absconders"
- fds_conscription.3.desc: ""
- fds_conscription.3.option.a: ""
- 
- fds_conscription.4.title: "Men without Mettle"
- fds_conscription.4.desc: ""
- fds_conscription.4.option.a: ""
- 
- fds_conscription.5.title: "Wartime Spirit"
- fds_conscription.5.desc: ""
- fds_conscription.5.option.a: ""
- 
- fds_conscription.6.title: "Homeland Defence"
- fds_conscription.6.desc: ""
- fds_conscription.6.option.a: ""
- 
- fds_conscription.7.title: "Morale Slackens"
- fds_conscription.7.desc: ""
- fds_conscription.7.option.a: ""
- 
- fds_conscription.8.title: "Rushed Training"
- fds_conscription.8.desc: ""
- fds_conscription.8.option.a: ""
- 
- fds_conscription.9.title: "All Will Serve"
- fds_conscription.9.desc: ""
- fds_conscription.9.option.a: ""
- 
- fds_conscription.10.title: "Diamond in the Rough"
- fds_conscription.10.desc: ""
- fds_conscription.10.option.a: ""
- 
- fds_conscription.11.title: "The Invalid and the Babe"
- fds_conscription.11.desc: ""
- fds_conscription.11.option.a: ""
- 
- fds_conscription.12.title: "Societal Collapse"
- fds_conscription.12.desc: ""
- fds_conscription.12.option.a: ""
- 
- # Slavery Events
- fds_slavery.1.title: ""
- fds_slavery.1.desc: ""
- fds_slavery.1.option.a: ""
- 
- fds_slavery.2.title: ""
- fds_slavery.2.desc: ""
- fds_slavery.2.option.a: ""
- 
- fds_slavery.3.title: ""
- fds_slavery.3.desc: ""
- fds_slavery.3.option.a: ""
- 
- fds_slavery.4.title: ""
- fds_slavery.4.desc: ""
- fds_slavery.4.option.a: ""
- 
- fds_slavery.5.title: ""
- fds_slavery.5.desc: ""
- fds_slavery.5.option.a: ""
- 
- fds_slavery.6.title: ""
- fds_slavery.6.desc: ""
- fds_slavery.6.option.a: ""
- 
- fds_slavery.7.title: ""
- fds_slavery.7.desc: ""
- fds_slavery.7.option.a: ""
- 
- fds_slavery.8.title: ""
- fds_slavery.8.desc: ""
- fds_slavery.8.option.a: ""
- 
- fds_slavery.9.title: ""
- fds_slavery.9.desc: ""
- fds_slavery.9.option.a: ""
- 
- fds_slavery.10.title: ""
- fds_slavery.10.desc: ""
- fds_slavery.10.option.a: ""
- 
- fds_slavery.11.title: ""
- fds_slavery.11.desc: ""
- fds_slavery.11.option.a: ""
- 
- fds_slavery.12.title: ""
- fds_slavery.12.desc: ""
- fds_slavery.12.option.a: ""
- 
- # Gambling Events
- fds_gambling.1.title: ""
- fds_gambling.1.desc: ""
- fds_gambling.1.option.a: ""
- 
- fds_gambling.2.title: ""
- fds_gambling.2.desc: ""
- fds_gambling.2.option.a: ""
- 
- fds_gambling.3.title: ""
- fds_gambling.3.desc: ""
- fds_gambling.3.option.a: ""
- 
- fds_gambling.4.title: ""
- fds_gambling.4.desc: ""
- fds_gambling.4.option.a: ""
- 
- fds_gambling.5.title: ""
- fds_gambling.5.desc: ""
- fds_gambling.5.option.a: ""
- 
- fds_gambling.6.title: ""
- fds_gambling.6.desc: ""
- fds_gambling.6.option.a: ""
- 
- fds_gambling.7.title: ""
- fds_gambling.7.desc: ""
- fds_gambling.7.option.a: ""
- 
- fds_gambling.8.title: ""
- fds_gambling.8.desc: ""
- fds_gambling.8.option.a: ""
- 
- fds_gambling.9.title: ""
- fds_gambling.9.desc: ""
- fds_gambling.9.option.a: ""
- 
- fds_gambling.10.title: ""
- fds_gambling.10.desc: ""
- fds_gambling.10.option.a: ""
- 
- fds_gambling.11.title: ""
- fds_gambling.11.desc: ""
- fds_gambling.11.option.a: ""
- 
- fds_gambling.12.title: ""
- fds_gambling.12.desc: ""
- fds_gambling.12.option.a: ""
- 
- # Prostitution Events
- fds_prostitution.1.title: ""
- fds_prostitution.1.desc: ""
- fds_prostitution.1.option.a: ""
- 
- fds_prostitution.2.title: ""
- fds_prostitution.2.desc: ""
- fds_prostitution.2.option.a: ""
- 
- fds_prostitution.3.title: ""
- fds_prostitution.3.desc: ""
- fds_prostitution.3.option.a: ""
- 
- fds_prostitution.4.title: ""
- fds_prostitution.4.desc: ""
- fds_prostitution.4.option.a: ""
- 
- fds_prostitution.5.title: ""
- fds_prostitution.5.desc: ""
- fds_prostitution.5.option.a: ""
- 
- fds_prostitution.6.title: ""
- fds_prostitution.6.desc: ""
- fds_prostitution.6.option.a: ""
- 
- fds_prostitution.7.title: ""
- fds_prostitution.7.desc: ""
- fds_prostitution.7.option.a: ""
- 
- fds_prostitution.8.title: ""
- fds_prostitution.8.desc: ""
- fds_prostitution.8.option.a: ""
- 
- fds_prostitution.9.title: ""
- fds_prostitution.9.desc: ""
- fds_prostitution.9.option.a: ""
- 
- fds_prostitution.10.title: ""
- fds_prostitution.10.desc: ""
- fds_prostitution.10.option.a: ""
- 
- fds_prostitution.11.title: ""
- fds_prostitution.11.desc: ""
- fds_prostitution.11.option.a: ""
- 
- fds_prostitution.12.title: ""
- fds_prostitution.12.desc: ""
- fds_prostitution.12.option.a: ""
- 
- # Firearms Events
- fds_firearms.1.title: ""
- fds_firearms.1.desc: ""
- fds_firearms.1.option.a: ""
- 
- fds_firearms.2.title: ""
- fds_firearms.2.desc: ""
- fds_firearms.2.option.a: ""
- 
- fds_firearms.3.title: ""
- fds_firearms.3.desc: ""
- fds_firearms.3.option.a: ""
- 
- fds_firearms.4.title: ""
- fds_firearms.4.desc: ""
- fds_firearms.4.option.a: ""
- 
- fds_firearms.5.title: ""
- fds_firearms.5.desc: ""
- fds_firearms.5.option.a: ""
- 
- fds_firearms.6.title: ""
- fds_firearms.6.desc: ""
- fds_firearms.6.option.a: ""
- 
- fds_firearms.7.title: ""
- fds_firearms.7.desc: ""
- fds_firearms.7.option.a: ""
- 
- fds_firearms.8.title: ""
- fds_firearms.8.desc: ""
- fds_firearms.8.option.a: ""
- 
- fds_firearms.9.title: ""
- fds_firearms.9.desc: ""
- fds_firearms.9.option.a: ""
- 
- fds_firearms.10.title: ""
- fds_firearms.10.desc: ""
- fds_firearms.10.option.a: ""
- 
- fds_firearms.11.title: ""
- fds_firearms.11.desc: ""
- fds_firearms.11.option.a: ""
- 
- fds_firearms.12.title: ""
- fds_firearms.12.desc: ""
- fds_firearms.12.option.a: ""
- 
- # Narcotics Events
- fds_narcotics.1.title: ""
- fds_narcotics.1.desc: ""
- fds_narcotics.1.option.a: ""
- 
- fds_narcotics.2.title: ""
- fds_narcotics.2.desc: ""
- fds_narcotics.2.option.a: ""
- 
- fds_narcotics.3.title: ""
- fds_narcotics.3.desc: ""
- fds_narcotics.3.option.a: ""
- 
- fds_narcotics.4.title: ""
- fds_narcotics.4.desc: ""
- fds_narcotics.4.option.a: ""
- 
- fds_narcotics.5.title: ""
- fds_narcotics.5.desc: ""
- fds_narcotics.5.option.a: ""
- 
- fds_narcotics.6.title: ""
- fds_narcotics.6.desc: ""
- fds_narcotics.6.option.a: ""
- 
- fds_narcotics.7.title: ""
- fds_narcotics.7.desc: ""
- fds_narcotics.7.option.a: ""
- 
- fds_narcotics.8.title: ""
- fds_narcotics.8.desc: ""
- fds_narcotics.8.option.a: ""
- 
- fds_narcotics.9.title: ""
- fds_narcotics.9.desc: ""
- fds_narcotics.9.option.a: ""
- 
- fds_narcotics.10.title: ""
- fds_narcotics.10.desc: ""
- fds_narcotics.10.option.a: ""
- 
- fds_narcotics.11.title: ""
- fds_narcotics.11.desc: ""
- fds_narcotics.11.option.a: ""
- 
- fds_narcotics.12.title: ""
- fds_narcotics.12.desc: ""
- fds_narcotics.12.option.a: ""
- 
- # Scavenging Events
- fds_scavenging.1.title: ""
- fds_scavenging.1.desc: ""
- fds_scavenging.1.option.a: ""
- 
- fds_scavenging.2.title: ""
- fds_scavenging.2.desc: ""
- fds_scavenging.2.option.a: ""
- 
- fds_scavenging.3.title: ""
- fds_scavenging.3.desc: ""
- fds_scavenging.3.option.a: ""
- 
- fds_scavenging.4.title: ""
- fds_scavenging.4.desc: ""
- fds_scavenging.4.option.a: ""
- 
- fds_scavenging.5.title: ""
- fds_scavenging.5.desc: ""
- fds_scavenging.5.option.a: ""
- 
- fds_scavenging.6.title: ""
- fds_scavenging.6.desc: ""
- fds_scavenging.6.option.a: ""
- 
- fds_scavenging.7.title: ""
- fds_scavenging.7.desc: ""
- fds_scavenging.7.option.a: ""
- 
- fds_scavenging.8.title: ""
- fds_scavenging.8.desc: ""
- fds_scavenging.8.option.a: ""
- 
- fds_scavenging.9.title: ""
- fds_scavenging.9.desc: ""
- fds_scavenging.9.option.a: ""
- 
- fds_scavenging.10.title: ""
- fds_scavenging.10.desc: ""
- fds_scavenging.10.option.a: ""
- 
- fds_scavenging.11.title: ""
- fds_scavenging.11.desc: ""
- fds_scavenging.11.option.a: ""
- 
- fds_scavenging.12.title: ""
- fds_scavenging.12.desc: ""
- fds_scavenging.12.option.a: ""
- 
- # Reset
- fds_reset.1.title: "Economic Reforms"
- fds_reset.1.desc: "Society is now accepting of reform in the economic sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our economic policy."
- fds_reset.1.option.a: "Excellent"
- 
- fds_reset.2.title: "Law Reforms"
- fds_reset.2.desc: "Society is now accepting of reform in the law sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our law policy."
- fds_reset.2.option.a: "Excellent"
- 
- fds_reset.3.title: "Judicial Reforms"
- fds_reset.3.desc: "Society is now accepting of reform in the judiciary sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our justicial policy."
- fds_reset.3.option.a: "Excellent"
- 
- fds_reset.4.title: "Punishment Reforms"
- fds_reset.4.desc: "Society is now accepting of reform in the punishment sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our punishment policy."
- fds_reset.4.option.a: "Excellent"
- 
- fds_reset.5.title: "Innovation Reforms"
- fds_reset.5.desc: "Society is now accepting of reform in the innovation sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our innovation policy."
- fds_reset.5.option.a: "Excellent"
- 
- fds_reset.6.title: "Conscription Reforms"
- fds_reset.6.desc: "Society is now accepting of reform in the conscription sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our conscription policy."
- fds_reset.6.option.a: "Excellent"
- 
- fds_reset.7.title: "Slavery Reforms"
- fds_reset.7.desc: "Society is now accepting of reform in the slavery sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our slavery regulation."
- fds_reset.7.option.a: "Excellent"
- 
- fds_reset.8.title: "Gambling Reforms"
- fds_reset.8.desc: "Society is now accepting of reform in the gambling sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our slavery gambling."
- fds_reset.8.option.a: "Excellent"
- 
- fds_reset.9.title: "Prostitution Reforms"
- fds_reset.9.desc: "Society is now accepting of reform in the prostitution sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our prostitution regulation."
- fds_reset.9.option.a: "Excellent"
- 
- fds_reset.10.title: "Firearms Reforms"
- fds_reset.10.desc: "Society is now accepting of reform in the firearms sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our firearms regulation."
- fds_reset.10.option.a: "Excellent"
- 
- fds_reset.11.title: "Narcotics Reforms"
- fds_reset.11.desc: "Society is now accepting of reform in the narcotics sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our narcotics regulation."
- fds_reset.11.option.a: "Excellent"
- 
- fds_reset.12.title: "Scavenging Reforms"
- fds_reset.12.desc: "Society is now accepting of reform in the scavenging sector. If [Root.Monarch.GetName] wishes to, [Root.Monarch.GetSheHe] may reform our scavenging regulation."
- fds_reset.12.option.a: "Excellent"
- 
- # Economic Disaster
- fds_economic_disaster.1.title: "Economic Collapse"
- fds_economic_disaster.1.desc: "Rapid changes to our economic system have caused a minor economic collapse. This has upset the people of [Root.GetName], who have taken to the streets and made their discontent known."
- fds_economic_disaster.1.option.a: "Oh no!"
- 
- fds_economic_disaster.2.title: "Economic Recovery"
- fds_economic_disaster.2.desc: "[Root.GetName] has weathered the collapse, and through blood and sweat, restored order to the fractured people of [Root.GetName]."
- fds_economic_disaster.2.option.a: "Hurrah"
- 
- fds_economic_disaster.3.title: "Citizen Revolt"
- fds_economic_disaster.3.desc: "A group of citizens have risen up in anger over our economic woes. They must be silenced lest their sentiments spread elsewhere."
- fds_economic_disaster.3.option.a: "Pay them to keep quiet"
- fds_economic_disaster.3.option.b: "Crush them!"
- 
- # Political Disaster
- fds_political_disaster.1.title: "Political Collapse"
- fds_political_disaster.1.desc: "Rapid changes to a notable policy have caused a political collapse. This has upset the people of [Root.GetName], who have taken to the streets and made their discontent known."
- fds_political_disaster.1.option.a: "Oh no!"
- 
- fds_political_disaster.2.title: "Political Recovery"
- fds_political_disaster.2.desc: "[Root.GetName] has weathered the collapse, and through blood and sweat, restored order to the fractured people of [Root.GetName]."
- fds_political_disaster.2.option.a: "Hurrah"
- 
- fds_political_disaster.3.title: "Citizen Revolt"
- fds_political_disaster.3.desc: "A group of citizens have risen up in anger over our political woes. They must be silenced lest their sentiments spread elsewhere."
- fds_political_disaster.3.option.a: "Pay them to keep quiet"
- fds_political_disaster.3.option.b: "Crush them!"
- 
- # Regulatory Disaster
- fds_regulatory_disaster.1.title: "Regulatory Collapse"
- fds_regulatory_disaster.1.desc: "Rapid changes to a notable regulation have caused a regulatory collapse. This has upset the people of [Root.GetName], who have taken to the streets and made their discontent known."
- fds_regulatory_disaster.1.option.a: "Oh no!"
- 
- fds_regulatory_disaster.2.title: "Regulatory Restoration"
- fds_regulatory_disaster.2.desc: "[Root.GetName] has weathered the collapse, and through blood and sweat, restored order to the fractured people of [Root.GetName]."
- fds_regulatory_disaster.2.option.a: "Hurrah"
- 
- fds_regulatory_disaster.3.title: "Citizen Revolt"
- fds_regulatory_disaster.3.desc: "A group of citizens have risen up in anger over our regulatory woes. They must be silenced lest their sentiments spread elsewhere."
- fds_regulatory_disaster.3.option.a: "Pay them to keep quiet"
- fds_regulatory_disaster.3.option.b: "Crush them!"
- 
+ #--------------------------------------------
  # Decisions
- fds_economy_selection_title: "Enact Economic Policy"
- fds_economy_selection_desc: "Change your economic policy."
+ #--------------------------------------------
+ law_hide_menus_title: "Hide Laws"
+ law_hide_menus_desc: "Toggle visibility of policy and regulation decisions."
  
- fds_law_selection_title: "Enact Law Policy"
- fds_law_selection_desc: "Change your law policy."
+ law_show_menus_title: "Show Laws"
+ law_show_menus_desc: "Toggle visibility of policy and regulation decisions."
  
- fds_justice_selection_title: "Enact Justice Policy"
- fds_justice_selection_desc: "Change your justice policy."
+ law_economy_selection_title: "Enact Economic Policy"
+ law_economy_selection_desc: "Change your economic policy."
  
- fds_punishment_selection_title: "Enact Punishment Policy"
- fds_punishment_selection_desc: "Change your punishment policy."
+ law_law_selection_title: "Enact Law Policy"
+ law_law_selection_desc: "Change your law policy."
  
- fds_innovation_selection_title: "Enact Innovation Policy"
- fds_innovation_selection_desc: "Change your innovation policy."
+ law_justice_selection_title: "Enact Justice Policy"
+ law_justice_selection_desc: "Change your justice policy."
  
- fds_conscription_selection_title: "Enact Conscription Policy"
- fds_conscription_selection_desc: "Change your conscription policy."
+ law_punishment_selection_title: "Enact Punishment Policy"
+ law_punishment_selection_desc: "Change your punishment policy."
  
- fds_slavery_selection_title: "Pass Slavery Regulation"
- fds_slavery_selection_desc: "Change your slavery regulation."
+ law_innovation_selection_title: "Enact Innovation Policy"
+ law_innovation_selection_desc: "Change your innovation policy."
  
- fds_gambling_selection_title: "Pass Gambling Regulation"
- fds_gambling_selection_desc: "Change your gambling regulation."
+ law_conscription_selection_title: "Enact Conscription Policy"
+ law_conscription_selection_desc: "Change your conscription policy."
  
- fds_prostitution_selection_title: "Pass Prostitution Regulation"
- fds_prostitution_selection_desc: "Change your prostitution regulation."
+ law_slavery_selection_title: "Pass Slavery Regulation"
+ law_slavery_selection_desc: "Change your slavery regulation."
  
- fds_firearms_selection_title: "Pass Firearms Regulation"
- fds_firearms_selection_desc: "Change your firearms regulation."
+ law_gambling_selection_title: "Pass Gambling Regulation"
+ law_gambling_selection_desc: "Change your gambling regulation."
  
- fds_narcotics_selection_title: "Pass Narcotics Regulation"
- fds_narcotics_selection_desc: "Change your narcotics regulation."
+ law_prostitution_selection_title: "Pass Prostitution Regulation"
+ law_prostitution_selection_desc: "Change your prostitution regulation."
  
- fds_scavenging_selection_title: "Pass Scavenging Regulation"
- fds_scavenging_selection_desc: "Change your scavenging regulation."
+ law_firearms_selection_title: "Pass Firearms Regulation"
+ law_firearms_selection_desc: "Change your firearms regulation."
  
- fds_hide_menus_title: "Hide Policies and Regulations"
- fds_hide_menus_desc: "Toggle visibility of policy and regulation decisions."
+ law_narcotics_selection_title: "Pass Narcotics Regulation"
+ law_narcotics_selection_desc: "Change your narcotics regulation."
  
- fds_show_menus_title: "Show Policies and Regulations"
- fds_show_menus_desc: "Toggle visibility of policy and regulation decisions."
- 
- # Disasters
- FDS_QUICK_CHANGE_REGULATORY_DISASTER_WARNING: "Changing your policy now will cause a §YRegulatory Disaster§! to occur."
- FDS_QUICK_CHANGE_POLITICAL_DISASTER_WARNING: "Changing your policy now will cause a §YPolitical Disaster§! to occur."
- FDS_QUICK_CHANGE_ECONOMIC_DISASTER_WARNING: "Changing your policy now will cause a §YEconomic Disaster§! to occur."
- 
- 
- 
+ law_scavenging_selection_title: "Pass Scavenging Regulation"
+ law_scavenging_selection_desc: "Change your scavenging regulation."
  
  
  

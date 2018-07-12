@@ -1,0 +1,64 @@
+namespace = conscription_selection
+namespace = conscription_flavour
+
+country_event = {
+	id = conscription_selection.1
+	title = conscription_selection.1.title
+	desc = conscription_selection.1.desc
+	picture = GOV_RUINS_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = conscription_selection.1.option.a
+        
+        if = {
+            limit = {
+                has_volunteer_conscription = yes
+            }
+            custom_tooltip = ALREADY_VOLUNTEER_CONSCRIPTION
+        }
+        else = {
+            set_volunteer_conscription = yes
+			add_mil_power = -100
+            custom_tooltip = VOLUNTEER_CONSCRIPTION_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = conscription_selection.1.option.b
+        
+        if = {
+            limit = {
+                has_limited_conscription = yes
+            }
+            custom_tooltip = ALREADY_LIMITED_CONSCRIPTION
+        }
+        else = {
+            set_limited_conscription = yes
+			add_mil_power = -100
+            custom_tooltip = LIMITED_CONSCRIPTION_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = conscription_selection.1.option.c
+		
+        if = {
+            limit = {
+                has_full_conscription = yes
+            }
+            custom_tooltip = ALREADY_FULL_CONSCRIPTION
+        }
+        else = {
+            set_full_conscription = yes
+			add_mil_power = -100
+            custom_tooltip = FULL_CONSCRIPTION_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = event_exit
+	}
+}
+

@@ -2,38 +2,35 @@ defined_text = {
     name = GetCurrentEconomyPolicy
     
     text = {
-        localisation_key = loc_fds_traditional_economy
+        localisation_key = TRADITIONAL_ECONOMY
         trigger = {
 			has_traditional_economy = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_command_economy
+        localisation_key = COMMAND_ECONOMY
         trigger = {
 			has_command_economy = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_market_economy
+        localisation_key = MARKET_ECONOMY
         trigger = {
 			has_market_economy = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_mixed_economy
+        localisation_key = MIXED_ECONOMY
         trigger = {
 			has_mixed_economy = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -41,31 +38,28 @@ defined_text = {
     name = GetCurrentLawPolicy
     
     text = {
-        localisation_key = loc_fds_democratic_law
+        localisation_key = DEMOCRATIC_LAW
         trigger = {
 			has_democratic_law = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_oligarchic_law
+        localisation_key = OLIGARCHIC_LAW
         trigger = {
 			has_oligarchic_law = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_autocratic_law
+        localisation_key = AUTOCRATIC_LAW
         trigger = {
 			has_autocratic_law = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -73,31 +67,28 @@ defined_text = {
     name = GetCurrentJusticePolicy
     
     text = {
-        localisation_key = loc_fds_state_courts
+        localisation_key = STATE_COURTS
         trigger = {
 			has_state_courts = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_community_courts
+        localisation_key = COMMUNITY_COURTS
         trigger = {
 			has_community_courts = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_secret_courts
+        localisation_key = SECRET_COURTS
         trigger = {
 			has_secret_courts = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -105,38 +96,35 @@ defined_text = {
     name = GetCurrentPunishmentPolicy
     
     text = {
-        localisation_key = loc_fds_fines_punishment
+        localisation_key = FINE_PUNISHMENT
         trigger = {
 			has_fine_punishment = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_imprisonment_punishment
+        localisation_key = IMPRISONMENT_PUNISHMENT
         trigger = {
 			has_imprisonment_punishment = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_execution_punishment
+        localisation_key = EXECUTION_PUNISHMENT
         trigger = {
 			has_execution_punishment = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_slavery_punishment
+        localisation_key = SLAVERY_PUNISHMENT
         trigger = {
 			has_slavery_punishment = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -144,31 +132,28 @@ defined_text = {
     name = GetCurrentInnovationPolicy
     
     text = {
-        localisation_key = loc_fds_individual_innovation
+        localisation_key = INDIVIDUAL_INNOVATION
         trigger = {
 			has_individual_innovation = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_sponsored_innovation
+        localisation_key = SPONSORED_INNOVATION
         trigger = {
 			has_sponsored_innovation = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_state_innovation
+        localisation_key = STATE_INNOVATION
         trigger = {
 			has_state_innovation = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -176,31 +161,28 @@ defined_text = {
     name = GetCurrentConscriptionPolicy
     
     text = {
-        localisation_key = loc_fds_volunteer_conscription
+        localisation_key = VOLUNTEER_CONSCRIPTION
         trigger = {
 			has_volunteer_conscription = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_limited_conscription
+        localisation_key = LIMITED_CONSCRIPTION
         trigger = {
 			has_limited_conscription = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_full_conscription
+        localisation_key = FULL_CONSCRIPTION
         trigger = {
 			has_full_conscription = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -208,31 +190,28 @@ defined_text = {
     name = GetCurrentSlaveryPolicy
     
     text = {
-        localisation_key = loc_fds_slavery_allowed
+        localisation_key = SLAVERY_ALLOWED
         trigger = {
 			has_slavery_allowed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_slavery_licensed
+        localisation_key = SLAVERY_LICENSED
         trigger = {
 			has_slavery_licensed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_slavery_forbidden
+        localisation_key = SLAVERY_FORBIDDEN
         trigger = {
 			has_slavery_forbidden = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -240,31 +219,28 @@ defined_text = {
     name = GetCurrentGamblingPolicy
     
     text = {
-        localisation_key = loc_fds_gambling_allowed
+        localisation_key = GAMBLING_ALLOWED
         trigger = {
 			has_gambling_allowed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_gambling_licensed
+        localisation_key = GAMBLING_LICENSED
         trigger = {
 			has_gambling_licensed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_gambling_forbidden
+        localisation_key = GAMBLING_FORBIDDEN
         trigger = {
 			has_gambling_forbidden = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -272,31 +248,28 @@ defined_text = {
     name = GetCurrentProstitutionPolicy
     
     text = {
-        localisation_key = loc_fds_prostitution_allowed
+        localisation_key = PROSTITUTION_ALLOWED
         trigger = {
 			has_prostitution_allowed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_prostitution_licensed
+        localisation_key = PROSTITUTION_LICENSED
         trigger = {
 			has_prostitution_licensed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_prostitution_forbidden
+        localisation_key = PROSTITUTION_FORBIDDEN
         trigger = {
 			has_prostitution_forbidden = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -304,31 +277,28 @@ defined_text = {
     name = GetCurrentFirearmsPolicy
     
     text = {
-        localisation_key = loc_fds_firearms_allowed
+        localisation_key = FIREARMS_ALLOWED
         trigger = {
 			has_firearms_allowed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_firearms_licensed
+        localisation_key = FIREARMS_LICENSED
         trigger = {
 			has_firearms_licensed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_firearms_forbidden
+        localisation_key = FIREARMS_FORBIDDEN
         trigger = {
 			has_firearms_forbidden = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -336,31 +306,28 @@ defined_text = {
     name = GetCurrentNarcoticsPolicy
     
     text = {
-        localisation_key = loc_fds_narcotics_allowed
+        localisation_key = NARCOTICS_ALLOWED
         trigger = {
 			has_narcotics_allowed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_narcotics_licensed
+        localisation_key = NARCOTICS_LICENSED
         trigger = {
 			has_narcotics_licensed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_narcotics_forbidden
+        localisation_key = NARCOTICS_FORBIDDEN
         trigger = {
 			has_narcotics_forbidden = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }
 
@@ -368,30 +335,27 @@ defined_text = {
     name = GetCurrentScavengingPolicy
     
     text = {
-        localisation_key = loc_fds_scavenging_allowed
+        localisation_key = SCAVENGING_ALLOWED
         trigger = {
 			has_scavenging_allowed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_scavenging_licensed
+        localisation_key = SCAVENGING_LICENSED
         trigger = {
 			has_scavenging_licensed = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_scavenging_forbidden
+        localisation_key = SCAVENGING_FORBIDDEN
         trigger = {
 			has_scavenging_forbidden = yes
         }
     }
 	
 	text = {
-        localisation_key = loc_fds_not_set
-        trigger = {
-			always = yes
-        }
+        localisation_key = NO_VALID_KEY
     }
 }

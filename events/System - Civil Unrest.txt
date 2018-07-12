@@ -1,0 +1,62 @@
+namespace = civil_unrest_events
+
+country_event = {
+	id = civil_unrest_events.1
+	title = civil_unrest_events.1.title
+	desc = civil_unrest_events.1.desc
+    picture = ENCAMPMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = civil_unrest_events.1.option.a
+
+        add_stability = -3
+	}
+}
+
+country_event = {
+	id = civil_unrest_events.2
+	title = civil_unrest_events.2.title
+	desc = civil_unrest_events.2.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = civil_unrest_events.2.option.a
+
+        add_stability = 1
+	}
+}
+
+country_event = {
+	id = civil_unrest_events.3
+	title = civil_unrest_events.3.title
+	desc = civil_unrest_events.3.desc
+    picture = ENCAMPMENT_eventPicture
+	
+	is_triggered_only = yes
+    
+	option = {
+		name = civil_unrest_events.3.option.a
+
+        add_years_of_income = -1
+        custom_tooltip = REDUCE_CIVIL_UNREST_BY_ONE
+        subtract_variable = { which = civil_unrest value = 1 }
+	}
+    
+    option = {
+		name = civil_unrest_events.3.option.b
+
+        random_owned_province = {
+            spawn_rebels = {
+                size = 3
+                type = anti_tax_rebels
+            }
+        }
+        custom_tooltip = INCREASE_CIVIL_UNREST_BY_ONE
+        change_variable = { which = civil_unrest value = 1 }
+	}
+}
+

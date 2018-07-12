@@ -1,0 +1,30 @@
+# Firearms
+law_firearms_allowed = {
+    potential 	= { is_variable_equal = { which = current_firearms_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = current_firearms_law value = 1 } }
+	
+	global_unrest = -1 # Crime reduction
+	harsh_treatment_cost = 0.2
+	reinforce_cost_modifier = -0.25
+    years_of_nationalism = 5
+}
+
+law_firearms_licensed = {
+    potential 	= { is_variable_equal = { which = current_firearms_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = current_firearms_law value = 2 } }
+	
+	global_unrest = -0.5 # Crime reduction
+	harsh_treatment_cost = 0.1
+	reinforce_cost_modifier = -0.1
+    years_of_nationalism = 3
+}
+
+law_firearms_forbidden = {
+    potential 	= { is_variable_equal = { which = current_firearms_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = current_firearms_law value = 3 } }
+	
+	years_of_nationalism = -10
+	harsh_treatment_cost = -0.1
+	global_unrest = 2 # In a world as deadly as the Wasteland, a disarmed populace is an angry populace
+}
+
