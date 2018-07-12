@@ -617,12 +617,8 @@ on_bi_yearly_pulse = {
     # Update missions
     swap_non_generic_missions = yes
     
-    # Tick civil_unrest down naturally
-    if = {
-        limit = {
-            check_variable = { which = civil_unrest value = 0 }
-        }
-        subtract_variable = { which = civil_unrest value = 2 }
+    events = {
+        civil_unrest_events.100
     }
     
     random_events = {

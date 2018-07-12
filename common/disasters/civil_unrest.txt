@@ -35,8 +35,7 @@ civil_unrest_disaster = {
 	
 	on_monthly = {
 		events = {
-            # Tick unrest down naturally
-            subtract_variable = { which = civil_unrest value = 0.1 }
+            civil_unrest_events.101
 		}
 		random_events = {
             1000 = 0

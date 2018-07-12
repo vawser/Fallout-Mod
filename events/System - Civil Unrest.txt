@@ -60,3 +60,42 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = civil_unrest_events.100
+	title = civil_unrest_events.100.title
+	desc = civil_unrest_events.100.desc
+    picture = ENCAMPMENT_eventPicture
+	
+    hidden = yes
+	is_triggered_only = yes
+    
+    trigger = {
+        check_variable = { which = civil_unrest value = 0 }
+    }
+    
+	option = {
+		name = civil_unrest_events.100.option.a
+
+         subtract_variable = { which = civil_unrest value = 2 }
+	}
+}
+
+country_event = {
+	id = civil_unrest_events.101
+	title = civil_unrest_events.101.title
+	desc = civil_unrest_events.101.desc
+    picture = ENCAMPMENT_eventPicture
+	
+    hidden = yes
+	is_triggered_only = yes
+    
+    trigger = {
+        check_variable = { which = civil_unrest value = 0 }
+    }
+    
+	option = {
+		name = civil_unrest_events.101.option.a
+
+         subtract_variable = { which = civil_unrest value = 0.1 }
+	}
+}
