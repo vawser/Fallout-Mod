@@ -484,6 +484,23 @@ country_event = {
 			set_scavenging_licensed = yes
 		}
 
+		if = {
+			limit = { tag = ORL }
+
+			set_mixed_economy = yes
+			set_democratic_law = yes
+			set_state_courts = yes
+			set_imprisonment_punishment = yes
+			set_individual_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_licensed = yes
+			set_prostitution_licensed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+
         # Add setup if history is missing them
         if = {
             limit = {
