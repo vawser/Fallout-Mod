@@ -14,6 +14,15 @@
 # 13 - Fungal
 # 14 - Dwarf
 
+is_human = {
+	OR = {
+		is_wastelander = yes
+		race_raider = yes
+		race_tribal = yes
+		race_dwarf = yes
+	}
+}
+
 race_wastelander = {
 	potential = {
 		is_wastelander = yes
@@ -21,9 +30,8 @@ race_wastelander = {
 	trigger = {
 		is_wastelander = yes
 	}
-
-	build_cost = -0.1
 }
+
 race_raider = {
 	potential = {
 		is_raider = yes
@@ -32,7 +40,7 @@ race_raider = {
 		is_raider = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_tribal = {
 	potential = {
@@ -42,7 +50,7 @@ race_tribal = {
 		is_tribal_race = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_robot = {
 	potential = {
@@ -51,8 +59,6 @@ race_robot = {
 	trigger = {
 		is_robot = yes
 	}
-
-	build_cost = -0.1
 }
 race_super_mutant = {
 	potential = {
@@ -62,7 +68,7 @@ race_super_mutant = {
 		is_super_mutant = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_ghoul = {
 	potential = {
@@ -72,7 +78,7 @@ race_ghoul = {
 		is_ghoul = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_swampfolk = {
 	potential = {
@@ -82,7 +88,7 @@ race_swampfolk = {
 		is_swampfolk = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_synth = {
 	potential = {
@@ -92,7 +98,7 @@ race_synth = {
 		is_synth = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_mutant = {
 	potential = {
@@ -102,7 +108,7 @@ race_mutant = {
 		is_mutant = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_beastlord = {
 	potential = {
@@ -112,7 +118,7 @@ race_beastlord = {
 		is_beastlord = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_alien = {
 	potential = {
@@ -122,7 +128,7 @@ race_alien = {
 		is_alien = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_deathclaw = {
 	potential = {
@@ -132,7 +138,7 @@ race_deathclaw = {
 		is_deathclaw = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_fungal = {
 	potential = {
@@ -142,7 +148,7 @@ race_fungal = {
 		is_fungal = yes
 	}
 
-	build_cost = -0.1
+	
 }
 race_dwarf = {
 	potential = {
@@ -152,5 +158,5 @@ race_dwarf = {
 		is_dwarf = yes
 	}
 
-	build_cost = -0.1
+	
 }

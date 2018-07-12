@@ -1,0 +1,37 @@
+# Economy
+law_traditional_economy = {
+    potential 	= { is_variable_equal = { which = current_economy_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = current_economy_law value = 1 } }
+	
+	global_tax_modifier = -0.25
+	production_efficiency = 0.5
+    trade_efficiency = -0.25
+}
+
+law_command_economy = {
+    potential 	= { is_variable_equal = { which = current_economy_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = current_economy_law value = 2 } }
+	
+    global_tax_modifier = 0.25
+	production_efficiency = 0.1
+    trade_efficiency = -0.5
+}
+
+law_market_economy = {
+    potential 	= { is_variable_equal = { which = current_economy_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = current_economy_law value = 3 } }
+	
+	global_tax_modifier = -0.35
+	production_efficiency = 0.25
+    trade_efficiency = 0.25
+}
+
+law_mixed_economy = {
+    potential 	= { is_variable_equal = { which = current_economy_law value = 4 } }
+	trigger 	= { is_variable_equal = { which = current_economy_law value = 4 } }
+	
+	global_tax_modifier = 0.05
+	production_efficiency = 0.05
+    trade_efficiency = 0.05
+}
+
