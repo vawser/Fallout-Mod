@@ -35,6 +35,10 @@ spriteTypes = {
 		name = "GFX_province_background"
 		texturefile = "gfx//interface//ui//background//province_background.dds"
 	}
+    spriteType = {
+		name = "GFX_window_banner"
+		texturefile = "gfx//interface//ui//background//window_banner.dds"
+	}
     
     #-------------------------------------------------------------------------------------
     # Generic Buttons
@@ -205,6 +209,14 @@ spriteTypes = {
     #-----------------------------------------------------------------------------------------------------
     # Generic Progress Bars
     #-----------------------------------------------------------------------------------------------------
+    spriteType = {
+		name = "GFX_metal_progress_frame"
+		texturefile = "gfx//interface//ui//progress_bar//infobox_progressbar_frame.dds"
+	}
+    spriteType = {
+		name = "GFX_long_metal_progress_frame"
+		texturefile = "gfx//interface//ui//progress_bar//long_progressbar_frame.dds"
+	}
     progressbartype = {
 		name = "GFX_metal_progressbar"
 		color = { 0.0 0.5 0.0 }
@@ -212,6 +224,15 @@ spriteTypes = {
 		textureFile1 = "gfx\\interface\\ui\\progress_bar//progress_bar_118_22_green.dds"
 		textureFile2 = "gfx\\interface\\ui\\progress_bar//progress_bar_118_22_black.dds"
 		size = { x = 118 y = 22 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+    progressbartype = {
+		name = "GFX_long_metal_progressbar"
+		color = { 0.0 0.5 0.0 }
+		colortwo = { 1.0 0.0 0.0 }
+		textureFile1 = "gfx\\interface\\ui\\progress_bar//progress_bar_250_22_green.dds"
+		textureFile2 = "gfx\\interface\\ui\\progress_bar//progress_bar_250_22_black.dds"
+		size = { x = 250 y = 22 }
 		effectFile = "gfx/FX/progress.lua"
 	}
     
