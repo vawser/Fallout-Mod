@@ -1,0 +1,397 @@
+defined_text = {
+    name = GetCurrentEconomyPolicy
+    
+    text = {
+        localisation_key = loc_fds_traditional_economy
+        trigger = {
+			has_traditional_economy = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_command_economy
+        trigger = {
+			has_command_economy = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_market_economy
+        trigger = {
+			has_market_economy = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_mixed_economy
+        trigger = {
+			has_mixed_economy = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentLawPolicy
+    
+    text = {
+        localisation_key = loc_fds_democratic_law
+        trigger = {
+			has_democratic_law = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_oligarchic_law
+        trigger = {
+			has_oligarchic_law = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_autocratic_law
+        trigger = {
+			has_autocratic_law = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentJusticePolicy
+    
+    text = {
+        localisation_key = loc_fds_state_courts
+        trigger = {
+			has_state_courts = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_community_courts
+        trigger = {
+			has_community_courts = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_secret_courts
+        trigger = {
+			has_secret_courts = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentPunishmentPolicy
+    
+    text = {
+        localisation_key = loc_fds_fines_punishment
+        trigger = {
+			has_fine_punishment = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_imprisonment_punishment
+        trigger = {
+			has_imprisonment_punishment = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_execution_punishment
+        trigger = {
+			has_execution_punishment = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_slavery_punishment
+        trigger = {
+			has_slavery_punishment = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentInnovationPolicy
+    
+    text = {
+        localisation_key = loc_fds_individual_innovation
+        trigger = {
+			has_individual_innovation = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_sponsored_innovation
+        trigger = {
+			has_sponsored_innovation = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_state_innovation
+        trigger = {
+			has_state_innovation = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentConscriptionPolicy
+    
+    text = {
+        localisation_key = loc_fds_volunteer_conscription
+        trigger = {
+			has_volunteer_conscription = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_limited_conscription
+        trigger = {
+			has_limited_conscription = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_full_conscription
+        trigger = {
+			has_full_conscription = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentSlaveryPolicy
+    
+    text = {
+        localisation_key = loc_fds_slavery_allowed
+        trigger = {
+			has_slavery_allowed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_slavery_licensed
+        trigger = {
+			has_slavery_licensed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_slavery_forbidden
+        trigger = {
+			has_slavery_forbidden = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentGamblingPolicy
+    
+    text = {
+        localisation_key = loc_fds_gambling_allowed
+        trigger = {
+			has_gambling_allowed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_gambling_licensed
+        trigger = {
+			has_gambling_licensed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_gambling_forbidden
+        trigger = {
+			has_gambling_forbidden = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentProstitutionPolicy
+    
+    text = {
+        localisation_key = loc_fds_prostitution_allowed
+        trigger = {
+			has_prostitution_allowed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_prostitution_licensed
+        trigger = {
+			has_prostitution_licensed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_prostitution_forbidden
+        trigger = {
+			has_prostitution_forbidden = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentFirearmsPolicy
+    
+    text = {
+        localisation_key = loc_fds_firearms_allowed
+        trigger = {
+			has_firearms_allowed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_firearms_licensed
+        trigger = {
+			has_firearms_licensed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_firearms_forbidden
+        trigger = {
+			has_firearms_forbidden = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentNarcoticsPolicy
+    
+    text = {
+        localisation_key = loc_fds_narcotics_allowed
+        trigger = {
+			has_narcotics_allowed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_narcotics_licensed
+        trigger = {
+			has_narcotics_licensed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_narcotics_forbidden
+        trigger = {
+			has_narcotics_forbidden = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCurrentScavengingPolicy
+    
+    text = {
+        localisation_key = loc_fds_scavenging_allowed
+        trigger = {
+			has_scavenging_allowed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_scavenging_licensed
+        trigger = {
+			has_scavenging_licensed = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_scavenging_forbidden
+        trigger = {
+			has_scavenging_forbidden = yes
+        }
+    }
+	
+	text = {
+        localisation_key = loc_fds_not_set
+        trigger = {
+			always = yes
+        }
+    }
+}

@@ -1,0 +1,44 @@
+political_disaster = {
+	potential = {	
+		has_country_flag = fds_political_disaster_allowed
+	}
+	
+	can_start = {
+		has_any_disaster = no
+	}
+    
+    can_stop = {
+		always = no
+	}
+    
+	progress = {
+        factor = 5
+	}
+	
+	can_end = {
+		NOT = { num_of_revolts = 1 }
+		stability = 0
+        had_country_flag = {
+			flag = political_disaster_active
+			days = 720
+		}
+	}
+	
+	modifier = {
+		stability_cost_modifier = 1.0
+        global_unrest = 10
+        advisor_cost = 1.0
+	}
+	
+	on_start = fds_political_disaster.1
+	on_end = fds_political_disaster.2
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+            1000 = 0
+            100 = fds_political_disaster.3
+		}
+	}
+}

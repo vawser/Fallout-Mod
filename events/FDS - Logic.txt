@@ -1,0 +1,635 @@
+namespace = fds
+
+country_event = {
+	id = fds.1
+	title = fds.1.title
+	desc = fds.1.desc
+	picture = BOS_CHAT_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fds_setup }
+	}
+
+	immediate = {
+		set_country_flag = fds_setup
+	}
+
+	option = {
+		name = fds.1.option.a
+
+		# Default FDS setups
+		if = {
+			limit = {
+				technology_group = tech_wastelander
+			}
+			set_mixed_economy = yes
+			set_democratic_law = yes
+			set_community_courts = yes
+			set_imprisonment_punishment = yes
+			set_individual_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_raider
+			}
+			set_command_economy = yes
+			set_autocratic_law = yes
+			set_secret_courts = yes
+			set_slavery_punishment = yes
+			set_individual_innovation = yes
+			set_full_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_tribal
+			}
+			set_traditional_economy = yes
+			set_oligarchic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_super_mutant
+			}
+			set_traditional_economy = yes
+			set_autocratic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_full_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_robot
+			}
+			set_command_economy = yes
+			set_autocratic_law = yes
+			set_secret_courts = yes
+			set_slavery_punishment = yes
+			set_state_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_allowed = yes
+			set_prostitution_forbidden = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_forbidden = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_ghoul
+			}
+			set_mixed_economy = yes
+			set_democratic_law = yes
+			set_community_courts = yes
+			set_imprisonment_punishment = yes
+			set_individual_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_bos
+			}
+			set_command_economy = yes
+			set_oligarchic_law = yes
+			set_secret_courts = yes
+			set_imprisonment_punishment = yes
+			set_state_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_licensed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_commonwealth
+			}
+			set_command_economy = yes
+			set_oligarchic_law = yes
+			set_secret_courts = yes
+			set_imprisonment_punishment = yes
+			set_state_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_licensed = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_licensed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_new_vegas
+			}
+			set_market_economy = yes
+			set_autocratic_law = yes
+			set_secret_courts = yes
+			set_execution_punishment = yes
+			set_state_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_allowed = yes
+			set_prostitution_licensed = yes
+			set_firearms_licensed = yes
+			set_narcotics_licensed = yes
+			set_scavenging_licensed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_ncr
+			}
+			set_mixed_economy = yes
+			set_democratic_law = yes
+			set_state_courts = yes
+			set_imprisonment_punishment = yes
+			set_sponsored_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_licensed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_caesars_legion
+			}
+			set_command_economy = yes
+			set_autocratic_law = yes
+			set_secret_courts = yes
+			set_slavery_punishment = yes
+			set_individual_innovation = yes
+			set_full_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_allowed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_enclave
+			}
+			set_command_economy = yes
+			set_oligarchic_law = yes
+			set_secret_courts = yes
+			set_execution_punishment = yes
+			set_state_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_licensed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_shi
+			}
+			set_mixed_economy = yes
+			set_oligarchic_law = yes
+			set_state_courts = yes
+			set_imprisonment_punishment = yes
+			set_sponsored_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_licensed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_great_khan
+			}
+			set_traditional_economy = yes
+			set_autocratic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_swampfolk
+			}
+			set_traditional_economy = yes
+			set_autocratic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_rodent
+			}
+			set_traditional_economy = yes
+			set_autocratic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_full_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_alien
+			}
+			set_command_economy = yes
+			set_autocratic_law = yes
+			set_secret_courts = yes
+			set_execution_punishment = yes
+			set_state_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_forbidden = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_forbidden = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_vault_dweller
+			}
+			set_mixed_economy = yes
+			set_oligarchic_law = yes
+			set_state_courts = yes
+			set_imprisonment_punishment = yes
+			set_sponsored_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_forbidden = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_children
+			}
+			set_traditional_economy = yes
+			set_democratic_law = yes
+			set_community_courts = yes
+			set_fine_punishment = yes # Actual punishment was expulsion, but not modelled
+			set_individual_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_allowed = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_triggermen
+			}
+			set_mixed_economy = yes
+			set_autocratic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_allowed = yes
+			set_gambling_allowed = yes
+			set_prostitution_allowed = yes
+			set_firearms_allowed = yes
+			set_narcotics_allowed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_the_kings
+			}
+			set_mixed_economy = yes
+			set_oligarchic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_licensed = yes
+			set_prostitution_licensed = yes
+			set_firearms_licensed = yes
+			set_narcotics_licensed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_children_of_the_atom
+			}
+			set_mixed_economy = yes
+			set_autocratic_law = yes
+			set_community_courts = yes
+			set_execution_punishment = yes
+			set_individual_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_licensed = yes
+			set_scavenging_allowed = yes
+		}
+		if = {
+			limit = {
+				technology_group = tech_hubologist
+			}
+			set_mixed_economy = yes
+			set_oligarchic_law = yes
+			set_community_courts = yes
+			set_imprisonment_punishment = yes
+			set_individual_innovation = yes
+			set_limited_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_forbidden = yes
+			set_scavenging_allowed = yes
+		}
+
+		if = {
+			limit = {
+				OR = {
+					religion_group = religion_group_christianity
+					religion_group = religion_group_jewish
+					tag = RNC
+					religion = renewal
+				}
+			}
+			set_prostitution_forbidden = yes
+			set_community_courts = yes
+			set_slavery_forbidden = yes
+			set_narcotics_forbidden = yes
+			set_democratic_law = yes
+			set_execution_punishment = yes
+			set_community_courts = yes
+			set_firearms_allowed = yes
+			set_volunteer_conscription = yes
+		}
+
+		if = {
+			limit = {
+				religion_group = religion_group_muslim
+			}
+			set_traditional_economy = yes
+			set_limited_conscription = yes
+			set_prostitution_forbidden = yes
+			set_community_courts = yes
+			set_slavery_allowed = yes
+			set_narcotics_forbidden = yes
+			set_oligarchic_law = yes
+			set_execution_punishment = yes
+			set_community_courts = yes
+			set_mixied_economy = yes
+			set_gambling_forbidden = yes
+			set_firearms_forbidden = yes
+		}
+
+		if = {
+			limit = {
+				OR = {
+					religion = mormon
+					secondary_religion = mormon
+					AND = {
+						religion = zion_tribalism
+						NOT = { tag = WLS }
+					}
+				}
+			}
+			set_market_economy = yes
+			set_gambling_licensed = yes
+		}
+
+		if = {
+			limit = {
+				tag = TWM
+			}
+			set_traditional_economy = yes
+			set_autocratic_law = yes
+			set_state_courts = yes
+			set_fine_punishment = yes
+			set_state_innovation = yes
+			set_volunteer_conscription = yes
+			set_slavery_forbidden = yes
+			set_gambling_forbidden = yes
+			set_prostitution_forbidden = yes
+			set_firearms_licensed = yes
+			set_narcotics_licensed = yes
+			set_scavenging_licensed = yes
+		}
+
+        # Add setup if history is missing them
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_traditional_economy = yes
+                        has_command_economy = yes
+                        has_market_economy = yes
+                        has_mixed_economy = yes
+                    }
+                }
+            }
+            set_traditional_economy = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_democratic_law = yes
+                        has_oligarchic_law = yes
+                        has_autocratic_law = yes
+                    }
+                }
+            }
+            set_oligarchic_law = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_state_courts = yes
+                        has_community_courts = yes
+                        has_secret_courts = yes
+                    }
+                }
+            }
+            set_community_courts = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_fine_punishment = yes
+                        has_imprisonment_punishment = yes
+                        has_execution_punishment = yes
+                        has_slavery_punishment = yes
+                    }
+                }
+            }
+            set_imprisonment_punishment = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_individual_innovation = yes
+                        has_sponsored_innovation = yes
+                        has_state_innovation = yes
+                    }
+                }
+            }
+            set_individual_innovation = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_volunteer_conscription = yes
+                        has_limited_conscription = yes
+                        has_full_conscription = yes
+                    }
+                }
+            }
+            set_volunteer_conscription = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_slavery_allowed = yes
+                        has_slavery_licensed = yes
+                        has_slavery_forbidden = yes
+                    }
+                }
+            }
+            set_slavery_forbidden = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_gambling_allowed = yes
+                        has_gambling_licensed = yes
+                        has_gambling_forbidden = yes
+                    }
+                }
+            }
+            set_gambling_allowed = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_prostitution_allowed = yes
+                        has_prostitution_licensed = yes
+                        has_prostitution_forbidden = yes
+                    }
+                }
+            }
+            set_prostitution_forbidden = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_firearms_allowed = yes
+                        has_firearms_licensed = yes
+                        has_firearms_forbidden = yes
+                    }
+                }
+            }
+            set_firearms_forbidden = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_narcotics_allowed = yes
+                        has_narcotics_licensed = yes
+                        has_narcotics_forbidden = yes
+                    }
+                }
+            }
+            set_narcotics_forbidden = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_scavenging_allowed = yes
+                        has_scavenging_licensed = yes
+                        has_scavenging_forbidden = yes
+                    }
+                }
+            }
+            set_scavenging_allowed = yes
+        }
+	}
+}

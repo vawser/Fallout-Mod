@@ -1,0 +1,567 @@
+namespace = fds_economy
+
+#-----------------------------------------
+# Traditional Economy
+#-----------------------------------------
+# Local Developments
+# random province gains development
+country_event = {
+	id = fds_economy.1
+	title = fds_economy.1.title
+	desc = fds_economy.1.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+        always = no
+        has_traditional_economy = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_economy.1.option.a
+
+		random_owned_province = {
+            add_base_tax = 1
+            add_base_production = 1
+            add_base_manpower = 1
+        }
+	}
+}
+
+# Enterprising Individual
+# idea_cost reduction
+country_event = {
+	id = fds_economy.2
+	title = fds_economy.2.title
+	desc = fds_economy.2.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_traditional_economy = yes
+        NOT = { has_country_modifier = enterprising_individual } 
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_economy.2.option.a
+
+		add_country_modifier = {
+            name = enterprising_individual
+            duration = 3650
+        }
+	}
+}
+
+# Famine
+# random province loses development
+country_event = {
+	id = fds_economy.3
+	title = fds_economy.3.title
+	desc = fds_economy.3.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_traditional_economy = yes
+        any_owned_province = {
+            base_tax = 2
+            base_production = 2
+            base_manpower = 2
+        }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_economy.3.option.a
+
+		random_owned_province = {
+            limit = {
+                base_tax = 2
+                base_production = 2
+                base_manpower = 2
+            }
+            add_base_tax = -1
+            add_base_production = -1
+            add_base_manpower = -1
+        }
+	}
+}
+
+# Slumlords
+# random province gains slumlords debuff
+country_event = {
+	id = fds_economy.4
+	title = fds_economy.4.title
+	desc = fds_economy.4.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_traditional_economy = yes
+        any_owned_province = {
+            NOT = { has_province_modifier = slumlords }
+        }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_economy.4.option.a
+
+		random_owned_province = {
+            limit = {
+                NOT = { has_province_modifier = slumlords }
+            }
+            add_province_modifier = {
+                name = slumlords
+                duration = 3650
+            }
+        }
+	}
+}
+
+#-----------------------------------------
+# Command Economy
+#-----------------------------------------
+# Utopian Visions
+# gain "utopian_vision" buff
+country_event = {
+	id = fds_economy.5
+	title = fds_economy.5.title
+	desc = fds_economy.5.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_command_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = utopian_vision }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_economy.5.option.a
+
+		add_country_modifier = {
+            name = utopian_vision
+            duration = 3650
+        }
+	}
+}
+
+# Fast Mobilization
+# temp discipline buff
+country_event = {
+	id = fds_economy.6
+	title = fds_economy.6.title
+	desc = fds_economy.6.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_command_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = fast_mobilization }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_economy.6.option.a
+
+		add_country_modifier = {
+            name = fast_mobilization
+            duration = 3650
+        }
+	}
+}
+
+# Low Wages
+# gain unrest
+country_event = {
+	id = fds_economy.7
+	title = fds_economy.7.title
+	desc = fds_economy.7.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_command_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = low_wages }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_economy.7.option.a
+
+		add_country_modifier = {
+            name = low_wages
+            duration = 3650
+        }
+	}
+}
+
+# Poor Planning
+# temp morale debuff
+country_event = {
+	id = fds_economy.8
+	title = fds_economy.8.title
+	desc = fds_economy.8.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_command_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = poor_planning }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_economy.8.option.a
+
+		add_country_modifier = {
+            name = poor_planning
+            duration = 3650
+        }
+	}
+}
+
+#-----------------------------------------
+# Market Economy
+#-----------------------------------------
+# Bull Market
+# gain "boom time" buff
+country_event = {
+	id = fds_economy.9
+	title = fds_economy.9.title
+	desc = fds_economy.9.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_market_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = economic_boom }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_economy.9.option.a
+
+		add_country_modifier = {
+            name = economic_boom
+            duration = 3650
+        }
+	}
+}
+
+# Land of Business
+# gain temp trade efficiency buff
+country_event = {
+	id = fds_economy.10
+	title = fds_economy.10.title
+	desc = fds_economy.10.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_market_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = preferred_market }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_economy.10.option.a
+
+		add_country_modifier = {
+            name = preferred_market
+            duration = 3650
+        }
+	}
+}
+
+# Bear Market
+# gain "depression" debuff
+country_event = {
+	id = fds_economy.11
+	title = fds_economy.11.title
+	desc = fds_economy.11.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_market_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = economic_depression } 
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_economy.11.option.a
+
+		add_country_modifier = {
+            name = economic_depression
+            duration = 3650
+        }
+	}
+}
+
+# People in Poverty
+# gain temp unrest debuff
+country_event = {
+	id = fds_economy.12
+	title = fds_economy.12.title
+	desc = fds_economy.12.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        OR = {
+            has_market_economy = yes
+            has_mixed_economy = yes
+        }
+        NOT = { has_country_modifier = people_in_poverty }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_economy.12.option.a
+
+		add_country_modifier = {
+            name = people_in_poverty
+            duration = 3650
+        }
+	}
+}

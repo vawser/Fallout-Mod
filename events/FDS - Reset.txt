@@ -1,0 +1,518 @@
+namespace = fds_reset
+
+# Economy
+country_event = {
+	id = fds_reset.1
+	title = fds_reset.1.title
+	desc = fds_reset.1.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_economy_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.1.option.a
+	
+		clr_country_flag = fds_economy_set_flag
+		custom_tooltip = fds_economy_reset_notice
+	}
+}
+
+# Law
+country_event = {
+	id = fds_reset.2
+	title = fds_reset.2.title
+	desc = fds_reset.2.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_law_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.2.option.a
+	
+		clr_country_flag = fds_law_set_flag
+		custom_tooltip = fds_law_reset_notice
+	}
+}
+
+# Justice
+country_event = {
+	id = fds_reset.3
+	title = fds_reset.3.title
+	desc = fds_reset.3.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_justice_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.3.option.a
+	
+		clr_country_flag = fds_justice_set_flag
+		custom_tooltip = fds_justice_reset_notice
+	}
+}
+
+# Punishment
+country_event = {
+	id = fds_reset.4
+	title = fds_reset.4.title
+	desc = fds_reset.4.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_punishment_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.4.option.a
+	
+		clr_country_flag = fds_punishment_set_flag
+		custom_tooltip = fds_punishment_reset_notice
+	}
+}
+
+# Innovation
+country_event = {
+	id = fds_reset.5
+	title = fds_reset.5.title
+	desc = fds_reset.5.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_innovation_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.5.option.a
+	
+		clr_country_flag = fds_innovation_set_flag
+		custom_tooltip = fds_innovation_reset_notice
+	}
+}
+
+# Conscription
+country_event = {
+	id = fds_reset.6
+	title = fds_reset.6.title
+	desc = fds_reset.6.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_conscription_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.6.option.a
+	
+		clr_country_flag = fds_conscription_set_flag
+		custom_tooltip = fds_conscription_reset_notice
+	}
+}
+
+# Slavery
+country_event = {
+	id = fds_reset.7
+	title = fds_reset.7.title
+	desc = fds_reset.7.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_slavery_regulation_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.7.option.a
+	
+		clr_country_flag = fds_slavery_regulation_set_flag
+		custom_tooltip = fds_slavery_reset_notice
+	}
+}
+
+# Gambling
+country_event = {
+	id = fds_reset.8
+	title = fds_reset.8.title
+	desc = fds_reset.8.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_gambling_regulation_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.8.option.a
+	
+		clr_country_flag = fds_gambling_regulation_set_flag
+		custom_tooltip = fds_gambling_reset_notice
+	}
+}
+
+# Prostitution
+country_event = {
+	id = fds_reset.9
+	title = fds_reset.9.title
+	desc = fds_reset.9.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_prostitution_regulation_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.9.option.a
+	
+		clr_country_flag = fds_prostitution_regulation_set_flag
+		custom_tooltip = fds_prostitution_reset_notice
+	}
+}
+
+# Firearms
+country_event = {
+	id = fds_reset.10
+	title = fds_reset.10.title
+	desc = fds_reset.10.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_firearms_regulation_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.10.option.a
+	
+		clr_country_flag = fds_firearms_regulation_set_flag
+		custom_tooltip = fds_firearms_reset_notice
+	}
+}
+
+# Narcotics
+country_event = {
+	id = fds_reset.11
+	title = fds_reset.11.title
+	desc = fds_reset.11.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_narcotics_regulation_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.11.option.a
+	
+		clr_country_flag = fds_narcotics_regulation_set_flag
+		custom_tooltip = fds_narcotics_reset_notice
+	}
+}
+
+# Scavenging
+country_event = {
+	id = fds_reset.12
+	title = fds_reset.12.title
+	desc = fds_reset.12.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		has_country_flag = fds_scavenging_regulation_set_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 1 }
+		}
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = -1 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		
+		modifier = {
+			factor = 1.5
+			unrest = 10
+		}
+	}
+	
+	option = {
+		name = fds_reset.12.option.a
+
+		clr_country_flag = fds_scavenging_regulation_set_flag
+		custom_tooltip = fds_scavenging_reset_notice
+	}
+}
+

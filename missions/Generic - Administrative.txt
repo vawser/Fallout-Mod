@@ -1,0 +1,148 @@
+administrative_missions = {
+    slot = 1
+    generic = yes
+    
+    potential = {
+        always = yes
+    }
+    
+    # High Income
+    high_income_mission = {
+		icon = mission_high_income
+        
+		required_missions = {  }
+        
+		trigger = { 
+            share_of_starting_income = 1.5 
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = effective_economy
+				duration = -1
+			}
+		}
+	}
+    
+    # Full Coffers
+    fill_coffers_mission = {
+		icon = mission_war_chest
+        
+		required_missions = { 
+            high_income_mission 
+        }
+        
+		trigger = { 
+            treasury = 1000 
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = filled_coffers
+				duration = -1
+			}
+		}
+	}
+    
+    # Wasteland Town
+    wasteland_town_mission = {
+		icon = mission_empire
+        
+		required_missions = { 
+            fill_coffers_mission 
+        }
+        
+		trigger = { 
+            total_development = 100
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = wasteland_town
+				duration = -1
+			}
+		}
+	}
+    
+    # Wasteland City
+    wasteland_city_mission = {
+		icon = mission_empire
+        
+		required_missions = { 
+            wasteland_town_mission 
+        }
+        
+		trigger = { 
+            total_development = 250
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = wasteland_city
+				duration = -1
+			}
+		}
+	}
+    
+    # Wasteland Metropolis
+    wasteland_metropolis_mission = {
+		icon = mission_empire
+        
+		required_missions = { 
+            wasteland_city_mission 
+        }
+        
+		trigger = { 
+            total_development = 500
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = wasteland_metropolis
+				duration = -1
+			}
+		}
+	}
+    
+    # Pure Glory
+    pure_glory_mission = {
+    	icon = mission_empire
+        
+		required_missions = { 
+            wasteland_metropolis_mission 
+        }
+        
+		trigger = { 
+            prestige = 100
+            NOT = { corruption = 0.01 }
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = glorious_nation
+				duration = -1
+			}
+		}
+	}
+    
+    # Cutting Edge
+    cutting_edge_mission = {
+    	icon = mission_empire
+        
+		required_missions = { 
+            pure_glory_mission 
+        }
+        
+		trigger = { 
+            has_dlc = "Rule Britannia"
+            innovativeness = 50
+        }
+        
+		effect = {
+			add_country_modifier = {
+				name = cutting_edge
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,115 @@
+diplomatic_missions = {
+    slot = 2
+    generic = yes
+
+    potential = {
+        always = yes
+    }
+    
+    build_alliances_mission = {
+		icon = mission_alliances
+        
+		required_missions = {  }
+        
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = extensive_connections
+				duration = -1
+			}
+		}
+	}
+    
+    secure_diplomatic_ties_mission = {
+		icon = mission_alliances
+        
+		required_missions = {
+            build_alliances_mission
+        }
+        
+		trigger = {
+			num_of_royal_marriages = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = diplomatic_ties
+				duration = -1
+			}
+		}
+	}
+    
+    profiteer_mission = {
+		icon = mission_high_income
+        
+		required_missions = {
+            secure_diplomatic_ties_mission
+        }
+        
+		trigger = {
+			num_of_war_reparations = 4
+		}
+		effect = {
+			add_country_modifier = {
+				name = profiteering
+				duration = -1
+			}
+		}
+	}
+    
+    trusted_nation_mission = {
+		icon = mission_alliances
+        
+		required_missions = {
+            profiteer_mission
+        }
+        
+		trigger = {
+			num_of_trusted_allies = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = trusted_nation
+				duration = -1
+			}
+		}
+	}
+    
+    power_projection_mission = {
+		icon = mission_assemble_an_army
+        
+		required_missions = {
+            trusted_nation_mission
+        }
+        
+		trigger = {
+			all_country = {
+                NOT = {
+                    army_strength = {
+                        who = ROOT
+                        value = 1
+                    }
+                }
+            }
+		}
+		effect = {
+			add_country_modifier = {
+				name = power_projection
+				duration = -1
+			}
+		}
+	}
+}

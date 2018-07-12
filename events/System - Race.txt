@@ -1,27 +1,27 @@
-namespace = race
+namespace = fds
 
 country_event = {
-	id = race.1
-	title = race.1.title
-	desc = race.1.desc
+	id = fds.1
+	title = fds.1.title
+	desc = fds.1.desc
 	picture = BOS_CHAT_eventPicture
 	
 	hidden = yes
     is_triggered_only = yes
 
 	trigger = {
-        NOT = { has_country_flag = race_setup }
-        is_variable_equal = { which = race_id value = 0 } # Has no race set
+        NOT = { has_country_flag = fds_setup }
+        check_variable = { which = race_id value = 0 } # Has no race set
     }
 
     immediate = {
-        set_country_flag = race_setup
+        set_country_flag = fds_setup
     }
 
 	option = {
-		name = race.1.option.a
+		name = fds.1.option.a
 
-		# Default race setups
+		# Default FDS setups
 		if = {
 			limit = {
 				technology_group = tech_wastelander

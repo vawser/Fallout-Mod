@@ -1,0 +1,126 @@
+# Economy
+set_traditional_economy 	= { set_fds_var = { VAR = fds_economy VALUE = 1 FLAG = fds_economy_set_flag TOOLTIP = fds_economy_traditional_set } }
+set_command_economy 		= { set_fds_var = { VAR = fds_economy VALUE = 2 FLAG = fds_economy_set_flag TOOLTIP = fds_economy_command_set } }
+set_market_economy 		= { set_fds_var = { VAR = fds_economy VALUE = 3 FLAG = fds_economy_set_flag TOOLTIP = fds_economy_market_set } }
+set_mixed_economy 		= { set_fds_var = { VAR = fds_economy VALUE = 4 FLAG = fds_economy_set_flag TOOLTIP = fds_economy_mixed_set } }
+
+# Law
+set_democratic_law 		= { set_fds_var = { VAR = fds_law VALUE = 1 FLAG = fds_law_set_flag TOOLTIP = fds_law_democratic_set } }
+set_oligarchic_law 		= { set_fds_var = { VAR = fds_law VALUE = 2 FLAG = fds_law_set_flag TOOLTIP = fds_law_oligarchic_set } }
+set_autocratic_law 		= { set_fds_var = { VAR = fds_law VALUE = 3 FLAG = fds_law_set_flag TOOLTIP = fds_law_autocratic_set } }
+
+# Justice
+set_state_courts 		= { set_fds_var = { VAR = fds_justice VALUE = 1 FLAG = fds_justice_set_flag TOOLTIP = fds_justice_courts_set } }
+set_community_courts 	= { set_fds_var = { VAR = fds_justice VALUE = 2 FLAG = fds_justice_set_flag TOOLTIP = fds_justice_community_set } }
+set_secret_courts 		= { set_fds_var = { VAR = fds_justice VALUE = 3 FLAG = fds_justice_set_flag TOOLTIP = fds_justice_state_set } }
+
+# Punishment
+set_fine_punishment 				= { set_fds_var = { VAR = fds_punishment VALUE = 1 FLAG = fds_punishment_set_flag TOOLTIP = fds_fine_punishment_set } }
+set_imprisonment_punishment 		= { set_fds_var = { VAR = fds_punishment VALUE = 2 FLAG = fds_punishment_set_flag TOOLTIP = fds_punishment_imprisonment_set } }
+set_execution_punishment 		= { set_fds_var = { VAR = fds_punishment VALUE = 3 FLAG = fds_punishment_set_flag TOOLTIP = fds_punishment_execution_set } }
+set_slavery_punishment	 		= { set_fds_var = { VAR = fds_punishment VALUE = 4 FLAG = fds_punishment_set_flag TOOLTIP = fds_punishment_slavery_set } }
+
+# Innovation
+set_individual_innovation 		= { set_fds_var = { VAR = fds_innovation VALUE = 1 FLAG = fds_innovation_set_flag TOOLTIP = fds_innovation_individual_set } }
+set_sponsored_innovation 		= { set_fds_var = { VAR = fds_innovation VALUE = 2 FLAG = fds_innovation_set_flag TOOLTIP = fds_innovation_sponsored_set } }
+set_state_innovation 				= { set_fds_var = { VAR = fds_innovation VALUE = 3 FLAG = fds_innovation_set_flag TOOLTIP = fds_innovation_state_set } }
+
+# Conscription
+set_volunteer_conscription 		= { set_fds_var = { VAR = fds_conscription VALUE = 1 FLAG = fds_conscription_set_flag TOOLTIP = fds_conscription_volunteer_set } }
+set_limited_conscription 		= { set_fds_var = { VAR = fds_conscription VALUE = 2 FLAG = fds_conscription_set_flag TOOLTIP = fds_conscription_limited_set } }
+set_full_conscription 			= { set_fds_var = { VAR = fds_conscription VALUE = 3 FLAG = fds_conscription_set_flag TOOLTIP = fds_conscription_full_set } }
+
+# Slavery
+set_slavery_allowed 			= { set_fds_var = { VAR = fds_slavery_regulation VALUE = 1 FLAG = fds_slavery_regulation_set_flag TOOLTIP = fds_slavery_regulation_allowed_set } }
+set_slavery_licensed 			= { set_fds_var = { VAR = fds_slavery_regulation VALUE = 2 FLAG = fds_slavery_regulation_set_flag TOOLTIP = fds_slavery_regulation_licensed_set } }
+set_slavery_forbidden 		= { set_fds_var = { VAR = fds_slavery_regulation VALUE = 3 FLAG = fds_slavery_regulation_set_flag TOOLTIP = fds_slavery_regulation_forbidden_set } }
+
+# Gambling
+set_gambling_allowed 			= { set_fds_var = { VAR = fds_gambling_regulation VALUE = 1 FLAG = fds_gambling_regulation_set_flag TOOLTIP = fds_gambling_regulation_allowed_set } }
+set_gambling_licensed 		= { set_fds_var = { VAR = fds_gambling_regulation VALUE = 2 FLAG = fds_gambling_regulation_set_flag TOOLTIP = fds_gambling_regulation_licensed_set } }
+set_gambling_forbidden 		= { set_fds_var = { VAR = fds_gambling_regulation VALUE = 3 FLAG = fds_gambling_regulation_set_flag TOOLTIP = fds_gambling_regulation_forbidden_set } }
+
+# Prostitution
+set_prostitution_allowed 	= { set_fds_var = { VAR = fds_prostitution_regulation VALUE = 1 FLAG = fds_prostitution_regulation_set_flag TOOLTIP = fds_prostitution_regulation_allowed_set } }
+set_prostitution_licensed 	= { set_fds_var = { VAR = fds_prostitution_regulation VALUE = 2 FLAG = fds_prostitution_regulation_set_flag TOOLTIP = fds_prostitution_regulation_licensed_set } }
+set_prostitution_forbidden 	= { set_fds_var = { VAR = fds_prostitution_regulation VALUE = 3 FLAG = fds_prostitution_regulation_set_flag TOOLTIP = fds_prostitution_regulation_forbidden_set } }
+
+# Firearms
+set_firearms_allowed 			= { set_fds_var = { VAR = fds_firearms_regulation VALUE = 1 FLAG = fds_firearms_regulation_set_flag TOOLTIP = fds_firearms_regulation_allowed_set } }
+set_firearms_licensed 		= { set_fds_var = { VAR = fds_firearms_regulation VALUE = 2 FLAG = fds_firearms_regulation_set_flag TOOLTIP = fds_firearms_regulation_licensed_set } }
+set_firearms_forbidden 		= { set_fds_var = { VAR = fds_firearms_regulation VALUE = 3 FLAG = fds_firearms_regulation_set_flag TOOLTIP = fds_firearms_regulation_forbidden_set } }
+
+# Narcotics
+set_narcotics_allowed 		= { set_fds_var = { VAR = fds_narcotics_regulation VALUE = 1 FLAG = fds_narcotics_regulation_set_flag TOOLTIP = fds_narcotics_regulation_allowed_set } }
+set_narcotics_licensed 		= { set_fds_var = { VAR = fds_narcotics_regulation VALUE = 2 FLAG = fds_narcotics_regulation_set_flag TOOLTIP = fds_narcotics_regulation_licensed_set } }
+set_narcotics_forbidden 		= { set_fds_var = { VAR = fds_narcotics_regulation VALUE = 3 FLAG = fds_narcotics_regulation_set_flag TOOLTIP = fds_narcotics_regulation_forbidden_set } }
+
+# Scavenging
+set_scavenging_allowed 		= { set_fds_var = { VAR = fds_scavenging_regulation VALUE = 1 FLAG = fds_scavenging_regulation_set_flag TOOLTIP = fds_scavenging_regulation_allowed_set } }
+set_scavenging_licensed 		= { set_fds_var = { VAR = fds_scavenging_regulation VALUE = 2 FLAG = fds_scavenging_regulation_set_flag TOOLTIP = fds_scavenging_regulation_licensed_set } }
+set_scavenging_forbidden 	= { set_fds_var = { VAR = fds_scavenging_regulation VALUE = 3 FLAG = fds_scavenging_regulation_set_flag TOOLTIP = fds_scavenging_regulation_forbidden_set } }
+
+#--- Generics
+set_fds_var = {
+	hidden_effect = { 
+		set_country_flag = $FLAG$
+		set_variable = {
+			which = $VAR$
+			value = $VALUE$
+		}
+	}
+	custom_tooltip = $TOOLTIP$
+}
+
+set_default_state = {
+	set_variable = { which = fds_economy value = 0 }
+	set_variable = { which = fds_law value = 0 }
+	set_variable = { which = fds_justice value = 0 }
+	set_variable = { which = fds_punishment value = 0 }
+	set_variable = { which = fds_innovation value = 0 }
+	set_variable = { which = fds_conscription value = 0 }
+	set_variable = { which = fds_slavery_regulation value = 0 }
+	set_variable = { which = fds_gambling_regulation value = 0 }
+	set_variable = { which = fds_prostitution_regulation value = 0 }
+	set_variable = { which = fds_firearms_regulation value = 0 }
+	set_variable = { which = fds_narcotics_regulation value = 0 }
+	set_variable = { which = fds_scavenging_regulation value = 0 }
+}
+
+set_policy_flags = {
+	set_country_flag = fds_economy_set_flag
+	set_country_flag = fds_law_set_flag
+	set_country_flag = fds_justice_set_flag
+	set_country_flag = fds_punishment_set_flag
+	set_country_flag = fds_innovation_set_flag
+	set_country_flag = fds_conscription_set_flag
+}
+
+set_regulation_flags = {
+	set_country_flag = fds_slavery_regulation_set_flag
+	set_country_flag = fds_gambling_regulation_set_flag
+	set_country_flag = fds_prostitution_regulation_set_flag
+	set_country_flag = fds_firearms_regulation_set_flag
+	set_country_flag = fds_narcotics_regulation_set_flag
+	set_country_flag = fds_scavenging_regulation_set_flag
+}
+
+clear_policy_flags = {
+	clr_country_flag = fds_economy_set_flag
+	clr_country_flag = fds_law_set_flag
+	clr_country_flag = fds_justice_set_flag
+	clr_country_flag = fds_punishment_set_flag
+	clr_country_flag = fds_innovation_set_flag
+	clr_country_flag = fds_conscription_set_flag
+}
+
+clear_regulation_flags = {
+	clr_country_flag = fds_slavery_regulation_set_flag
+	clr_country_flag = fds_gambling_regulation_set_flag
+	clr_country_flag = fds_prostitution_regulation_set_flag
+	clr_country_flag = fds_firearms_regulation_set_flag
+	clr_country_flag = fds_narcotics_regulation_set_flag
+	clr_country_flag = fds_scavenging_regulation_set_flag
+}
+
+

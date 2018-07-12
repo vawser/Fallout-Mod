@@ -17,58 +17,53 @@ guiTypes = {
 
 	windowType = {
 		name = "countrymissionsview"
-		position = { x = 320 y = 96 }
-        show_position = { x = 320 y = 96 }
-        hide_position = { x = -9999  y = 96 }
+		position = { x = 320 y = 100 }
+        show_position = { x = 320 y = 100 }
+        hide_position = { x = -9999  y = 100 }
 		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
 		upsound = tab_missions
 
-		iconType = {
+		iconType =
+		{
 			name ="domesticpanel_bg"
-			spriteType = "GFX_wide_view_bg"
-			position = { x= 0 y = 0 }
+			spriteType = "GFX_country_mission_view_bg"
+			position = { x= -7 y = -10 }
 			Orientation = "UPPER_LEFT"
+
 		}
 		
-		iconType = {
-			name ="missions_banner"
-			spriteType = "GFX_iron_banner"
-			position = { x= 250 y = 20 }
-			Orientation = "UPPER_LEFT"
-		}
-        
 		guiButtonType = {
 			name = "close_button"
-			position = { x = 685 y = 26 }
-			quadTextureSprite ="GFX_fallout_menu_button"	
+			position = { x = 514 y = -1 }
+			quadTextureSprite ="GFX_closebutton2"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_LEFT"
 			clicksound = close_window
-		}	
+		}
 
 		instantTextBoxType = {
 			name = "window_title"
-			position = { x = 240 y = 24 }
+			position = { x = 15 y =78 }
 			textureFile = ""
-			font = "monofonto_outline_18"
+			font = "vic_29s"
 			borderSize = {x = 4 y = 4}
 			text = "HEADER_MISSIONS"
-			maxWidth = 500
+			maxWidth = 512
 			maxHeight = 32
 			format = centre
 		}
 		
 		smoothListboxType = {
 			name ="countrymissionsview_missions_gridbox_listbox"
-			position = { x=75 y =80}
+			position = { x=10 y =122}
 			backGround=""
-			size = { x=880 y=500 }
+			size = { x=1100 y=412 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
-			scrollbartype = "standardlistbox_noslider"
+			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 		}
 	}
@@ -77,96 +72,102 @@ guiTypes = {
 		name = "countrymissionsview_missions_gridbox_listbox_entry"
 		position = { x=0 y=0 }
 		show_position = { x=0 y =140 }
-		size = { x=0 y=0 }
+		size = { x=530 y=500 }
 		moveable = 0
 		
 		gridBoxType = {
 			name = "countrymissionsview_missions_gridbox"
-			position = { x = 10 y = 0 }
-			size = { width = 880 height = 500 }
-			slotsize = { width = 200 height = 100 }
-			max_slots_horizontal = 4
+			position = { x = 0 y = 0 }
+			size = { width = 1100 height = 400 }
+			slotsize = { width = 104 height = 152 }
+			max_slots_horizontal = 10
 			format = "UPPER_LEFT"
 		}
 	}
 
 	windowType={
 		name = "countrymissionsview_missions_entry"
+		#size = { width = 104 height = 122 }
 		
 		iconType = {
 			name = "mission_icon"
-			position = { x=22 y=-9999 }
+			position = { x=22 y=20 }
 			quadTextureSprite ="GFX_event_bg_transparency"
 		}
 		
-        # Arrows
 		iconType = {
 			name = "arrow_half_top"
-			position = {x=93 y=60}
+			position = {x=46 y=121}
 			quadTextureSprite ="gfx_arrow_verticall_tile"
 			allwaystransparent = yes
 		}
 		
 		iconType = {
 			name = "arrow_half_bottom_center"
-			position = {x=85 y=80}
+			position = {x=38 y=141}
 			quadTextureSprite ="gfx_arrow_end"
 			allwaystransparent = yes
 		}
 
 		iconType = {
 			name = "arrow_half_bottom_left"
-			position = {x=39 y=81}
+			position = {x=15 y=141}
 			quadTextureSprite ="gfx_arrow_end"
 			allwaystransparent = yes
 		}
 		
 		iconType = {
 			name = "arrow_half_bottom_right"
-			position = {x=143 y=81}
+			position = {x=61 y=141}
 			quadTextureSprite ="gfx_arrow_end"
 			allwaystransparent = yes
 		}
 		
 		iconType = {
 			name = "skip_tier"
-			position = {x=93 y=28}
+			position = {x=46 y=141}
 			quadTextureSprite ="gfx_arrow_verticall_skip_tier"
 			allwaystransparent = yes
 		}
+		
+		
 		iconType = {
 			name = "skip_slot"
-			position = {x=-10 y=67}
+			position = {x=-6 y=127}
 			quadTextureSprite ="gfx_arrow_horizontal_skip_slot"
 			allwaystransparent = yes
 		}
 		
 		iconType = {
 			name = "left_branch_out"
-			position = {x=-10 y=62}
+			position = {x=4 y=122}
 			quadTextureSprite ="gfx_arrow_left_out"
 			allwaystransparent = yes
 		}
 		iconType = {
 			name = "right_branch_in"
-			position = {x=151 y=65 }
+			position = {x=69 y=125}
 			quadTextureSprite ="gfx_arrow_left_in"
 			allwaystransparent = yes
 		}
+		
+		
 		iconType = {
 			name = "right_branch_out"
-			position = {x=180 y=60}
+			position = {x=60 y=122}
 			quadTextureSprite ="gfx_arrow_right_out"
 			allwaystransparent = yes
 		}
 		iconType = {
 			name = "left_branch_in"
-			position = {x=19 y=65 }
+			position = {x=-5 y=127}
 			quadTextureSprite ="gfx_arrow_right_in"
 			allwaystransparent = yes
 		}
 		
-		# Frame
+		
+		
+		
 		iconType = {
 			name = "mission_entry_icon"
 			position = {x=0 y=0}
@@ -181,49 +182,45 @@ guiTypes = {
 		
 		iconType = {
 			name = "mission_entry_rewards_glow"
-			position = { x=158 y= 4 }
+			position = { x=58 y=-4 }
 			quadTextureSprite = "GFX_mission_effect_glow"
-            scale = 0.6
 		}
 		
 		iconType = {
 			name = "mission_entry_rewards"
-			position = { x=165 y=12 }
+			position = { x=70 y=7 }
 			quadTextureSprite = "gfx_mission_effect"
-            scale = 0.6
 		}
 		
 
 		iconType = {
 			name = "mission_entry_conditions"
-			position = { x=165 y=33 }
+			position = { x=0 y=7 }
 			quadTextureSprite = "gfx_mission_trigger"
-            scale = 0.6
 		}
 		
 		guiButtonType = {
 			name = "mission_entry_conditions_button"
-			position = { x=165 y=33 }
-			quadTextureSprite = "gfx_mission_trigger"
-            scale = 0.6
+			quadTextureSprite ="gfx_mission_trigger"
+			position = { x= 0 y = 7 }
 		}
 
 		instantTextBoxType= {
-			position = { x=20 y=18}
+			position = { x=8 y=84}
 			name = "mission_title"
-			font = "monofonto_outline_12"
+			font = "vic_18"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 160
-			maxHeight = 64
+			maxWidth = 90
+			maxHeight = 22
 			text = "Subjective and a Noun"
 			orientation = "UPPER_LEFT"
-			format = left
+			format = center
 			allwaystransparent = yes
 		}
 		
 		iconType = {
 			name ="country_icon"
-			position = { x= 35 y = -9999 }
+			position = { x= 35 y = 3 }
 			quadTextureSprite = "GFX_shield_small"
 		}
 	}

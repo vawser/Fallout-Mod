@@ -1,0 +1,466 @@
+namespace = fds_justice
+
+#-----------------------------------------
+# State Courts
+#-----------------------------------------
+# Just Arbitration
+country_event = {
+	id = fds_justice.1
+	title = fds_justice.1.title
+	desc = fds_justice.1.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_state_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_justice.1.option.a
+
+		
+	}
+}
+
+# Respected Courts
+country_event = {
+	id = fds_justice.2
+	title = fds_justice.2.title
+	desc = fds_justice.2.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_state_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_justice.2.option.a
+
+		
+	}
+}
+
+# Judicial Scandal
+country_event = {
+	id = fds_justice.3
+	title = fds_justice.3.title
+	desc = fds_justice.3.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_state_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_justice.3.option.a
+
+		
+	}
+}
+
+# Clogged Courts
+country_event = {
+	id = fds_justice.4
+	title = fds_justice.4.title
+	desc = fds_justice.4.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_state_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_justice.4.option.a
+
+		
+	}
+}
+
+#-----------------------------------------
+# Community Courts
+#-----------------------------------------
+# Communal Beatings
+country_event = {
+	id = fds_justice.5
+	title = fds_justice.5.title
+	desc = fds_justice.5.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_community_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_justice.5.option.a
+
+		
+	}
+}
+
+# Communal Judgment
+country_event = {
+	id = fds_justice.6
+	title = fds_justice.6.title
+	desc = fds_justice.6.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_community_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_justice.6.option.a
+
+		
+	}
+}
+
+# Arbitrary Justice
+country_event = {
+	id = fds_justice.7
+	title = fds_justice.7.title
+	desc = fds_justice.7.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_community_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_justice.7.option.a
+
+		
+	}
+}
+
+# Reprehensible Violence
+country_event = {
+	id = fds_justice.8
+	title = fds_justice.8.title
+	desc = fds_justice.8.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_community_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_justice.8.option.a
+
+		
+	}
+}
+
+#-----------------------------------------
+# Secret Courts
+#-----------------------------------------
+# State Secrecy
+country_event = {
+	id = fds_justice.9
+	title = fds_justice.9.title
+	desc = fds_justice.9.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_secret_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_justice.9.option.a
+
+		
+	}
+}
+
+# Supression of Rebellion
+country_event = {
+	id = fds_justice.10
+	title = fds_justice.10.title
+	desc = fds_justice.10.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_secret_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.5
+            stability = 1
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 0.5
+            stability = 3
+        }
+	}
+	
+	option = {
+		name = fds_justice.10.option.a
+
+		
+	}
+}
+
+# Obscurantism
+country_event = {
+	id = fds_justice.11
+	title = fds_justice.11.title
+	desc = fds_justice.11.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_secret_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_justice.11.option.a
+
+		
+	}
+}
+
+# State Censorship
+country_event = {
+	id = fds_justice.12
+	title = fds_justice.12.title
+	desc = fds_justice.12.desc
+    picture = BOS_CHAT_eventPicture
+	
+    trigger = {
+		always = no
+        has_secret_courts = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = 0 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -1 }
+        }
+        
+        modifier = {
+            factor = 0.75
+            NOT = { stability = -2 }
+        }
+	}
+	
+	option = {
+		name = fds_justice.12.option.a
+
+		
+	}
+}

@@ -51,7 +51,7 @@ federal_republic = {
 	nation_designer_cost = 0
 	
 	republican_name = yes
-	royal_marriage = no
+	royal_marriage = yes
 	
 	has_parliament = yes
     
@@ -60,19 +60,18 @@ federal_republic = {
 	}
 	ai_importance = 0
     
-	max_states = 5
+    max_states = 5
 
-	different_religion_acceptance = 25
-	different_religion_group_acceptance = 25
+    different_religion_acceptance = 25
+    different_religion_group_acceptance = 25
     
 	rank = {
 		2 = {
 			global_tax_modifier = 0.1
-			diplomatic_upkeep = 1
+            diplomatic_upkeep = 1
 		}
 	}
-
-	fixed_rank = 2
+    fixed_rank = 2
 }
 
 #------------------------------------------------------------
@@ -81,29 +80,26 @@ federal_republic = {
 legion = {
 	monarchy = yes
 	
-	unique_government = yes
+    unique_government = yes
     
 	valid_for_new_country = no
 	allow_convert = no
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-
-	royal_marriage = yes
 	
 	ai_will_do = {
 		factor = 0
 	}
-
 	ai_importance = 0
 	
-	max_states = 5
+    max_states = 5
     
-	maintain_dynasty = yes
-	claim_states = yes
+    maintain_dynasty = yes
+    claim_states = yes
     
-	different_religion_acceptance = -25
-	different_religion_group_acceptance = -25
+    different_religion_acceptance = -25
+    different_religion_group_acceptance = -25
 
 	government_abilities = {
 		russian_mechanic
@@ -112,7 +108,7 @@ legion = {
 	rank = {
 		2 = {
 			land_maintenance_modifier = -0.2
-			max_absolutism = 20
+            max_absolutism = 20
 		}
 	}
 	fixed_rank = 2
@@ -129,7 +125,7 @@ the_think_tank = {
 
 	unique_government = yes
     
-	royal_marriage = no
+	royal_marriage = yes
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -167,7 +163,6 @@ the_think_tank = {
 #------------------------------------------------------------
 # New Vegas
 #------------------------------------------------------------
-
 new_vegas = {
 	monarchy = yes
     
@@ -176,9 +171,9 @@ new_vegas = {
 
 	unique_government = yes
     
-	royal_marriage = no # Mister House is immortal
+	royal_marriage = yes
 	
-	valid_for_nation_designer = no
+	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
 	queen = no
@@ -203,7 +198,6 @@ new_vegas = {
 			inflation_reduction = -0.2
 		}
 	}
-
 	fixed_rank = 2
 }
 
@@ -218,7 +212,7 @@ the_institute = {
 
 	unique_government = yes
     
-	royal_marriage = no
+	royal_marriage = yes
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -257,8 +251,6 @@ bastardized_institute = {
 
 	unique_government = yes
 	royal_marriage = yes
-
-	heir = yes
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -312,8 +304,6 @@ enclave_gov = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
-	royal_marriage = no
-
 	nation_designer_trigger = {
 		culture_group = wastelander_group
 		NOT = {
@@ -356,7 +346,7 @@ enclave_gov = {
 vault = {
 	republic = yes
 	
-	unique_government = yes
+    unique_government = yes
     
 	valid_for_new_country = no
 	allow_convert = no
@@ -365,16 +355,14 @@ vault = {
 	nation_designer_cost = 0
 	
 	republican_name = no
-	royal_marriage = no
-
-	heir = no
+	royal_marriage = yes
 	
 	ai_will_do = {
 		factor = 0
 	}
 	ai_importance = 0
     
-	max_states = 3
+    max_states = 3
 
 	rank = {
 		2 = {
@@ -395,10 +383,6 @@ rodent_scourge = {
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-
-	queen = no
-
-	royal_marriage = no
 	
 	ai_will_do = {
 		factor = 0
@@ -407,9 +391,9 @@ rodent_scourge = {
 
 	has_pashas = yes
 
-	max_states = 5
+    max_states = 5
     
-	government_abilities = {
+    government_abilities = {
 		iqta_mechanic
 	}
     
@@ -428,7 +412,7 @@ rodent_scourge = {
 dictatorship = {
 	republic = yes
 	
-	unique_government = yes
+    unique_government = yes
     
 	valid_for_new_country = no
 	allow_convert = no
@@ -437,19 +421,19 @@ dictatorship = {
 	nation_designer_cost = 0
 	
 	republican_name = yes
-	royal_marriage = no
+	royal_marriage = yes
 	
 	ai_will_do = {
 		factor = 0
 	}
 	ai_importance = 0
 	
-	max_states = 3
+    max_states = 3
     
 	rank = {
 		2 = {
-			yearly_corruption = -0.05
-			max_absolutism = 10
+            yearly_corruption = -0.05
+            max_absolutism = 10
 		}
 	}
 	fixed_rank = 2
@@ -458,7 +442,7 @@ dictatorship = {
 commune = {
 	republic = yes
 	
-	unique_government = yes
+    unique_government = yes
     
 	valid_for_new_country = no
 	allow_convert = no
@@ -474,12 +458,12 @@ commune = {
 	}
 	ai_importance = 0
     
-	max_states = 3
+    max_states = 3
     
 	rank = {
 		2 = {
 			production_efficiency = 0.1
-			max_absolutism = -5
+            max_absolutism = -5
 		}
 	}
 	fixed_rank = 2
@@ -491,11 +475,10 @@ commune = {
 mothership = {
 	monarchy = yes
 	
-	unique_government = yes
+    unique_government = yes
     
 	valid_for_new_country = no
 	allow_convert = no
-	royal_marriage = no
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -503,20 +486,18 @@ mothership = {
 	ai_will_do = {
 		factor = 0
 	}
-
 	ai_importance = 0
-	max_states = 100
+    max_states = 100
     
-	different_religion_acceptance = -200
-	different_religion_group_acceptance = -200
+    different_religion_acceptance = -200
+    different_religion_group_acceptance = -200
     
 	rank = {
 		2 = {
-			max_absolutism = 100
+            max_absolutism = 100
 		}
 	}
-
-	fixed_rank = 2
+    fixed_rank = 2
 }
 
 #-------------------------
@@ -531,8 +512,6 @@ wolf_government = {
 	allow_convert = no
 	allow_vassal_war = yes
 	foreign_slave_rulers = yes
-
-	royal_marriage = yes
 
 	government_abilities = {
 		mamluk_mechanic

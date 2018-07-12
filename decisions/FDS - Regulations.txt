@@ -1,0 +1,116 @@
+country_decisions = {
+	fds_slavery_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_regulation_early }
+		}
+		effect = {
+			country_event = { id = fds_regulations.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_gambling_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_regulation_early }
+		}
+		effect = {
+			country_event = { id = fds_regulations.2 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_prostitution_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_regulation_early }
+		}
+		effect = {
+			country_event = { id = fds_regulations.3 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_firearms_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_regulation_early }
+		}
+		effect = {
+			country_event = { id = fds_regulations.4 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fds_narcotics_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_regulation_early }
+		}
+		effect = {
+			country_event = { id = fds_regulations.5 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	fds_scavenging_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = fds_hide_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+			NOT = { has_country_flag = changed_regulation_early }
+		}
+		effect = {
+			country_event = { id = fds_regulations.6 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
