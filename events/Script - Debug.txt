@@ -306,3 +306,55 @@ country_event = { # Stops potential bug in which Atlanta erronorously converts t
 		ATL = { change_government = constitutional_republic }
 	}
 }
+
+country_event = { # Stops known bug in which Brotherhood of Steel governments erronorously convert to a Tribal Democracy or Tribal Council
+	id = debug.12
+	title = debug.1.title
+	desc = debug.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	trigger = {
+		ai = yes
+		has_country_flag = brotherhood_chapter
+		is_tribe_government = yes
+		NOT = {
+			government = administrative_brotherhood_order
+			government = diplomatic_brotherhood_order
+			government = fascist_brotherhood_order
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = debug.1.option.a
+		if = {
+			limit = {
+				OR = {
+					government = tribal_democracy
+					government = tribal_federation
+					government = trade_tribe
+				}
+			}
+			change_government = diplomatic_brotherhood_order
+		}
+		if = {
+			limit = {
+				OR = {
+					government = tribal_council
+					government = religious_tribe
+				}
+			change_government = administrative_brotherhood_order
+		}
+		if = {
+			NOT = {
+				government = tribal_democracy
+				government = tribal_federation
+				government = tribal_council
+				government = trade_tribe
+				government = religious_tribe
+			}
+			change_government = fascist_brotherhood_order
+		}
+	}
+}

@@ -121,7 +121,15 @@ country_decisions = {
 
 	upgrade_tribe = { # Tribal states can become more advanced tribal governments if they meet certain conditions
 		potential = {
-			has_tribe_government = yes
+			is_tribe_government = yes
+			NOT = {
+				has_country_flag = brotherhood_chapter
+				is_brotherhood_government = yes
+				is_republic_government = yes
+				is_true_monarchy = yes
+				government = legion
+				tag = ENC
+			}
 			NOT = {
 				government = tribal_kingdom
 				government = tribal_federation
