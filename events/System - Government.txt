@@ -10,7 +10,12 @@ country_event = {
 	
 	trigger = { 
 		num_of_cities = 3 
-		government = monarchy
+		OR = {
+			is_true_monarchy = yes
+			government = administrative_settlement	
+			government = diplomatic_settlement
+			government = military_settlement
+		}
 	}
 	
     immediate = {
@@ -28,6 +33,243 @@ country_event = {
 				is_in_capital_area = yes
 			}
 			pretender_rebels = 1
+		}
+	}
+}
+
+country_event = {
+	id = fm_government.2
+	title = fm_government.2.title
+	desc = fm_government.2.desc
+	picture =  USA_FLAG_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = fm_government.2.option.a
+		change_government = tribal_democracy
+
+		set_primitive = no
+
+		add_stability = -3
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = war_tribe
+			}
+			modifier = {
+				factor = 0
+				culture_group = raider_group
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					technology_group = tech_vault_dweller
+					technology_group = tech_children_of_the_atom
+					religion = atomic_worship
+				}
+			}
+			modifier = {
+				factor = 1.01
+				religion = secular
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					personality = righteous_personality
+					personality = kind_hearted_personality
+				}
+			}
+			modifier = {
+				factor = 0
+				personality = cruel_personality
+			}
+			modifier = {
+				factor = 2
+				alliance_with = ENC
+			}
+			modifier = {
+				factor = 1.1
+				ruler_personality = benevolent_personality
+			}
+		}
+	}
+
+	option = {
+		name = fm_government.2.option.b
+		change_government = tribal_federation
+		set_country_flag = elected_to_change_tribe
+
+		set_primitive = no
+
+		add_stability = -3
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = kind_hearted_personality
+			}
+			modifier = {
+				factor = 1.5
+				personality = righteous_personality
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					technology_group = tech_ghoul
+					culture_group = ghoul_group
+					religion = ghoul_tribalism
+				}
+			}
+			modifier = {
+				factor = 0
+				personality = cruel_personality
+			}
+			modifier = {
+				factor = 5
+				ruler_personality = tolerant_personality
+			}
+			modifier = {
+				factor = 1.1
+				OR = {
+					culture_group = super_mutant_group
+					culture_group = mutant_group
+				}
+			}
+			modifier = {
+				factor = 0.5
+				primary_culture = swampfolk
+			}
+			modifer = {
+				factor = 0.1
+				personality = benevolent_personality
+			}
+			modifier = {
+				factor = 1.01
+				num_accepted_cultures = 2
+			}
+			modifier = {
+				factor = 2
+				num_accepted_cultures = 3
+			}
+			modifier = {
+				factor = 10
+				num_accepted_cultures = 4
+			}
+		}
+	}
+
+	option = {
+		name = fm_government.3.option.c
+		change_government = tribal_council
+		set_country_flag = elected_to_change_tribe
+
+		set_primitive = no
+
+		add_stability = 3
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				personality = well_advised_personality
+			}
+			modifier = {
+				factor = 2
+				personality = secretive_personality
+			}
+			modifier = {
+				factor = 1.05
+				OR = {
+					culture_group = super_mutant_group
+					culture_group = mutant_group
+					cannot_breed = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				religion = robotics
+			}
+		}
+	}
+
+	option = {
+		name = fm_government.2.option.d
+		change_government = tribal_kingdom
+		set_country_flag = elected_to_change_tribe
+
+		set_primitive = no
+
+		add_stability = -3
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = cruel_personality # Monarchy is not cruel or bad, but a cruel man will likely seek the prestige and attention
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					religion_group = religion_group_muslim
+					religion_group = religion_group_jewish
+					religion_group = religion_group_zoroastrian
+				}
+			}
+			modifier = {
+				factor = 2
+				religion = atomic_worship
+			}
+			modifier = {
+				factor = 1.1
+				personality = righteous_personality
+			}
+			modifier = {
+				factor = 1.1
+				personality = fertile_personality
+			}
+			modifier = {
+				factor = 1.5
+				personality = greedy_personality
+			}
+			modifier = {
+				factor = 0
+				personality = infertile_personality
+			}
+			modifier = {
+				factor = 2
+				personality = pious_personality
+			}
+		}
+	}
+
+	option = {
+		name = event_exit
+		
+		if = {
+			limit = { ai = yes }
+			random_chance = {
+				75 = { set_country_flag = elected_to_change_tribe }
+				25 = { }
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					personality = craven_personality
+					personality = naive_personality
+				}
+			}
+			modifier = {
+				factor = 5
+				personality = craven_personality
+			}
 		}
 	}
 }

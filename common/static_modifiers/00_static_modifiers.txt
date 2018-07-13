@@ -245,7 +245,7 @@ patriarch_authority_local = {
 #for the country
 patriarch_authority_global = {
 	all_power_cost = -0.1
-    idea_cost = -0.1
+	idea_cost = -0.1
 }
 
 pasha_state = {
@@ -265,7 +265,7 @@ native_assimilation = {
 }
 
 native_aggressiveness = {
-	#local_colonist_placement_chance = -0.005
+	local_colonist_placement_chance = -0.0005
 }
 
 core = {
@@ -287,7 +287,7 @@ march_bonus = {
 }
 
 same_culture_group = {
-	local_tax_modifier = -0.15				#10% penalty if same culture group but nothing else. Not applied if the controller is the Union Tag of the culture group, or has culture_group_union set.
+	local_tax_modifier = -0.15		#10% penalty if same culture group but nothing else. Not applied if the controller is the Union Tag of the culture group, or has culture_group_union set.
 	local_manpower_modifier = -0.15
 	local_sailors_modifier = -0.1
 }
@@ -301,7 +301,7 @@ non_accepted_culture = {
 }
 
 accepted_culture_demoted = {
-	local_unrest = 5
+	local_unrest = 10
 }
 
 # Special modifier to the above, for non-tribal republics
@@ -1289,12 +1289,12 @@ invasion_nation = {
 ########################################
 
 native_policy_coexist = {
-	native_uprising_chance = -1
+	native_uprising_chance = -0.9
 }
 
 native_policy_trade = {
-	native_assimilation = 0.5
-    native_uprising_chance = -0.5
+	native_assimilation = 0.8
+	native_uprising_chance = -0.5
 }
 
 native_policy_hostile = {

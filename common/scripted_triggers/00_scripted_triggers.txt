@@ -29,9 +29,9 @@ has_adm_advisor = {
 		advisor = fm_administrator
 		advisor = fm_researcher
 		advisor = fm_artist
-        advisor = fm_auditor
-        advisor = fm_disciplinarian
-        advisor = fm_missionary
+		advisor = fm_auditor
+		advisor = fm_disciplinarian
+		advisor = fm_missionary
 	}
 }
 
@@ -45,9 +45,9 @@ has_dip_advisor = {
 		advisor = fm_police_officer
 		advisor = fm_enforcer
 		advisor = fm_spy
-        advisor = fm_colonist
-        advisor = fm_merchant
-        advisor = fm_caravanner
+		advisor = fm_colonist
+		advisor = fm_merchant
+		advisor = fm_caravanner
 	}
 }
 
@@ -141,9 +141,7 @@ ruler_has_bad_dip_personality = {
 
 ruler_has_bad_mil_personality = {
 	has_dlc = "Rights of Man" 
-	#OR = {
 	ruler_has_personality = craven_personality
-	#}
 }
 
 #Heir personality triggers
@@ -221,9 +219,7 @@ heir_has_bad_dip_personality = {
 
 heir_has_bad_mil_personality = {
 	has_dlc = "Rights of Man" 
-	#OR = {
 	heir_has_personality = craven_personality
-	#}
 }
 
 #Queen personality triggers
@@ -301,12 +297,10 @@ consort_has_bad_dip_personality = {
 
 consort_has_bad_mil_personality = {
 	has_dlc = "Rights of Man" 
-	#OR = {
 	consort_has_personality = craven_personality
-	#}
 }
 
-is_subject_other_than_tributary_trigger = { #Ie Tags that cannot conduct independent diplomacy
+is_subject_other_than_tributary_trigger = { # Tags that cannot conduct independent diplomacy
 	is_subject = yes
 	NOT = { is_subject_of_type = tributary_state }
 }
@@ -352,16 +346,17 @@ is_primitive_state = {
 is_urban_state = {
     owner = {
         OR = {
-            technology_group = tech_children_of_the_atom
-            technology_group = tech_hubologist
-            technology_group = tech_the_kings
-            technology_group = tech_triggermen
-            technology_group = tech_new_vegas
-            technology_group = tech_caesars_legion
-            technology_group = tech_ncr
-            technology_group = tech_ghoul
-            technology_group = tech_wastelander
-            government = the_think_tank
+	technology_group = tech_children_of_the_atom
+	technology_group = tech_hubologist
+	technology_group = tech_the_kings
+	technology_group = tech_triggermen
+	technology_group = tech_new_vegas
+	technology_group = tech_caesars_legion
+	technology_group = tech_ncr
+	technology_group = tech_ghoul
+	technology_group = tech_wastelander
+	government = the_think_tank
+	government = vault
         }
     }
 }
@@ -439,6 +434,8 @@ is_republic_government = {
         government = patriarchy
         government = enclave_gov
         government = dictatorship
+        government = tribal_democracy
+        government = tribal_council
     }
 }
 
@@ -466,6 +463,73 @@ is_true_monarchy = {
 		government = tribal_kingdom
 		government = steppe_horde
 		government = fm_empire
+	}
+}
+
+is_antebellum_nation = { # Continent-spanning nations that existed before the Great War as well as former nations (e.g. Texas, California)
+	OR = {
+		tag = X04 # USA
+		tag = X07 # Mexico
+		tag = X08 # Canada
+		tag = X12 # California proper
+		tag = X38 # Texas
+	}
+}
+
+is_antebellum_north_american_state = { # The minor formable nations consisting of the USA states and Canadian provinces (and eventually the Mexican states)
+	OR = {
+		tag = X10
+		tag = X11
+		tag = X12
+		tag = X13
+		tag = X14
+		tag = X15
+		tag = X16
+		tag = X17
+		tag = X18
+		tag = X19
+		tag = X20
+		tag = X21
+		tag = X22
+		tag = X23
+		tag = X24
+		tag = X25
+		tag = X26
+		tag = X27
+		tag = X28
+		tag = X29
+		tag = X30
+		tag = X31
+		tag = X32
+		tag = X33
+		tag = X34
+		tag = X35
+		tag = X36
+		tag = X37
+		tag = X38
+		tag = X39
+		tag = X40
+		tag = X41
+		tag = X42
+		tag = X43
+		tag = X44
+		tag = X45
+		tag = X46
+		tag = X47
+		tag = X48
+		tag = X49
+		tag = X50
+		tag = X51
+		tag = X52
+		tag = X53
+		tag = X54
+		tag = X55
+		tag = X56
+		tag = X57
+		tag = X58
+		tag = X59
+		tag = X60
+		tag = X61
 	}
 }
 

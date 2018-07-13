@@ -68,4 +68,85 @@ country_decisions = {
 			factor = 1
 		}
 	}
+
+	plutocratic_administration = { # Rewrite of Vanilla rendition
+		potential = {
+			OR = {
+				is_republic_government = yes
+				government = trade_tribe
+				government = tribal_democracy
+				government = tribal_council
+				tag = JNK # Junktown
+				tag = DIC
+			}
+			NOT = {
+				tag = ENC
+				tag = ANL
+				tag = NCR
+				tag = NVG
+				is_antebellum_nation = yes
+			}
+		}
+		allow = {
+			full_idea_group = banking_ideas
+			trade_income_percentage = 0.2
+			OR = {
+				monthly_income = 10
+				treasury = 1000
+				trade_income_percentage = 0.35
+			}
+			OR = {
+				full_idea_group = foreign_trade_ideas
+				full_idea_group = domestic_trade_ideas
+				trade_income_percentage = 0.5
+			}
+		}
+		effect = {
+			hidden_effect = { set_primitive = no }
+			change_government = merchant_republic
+			add_stability = -3
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					government = dictatorship
+					government = patriarchy
+				}
+				
+			}
+		}
+	}
+
+	upgrade_tribe = { # Tribal states can become more advanced tribal governments if they meet certain conditions
+		potential = {
+			has_tribe_government = yes
+			NOT = {
+				government = tribal_kingdom
+				government = tribal_federation
+				government = tribal_democracy
+				government = tribal_council
+				government = steppe_horde
+				government = wolf_government
+			}
+		}
+		allow = {
+			custom_tooltip = UPGRADE_TO_BETTER_TRIBE_PREREQUISITE
+			hidden_trigger = {
+				OR = {
+					is_antebellum_north_american_state = yes
+					is_antebellum_nation = yes
+					total_development = 50
+				}
+			}
+			stability = 3
+		}
+		effect = {
+			country_event = {
+				id = fm_government.2
+				tooltip = UPGRADE_TO_BETTER_TRIBE
+			}
+		}
+	}
 }

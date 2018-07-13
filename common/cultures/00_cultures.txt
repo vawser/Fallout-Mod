@@ -2741,33 +2741,33 @@ creatures_group = {
 			Rhona Veronica Briana Pinky Brain Queen Queeng Kween Kwing Kwang
 		}
 		dynasty_names = {
-			Naked "Naked Mole Rat" Mole Rat Stoppable Raat Rat Molerat
+			Naked "Naked Mole Rat" Mole Rat Stoppable Rat Molerat
 		}
 	}
     
 	deathclaw = {
-        graphical_culture = deathclaw_gfx
+		graphical_culture = deathclaw_gfx
         
 		male_names = {
-			"The Shredder" Shred Shredder Cut Cutter Emo
+			Shred Shredder Cut Cutter Emo
 		}
 		female_names = {
 			Kara Krang Emo
 		}
 		dynasty_names = {
-			Shredder Foot
+			Shredder Foot Claw Clawz Klaw Clawman "the Claw"
 		}
 	}
     
 	radstag = {
 		male_names = {
-			Bambi Bambino Dasher Dancer Prancer Vixen Comet Cupid Donnor Blitzen Leroy Jeff Bang "White Tail" Buck
+			Bambi Bambino Dasher Dancer Prancer Vixen Comet Cupid Donnor Blitzen Leroy Jeff Bang "White Tail" Buck Hank
 		}
 		female_names = {
-			Bambi Bambiana Pow "White Tail" Doe Fawn
+			Bambi Bambiana Bambina Pow "White Tail" Doe Fawn Dawn
 		}
 		dynasty_names = {
-			Prince Deer Deerling Stag Stagwalker Fudd Deers Deerz Buck Doe
+			Prince Deer Deerling Stag Stagwalker Fudd Deers Deerz Buck Doe Williams
 		}
 	}
     
@@ -2779,16 +2779,16 @@ creatures_group = {
 			Sum Ting Wong
 		}
 		dynasty_names = {
-			Sum Chong Chan Lee Ting Wong Xi Xingping Jengping Jingping Jing Ching Xiaoping
+			Sum Chong Chan Lee Ting Wong Xi Xingping Jengping Jingping Jing Ching Xiaoping "the Claw"
 		}
 	}
     
 	vicious_dog = {
 		male_names = {
-			"Mister Barkey" Pluto Fido Spot Spike Bruce Ruff Whoof Tramp Subwhoofer
+			"Mister Barkey" Pluto Fido Spot Spike Bruce Ruff Whoof Tramp Subwhoofer "Big Daddy"
 		}
 		female_names = {	
-			"Miss Barkey" Angela Lady Spike Spot Ruff Whoof
+			"Miss Barkey" Angela Lady Spike Spot Ruff Whoof "Big Momma"
 		}
 		dynasty_names = {	
 			"von Schnauzer"
@@ -2797,24 +2797,37 @@ creatures_group = {
     
     	mirelurk = {
 		male_names = {
-			Eugene Joe Titan Swimmy Shamu
+			Eugene Joe Titan Swimmy Shamu Mister "Big Daddy"
 		}
 		female_names = {
+			Swimmy Shamu Mrs. Mama "Big Momma"
 		}
 		dynasty_names = {
-			Krab Krabs Snap Snapper Crabz
+			Krab Krabs Snap Snapper Crabz Turt Tort Turtly Turtle Tortoise
 		}
 	}
     
-    radscorpion = {
+	radscorpion = {
 		male_names = {
-			Sting Stinger Bug Buggy Bugsy Bugzy Poison Venom Strike Striker
+			Sting Stinger Bug Buggy Bugsy Bugzy Poison Venom Strike Striker "Big Daddy" Johnny Mojave Desert
 		}
 		female_names = {
-			Sting Stinger Bug Buggy Poison Venom Strike Strike
+			Sting Stinger Bug Buggy Poison Venom Strike Strike "Big Momma" Mohave
 		}
 		dynasty_names = {
-			Scorpion "Radiation Scorpion" Radscorpion
+			Scorpion "Radiation Scorpion" Radscorpion Lovel
+		}
+	}
+
+	ghost_people = {
+		male_names = {
+			Casper Haunt Frederick Ghost Forgotten Forsaken Sinclair Thriller Dre
+		}
+		female_names = {
+			Sierra Madre Frida Frieda Haunt Ghost Forgotten Forsaken Claire
+		}
+		dynasty_names = {
+			Spook Casino Frederick Hologram Laser Lazer Guardian Cloud Glow Ghoul Night "of the Night"
 		}
 	}
 }
@@ -2834,7 +2847,7 @@ robot_group = {
 	}
     
 	synth = {
-        graphical_culture = synth_gfx
+		graphical_culture = synth_gfx
         
 		male_names = {
 			"Autonomous Drone" "Arnold" "Terminator" Google IBM HAL Amazon Mark
@@ -2847,17 +2860,21 @@ robot_group = {
 		}
 	}
 	skynet = {
+		graphical_culture = synth_gfx
+
 		male_names = {
 			Cyberdine Skynet Arnold Terminator
 		}
 		female_names = {
-			"Autonomous Drone" Skynet CyberdineTerminator
+			"Autonomous Drone" Skynet Cyberdine Terminator
 		}
 		dynasty_names = {
 			Scwarzenegger Zuckerburg
 		}
 	}
 	android = {
+		graphical_culture = synth_gfx
+
 		male_names = {
 			"Arnold" "Autonomous Drone" "Pip" Google Amazon IBM HAL Mark
 		}
@@ -2891,6 +2908,8 @@ robot_group = {
 		}
 	}
 	lobotomite = {
+		graphical_culture = synth_gfx
+
 		male_names = {
 			"Autonomous Drone"
 		}

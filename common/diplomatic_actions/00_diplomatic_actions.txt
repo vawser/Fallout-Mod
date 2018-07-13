@@ -82,10 +82,12 @@ royal_marriage = {
 				is_fungal = yes # Fungi reproduce asexually
 				is_deathclaw = yes # Deathclaws can't breed with sentients
 				is_super_mutant = yes # Super Mutants can't breed, just ask the Master
+				cannot_breed = yes
 			}
 		}
 		allow = {
 			NOT = { war_with = FROM }
+			NOT = { cannot_breed = yes }
 			OR = {
 				AND = {
 					is_alien = yes # Aliens can't breed with men

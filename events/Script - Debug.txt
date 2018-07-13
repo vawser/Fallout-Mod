@@ -10,8 +10,7 @@ country_event = {
 
 	option = {
 		name = debug.1.option.a
-
-        swap_non_generic_missions = yes
+		swap_non_generic_missions = yes
 	}
     
 }
@@ -26,14 +25,12 @@ country_event = {
 
 	option = {
 		name = debug.1.option.a
-
-        set_country_flag = test_mission_test
+		set_country_flag = test_mission_test
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
-        clr_country_flag = test_mission_test
+		clr_country_flag = test_mission_test
 	}
 
     
@@ -52,12 +49,11 @@ country_event = {
 
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
 
 	}
@@ -73,22 +69,18 @@ country_event = {
 
 	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
 }
@@ -103,27 +95,22 @@ country_event = {
 
 	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
 }
 
@@ -137,34 +124,27 @@ country_event = {
 
 	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
-    
 }
 
 country_event = {
@@ -180,34 +160,28 @@ country_event = {
 
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
 }
@@ -222,41 +196,113 @@ country_event = {
 
 	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
 
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
-
 	}
     
-    option = {
+	option = {
 		name = debug.1.option.a
+	}
+}
 
+country_event = { # Stops known bug in which NCR erronorously converts to a Tribal Democracy or Tribal Council
+	id = debug.8
+	title = debug.1.title
+	desc = debug.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	trigger = {
+		ai = yes
+		NCR = { is_tribe_government = yes }	
+		NOT = { NCR = { government = federal_republic } }
+	}
+
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = debug.1.option.a
+		NCR = { change_government = federal_republic }
+	}
+}
+
+country_event = { # Stops potential bug in which New Vegas erronorously converts to a Tribal Democracy or Tribal Council
+	id = debug.9
+	title = debug.1.title
+	desc = debug.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	trigger = {
+		ai = yes
+		NVG = { is_tribe_government = yes }	
+		NOT = { NVG = { government = new_vegas } }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = debug.1.option.a
+		NVG = { change_government = new_vegas }
+	}
+}
+
+ country_event = { # Stops potential bug in which Enclave erronorously converts to a Tribal Democracy or Tribal Council
+	id = debug.10
+	title = debug.1.title
+	desc = debug.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	trigger = {
+		ai = yes
+		ENC = { is_tribe_government = yes }
+		NOT = { ENC = { government = enclave_gov } }	
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = debug.1.option.a
+		ENC = { change_government = enclave_gov }
+	}
+}
+
+country_event = { # Stops potential bug in which Atlanta erronorously converts to a Tribal Democracy or Tribal Council
+	id = debug.11
+	title = debug.1.title
+	desc = debug.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	trigger = {
+		ai = yes
+		ATL = { is_tribe_government = yes }
+		NOT = { ATL = { government = constitutional_republic } }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = debug.1.option.a
+		ATL = { change_government = constitutional_republic }
 	}
 }

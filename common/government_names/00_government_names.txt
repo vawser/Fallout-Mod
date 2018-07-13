@@ -21,7 +21,18 @@ gov_miltia_gov = {
 	}
 	
 	trigger = {
-		government = militia_gov
+		OR = {
+			government = militia_gov
+			AND = {
+				OR = {
+					government = administrative_settlement
+					government = diplomatic_settlement
+					government = military_settlement
+					government = militia_gov
+				}
+				tag = MTM
+			}
+		}
 		NOT = { tag = GUN }
 	}
 }
@@ -52,6 +63,7 @@ gov_cult_settlement = {
 			government = military_settlement
 			government = theocracy
 			government = feudal_theocracy
+			government = monastic_order
 		}	
 		religion = hubology
 	}

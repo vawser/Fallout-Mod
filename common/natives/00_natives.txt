@@ -17,7 +17,7 @@
 #        21 22 24 28 32 192 193 195 196 197 199 200 201 202 204 205 208 209 210 211 212 322 499 500 501 503 504 505 506 511 512 513 514 515 517 519 521 522 523 525 530 532 533 534 535 536 537 980 981 984 985 
         
 natives_american_yao_guai = {
-	graphical_culture = wastelander_gfx
+	graphical_culture = deathclaw_gfx
 	color = { 80 77 17 }
 	icon = 10
 	
@@ -31,14 +31,14 @@ natives_american_yao_guai = {
 }
 
 natives_american_vicious_dogs = {
-	graphical_culture = wastelander_gfx
+	graphical_culture = deathclaw_gfx
 	color = { 30 50 120 }
 	icon = 9
 	
-	unit = tribal_grunt
+	unit = rodent_scurrier
 	
 	provinces = {
-        54 79 98 104 107 131 136 237 251 252 337 413 418 426 427 428 435 459 566 667 668 669 675 725 2486 2487 3013 3049 3066 3068 3072 3075 3079 3080 3081 3084 3097 3104 3109 3111 3114 3124 3131 3138
+        54 79 98 104 107 131 136 237 251 252 337 413 418 426 427 428 435 459 566 667 668 669 675 725 2486 2487 3013 3049 3068 3072 3075 3079 3080 3081 3084 3097 3104 3109 3111 3114 3124 3131 3138
         
         157 158 233 292 294 299 303 380 404 551 606 609 751 752 845 947 950 990 2023 2549 2550 3030 3040 3061
         
@@ -55,7 +55,7 @@ natives_american_vicious_dogs = {
 }
 
 natives_american_raider = {
-	graphical_culture = wastelander_gfx
+	graphical_culture = raider_gfx
 	color = { 180 200 20 }
 	icon = 17
 	
@@ -81,7 +81,7 @@ natives_american_radstag = {
 	color = { 122 125 140 }
 	icon = 16
 	
-	unit = tribal_grunt
+	unit = super_mutant
 	
 	provinces = {
         4 5 49 50 159 287 393 516 542 543 547 608 726 727 970 2560 2562 3026 3033 3036 3038 3048 3053
@@ -109,14 +109,14 @@ natives_american_radscorpion = {
 }
 
 natives_american_feral_ghoul = {
-	graphical_culture = wastelander_gfx
+	graphical_culture = ghoul_gfx
 	color = { 25 230 120 }
 	icon = 4
 	
-	unit = tribal_grunt
+	unit = ghoul_grunt
 	
 	provinces = {
-        51 60 93 108 132 166 338 342 347 412 417 429 460 463 466 507 557 567 676 724 875 982 3009 3010 3067 3076 3077 3082 3092 3093 3100 3101 3107 3108 3122 3127 3133 3135
+        51 60 93 108 132 166 338 342 347 412 417 429 460 463 466 507 557 567 676 724 875 982 3009 3010 3076 3077 3082 3092 3093 3100 3101 3107 3108 3122 3127 3133 3135
         
         156 162 300 304 307 381 552 728 730 740 748 749 952 956 969 2552 2564 2565 3025 3031 3032 3054
         
@@ -131,14 +131,14 @@ natives_american_feral_ghoul = {
 }
 
 natives_american_deathclaw = {
-	graphical_culture = wastelander_gfx
+	graphical_culture = deathclaw_gfx
 	color = { 122 30 20 }
 	icon = 15
 	
-	unit = enclave_grunt
+	unit = super_mutant
 	
 	provinces = {
-        45 61 78 99 101 115 121 249 277 279 377 414 464 568 571 872 873 874 878 983 2496 2507 2964 3065 3070 3078 3086 3096 3099 3103 3113 3116 3119 3134 3137
+        45 61 78 99 101 115 121 249 277 279 377 414 464 568 571 872 873 874 878 983 2496 2507 2964 3070 3078 3086 3096 3099 3103 3113 3116 3119 3134 3137
         
         194 271 293 402 610 731 733 734 736 739 741 745 955 957 958 993 994 2987 3034 3051 3055
         
@@ -151,7 +151,7 @@ natives_american_deathclaw = {
 }
 
 natives_american_synth = {
-	graphical_culture = wastelander_gfx
+	graphical_culture = robot_gfx
 	color = { 80 100 24 }
 	icon = 19
 	
@@ -165,11 +165,11 @@ natives_american_synth = {
 }
 
 natives_american_robot = {
-	graphical_culture = wastelander_gfx
+	graphical_culture = robot_gfx
 	color = { 25 100 10 }
 	icon = 13
 	
-	unit = synth_strider
+	unit = eyebot
 	
 	provinces = {
         17 46 163 290 301 305 379 603 607 732 735 737 746 750 967 995 2010 2548 2554 2558 2563 3029 3062
@@ -180,4 +180,14 @@ natives_american_robot = {
         
         22 24 193 209 212 504 506 519 534 536
 	}
+}
+
+natives_american_ghost_people = {
+	graphical_culture = ghoul_gfx
+	color = { 66 8 0 }
+	icon = 4
+	
+	unit = ghoul_commando
+
+	provinces = { 3065 3066 3067 }	
 }

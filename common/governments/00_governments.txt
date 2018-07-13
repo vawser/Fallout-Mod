@@ -25,6 +25,8 @@ administrative_monarchy = {
 	}
 	ai_importance = 0
 
+	allow_convert = no
+
 	#bonus
 	
 	max_states = 3
@@ -65,6 +67,8 @@ constitutional_monarchy = {
 	has_parliament = yes
 
 	royal_marriage = yes
+
+	allow_convert = no
 
 	#bonus
 	
@@ -126,6 +130,7 @@ merchant_republic = {
 	ai_will_do = {
 		factor = 0	
 	}
+	ai_importance = 0
 	
 	max_states = 3
 
@@ -173,6 +178,7 @@ constitutional_republic = {
 
 	max_states = 3
 
+	allow_convert = no
 
 	rank = {
 		1 = {
@@ -216,7 +222,6 @@ papal_government = {
 	color = { 230 195 195 }
 	
 	valid_for_new_country = no
-	allow_convert = no
 
 	royal_marriage = no
 	different_religion_acceptance = -20
@@ -244,7 +249,7 @@ papal_government = {
 
 ####################################################################
 #
-# Vanilla Rendition Tribal Governments (to be implemented)
+# Vanilla Rendition Tribal Governments
 #
 ####################################################################
 
@@ -259,6 +264,7 @@ tribal_kingdom = {
 	tribal = yes
 	nomad = yes # To match Fallout canon, obviously uses Horde Mechanics
 	allow_migration = yes
+	allow_convert = no
 	
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
@@ -269,6 +275,7 @@ tribal_kingdom = {
 	ai_will_do = {
 		factor = 0
 	}
+	ai_importance = 0
 
 	rank = {
 		1 = {
@@ -315,6 +322,7 @@ tribal_federation = {
 	ai_will_do = {
 		factor = 0
 	}
+	ai_importance = 0
 	
 	rank = {
 		1 = {
@@ -348,6 +356,7 @@ tribal_democracy = {
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	allow_convert = no
 	
 	republican_name = yes
 	royal_marriage = no
@@ -355,6 +364,7 @@ tribal_democracy = {
 	ai_will_do = {
 		factor = 0
 	}
+	ai_importance = 0
 
 	rank = {
 		1 = {
@@ -400,6 +410,7 @@ native_council = {
 	ai_will_do = {
 		factor = 0
 	}
+	ai_importance = 0
 
 	rank = {
 		1 = {
@@ -461,8 +472,8 @@ elective_monarchy = {
 trading_city = {
 	republic = yes
 
-	valid_for_new_country = no
-	valid_for_nation_designer = no
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
 	
 	color = { 30 110 240 }
 	
@@ -470,6 +481,8 @@ trading_city = {
 
 	republican_name = yes
 	royal_marriage = no
+
+	allow_convert = no
 
 	can_use_trade_post = yes
 	can_form_trade_league = no
@@ -480,9 +493,10 @@ trading_city = {
 	faction = mr_guilds		
 
 	ai_will_do = {
-		factor = 0	
+		factor = 0
 	}
-	
+	ai_importance = 0
+
 	max_states = 1
 	
 	fixed_rank = 1
