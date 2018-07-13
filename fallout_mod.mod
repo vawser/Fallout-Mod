@@ -27,8 +27,11 @@ replace_path="history/countries"
 replace_path="history/provinces"
 replace_path="history/diplomacy"
 replace_path="history/wars"
+replace_path="gfx/entities"
 tags={
-	"Balance"
+	"Total Conversion"
+    "Alternative History"
+    "Gameplay"
 	"Map"
 }
 supported_version="1.25.*.*"
