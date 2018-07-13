@@ -1165,3 +1165,56 @@ davetb_diamond_ideas = {
 		prestige = 0.5
 	}
 }
+
+TSP_ghoul_haters_ideas_ = {
+	free = yes
+
+	start = {
+		leader_siege = 1
+		num_accepted_culture = -2	
+	}
+
+	bonus = {
+		raze_power_gain = 1
+		mercenary_discipline = 0.2
+	}
+
+	trigger = {
+		tag = GHH
+	}
+
+#	Ghouls Are Not Men
+	ghoul_haters_one = {
+		 prestige_from_land = 0.25
+	}
+
+#	Suffer Not the Ghoul to Live
+	ghoul_haters_two = {
+		culture_conversion_cost = -0.9
+	}
+
+#	The Conquest of Springfield
+	ghoul_haters_three = {
+		 unjustified_demands = -0.1
+	}
+
+#	Purge the Ghoul Lickers
+	ghoul_haters_four = {
+		yearly_corruption = -0.05
+	}
+
+#	Sons of Wither
+	ghoul_haters_five = {
+		 spy_offence = 0.25
+	}
+
+#	Babes With Guns
+	ghoul_haters_six = {
+		may_recruit_female_generals = yes
+	}
+
+#	Burning Hatred
+	ghoul_haters_seven = {
+		reinforce_cost_modifier = -1 # Costs nothing to reenforce: this was once a benefit to Steppe Hordes in the Vanilla rendition, but was later removed
+	}
+}

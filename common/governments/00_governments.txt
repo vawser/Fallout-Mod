@@ -257,6 +257,8 @@ tribal_kingdom = {
 	color = { 220 165 95 }
 
 	tribal = yes
+	nomad = yes # To match Fallout canon, obviously uses Horde Mechanics
+	allow_migration = yes
 	
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
@@ -301,6 +303,8 @@ tribal_federation = {
 	color = { 185 175 45 }
 
 	tribal = yes
+	nomad = yes # To match Fallout canon, obviously uses Horde Mechanics
+	allow_migration = yes
 	royal_marriage = yes
 	allow_convert = no
 	
@@ -338,6 +342,8 @@ tribal_democracy = {
 	color = { 215 200 45 }
 	
 	tribal = yes
+	nomad = yes # To match Fallout canon, obviously uses Horde Mechanics
+	allow_migration = yes
 	
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
@@ -375,6 +381,10 @@ native_council = {
 	native_mechanic = yes
 	allow_migration = yes
 
+	tribal = yes
+	republic = yes
+	nomad = yes # To match Fallout canon, obviously uses Horde Mechanics
+
 	color = { 220 210 160 }
 	
 	valid_for_new_country = no
@@ -382,6 +392,7 @@ native_council = {
 	
 	republican_name = yes
 	royal_marriage = no
+	allow_migration = yes
 	
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
