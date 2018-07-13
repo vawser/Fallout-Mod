@@ -17,9 +17,9 @@ guiTypes = {
 
 	windowType = {
 		name = "countrymissionsview"
-		position = { x = 320 y = 96 }
-        show_position = { x = 320 y = 96 }
-        hide_position = { x = -9999  y = 96 }
+		position = { x = 290 y = 119 }
+        show_position = { x = 290 y = 119 }
+        hide_position = { x = -9999  y = 119 }
 		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
@@ -35,13 +35,13 @@ guiTypes = {
 		iconType = {
 			name ="missions_banner"
 			spriteType = "GFX_iron_banner"
-			position = { x= 250 y = 20 }
+			position = { x= 230 y = 20 }
 			Orientation = "UPPER_LEFT"
 		}
         
 		guiButtonType = {
 			name = "close_button"
-			position = { x = 685 y = 26 }
+			position = { x = 665 y = 26 }
 			quadTextureSprite ="GFX_fallout_menu_button"	
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_LEFT"
@@ -50,7 +50,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "window_title"
-			position = { x = 240 y = 24 }
+			position = { x = 220 y = 24 }
 			textureFile = ""
 			font = "monofonto_outline_18"
 			borderSize = {x = 4 y = 4}
@@ -62,7 +62,7 @@ guiTypes = {
 		
 		smoothListboxType = {
 			name ="countrymissionsview_missions_gridbox_listbox"
-			position = { x=75 y =80}
+			position = { x=55 y =80}
 			backGround=""
 			size = { x=880 y=500 }
 			Orientation = "UPPER_LEFT"
