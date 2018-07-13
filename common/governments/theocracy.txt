@@ -111,7 +111,7 @@ fascist_brotherhood_order = {
 theocracy = {
 	religion = yes
 	
-    	unique_government = no
+	unique_government = no
     
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
@@ -119,7 +119,7 @@ theocracy = {
 
 	nation_designer_cost = 0
 	
-	royal_marriage = yes
+	royal_marriage = no
 	
 	ai_will_do = {
 		factor = 1
@@ -162,8 +162,7 @@ feudal_theocracy = { # Cults in which the head cultist office is inherited (e.g.
 		NOT = { religion = secular }
 	}
 
-	queen = no
-
+	queen = yes
 	royal_marriage = yes
 	
 	valid_for_new_country = yes
@@ -205,7 +204,7 @@ monastic_order = {
 	nation_designer_cost = 0
 	allow_convert = yes
 	
-	royal_marriage = yes
+	royal_marriage = no
 	different_religion_acceptance = -20
 	different_religion_group_acceptance = -50
 
@@ -270,6 +269,8 @@ baptist_convention = {
 	duration = 4
 
 	boost_income = yes
+	
+	royal_marriage = no
 
 	nation_designer_trigger = {
 		religion = baptist

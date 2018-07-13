@@ -76,9 +76,42 @@ royal_marriage = {
 	condition = {
 		tooltip = MARWAR
 		potential = {
+			NOT = { # Races that cannot normally reproduce
+				race_robot = yes  # Robots can't breed
+				race_synth = yes # Robots can't breed
+				race_fungal = yes # Fungi reproduce asexually
+				race_deathclaw = yes # Deathclaws can't breed with sentients
+				race_super_mutant = yes # Super Mutants can't breed, just ask the Master
+			}
 		}
 		allow = {
 			NOT = { war_with = FROM }
+			OR = {
+				AND = {
+					race_alien = yes # Aliens can't breed with men
+					FROM = { race_alien = yes # Aliens can breed with other aliens }
+				}
+				AND = {
+					OR = {
+						race_mutant = yes
+						race_swampfolk = yes
+						race_beastlord = yes
+						race_ghoul = yes
+					}
+					FROM = {
+						OR = {
+							race_mutant = yes
+							race_swampfolk = yes
+							race_beastlord = yes
+							race_ghoul = yes
+						}
+					}
+				}
+				AND = {
+					is_human = yes
+					FROM = { is_human = yes }
+				}
+			}
 		}
 	}
 }
@@ -100,22 +133,22 @@ annexationaction = {
 			}
 		}
 	}
-	#condition = {
-	#	tooltip = ANNEXINVALID
-	#	potential = {
-	#		FROM = {
-	#			vassal_of = ROOT
-	#		}
-	#	}
-	#	allow = {
-	#		FROM = {
-	#			years_in_vassalage_under = {
-	#				who = ROOT
-	#				years = 10
-	#			}
-	#		}
-	#	}
-	#}
+	condition = {
+		tooltip = ANNEXINVALID
+		potential = {
+			FROM = {
+				vassal_of = ROOT
+			}
+		}
+		allow = {
+			FROM = {
+				years_in_vassalage_under = {
+					who = ROOT
+					years = 10
+				}
+			}
+		}
+	}
 }
 
 integrationaction = {

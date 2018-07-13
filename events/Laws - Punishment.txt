@@ -1,0 +1,80 @@
+namespace = punishment_selection
+namespace = punishment_flavour
+
+country_event = {
+	id = punishment_selection.1
+	title = punishment_selection.1.title
+	desc = punishment_selection.1.desc
+	picture = GOV_RUINS_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = punishment_selection.1.option.a
+        
+        if = {
+            limit = {
+                has_fine_punishment = yes
+            }
+            custom_tooltip = ALREADY_FINE_PUNISHMENT
+        }
+        else = {
+            set_fine_punishment = yes
+			add_adm_power = -100
+            custom_tooltip = FINE_PUNISHMENT_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = punishment_selection.1.option.b
+        
+        if = {
+            limit = {
+                has_imprisonment_punishment = yes
+            }
+            custom_tooltip = ALREADY_IMPRISONMENT_PUNISHMENT
+        }
+        else = {
+            set_imprisonment_punishment = yes
+			add_adm_power = -100
+            custom_tooltip = IMPRISONMENT_PUNISHMENT_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = punishment_selection.1.option.c
+		
+        if = {
+            limit = {
+                has_execution_punishment = yes
+            }
+            custom_tooltip = ALREADY_EXECUTION_PUNISHMENT
+        }
+        else = {
+            set_execution_punishment = yes
+			add_adm_power = -100
+            custom_tooltip = EXECUTION_PUNISHMENT_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+    option = {
+		name = punishment_selection.1.option.d
+		
+        if = {
+            limit = {
+                has_slavery_punishment = yes
+            }
+            custom_tooltip = ALREADY_SLAVERY_PUNISHMENT
+        }
+        else = {
+            set_slavery_punishment = yes
+			add_adm_power = -100
+            custom_tooltip = SLAVERY_PUNISHMENT_EXPLANATION
+            add_civil_unrest_5 = yes
+        }
+	}
+	option = {
+		name = event_exit
+	}
+}
+

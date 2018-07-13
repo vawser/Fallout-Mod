@@ -21,9 +21,9 @@ establish_diplomatic_ties = {
 	}
     
 	is_allowed = {
+        dip_power = 100
         NOT = { war_with = FROM }
-        is_neighbor_of = FROM
-        is_same_race = yes
+#        is_same_race = yes # Why can't Swampmen and humans, say, get along unless they're canonically enemies, e.g. Enclave?
         has_opinion = {
             who = FROM
             value = -50
@@ -49,6 +49,7 @@ establish_diplomatic_ties = {
         
 	}
 	on_accept = {
+        add_dip_power = -100
         add_opinion = {
             who = FROM
             modifier = diplomatic_ties
@@ -90,7 +91,7 @@ establish_diplomatic_ties = {
 		}
 	}
 	ai_will_do = {
-		always = yes
+		dip_power = 200
 	}
 }
 

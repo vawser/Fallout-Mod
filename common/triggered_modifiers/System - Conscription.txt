@@ -1,0 +1,42 @@
+# Conscription
+law_volunteer_conscription = {
+    potential 	= { is_variable_equal = { which = current_conscription_law value = 1 } }
+	trigger 	= { is_variable_equal = { which = current_conscription_law value = 1 } }
+	
+	global_manpower_modifier = -0.5
+    global_unrest = -2
+	land_morale = 0.1
+	discipline = 0.05
+}
+
+law_limited_conscription = {
+    potential 	= { is_variable_equal = { which = current_conscription_law value = 2 } }
+	trigger 	= { is_variable_equal = { which = current_conscription_law value = 2 } }
+	
+	build_time = 0.02
+	build_cost = 0.02
+	global_manpower_modifier = 0.15
+	land_forcelimit = 2
+	land_morale = -0.1
+	discipline = -0.05
+}
+
+law_full_conscription = {
+    potential 	= { is_variable_equal = { which = current_conscription_law value = 3 } }
+	trigger 	= { is_variable_equal = { which = current_conscription_law value = 3 } }
+	
+	global_tax_modifier = -0.2
+	global_manpower_modifier = 1
+	land_morale = -0.1
+	discipline = -0.15
+	build_time = 1
+	build_cost = 0.15
+	army_tradition = 0.25
+	infantry_cost = -0.5
+	drill_gain_modifier = -0.5
+	land_forcelimit = 5
+    global_unrest = 2
+}
+
+
+

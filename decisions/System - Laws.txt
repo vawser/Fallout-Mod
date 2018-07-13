@@ -1,0 +1,249 @@
+country_decisions = {
+	law_hide_menus = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+		}
+		effect = {
+			set_country_flag = hide_law_menus
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	law_show_menus = {
+		major = yes
+		potential = {
+			ai = no
+			has_country_flag = hide_law_menus
+		}
+		allow = {	
+			ai = no
+		}
+		effect = {
+			clr_country_flag = hide_law_menus
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    law_economy_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = economy_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	law_law_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = law_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_justice_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = justice_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_punishment_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = punishment_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_innovation_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = innovation_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_conscription_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = conscription_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    law_slavery_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = slavery_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_gambling_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = gambling_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_prostitution_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = prostitution_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_firearms_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = firearms_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	law_narcotics_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = narcotics_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	law_scavenging_selection = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_law_menus }
+		}
+		allow = {	
+			ai = no
+			has_any_disaster = no
+		}
+		effect = {
+			country_event = { id = scavenging_selection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+

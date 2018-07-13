@@ -8,15 +8,15 @@ has_mil_advisor = {
 		advisor = fm_war_drummer
 		advisor = fm_keel_hauler
 		advisor = fm_sapper
-        advisor = fm_sharpshooter
-        advisor = fm_spec_ops
-        advisor = fm_forager
-        advisor = fm_recruiter
-        advisor = fm_army_captain
-        advisor = fm_naval_captain
-        advisor = fm_mercenary
-        advisor = fm_shipwright
-        advisor = fm_press_ganger
+		advisor = fm_sharpshooter
+		advisor = fm_spec_ops
+		advisor = fm_forager
+		advisor = fm_recruiter
+		advisor = fm_army_captain
+		advisor = fm_naval_captain
+		advisor = fm_mercenary
+		advisor = fm_shipwright
+		advisor = fm_press_ganger
 	}
 }
 
@@ -382,6 +382,10 @@ is_scientific_state = {
             government = vault
             culture_group = robot_group
             religion = robotics
+            tag = SHI
+            tag = INS
+            tag = TNK
+            tag = FBZ
         }
     }
 }
@@ -393,6 +397,10 @@ is_tribe_government = {
         government = trade_tribe
         government = war_tribe
         government = steppe_horde
+        government = tribal_kingdom
+        government = tribal_federation
+        government = tribal_democracy
+        government = native_council
         government = wolf_government
     }
 }
@@ -405,12 +413,31 @@ is_settlement_government = {
     }
 }
 
+is_hereditary_government = { # Does not count tribesmen
+     OR = {
+        government = administrative_settlement
+        government = diplomatic_settlement
+        government = military_settlement
+        government = fm_empire
+        government = tribal_kingdom
+        government = tribal_federation
+        government = iqta
+    }
+}
+
 is_republic_government = {
     OR = {
         government = administrative_republic
         government = trade_republic
         government = military_republic
         government = federal_republic
+        government = grand_republic
+        government = merchant_republic
+        government = constitutional_republic
+        government = trading_city
+        government = american_republic
+        government = patriarchy
+        government = enclave_gov
         government = dictatorship
     }
 }
@@ -431,11 +458,22 @@ is_theocracy = {
 	}
 }
 
+is_true_monarchy = {
+	OR = {
+		government = legion
+		government = administrative_monarchy
+		government = constitutional_monarchy
+		government = tribal_kingdom
+		government = steppe_horde
+		government = fm_empire
+	}
+}
+
 # Ownership
 own_header = {
     custom_trigger_tooltip = {
 		tooltip = OWN_HEADER
-        always = yes
+		always = yes
     }
 }
 
