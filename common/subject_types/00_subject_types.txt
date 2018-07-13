@@ -217,14 +217,22 @@ march = {
 
 	# Properties:
 	pays_overlord = 0.0
-	military_focus = 1.5
+	military_focus = 2.0
+	forcelimit_bonus = 1.1
 	base_liberty_desire = -15.0
 	can_be_annexed = no
+	liberty_desire_same_dynasty = -5.0
 
 	# Subject Interactions:
 	scutage = no
 	subsidize_armies = yes
 	fortify_march = yes
+ 	place_relative_on_throne = yes
+	enforce_religion = yes
+	conscript_general = yes
+	send_additional_troops = yes
+	customize_subject = no
+	seize_territory = no
 	
 	send_officers = yes
 
@@ -341,7 +349,7 @@ personal_union = {
 	transfer_subjects_when_made = yes
 
 	liberty_desire_negative_prestige = 1.0
-	military_focus = 0.66
+	military_focus = 0.6
 
 	relative_power_class = 1
 
@@ -585,13 +593,27 @@ sphere = {
 	joins_overlords_wars = no
 	takes_diplo_slot = no
 	can_have_subjects_of_other_types = yes
-	counts_for_borders = no
+	counts_for_borders = yes
 	can_use_claims = yes
-	share_rebel_popup = no
-    gets_help_with_rebels = yes
+	share_rebel_popup = yes
+	gets_help_with_rebels = yes
+	overlord_protects_external = yes
+	overlord_enforce_peace_attacking = yes
+	share_rebel_popup = yes
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	can_release_and_play = yes
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+ 	overlord_can_attack = no
+	can_release_in_peace = yes
+	separatists_become_subjects = yes
+
+	max_government_rank = 0
 	
 	liberty_desire_development_ratio = 0.25
-	trust_on_start = 25
+	liberty_desire_negative_prestige = 1.0
+	trust_on_start = 50
 	
 	can_fight = {
 		independent_nations = yes
@@ -615,22 +637,24 @@ sphere = {
 	}
 
 	# Subject Interactions:
-    support_loyalists = yes
-    subsidize_armies = yes
-    send_officers = yes
-    divert_trade = yes
-    embargo_rivals = yes
-
+	support_loyalists = yes
+	subsidize_armies = yes
+	send_officers = yes
+	divert_trade = yes
+	embargo_rivals = yes
+	demand_artifacts = yes
+	demand_additional_tribute = yes
 	placate_rulers = no
-    enforce_religion = no
-    enforce_culture = no
-    grant_province = no
-    siphon_income = yes
-    seize_territory = yes
-    takeondebt = yes
-    bestow_gifts = yes
-    conscript_general = yes
-    grant_core_claim = no
+	enforce_religion = no
+	enforce_culture = no
+	grant_province = yes
+	siphon_income = yes
+	seize_territory = yes
+	takeondebt = yes
+	bestow_gifts = yes
+	conscript_general = yes
+	grant_core_claim = no
+	contribute_to_capital = yes
     
 	# Modifiers:
 	modifier_subject = clear
