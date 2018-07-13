@@ -244,6 +244,14 @@ country_event = {
 				personality = pious_personality
 			}
 			modifier = {
+				factor = 2
+				OR = {
+					culture_group = super_mutant_group
+					culture_group = mutant_group
+					cannot_breed = yes
+				}
+			}
+			modifier = {
 				factor = 10
 				tag = SOU
 			}
