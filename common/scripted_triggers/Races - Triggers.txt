@@ -14,6 +14,15 @@
 # 13 - Fungal
 # 14 - Dwarf
 
+is_human_race = {
+    OR = {
+        is_wastelander = yes
+		is_raider = yes
+		is_tribal_race = yes
+		is_dwarf = yes
+	}
+}
+
 # FROM is target
 is_same_race = {
     custom_trigger_tooltip = {

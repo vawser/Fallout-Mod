@@ -77,39 +77,39 @@ royal_marriage = {
 		tooltip = MARWAR
 		potential = {
 			NOT = { # Races that cannot normally reproduce
-				race_robot = yes  # Robots can't breed
-				race_synth = yes # Robots can't breed
-				race_fungal = yes # Fungi reproduce asexually
-				race_deathclaw = yes # Deathclaws can't breed with sentients
-				race_super_mutant = yes # Super Mutants can't breed, just ask the Master
+				is_robot = yes  # Robots can't breed
+				is_synth = yes # Robots can't breed
+				is_fungal = yes # Fungi reproduce asexually
+				is_deathclaw = yes # Deathclaws can't breed with sentients
+				is_super_mutant = yes # Super Mutants can't breed, just ask the Master
 			}
 		}
 		allow = {
 			NOT = { war_with = FROM }
 			OR = {
 				AND = {
-					race_alien = yes # Aliens can't breed with men
-					FROM = { race_alien = yes # Aliens can breed with other aliens }
+					is_alien = yes # Aliens can't breed with men
+					FROM = { is_alien = yes # Aliens can breed with other aliens }
 				}
 				AND = {
 					OR = {
-						race_mutant = yes
-						race_swampfolk = yes
-						race_beastlord = yes
-						race_ghoul = yes
+						is_mutant = yes
+						is_swampfolk = yes
+						is_beastlord = yes
+						is_ghoul = yes
 					}
 					FROM = {
 						OR = {
-							race_mutant = yes
-							race_swampfolk = yes
-							race_beastlord = yes
-							race_ghoul = yes
+							is_mutant = yes
+							is_swampfolk = yes
+							is_beastlord = yes
+							is_ghoul = yes
 						}
 					}
 				}
 				AND = {
-					is_human = yes
-					FROM = { is_human = yes }
+					is_human_race = yes
+					FROM = { is_human_race = yes }
 				}
 			}
 		}
