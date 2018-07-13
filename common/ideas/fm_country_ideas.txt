@@ -731,7 +731,7 @@ followers_apocalypse_ideas = {
 	# Guiding Ethos
 	# The Followers of the Apocalypse was founded with the principle philosophy to restore the wasteland to its pre-war glory by uplifting its inhabitants, in an attempt to preserve peace and eliminate war.
 	followers_apocalypse_1 = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 3
 	}
 	
 	# Shared Knowledge
@@ -810,9 +810,9 @@ the_kings_ideas = {
 }
 
 atlanta_ideas = {
-    start = {
+	start = {
 		stability_cost_modifier = -0.2
-        global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	bonus = {
 		global_unrest = -1
@@ -978,5 +978,190 @@ utobithian_ideas = {
 	# Tight Patrols
 	utobithian_7 = {
 		global_unrest = -1
+	}
+}
+
+vorwarts_lamp_light_ideas = {
+	free = yes
+
+	start = {
+		leader_land_manuever = 1
+		envoy_travel_time -0.6
+	}
+
+	bonus = {
+		unjustified_demands = -0.15
+	}
+
+	trigger = {
+		OR = {
+			tag = LLL
+			technology_group = tech_children
+			primary_culture = lamplight
+		}
+	}
+
+#	DARN MUNGOES IN MY CAVE REEEEEEEEEEEEEEEEEEEEEEEEEEEEE GET OUT
+#	Suggested by Marschall Vorwarts
+	lamplight_one = {
+		global_spy_defence = 0.8 
+	}
+
+#	They're Just Kids!
+	lamplight_two = {
+		discovered_relations_impact = -0.5
+		fire_damage_received = -0.5 # Have you ever tried shooting at kids? It's harder to do because they're normally innocent. Bethseda themselves banned it.
+		improve_relation_modifier = 0.33
+		shock_damage_received = 0.2 # Balance, kids are more easily startled and have harder times being brave
+		discipline = -0.05
+	}
+
+#	Scavenging Teams
+#	Suggested by Marschall Vorwarts
+	lamplight_three = {
+		loot_amount = 0.2
+	}
+
+#	Fungal Dens
+#	Suggested by Marschall Vorwarts
+	lamplight_four = {
+		global_trade_goods_size_modifier = 0.05
+		production_efficiency = 0.05
+	}
+
+#	Master of the Caverns
+#	Suggested by Marschall Vorwarts with a different modifier
+	lamplight_five = {
+		movement_speed = 0.15
+	}
+
+#	Foreign Outposts
+#	Suggested by Marschall Vorwarts
+	lamplight_six = {
+		trade_range_modifier = 0.25
+		global_foreign_trade_power = 0.1
+	}
+
+#	Souvenier Shop
+#	Suggested by Marschall Vorwarts
+	lamplight_seven = {
+		global_own_trade_power = 0.05
+	}
+}
+
+baldemir_junktown_ideas = {
+	free = yes
+
+	start = {
+		trade_range_modifier = 0.25
+		trade_efficiency = 0.25
+	}
+
+	bonus = {
+		discipline = 0.05
+		land_morale = 0.1
+	}
+
+	trigger = { tag = JNK }
+
+#	Tales of a Junktown Merchant
+#	Suggested by Baldemir
+	junktown_one = {
+		merchants =  1
+	}
+
+#	Trade Center
+#	Suggested by Baldemir
+	junktown_two = {
+		global_tax_modifier = 0.1
+	}
+
+#	Caravan Guards
+#	Suggested by Baldemir
+	junktown_three = {
+		possible_mercenaries = 0.5
+		caravan_power = 0.25
+	}
+
+#	Prospecting Eye
+#	Suggested by Baldemir with different modifier
+	junktown_four = {
+		colonist_placement_chance = 0.1
+	}
+
+#	Land of Free Trade
+#	Suggested by Baldemir
+	junktown_five = {
+		global_own_trade_power = 0.25
+	}
+
+#	Offer and Demand
+#	Suggested by Baldemir
+	junktown_six = {
+		production_efficiency = 0.1
+	}
+
+#	Mercenary Contracts
+#	Suggested by Baldimir
+	junktown_seven = {
+		mercenary_cost = -0.33
+		merc_maintenance_modifier = -0.25
+	}
+}
+
+davetb_diamond_ideas = {
+	free = yes
+
+	start = {
+		defensiveness = 0.15
+		republican_tradition = 1
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = { tag = DIC }
+
+#	Anti-Ghoul Decree
+#	Suggested by Davetb
+	diamond_city_one = {
+		global_unrest = -1
+	}
+
+#	Post-War Infrastructure
+#	Suggested by Davetb with a different modifier
+	diamond_city_two = {
+		development_cost = -0.1
+	}
+
+#	Diamond City Security
+#	Suggested by Devetb
+	diamond_city_three = {
+		land_maintenance_modifier = -0.1
+	}
+
+#	Diamond City Radio
+#	Suggested by Devetb
+	diamond_city_four = {
+		ae_impact = -0.15
+	}
+
+#	Commonwealth Weaponry
+#	Suggested by Devetb
+	diamond_city_five = {
+		infantry_power = 0.1
+	}
+
+#	Diamond City Surplus
+#	Suggested by Devetb
+	diamond_city_six = {
+		trade_efficiency = 0.15
+	}
+
+#	Great Green Jewel
+#	Suggested by Devetb
+	diamond_city_seven = {
+		prestige = 0.5
 	}
 }
