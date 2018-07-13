@@ -75,3 +75,78 @@ default_theocracy = {
 		}
 	}
 }
+
+gov_tribal_kingdom = {
+	rank = {
+		1 = CHIEFDOM
+		2 = TRIBAL_KINGDOM
+		3 = TRIBAL_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = HIGH_CHIEF
+		2 = KING
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = HIGH_CHIEFTESS
+		3 = EMPRESS
+	}
+	
+	trigger = {
+		government = tribal_kingdom
+	}
+}
+
+gov_tribal = {
+	rank = {
+		1 = CHIEFDOM
+		2 = TRIBAL_KINGDOM
+		3 = TRIBAL_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = CHIEF
+		2 = HIGH_CHIEF
+		3 = PARAMOUNT_CHIEF
+	}
+	
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = HIGH_CHIEFTESS
+		3 = PARAMOUNT_CHIEFTESS
+	}
+	
+	trigger = {
+		OR = {
+			government = tribal_despotism
+			government = tribal_federation
+		}
+	}
+}
+
+gov_tribal_democracy = {
+	rank = {
+		1 = CHIEFDOM
+		2 = GRAND_CHIEFDOM
+		3 = GREAT_CHIEFDOM
+	}
+	
+	ruler_male = {
+		1 = ELDER
+		2 = HIGH_ELDER
+		3 = PARAMOUNT_ELDER
+	}
+	
+	ruler_female = {
+		1 = ELDER_fem
+		2 = HIGH_ELDER_fem
+		3 = PARAMOUNT_ELDER_fem
+	}
+	
+	trigger = {
+		government = tribal_democracy
+	}
+}
