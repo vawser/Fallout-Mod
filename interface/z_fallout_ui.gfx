@@ -55,6 +55,10 @@ spriteTypes = {
 		name = "GFX_wide_view_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_900_604.dds"
 	}
+    spriteType = {
+		name = "GFX_view_300_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_604.dds"
+	}
     
     spriteType = {
 		name = "GFX_iron_banner"
@@ -68,6 +72,11 @@ spriteTypes = {
     spriteType = {
 		name = "GFX_mesh_square_bg_small"
 		texturefile = "gfx//interface//ui//background//mesh_bg_64_64.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_mesh_bg_500_544"
+		texturefile = "gfx//interface//ui//background//mesh_bg_500_544.dds"
 	}
     
     spriteType = {
@@ -109,6 +118,11 @@ spriteTypes = {
 		name = "GFX_mission_icons_frame_complete"
 		texturefile = "gfx//interface//ui//background//mesh_bg_200_64.dds"
 	}
+    
+    spriteType = {
+		name = "GFX_unitpanel_popout_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_575_480.dds"
+	}
 
     #-------------------------------------------------------------------------------------
     # Generic Buttons
@@ -124,6 +138,37 @@ spriteTypes = {
 		texturefile = "gfx//interface//ui//button//button_148x34_toggle.dds"
 		noOfFrames = 2
 		effectFile = "gfx/FX/buttonstate.lua"
+	}
+    
+    # ADD
+    frameAnimatedSpriteType = {
+		name = "GFX_unitpanel_fm_button_94x31_glow"
+		texturefile = "gfx//interface//ui//fm_button_94x31_glow.dds"
+		noOfFrames = 40
+		transparencecheck = yes
+		animation_rate_fps = 20
+		looping = yes
+		play_on_show = yes
+		allwaystransparent = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_unitpanel_fm_button_148x34_glow"
+		texturefile = "gfx//interface//ui//fm_button_148x34_glow.dds"
+		noOfFrames = 40
+		transparencecheck = yes
+		animation_rate_fps = 20
+		looping = yes
+		play_on_show = yes
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_button_active_tick"
+		texturefile = "gfx//interface//ui//active_tick.dds"
+	}
+    spriteType = {
+		name = "GFX_button_active_tick_large"
+		texturefile = "gfx//interface//ui//active_tick_large.dds"
 	}
     
     textSpriteType = {
@@ -781,268 +826,195 @@ spriteTypes = {
     #-------------------------------------------------------------------------------------
     # Unit Panel
     #-------------------------------------------------------------------------------------
+    # A bloody nightmare
+    
     spriteType = {
 		name = "GFX_unitpanel_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 		
 	}
 	spriteType = {
 		name = "GFX_multiselection_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_64.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
 	spriteType = {
 		name = "GFX_unitPanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
     spriteType = {
 		name = "GFX_regiment_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
     spriteType = {
 		name = "GFX_conform_to_template_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
     spriteType = {
 		name = "GFX_reorg_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 		loadType = "INGAME"
 	}
-	
+
+    # Unit sublist bg
     spriteType = {
-		name = "GFX_ap1_unitpanel_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		name = "GFX_band_regiment_mercenary"
+		texturefile = "gfx//interface//ui//background//mesh_bg_400_64.dds"
+		loadType = "INGAME"
 	}
-
 	spriteType = {
-		name = "GFX_ap2_unitpanel_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		name = "GFX_band_regiment_banner"
+		texturefile = "gfx//interface//ui//background//mesh_bg_400_64.dds"
+		loadType = "INGAME"
 	}
-
 	spriteType = {
-		name = "GFX_ap3_unitpanel_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		name = "GFX_band_regiment_streltsy"
+		texturefile = "gfx//interface//ui//background//mesh_bg_400_64.dds"
+		loadType = "INGAME"
 	}
-
 	spriteType = {
-		name = "GFX_ap4_unitpanel_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		name = "GFX_band_regiment_cossacks"
+		texturefile = "gfx//interface//ui//background//mesh_bg_400_64.dds"
+		loadType = "INGAME"
 	}
-
 	spriteType = {
-		name = "GFX_ap5_unitpanel_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		name = "GFX_band_regiment_janissary"
+        texturefile = "gfx//interface//ui//background//mesh_bg_400_64.dds"
+		loadType = "INGAME"
 	}
-
 	spriteType = {
-		name = "GFX_ap6_unitpanel_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		name = "GFX_band_regiment"
+		texturefile = "gfx//interface//ui//background//mesh_bg_400_64.dds"
+		loadType = "INGAME"
 	}
-
-	spriteType = {
-		name = "GFX_ap1_regiment_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap2_regiment_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap3_regiment_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap4_regiment_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap5_regiment_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap6_regiment_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap1_multiselection_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap2_multiselection_bg"
-        texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap3_multiselection_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap4_multiselection_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap5_multiselection_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}
-
+    
+    # Assign Leader (Army Professionalism)
 	spriteType = {
 		name = "GFX_ap1_unitpanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ap1_unitpanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 	}
 
 	spriteType = {
 		name = "GFX_ap2_unitpanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 	}
 
 	spriteType = {
 		name = "GFX_ap3_unitpanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 	}
 
 	spriteType = {
 		name = "GFX_ap4_unitpanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 	}
 
 	spriteType = {
 		name = "GFX_ap5_unitpanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 	}
 
 	spriteType = {
 		name = "GFX_ap6_unitpanel_assign_leader_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 	}
     
-	spriteType = {
-		name = "GFX_multiselection_bg_ap1"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
+    # Multi-unit card (Army Professionalism)
+    spriteType = {
+		name = "GFX_ap1_multiselection_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_64.dds"
+	}
 
 	spriteType = {
-		name = "GFX_multiselection_bg_ap2"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
+		name = "GFX_ap2_multiselection_bg"
+        texturefile = "gfx//interface//ui//background//mesh_bg_750_64.dds"
+	}
 
 	spriteType = {
-		name = "GFX_multiselection_bg_ap3"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
+		name = "GFX_ap3_multiselection_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_64.dds"
+	}
 
 	spriteType = {
-		name = "GFX_multiselection_bg_ap4"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
+		name = "GFX_ap4_multiselection_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_64.dds"
+	}
 
 	spriteType = {
-		name = "GFX_multiselection_bg_ap5"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-
+		name = "GFX_ap5_multiselection_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_64.dds"
+	}
+    
+    # Unit bg (Army Professionalism)
 	spriteType = {
-		name = "GFX_multiselection_bg_ap6"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-
-	spriteType = {
-		name = "GFX_regiment_bg_ap1"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_regiment_bg_ap2"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_regiment_bg_ap3"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_regiment_bg_ap4"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_regiment_bg_ap5"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_regiment_bg_ap6"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	
-	spriteType = {
-		name = "GFX_unitpanel_bg_ap1"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_bg_ap2"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_bg_ap3"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_bg_ap4"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_bg_ap5"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_bg_ap6"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
-	}	
-
-	spriteType = {
-		name = "GFX_unitpanel_assign_leader_bg_ap1"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_assign_leader_bg_ap2"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
+		name = "GFX_ap1_regiment_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
 	}
 	spriteType = {
-		name = "GFX_unitpanel_assign_leader_bg_ap3"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_assign_leader_bg_ap4"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_assign_leader_bg_ap5"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
-	spriteType = {
-		name = "GFX_unitpanel_assign_leader_bg_ap6"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}	
+		name = "GFX_ap2_regiment_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
+	}
 
+	spriteType = {
+		name = "GFX_ap3_regiment_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap4_regiment_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap5_regiment_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap6_regiment_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_480.dds"
+	}
+    
+    # Unit card (Army Professionalism)	
+    spriteType = {
+		name = "GFX_ap1_unitpanel_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
+	}
+	spriteType = {
+		name = "GFX_ap2_unitpanel_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap3_unitpanel_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap4_unitpanel_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap5_unitpanel_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap6_unitpanel_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
+    }
+    
+    # Army Professional icon
 	spriteType = {
 		name = "GFX_pa_rank_0"
 		texturefile = "gfx//interface//army_professionalism//pa_rank_0.dds"
@@ -1069,33 +1041,15 @@ spriteTypes = {
 	}	
     
     spriteType = {
-		name = "GFX_band_regiment_mercenary"
-		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
+		name = "GFX_leader_assigned_button"
+		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
-	spriteType = {
-		name = "GFX_band_regiment_banner"
-		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_band_regiment_streltsy"
-		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_band_regiment_cossacks"
-		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_band_regiment_janissary"
-        texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
-		loadType = "INGAME"
-	}
-	spriteType = {
-		name = "GFX_band_regiment"
-		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
+    spriteType = {
+		name = "GFX_unitPanel_assign_leader_entry_bg_green"
+		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
 }

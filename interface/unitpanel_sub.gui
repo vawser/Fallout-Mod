@@ -1,8 +1,7 @@
 guiTypes = {
-	###
-	### EMBARKED
-	###
-
+    #-------------------------------------
+    # Embark
+    #-------------------------------------
 	windowType = {
 		name = "embarked_unitpanel"
 		backGround=""
@@ -14,16 +13,12 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no	
 
-
-
-		iconType =
-		{
+		iconType = {
 			name ="multiselect_bg"
 			spriteType = "GFX_multiselection_bg"
 			position = { x= -61 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-
 
 		instantTextBoxType = {
 			name = "desc"
@@ -36,9 +31,7 @@ guiTypes = {
 			maxHeight = 32	
 		}
 
-
-		iconType =
-		{
+		iconType = {
 			name ="navy_icon"
 			spriteType = "GFX_unit_types_strip"
 			position = { x= 29 y = 9 }
@@ -46,10 +39,9 @@ guiTypes = {
 		}
 	}
 
-	###
-	### TRADENODE ENTRY
-	###
-
+    #-------------------------------------
+    # Naval Tradenode Selection
+    #-------------------------------------
 	windowType = {
 		name = "tradenode_entry"
 		backGround=""
@@ -61,25 +53,24 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no	
 
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="goto_tradenode_button"
-			quadTextureSprite = "GFX_trade_view_node_entry_button_short"
+			quadTextureSprite = "GFX_multiselection_bg"
 			position = { x= 0 y = 0 }
+            scale = 0.9
 		}
 		
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="shield"
-			quadTextureSprite = "GFX_shield_small"
-			position = { x= 0 y = 0 }
+			quadTextureSprite = "GFX_shield_medium"
+			position = { x= 2 y = 2 }
 			orientation = "UPPER_LEFT"
 		}
 		
 		instantTextBoxType={
-			position = {x = 33 y  = 8 }
+			position = {x = 110 y  = 20 }
 			name = "location"
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 116
 			maxHeight = 20
@@ -89,27 +80,26 @@ guiTypes = {
 			fixedsize = yes
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="trader_mission"
 			spriteType = "GFX_trade_trader_strip"
-			position = { x= 156 y = 0 }
+			position = { x= 230 y = 14 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType =
 		{
 			name ="income_indicator"
 			spriteType = "GFX_trade_target_strip"
-			position = { x= 187 y = 1 }
+			position = { x= 330 y = 14 }
 			Orientation = "UPPER_LEFT"
 		}
 				
 		instantTextBoxType={
-			position = {x = 216 y  = 8 }
+			position = {x = 400 y  = 20 }
 			name = "current_power"
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}	
-			maxWidth = 34
+			maxWidth = 100
 			maxHeight = 18
 			text = "55"	
 			orientation = "UPPER_LEFT"
@@ -119,23 +109,22 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "send_merchant"
-			position = { x= 252 y = -1 }
-			quadTextureSprite ="GFX_button_straight_67_32"	
-			buttonText = "SEND"
-			buttonFont = "vic_18"
+			position = { x= 560 y = 12 }
+			quadTextureSprite ="GFX_fm_button_94x31"	
+            buttonFont = "monofonto_outline_12"
+            buttonText = "Send"
 			clicksound = click
 		}	
 	}
 
-	###
-	### SUBUNIT ENTRY
-	###
-
+	#-------------------------------------
+    # Unit List 
+    #-------------------------------------
 	windowType = {
 		name = "subunit_entry"
 		backGround=""
 		position = { x=0 y=0 }	
-		size = { x=320 y= 60 }
+		size = { x=40 y= 60 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -145,51 +134,51 @@ guiTypes = {
 		iconType = {
 			name ="band_regiment"
 			spriteType = "GFX_band_regiment"
-			position = { x= -33 y = -3 }
+			position = { x= 0 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="band_regiment_streltsy"
 			spriteType = "GFX_band_regiment_streltsy"
-			position = { x= -33 y = -3 }
+			position = { x= 0 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="band_regiment_cossacks"
 			spriteType = "GFX_band_regiment_cossacks"
-			position = { x= -33 y = -3 }
+			position = { x= 0 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="band_regiment_mercenary"
 			spriteType = "GFX_band_regiment_mercenary"
-			position = { x= -33 y = -3 }
+			position = { x= 0 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="band_regiment_janissaries"
 			spriteType = "GFX_band_regiment_janissary"
-			position = { x= -33 y = -3 }
+			position = { x= 0 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="band_regiment_banner"
 			spriteType = "GFX_band_regiment_banner"
-			position = { x= -33 y = -3 }
+			position = { x= 0 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		iconType = {
 			name ="icon_type"
 			spriteType = "GFX_unit_types_strip"
-			position = { x= -18 y = 8 }
+			position = { x= 20 y = 20 }
 			Orientation = "UPPER_LEFT"
 		}
 
 
 		instantTextBoxType = {
 			name = "subunit_amount"
-			position = { x = 190 y = 8 }
+			position = { x = 250 y = 28 }
 			textureFile = ""
 			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
@@ -201,7 +190,7 @@ guiTypes = {
 		}
 
 		editBoxType = {
-			position = { x = 30 y = 10 }
+			position = { x = 70 y = 24 }
 			name = "subunit_name"
 			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 2}
@@ -211,7 +200,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "subunit_type"
-			position = { x = 29 y = 30 }
+			position = { x = 70 y = 44 }
 			format = left
 			textureFile = ""
 			font = "monofonto_outline_12"
@@ -225,32 +214,24 @@ guiTypes = {
 		iconType = {
 			name ="subunit_drill"
 			spriteType = "GFX_unitpanel_drill_progressbar"
-			position = { x = -29 y = 10 }
+			position = { x = 378 y = 22 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="subunit_drill_frame"
 			spriteType = "GFX_unitpanel_drilling_frame"
-			position = { x = -33 y = 3 }
+			position = { x = 374 y = 15 }
 			Orientation = "UPPER_LEFT"
 		}
 	}
-
-	###
-	### LEADER SELECTION
-	###
-
+    
+    #-------------------------------------
+    # Leader Selection Window
+    #-------------------------------------
 	windowType = {
 		name = "leader_selection_panel"
 		backGround=""
-		if_resolution = {
-        	max_height = 749
-			position = { x=20 y=230 }
-        }
-		if_resolution = {
-        	min_height = 750
-			position = { x=20 y=260 }
-        }
+		position = { x=152 y=185 }
 		size = { x=400 y=100 }
 		moveable = 0
 		dontRender = ""
@@ -258,289 +239,244 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no	
 
-	
-		iconType =
-		{
+		iconType = {
 			name ="regiment_bg"
-			spriteType = "GFX_ap4_unitpanel_assign_leader_bg"
+			spriteType = "GFX_view_300_bg"
 			position = { x= -12 y = 57 }
 			Orientation = "UPPER_LEFT"
 		}
 
-
-		guiButtonType =
-		{
+        @leader_button_x = 560
+        
+		guiButtonType = {
 			name ="recruit_general"
-			spriteType = "GFX_recruit_general"
-			position = { x= 396 y = 87 }
+			quadTextureSprite ="GFX_fm_button_148x34"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Recruit General"
+			position = { x= @leader_button_x y = 80 }
 			Orientation = "UPPER_LEFT"
 		}		
-
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="recruit_conquistador"
-			spriteType = "GFX_recruit_conquistador"
-			position = { x= 396 y = 137 }
+			quadTextureSprite ="GFX_fm_button_148x34"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Recruit Pioneer"
+			position = { x= @leader_button_x y = 120 }
 			Orientation = "UPPER_LEFT"
 		}	
-		
-		guiButtonType =	
-		{		
+		guiButtonType =	{
 			name ="recruit_admiral"
-			spriteType = "GFX_recruit_admiral"
-			position = { x= 396 y = 87 }
+			quadTextureSprite ="GFX_fm_button_148x34"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Recruit Admiral"
+			position = { x= @leader_button_x y = 80 }
 			Orientation = "UPPER_LEFT"
 		}		
-
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="recruit_explorer"
-			spriteType = "GFX_recruit_explorer"
-			position = { x= 396 y = 137 }
+			quadTextureSprite ="GFX_fm_button_148x34"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Recruit Explorer"
+			position = { x= @leader_button_x y = 120 }
 			Orientation = "UPPER_LEFT"
 		}		
-	
-		
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="convert_ruler_to_general"
-			spriteType = "GFX_convert_ruler_to_general"
-			position = { x= 396 y = 187 }
+			quadTextureSprite ="GFX_fm_button_148x34"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Recruit Leader"
+			position = { x= @leader_button_x y = 160 }
 			Orientation = "UPPER_LEFT"
 		}		
-
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="convert_heir_to_general"
-			spriteType = "GFX_convert_heir_to_general"
-			position = { x= 396 y = 237 }
+			quadTextureSprite ="GFX_fm_button_148x34"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Recruit Heir"
+			position = { x= @leader_button_x y = 200 }
 			Orientation = "UPPER_LEFT"
 		}				
 
+        guiButtonType = {
+            name = "noleader_button"
+            position = { x=@leader_button_x y=240 }
+            quadTextureSprite ="GFX_fm_button_148x34"	
+            buttonText = "NO_LEADER"
+            buttonFont = "monofonto_outline_12"
+            shortcut ="n"
+        }
+        
 		guiButtonType = {
-				name = "back_button"
-				position = { x=286 y=452 }
-				quadTextureSprite ="button_type_7"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "BACK"
-				buttonFont = "vic_18"
-				clicksound = back_click
-				shortcut = "ESCAPE"
+            name = "back_button"
+            position = { x=560 y=470 }
+            quadTextureSprite ="GFX_fm_button_148x34"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Back"
+            clicksound = back_click
+            shortcut = "ESCAPE"
+        }
 
-			}
-
-		guiButtonType = {
-				name = "noleader_button"
-				position = { x=57 y=452 }
-				quadTextureSprite ="button_type_7"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "NO_LEADER"
-				buttonFont = "vic_18"
-				shortcut ="n"
-			}
-
-			guiButtonType = {
-				name = "sort_button_siege"
-				position = { x=269 y=92}
-				quadTextureSprite ="GFX_sort_61"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "vic_18"
-
-			}	
-			
-		guiButtonType = {
-				name = "sort_button_maneuver"
-				position = { x=207 y=92}				
-				quadTextureSprite ="GFX_sort_61"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "vic_18"
-
-			}
-			
-		guiButtonType = {
-				name = "sort_button_shock"
-				position = { x=145 y=92}
-				quadTextureSprite ="GFX_sort_61"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "vic_18"
-
-			}
-			
-		guiButtonType = {
-				name = "sort_button_fire"
-				position = { x=83 y=92}
-				quadTextureSprite ="GFX_sort_61"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "vic_18"
-
-			}
-
-		
-		iconType =
-		{
-			name ="fire_icon"
-			spriteType = "GFX_military_view_icon_fire"
-			position = { x=102 y=93 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-
-		iconType =
-		{
-			name ="shock_icon"
-			spriteType = "GFX_military_view_icon_shock"
-			position = { x=165 y=93}
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-
-		iconType =
-		{
-			name ="siege_icon"
-			spriteType = "GFX_military_view_icon_siege"
-			position = { x=289 y=93 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-		
-		iconType =
-		{
-			name ="maneuver_icon"
-			spriteType = "GFX_military_view_icon_maneuver"
-			position = { x=227 y=93 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}		
-
-		listboxType = 
-			{
+        listboxType = {
 			name ="leaderlist"
-			position = { x = 80 y = 113 }
+			position = { x = 50 y = 120 }
 			backGround=""
-			size = { x=265  y =340 }
+			size = { x=470  y =340 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 2
-			scrollbartype = "standardlistbox_slider"
+			scrollbartype = "standardlistbox_noslider"
 			borderSize = {x = 0 y = 0}
 		}
+        
+        guiButtonType = {
+            name = "sort_button_fire"
+            position = { x=120 y=80}
+            quadTextureSprite ="GFX_fm_button_94x31"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Fire"
+        }
+        guiButtonType = {
+            name = "sort_button_shock"
+            position = { x=220 y=80}
+            quadTextureSprite ="GFX_fm_button_94x31"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Shock"
+        }
+        guiButtonType = {
+            name = "sort_button_maneuver"
+            position = { x=320 y=80}
+            quadTextureSprite ="GFX_fm_button_94x31"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Maneuver"
+        }
+        guiButtonType = {
+            name = "sort_button_siege"
+            position = { x=420 y=80}
+            quadTextureSprite ="GFX_fm_button_94x31"	
+			buttonFont = "monofonto_outline_12"
+            buttonText = "Siege"
+        }
+        
+		iconType = {
+			name ="fire_icon"
+			spriteType = "GFX_military_view_icon_fire"
+			position = { x=102 y=-9999 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
 
+		iconType = {
+			name ="shock_icon"
+			spriteType = "GFX_military_view_icon_shock"
+			position = { x=165 y=-9999}
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
 
+		iconType = {
+			name ="siege_icon"
+			spriteType = "GFX_military_view_icon_siege"
+			position = { x=289 y=-9999 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="maneuver_icon"
+			spriteType = "GFX_military_view_icon_maneuver"
+			position = { x=227 y=-9999 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}		
 	}
 
-	###
-	### LEADER ENTRY
-	###
-
+	#-------------------------------------
+    # Leader Slot Entry
+    #-------------------------------------
 	windowType = {
 		name = "leader_entry"
 		backGround=""
 		position = { x=0 y=0 }	
-		size = { x=360 y= 52 }
+		size = { x=360 y= 64 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no	
 
-
 		guiButtonType = {
-				name = "leader_entry_button"
-				position = { x=-63 y=0}
-				quadTextureSprite ="GFX_leader_assigned_button"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "vic_18"
+			name = "leader_entry_button"
+			position = { x=-40 y=10}
+			quadTextureSprite ="GFX_leader_assigned_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
 		}
 
-		iconType =
-			{
-				name ="leader_types"
-				spriteType = "GFX_leader_types"
-				position = { x= -50 y = 3 }
-				Orientation = "UPPER_LEFT"
-				scale = 0.9
+		iconType = {
+			name ="leader_types"
+			spriteType = "GFX_leader_types"
+			position = { x= -20 y = 38 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.6
 		}
 
-		iconType =
-		{
+		iconType = {
 			name ="leader_gender"
 			spriteType = "GFX_gender_icon"
-			position = { x= -48 y = 34 }
+			position = { x= 8 y = 42 }
 			Orientation = "UPPER_LEFT"
-			scale = 0.8
+			scale = 1
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="leader_personality"
 			spriteType = "GFX_idea_unknown"
-			position = { x= -32 y = 30 }
+			position = { x= -32 y = 40 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.4
 		}
 
 		instantTextBoxType = {
-				name = "leader_name"
-				position = { x = -3 y = 6 }
-				textureFile = ""
-				font = "vic_18"
-				borderSize = {x = 4 y = 4}
-				text = ""	
-				maxWidth = 250
-				maxHeight = 10	
-				Orientation = "UPPER_LEFT"
-				fixedsize = yes
-			}
+			name = "leader_name"
+			position = { x = -25 y = 20 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 4 y = 4}
+			text = ""	
+			maxWidth = 250
+			maxHeight = 10	
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
 
-
-		iconType =
-		{
+		iconType = {
 			name ="leader_fire"
 			spriteType = "GFX_stars_small"
-			position = { x= 15 y = 30 }
+			position = { x= 100 y = 40 }
 			Orientation = "UPPER_LEFT"
 		}
 
-
-		iconType =
-		{
+		iconType = {
 			name ="leader_shock"
 			spriteType = "GFX_stars_small"
-			position = { x= 79 y = 30 }
+			position = { x= 200 y = 40 }
 			Orientation = "UPPER_LEFT"
 		}
 
-		iconType =
-		{
-			name ="leader_siege"
-			spriteType = "GFX_stars_small"
-			position = { x= 203 y = 30 }
-			Orientation = "UPPER_LEFT"
-		}
-
-
-		iconType =
-		{
+        iconType = {
 			name ="leader_maneuever"
 			spriteType = "GFX_stars_small"
-			position = { x=141  y = 30 }
+			position = { x=300  y = 40 }
 			Orientation = "UPPER_LEFT"
 		}
-
-
+        
+		iconType = {
+			name ="leader_siege"
+			spriteType = "GFX_stars_small"
+			position = { x= 400 y = 40 }
+			Orientation = "UPPER_LEFT"
+		}
 	}
 }
