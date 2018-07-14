@@ -50,7 +50,7 @@ guiTypes = {
         iconType = {
 			name ="unit_type"
 			spriteType = "GFX_unit_types_strip"
-			position = { x= 2 y = 10 }
+			position = { x= 10 y = 16 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.5
 		}
@@ -58,20 +58,20 @@ guiTypes = {
 		iconType = {
 			name ="subunit_drill"
 			spriteType = "GFX_unitpanel_drill_progressbar_s"
-			position = { x = -11 y = 15 }
+			position = { x = -3 y = 15 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="subunit_drill_frame"
 			spriteType = "GFX_unitpanel_drilling_frame_s"
-			position = { x = -16 y = 17 }
+			position = { x = -8 y = 8 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "subunit_name"
-			position = { x = 24 y = 10 }
+			position = { x = 30 y = 15 }
 			textureFile = ""
 			font = "monofonto_outline_12"
 			borderSize = {x = 4 y =0}
@@ -84,7 +84,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "subunit_type"
-			position = { x = 24 y = 25 }
+			position = { x = 30 y = 32 }
 			format = left
 			textureFile = ""
 			font = "monofonto_outline_12"
@@ -98,7 +98,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "subunit_strength"
-			position = { x = 140 y = 15 }
+			position = { x = 140 y = 32 }
 			textureFile = ""
 			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 0}
@@ -169,7 +169,7 @@ guiTypes = {
         iconType = {
 			name ="unit_type"
 			spriteType = "GFX_unit_types_strip"
-			position = { x= 27 y = 10 }
+			position = { x= 35 y = 16 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.5
 		}
@@ -177,20 +177,20 @@ guiTypes = {
 		iconType = {
 			name ="subunit_drill"
 			spriteType = "GFX_unitpanel_drill_progressbar_s"
-			position = { x = 18 y = 15 }
+			position = { x = 256 y = 15 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="subunit_drill_frame"
 			spriteType = "GFX_unitpanel_drilling_frame_s"
-			position = { x = 14 y = 17 }
+			position = { x = 252 y = 8 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "subunit_name"
-			position = { x = 53 y = 10 }
+			position = { x = 60 y = 15 }
 			textureFile = ""
 			font = "monofonto_outline_12"
 			borderSize = {x = 4 y =0}
@@ -203,10 +203,10 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "subunit_type"
-			position = { x = 53 y = 25 }
+			position = { x = 60 y = 32 }
 			format = left
 			textureFile = ""
-			font = "monofonto_outline_12_grey"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 0}
 			text = "xxxxxxxxxx"	
 			maxWidth = 256
@@ -217,7 +217,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "subunit_strength"
-			position = { x = 205 y = 15 }
+			position = { x = 170 y = 32 }
 			textureFile = ""
 			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 0}
@@ -230,7 +230,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "transferbutton"
-			position = { x = -8 y = 15 }
+			position = { x = 0 y = 15 }
 			quadTextureSprite ="GFX_unitpanel_goto"
             buttonFont = "monofonto_outline_12"
             shortcut = "z"

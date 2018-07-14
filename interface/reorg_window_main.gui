@@ -591,7 +591,7 @@ guiTypes = {
 		#-------------------------------------
 		instantTextBoxType = {
 			name = "reorg_label"
-			position = { x = 125 y = 15 }
+			position = { x = 125 y = -9999 }
 			format = centre
 			textureFile = ""
 			font = "monofonto_outline_16"
@@ -602,9 +602,16 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
+        iconType = {
+			name ="army_1_bg"
+			spriteType = "GFX_button_300"
+			position = { x = 20 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+        
 		instantTextBoxType = {
 			name = "unitname_1"
-			position = { x = 96 y =28 }
+			position = { x = 10 y = 28 }
 			format = centre
 			textureFile = ""
 			font = "monofonto_outline_14"
@@ -615,9 +622,16 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"	
 		}
 		
+        iconType = {
+			name ="army_2_bg"
+			spriteType = "GFX_button_300"
+			position = { x = 360 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+        
 		instantTextBoxType = {
 			name = "unitname_2"
-			position = { x = 460 y =28 }
+			position = { x = 335 y = 28 }
 			format = centre
 			textureFile = ""
 			font = "monofonto_outline_14"
@@ -630,7 +644,7 @@ guiTypes = {
 		
         guiButtonType = {
             name = "closebutton"
-            position = { x= 108 y= 400 }
+            position = { x= 120 y= 375 }
             quadTextureSprite ="GFX_fm_button_94x31"	
             buttonFont = "monofonto_outline_12"
             buttonText = "Close"
@@ -640,9 +654,9 @@ guiTypes = {
         
 		guiButtonType = {
 			name = "select_button_left"
-			position = { x= -120 y= 400}
+			position = { x= -60 y= 375 }
 			quadTextureSprite ="GFX_fm_button_94x31"	
-			buttonText = "SELECT_THIS_UNIT"
+			buttonText = "Select"
 			buttonFont = "monofonto_outline_12"
 			Orientation = "CENTER"
 			clicksound = close_window
@@ -651,9 +665,9 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "select_button_right"
-			position = { x= 280 y= 400 }
+			position = { x= 310 y= 375 }
 			quadTextureSprite ="GFX_fm_button_94x31"	
-			buttonText = "SELECT_THIS_UNIT"
+			buttonText = "Select"
 			buttonFont = "monofonto_outline_12"
 			Orientation = "CENTER"
 			clicksound = close_window
@@ -662,9 +676,9 @@ guiTypes = {
 
 		listboxType = {
 			name ="left_list"
-			position = { x = 53 y = 157 }
+			position = { x = 53 y = 170 }
 			backGround=""
-			size = { x=300  y =250}
+			size = { x=290  y =260}
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 2
@@ -674,9 +688,9 @@ guiTypes = {
 
 		listboxType = {
 			name ="right_list"
-			position = { x = 407 y = 157 }
+			position = { x = 408 y = 170 }
 			backGround=""
-			size = { x=305  y =250}
+			size = { x=290  y =260}
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 2
@@ -686,7 +700,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name ="sort_type_left"
-			quadTextureSprite = "GFX_sort_170"
+			quadTextureSprite = "GFX_fallout_sort_160"
 			position = { x = 33 y = 135 }
 			buttonFont = "monofonto_outline_12"
 			buttonText = "LEDGER_TYPE"
@@ -696,7 +710,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name ="sort_condition_left"
-			quadTextureSprite = "GFX_sort_170"
+			quadTextureSprite = "GFX_fallout_sort_160"
 			position = { x = 202 y = 135 }
 			buttonFont = "monofonto_outline_12"
 			buttonText = "CONDITION"
@@ -706,7 +720,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name ="sort_type_right"
-			quadTextureSprite = "GFX_sort_170"
+			quadTextureSprite = "GFX_fallout_sort_160"
 			position = { x = 391 y = 135 }
 			buttonFont = "monofonto_outline_12"
 			buttonText = "LEDGER_TYPE"
@@ -716,7 +730,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name ="sort_condition_right"
-			quadTextureSprite = "GFX_sort_170"
+			quadTextureSprite = "GFX_fallout_sort_160"
 			position = { x = 560 y = 135 }
 			buttonFont = "monofonto_outline_12"
 			buttonText = "CONDITION"

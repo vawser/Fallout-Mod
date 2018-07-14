@@ -1205,7 +1205,7 @@ guiTypes = {
 		name = "province_finder_entry"
 		backGround=""
 		position = { x=0 y=0 }	
-		size = { x=128 y= 24 }
+		size = { x=128 y= 34 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -1215,15 +1215,14 @@ guiTypes = {
 		checkboxType = {
 			name = "button"
 			position = { x=0 y =0}
-			quadTextureSprite ="GFX_list_button"
+			quadTextureSprite ="GFX_fallout_sort_200"
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name = "area_icon"
 			spriteType = "GFX_estate_territory_L"
 			position = { x= 10 y = 7 }
@@ -1234,8 +1233,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title"
 			position = { x = 34 y = 7 }
-			
-			font = "Main_14_bold"
+			font = "monofonto_outline_12"
 			borderSize = {x = 1 y = 1}
 			text = ""	
 			maxWidth = 180
