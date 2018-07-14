@@ -1191,6 +1191,18 @@ gov_wolf = {
 		3 = ALPHA
 	}
 
+	consort_male = {
+		1 = PUP
+		2 = BETA
+		3 = BETA
+	}
+
+	consort_female = {
+		1 = PUP
+		2 = BETA
+		3 = BETA
+	}
+
 	trigger = {
 		government = wolf_government
 	}
@@ -1315,3 +1327,66 @@ gov_kingdom_of_hate = {
 		tag = GHH
 	}
 }
+
+# MERCHANT REPUBLIC #
+
+
+generic_merchant_republic = {
+	rank = {
+		1 = MERCHANT_REPUBLIC
+		2 = MERCHANT_REPUBLIC
+		3 = grand_republic
+	}
+
+	ruler_male = {
+		1 = BOSS
+		2 = MAYOR
+		3 = PRINCE_MAYOR
+	}
+
+	ruler_female = {
+		1 = BOSS
+		2 = MAYORESS
+		3 = PRINCESS_MAYOR
+	}
+
+	trigger = {
+		government = merchant_republic
+	}
+}
+
+#corrupted_venice = { # Future nation to add to the map
+#	rank = {
+#		1 = SIGH_RAIN_REPUBLIC
+#		2 = MOST_SIGH_RAIN_MERCHANT_REPUBLIC
+#		3 = grand_republic
+#	}
+#
+#	ruler_male = { # In line with "Fallout" canon (e.g. "No Vacancy" --> "Novac"), this is a corruption of "Doge" to "Dog"
+#		1 = DOG
+#		2 = SIGH_RAIN_DOG
+#		3 = TOP_DOG
+#	}
+#
+#	ruler_female = {
+#		1 = DOG
+#		2 = SIGH_RAIN_DOG
+#		3 = TOP_DOG
+#	}
+#
+# 	consort_male = {
+#		1 = 
+#		2 = 
+#		3 = 
+#	}
+#
+#	consort_female = {
+#		1 = 
+#		2 = 
+#		3 = 
+#	}
+#
+#	trigger = {
+#		government = merchant_republic
+#	}
+#}

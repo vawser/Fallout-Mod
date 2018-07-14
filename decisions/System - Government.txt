@@ -224,4 +224,31 @@ country_decisions = {
 			}
 		}
 	}
+
+	reform_into_iqta = { # For Dearborn and other states that become kebab
+		major = yes
+		potential = {
+			religion_group = religion_group_muslim
+			NOT = {
+				goverment = feudal_theocracy
+				government = steppe_horde
+			}
+		}
+		allow = {
+			religion_group = muslim #for clarity
+			OR = {
+				is_true_monarchy = yes
+				is_hereditary_government = yes
+				is_tribe_government = yes
+			}
+		}
+		effect = {
+			change_government = iqta
+			add_adm_power = -100
+			add_stability = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

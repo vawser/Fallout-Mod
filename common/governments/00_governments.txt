@@ -107,14 +107,16 @@ constitutional_monarchy = {
 
 merchant_republic = {
 	republic = yes
+	dictatorship = yes # A RL Doge ruled for life, this makese more sense in "Fallout" as well
+
+	unique_government = yes
 
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
-	nation_designer_cost = 40	
+	nation_designer_cost = 0
 	
 	color = { 40 130 200 }
-	
-	duration = 4
+
 
 	republican_name = yes
 	royal_marriage = no
@@ -133,7 +135,6 @@ merchant_republic = {
 	ai_importance = 0
 	
 	max_states = 3
-
 	
 	rank = {
 		1 = {
