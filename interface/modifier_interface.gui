@@ -38,9 +38,9 @@ guiTypes = {
 		
 		listboxType = 	{
 			name ="modifier_list"
-			position = { x = 20 y = 56 }
+			position = { x = 76 y = 60 }
 			backGround=""
-			size = { x=830  y =499}
+			size = { x=760  y =499}
 			Orientation = "UPPER_LEFT"
 			spacing = 2
 			scrollbartype = "standardlistbox_noslider"
@@ -50,7 +50,7 @@ guiTypes = {
 		guiButtonType = {
 			name ="close_button"
 			quadTextureSprite ="GFX_fm_button_94x31"
-			position = { x= 380 y = 554 }
+			position = { x= 390 y = 545 }
 			buttonText = "CLOSE"
 			buttonFont = "monofonto_outline_12"
 			shortcut = "ESCAPE"
@@ -78,14 +78,14 @@ guiTypes = {
 		iconType = {
 			name ="modifier_strip"
 			spriteType = "GFX_idea_unknown"
-			position = { x= 5 y = 8 }
+			position = { x= 10 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		instantTextBoxType = {
 			name = "modifier_name"
-			position = { x = 80 y = 3 }
-			font = "vic_22"
+			position = { x = 80 y = 10 }
+			font = "monofonto_outline_14"
 			borderSize = {x = 0 y = 0}
 			text = "Naval Supremacy in the West"	
 			maxWidth = 300
@@ -97,7 +97,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "modifier_effect"
 			position = { x = 80 y = 25 }
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "effect text here"	
 			maxWidth = 300
@@ -108,30 +108,29 @@ guiTypes = {
 		iconType = {
 			name ="modifier_info"
 			spriteType = "GFX_modifier_info"
-			position = { x= 9639 y = 12 }
+			position = { x= 9639 y = 16 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		iconType = {
 			name ="modifier_progress"
-			spriteType = "modifier_progress"
-			position = { x= 603 y = 50 }
+			spriteType = "GFX_metal_progressbar"
+			position = { x= 603 y = 48 }
 			Orientation = "UPPER_LEFT"
-			
 		}
 		
 		iconType = {
 			name ="modifier_progress_overlay"
-			spriteType = "GFX_modifier_progress_frame"
-			position = { x= 588 y = 45 }
+			spriteType = "GFX_metal_progress_frame"
+			position = { x= 599 y = 45 }
 			Orientation = "UPPER_LEFT"
 			
 		}
 			
 		instantTextBoxType = {
 			name = "modifier_status"
-			position = { x = 603 y = 14 }
-			font = "vic_22"
+			position = { x = 628 y = 18 }
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}
 			text = "7/14"	
 			maxWidth = 70
