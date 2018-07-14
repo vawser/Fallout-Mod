@@ -25,13 +25,13 @@ entity = {
 
 entity = {
 	name = "ncr_rifle_weapon_righthand"
-	pdxmesh = "american_rifle_mesh"
+	pdxmesh = "sniper_rifle_mesh"
 	scale = 0.45
 }	
 
 entity = {
 	name = "ncr_rifle_weapon_lefthand"
-	pdxmesh = "american_rifle_mesh"
+	pdxmesh = "sniper_rifle_mesh"
 	scale = 0.45
 	
 	get_state_from_parent = yes
@@ -42,9 +42,6 @@ entity = {
 	
 	state = { 
         name = "attack"	animation = "attack" 
-        event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
-		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" } 
-		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes  } 
     }
 }
 
