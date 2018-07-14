@@ -186,48 +186,6 @@ country_event = {
     
 }
 
-country_event = {
-	id = debug.8
-	title = debug.1.title
-	desc = debug.1.desc
-	picture = GOODSPRINGS_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {
-		name = debug.1.option.a
-	}
-    
-	option = {
-		name = debug.1.option.a
-
-	}
-    
-	option = {
-		name = debug.1.option.a
-	}
-    
-	option = {
-		name = debug.1.option.a
-	}
-    
-	option = {
-		name = debug.1.option.a
-	}
-    
-	option = {
-		name = debug.1.option.a
-	}
-    
-	option = {
-		name = debug.1.option.a
-	}
-    
-	option = {
-		name = debug.1.option.a
-	}
-}
-
 country_event = { # Stops known bug in which NCR erronorously converts to a Tribal Democracy or Tribal Council
 	id = debug.8
 	title = debug.1.title
@@ -344,16 +302,19 @@ country_event = { # Stops known bug in which Brotherhood of Steel governments er
 					government = tribal_council
 					government = religious_tribe
 				}
+            }
 			change_government = administrative_brotherhood_order
 		}
 		if = {
-			NOT = {
-				government = tribal_democracy
-				government = tribal_federation
-				government = tribal_council
-				government = trade_tribe
-				government = religious_tribe
-			}
+			limit = {   
+                NOT = {
+                    government = tribal_democracy
+                    government = tribal_federation
+                    government = tribal_council
+                    government = trade_tribe
+                    government = religious_tribe
+                }
+            }
 			change_government = fascist_brotherhood_order
 		}
 	}

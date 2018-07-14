@@ -2,7 +2,7 @@ guiTypes = {
 	windowType = {
 		name = "console_wnd"
 		backGround =""
-		position = { x=5 y=150 }
+		position = { x=5 y=5 }
 		size = { x=500 y=400 }
 		moveable = 0
 		orientation="UPPER_LEFT"
@@ -26,7 +26,7 @@ guiTypes = {
 			font = "monofonto_outline_12"
 			borderSize = { x=4 y=4 }
 			cursor = { x=0 y=6 }
-			size = { x=500 y=40 }
+			size = { x=500 y=80 }
 			text = " "
 			orientation = "UPPER_LEFT"
 			instantTextBoxType = no
@@ -45,7 +45,7 @@ guiTypes = {
 			position = { x=0 y=0 }
 			name = "console_text"
 			textureFile = "gfx\\interface\\transparency.tga"
-			font = "Arial12"
+			font = "monofonto_outline_12"
 			borderSize = { x=8 y=1 }
 			maxWidth = 500
 			maxHeight = 16
@@ -67,7 +67,7 @@ guiTypes = {
 
 	textBoxType = {
 		name = "ToolTip"
-		textureFile = "gfx\\interface\\tiles_dialog.tga"
+		textureFile = "gfx\\interface\\tiles_dialog.dds"
 		font = "monofonto_outline_12"
 		borderSize = { x=18 y=18 }
 		position = { x= 560 y=10 }

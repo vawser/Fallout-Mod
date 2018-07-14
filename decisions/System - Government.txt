@@ -140,13 +140,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			custom_tooltip = UPGRADE_TO_BETTER_TRIBE_PREREQUISITE
-			hidden_trigger = {
-				OR = {
-					is_antebellum_north_american_state = yes
-					is_antebellum_nation = yes
-					total_development = 50
-				}
+			custom_trigger_tooltip = {
+                tooltip = UPGRADE_TO_BETTER_TRIBE_PREREQUISITE
+                hidden_trigger = {
+                    OR = {
+                        is_antebellum_north_american_state = yes
+                        is_antebellum_nation = yes
+                        total_development = 50
+                    }
+                }
 			}
 			stability = 3
 		}

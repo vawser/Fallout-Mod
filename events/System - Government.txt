@@ -78,13 +78,13 @@ country_event = {
 			modifier = {
 				factor = 2
 				OR = {
-					personality = righteous_personality
-					personality = kind_hearted_personality
+					ruler_has_personality = righteous_personality
+					ruler_has_personality = kind_hearted_personality
 				}
 			}
 			modifier = {
 				factor = 0
-				personality = cruel_personality
+				ruler_has_personality = cruel_personality
 			}
 			modifier = {
 				factor = 2
@@ -92,7 +92,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.1
-				ruler_personality = benevolent_personality
+				ruler_has_personality = benevolent_personality
 			}
 		}
 	}
@@ -110,11 +110,11 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				personality = kind_hearted_personality
+				ruler_has_personality = kind_hearted_personality
 			}
 			modifier = {
 				factor = 1.5
-				personality = righteous_personality
+				ruler_has_personality = righteous_personality
 			}
 			modifier = {
 				factor = 1.5
@@ -126,11 +126,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				personality = cruel_personality
+				ruler_has_personality = cruel_personality
 			}
 			modifier = {
 				factor = 5
-				ruler_personality = tolerant_personality
+				ruler_has_personality = tolerant_personality
 			}
 			modifier = {
 				factor = 1.1
@@ -143,9 +143,9 @@ country_event = {
 				factor = 0.5
 				primary_culture = swampfolk
 			}
-			modifer = {
+			modifier = {
 				factor = 0.1
-				personality = benevolent_personality
+				ruler_has_personality = benevolent_personality
 			}
 			modifier = {
 				factor = 1.01
@@ -175,11 +175,11 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 3
-				personality = well_advised_personality
+				ruler_has_personality = well_advised_personality
 			}
 			modifier = {
 				factor = 2
-				personality = secretive_personality
+				ruler_has_personality = secretive_personality
 			}
 			modifier = {
 				factor = 1.05
@@ -225,23 +225,23 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.1
-				personality = righteous_personality
+				ruler_has_personality = righteous_personality
 			}
 			modifier = {
 				factor = 1.1
-				personality = fertile_personality
+				ruler_has_personality = fertile_personality
 			}
 			modifier = {
 				factor = 1.5
-				personality = greedy_personality
+				ruler_has_personality = greedy_personality
 			}
 			modifier = {
 				factor = 0
-				personality = infertile_personality
+				ruler_has_personality = infertile_personality
 			}
 			modifier = {
 				factor = 2
-				personality = pious_personality
+				ruler_has_personality = pious_personality
 			}
 			modifier = {
 				factor = 2
@@ -263,24 +263,27 @@ country_event = {
 		
 		if = {
 			limit = { ai = yes }
-			random_chance = {
-				75 = { set_country_flag = elected_to_change_tribe }
-				25 = { }
+            
+			random = {
+                chance = 75
+                set_country_flag = elected_to_change_tribe
 			}
 		}
 
 		ai_chance = {
 			factor = 1
+            
 			modifier = {
 				factor = 0
+                
 				NOT = {
-					personality = craven_personality
-					personality = naive_personality
+					ruler_has_personality = craven_personality
+					ruler_has_personality = naive_personality
 				}
 			}
 			modifier = {
 				factor = 5
-				personality = craven_personality
+				ruler_has_personality = craven_personality
 			}
 		}
 	}

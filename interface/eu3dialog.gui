@@ -1,19 +1,22 @@
 guiTypes = {
-	iconType =
-		{
-			name ="icon_merchant"
-			spriteType = "GFX_icon_merchant"
-			position = { x= 0 y = 0 }
-		}
+	iconType = {
+        name ="icon_merchant"
+        spriteType = "GFX_icon_merchant"
+        position = { x= 0 y = 0 }
+    }
 		
-	positionType =
-	{
+	positionType = {
 		name ="dialog_decoration_footer_offset"
 		position = { x= 0 y = -19 }
 	}
-
-		
-	### DEFAULT DIALOG
+    
+    @goto_button_x = 100
+    @ok_button_x = 400
+    @single_button_x = 200
+    
+	#-------------------------------------
+    # Default Dialog
+    #-------------------------------------
 	eu3dialogtype = {
 		name = "DefaultDialog"
 		backGround="Background"
@@ -31,62 +34,54 @@ guiTypes = {
 			quadTextureSprite ="GFX_dialog_popup_background"
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="message_band"
 			spriteType = "GFX_button_400"
 			position = { x= 50 y = 28 }
 		}
 		
 		instantTextBoxType = {
-				name = "Title"
-				position = { x = 59 y = 36 }
-				textureFile = ""
-				font = "vic_22"
-				borderSize = {x = 0 y = 0}
-				text = "Title"	
-				maxWidth = 380
-				maxHeight = 24
-				fixedsize = yes
-				format = centre
-			}
+            name = "Title"
+            position = { x = 59 y = 38 }
+            textureFile = ""
+            font = "monofonto_outline_16"
+            borderSize = {x = 0 y = 0}
+            text = "Title"	
+            maxWidth = 380
+            maxHeight = 24
+            fixedsize = yes
+            format = centre
+        }
 		
 		instantTextBoxType = {
-				name = "Description"
-				position = { x = 59 y = 85 }
-				textureFile = ""
-				font = "vic_18"
-				borderSize = {x = 0 y = 0}
-				text = "Long text here!"	
-				maxWidth = 380
-				maxHeight = 170
-				format = centre
-				scrollbartype = "standardtext_slider"
-			}
+            name = "Description"
+            position = { x = 59 y = 85 }
+            textureFile = ""
+            font = "monofonto_outline_12"
+            borderSize = {x = 0 y = 0}
+            text = "Long text here!"	
+            maxWidth = 380
+            maxHeight = 170
+            format = centre
+            scrollbartype = "standardtext_slider"
+        }
 		
-		shieldtype = 
-		{
+		shieldtype = {
 			name ="LeftShield"
 			spriteType = "standarddialogshield"
 			position = { x= -1 y = 10 }
 		}
-		iconType =
-		{
+		iconType = {
 			name ="LeftStar"
 			spriteType = "GFX_alliance_leader"
 			position = { x=51 y =71 }
 		}
-		
-		shieldtype = 
-		{
+		shieldtype = {
 			name ="RightShield"
 			spriteType = "standarddialogshield"
 			position = { x= 407 y = 10 }
 		}
-		
-
-		iconType =
-		{
+		iconType = {
 			name ="RightStar"
 			spriteType = "GFX_alliance_leader"
 			position = { x=459 y =71 }
@@ -94,19 +89,19 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "DeclineButton"
-			position = { x=77 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@goto_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
 		guiButtonType = {
 			name = "AgreeButton"
-			position = { x=274 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@ok_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -119,7 +114,9 @@ guiTypes = {
 		}		
 	}
 
-	### DEFAULT CONFIRM
+	#-------------------------------------
+    # Default Confirm
+    #-------------------------------------
 	eu3dialogtype = {
 		name = "DefaultConfirm"
 		backGround="Background"
@@ -137,56 +134,53 @@ guiTypes = {
 			quadTextureSprite ="GFX_dialog_popup_background"
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="message_band"
 			spriteType = "GFX_button_400"
 			position = { x= 50 y = 28 }
 		}
 		
 		instantTextBoxType = {
-				name = "Title"
-				position = { x = 59 y = 36 }
-				textureFile = ""
-				font = "vic_22"
-				borderSize = {x = 0 y = 0}
-				text = "Title"	
-				maxWidth = 380
-				maxHeight = 24
-				fixedsize = yes
-				format = centre
-			}
+			name = "Title"
+			position = { x = 59 y = 38 }
+			textureFile = ""
+			font = "monofonto_outline_16"
+			borderSize = {x = 0 y = 0}
+			text = "Title"	
+			maxWidth = 380
+			maxHeight = 24
+			fixedsize = yes
+			format = centre
+		}
 		
 		instantTextBoxType = {
-				name = "Description"
-				position = { x = 59 y = 75 }
-				textureFile = ""
-				font = "vic_18"
-				borderSize = {x = 0 y = 0}
-				text = "Long text here!"	
-				maxWidth = 380
-				maxHeight = 180
-				format = centre
-				scrollbartype = "standardtext_slider"
-			}
-		
-		
+			name = "Description"
+			position = { x = 59 y = 75 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			text = "Long text here!"	
+			maxWidth = 380
+			maxHeight = 180
+			format = centre
+			scrollbartype = "standardtext_slider"
+		}
 		
 		guiButtonType = {
 			name = "DeclineButton"
-			position = { x=77 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@goto_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
 		guiButtonType = {
 			name = "AgreeButton"
-			position = { x=274 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@ok_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -194,7 +188,9 @@ guiTypes = {
 		
 	}
 	
-	### DEFAULT INFO DIALOG
+	#-------------------------------------
+    # Info Dialog
+    #-------------------------------------
 	eu3dialogtype = {
 		name = "DefaultInfoDialog"
 		backGround="Background"
@@ -221,9 +217,9 @@ guiTypes = {
 		
 		instantTextBoxType = {
 				name = "Title"
-				position = { x = 59 y = 36 }
+				position = { x = 59 y = 38 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 0 y = 0}
 				text = "Title"	
 				maxWidth = 380
@@ -236,7 +232,7 @@ guiTypes = {
 				name = "Description"
 				position = { x = 59 y = 85 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 380
@@ -246,10 +242,10 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "AgreeButton"
-			position = { x=175 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@single_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -258,7 +254,9 @@ guiTypes = {
 		
 	}
 	
-	### SHIELDED INFO DIALOG
+	#-------------------------------------
+    # Shield Info Dialog
+    #-------------------------------------
 	eu3dialogtype = {
 		name = "ShieldedInformationDialog"
 		backGround="Background"
@@ -285,9 +283,9 @@ guiTypes = {
 		
 		instantTextBoxType = {
 				name = "Title"
-				position = { x = 59 y = 36 }
+				position = { x = 59 y = 38 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 0 y = 0}
 				text = "Title"	
 				maxWidth = 380
@@ -300,7 +298,7 @@ guiTypes = {
 				name = "Description"
 				position = { x = 59 y = 85 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 380
@@ -325,10 +323,10 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "AgreeButton"
-			position = { x=175 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@single_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -337,7 +335,9 @@ guiTypes = {
 		
 	}
 	
-	### DEFAULT POPUP
+	#-------------------------------------
+    # Popup
+    #-------------------------------------
 	eu3dialogtype = {
 		name = "DefaultPopup"
 		backGround="Background"
@@ -381,7 +381,7 @@ guiTypes = {
 			name = "Header"
 			position = { x = 59 y = 26 }
 			textureFile = ""
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 4 }
 			text = ""	
 			maxWidth = 380
@@ -394,7 +394,7 @@ guiTypes = {
 			name = "Line1"
 			position = { x = 59 y = 100 }
 			textureFile = ""
-			font = "vic_22"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}
 			text = "Title"	
 			maxWidth = 380
@@ -406,7 +406,7 @@ guiTypes = {
 			name = "Line2"
 			position = { x = 79 y = 85 }
 			textureFile = ""
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = ""	
 			maxWidth = 340
@@ -418,7 +418,7 @@ guiTypes = {
 			name = "Line3"
 			position = { x = 79 y = 110 }
 			textureFile = ""
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = ""	
 			maxWidth = 340
@@ -430,7 +430,7 @@ guiTypes = {
 			name = "Line4"
 			position = { x = 19 y = 135 }
 			textureFile = ""
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = ""	
 			maxWidth = 460
@@ -442,7 +442,7 @@ guiTypes = {
 			name = "Line5"
 			position = { x = 19 y = 160 }
 			textureFile = ""
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = ""	
 			maxWidth = 460
@@ -454,7 +454,7 @@ guiTypes = {
 			name = "Line6"
 			position = { x = 19 y = 175 }
 			textureFile = ""
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = ""	
 			maxWidth = 460
@@ -479,19 +479,19 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "DeclineButton"
-			position = { x=77 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@goto_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
 		guiButtonType = {
 			name = "AgreeButton"
-			position = { x=274 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@ok_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -499,10 +499,10 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "CenterOK"
-			position = { x=175 y =280}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			position = { x=@single_button_x y =280}
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -516,7 +516,9 @@ guiTypes = {
 		}
 	}
 	
-	### CONFIRM AND NAME LEADER
+	#-------------------------------------
+    # Confirm / Name Leader
+    #-------------------------------------
 	eu3dialogtype = {
 		name = "ConfirmAndNameLeaderDialog"
 		backGround="Background"
@@ -543,9 +545,9 @@ guiTypes = {
 		
 		instantTextBoxType = {
 				name = "Title"
-				position = { x = 59 y = 36 }
+				position = { x = 59 y = 38 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 0 y = 0}
 				text = "Title"	
 				maxWidth = 380
@@ -558,7 +560,7 @@ guiTypes = {
 				name = "Description"
 				position = { x = 59 y = 75 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 380
@@ -583,7 +585,7 @@ guiTypes = {
 		editBoxType =
 		{
 			name = "leader_name_editbox"
-			font = "vic_22"
+			font = "monofonto_outline_16"
 			position = { x= 82 y= 232 }
 			borderSize = { x = 0 y = 0 }	
 			text = ""
@@ -595,7 +597,7 @@ guiTypes = {
 			position = { x=77 y =270}
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
@@ -604,7 +606,7 @@ guiTypes = {
 			position = { x=274 y =270}
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -639,9 +641,9 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "Title"
-			position = { x = 59 y = 36 }
+			position = { x = 59 y = 38 }
 			textureFile = ""
-			font = "vic_22"
+			font = "monofonto_outline_16"
 			borderSize = {x = 0 y = 0}
 			text = "Title"	
 			maxWidth = 380
@@ -654,7 +656,7 @@ guiTypes = {
 			name = "Description"
 			position = { x = 59 y = 75 }
 			textureFile = ""
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "Long text here!"	
 			maxWidth = 380
@@ -673,7 +675,7 @@ guiTypes = {
 		editBoxType =
 		{
 			name = "team_name_editbox"
-			font = "vic_22"
+			font = "monofonto_outline_16"
 			position = { x= 82 y= 232 }
 			borderSize = { x = 0 y = 0 }	
 			text = ""
@@ -685,7 +687,7 @@ guiTypes = {
 			position = { x=77 y =270}
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
@@ -694,7 +696,7 @@ guiTypes = {
 			position = { x=274 y =270}
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -728,7 +730,7 @@ guiTypes = {
 				name = "Title"
 				position = { x = 120 y = 9 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 4 y = 4}
 				text = "Province"	
 				
@@ -739,7 +741,7 @@ guiTypes = {
 				name = "Description"
 				position = { x = 100 y = 90 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}
 				text = ""	
 				maxWidth = 300
@@ -752,7 +754,7 @@ guiTypes = {
 				name = "failed"
 				position = { x =  100 y = 262 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 4 y = 0}	
 				text = "Colonization FAILED"	
 				maxWidth = 300
@@ -767,7 +769,7 @@ guiTypes = {
 				name = "Cost_Text"
 				position = { x = 310 y = 194 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Cost"	
 				maxWidth = 120
@@ -780,7 +782,7 @@ guiTypes = {
 				name = "Chance_Text"
 				position = { x = 189 y = 194 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Chance"	
 				maxWidth = 120
@@ -793,7 +795,7 @@ guiTypes = {
 				name = "Days_Text"
 				position = { x = 64 y = 194 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Days"	
 				maxWidth = 120
@@ -807,7 +809,7 @@ guiTypes = {
 				name = "Cost_Text_Value"
 				position = { x = 310 y = 226 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Cost"	
 				maxWidth = 120
@@ -820,7 +822,7 @@ guiTypes = {
 				name = "Chance_Text_Value"
 				position = { x = 189 y = 226  }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Chance"	
 				maxWidth = 120
@@ -833,7 +835,7 @@ guiTypes = {
 				name = "Days_Text_Value"
 				position = { x = 64 y = 226 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Days"	
 				maxWidth = 120
@@ -850,7 +852,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -864,7 +866,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "GOTO"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			
 		}
 		
@@ -890,7 +892,7 @@ guiTypes = {
 				name = "provincetext_generalinfo"
 				position = { x = 0 y = -2 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 128
@@ -902,7 +904,7 @@ guiTypes = {
 				name = "provincetext_growth_label"
 				position = { x = 0 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_POPULATION"	
 				maxWidth = 128
@@ -912,7 +914,7 @@ guiTypes = {
 				name = "provincetext_growth"
 				position = { x = 50 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -923,7 +925,7 @@ guiTypes = {
 				name = "provincetext_natives_label"
 				position = { x = 0 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "NAT"	
 				maxWidth = 128
@@ -933,7 +935,7 @@ guiTypes = {
 				name = "provincetext_natives"
 				position = { x = 50 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -944,7 +946,7 @@ guiTypes = {
 				name = "provincetext_aggressiveness_label"
 				position = { x = 0 y = 32 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PP_AGGRESSIVE"	
 				maxWidth = 128
@@ -954,7 +956,7 @@ guiTypes = {
 				name = "provincetext_aggressiveness"
 				position = { x = 50 y = 32 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -965,7 +967,7 @@ guiTypes = {
 				name = "provincetext_ferocity_label"
 				position = { x = 0 y = 48 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PP_FEROCITY"	
 				maxWidth = 128
@@ -975,7 +977,7 @@ guiTypes = {
 				name = "provincetext_ferocity"
 				position = { x = 50 y = 48 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -987,7 +989,7 @@ guiTypes = {
 				name = "provincetext_supplylimit_label"
 				position = { x = 0 y = 64 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_SUPPLY_LIMIT"	
 				maxWidth = 128
@@ -999,7 +1001,7 @@ guiTypes = {
 				name = "provincetext_supplylimit_value"
 				position = { x = 50 y = 64 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1014,7 +1016,7 @@ guiTypes = {
 				name = "provincetext_maxattrition_label"
 					position = { x = 0 y = 80 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_MAX_ATTRITION"	
 				maxWidth = 128
@@ -1027,7 +1029,7 @@ guiTypes = {
 				name = "provincetext_maxattrition_value"
 				position = { x = 50 y = 80 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1041,7 +1043,7 @@ guiTypes = {
 				name = "provincetext_culture_label"
 				position = { x = 0 y = 96 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_CULTURE"	
 				maxWidth = 128
@@ -1054,7 +1056,7 @@ guiTypes = {
 				name = "provincetext_culture_value"
 				position = { x = 50 y = 96 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1086,7 +1088,7 @@ guiTypes = {
 				name = "provincetext_tax_label"
 				position = { x = 215 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_TAX"	
 				maxWidth = 64
@@ -1101,7 +1103,7 @@ guiTypes = {
 				name = "provincetext_tax_value"
 				position = { x = 215 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 100
@@ -1116,7 +1118,7 @@ guiTypes = {
 				name = "provincetext_production_label"
 				position = { x = 215 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_PRODUCTION"	
 				maxWidth = 72
@@ -1130,7 +1132,7 @@ guiTypes = {
 				name = "provincetext_production_value"
 				position = { x = 215 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 100
@@ -1144,7 +1146,7 @@ guiTypes = {
 				name = "provincetext_totalincome_label"
 				position = { x = 215 y = 34 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_TOTAL"	
 				maxWidth = 128
@@ -1158,7 +1160,7 @@ guiTypes = {
 				name = "provincetext_totalincome_value"
 				position = { x = 215 y = 34 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 100
@@ -1173,7 +1175,7 @@ guiTypes = {
 				name = "provincetext_resource_units"
 				position = { x = 215 y = 73 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = ""	
 				maxWidth = 128
@@ -1187,7 +1189,7 @@ guiTypes = {
 				name = "provincetext_resource_price_label"
 				position = { x =  215 y = 89 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = "PW_PRICE"	
 				maxWidth = 128
@@ -1201,7 +1203,7 @@ guiTypes = {
 				name = "provincetext_resource_price_value"
 				position = { x =  215 y = 89}
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = ""	
 				maxWidth = 100
@@ -1215,7 +1217,7 @@ guiTypes = {
 				name = "provincetext_resource_trade_label"
 				position = { x =  215 y = 105 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = "PW_TRADE_VALUE"	
 				maxWidth = 128
@@ -1229,7 +1231,7 @@ guiTypes = {
 				name = "provincetext_resource_trade_value"
 				position = { x =  215 y = 105 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = ""	
 				maxWidth = 100
@@ -1269,7 +1271,7 @@ guiTypes = {
 				name = "Title"
 				position = { x = 120 y = 9 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 4 y = 4}
 				text = "Province"	
 				
@@ -1280,7 +1282,7 @@ guiTypes = {
 				name = "Description"
 				position = { x = 100 y = 90 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}
 				text = ""	
 				maxWidth = 300
@@ -1293,7 +1295,7 @@ guiTypes = {
 				name = "failed"
 				position = { x =  100 y = 262 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 4 y = 0}	
 				text = "Colonization FAILED"	
 				maxWidth = 300
@@ -1308,7 +1310,7 @@ guiTypes = {
 				name = "Cost_Text"
 				position = { x = 310 y = 194 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Cost"	
 				maxWidth = 120
@@ -1321,7 +1323,7 @@ guiTypes = {
 				name = "Chance_Text"
 				position = { x = 189 y = 194 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Chance"	
 				maxWidth = 120
@@ -1334,7 +1336,7 @@ guiTypes = {
 				name = "Days_Text"
 				position = { x = 64 y = 194 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Days"	
 				maxWidth = 120
@@ -1348,7 +1350,7 @@ guiTypes = {
 				name = "Cost_Text_Value"
 				position = { x = 310 y = 226 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Cost"	
 				maxWidth = 120
@@ -1361,7 +1363,7 @@ guiTypes = {
 				name = "Chance_Text_Value"
 				position = { x = 189 y = 226  }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Chance"	
 				maxWidth = 120
@@ -1374,7 +1376,7 @@ guiTypes = {
 				name = "Days_Text_Value"
 				position = { x = 64 y = 226 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 3}
 				text = "Days"	
 				maxWidth = 120
@@ -1391,7 +1393,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -1405,7 +1407,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "GOTO"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			
 		}
 		
@@ -1432,7 +1434,7 @@ guiTypes = {
 				name = "provincetext_generalinfo"
 				position = { x = 0 y = -2 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 128
@@ -1444,7 +1446,7 @@ guiTypes = {
 				name = "provincetext_growth_label"
 				position = { x = 0 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_POPULATION"	
 				maxWidth = 128
@@ -1454,7 +1456,7 @@ guiTypes = {
 				name = "provincetext_growth"
 				position = { x = 50 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1465,7 +1467,7 @@ guiTypes = {
 				name = "provincetext_settlers_label"
 				position = { x = 0 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "NAT"	
 				maxWidth = 128
@@ -1475,7 +1477,7 @@ guiTypes = {
 				name = "provincetext_settlers"
 				position = { x = 50 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1487,7 +1489,7 @@ guiTypes = {
 				name = "provincetext_supplylimit_label"
 				position = { x = 0 y = 64 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_SUPPLY_LIMIT"	
 				maxWidth = 128
@@ -1499,7 +1501,7 @@ guiTypes = {
 				name = "provincetext_supplylimit_value"
 				position = { x = 50 y = 64 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1514,7 +1516,7 @@ guiTypes = {
 				name = "provincetext_maxattrition_label"
 					position = { x = 0 y = 80 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_MAX_ATTRITION"	
 				maxWidth = 128
@@ -1527,7 +1529,7 @@ guiTypes = {
 				name = "provincetext_maxattrition_value"
 				position = { x = 50 y = 80 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1541,7 +1543,7 @@ guiTypes = {
 				name = "provincetext_culture_label"
 				position = { x = 0 y = 96 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_CULTURE"	
 				maxWidth = 128
@@ -1554,7 +1556,7 @@ guiTypes = {
 				name = "provincetext_culture_value"
 				position = { x = 50 y = 96 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 97
@@ -1586,7 +1588,7 @@ guiTypes = {
 				name = "provincetext_tax_label"
 				position = { x = 215 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_TAX"	
 				maxWidth = 64
@@ -1601,7 +1603,7 @@ guiTypes = {
 				name = "provincetext_tax_value"
 				position = { x = 215 y = 0 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 100
@@ -1616,7 +1618,7 @@ guiTypes = {
 				name = "provincetext_production_label"
 				position = { x = 215 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_PRODUCTION"	
 				maxWidth = 72
@@ -1630,7 +1632,7 @@ guiTypes = {
 				name = "provincetext_production_value"
 				position = { x = 215 y = 16 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 100
@@ -1644,7 +1646,7 @@ guiTypes = {
 				name = "provincetext_totalincome_label"
 				position = { x = 215 y = 34 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = "PW_TOTAL"	
 				maxWidth = 128
@@ -1658,7 +1660,7 @@ guiTypes = {
 				name = "provincetext_totalincome_value"
 				position = { x = 215 y = 34 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 4}	
 				text = ""	
 				maxWidth = 100
@@ -1673,7 +1675,7 @@ guiTypes = {
 				name = "provincetext_resource_units"
 				position = { x = 215 y = 73 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = ""	
 				maxWidth = 128
@@ -1687,7 +1689,7 @@ guiTypes = {
 				name = "provincetext_resource_price_label"
 				position = { x =  215 y = 89 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = "PW_PRICE"	
 				maxWidth = 128
@@ -1701,7 +1703,7 @@ guiTypes = {
 				name = "provincetext_resource_price_value"
 				position = { x =  215 y = 89}
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = ""	
 				maxWidth = 100
@@ -1715,7 +1717,7 @@ guiTypes = {
 				name = "provincetext_resource_trade_label"
 				position = { x =  215 y = 105 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = "PW_TRADE_VALUE"	
 				maxWidth = 128
@@ -1729,7 +1731,7 @@ guiTypes = {
 				name = "provincetext_resource_trade_value"
 				position = { x =  215 y = 105 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 4 y = 0}	
 				text = ""	
 				maxWidth = 100
@@ -1798,7 +1800,7 @@ guiTypes = {
 				name = "Header"
 				position = { x = 117 y = 138 }
 				textureFile = ""
-				font = "vic_22s"
+				font = "monofonto_outline_16s"
 				borderSize = {x = 0 y = 0}
 				text = "CLAIMSTATETITLE"	
 				maxWidth = 316
@@ -1811,7 +1813,7 @@ guiTypes = {
 		instantTextBoxType={
 				position = {x = 32 y = 390 }
 				name = "info_text"
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 0 y = 0}	
 				maxWidth = 495
 				maxHeight = 225	
@@ -1855,7 +1857,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -1870,7 +1872,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
@@ -1904,7 +1906,7 @@ guiTypes = {
 				name = "Header"
 				position = { x = 117 y = 138 }
 				textureFile = ""
-				font = "vic_22s"
+				font = "monofonto_outline_16s"
 				borderSize = {x = 0 y = 0}
 				text = "FABRICATECLAIMTITLE"	
 				maxWidth = 316
@@ -1917,7 +1919,7 @@ guiTypes = {
 		instantTextBoxType={
 				position = {x = 32 y = 390 }
 				name = "info_text"
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 0 y = 0}	
 				maxWidth = 495
 				maxHeight = 225	
@@ -1961,7 +1963,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
@@ -1976,7 +1978,7 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
@@ -2002,13 +2004,13 @@ guiTypes = {
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
-				buttonFont = "vic_18"
+				buttonFont = "monofonto_outline_12"
 			}
 
 		instantTextBoxType={
 					position = {x = 23 y = 17 }
 					name = "info_text"
-					font = "vic_18"
+					font = "monofonto_outline_12"
 					borderSize = {x = 0 y = 0}	
 					maxWidth = 210
 					maxHeight = 16
@@ -2040,7 +2042,7 @@ guiTypes = {
 				name = "Title"
 				position = { x = 92 y = 22 }
 				textureFile = ""
-				font = "vic_22"
+				font = "monofonto_outline_16"
 				borderSize = {x = 0 y = 0}
 				text = "Title"	
 				maxWidth = 348
@@ -2053,7 +2055,7 @@ guiTypes = {
 				name = "Description"
 				position = { x = 62 y = 64 }
 				textureFile = ""
-				font = "vic_18"
+				font = "monofonto_outline_12"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 404
@@ -2065,18 +2067,18 @@ guiTypes = {
 		guiButtonType = {
 			name = "DeclineButton"
 			position = { x=77 y =153}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "z"			
 			extra_shortcut = "ESCAPE"
 		}
 		guiButtonType = {
 			name = "AgreeButton"
 			position = { x=304 y =153}
-			quadTextureSprite ="GFX_fm_button_type_7"
+			quadTextureSprite ="GFX_fm_button_94x31"
 			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "c"
 			extra_shortcut = "RETURN"
 			clicksound = ok_click
