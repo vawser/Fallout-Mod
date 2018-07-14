@@ -2,10 +2,10 @@ country_decisions = {
 	establish_settlement = {
 		potential = {
 			OR = {
-				government = war_tribe
-				government = trade_tribe
-				government = religious_tribe
-				is_tribal = yes
+				government = tribal_kingdom
+				government = tribal_federation
+				government = tribal_democracy
+				government = tribal_council
 			}
 			NOT = { tag = GRK }
 		}
@@ -15,17 +15,22 @@ country_decisions = {
 		}
 	  	effect = {
 			add_stability = -6
-
+			set_primitive = no
 			if = {
-                limit = { government =  war_tribe }
+                limit = { government =  tribal_kingdom }
                 change_government = military_settlement
             }
             if = {
-                limit = { government =  trade_tribe }
+	limit = {
+		OR = {
+			government = tribal_democracy
+			government = tribal_federation
+		}
+	}
                 change_government = diplomatic_settlement
             }
 			if = {
-                limit = { government =  religious_tribe }
+                limit = { government =  tribal_council }
                 change_government = administrative_settlement
 			}
 		}
@@ -37,11 +42,11 @@ country_decisions = {
     establish_republic = {
 		potential = {
 			OR = {
-				government = war_tribe
-				government = trade_tribe
-				government = religious_tribe
-				is_tribal = yes
-			}
+				government = tribal_kingdom
+				government = tribal_federation
+				government = tribal_democracy
+				government = tribal_council
+\			}
 			NOT = { tag = GRK }
 		}
 		allow =  {
@@ -50,17 +55,22 @@ country_decisions = {
 		}
 	  	effect = {
 			add_stability = -6
-
+			set_primitive = no
 			if = {
-                limit = { government =  war_tribe }
+                limit = { government =  tribal_kingdom }
                 change_government = military_republic
             }
             if = {
-                limit = { government =  trade_tribe }
+                limit = { 
+		OR = {
+			government = tribal_democracy
+			government = tribal_federation
+		}
+	}
                 change_government = diplomatic_republic
             }
 			if = {
-                limit = { government =  religious_tribe }
+                limit = { government =  tribal_council }
                 change_government = administrative_republic
 			}
 		}
@@ -84,12 +94,18 @@ country_decisions = {
 				tag = ANL
 				tag = NCR
 				tag = NVG
+				tag = X01
+				tag = X02
+				tag = X03
 				is_antebellum_nation = yes
 			}
 		}
 		allow = {
-			full_idea_group = banking_ideas
 			trade_income_percentage = 0.2
+			OR = {
+				full_idea_group = banking_ideas
+				trade_income_percentage = 0.6
+			}
 			OR = {
 				monthly_income = 10
 				treasury = 1000
@@ -111,6 +127,7 @@ country_decisions = {
 			modifier = {
 				factor = 0
 				OR = {
+					tag = ENC
 					government = dictatorship
 					government = patriarchy
 				}
@@ -119,7 +136,55 @@ country_decisions = {
 		}
 	}
 
-	upgrade_tribe = { # Tribal states can become more advanced tribal governments if they meet certain conditions
+	theocratic_administration = {
+		major = yes
+		potential = {
+			OR = {
+				government = tribal_kingdom
+				government = tribal_federation
+				government = tribal_democracy
+				government = tribal_council
+			}
+			NOT = { tag = GRK }
+			NOT = {
+				government = theocracy
+				government = feudal_theocracy
+				government = monastic_order
+				government = administrative_brotherhood_order
+				government = diplomatic_brotherhood_order
+				government = fascist_brotherhood_order
+				is_brotherhood_government = yes
+				has_country_flag = brotherhood_chapter
+			}
+
+		}
+		allow =  {
+			NOT = { religion = secular }
+			OR = {
+				full_idea_group = religion_ideas
+				ai = no
+			}
+			OR = {
+				religious_unity = 1
+				AND = {
+					ai = no
+					religious_unity = 0.5
+				}
+			}
+			is_at_war = no
+			total_development = 100
+		}
+		effect = {
+			change_government = theocratic_government
+			add_stability = -4
+			set_country_flag = recently_changed_government_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	upgrade_tribe = { # Tribal states can become more advanced tribal governments if they meet certain conditions, this is required to ultimately reform
 		potential = {
 			is_tribe_government = yes
 			NOT = {

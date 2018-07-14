@@ -1,14 +1,22 @@
 country_decisions = {
     unify_the_brotherhood = {
 		potential = {
-			technology_group = tech_bos
+			OR = {
+				technology_group = tech_bos
+				government = administrative_government_order
+				government = diplomatic_government_order
+				government = fascist_brotherhood_order
+				has_country_flag = brotherhood_chapter
+			}
 			NOT = { has_country_modifier = unified_brotherhood }
 		}
 		allow =  {
 			NOT = { 
-                any_country = {
-                    technology_group = tech_bos
-                    NOT = { tag = ROOT }
+				any_country = {
+					has_country_flag = brotherhood_chapter
+					NOT = { tag = ROOT }
+				}
+			}
                 }
             }   
 			total_development = 100
