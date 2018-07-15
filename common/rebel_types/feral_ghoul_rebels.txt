@@ -19,14 +19,32 @@ feral_ghoul_rebels = {
 	morale = 0.9
 	
 	# Possible handle actions
-	handle_action_negotiate = yes
+	handle_action_negotiate = no
 	handle_action_stability = yes
-	handle_action_build_core = yes
-	handle_action_send_missionary = yes		
+	handle_action_build_core = yes	
 	
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
-		factor = 0 # Event only
+		factor = 1
+		modifier = {
+			factor = 10
+			culture_group = ghoul_group
+            			owner = {
+                			NOT = { culture_group = ghoul_group }
+            			}
+		}
+        		modifier = {
+			factor = 0.05
+			culture = culture_ghoul
+           			owner = {
+                			primary_culture = culture_ghoul
+       			}
+		}
+        
+		modifier = {
+			factor = 0
+			NOT = { culture = culture_ghoul }
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -56,6 +74,13 @@ feral_ghoul_rebels = {
 			factor = 1.5
 			unrest = 6
 		}
+		modifier = {
+			factor = 10
+			culture = culture_ghoul
+			owner = {
+				NOT = { primary_culture = culture_ghoul }
+		            }
+		}
 	}
  
  	# Province Scope
@@ -69,7 +94,8 @@ feral_ghoul_rebels = {
 			name = damaged_population
 			duration = 3650
 		}
-        add_devastation = 5
+		add_colonysize = -400
+        		add_devastation = 5
 	}
 	
 	# Country scope

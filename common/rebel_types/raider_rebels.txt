@@ -19,14 +19,28 @@ raider_rebels = {
 	morale = 0.9
 	
 	# Possible handle actions
-	handle_action_negotiate = yes
+	handle_action_negotiate = no
 	handle_action_stability = yes
-	handle_action_build_core = yes
-	handle_action_send_missionary = yes		
+	handle_action_build_core = yes	
 	
-	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
-		factor = 0 # Event only
+		factor = 1
+		modifier = {
+			factor = 10
+			culture = raider
+		}
+        modifier = {
+			factor = 0.05
+			culture = raider
+            owner = {
+                primary_culture = raider
+            }
+		}
+        
+		modifier = {
+			factor = 0
+			NOT = { culture_group = raider_group }
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -56,6 +70,13 @@ raider_rebels = {
 			factor = 1.5
 			unrest = 6
 		}
+		modifier = {
+			factor = 10
+			culture = raider
+            owner = {
+                NOT = { primary_culture = raider }
+            }
+		}
 	}
  
  	# Province Scope
@@ -69,7 +90,8 @@ raider_rebels = {
 			name = damaged_population
 			duration = 3650
 		}
-        add_devastation = 5
+		add_colonysize = -400
+       		add_devastation = 5
 	}
 	
 	# Country scope
