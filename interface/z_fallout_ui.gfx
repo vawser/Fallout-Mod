@@ -1,152 +1,156 @@
 spriteTypes = {	 
     # For UI assets
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Dummy
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_dummy"
 		texturefile = "gfx//interface//ui//dummy.dds"
 	}
     
-    #-------------------------------------------------------------------------------------
-    # Tiling
-    #-------------------------------------------------------------------------------------
-    # For reference
-    corneredTileSpriteType = {
-		name = "mesh_tile_bg"
-		size= {x=192 y=192 }
-		texturefile = "gfx//interface//ui//background//tiled_window.dds"
-		borderSize = { x=8 y=8 }
-		allwaystransparent = yes
-	}
-    corneredTileSpriteType = {
-		name = "tooltip_tile_bg"
-		size= {x=132 y=132 }
-		texturefile = "gfx//interface//ui//background//tooltip_tile.dds"
-		borderSize = { x=8 y=8 }
-		allwaystransparent = yes
-	}
-    
-    #-------------------------------------------------------------------------------------
-    # Generic Backgrounds
-    #-------------------------------------------------------------------------------------
+    #-------------------------
+    # Banners
+    #-------------------------
     spriteType = {
-		name = "GFX_sidebar_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_150_650.dds"
-	}
-    spriteType = {
-		name = "GFX_sidebar_entry_bg"
-		texturefile = "gfx//interface//ui//background//iron_entry_130_27.dds"
-	}
-    
-    spriteType = {
-		name = "GFX_view_sidebar"
-		texturefile = "gfx//interface//ui//background//mesh_bg_150_604.dds"
-	}
-    spriteType = {
-		name = "GFX_view_large_sidebar"
-		texturefile = "gfx//interface//ui//background//mesh_bg_400_604.dds"
-	}
-    spriteType = {
-		name = "GFX_view_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_604.dds"
-	}
-    spriteType = {
-		name = "GFX_wide_view_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_900_604.dds"
-	}
-    spriteType = {
-		name = "GFX_view_300_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_300_604.dds"
-	}
-    
-    spriteType = {
-		name = "GFX_iron_banner"
+		name = "GFX_countryview_full_banner"
 		texturefile = "gfx//interface//ui//background//iron_banner_466_37.dds"
 	}
     
+    #-------------------------
+    # Backgrounds
+    #-------------------------
     spriteType = {
-		name = "GFX_mesh_square_bg_medium"
-		texturefile = "gfx//interface//ui//background//mesh_bg_128_128.dds"
+		name = "GFX_countryview_sidebar"
+		texturefile = "gfx//interface//ui//background//countryview_sidebar_bg.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_square_bg_small"
+		name = "GFX_countryview_popout_bar"
+		texturefile = "gfx//interface//ui//background//countryview_popout_bar.dds"
+	}
+    spriteType = {
+		name = "GFX_countryview_main_bg"
+		texturefile = "gfx//interface//ui//background//countryview_main_bg.dds"
+	}
+    spriteType = {
+		name = "GFX_countryview_missions_bg"
+		texturefile = "gfx//interface//ui//background//countryview_missions_bg.dds"
+	}
+    spriteType = {
+		name = "GFX_triggered_modifiers_bg"
+		texturefile = "gfx//interface//ui//background//triggered_modifiers_bg.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_leader_selection_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_604.dds"
+	}
+    spriteType = {
+		name = "GFX_province_finder_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_604.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_template_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_604.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_leader_element_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_64_64.dds"
 	}
-    
     spriteType = {
-		name = "GFX_mesh_bg_500_544"
-		texturefile = "gfx//interface//ui//background//mesh_bg_500_544.dds"
-	}
-    
-    spriteType = {
-		name = "GFX_mesh_bg_large"
+		name = "GFX_decision_entry_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_350"
+		name = "GFX_policy_entry_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+	}
+    spriteType = {
+		name = "GFX_current_policies_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+	}
+    spriteType = {
+		name = "GFX_music_player_popout_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_500_64.dds"
+	}
+    spriteType = {
+		name = "GFX_estate_action_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_350_64.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_300"
+		name = "GFX_dialog_leader_name_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_350_64.dds"
+	}
+    spriteType = {
+		name = "GFX_province_finder_entry_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_350_deep"
+		name = "GFX_naval_mission_entry_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
+	}
+    spriteType = {
+		name = "GFX_reorganization_entry_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_unit_element_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
+	}
+    spriteType = {
+		name = "GFX_tradenode_mission_entry_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_300_64.dds"
+	}
+    spriteType = {
+		name = "GFX_estate_entry_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_350_150.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_medium"
+		name = "GFX_topbar_entry_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_200_64.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_small"
+		name = "GFX_unitpanel_template_entry_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_200_64.dds"
+	}
+    spriteType = {
+		name = "GFX_estate_element_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_100_64.dds"
 	}
-    
+    spriteType = {
+		name = "GFX_pause_banner_bg"
+		texturefile = "gfx//interface//ui//background//mesh_bg_100_64.dds"
+	}
     spriteType = {
 		name = "GFX_mission_icons_frame"
 		texturefile = "gfx//interface//ui//background//mesh_bg_200_64.dds"
 	}	
-
 	spriteType = {
 		name = "GFX_mission_icons_frame_locked"
 		texturefile = "gfx//interface//ui//background//mesh_bg_200_64.dds"
 	}	
-
 	spriteType = {
 		name = "GFX_mission_icons_frame_complete"
 		texturefile = "gfx//interface//ui//background//mesh_bg_200_64.dds"
 	}
-    
     spriteType = {
-		name = "GFX_unitpanel_popout_bg"
-		texturefile = "gfx//interface//ui//background//mesh_bg_575_480.dds"
-	}
-    
-    spriteType = {
-		name = "GFX_mesh_bg_750_96"
+		name = "GFX_triggered_modifier_entry_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_750_96.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_750_64"
-		texturefile = "gfx//interface//ui//background//mesh_bg_750_64.dds"
-	}
-    spriteType = {
-		name = "GFX_mesh_bg_750_150"
+		name = "GFX_topbar_main_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_750_150.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_topbar_button"
+		name = "GFX_topbar_button_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_topbar_button_bg.dds"
 	}
     spriteType = {
-		name = "GFX_mesh_bg_menu_buttons"
+		name = "GFX_menubar_button_bg"
 		texturefile = "gfx//interface//ui//background//mesh_bg_menu_buttons_bg.dds"
 	}
-    #-------------------------------------------------------------------------------------
-    # Generic Buttons
-    #-------------------------------------------------------------------------------------
+    
+    #-------------------------
+    # Buttons
+    #-------------------------
     spriteType = {
 		name = "GFX_infantry_icon_button"
 		texturefile = "gfx//interface//ui//button//infantry_button.dds"
@@ -349,9 +353,9 @@ spriteTypes = {
         effectFile = "gfx/FX/buttonstate_onlydisable.lua"
     }
     
-    #-----------------------------------------------------------------------------------------------------
+    #-----------------------------------------
     # Generic Progress Bars
-    #-----------------------------------------------------------------------------------------------------
+    #-----------------------------------------
     spriteType = {
 		name = "GFX_metal_progress_frame"
 		texturefile = "gfx//interface//ui//progress_bar//infobox_progressbar_frame.dds"
@@ -415,9 +419,9 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress.lua"
 	}
     
-    #-----------------------------------------------------------------------------------------------------
+    #-----------------------------------------
     # Generic Checkboxes
-    #-----------------------------------------------------------------------------------------------------
+    #-----------------------------------------
     spriteType = {
 		name = "GFX_checkbox_small"
 		texturefile = "gfx//interface//ui//checkbox//checkbox_small.dds"
@@ -436,9 +440,9 @@ spriteTypes = {
 		noOfFrames = 2
 	}  
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Menubar
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_menubar_floating_strip"
 		texturefile = "gfx//interface//menubar_floating_strip.dds"
@@ -447,18 +451,18 @@ spriteTypes = {
 		noOfFrames = 8
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Diplomacy View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_attitude_icons_strip"
 		texturefile = "gfx//interface//icons//attitude_icons_strip.dds"
 		noOfFrames = 15
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Parliament View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_parliament_default"
 		texturefile = "gfx//interface//ui//background//parliament_bg.dds"
@@ -485,9 +489,9 @@ spriteTypes = {
 		clicksound = click
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Faction View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_faction_action_button"
 		texturefile = "gfx//interface//ui//background//pause_bg.dds"
@@ -631,9 +635,9 @@ spriteTypes = {
 		transparencecheck = yes
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Papacy View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_papacy_close_button"
 		texturefile = "gfx//interface//ui//button//frontend_panel_button_center.dds"
@@ -658,9 +662,9 @@ spriteTypes = {
 		transparencecheck = yes
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Ages View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_age_fallout_bg"
 		texturefile = "gfx//interface//ui//background//age_bg.dds"
@@ -715,17 +719,17 @@ spriteTypes = {
 		texturefile = "gfx//interface//ages//ab_colonial_growth.dds"
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Estate View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_estate_actions_bg"
 		texturefile = "gfx//interface//estates//estate_actions_bg.dds"
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Province View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_siberian_mechanic_button"
 		texturefile = "gfx//interface//gameplay//frontier_mechanic_button.dds"
@@ -733,9 +737,9 @@ spriteTypes = {
 		transparencecheck = yes
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Topbar View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_fallout_speed_indicator"
 		texturefile = "gfx//interface//ui//speed_indicator//speed_indicator.dds"
@@ -743,9 +747,9 @@ spriteTypes = {
 		transparencecheck = yes
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Alerts
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_alerticons"
 		texturefile = "gfx//interface//icons//alerticons.dds"
@@ -786,17 +790,17 @@ spriteTypes = {
 		transparencecheck = yes
 	}
 
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Dialog View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_dialog_popup_background"
 		texturefile = "gfx//interface//ui//background//frontend_bg.dds"
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Ideas View
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_ideas_view_unlockideabg_3_box"
 		texturefile = "gfx//interface//country_ideas_view_unlockidea_bg_3_box.dds"
@@ -804,9 +808,9 @@ spriteTypes = {
 		transparencecheck = yes
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Event Window
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_event_blank_bg"
 		texturefile = "gfx//interface//ui//event_window//fallout_event_bg_blank.dds"
@@ -874,9 +878,9 @@ spriteTypes = {
 		clicksound = click
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Unit Panel
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # A bloody nightmare
     
     spriteType = {
@@ -1104,9 +1108,9 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
     
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     # Sort
-    #-------------------------------------------------------------------------------------
+    #-------------------------
     spriteType = {
 		name = "GFX_fallout_sort_50"
 		texturefile = "gfx//interface//ui//sort//sort_50.dds"

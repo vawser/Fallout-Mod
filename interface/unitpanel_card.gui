@@ -7,9 +7,9 @@ guiTypes = {
 		backGround=""
 		position = { x=0 y=0 }
 		show_position = { x=0 y=0 }
-		hide_position = { x=0 y=0 }	
+		hide_position = { x=-1000 y=0 }	
 		animation_type = "decelerated"
-		animation_time = 0
+		animation_time = 300
 		size = { x=500 y=128 }
 		moveable = 0
 		dontRender = ""
@@ -263,7 +263,7 @@ guiTypes = {
             iconType = {
                 name ="unit_morale_bar_bg"
                 spriteType = "GFX_unit_progress_bar_frame"
-                position = { x = 586 y = -9999 }
+                position = { x = 325 y = 16 }
                 Orientation = "UPPER_LEFT"
             }			
             
@@ -294,21 +294,21 @@ guiTypes = {
             
             iconType = {
                 name ="unit_att_1_bg"
-                spriteType = "GFX_mesh_bg_300"
+                spriteType = "GFX_unitpanel_unit_element_bg"
                 position = { x= 15 y = 84 }
                 Orientation = "UPPER_LEFT"
                 scale = 0.5
             }
             iconType = {
                 name ="unit_att_2_bg"
-                spriteType = "GFX_mesh_bg_300"
+                spriteType = "GFX_unitpanel_unit_element_bg"
                 position = { x= 170 y = 84 }
                 Orientation = "UPPER_LEFT"
                 scale = 0.5
             }
             iconType = {
                 name ="unit_att_3_bg"
-                spriteType = "GFX_mesh_bg_300"
+                spriteType = "GFX_unitpanel_unit_element_bg"
                 position = { x= 170 y = 15 }
                 Orientation = "UPPER_LEFT"
                 scale = 0.5
@@ -517,13 +517,13 @@ guiTypes = {
             #-------------------------------------        
             iconType = {
                 name ="leader_card_bg_1"
-                spriteType = "GFX_mesh_square_bg_small"
+                spriteType = "GFX_unitpanel_leader_element_bg"
                 position = { x= 170 y = 50 }
                 scale = 0.5
             }
             iconType = {
                 name ="leader_card_bg_2"
-                spriteType = "GFX_mesh_square_bg_small"
+                spriteType = "GFX_unitpanel_leader_element_bg"
                 position = { x= 205 y = 50 }
                 scale = 0.5
             }
@@ -546,7 +546,7 @@ guiTypes = {
 
             guiButtonType = {
                 name ="leader_button"
-                quadTextureSprite = "GFX_mesh_bg_300"
+                quadTextureSprite = "GFX_unitpanel_unit_element_bg"
                 position = { x= 15 y = 50 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "n"
@@ -692,7 +692,7 @@ guiTypes = {
 
 		iconType ={
 			name ="background"
-			spriteType = "GFX_view_300_bg"
+			spriteType = "GFX_unitpanel_template_bg"
 			position = { x = 0 y = -6 }
             scale = 0.8
 		}
@@ -753,7 +753,7 @@ guiTypes = {
 		checkboxType = {
 			name = "build_button"
 			position = { x = 0 y = 0 }
-			quadTextureSprite ="GFX_mesh_bg_medium"
+			quadTextureSprite ="GFX_unitpanel_template_entry_bg"
 		}
 		
 		instantTextBoxType = {
@@ -819,7 +819,7 @@ guiTypes = {
 		checkboxType = {
 			name = "build_button"
 			position = { x = 0 y = 0 }
-			quadTextureSprite ="GFX_mesh_bg_medium"
+			quadTextureSprite ="GFX_unitpanel_template_entry_bg"
 		}
 		
 		instantTextBoxType = {

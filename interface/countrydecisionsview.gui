@@ -27,14 +27,14 @@ guiTypes = {
 		
 		iconType = {
 			name ="domesticpanel_bg"
-			spriteType = "GFX_view_bg"
+			spriteType = "GFX_countryview_main_bg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
 		
         iconType = {
 			name ="decisions_banner_1"
-			spriteType = "GFX_iron_banner"
+			spriteType = "GFX_countryview_full_banner"
 			position = { x= 17 y = 20 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -62,7 +62,7 @@ guiTypes = {
 
         iconType = {
 			name ="decisions_banner_2"
-			spriteType = "GFX_iron_banner"
+			spriteType = "GFX_countryview_full_banner"
 			position = { x= 17 y = 470 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -81,7 +81,7 @@ guiTypes = {
         
         iconType = {
 			name ="policies_bg_1"
-			spriteType = "GFX_mesh_bg_large"
+			spriteType = "GFX_current_policies_bg"
 			position = { x= 25 y = 515 }
 			Orientation = "UPPER_LEFT"
             scale = 0.9
@@ -156,26 +156,26 @@ guiTypes = {
 			iconType =
 			{
 				name ="bg"
-				spriteType = "GFX_view_bg"
+				spriteType = "GFX_countryview_main_bg"
 				position = { x= 0 y = 0 }
 				Orientation = "UPPER_LEFT"
 			}
 
             iconType = {
                 name ="policies_banner_1"
-                spriteType = "GFX_iron_banner"
+                spriteType = "GFX_countryview_full_banner"
                 position = { x= 17 y = 20 }
                 Orientation = "UPPER_LEFT"
             }
             iconType = {
                 name ="policies_banner_2"
-                spriteType = "GFX_iron_banner"
+                spriteType = "GFX_countryview_full_banner"
                 position = { x= 17 y = 200 }
                 Orientation = "UPPER_LEFT"
             }
             iconType = {
                 name ="policies_banner_3"
-                spriteType = "GFX_iron_banner"
+                spriteType = "GFX_countryview_full_banner"
                 position = { x= 17 y = 400 }
                 Orientation = "UPPER_LEFT"
             }
@@ -275,7 +275,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "decisions_banner"
-			spriteType ="GFX_mesh_bg_large"	
+			spriteType ="GFX_decision_entry_bg"	
 			position = { x= -26 y = -15 }
 			orientation = "UPPER_LEFT"
             scale = 0.9
@@ -339,7 +339,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "decisions_banner"
-			spriteType ="GFX_mesh_bg_large"	
+			spriteType ="GFX_decision_entry_bg"	
 			position = { x= -26 y = -15 }
 			orientation = "UPPER_LEFT"
             scale = 0.9
@@ -423,7 +423,7 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="select"
-			spriteType = "GFX_mesh_bg_large"
+			spriteType = "GFX_policy_entry_bg"
 			position = { x= 6 y = 12 }
 			Orientation = "UPPER_LEFT"
             scale = 0.9

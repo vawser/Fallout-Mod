@@ -4,6 +4,10 @@ guiTypes = {
 		name = "countryview"
 		backGround = ""
 		position = { x = 2 y = 134 }
+        show_position = { x=2 y =134 }
+		hide_position = { x=-1000 y =134 }	
+		animation_type = "decelerated"
+		animation_time = 300	
 		size = { x = 1024 y = 100 }
 		moveable = 0
 		dontRender = ""
@@ -14,7 +18,7 @@ guiTypes = {
 		windowType = {
             name = "countryview_tabs"
             backGround =""
-            position = { x = 2 y = 134 }
+            position = { x = 0 y = 0 }
             size = { x = 1024 y = 100 }
             moveable = 0
             dontRender = ""
@@ -24,7 +28,7 @@ guiTypes = {
         
             iconType = {
                 name = " "
-                spriteType = "GFX_view_sidebar"
+                spriteType = "GFX_countryview_sidebar"
                 position = { x= 0 y = 0 }
                 Orientation = "UPPER_LEFT"
             }		
@@ -45,7 +49,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Government"
-                position = { x = @button_x y = 60 }
+                position = { x = @button_x y = 58 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "2"
             }
@@ -54,7 +58,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Diplomacy"
-                position = { x = @button_x y = 100 }
+                position = { x = @button_x y = 96 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "3"
             }			
@@ -63,7 +67,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Economy"
-                position = { x = @button_x y = 140 }
+                position = { x = @button_x y = 134 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "4"
             }
@@ -72,7 +76,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Trade"
-                position = { x = @button_x y = 180 }
+                position = { x = @button_x y = 172 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "5"
             }
@@ -81,7 +85,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Technology"
-                position = { x = @button_x y = 220 }
+                position = { x = @button_x y = 210 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "6"
             }	
@@ -90,7 +94,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Ideas"
-                position = { x = @button_x y = 260 }
+                position = { x = @button_x y = 248 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "7"
             }
@@ -99,7 +103,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Missions"
-                position = { x = @button_x y = 300 }
+                position = { x = @button_x y = 284 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "8"
             }
@@ -108,7 +112,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Decisions"
-                position = { x = @button_x y = 340 }
+                position = { x = @button_x y = 322 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "9"
             }
@@ -117,7 +121,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Stability"
-                position = { x = @button_x y = 380 }
+                position = { x = @button_x y = 360 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "0"
             }
@@ -126,7 +130,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Religion"
-                position = { x = @button_x y = 420 }
+                position = { x = @button_x y = 398 }
                 Orientation = "UPPER_LEFT"
                 shortcut = ","
             }
@@ -135,7 +139,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Military"
-                position = { x = @button_x y = 460 }
+                position = { x = @button_x y = 436 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "."
             }
@@ -144,7 +148,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Subjects"
-                position = { x = @button_x y = 500 }
+                position = { x = @button_x y = 474 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "'"
             }
@@ -153,7 +157,7 @@ guiTypes = {
                 quadTextureSprite ="GFX_fm_button_states_button"
                 buttonFont = "monofonto_outline_14"
                 buttonText = "Estates"
-                position = { x = @button_x y = 540 }
+                position = { x = @button_x y = 512 }
                 Orientation = "UPPER_LEFT"
                 shortcut = "k"
             }
