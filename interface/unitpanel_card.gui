@@ -10,7 +10,7 @@ guiTypes = {
 		hide_position = { x=0 y=0 }	
 		animation_type = "decelerated"
 		animation_time = 0
-		size = { x=500 y=96 }
+		size = { x=500 y=128 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -262,27 +262,27 @@ guiTypes = {
             # Morale
             iconType = {
                 name ="unit_morale_bar_bg"
-                spriteType = "GFX_vertical_bar_bg"
-                position = { x = 586 y = 25 }
+                spriteType = "GFX_unit_progress_bar_frame"
+                position = { x = 586 y = -9999 }
                 Orientation = "UPPER_LEFT"
             }			
             
             iconType = {
                 name ="unit_morale"
-                spriteType = "GFX_unitpanel_morale_progressbar"
-                position = { x = 586 y = 25 }
+                spriteType = "GFX_unit_morale_progress_bar"
+                position = { x = 327 y = 16 }
                 Orientation = "UPPER_LEFT"
             }
             iconType = {
                 name ="unit_morale_yellow"
-                spriteType = "GFX_unitpanel_morale_progressbar_yellow"
-                position = { x = 586 y = 25 }
+                spriteType = "GFX_unit_yellow_morale_progress_bar"
+                position = { x = 327 y = 16 }
                 Orientation = "UPPER_LEFT"
             }
             iconType = {
                 name ="unit_morale_frame"
-                spriteType = "GFX_unitpanel_morale_frame"
-                position = { x = 582 y = 17 }
+                spriteType = "GFX_unit_progress_bar_frame"
+                position = { x = 325 y = 16 }
                 Orientation = "UPPER_LEFT"
             }
             iconType = {
@@ -295,14 +295,14 @@ guiTypes = {
             iconType = {
                 name ="unit_att_1_bg"
                 spriteType = "GFX_mesh_bg_300"
-                position = { x= 325 y = 15 }
+                position = { x= 15 y = 84 }
                 Orientation = "UPPER_LEFT"
                 scale = 0.5
             }
             iconType = {
                 name ="unit_att_2_bg"
                 spriteType = "GFX_mesh_bg_300"
-                position = { x= 325 y = 47 }
+                position = { x= 170 y = 84 }
                 Orientation = "UPPER_LEFT"
                 scale = 0.5
             }
@@ -316,7 +316,7 @@ guiTypes = {
             
             # Unit name
             editBoxType = {
-                position = { x = 338 y = 56 }
+                position = { x = 25 y = 92 }
                 name = "unitname"
                 font = "monofonto_outline_12"
                 borderSize = {x = 0 y = 0}	
@@ -327,7 +327,7 @@ guiTypes = {
             iconType = {
                 name = "unit_naming_icon"
                 spriteType = "GFX_unit_naming"
-                position = { x = 300 y = 56 }
+                position = { x = 300 y = -9999 }
                 Orientation = "UPPER_LEFT"
                 scale = 0.5
             }
@@ -336,27 +336,26 @@ guiTypes = {
             iconType = {
                 name ="unit_attrition_icon"
                 spriteType = "GFX_unit_attrition_icon"
-                position = { x= 500 y = 17 }
+                position = { x= 265 y = 57 }
                 Orientation = "UPPER_LEFT"
                 hint_tag = "hint_attrition"
             }		
             instantTextBoxType = {
                 name = "unitattrition"
-                position = { x = 525  y = 19 }
+                position = { x = 284  y = 57 }
                 textureFile = ""
                 font = "monofonto_outline_12"
                 borderSize = {x = 0 y = 0}
                 text = ""	
                 maxWidth = 49
                 maxHeight = 17	
-
                 format = left
             }
             
             # Location
             instantTextBoxType = {
                 name = "unitlocation"
-                position = { x = 338 y = 24 }
+                position = { x = 180 y = 92 }
                 textureFile = ""
                 font = "monofonto_outline_12"
                 borderSize = {x = 0 y = 0}
@@ -369,7 +368,7 @@ guiTypes = {
             iconType = {
                 name ="unit_exile_icon"
                 spriteType = "GFX_unitpanel_exile"
-                position = { x= 480 y = 20 }
+                position = { x= 354 y = 92 }
                 Orientation = "UPPER_LEFT"
             }
             
@@ -377,14 +376,14 @@ guiTypes = {
             iconType = {
                 name ="unit_destination"
                 spriteType = "GFX_icon_unit_destination"
-                position = { x= 480 y = 60 }
+                position = { x= 324 y = 92 }
                 Orientation = "UPPER_LEFT"
                 frame = 2
             }
             iconType = {
                 name ="unit_shattered_retreat_icon"
                 spriteType = "GFX_unit_shattered_retreat"
-                position = { x= 480 y = 40 }
+                position = { x= 354 y = 92 }
                 Orientation = "UPPER_LEFT"
             }	
             
@@ -399,16 +398,17 @@ guiTypes = {
                 Orientation = "UPPER_LEFT"
                 scale = 1
             }
+            
             iconType = {
                 name ="unit_drill"
-                spriteType = "GFX_unitpanel_drill_progressbar"
-                position = { x = 571 y = 26 }
+                spriteType = "GFX_unit_drill_progress_bar"
+                position = { x = 327 y = 32 }
                 Orientation = "UPPER_LEFT"
             }
             iconType = {
                 name ="unit_drill_frame"
-                spriteType = "GFX_unitpanel_drilling_frame"
-                position = { x = 567 y = 17 }
+                spriteType = "GFX_unit_progress_bar_frame"
+                position = { x = 325 y = 32 }
                 Orientation = "UPPER_LEFT"
             }
             
@@ -430,14 +430,15 @@ guiTypes = {
             iconType = {
                 name ="loot_capability_icon"
                 spriteType = "GFX_tiny_loot_icon"
-                position = { x= 500 y = 39 }
+                position = { x= 324 y = 54 }
                 Orientation = "UPPER_LEFT"
+                scale = 0.8
             }
             instantTextBoxType = {
                 name = "loot_capability"
-                position = { x = 524  y = 40 }
+                position = { x = 344  y = 54 }
                 textureFile = ""
-                font = "monofonto_outline_12"
+                font = "monofonto_outline_10"
                 borderSize = {x = 0 y = 0}
                 text = "§G9§!"	
                 maxWidth = 35
@@ -449,14 +450,15 @@ guiTypes = {
             iconType = {
                 name ="siege_capability_icon"
                 spriteType = "GFX_siege_capability_icon"
-                position = { x= 500 y = 62 }
+                position = { x = 324  y = 70 }
                 Orientation = "UPPER_LEFT"
+                scale = 0.8
             }
             instantTextBoxType = {
                 name = "siege_capability"
-                position = { x = 524  y = 63 }
+                position = { x = 344  y = 70 }
                 textureFile = ""
-                font = "monofonto_outline_12"
+                font = "monofonto_outline_10"
                 borderSize = {x = 0 y = 0}
                 text = "§G9§!"	
                 maxWidth = 35
@@ -492,16 +494,16 @@ guiTypes = {
             iconType = {
                 name ="blockade_icon"
                 spriteType = "GFX_combat_blockade"
-                position = { x= 500 y = 39 }
+                position = { x= 324 y = 54 }
                 Orientation = "UPPER_LEFT"
                 scale = 0.75
             }
             
             instantTextBoxType = {
                 name = "blockade_capacity"
-                position = { x = 524  y = 40 }
+                position = { x= 340 y = 56 }
                 textureFile = ""
-                font = "monofonto_outline_12"
+                font = "monofonto_outline_10"
                 borderSize = {x = 0 y = 0}
                 text = "50"	
                 maxWidth = 28
@@ -562,7 +564,7 @@ guiTypes = {
                 name = "unitleader"
                 position = { x= 25 y = 58 }
                 textureFile = ""
-                font = "monofonto_outline_14"
+                font = "monofonto_outline_12"
                 borderSize = {x = 0 y = 0}
                 text = ""
                 fixedsize = yes
@@ -591,22 +593,33 @@ guiTypes = {
             # Go to
             
             guiButtonType = {
+				name = "remove_unit_from_selection_button"
+				position = { x = 400 y = 15 }
+				quadTextureSprite ="GFX_unitpanel_close"	
+				shortcut = "v"
+                scale = 0.8
+			}
+            
+            guiButtonType = {
                 name = "disbandbutton"
-                position = { x = 705 y = 50 }
-                quadTextureSprite ="GFX_unitpanel_disband"	
+                position = { x = 405 y = 49 }
+                quadTextureSprite ="GFX_unitpanel_disband"
+                scale = 0.6
             }
             
             guiButtonType = {
                 name = "newunitbutton02"
-                position = { x = 635 y = 30 }
+                position = { x = 405 y = 71 }
                 quadTextureSprite ="GFX_unitpanel_split_unit"	
-                shortcut = "s" # Duplicated in CInGameMapInput::HandleFallbackUnitShortcuts
+                shortcut = "s"
+                scale = 0.6
             }	
             
             guiButtonType = {
                 name = "conform_to_template_button"
-                position = { x=670 y=50 }
+                position = { x=405 y=93 }
                 quadTextureSprite ="GFX_unitpanel_conform_template"	
+                scale = 0.6
             }
             iconType = {
                 name ="conform_to_template_glow"
@@ -616,33 +629,29 @@ guiTypes = {
             
             guiButtonType = {
                 name ="select_army_button"
-                position = { x = 670 y = 14 }
+                position = { x = 380 y = 49 }
                 quadTextureSprite ="GFX_unitpanel_goto"	
+                scale = 0.6
             }	
-            
-            guiButtonType = {
-				name = "remove_unit_from_selection_button"
-				position = { x = 705 y = 14 }
-				quadTextureSprite ="GFX_unitpanel_close"	
-				shortcut = "v"
-			}
-            
+
             # Land:
             # Detach Siege
             # Attach to Transport
             
             guiButtonType = {
                 name = "detach_siege_button"
-                position = { x = 600 y = 14 }
+                position = { x = 380 y = 71 }
                 quadTextureSprite ="GFX_unitpanel_detach_siege"	
-                shortcut = "d" # CInGameMapInput::HandleFallbackUnitShortcuts
+                shortcut = "d"
+                scale = 0.6
             }	
             guiButtonType = {
                 name ="attach_to_transport_button"
                 quadTextureSprite ="GFX_unitpanel_attach_to_transport"	
-                position = { x= 600 y = 50 }
+                position = { x= 380 y = 93 }
                 shortcut = "a"
                 clicksound = "attach_transport"
+                scale = 0.6
             }
             
             # Naval:
@@ -651,16 +660,18 @@ guiTypes = {
             
             guiButtonType = {
                 name = "detach_blockade_button"
-                position = { x = 600 y = 14 }
+                position = { x = 380 y = 71 }
                 quadTextureSprite ="GFX_unitpanel_detach_blockade"	
-                shortcut = "d" # Duplicated in CInGameMapInput::HandleFallbackUnitShortcuts
+                shortcut = "d"
+                scale = 0.6
             }
                 
             guiButtonType = {
                 name = "detach_damaged_button"
-                position = { x= 600 y = 50 }
+                position = { x= 380 y = 93 }
                 quadTextureSprite ="GFX_unitpanel_detach_damaged"	
                 shortcut = "a"
+                scale = 0.6
             }		
 		}
 	}
@@ -670,7 +681,7 @@ guiTypes = {
     #-------------------------------------
 	positionType = {
 		name ="unit_view_template_list_win_offset"
-		position = { x= 780 y = -38 }
+		position = { x= 450 y = 0 }
 	}
 
 	windowType = {
@@ -682,24 +693,25 @@ guiTypes = {
 		iconType ={
 			name ="background"
 			spriteType = "GFX_view_300_bg"
-			position = { x = -20 y = 10 }
+			position = { x = 0 y = -6 }
+            scale = 0.8
 		}
 
         iconType ={
 			name ="title_bg"
 			spriteType = "GFX_button_200"
-			position = { x = 30 y = 30 }
+			position = { x = 20 y = 10 }
 		}
         
 		instantTextBoxType = {
 			name = "conform_label"
-			position = { x = -65 y = 0 }
+			position = { x = 45 y = -20 }
 			font = "monofonto_outline_14"
 			borderSize = {x = 0 y = 40}
 			text = "CONFORM_TO_TEMPLATE"
 			maxWidth = 390
 			maxHeight = 32
-			format = center
+			format = left
 			allwaystransparent = yes
 			fixedsize = yes
 			truncate = yes
@@ -707,9 +719,9 @@ guiTypes = {
 		
 		listboxType = {
 			name ="template_list_box"
-			position = { x = 65 y = 80 }
+			position = { x = 20 y = 60 }
 			backGround=""
-			size = { x=280  y=500}
+			size = { x=280  y=400}
 			Orientation = "UPPER_LEFT"
 			#spacing = 2
 			scrollbartype = "standardlistbox_slider"
@@ -718,10 +730,10 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "close"
-			position = { x= 60 y = 550 }
+			position = { x= 45 y = 420 }
 			quadTextureSprite ="GFX_fm_button_148x34"
 			buttonText = "CLOSE"
-			buttonFont = "monofonto_outline_16"
+			buttonFont = "monofonto_outline_12"
 			clicksound = close_window
 		}	
 	}
@@ -740,13 +752,13 @@ guiTypes = {
 		
 		checkboxType = {
 			name = "build_button"
-			position = { x = -35 y = -2 }
+			position = { x = 0 y = 0 }
 			quadTextureSprite ="GFX_mesh_bg_medium"
 		}
 		
 		instantTextBoxType = {
 			name = "unit_name"
-			position = { x = -15 y = 14 }
+			position = { x = 15 y = 14 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "UNIT_NAME"
@@ -760,7 +772,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "inf"
-			position = { x= 0 y = 33 }
+			position = { x= 40 y = 33 }
 			font = "monofonto_outline_12"
 			borderSize = {x = -15 y = 0}
 			text = "45"
@@ -771,7 +783,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "cav"
-			position = { x= 20 y = 33 }
+			position = { x= 80 y = 33 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "45"
@@ -782,7 +794,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "art"
-			position = { x= 55 y = 33 }
+			position = { x= 140 y = 33 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "45"
@@ -797,7 +809,7 @@ guiTypes = {
 		name = "navy_template_list_item"
 		backGround=""
 		position = { x=0 y = 0}	
-		size = { x= 200 y = 44}
+		size = { x= 200 y = 64}
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -806,13 +818,13 @@ guiTypes = {
 		
 		checkboxType = {
 			name = "build_button"
-			position = { x = -35 y = -2 }
+			position = { x = 0 y = 0 }
 			quadTextureSprite ="GFX_mesh_bg_medium"
 		}
 		
 		instantTextBoxType = {
 			name = "unit_name"
-			position = { x = -15 y = 14 }
+			position = { x = 15 y = 14 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "UNIT_NAME"
@@ -826,7 +838,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "heavy"
-			position = { x= -15 y = 33 }
+			position = { x= 20 y = 33 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "45"
@@ -837,7 +849,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "light"
-			position = { x= 25 y = 33 }
+			position = { x= 63 y = 33 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "45"
@@ -848,7 +860,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "galley"
-			position = { x= 65 y = 33 }
+			position = { x= 106 y = 33 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "45"
@@ -859,7 +871,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "transport"
-			position = { x= 105 y = 33 }
+			position = { x= 149 y = 33 }
 			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}
 			text = "45"

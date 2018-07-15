@@ -2,7 +2,145 @@ spriteTypes = {
     #----------------------------------------------
     # UI
     #----------------------------------------------
+    frameAnimatedSpriteType = {
+		name = "GFX_unitpanel_icon_glow"
+		texturefile = "gfx//interface//ui//icons//unitpanel_icon_glow.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+		allwaystransparent = yes
+	}
+    
     # Unit panel
+    spriteType = {
+		name = "GFX_unitpanel_next"
+		texturefile = "gfx//interface//ui//icons//next_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_prev"
+		texturefile = "gfx//interface//ui//icons//prev_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_allow_attach"
+		texturefile = "gfx//interface//ui//icons//allow_attach_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_attach"
+		texturefile = "gfx//interface//ui//icons//attach_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_detach"
+		texturefile = "gfx//interface//ui//icons//detach_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_reorganize"
+		texturefile = "gfx//interface//ui//icons//reorganize_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_consolidate"
+		texturefile = "gfx//interface//ui//icons//consolidate_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_detach_merc"
+		texturefile = "gfx//interface//ui//icons//detach_merc_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_siege_view"
+		texturefile = "gfx//interface//ui//icons//siege_view_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_force_march"
+		texturefile = "gfx//interface//ui//icons//force_march_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_rebel_hunt"
+		texturefile = "gfx//interface//ui//icons//rebel_hunt_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_scorch_earth"
+		texturefile = "gfx//interface//ui//icons//scorch_earth_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_army_drill"
+		texturefile = "gfx//interface//ui//icons//army_drill_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_supply_depot"
+		texturefile = "gfx//interface//ui//icons//supply_depot_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_refill_garrison"
+		texturefile = "gfx//interface//ui//icons//refill_garrison_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_burn_colony"
+		texturefile = "gfx//interface//ui//icons//burn_colony_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_sieze_colony"
+		texturefile = "gfx//interface//ui//icons//sieze_colony_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_attack_natives"
+		texturefile = "gfx//interface//ui//icons//attack_natives_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_explore_land"
+		texturefile = "gfx//interface//ui//icons//explore_land_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_mission_settings"
+		texturefile = "gfx//interface//ui//icons//mission_settings_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_select_mission"
+		texturefile = "gfx//interface//ui//icons//select_mission_icon.dds"
+        noOfFrames = 2
+	}
+    spriteType = {
+		name = "GFX_unitpanel_autotransport"
+		texturefile = "gfx//interface//ui//icons//autotransport_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_detach_obsolete_ships"
+		texturefile = "gfx//interface//ui//icons//detach_obsolete.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_mothball"
+		texturefile = "gfx//interface//ui//icons//mothball_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_patrol"
+		texturefile = "gfx//interface//ui//icons//patrol_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_evade"
+		texturefile = "gfx//interface//ui//icons//evade_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_evade"
+		texturefile = "gfx//interface//ui//icons//evade_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_slave_raid"
+		texturefile = "gfx//interface//ui//icons//slave_raid_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_home_at_war"
+		texturefile = "gfx//interface//ui//icons//home_at_war_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_ally_attach"
+		texturefile = "gfx//interface//ui//icons//ally_attach_icon.dds"
+	}
+    spriteType = {
+		name = "GFX_unitpanel_fleet_upgrade"
+		texturefile = "gfx//interface//ui//icons//fleet_upgrade_icon.dds"
+	}
+    
+    # Card
     spriteType = {
 		name = "GFX_unitpanel_embarked_troops"
 		texturefile = "gfx//interface//ui//icons//troop_icon.dds"
