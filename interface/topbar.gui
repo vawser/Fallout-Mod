@@ -3,7 +3,7 @@ guiTypes = {
 		name = "topbar"
 		backGround = ""
 		position = { x = 0 y = -1 }	
-		size = { x = 2048 y = 100 }
+		size = { x = 2048 y = 200 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -84,31 +84,36 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}	
-
-        # Topbar backgrounds
-		iconType = {
+        iconType = {
 			name ="topbar_upper_left_bg"
-			spriteType = "GFX_sidebar_bg"
-			position = { x= -10 y = 0 }
+			spriteType = "GFX_mesh_bg_750_150"
+			position = { x= -10 y = -9999 }
 			Orientation = "UPPER_LEFT"
 		}
         iconType = {
-			name ="topbar_extension"
-			spriteType = "GFX_button_400"
-			position = { x= 120 y = 36 }
-			Orientation = "UPPER_LEFT"
-		}
-		iconType = {
 			name ="topbar_upper_left_bg4"
 			spriteType = "GFX_button_400"
-			position = { x= 120 y = 0 }
+			position = { x= 120 y = -9999 }
 			Orientation = "UPPER_LEFT"
 		}
         
+        # Topbar backgrounds
         iconType = {
-			name ="topbar_behind_flag"
+			name ="topbar_main_bg"
+			spriteType = "GFX_mesh_bg_750_150"
+			position = { x= -206 y = -10 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="topbar_name_bg"
 			spriteType = "GFX_button_400"
-			position = { x= -280 y = 0 }
+			position = { x= 130 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}
+        iconType = {
+			name ="topbar_button_bg"
+			spriteType = "GFX_mesh_bg_topbar_button"
+			position = { x= 540 y = -60 }
 			Orientation = "UPPER_LEFT"
 		}
         
@@ -125,7 +130,7 @@ guiTypes = {
 		}
         instantTextBoxType = {
 			name = "PlayerNationText"
-			position = { x = 140 y = 4 }
+			position = { x = 145 y = 8 }
 			textureFile = ""
 			font = "monofonto_outline_18"
 			borderSize = {x = 4 y = 4}
@@ -138,7 +143,7 @@ guiTypes = {
         # Buttons
 		guiButtonType = {
 			name = "open_build_interface_button"
-			position = { x = 140 y = 39 }
+			position = { x = 564 y = 10 }
 			quadTextureSprite ="GFX_fm_button_94x31"
 			tooltip = ""
 			tooltipText =""
@@ -151,7 +156,7 @@ guiTypes = {
 		}
 		guiButtonType = {
 			name = "great_power_button"
-			position = { x = 270 y = 39 }
+			position = { x = 564 y = 45 }
 			quadTextureSprite ="GFX_fm_button_94x31"
             buttonText = "Powers"
 			buttonFont = "monofonto_outline_14"
@@ -159,7 +164,7 @@ guiTypes = {
 		}
         guiButtonType = {
 			name = "current_age_button"
-			position = { x = 400 y = 39 }
+			position = { x = 564 y = 80 }
 			quadTextureSprite ="GFX_fm_button_94x31"
 			clicksound = macro_build
             buttonText = "Ages"
@@ -168,297 +173,340 @@ guiTypes = {
         
         iconType = {
 			name ="entry_bg_1"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 150 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 160 y = 45 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_2"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 180 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 160 y = 65 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_3"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 210 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 160 y = 85 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_4"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 240 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 160 y = 105 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_5"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 270 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 260 y = 45 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_6"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 300 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 260 y = 65 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_7"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 330 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 260 y = 85 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_8"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 360 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 260 y = 105 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
+        
         iconType = {
 			name ="entry_bg_9"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 410 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 360 y = 45 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_10"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 440 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 360 y = 65 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_11"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 470 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 360 y = 85 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_12"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 520 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 360 y = 105 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
+        
         iconType = {
 			name ="entry_bg_13"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 550 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 460 y = 45 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_14"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 580 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 460 y = 75 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
         iconType = {
 			name ="entry_bg_15"
-			spriteType = "GFX_sidebar_entry_bg"
-			position = { x= 0 y = 610 }
+			spriteType = "GFX_mesh_bg_medium"
+			position = { x= 460 y = 105 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.3
 		}
+        
+        # 15
         
         @entry_icon_x = 7
         @entry_x = 42
         
+        @col_1_icon_x = 132
+        @col_1_text_x = 160
+        @col_2_icon_x = 232
+        @col_2_text_x = 260
+        @col_3_icon_x = 332
+        @col_3_text_x = 360
+        @col_4_icon_x = 432
+        @col_4_text_x = 460
+        
         iconType = {
 			name ="icon_gold"
 			spriteType = "GFX_icon_gold_strip"
-			position = { x= @entry_icon_x y = 148 }
+			position = { x= @col_1_icon_x y = 45 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_ducats"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_gold"
-			position = { x = @entry_x y = 149 }
+			position = { x= @col_1_text_x y = 43 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = ""	
 			maxWidth = 72
 			maxHeight = 32	
-			format = center
+			format = left
 		}
 		iconType = {
 			name ="icon_manpower"
 			spriteType = "GFX_icon_manpower"
-			position = { x= @entry_icon_x y = 178 }
+			position = { x= @col_1_icon_x y = 65 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_manpower"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_manpower"
-			position = { x = @entry_x y = 179 }
+			position = { x = @col_1_text_x y = 63 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = ""	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		iconType = {
 			name ="icon_sailors"
 			spriteType = "GFX_icon_sailors"
-			position = { x= @entry_icon_x y = 208 }
+			position = { x= @col_1_icon_x y = 87 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_sailors"
-			position = { x = @entry_x y = 209 }
+			position = { x = @col_1_text_x y = 83 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = ""	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		iconType = {
 			name ="icon_stability"
 			spriteType = "GFX_icon_stability"
-			position = { x= @entry_icon_x y = 238 }
+			position = { x= @col_1_icon_x y = 105 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_stability"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_stability"
-			position = { x = @entry_x y = 239 }
+			position = { x = @col_1_text_x y = 103 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = ""	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
         iconType = {
 			name ="icon_corruption"
 			spriteType = "GFX_icon_corruption_small"
-			position = { x= @entry_icon_x y = 268 }
+			position = { x= @col_2_icon_x y = 45 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_corruption"
-			position = { x = @entry_x y = 269 }
+			position = { x = @col_2_text_x y = 43 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = ""	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		iconType = {
 			name ="icon_prestige"
 			spriteType = "GFX_icon_prestige"
-			position = { x= @entry_icon_x y = 298 }
+			position = { x= @col_2_icon_x y = 65 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_prestige"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_prestige"
-			position = { x = @entry_x y = 299 }
+			position = { x = @col_2_text_x y = 64 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = "100"	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
+        
+        @legitimacy_icon_y = 87
+        @legitimacy_text_y = 83
+        
 		iconType = {
 			name ="icon_dev"
 			spriteType = "GFX_icon_legitimacy"
-			position = { x= @entry_icon_x y = 328 }
+			position = { x= @col_2_icon_x y = @legitimacy_icon_y }
 			Orientation = "UPPER_LEFT"
 			frame = 3
 			hint_tag = "hint_legitimacy"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_dev"
-			position = { x = @entry_x y = 329 }
+			position = { x = @col_2_text_x y = @legitimacy_text_y }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = "100"	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		iconType = {
 			name ="icon_meritocracy"
 			spriteType = "GFX_icon_legitimacy"
-			position = { x= @entry_icon_x y = 328 }
+			position = { x= @col_2_icon_x y = @legitimacy_icon_y }
 			Orientation = "UPPER_LEFT"
 			frame = 5
 			hint_tag = "hint_meritocracy"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_meritocracy"
-			position = { x = @entry_x y = 329 }
+			position = { x = @col_2_text_x y = @legitimacy_text_y }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = "100"	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		iconType = {
 			name ="icon_leg"
 			spriteType = "GFX_icon_legitimacy"
-			position = { x= @entry_icon_x y = 328 }
+			position = { x= @col_2_icon_x y = @legitimacy_icon_y }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 			hint_tag = "hint_legitimacy"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_leg"
-			position = { x = @entry_x y = 329 }
+			position = { x = @col_2_text_x y = @legitimacy_text_y }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = "100"	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		iconType = {
 			name ="icon_rep"
 			spriteType = "GFX_icon_legitimacy"
-			position = { x= @entry_icon_x y = 328 }
+			position = { x= @col_2_icon_x y = @legitimacy_icon_y }
 			Orientation = "UPPER_LEFT"
 			frame = 2
 			hint_tag = "hint_republican"
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_rep"
-			position = { x = @entry_x y = 329 }
+			position = { x = @col_2_text_x y = @legitimacy_text_y }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = "100"	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		iconType = {
 			name ="icon_unity"
 			spriteType = "GFX_icon_legitimacy"
-			position = { x= @entry_icon_x y = 328 }
+			position = { x= @col_2_icon_x y = @legitimacy_icon_y }
 			Orientation = "UPPER_LEFT"
 			frame = 4
+            scale = 0.8
 		}
 		instantTextBoxType = {
 			name = "text_unity"
-			position = { x = @entry_x y = 329 }
+			position = { x = @col_2_text_x y = @legitimacy_text_y }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
 			borderSize = {x = 4 y = 4}
 			text = "100"	
 			maxWidth = 72
-			maxHeight = 32
-			format = center
+			maxHeight = 32	
+			format = left
 		}
 		windowType = {
 			name = "powerprojection_topbar"
@@ -481,21 +529,22 @@ guiTypes = {
             iconType = {
                 name ="icon_powerprojection"
 				spriteType = "GFX_icon_powerprojection"
-				position = { x= 13 y = 356 }
+				position = { x= 238 y = 106 }
 				Orientation = "UPPER_LEFT"
 				hint_tag = "hint_powerprojection"
+                scale = 0.8
 			}					
 
 			instantTextBoxType = {
 				name = "text_powerprojection"
-				position = { x = @entry_x y = 359 }
+				position = { x = @col_2_text_x y = 103 }
                 textureFile = ""
-                font = "monofonto_outline_14"
+                font = "monofonto_outline_12"
                 borderSize = {x = 4 y = 4}
                 text = "100"	
                 maxWidth = 72
-                maxHeight = 32
-                format = center
+                maxHeight = 32	
+                format = left
 			}			
 		}
 		
@@ -520,150 +569,155 @@ guiTypes = {
 			iconType = {
 				name ="topbar_liberty_icon"
 				spriteType = "GFX_liberty_icon"
-				position = { x= 13 y = 356 }
+				position = { x= 238 y = 106 }
 				Orientation = "UPPER_LEFT"
+                scale = 0.8
 			}					
 
 			instantTextBoxType = {
 				name = "topbar_liberty_value"
-				position = { x = @entry_x y = 359 }
+				position = { x = @col_2_text_x y = 103 }
                 textureFile = ""
-                font = "monofonto_outline_14"
+                font = "monofonto_outline_12"
                 borderSize = {x = 4 y = 4}
                 text = "100"	
                 maxWidth = 72
-                maxHeight = 32
-                format = center
+                maxHeight = 32	
+                format = left
 			}		
 		}
         
         iconType = {
 			name ="icon_ADM"
 			spriteType = "GFX_icon_powers_administrative"
-			position = { x= @entry_icon_x y = 406 }
+			position = { x= 428 y = 40 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_adm"
 		}
         iconType = {
 			name ="icon_DIP"
 			spriteType = "GFX_icon_powers_diplomatic"
-			position = { x= @entry_icon_x y = 436 }
+			position = { x= 428 y = 70 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_dip"
 		}
         iconType = {
 			name = "icon_MIL"
 			spriteType ="GFX_icon_powers_military"
-			position = { x= @entry_icon_x y = 466 }
+			position = { x= 428 y = 100 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_mil"
 		}	
         
         instantTextBoxType = {
 			name = "text_ADM"
-			position = { x = @entry_x y = 409 }
+			position = { x = @col_4_text_x y = 43 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
             borderSize = {x = 4 y = 4}
             text = ""	
             maxWidth = 72
-            maxHeight = 32
-            format = center
+			maxHeight = 32	
+			format = left
 		}	
 		instantTextBoxType = {
 			name = "text_DIP"
-			position = { x = @entry_x y = 439 }
+			position = { x = @col_4_text_x y = 73 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
             borderSize = {x = 4 y = 4}
             text = ""	
             maxWidth = 72
-            maxHeight = 32
-            format = center
+			maxHeight = 32	
+			format = left
 		}
 		instantTextBoxType = {
 			name = "text_MIL"
-			position = { x = @entry_x y = 469 }
+			position = { x = @col_4_text_x y = 103 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
             borderSize = {x = 4 y = 4}
             text = ""	
             maxWidth = 72
-            maxHeight = 32
-            format = center
+			maxHeight = 32	
+			format = left
 		}
 
 		guiButtonType = {
 			name ="icon_merchant"
 			quadTextureSprite = "GFX_icon_merchant"
-			position = { x= 4 y = 516 }
+			position = { x= @col_3_icon_x y = 45 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_merchant"
+            scale = 0.6
 		}
 		guiButtonType = {
 			name ="icon_settler"
 			quadTextureSprite = "GFX_icon_settler"
-			position = { x= 4 y = 546 }
+			position = { x= @col_3_icon_x y = 67 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_colonist"
+            scale = 0.6
 		}
 		guiButtonType = {
 			name ="icon_diplomat"
 			quadTextureSprite = "GFX_icon_diplomat"
-			position = { x= 4 y = 576 }
+			position = { x= @col_3_icon_x y = 87 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_diplomat"
+            scale = 0.6
 		}
 		guiButtonType = {
 			name ="icon_missionary"
 			quadTextureSprite = "GFX_icon_missionary"
-			position = { x= 4 y = 606 }
+			position = { x= @col_3_icon_x y = 107 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_missionary"
+            scale = 0.6
 		}
 		instantTextBoxType = {
 			name = "text_merchants"
-			position = { x = @entry_x y = 519 }
+			position = { x = @col_3_text_x y = 43 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
             borderSize = {x = 4 y = 4}
             text = ""	
             maxWidth = 72
-            maxHeight = 32
-            format = center		
+			maxHeight = 32	
+			format = left	
 		}
 		instantTextBoxType = {
 			name = "text_settlers"
-			position = { x = @entry_x y = 549 }
+			position = { x = @col_3_text_x y = 63 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
             borderSize = {x = 4 y = 4}
             text = ""	
             maxWidth = 72
-            maxHeight = 32
-            format = center				
+			maxHeight = 32	
+			format = left		
 		}
 		instantTextBoxType = {
 			name = "text_diplomats"
-			position = { x = @entry_x y = 579 }
+			position = { x = @col_3_text_x y = 83 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
             borderSize = {x = 4 y = 4}
             text = ""	
             maxWidth = 72
-            maxHeight = 32
-            format = center				
+			maxHeight = 32	
+			format = left			
 		}
 		instantTextBoxType = {
 			name = "text_missionaries"
-			position = { x = @entry_x y = 609 }
+			position = { x = @col_3_text_x y = 103 }
 			textureFile = ""
-			font = "monofonto_outline_14"
+			font = "monofonto_outline_12"
             borderSize = {x = 4 y = 4}
             text = ""	
             maxWidth = 72
-            maxHeight = 32
-            format = center		
+			maxHeight = 32	
+			format = left	
 		}
 
         # Pause status
