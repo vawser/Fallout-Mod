@@ -12,8 +12,8 @@ slave_rebels = {
 	will_relocate = no
 	
 	resilient = no
-	reinforcing = no
-	general = no
+	reinforcing = yes
+	general = yes
 	smart = no
 	
 	artillery = 0.0
@@ -34,7 +34,7 @@ slave_rebels = {
 		factor = 1
 
         modifier = {
-			factor = 50
+			factor = 200
             owner = { has_country_flag = slave_rebellion_underway }
 		}
 	 	modifier = {
@@ -63,27 +63,15 @@ slave_rebels = {
 			}
 		}
 		modifier = {
-			factor = 2
-			NOT = { tolerance_to_this = 1 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { tolerance_to_this = -1 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { tolerance_to_this = -2 }
-		}
-		modifier = {
 			factor = 1.3
 			owner = {
-				NOT = { legitimacy_or_horde_unity = 66 }
+				NOT = { legitimacy_equivalent = 66 }
 			}
 		}
 		modifier = {
 			factor = 1.3
 			owner = {
-				NOT = { legitimacy_or_horde_unity = 75 }
+				NOT = { legitimacy_equivalent = 75 }
 			}
 		}
 	}

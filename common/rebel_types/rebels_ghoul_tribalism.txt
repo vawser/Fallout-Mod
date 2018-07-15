@@ -133,9 +133,12 @@ ghoul_tribalism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = ghoul_tribalism
+						religion = ghoul_tribalism						religion = bright_brotherhood
+						religion = renewal
 						is_reformation_center = yes
 						owner = { religion = ghoul_tribalism }
+						owner = { religion = renewal }
+						owner = { religion = bright_brotherhood }
 					}
 				}
 				add_province_modifier = {
@@ -146,6 +149,7 @@ ghoul_tribalism_rebels = {
 			if = {
 				limit = {
 					NOT = { religion = ghoul_tribalism }
+					NOT = { religion = bright_brotherhood }
 					is_reformation_center = no
 					NOT = { owner = { religion = ghoul_tribalism } }
 				}
@@ -163,6 +167,7 @@ ghoul_tribalism_rebels = {
 		OR = {
 			religion_group = religion_group_pagan
 			dominant_religion = ghoul_tribalism
+			religion = bright_brotherhood
 		}
 	}
 	
@@ -201,11 +206,13 @@ ghoul_tribalism_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = ghoul_tribalism }
+				NOT = { religion = bright_brotherhood }
 				dominant_religion = ghoul_tribalism
 			}
 			change_religion = ghoul_tribalism
 			force_converted = yes
 		}
+		add_accepted_culture = ghoul
 	}
 }
 

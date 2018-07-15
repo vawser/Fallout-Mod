@@ -1,12 +1,12 @@
 robotics_rebels = {
-    color = { 42 226 15 }
+	color = { 42 226 15 }
     
-	area = nation 					            # Sticks to provinces of their nation
-	government = the_think_tank 				        # Desires Theocracy
+	area = nation				# Sticks to provinces of their nation
+	government = the_think_tank			# Desires robo-state
 	religion = robotics
-	defection = religion			            # Defects to countries of their religion
-	defect_delay = 120				            # Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
-	independence = none				# Does not strive for independence
+	defection = religion				# Defects to countries of their religion
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none			# Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes	
@@ -102,9 +102,8 @@ robotics_rebels = {
 	 		}
 	 	}
 		modifier = {
-			factor = 5
+			factor = 2000
 			has_missionary = yes
-			religion = robotics
 		}
 		modifier = {
 			factor = 1.5
@@ -117,6 +116,10 @@ robotics_rebels = {
 		modifier = {
 			factor = 1.5
 			unrest = 6
+		}
+		modifier ={
+			factor = 0
+			NOT = { religion = robotics }
 		}
 	}
  
@@ -186,7 +189,7 @@ robotics_rebels = {
 				limit = {
 					has_rebel_faction = REB
 				}
-				add_local_autonomy = 20
+				add_local_autonomy = 50
 			}
 		}
 		if = {

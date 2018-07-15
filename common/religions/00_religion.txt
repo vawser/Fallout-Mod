@@ -707,28 +707,9 @@ religion_group_postwar = {
         fervor = yes
 	}
 
-	renewal = {
-		icon = 8
-		color = { 123 81 82 }
-		province = {
-			local_missionary_strength = -0.03
-			local_hostile_attrition = 0.5
-		}
-		country = {
-			diplomatic_reputation = 2
-			tolerance_heathen = 3
-		}
-		country_as_secondary = {
-			monthly_splendor = 0.1
-			diplomatic_reputation = 1
-		}	
-        
-       		fervor = yes
-	}
-
 	lord_of_the_pitt = {
 		color = { 0.659 0.487 0.145 }
-		icon = 9
+		icon = 22
 		
 		country = { 
 			global_manpower_modifier = 0.05
@@ -741,7 +722,7 @@ religion_group_postwar = {
 		}
         
 		on_convert = {
-			change_religion = religion_lord_of_the_pitt
+			change_religion = lord_of_the_pitt
 			add_prestige = -100
 
 			add_country_modifier = {
@@ -793,6 +774,72 @@ religion_group_atomic = {
 			atom_charm
 		}
 		aspects_name = ATOMIC_ASPECTS
+	}
+
+	bright_brotherhood = {
+		color = { 0.0383 0.697 0.325 }
+		icon = 4
+
+		province = {
+			local_missionary_strength = -0.03
+			local_hostrile_attrition = 0.5
+		}
+		
+		country = {
+			tolerance_own = 3
+			tolerance_heathen = 2
+			mil_cost_modifier = -0.2
+		}
+
+		country_as_secondary = {
+			religious_unity = 0.25
+		}
+
+		on_convert = {
+			change_religion = bright_brotherhood
+			add_prestige = -100
+
+			add_accepted_culture = ghoul
+
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		}
+		
+		declare_war_in_regency = yes
+	}
+
+ 	renewal = {
+		icon = 8
+		color = { 123 81 82 }
+		province = {
+			local_missionary_strength = -0.03
+			local_hostile_attrition = 0.5
+		}
+		country = {
+			diplomatic_reputation = 2
+			tolerance_heathen = 3
+			monthly_splendor = 0.05
+		}
+		country_as_secondary = {
+			monthly_splendor = 0.1
+			diplomatic_reputation = 1
+		}
+
+		on_convert = {
+			change_religion = renewal
+			add_prestige = -100
+
+			add_accepted_culture = ghoul
+
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		}
+        
+       		fervor = yes
 	}
     
     crusade_name = CRUSADE

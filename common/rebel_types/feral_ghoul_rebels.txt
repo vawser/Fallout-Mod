@@ -5,12 +5,12 @@ feral_ghoul_rebels = {
 	defection = none				# Does not defect
 	independence = none				# Does not strive for independence
 	unit_transfer = yes
-	gfx_type = culture_province	
+	gfx_type = ghoul_gfx
 	
 	resilient = yes
 	reinforcing = yes
 	general = yes
-	smart = yes
+	smart = no
 	
 	artillery = 0.0
 	infantry = 0.8
@@ -29,27 +29,41 @@ feral_ghoul_rebels = {
 		modifier = {
 			factor = 10
 			culture_group = ghoul_group
-            			owner = {
-                			NOT = { culture_group = ghoul_group }
-            			}
+            owner = {
+        		NOT = { culture_group = ghoul_group }
+         	}
 		}
-        		modifier = {
-			factor = 0.05
-			culture = culture_ghoul
-           			owner = {
-                			primary_culture = culture_ghoul
-       			}
+		modifier = {
+			factor = 2
+			religion = bright_brotherhood # Large population of sentient ghouls attract ferals
+		}
+		modifier = {
+			factor = 1.2
+			religion = renewal # Large population of sentient ghouls attract ferals
+		}
+        modifier = {
+			factor = 0.25
+			culture_group = ghoul_group
+           	owner = {
+				culture_group = ghoul_group
+       		}
 		}
         
 		modifier = {
 			factor = 0
-			NOT = { culture = culture_ghoul }
+			NOT = {
+				culture_group = ghoul_group
+				owner = { religion = bright_brotherhood }
+				owner = { religion = renewal }
+				religion = bright_brotherhood
+				religion = renewal
+			}
 		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
-		factor = 0
+		factor = 0.6
 		modifier = {
 			factor = 0.1
 			units_in_province = 1
@@ -75,11 +89,37 @@ feral_ghoul_rebels = {
 			unrest = 6
 		}
 		modifier = {
-			factor = 10
-			culture = culture_ghoul
+			factor = 1.1
+			NOT = {
+				religion = bright_brotherhood
+				religion = renewal
+			}
 			owner = {
-				NOT = { primary_culture = culture_ghoul }
-		            }
+				OR = {
+					religion = renewal
+					religion = bright_brotherhood
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = bright_brotherhood
+				religion = renewal
+			}
+			owner = {
+				NOT = {
+					religion = renewal
+					religion = bright_brotherhood
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			culture_group = ghoul_group
+			owner = {
+				NOT = { culture_group = ghoul_group }
+			}
 		}
 	}
  
@@ -95,7 +135,7 @@ feral_ghoul_rebels = {
 			duration = 3650
 		}
 		add_colonysize = -400
-        		add_devastation = 5
+        add_devastation = 5
 	}
 	
 	# Country scope
@@ -111,15 +151,24 @@ feral_ghoul_rebels = {
 	# Localisation for their demands
 	demands_description = "raiders_rebels_demand"
 	
-	# Country Scope	
+ 	# Country Scope
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "raiders.txt - demands_enforced_effect - [Root.GetName]" }
-		add_prestige = -25
-		if = { limit = { government = monarchy } add_legitimacy = -25 }
-        if = { limit = { government = republic } add_republican_tradition = -25 }
-        if = { limit = { is_nomad = yes } add_horde_unity = -25 }
-        if = { limit = { government = theocracy } add_devotion = -25 }
-        
-        add_stability = -1
+		if = { limit = { has_global_flag = enable_common_logging } log = "raiders.txt - demands_enforced_effect - [Root.GetName]" }
+		add_prestige = -50
+		if = {
+			limit = {
+				OR = {
+					is_true_monarchy = yes
+					is_hereditary_government = yes
+					government = administrative_settlement
+					government = diplomatic_settlement
+					government = military_Settlement
+				}
+				add_legitimacy = -50
+			}
+		if = { limit = { is_republic_government = yes } add_republican_tradition = -50 }
+		if = { limit = { is_tribe_government = yes } add_horde_unity = -50 }
+		if = { limit = { is_theocracy_government = yes } add_devotion = -50 }
+		add_stability = -2
 	}
 }

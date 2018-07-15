@@ -5,7 +5,7 @@ mutant_rebels = {
 	defection = none				# Does not defect
 	independence = none				# Does not strive for independence
 	unit_transfer = yes
-	gfx_type = culture_province	
+	gfx_type = mutant_gfx
 	
 	resilient = yes
 	reinforcing = yes
@@ -31,27 +31,22 @@ mutant_rebels = {
 		modifier = {
 			factor = 10
 			culture_group = mutant_group
-            owner = {
-                NOT = { culture_group = mutant_group }
-            }
+			owner = {
+				NOT = { culture_group = mutant_group }
+			}
 		}
-        modifier = {
+		modifier = {
 			factor = 0.05
 			culture_group = mutant_group
-            owner = {
-                culture_group = mutant_group
-            }
-		}
-        
-		modifier = {
-			factor = 0
-			NOT = { culture_group = mutant_group }
+			owner = {
+				culture_group = mutant_group
+			}
 		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
-		factor = 0
+		factor = 1
 		modifier = {
 			factor = 0.1
 			units_in_province = 1
@@ -79,9 +74,9 @@ mutant_rebels = {
 		modifier = {
 			factor = 10
 			culture_group = mutant_group
-            owner = {
-                NOT = { culture_group = mutant_group }
-            }
+			owner = {
+				NOT = { culture_group = mutant_group }
+			}
 		}
 	}
  
@@ -113,15 +108,24 @@ mutant_rebels = {
 	# Localisation for their demands
 	demands_description = "raiders_rebels_demand"
 	
-	# Country Scope	
+	# Country Scope
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "raiders.txt - demands_enforced_effect - [Root.GetName]" }
-		add_prestige = -25
-		if = { limit = { government = monarchy } add_legitimacy = -25 }
-        if = { limit = { government = republic } add_republican_tradition = -25 }
-        if = { limit = { is_nomad = yes } add_horde_unity = -25 }
-        if = { limit = { government = theocracy } add_devotion = -25 }
-        
-        add_stability = -1
+		if = { limit = { has_global_flag = enable_common_logging } log = "raiders.txt - demands_enforced_effect - [Root.GetName]" }
+		add_prestige = -50
+		if = {
+			limit = {
+				OR = {
+					is_true_monarchy = yes
+					is_hereditary_government = yes
+					government = administrative_settlement
+					government = diplomatic_settlement
+					government = military_Settlement
+				}
+				add_legitimacy = -50
+			}
+		if = { limit = { is_republic_government = yes } add_republican_tradition = -50 }
+		if = { limit = { is_tribe_government = yes } add_horde_unity = -50 }
+		if = { limit = { is_theocracy_government = yes } add_devotion = -50 }
+		add_stability = -2
 	}
 }
