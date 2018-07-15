@@ -35,6 +35,29 @@ religion_group_postwar = {
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 1 18 }
     
+    test_religion = {
+        color = { 0.6 0.33 0.5 }
+		icon = 1
+
+		country = { 
+            development_cost = -0.1
+            trade_efficiency = 0.05
+		}
+        country_as_secondary = { 
+            stability_cost_modifier = -0.1
+		}
+        
+        holy_sites = { 496 352 }
+        
+        blessings = {
+			legitimize_government
+			encourage_warriors_of_the_faith
+			send_monks_to_establish_monasteries
+			promote_territorial_rights
+			will_of_the_martyrs
+		}
+    }
+    
     secular = {
 		color = { 0.6 0.33 0.5 }
 		icon = 1

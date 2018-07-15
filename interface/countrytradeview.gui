@@ -1,148 +1,4 @@
 guiTypes = {
-
-	windowType = {
-		name = "countrytradeview_embargoeitem"
-		backGround =""
-		position = { x=0 y=0 }	
-		size = { x=32 y=38 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder = ""
-		
-		guiButtonType =
-		{
-			name ="shield"
-			position = { x= 0 y = 0 }
-			quadTextureSprite = "GFX_shield_small"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
-			buttonFont = "Main_14_black"
-			Orientation = "UPPER_LEFT"
-		}
-	}
-		
-		
-	#### TRADE NODE ENTRY
-	windowType = {
-		name ="trade_node_item"
-		backGround=""
-		position = { x= 0 y =0 }	
-		size = { x=200 y = 30 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder= ""
-		verticalBorder= ""
-		upsound = ""
-		downsound = ""
-		fullscreen=no
-		
-		
-		guiButtonType =
-		{
-			name ="goto_tradenode_button"
-			quadTextureSprite = "GFX_trade_view_node_entry_button"
-			position = { x= -32 y = 0 }
-		}
-		
-		guiButtonType =
-		{
-			name ="shield"
-			quadTextureSprite = "GFX_shield_small"
-			position = { x= -32 y = 0 }
-			orientation = "UPPER_LEFT"
-		}
-		
-		instantTextBoxType={
-			position = {x = 0 y  = 8 }
-			name = "location"
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 116
-			maxHeight = 20
-			text = "Elbonien"	
-			orientation = "UPPER_LEFT"
-			format = left
-			fixedsize = yes
-		}
-		
-		iconType =
-		{
-			name ="trader_mission"
-			spriteType = "GFX_trade_trader_strip"
-			position = { x= 134 y = 0 }
-			Orientation = "UPPER_LEFT"
-		}
-		iconType =
-		{
-			name ="income_indicator"
-			spriteType = "GFX_trade_target_strip"
-			position = { x= 166 y = 1 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-		instantTextBoxType={
-			position = {x = 195 y  = 8 }
-			name = "income"
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 58
-			maxHeight = 18
-			text = "55"	
-			orientation = "UPPER_LEFT"
-			format = right
-			fixedsize = yes
-		}
-		
-		instantTextBoxType={
-			position = {x = 255 y  = 8 }
-			name = "total_power"
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 38
-			maxHeight = 18
-			text = "5555"	
-			orientation = "UPPER_LEFT"
-			format = center
-			fixedsize = yes
-		}		
-		
-		instantTextBoxType={
-			position = {x = 293 y  = 8 }
-			name = "current_power"
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 34
-			maxHeight = 18
-			text = "55"	
-			orientation = "UPPER_LEFT"
-			format = centre
-			fixedsize = yes
-		}
-		
-		instantTextBoxType={
-			position = {x = 333 y  = 8 }
-			name = "current_value"
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 55
-			maxHeight = 18
-			text = "55"	
-			orientation = "UPPER_LEFT"
-			format = right
-			fixedsize = yes
-		}
-
-		guiButtonType = {
-			name = "send_merchant"
-			position = { x= 387 y = -1 }
-			quadTextureSprite ="GFX_button_straight_87_32"	
-			buttonText = "SEND"
-			buttonFont = "vic_18"
-			clicksound = click
-		}		
-	}
-	
 	#x is minimum resolution height for this country view to increase to large size
 	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
 	positionType =
@@ -174,7 +30,7 @@ guiTypes = {
 		iconType =
 		{
 			name ="domesticpanel_bg"
-			spriteType = "GFX_country_trade_view_bg"
+			spriteType = "GFX_countryview_main_bg"
 			position = { x= -7 y = -10 }
 			Orientation = "UPPER_LEFT"
 
@@ -929,4 +785,147 @@ guiTypes = {
 		}
 	}
 
+    
+	windowType = {
+		name = "countrytradeview_embargoeitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=32 y=38 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		guiButtonType =
+		{
+			name ="shield"
+			position = { x= 0 y = 0 }
+			quadTextureSprite = "GFX_shield_small"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+		}
+	}
+		
+		
+	#### TRADE NODE ENTRY
+	windowType = {
+		name ="trade_node_item"
+		backGround=""
+		position = { x= 0 y =0 }	
+		size = { x=200 y = 30 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		upsound = ""
+		downsound = ""
+		fullscreen=no
+		
+		
+		guiButtonType =
+		{
+			name ="goto_tradenode_button"
+			quadTextureSprite = "GFX_trade_view_node_entry_button"
+			position = { x= -32 y = 0 }
+		}
+		
+		guiButtonType =
+		{
+			name ="shield"
+			quadTextureSprite = "GFX_shield_small"
+			position = { x= -32 y = 0 }
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = {x = 0 y  = 8 }
+			name = "location"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 116
+			maxHeight = 20
+			text = "Elbonien"	
+			orientation = "UPPER_LEFT"
+			format = left
+			fixedsize = yes
+		}
+		
+		iconType =
+		{
+			name ="trader_mission"
+			spriteType = "GFX_trade_trader_strip"
+			position = { x= 134 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="income_indicator"
+			spriteType = "GFX_trade_target_strip"
+			position = { x= 166 y = 1 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = {x = 195 y  = 8 }
+			name = "income"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 58
+			maxHeight = 18
+			text = "55"	
+			orientation = "UPPER_LEFT"
+			format = right
+			fixedsize = yes
+		}
+		
+		instantTextBoxType={
+			position = {x = 255 y  = 8 }
+			name = "total_power"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 38
+			maxHeight = 18
+			text = "5555"	
+			orientation = "UPPER_LEFT"
+			format = center
+			fixedsize = yes
+		}		
+		
+		instantTextBoxType={
+			position = {x = 293 y  = 8 }
+			name = "current_power"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 34
+			maxHeight = 18
+			text = "55"	
+			orientation = "UPPER_LEFT"
+			format = centre
+			fixedsize = yes
+		}
+		
+		instantTextBoxType={
+			position = {x = 333 y  = 8 }
+			name = "current_value"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 55
+			maxHeight = 18
+			text = "55"	
+			orientation = "UPPER_LEFT"
+			format = right
+			fixedsize = yes
+		}
+
+		guiButtonType = {
+			name = "send_merchant"
+			position = { x= 387 y = -1 }
+			quadTextureSprite ="GFX_button_straight_87_32"	
+			buttonText = "SEND"
+			buttonFont = "vic_18"
+			clicksound = click
+		}		
+	}
 }

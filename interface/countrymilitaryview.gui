@@ -1,213 +1,5 @@
 guiTypes = {
 
-	######Leaderlist entry
-
-	windowType = {
-		name = "leader_list_entry"
-		backGround=""
-		position = { x=0 y=0 }	
-		size = { x=360 y= 36 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder= ""
-		verticalBorder= ""
-		fullScreen = no	
-
-		
-		guiButtonType =
-		{
-			name ="leader_banner2"
-			quadTextureSprite = "GFX_military_view_leader_button"
-			position = { x= 37 y = 0 }
-		}
-		
-		guiButtonType =
-		{
-			name ="leader_types"
-			quadTextureSprite = "GFX_leader_types"
-			position = { x= 40 y = 3 }
-			scale = 0.75
-		}
-	
-		iconType =
-		{
-			name ="leader_gender"
-			spriteType = "GFX_gender_icon"
-			position = { x= 70 y = 4 }
-			Orientation = "UPPER_LEFT"
-			scale = 0.8
-		}
-
-		instantTextBoxType = {
-			name = "leader_name"
-			position = { x = 92 y = 4 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 0 y = 0 }
-			text = ""	
-			maxWidth = 140
-			maxHeight = 20	
-			fixedsize = yes	
-		}
-		
-		iconType =
-		{
-			name ="leader_personality"
-			spriteType = "GFX_idea_unknown"
-			position = { x= 69 y = 17 }
-			Orientation = "UPPER_LEFT"
-			scale = 0.3
-		}
-
-		instantTextBoxType = {
-			name = "leader_assignment"
-			position = { x = 92 y =17 }
-			textureFile = ""
-			font = "vic_18_grey"
-			borderSize = {x = 0 y = 0}
-			text = ""	
-			maxWidth = 140
-			maxHeight = 20
-			fixedsize = yes			
-		}
-
-		##### CODER REMOVE
-		iconType = {
-			name ="leader_fire"
-			spriteType = "GFX_stars_small"
-			position = { x= 225 y = 8 }
-			Orientation = "UPPER_LEFT"
-		}
-		##### CODER REMOVE
-		iconType = {
-			name ="leader_shock"
-			spriteType = "GFX_stars_small"
-			position = { x= 246 y = 8 }
-			Orientation = "UPPER_LEFT"
-		}
-		##### CODER REMOVE
-		iconType = {
-			name ="leader_maneuever"
-			spriteType = "GFX_stars_small"
-			position = { x= 267 y = 8 }
-			Orientation = "UPPER_LEFT"
-		}
-		##### CODER REMOVE
-		iconType = {
-			name ="leader_siege"
-			spriteType = "GFX_stars_small"
-			position = { x= 288 y = 8 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-
-		guiButtonType = {
-			name ="leader_dismiss"
-			quadTextureSprite = "GFX_dismiss_leader"
-			position = { x= 320 y = 4 }			
-		}
-	}
-
-	### REMOVE
-	windowType = {
-		name = "unit_list_item"
-		backGround =""
-		position = { x=0 y=0 }	
-		size = { x=500 y=40 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder = ""
-		verticalBorder= ""
-		fullScreen = no
-				
-		guiButtonType = {
-			name = "goto_unit"
-			position = { x=15 y =-8}
-			spriteType ="GFX_nation_decisions_banner"
-			Orientation = "UPPER_LEFT"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
-			buttonFont = "vic_18"
-		}	
-				
-		instantTextBoxType = {
-			name = "name"
-			position = { x = 25 y =0 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "name"	
-			maxWidth = 128
-			maxHeight = 32
-			format = left
-		}
-		
-		instantTextBoxType = {
-			name = "size"
-			position = { x = 120 y =0 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "size"	
-			maxWidth = 96
-			maxHeight = 32
-			format = left
-		}
-		
-		instantTextBoxType = {
-			name = "morale"
-			position = { x = 170 y =0 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "morale"	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
-		
-		instantTextBoxType = {
-			name = "location"
-			position = { x = 230 y =0 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "location"
-			maxWidth = 96
-			maxHeight = 32
-			format = left
-		}	
-		
-		iconType =
-		{
-			name ="unit_type"
-			spriteType = "GFX_unit_types_strip_mil_view"
-			position = { x= 300 y = -15 }
-			Orientation = "UPPER_LEFT"
-
-		}
-		
-		guiButtonType = {
-			name = "has_leader"
-			position = { x=380 y =5}
-			spriteType ="GFX_has_leader_status"
-			Orientation = "UPPER_LEFT"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
-			buttonFont = "vic_18"
-		}	
-	
-		iconType =
-		{
-			name ="status"
-			spriteType = "GFX_unit_status"
-			position = { x= 435 y = -5 }
-			Orientation = "UPPER_LEFT"
-
-		}
-	}
 	
 	### MILITARY VIEW
 	windowType = {
@@ -225,14 +17,14 @@ guiTypes = {
 		iconType =
 		{
 			name ="background"
-			spriteType = "GFX_country_military_view_bg"
+			spriteType = "GFX_countryview_main_bg"
 			position = { x= -7 y = -10 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType =
 		{
 			name ="CoCbackground"
-			spriteType = "GFX_country_military_view_bg_ap"
+			spriteType = "GFX_countryview_main_bg"
 			position = { x= -7 y = -10 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -1899,4 +1691,214 @@ guiTypes = {
 		position = { x = 5 y = -1 }
 		Orientation = "UPPER_LEFT"
 	}
+    
+    ######Leaderlist entry
+
+	windowType = {
+		name = "leader_list_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=360 y= 36 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		
+		guiButtonType =
+		{
+			name ="leader_banner2"
+			quadTextureSprite = "GFX_military_view_leader_button"
+			position = { x= 37 y = 0 }
+		}
+		
+		guiButtonType =
+		{
+			name ="leader_types"
+			quadTextureSprite = "GFX_leader_types"
+			position = { x= 40 y = 3 }
+			scale = 0.75
+		}
+	
+		iconType =
+		{
+			name ="leader_gender"
+			spriteType = "GFX_gender_icon"
+			position = { x= 70 y = 4 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name = "leader_name"
+			position = { x = 92 y = 4 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }
+			text = ""	
+			maxWidth = 140
+			maxHeight = 20	
+			fixedsize = yes	
+		}
+		
+		iconType =
+		{
+			name ="leader_personality"
+			spriteType = "GFX_idea_unknown"
+			position = { x= 69 y = 17 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.3
+		}
+
+		instantTextBoxType = {
+			name = "leader_assignment"
+			position = { x = 92 y =17 }
+			textureFile = ""
+			font = "vic_18_grey"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 140
+			maxHeight = 20
+			fixedsize = yes			
+		}
+
+		##### CODER REMOVE
+		iconType = {
+			name ="leader_fire"
+			spriteType = "GFX_stars_small"
+			position = { x= 225 y = 8 }
+			Orientation = "UPPER_LEFT"
+		}
+		##### CODER REMOVE
+		iconType = {
+			name ="leader_shock"
+			spriteType = "GFX_stars_small"
+			position = { x= 246 y = 8 }
+			Orientation = "UPPER_LEFT"
+		}
+		##### CODER REMOVE
+		iconType = {
+			name ="leader_maneuever"
+			spriteType = "GFX_stars_small"
+			position = { x= 267 y = 8 }
+			Orientation = "UPPER_LEFT"
+		}
+		##### CODER REMOVE
+		iconType = {
+			name ="leader_siege"
+			spriteType = "GFX_stars_small"
+			position = { x= 288 y = 8 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+
+		guiButtonType = {
+			name ="leader_dismiss"
+			quadTextureSprite = "GFX_dismiss_leader"
+			position = { x= 320 y = 4 }			
+		}
+	}
+
+	### REMOVE
+	windowType = {
+		name = "unit_list_item"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=500 y=40 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		verticalBorder= ""
+		fullScreen = no
+				
+		guiButtonType = {
+			name = "goto_unit"
+			position = { x=15 y =-8}
+			spriteType ="GFX_nation_decisions_banner"
+			Orientation = "UPPER_LEFT"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}	
+				
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 25 y =0 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "name"	
+			maxWidth = 128
+			maxHeight = 32
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "size"
+			position = { x = 120 y =0 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "size"	
+			maxWidth = 96
+			maxHeight = 32
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "morale"
+			position = { x = 170 y =0 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "morale"	
+			maxWidth = 64
+			maxHeight = 32
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "location"
+			position = { x = 230 y =0 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "location"
+			maxWidth = 96
+			maxHeight = 32
+			format = left
+		}	
+		
+		iconType =
+		{
+			name ="unit_type"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 300 y = -15 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		
+		guiButtonType = {
+			name = "has_leader"
+			position = { x=380 y =5}
+			spriteType ="GFX_has_leader_status"
+			Orientation = "UPPER_LEFT"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}	
+	
+		iconType =
+		{
+			name ="status"
+			spriteType = "GFX_unit_status"
+			position = { x= 435 y = -5 }
+			Orientation = "UPPER_LEFT"
+
+		}
+	}
+	
 }

@@ -25,283 +25,6 @@ guiTypes = {
 		position = { x=1337 y=82 }
 	}
 
-	### INTERACTION
-	windowType = {
-		name = "interaction_item"
-		position = { x=0 y=0 }
-		size = { x=500 y=30 }
-		moveable = 0
-		Orientation = "UPPER_LEFT"		
-		
-		instantTextBoxType = {
-			name = "interaction_name"
-			position = { x = 51 y = 6 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 150
-			maxHeight = 15
-			format = left
-			fixedsize = yes
-		}
-		
-		iconType =
-		{
-			name ="interaction_icon"
-			spriteType = "GFX_support_loyalists_button_icon"
-			position = { x= 20 y = 6 }
-			Orientation = "UPPER_LEFT"
-		}
-	}
-
-	windowType = {
-		name = "interaction_icon_item"
-		backGround =""
-		position = { x=0 y=0 }	
-		size = { x=12 y=12 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder = ""
-		
-		iconType =
-		{
-			name = "interaction_icon"
-			spriteType = "GFX_support_loyalists_button_icon"
-			position = { x= 0 y = 0 }
-			Orientation = "CENTER_LEFT"
-		}				
-	}
-
-	### TRADE COMPANY
-	windowType = {
-		name = "subject_trade_company_item"
-		position = { x=0 y=0 }
-		size = { x=500 y=30 }
-		moveable = 0
-		Orientation = "UPPER_LEFT"
-
-		iconType =
-		{
-			name ="flag"
-			spriteType = "GFX_shield_small"
-			position = { x= -2 y = 5 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-		iconType =
-		{
-			name ="subject_company_icon"
-			spriteType = "GFX_subject_tradecompany_icon"
-			position = { x= 16 y = 5 }
-			Orientation = "UPPER_LEFT"
-		}		
-		
-		instantTextBoxType = {
-			name = "name"
-			position = { x = 51 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "name"	
-			maxWidth = 132
-			maxHeight = 15
-			format = left
-			fixedsize = yes
-			alwaystransparent = yes
-		}
-		
-		instantTextBoxType = {
-			name = "income"
-			position = { x = 220 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "00"	
-			maxWidth = 60
-			maxHeight = 30
-			format = center
-		}
-		
-		iconType =
-		{
-			name ="icon_strong_merchant"
-			quadTextureSprite = "GFX_icon_merchant"
-			position = { x= 381 y = 6 }
-			Orientation = "UPPER_LEFT"
-		}
-
-		guiButtonType = {
-			name = "promote_investments_button"
-			position = { x = 418 y = 7 }
-			quadTextureSprite ="GFX_promote_investments_button_small"	
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
-			buttonFont = "Main_14_black"
-			Orientation = "UPPER_LEFT"
-		}
-		
-		iconType = {
-			name ="promote_investments_button_glow"
-			spriteType = "GFX_country_subject_button_small_glow"
-			position = { x=418 y=7}
-			Orientation = "UPPER_LEFT"
-		}
-	}
-
-	### SUBJECT
-	windowType = {
-		name = "subject_item"
-		position = { x=0 y=0 }	
-		size = { x=500 y=30 }
-		moveable = 0
-		Orientation = "UPPER_LEFT"
-		
-		
-		instantTextBoxType = {
-			name = "name"
-			position = { x = 51 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "name"	
-			maxWidth = 132
-			maxHeight = 15
-			format = left
-			fixedsize = yes
-			alwaystransparent = yes
-		}
-		
-		guiButtonType = {
-			name = "interactions_dropdown_button"
-			position = { x = -2 y = 6 }
-			quadTextureSprite ="GFX_subject_bg_tile"
-		}
-		
-		iconType = {
-			name ="flag"
-			spriteType = "GFX_shield_small"
-			position = { x= -2 y = 5 }
-		}
-		
-		iconType = {
-			name ="subject_type_icon"
-			spriteType = "GFX_subject_colony_icon"
-			position = { x= 13 y = 5 }
-		}
-		
-		instantTextBoxType = {
-			name = "relation"
-			position = { x = 181 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "00"	
-			maxWidth = 40
-			maxHeight = 30
-			format = center
-		}
-		
-		instantTextBoxType = {
-			name = "liberty_value"
-			position = { x = 304 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "0"	
-			maxWidth = 50
-			maxHeight = 30
-			format = center
-		}
-		
-		instantTextBoxType = {
-			name = "armysize"
-			position = { x = 345 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "00"	
-			maxWidth = 30
-			maxHeight = 30
-			format = center
-		}
-		
-		OverlappingElementsBoxType = {
-			name = "interaction_icons"
-			position = { x = 415 y = 7 }
-			size = { x = 64 y = 8 }
-			Orientation = "UPPER_LEFT"
-			format = center
-			spacing = 8
-		}
-		
-		iconType = {
-			name ="icon_mil_focus"
-			spriteType = "GFX_subject_focus_icons"
-			position = { x= 468 y = 7 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-		instantTextBoxType = {
-			name = "income"
-			position = { x = 220 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "00"	
-			maxWidth = 57
-			maxHeight = 30
-			format = center
-		}
-		
-		iconType = {
-			name = "isolationism_icon"
-			spriteType = "GFX_isolationism_icons"
-			position = { x = 385 y = 10 }
-		}
-		
-		iconType = {
-			name ="icon_tribute"
-			spriteType = "GFX_subject_tribute_icons"
-			position = { x= 466 y = 5 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-		iconType =
-		{
-			name ="merchant_icon"
-			quadTextureSprite = "GFX_icon_merchant"
-			position = { x= 381 y = 6 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-		instantTextBoxType = {
-			name = "tariff_efficiency"
-			position = { x = 260 y = 9 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "00"	
-			maxWidth = 60
-			maxHeight = 30
-			format = center
-		}
-		
-		iconType = {
-			name ="treasure_fleet_progress"
-			spriteType = "GFX_treasure_fleet_progressbar"
-			position = { x= 47 y = 27 }
-			rotation = 1.5708
-		}
-		
-		iconType = {
-			name ="treasure_fleet_progressframe"
-			spriteType = "GFX_treasure_fleet_progress_frame"
-			position = { x= 40 y = 10 }
-		}
-	}
-	
 	### MAIN WINDOW
 	windowType = {
 		name = "countrysubjectview"
@@ -326,7 +49,7 @@ guiTypes = {
 		iconType =
 		{
 			name = "subjectspanel_bg_bottom"
-			spriteType = "GFX_country_subject_bg"
+			spriteType = "GFX_countryview_main_bg"
 			position = { x = -4 y = -10 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -1655,4 +1378,283 @@ guiTypes = {
 		}
 		
 	}
+    
+    
+	### INTERACTION
+	windowType = {
+		name = "interaction_item"
+		position = { x=0 y=0 }
+		size = { x=500 y=30 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"		
+		
+		instantTextBoxType = {
+			name = "interaction_name"
+			position = { x = 51 y = 6 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = ""	
+			maxWidth = 150
+			maxHeight = 15
+			format = left
+			fixedsize = yes
+		}
+		
+		iconType =
+		{
+			name ="interaction_icon"
+			spriteType = "GFX_support_loyalists_button_icon"
+			position = { x= 20 y = 6 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	windowType = {
+		name = "interaction_icon_item"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=12 y=12 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		iconType =
+		{
+			name = "interaction_icon"
+			spriteType = "GFX_support_loyalists_button_icon"
+			position = { x= 0 y = 0 }
+			Orientation = "CENTER_LEFT"
+		}				
+	}
+
+	### TRADE COMPANY
+	windowType = {
+		name = "subject_trade_company_item"
+		position = { x=0 y=0 }
+		size = { x=500 y=30 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="flag"
+			spriteType = "GFX_shield_small"
+			position = { x= -2 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="subject_company_icon"
+			spriteType = "GFX_subject_tradecompany_icon"
+			position = { x= 16 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 51 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "name"	
+			maxWidth = 132
+			maxHeight = 15
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "income"
+			position = { x = 220 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "00"	
+			maxWidth = 60
+			maxHeight = 30
+			format = center
+		}
+		
+		iconType =
+		{
+			name ="icon_strong_merchant"
+			quadTextureSprite = "GFX_icon_merchant"
+			position = { x= 381 y = 6 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "promote_investments_button"
+			position = { x = 418 y = 7 }
+			quadTextureSprite ="GFX_promote_investments_button_small"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="promote_investments_button_glow"
+			spriteType = "GFX_country_subject_button_small_glow"
+			position = { x=418 y=7}
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	### SUBJECT
+	windowType = {
+		name = "subject_item"
+		position = { x=0 y=0 }	
+		size = { x=500 y=30 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 51 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "name"	
+			maxWidth = 132
+			maxHeight = 15
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		guiButtonType = {
+			name = "interactions_dropdown_button"
+			position = { x = -2 y = 6 }
+			quadTextureSprite ="GFX_subject_bg_tile"
+		}
+		
+		iconType = {
+			name ="flag"
+			spriteType = "GFX_shield_small"
+			position = { x= -2 y = 5 }
+		}
+		
+		iconType = {
+			name ="subject_type_icon"
+			spriteType = "GFX_subject_colony_icon"
+			position = { x= 13 y = 5 }
+		}
+		
+		instantTextBoxType = {
+			name = "relation"
+			position = { x = 181 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "00"	
+			maxWidth = 40
+			maxHeight = 30
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "liberty_value"
+			position = { x = 304 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "0"	
+			maxWidth = 50
+			maxHeight = 30
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "armysize"
+			position = { x = 345 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "00"	
+			maxWidth = 30
+			maxHeight = 30
+			format = center
+		}
+		
+		OverlappingElementsBoxType = {
+			name = "interaction_icons"
+			position = { x = 415 y = 7 }
+			size = { x = 64 y = 8 }
+			Orientation = "UPPER_LEFT"
+			format = center
+			spacing = 8
+		}
+		
+		iconType = {
+			name ="icon_mil_focus"
+			spriteType = "GFX_subject_focus_icons"
+			position = { x= 468 y = 7 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "income"
+			position = { x = 220 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "00"	
+			maxWidth = 57
+			maxHeight = 30
+			format = center
+		}
+		
+		iconType = {
+			name = "isolationism_icon"
+			spriteType = "GFX_isolationism_icons"
+			position = { x = 385 y = 10 }
+		}
+		
+		iconType = {
+			name ="icon_tribute"
+			spriteType = "GFX_subject_tribute_icons"
+			position = { x= 466 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="merchant_icon"
+			quadTextureSprite = "GFX_icon_merchant"
+			position = { x= 381 y = 6 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "tariff_efficiency"
+			position = { x = 260 y = 9 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "00"	
+			maxWidth = 60
+			maxHeight = 30
+			format = center
+		}
+		
+		iconType = {
+			name ="treasure_fleet_progress"
+			spriteType = "GFX_treasure_fleet_progressbar"
+			position = { x= 47 y = 27 }
+			rotation = 1.5708
+		}
+		
+		iconType = {
+			name ="treasure_fleet_progressframe"
+			spriteType = "GFX_treasure_fleet_progress_frame"
+			position = { x= 40 y = 10 }
+		}
+	}
+	
 }

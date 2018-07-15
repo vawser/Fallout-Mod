@@ -14,8 +14,151 @@ guiTypes = {
 		name ="countryestatesview_scaling_huge_min_inc"
 		position = { x= 9999 y = 314 }
 	}
+    
+	### MAIN WINDOW
+	windowType = {
+		name = "countryestatesview"
+		position = { x = 150 y = 134 }
+        show_position = { x = 150 y = 134 }
+        hide_position = { x=-1000 y =134 }	
+		animation_type = "decelerated"
+		animation_time = 300
+		size = { x=1024 y=100 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		upsound = tab_estates
+		
+		iconType =
+		{
+			name ="background"
+			spriteType = "GFX_countryview_main_bg"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+        iconType = {
+			name ="decisions_banner_1"
+			spriteType = "GFX_countryview_full_banner"
+			position = { x= 17 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+        
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 445 y = 26 }
+			quadTextureSprite ="GFX_fallout_menu_button"	
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}
+        
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 0 y = 24 }
+			textureFile = ""
+			font = "monofonto_outline_18"
+			borderSize = {x = 4 y = 4}	
+			text = "ESTATES_TITLE"	
+			maxWidth = 500
+			maxHeight = 32
+			format = centre
+		}						
+		
+		guiButtonType =	{
+			name ="name_sort_button"
+			spriteType = "GFX_fm_button_94x31"
+			position = { x = 50 y = 60 }
+			buttonText = "NAME"
+			buttonFont = "monofonto_outline_12"	
+		}		
 
-	### ESTATE
+		guiButtonType =	{
+			name ="loyalty_sort_button"
+			spriteType = "GFX_fm_button_94x31"
+			position = { x = 150 y = 60 }
+            buttonText = "Loyalty"
+			buttonFont = "monofonto_outline_12"	
+		}	
+		
+		guiButtonType =	{
+			name ="influence_sort_button"
+			spriteType = "GFX_fm_button_94x31"
+			position = { x = 250 y = 60 }
+            buttonText = "Influence"
+			buttonFont = "monofonto_outline_12"	
+		}			
+	
+		guiButtonType =	{
+			name ="territory_sort_button"
+			spriteType = "GFX_fm_button_94x31"
+			position = { x = 350 y = 60 }
+            buttonText = "Territory"
+			buttonFont = "monofonto_outline_12"	
+		}	
+
+		listboxType = {
+            name = "estates_listbox"
+            backGround = ""
+            position = { x=20 y=100 }
+            size = { x=450 y=460 }
+            Orientation = "UPPER_LEFT"
+            horizontal = 0
+            spacing = 1.5
+            scrollbartype = "standardlistbox_noslider"
+            borderSize = {x = 0 y = 0}
+        }
+        
+		windowType = {
+			name = "estate_actions_window"
+			backGround=""
+			position = { x = 500 y = 0 }
+			size = { x=296 y=304 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+            
+			iconType = {
+				name ="bg"
+				spriteType = "GFX_countryview_popout_bar"
+				position = { x=0 y=0 }	
+				Orientation = "UPPER_LEFT"
+			}
+			
+			listboxType = {
+				name = "listbox"
+				backGround = ""
+				position = { x = 20 y = 40 }
+				size = { x=350 y=510 }
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 1.5
+				scrollbartype = "standardlistbox_noslider"
+				borderSize = {x = 0 y = 0}
+			}
+			
+            iconType = {
+                name ="actions_banner_1"
+                spriteType = "GFX_button_284"
+                position = { x= 60 y = 20 }
+                Orientation = "UPPER_LEFT"
+            }
+            
+			instantTextBoxType = {
+				name = "title"
+				position = { x=90 y=28 }
+				format = center
+				font = "monofonto_outline_18"
+				maxWidth = 220
+				maxHeight = 32	
+				Orientation = "UPPER_LEFT"
+				text = "INTERACTIONS"
+			}	
+		}
+	}
+    
+    ### ESTATE
 	windowType = {
 		name = "estate_item"
 		position = { x=0 y=0 }	
@@ -193,148 +336,5 @@ guiTypes = {
 			fixedsize = yes		
 			allwaystransparent = yes			
 		}		
-	}
-	
-	### MAIN WINDOW
-	windowType = {
-		name = "countryestatesview"
-		position = { x = 150 y = 134 }
-        show_position = { x = 150 y = 134 }
-        hide_position = { x=-1000 y =134 }	
-		animation_type = "decelerated"
-		animation_time = 300
-		size = { x=1024 y=100 }
-		moveable = 0
-		Orientation = "UPPER_LEFT"
-		upsound = tab_estates
-		
-		iconType =
-		{
-			name ="background"
-			spriteType = "GFX_countryview_main_bg"
-			position = { x= 0 y = 0 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-        iconType = {
-			name ="decisions_banner_1"
-			spriteType = "GFX_countryview_full_banner"
-			position = { x= 17 y = 20 }
-			Orientation = "UPPER_LEFT"
-		}
-        
-		guiButtonType = {
-			name = "close_button"
-			position = { x = 445 y = 26 }
-			quadTextureSprite ="GFX_fallout_menu_button"	
-			shortcut = "ESCAPE"
-			Orientation = "UPPER_LEFT"
-			clicksound = close_window
-		}
-        
-		instantTextBoxType = {
-			name = "window_title"
-			position = { x = 0 y = 24 }
-			textureFile = ""
-			font = "monofonto_outline_18"
-			borderSize = {x = 4 y = 4}	
-			text = "ESTATES_TITLE"	
-			maxWidth = 500
-			maxHeight = 32
-			format = centre
-		}						
-		
-		guiButtonType =	{
-			name ="name_sort_button"
-			spriteType = "GFX_fm_button_94x31"
-			position = { x = 50 y = 60 }
-			buttonText = "NAME"
-			buttonFont = "monofonto_outline_12"	
-		}		
-
-		guiButtonType =	{
-			name ="loyalty_sort_button"
-			spriteType = "GFX_fm_button_94x31"
-			position = { x = 150 y = 60 }
-            buttonText = "Loyalty"
-			buttonFont = "monofonto_outline_12"	
-		}	
-		
-		guiButtonType =	{
-			name ="influence_sort_button"
-			spriteType = "GFX_fm_button_94x31"
-			position = { x = 250 y = 60 }
-            buttonText = "Influence"
-			buttonFont = "monofonto_outline_12"	
-		}			
-	
-		guiButtonType =	{
-			name ="territory_sort_button"
-			spriteType = "GFX_fm_button_94x31"
-			position = { x = 350 y = 60 }
-            buttonText = "Territory"
-			buttonFont = "monofonto_outline_12"	
-		}	
-
-		listboxType = {
-            name = "estates_listbox"
-            backGround = ""
-            position = { x=20 y=100 }
-            size = { x=450 y=460 }
-            Orientation = "UPPER_LEFT"
-            horizontal = 0
-            spacing = 1.5
-            scrollbartype = "standardlistbox_noslider"
-            borderSize = {x = 0 y = 0}
-        }
-        
-		windowType = {
-			name = "estate_actions_window"
-			backGround=""
-			position = { x = 500 y = 0 }
-			size = { x=296 y=304 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder= ""
-			verticalBorder= ""
-			fullScreen = no
-            
-			iconType = {
-				name ="bg"
-				spriteType = "GFX_countryview_popout_bar"
-				position = { x=0 y=0 }	
-				Orientation = "UPPER_LEFT"
-			}
-			
-			listboxType = {
-				name = "listbox"
-				backGround = ""
-				position = { x = 20 y = 40 }
-				size = { x=350 y=510 }
-				Orientation = "UPPER_LEFT"
-				horizontal = 0
-				spacing = 1.5
-				scrollbartype = "standardlistbox_noslider"
-				borderSize = {x = 0 y = 0}
-			}
-			
-            iconType = {
-                name ="actions_banner_1"
-                spriteType = "GFX_button_284"
-                position = { x= 60 y = 20 }
-                Orientation = "UPPER_LEFT"
-            }
-            
-			instantTextBoxType = {
-				name = "title"
-				position = { x=90 y=28 }
-				format = center
-				font = "monofonto_outline_18"
-				maxWidth = 220
-				maxHeight = 32	
-				Orientation = "UPPER_LEFT"
-				text = "INTERACTIONS"
-			}	
-		}
 	}
 }
