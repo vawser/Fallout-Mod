@@ -200,7 +200,9 @@ guiTypes = {
 		name = "countryestatesview"
 		position = { x = 150 y = 134 }
         show_position = { x = 150 y = 134 }
-        hide_position = { x = -9999  y = 134 }
+        hide_position = { x=-1000 y =134 }	
+		animation_type = "decelerated"
+		animation_time = 300
 		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
@@ -247,7 +249,7 @@ guiTypes = {
 			spriteType = "GFX_fm_button_94x31"
 			position = { x = 50 y = 60 }
 			buttonText = "NAME"
-			buttonFont = "monofonto_outline_16"	
+			buttonFont = "monofonto_outline_12"	
 		}		
 
 		guiButtonType =	{
@@ -255,7 +257,7 @@ guiTypes = {
 			spriteType = "GFX_fm_button_94x31"
 			position = { x = 150 y = 60 }
             buttonText = "Loyalty"
-			buttonFont = "monofonto_outline_16"	
+			buttonFont = "monofonto_outline_12"	
 		}	
 		
 		guiButtonType =	{
@@ -263,7 +265,7 @@ guiTypes = {
 			spriteType = "GFX_fm_button_94x31"
 			position = { x = 250 y = 60 }
             buttonText = "Influence"
-			buttonFont = "monofonto_outline_16"	
+			buttonFont = "monofonto_outline_12"	
 		}			
 	
 		guiButtonType =	{
@@ -271,14 +273,14 @@ guiTypes = {
 			spriteType = "GFX_fm_button_94x31"
 			position = { x = 350 y = 60 }
             buttonText = "Territory"
-			buttonFont = "monofonto_outline_16"	
+			buttonFont = "monofonto_outline_12"	
 		}	
 
 		listboxType = {
             name = "estates_listbox"
             backGround = ""
             position = { x=20 y=100 }
-            size = { x=450 y=480 }
+            size = { x=450 y=460 }
             Orientation = "UPPER_LEFT"
             horizontal = 0
             spacing = 1.5
@@ -308,7 +310,7 @@ guiTypes = {
 				name = "listbox"
 				backGround = ""
 				position = { x = 20 y = 40 }
-				size = { x=350 y=550 }
+				size = { x=350 y=510 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 1.5

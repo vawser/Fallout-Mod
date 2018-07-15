@@ -623,7 +623,7 @@ guiTypes = {
             
             iconType = {
 				name ="setting_1_bg"
-				spriteType = "GFX_mesh_bg_300"
+				spriteType = "GFX_unitpanel_unit_element_bg"
 				position = { x= 108 y = 70 }
                 scale = 0.75
 			}
@@ -658,13 +658,13 @@ guiTypes = {
             
             iconType = {
 				name ="setting_2_bg"
-				spriteType = "GFX_mesh_bg_300"
+				spriteType = "GFX_unitpanel_unit_element_bg"
 				position = { x= 108 y = 170 }
                 scale = 0.75
 			}
             
 			instantTextBoxType={
-				position = { x=122 y=184}
+				position = { x=155 y=184}
 				name = "aggressiveness_label"
 				font = "monofonto_outline_16"
 				maxWidth = 200
@@ -694,7 +694,7 @@ guiTypes = {
             
 			guiButtonType = {
                 name = "close"
-                position = { x = 190 y = 280 }
+                position = { x = 175 y = 280 }
                 quadTextureSprite ="GFX_fm_button_94x31"	
                 buttonFont = "monofonto_outline_12"
                 buttonText = "Close"

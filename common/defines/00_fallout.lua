@@ -10,10 +10,11 @@ NDefines.NGame.GREAT_POWER_FRENZY_START = "9999.1.1"
 -- Compatibility / Disabled 
 --------------------------------
 NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
-NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 0
+NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 5
 NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 0
 NDefines.NCountry.MONARCH_DEATH = 0
 NDefines.NCountry.ALLOW_ZERO_BASE_VALUES = 1
+NDefines.NCountry.SPLENDOR_ABILITY_COST = 2000
 
 --------------------------------
 -- Diplomacy

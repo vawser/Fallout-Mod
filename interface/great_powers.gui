@@ -1,0 +1,180 @@
+guiTypes = {
+	windowType = {
+		name = "great_powers"
+		backGround="great_powers_bg"
+		position = { x=-274 y= -340 }	
+		size = { x=548 y=691 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		orientation = CENTER
+		
+		upsound = tab_government
+		downsound = ""
+
+		guiButtonType = {
+			name ="great_powers_bg"
+			spriteType = "GFX_countryview_main_bg"
+			position = { x= 0 y = 0 }
+			
+		}
+        iconType = {
+			name ="gp_label_bg"
+			spriteType = "GFX_button_400"
+			position = { x= 50 y = 20 }
+		}
+		instantTextBoxType = {
+			name = "gp_label"
+			position = { x = 100 y = 26 }
+			textureFile = ""
+			font = "monofonto_outline_18"
+			borderSize = {x = 4 y = 2}
+			maxWidth =300
+			maxHeight = 100	
+			format = centre
+		}
+		
+        
+		iconType = {
+			name ="great_power_rank_sort"
+			spriteType = "GFX_great_power_rank_sort"
+			position = { x= 45 y = -9999 }
+		}
+		iconType = {
+			name ="great_power_name_sort"
+			spriteType = "GFX_great_power_name_sort"
+			position = { x= 96 y = -9999 }
+		}
+		instantTextBoxType = {
+			name = "great_power_name_label"
+			position = { x = 96 y = -9999 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 196
+			maxHeight = 24
+			format = centre
+			text = "GREATPOWERWIN_NAME"
+		}
+		iconType = {
+			name ="great_power_rating_sort"
+			spriteType = "GFX_great_power_rating_sort"
+			position = { x= 293 y = -9999 }	
+		}
+		iconType = {
+			name ="great_power_development_sort"
+			spriteType = "GFX_great_power_development_sort"
+			position = { x= 364 y = -9999 }
+		}
+		iconType = {
+			name ="great_power_tech_cost_sort"
+			spriteType = "GFX_great_power_tech_cost_sort"
+			position = { x= 435 y = -9999 }
+		}
+		listboxType = {
+			name = "gp_list"
+			position = { x = 20 y = 80 }
+			backGround=""
+			size = { x=475  y = 360}
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		guiButtonType = {
+			name = "close_button"
+			position = { x= 200 y = 520}
+			quadTextureSprite ="GFX_fm_button_94x31"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "PAPACY_CLOSE"
+			buttonFont = "monofonto_outline_12"
+			clicksound = close_window
+			shortcut = "ESCAPE"
+		}
+	}
+	
+	windowType = {
+		name = "gp_entry"
+		backGround=""
+		position = { x= 0 y=0 }	
+		size = { x=400 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+        iconType = {
+			name ="gp_entry_bg"
+			spriteType = "GFX_decision_entry_bg"
+			position = { x= 0 y = 0 }
+            scale = 0.9
+		}
+        
+		guiButtonType = {
+			name ="shield"
+			quadTextureSprite = "GFX_shield_small"
+			position = { x= 20 y = 12 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14_black"
+		}
+		
+		instantTextBoxType = {
+			name = "rank"
+			position = { x = 380 y = 18 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 4 y = 2}
+			maxWidth =60
+			maxHeight = 100	
+			format = center
+		}
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 60 y = 18 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 4 y = 2}
+			maxWidth = 200
+			maxHeight = 32	
+			format = left
+		}
+		instantTextBoxType = {
+			name = "rating"
+			position = { x = 240 y = 18 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 4 y = 2}
+			maxWidth =70
+			maxHeight = 100	
+			format = center
+		}			
+		instantTextBoxType = {
+			name = "development"
+			position = { x = 280 y = 18 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 4 y = 2}
+			maxWidth =70
+			maxHeight = 100	
+			format = center
+		}		
+
+		instantTextBoxType = {
+			name = "tech"
+			position = { x = 320 y = 18 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 4 y = 2}
+			maxWidth =70
+			maxHeight = 100	
+			format = center
+		}		
+	}	
+}

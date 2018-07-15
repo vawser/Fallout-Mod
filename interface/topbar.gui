@@ -101,19 +101,13 @@ guiTypes = {
         iconType = {
 			name ="topbar_main_bg"
 			spriteType = "GFX_topbar_main_bg"
-			position = { x= -206 y = -10 }
+			position = { x= -158 y = -10 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="topbar_name_bg"
 			spriteType = "GFX_button_400"
 			position = { x= 130 y = 5 }
-			Orientation = "UPPER_LEFT"
-		}
-        iconType = {
-			name ="topbar_button_bg"
-			spriteType = "GFX_topbar_button_bg"
-			position = { x= 540 y = -60 }
 			Orientation = "UPPER_LEFT"
 		}
         
@@ -143,32 +137,22 @@ guiTypes = {
         # Buttons
 		guiButtonType = {
 			name = "open_build_interface_button"
-			position = { x = 564 y = 10 }
-			quadTextureSprite ="GFX_fm_button_94x31"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
-            buttonText = "Build"
-			buttonFont = "monofonto_outline_14"
+			position = { x = 540 y = 10 }
+			quadTextureSprite ="GFX_topbar_build_button"
 			clicksound = macro_build
 			hint_tag = "hint_macrobuild"
 			shortcut = "b"
 		}
 		guiButtonType = {
 			name = "great_power_button"
-			position = { x = 564 y = 45 }
-			quadTextureSprite ="GFX_fm_button_94x31"
-            buttonText = "Powers"
-			buttonFont = "monofonto_outline_14"
-			clicksound = macro_build
+			position = { x = 540 y = 50 }
+			quadTextureSprite ="GFX_topbar_great_power_button"
 		}
         guiButtonType = {
 			name = "current_age_button"
-			position = { x = 564 y = 80 }
-			quadTextureSprite ="GFX_fm_button_94x31"
+			position = { x = 540 y = 90 }
+			quadTextureSprite ="GFX_topbar_age_button"
 			clicksound = macro_build
-            buttonText = "Ages"
-            buttonFont = "monofonto_outline_14"
 		}
         
         iconType = {

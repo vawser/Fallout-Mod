@@ -3,8 +3,10 @@ guiTypes = {
 	windowType = {
 		name = "countrycourtview"
 		position = { x = 150 y = 134 }
-        show_position = { x = 150 y = 134 }
-        hide_position = { x = -9999  y = 134 }
+        show_position = { x=150 y =134 }
+		hide_position = { x=-1000 y =134 }	
+		animation_type = "decelerated"
+		animation_time = 300	
 		size = { x = 1024 y = 100 }
 		moveable = 0
 		dontRender = ""
@@ -15,8 +17,8 @@ guiTypes = {
 		
 		iconType = {
 			name ="background"
-			spriteType = "GFX_court_view_bg"
-			position = { x= -7 y = -10 }
+			spriteType = "GFX_countryview_main_bg"
+			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}	
 		iconType = {

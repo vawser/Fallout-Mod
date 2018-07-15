@@ -13,11 +13,13 @@ country_decisions = {
 			NOT = { has_country_modifier = drug_purge_cooldown }
 		}
 		allow =  {
+            mil_power = 100
 			any_owned_province = {
 				trade_goods = drugs
             }
 		}
 		effect = {
+            add_mil_power = -100
 			hidden_effect = {
 				add_country_modifier = { 
 					name = drug_purge_cooldown
@@ -39,13 +41,17 @@ country_decisions = {
 					}
 				}
 			}
-
-			add_dip_power = -100
-
+            
 			country_event = { id = fallout_tradegoods.1 }
 		}
 		ai_will_do = {
 			factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { mil_power = 300 }
+            }
 		}
     }
 
