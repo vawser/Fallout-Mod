@@ -61,7 +61,7 @@ gov_cult_settlement = {
 			government = administrative_settlement
 			government = diplomatic_settlement
 			government = military_settlement
-			government = theocracy
+			government = theocratic_settlement
 			government = feudal_theocracy
 			government = monastic_order
 		}	
@@ -494,7 +494,7 @@ gov_fascist_brotherhood_order = {
 #-----------------------------------------------------------------
 # Tribal
 #-----------------------------------------------------------------
-gov_cult_tribe = {
+gov_cult = {
 	rank = {
 		1 = CULT
 		2 = CULT
@@ -519,7 +519,8 @@ gov_cult_tribe = {
 			government = trade_tribe
 			government = war_tribe
 			government = feudal_theocracy
-			government = theocracy
+			government = theocratic_settlement
+			government = monastic_order
 		}
 		religion = hubology
 	}
@@ -556,15 +557,15 @@ gov_trade_tribe = {
 	}		
 	
 	ruler_male = {
-		1 = ELDER
-		2 = HIGH_ELDER
-		3 = PARAMOUNT_ELDER
+		1 = CHIEF
+		2 = HIGH_CHIEF
+		3 = PARAMOUNT_CHIEF
 	}
 	
 	ruler_female = {
-		1 = ELDER_fem
-		2 = HIGH_ELDER_fem
-		3 = PARAMOUNT_ELDER_fem
+		1 = CHIEFTESS
+		2 = HIGH_CHIEFTESS
+		3 = PARAMOUNT_CHIEFTESS
 	}
 	
 	trigger = {
@@ -579,15 +580,15 @@ gov_war_tribe = {
 	}		
 	
 	ruler_male = {
-		1 = ELDER
-		2 = HIGH_ELDER
-		3 = PARAMOUNT_ELDER
+		1 = CHIEF
+		2 = HIGH_CHIEF
+		3 = PARAMOUNT_CHIEF
 	}
 	
 	ruler_female = {
-		1 = ELDER_fem
-		2 = HIGH_ELDER_fem
-		3 = PARAMOUNT_ELDER_fem
+		1 = CHIEFTESS
+		2 = HIGH_CHIEFTESS
+		3 = PARAMOUNT_CHIEFTESS
 	}
 	
 	trigger = {
@@ -800,7 +801,7 @@ gov_patriarchy = {
 	}
 }
 
-gov_theocracy = { # Generic
+gov_theocratic_settlement = { # Generic
 	rank = {
 		1 = theocracy
 		2 = theocracy
@@ -820,12 +821,13 @@ gov_theocracy = { # Generic
 	}
 	
 	trigger = {
-		government = theocracy
+		government = theocratic_settlement
+		NOT = { government = monastic_order }
 		NOT = {	religion_group = religion_group_christianity }
 	}
 }
 
-gov_catholic_theocracy = {
+gov_catholic_theocratic_settlement = {
 	rank = {
 		1 = BISHOPRIC
 		2 = ARCHBISHOPRIC
@@ -845,12 +847,12 @@ gov_catholic_theocracy = {
 	}
 	
 	trigger = {
-		government = theocracy
+		government = theocratic_settlement
 		religion = catholic
 	}
 }
 
-gov_orthodox_theocracy = {
+gov_orthodox_theocratic_settlement = {
 	rank = {
 		1 = METROPOLIS
 		2 = GREAT_METROPOLIS
@@ -874,15 +876,15 @@ gov_orthodox_theocracy = {
 			religion = orthodox
 			religion = coptic
 		}
-		government = theocracy
+		government = theocratic_settlement
 	}
 }
 
-gov_protestant_theocracy = {
+gov_protestant_theocratic_settlement = {
 	rank = {
-		1 = theocracy
-		2 = theocracy
-		3 = theocracy
+		1 = theocratic_settlement
+		2 = theocratic_settlement
+		3 = theocratic_settlement
 	}
 
 	ruler_male = {
@@ -898,7 +900,7 @@ gov_protestant_theocracy = {
 	}
 
 	trigger = {
-		government = theocracy
+		government = theocratic_settlement
 		OR = {
 			religion = protestant
 			religion = baptist # All Baptists have to switch to Baptist Conventions, this is solely for localization

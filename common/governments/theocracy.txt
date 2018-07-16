@@ -108,7 +108,7 @@ fascist_brotherhood_order = {
 	}
 }
 
-theocracy = {
+theocratic_settlement = {
 	religion = yes
 	
 	unique_government = no
@@ -122,8 +122,9 @@ theocracy = {
 	royal_marriage = no
 	
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
+	ai_importance = 0
 
 	nation_designer_trigger = {
 		NOT = { religion = secular }
@@ -161,6 +162,11 @@ feudal_theocracy = { # Cults in which the head cultist office is inherited (e.g.
 	nation_designer_trigger = {
 		NOT = { religion = secular }
 	}
+
+	ai_will_do = {
+		factor = 0
+	}
+	ai_importance = 0
 
 	queen = yes
 	royal_marriage = yes
@@ -213,6 +219,7 @@ monastic_order = {
 	ai_will_do = {
 		factor = 0
 	}
+	ai_importance = 0
 
 	nation_designer_trigger = {
 		NOT = { religion = secular }
@@ -275,6 +282,11 @@ baptist_convention = {
 	nation_designer_trigger = {
 		religion = baptist
 	}
+
+	ai_will_do = {
+		factor = 0
+	}
+	ai_importance = 0
 
 	rank = {
         1 = {

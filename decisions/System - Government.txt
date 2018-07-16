@@ -147,7 +147,7 @@ country_decisions = {
 			}
 			NOT = { tag = GRK }
 			NOT = {
-				government = theocracy
+				government = theocratic_settlement
 				government = feudal_theocracy
 				government = monastic_order
 				government = administrative_brotherhood_order
@@ -175,7 +175,7 @@ country_decisions = {
 			total_development = 100
 		}
 		effect = {
-			change_government = theocratic_government
+			change_government = theocratic_settlement
 			add_stability = -4
 			set_country_flag = recently_changed_government_flag
 		}
@@ -235,7 +235,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			religion_group = muslim #for clarity
+			religion_group = muslim # for clarity
 			OR = {
 				is_true_monarchy = yes
 				is_hereditary_government = yes

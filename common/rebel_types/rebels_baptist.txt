@@ -162,7 +162,7 @@ baptist_rebels = {
 		OR = {
 			religion_group = religion_group_christianity
 			dominant_religion = baptist
-			government = theocracy
+			government = theocratic_settlement
 			government = monastic_order
 		}
 	}
@@ -210,8 +210,8 @@ baptist_rebels = {
 		if = {
 			limit = {
 				OR = {
-					government = theocracy
-					government = feudal_theocracy
+					government = theocratic_settlement
+					government = feudal_theocratic_settlement
 					government = monastic_order
 				}
 			}

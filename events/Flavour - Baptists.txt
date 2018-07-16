@@ -9,7 +9,7 @@ country_event = { # If a Baptist Theocracy exists, it immediately converts to th
 	trigger = {
 		religion = baptist
 		OR = {
-			government = theocracy
+			government = theocratic_settlement
 			government = feudal_theocracy
 			government = monastic_order
 		}
@@ -24,17 +24,17 @@ country_event = { # If a Baptist Theocracy exists, it immediately converts to th
 	}
 
 	option = {
-		name = baptist.1.b
+		name = baptist.1.b # Refuse!
 		change_religion = protestant
 	
 		if = {
 			limit = {
 				OR = {
-					government = theocracy 
+					government = theocratic_settlement
 					government = feudal_theocracy
 				}
 			}
-			change_government = theocracy
+			change_government = theocratic_settlement
 		}
 
 		if = {
@@ -75,7 +75,7 @@ country_event = { # If a Baptist Convention is no longer Baptist, it becomes a T
 
 	option  = {
 		name = ASSUMING_DIRECT_CONTROL
-		change_government = theocracy
+		change_government = theocratic_settlement
 		every_owned_province = { add_local_autonomy = -20 }
 		hidden_effect = { add_stability = 2 }
 		if = {
