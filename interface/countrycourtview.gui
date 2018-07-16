@@ -34,129 +34,162 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}		
 		
+        iconType = {
+			name ="court_banner_1"
+			spriteType = "GFX_countryview_full_banner"
+			position = { x= 17 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+        
 		guiButtonType = {
 			name = "close_button"
-			position = { x = 514 y = -1 }
-			quadTextureSprite ="GFX_closebutton2"	
+			position = { x = 445 y = 26 }
+			quadTextureSprite ="GFX_fallout_menu_button"	
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_LEFT"
 			clicksound = close_window
 		}		
-
+        
 		instantTextBoxType = {
 			name = "window_title"
-			position = { x = 15 y = 82 }
+			position = { x = 0 y = 24 }
 			textureFile = ""
 			font = "monofonto_outline_18"
 			borderSize = {x = 4 y = 4}	
 			text = "CATEGORY_COURT"	
-			maxWidth = 512
+			maxWidth = 500
 			maxHeight = 32
 			format = centre
 		}
 		
 		### ------- Ruler -------	
-		iconType = {
-			name ="monarch_gender"
-			spriteType = "GFX_gender_icon"
-			position = { x= 16 y = 120 }
+        iconType = {
+			name ="ruler_bg_1"
+			spriteType = "GFX_current_policies_bg"
+			position = { x= 20 y = 60 }
 			Orientation = "UPPER_LEFT"
+            scale = 0.5
 		}
-		
-		guiButtonType = {
-			name = "abdicate_ruler_button"
-			position = { x= 486	y = 139 }
-			quadTextureSprite ="GFX_abdicate_button"	
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
-			buttonFont = "vic_18"
-			clicksound = back_click
-		}			
-
-		instantTextBoxType = {
+        
+        instantTextBoxType = {
 			name = "monarch_title"
-			position = { x = 35 y = 116 }
+			position = { x = 30 y = 65 }
 			textureFile = ""
 			font = "monofonto_outline_14"
 			borderSize = {x = 4 y = 4}	
 			text = "King Awesome"	
-			maxWidth = 400
+			maxWidth = 300
 			maxHeight = 32
 			format = left
 			fixedsize = yes
 		}
-		
+        
+		iconType = {
+			name ="monarch_gender"
+			spriteType = "GFX_gender_icon"
+			position = { x= 275 y = 65 }
+			Orientation = "UPPER_LEFT"
+		}
 		instantTextBoxType = {
 			name = "monarch_ruler_age"
-			position = { x = 420 y = 115 }
+			position = { x = 300 y = 63 }
 			textureFile = ""
 			font = "monofonto_outline_14"
 			borderSize = {x = 4 y = 4}
 			text = ""
 			maxWidth = 100
 			maxHeight = 16
-			format = right
+			format = left
 			fixedsize = yes
 		}
+        
+		guiButtonType = {
+			name = "abdicate_ruler_button"
+			position = { x= 375	y = 60 }
+			quadTextureSprite ="GFX_fm_button_94x31"
+            buttonText = "Abdicate"
+			buttonFont = "monofonto_outline_12"
+			clicksound = back_click
+		}			
 
+		iconType = {
+			name ="ruler_value_1_bg"
+			spriteType = "GFX_unitpanel_leader_element_bg"
+			position = { x= 50 y = 95 }
+			Orientation = "UPPER_LEFT"
+            scale = 0.5
+		}
+		iconType = {
+			name ="ruler_value_2_bg"
+			spriteType = "GFX_unitpanel_leader_element_bg"
+			position = { x= 120 y = 95 }
+			Orientation = "UPPER_LEFT"
+            scale = 0.5
+		}
+        iconType = {
+			name ="ruler_value_3_bg"
+			spriteType = "GFX_unitpanel_leader_element_bg"
+			position = { x= 190 y = 95 }
+			Orientation = "UPPER_LEFT"
+            scale = 0.5
+		}
 		
 		instantTextBoxType = {
 			name = "monarch_adm_value"
-			position = { x = 28 y = 148 }
+			position = { x = 58 y = 98 }
 			textureFile = ""
 			font = "monofonto_outline_14"
 			borderSize = {x = 4 y = 4}	
 			text = "?"	
 			maxWidth = 32
 			maxHeight = 16
-			format = centre
+			format = left
 		}	
 
 		iconType = {
 			name ="monarch_adm_icon"
 			spriteType = "GFX_icon_powers_administrative"
-			position = { x= 14 y = 146 }
+			position = { x= 20 y = 95 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_ruler"
 		}
 		
 		instantTextBoxType = {
 			name = "monarch_dip_value"
-			position = { x = 78 y = 148 }
+			position = { x = 128 y = 98 }
 			textureFile = ""
 			font = "monofonto_outline_14"
 			borderSize = {x = 4 y = 4}	
 			text = "?"	
 			maxWidth = 32
 			maxHeight = 16
-			format = centre
+			format = left
 		}
 
 		iconType = {
 			name ="monarch_dip_icon"
 			spriteType = "GFX_icon_powers_diplomatic"
-			position = { x= 64 y = 146 }
+			position = { x= 90 y = 95 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_ruler"
 		}
 
 		instantTextBoxType = {
 			name = "monarch_mil_value"
-			position = { x = 128 y = 148 }
+			position = { x = 198 y = 98 }
 			textureFile = ""
 			font = "monofonto_outline_14"
 			borderSize = {x = 4 y = 4}	
 			text = "?"	
 			maxWidth = 32
 			maxHeight = 16
-			format = centre
+			format = left
 		}
 
 		iconType = {
 			name ="monarch_mil_icon"
 			spriteType = "GFX_icon_powers_military"
-			position = { x= 114 y = 146 }
+			position = { x= 160 y = 95 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_ruler"
 		}
