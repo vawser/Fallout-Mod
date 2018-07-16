@@ -35,29 +35,6 @@ religion_group_postwar = {
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 1 18 }
     
-    test_religion = {
-        color = { 0.6 0.33 0.5 }
-		icon = 1
-
-		country = { 
-            development_cost = -0.1
-            trade_efficiency = 0.05
-		}
-        country_as_secondary = { 
-            stability_cost_modifier = -0.1
-		}
-        
-        holy_sites = { 496 352 }
-        
-        blessings = {
-			legitimize_government
-			encourage_warriors_of_the_faith
-			send_monks_to_establish_monasteries
-			promote_territorial_rights
-			will_of_the_martyrs
-		}
-    }
-    
     secular = {
 		color = { 0.6 0.33 0.5 }
 		icon = 1
@@ -171,14 +148,15 @@ religion_group_postwar = {
 				effect = {
 					if = {
                         limit = {
-			OR = {
-				is_true_monarchy = yes
-				is_hereditary_government = yes
-				government = administrative_settlement
-				government = diplomatic_settlement
-				government = military_settlement
-			}
-			add_legitimacy = 10
+                            OR = {
+                                is_true_monarchy = yes
+                                is_hereditary_government = yes
+                                government = administrative_settlement
+                                government = diplomatic_settlement
+                                government = military_settlement
+                            }
+                        }
+                        add_legitimacy = 10
                     }
                     if = {
                         limit = { is_republic_government = yes }
@@ -788,13 +766,13 @@ religion_group_atomic = {
 
 		province = {
 			local_missionary_strength = -0.03
-			local_hostrile_attrition = 0.5
+			local_hostile_attrition = 0.5
 		}
 		
 		country = {
 			tolerance_own = 3
 			tolerance_heathen = 2
-			mil_cost_modifier = -0.2
+			mil_tech_cost_modifier = -0.1
 		}
 
 		country_as_secondary = {
@@ -845,7 +823,7 @@ religion_group_atomic = {
 			}			
 		}
         
-       		fervor = yes
+        fervor = yes
 	}
     
     crusade_name = CRUSADE
