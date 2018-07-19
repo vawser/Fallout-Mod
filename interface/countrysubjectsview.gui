@@ -1356,11 +1356,12 @@ guiTypes = {
 		checkboxType = {
 			name = "interact_button"
 			position = { x=-8 y =3}
-			quadTextureSprite ="GFX_checkbox_button_straight_213_29"	
+			quadTextureSprite ="GFX_fallout_background_400_32"	
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
-			buttonFont = "vic_18"
+			buttonFont = "monofonto_outline_12"
+            scale = 0.5
 		}
 
 		guiButtonType = {
@@ -1372,7 +1373,7 @@ guiTypes = {
 		instantTextBoxType={
 			position = {x = 23 y = 10 }
 			name = "info_text"
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 210
 			maxHeight = 16
@@ -1385,7 +1386,7 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "SubjectInteractionDialog"
 		backGround=""
-		position = { x=0 y=139 }	
+		position = { x=150 y=134 }	
 		size = { x=520 y=476 }
 		moveable = 0
 		dontRender = ""
@@ -1396,20 +1397,27 @@ guiTypes = {
 		iconType =
 		{
 			name ="Background"
-			spriteType = "GFX_subject_interact_dialog_bg"
-			position = { x= -7 y = -9 }
+			spriteType = "GFX_fallout_background_500_580"
+			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 			
 		}
 		
+        iconType = {
+			name ="dialog_banner_bg_1"
+			spriteType = "GFX_countryview_full_banner"
+			position = { x= 17 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+        
 		instantTextBoxType = {
 			name = "Title"
-			position = { x = 117 y = 138 }
+			position = { x = 0 y = 28 }
 			textureFile = ""
-			font = "vic_22s"
+			font = "monofonto_outline_18"
 			borderSize = {x = 0 y = 0}
 			text = "XXX"	
-			maxWidth = 316
+			maxWidth = 500
 			maxHeight = 40
 			fixedsize = yes
 			truncate = yes
@@ -1419,11 +1427,11 @@ guiTypes = {
 		}		
 				
 		instantTextBoxType={
-			position = {x = 287 y = 232 }
+			position = {x = 60 y = 90 }
 			name = "Description"
-			font = "vic_18"
+			font = "monofonto_outline_12"
 			borderSize = {x = 0 y = 0}	
-			maxWidth = 220
+			maxWidth = 380
 			maxHeight = 160
 			text = "SP_PRICE"	
 			orientation = "UPPER_LEFT"
@@ -1432,7 +1440,7 @@ guiTypes = {
 
 		listboxType ={
 			name ="list"
-			position = { x = 40 y = 210 }
+			position = { x = 50 y = 140 }
 			backGround=""
 			size = { x=205 y =300}
 			Orientation = "UPPER_LEFT"
@@ -1446,25 +1454,25 @@ guiTypes = {
 		{
 			name ="LeftShield"
 			spriteType = "standarddialogshield"
-			position = { x= 32 y = 120 }
+			position = { x= 10 y = 0 }
 		}
 		
 		shieldtype = 
 		{
 			name ="RightShield"
 			spriteType = "standarddialogshield"
-			position = { x= 426 y = 120 }
+			position = { x= 410 y = 0 }
 		}
 		
 		guiButtonType = {
 			name = "AgreeButton"
 			position = { x=280 y =525}
-			quadTextureSprite ="button_type_4"
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
-			buttonText = "OK"
-			buttonFont = "vic_18"
+			buttonText = "Accept"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "RETURN"
 			clicksound = ok_click
 		}
@@ -1472,13 +1480,13 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "DeclineButton"
-			position = { x=50 y =525}
-			quadTextureSprite ="button_type_4"
+			position = { x=120 y =525}
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
-			buttonText = "CANCEL"
-			buttonFont = "vic_18"
+			buttonText = "Cancel"
+			buttonFont = "monofonto_outline_12"
 			shortcut = "ESCAPE"
 		}
 		
