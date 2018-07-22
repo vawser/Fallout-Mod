@@ -27,7 +27,6 @@ country_event = {
             limit = {
                 OR = {
                     technology_group = tech_alien
-                    tag = SHI
                     technology_group = tech_new_vegas
                     technology_group = tech_robot
                 }
@@ -49,10 +48,6 @@ country_event = {
     
 	trigger = {
         OR = {
-            AND = {
-                tag = SHI
-                NOT = { has_ruler = "Shi" }
-            }
             AND = {
                 tag = NVG
                 NOT = { has_ruler = "Robert" }
@@ -76,23 +71,6 @@ country_event = {
     
 	option = {
 		name = immortality.2.option.a
-        
-        if = {
-            limit = {
-                tag = SHI
-            }
-            define_ruler = {
-                name = "Shi"
-                dynasty = "V8.8 Computer Terminal"
-                adm = 6
-                dip = 6
-                mil = 6
-            }
-            add_ruler_personality = immortal_personality
-            add_ruler_personality = free_thinker_personality
-            add_ruler_personality = scholar_personality
-            add_ruler_personality = tolerant_personality
-        }
         if = {
             limit = {
                 tag = NVG
