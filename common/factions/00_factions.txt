@@ -150,3 +150,31 @@ robotics = {
         reinforce_cost_modifier = -0.25
 	}
 }
+
+# Shi Factions
+chemistry_and_mechanics_researchers = {
+	monarch_power = ADM
+	always = yes
+	modifier = {
+		technology_cost = -0.05
+		cavalry_cost = -0.2
+	}
+}
+
+xeno_and_botany_researchers = {
+	monarch_power = DIP
+	always = yes
+	modifier = {
+		development_cost = -0.15
+		global_unrest = -2
+	}
+}
+
+medical_and_fev_researchers = {
+	monarch_power = MIL
+	always = yes
+	modifier = {
+		hostile_attrition = 1
+		manpower_recovery_speed = 0.20
+	}
+}
