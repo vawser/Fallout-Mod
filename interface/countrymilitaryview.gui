@@ -29,27 +29,33 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		
-		guiButtonType = {
+        iconType = {
+			name ="military_banner_1"
+			spriteType = "GFX_countryview_full_banner"
+			position = { x= 17 y = 4 }
+			Orientation = "UPPER_LEFT"
+		}
+        
+        guiButtonType = {
 			name = "close_button"
-			position = { x = 514 y = -1 }
-			quadTextureSprite ="GFX_closebutton2"	
+			position = { x = 445 y = 26 }
+			quadTextureSprite ="GFX_fallout_menu_button"	
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_LEFT"
 			clicksound = close_window
-		}		
+		}	
 		
-		instantTextBoxType = {
+        instantTextBoxType = {
 			name = "window_title"
-			position = { x = 15 y =78 }
+			position = { x = 0 y = 24 }
 			textureFile = ""
-			font = "vic_29s"
+			font = "monofonto_outline_18"
 			borderSize = {x = 4 y = 4}	
 			text = "HEADER_MILITARY"	
-			maxWidth = 512
+			maxWidth = 500
 			maxHeight = 32
 			format = centre
 		}
-		
 		
 		instantTextBoxType = {
 			name = "unit_types_label"
