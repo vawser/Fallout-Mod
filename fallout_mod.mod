@@ -34,4 +34,4 @@ tags={
     "Gameplay"
 	"Map"
 }
-supported_version="1.25.*.*"
+supported_version="1.27.*.*"
