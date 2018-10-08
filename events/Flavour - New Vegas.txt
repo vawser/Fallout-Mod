@@ -205,6 +205,7 @@ country_event = {
 		remove_faction = the_omertas
 		add_stability = -1
 		set_country_flag = omerta_stopped
+		set_country_flag = omerta_removed
 	}
 	
 	option = {
@@ -465,5 +466,301 @@ country_event = {
 		name = new_vegas.12.option.a
 		remove_faction = the_white_glove_society
 		set_country_flag = white_glove_purged
+	}
+}
+
+# "H&H Tool Company"
+country_event = {
+	id = new_vegas.13
+	title = new_vegas.13.title
+	desc = new_vegas.13.desc
+    picture = THE_TOPS_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = NVG
+		owns_core_province = 121
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.13" }
+        }
+    }
+    
+	option = { 
+		name = new_vegas.13.option.a
+		add_treasury = -100
+        121 = {
+			change_province_name = H&H Factory  
+			add_base_production = 2
+			change_trade_goods = tools 
+			add_permanent_province_modifier = {
+    			name = pf_industrial_site
+    			duration = -1
+			}
+		}
+	}
+	
+	option = {  
+		name = new_vegas.13.option.b
+	}
+}
+
+# "Rad Pack Revue"
+country_event = {
+	id = new_vegas.14
+	title = new_vegas.14.title
+	desc = new_vegas.14.desc
+    picture = THE_TOPS_eventPicture
+	
+	is_triggered_only = yes
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.14" }
+        }
+    }
+    
+	option = { 
+		name = new_vegas.14.option.a
+        capital_scope = {
+			add_base_production = 1
+		} 
+	}
+}
+
+# "Sodom and Gomorrah"
+country_event = {
+	id = new_vegas.15
+	title = new_vegas.15.title
+	desc = new_vegas.15.desc
+    picture = DEAD_JUNKIE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = NVG
+		has_factions = yes
+		NOT = { 
+		    OR = {
+			    has_country_flag = omerta_removed 
+				has_country_flag = white_glove_removed 
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 21
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.15" }
+        }
+    }
+    
+	option = { # Clean the streets
+		name = new_vegas.15.option.a
+		add_faction_influence = { faction = the_omertas influence = -5 }		
+	}
+	
+	option = { # This is a city of vice...
+		name = new_vegas.15.option.b
+		add_faction_influence = { faction = the_white_glove_society influence = -5 }
+	}
+}
+
+# "Street Vendors Protest Taxes"
+country_event = {
+	id = new_vegas.16
+	title = new_vegas.16.title
+	desc = new_vegas.16.desc
+    picture = ULTRALUXE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = NVG
+	}
+	
+	mean_time_to_happen = {
+		months = 55
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.16" }
+        }
+    }
+    
+	option = { # Ignore the rabble
+		name = new_vegas.16.option.a
+		capital_scope = {
+			add_province_modifier = {
+				name = nvg_street_vendor_hike
+				duration = 2000
+			}
+        }		
+	}
+	
+	option = { # Decrease the tax
+		name = new_vegas.16.option.b
+		capital_scope = {
+			add_province_modifier = {
+				name = nvg_street_vendor_lower
+				duration = 2000
+			}
+        }		
+	}
+}
+
+# "Profit From Street Vendors"
+country_event = {
+	id = new_vegas.17
+	title = new_vegas.17.title
+	desc = new_vegas.17.desc
+    picture = ULTRALUXE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = NVG
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.17" }
+        }
+    }
+    
+	option = { # Understood
+		name = new_vegas.17.option.a
+		if = {
+		    limit = { 
+			    any_owned_province = {
+				    has_province_modifier = nvg_street_vendor_hike
+				}
+			}
+			add_years_of_income = 0.65
+        }
+		else_if = {
+		    limit = { 
+			    any_owned_province = {
+				    has_province_modifier = nvg_street_vendor_lower
+				}
+			}
+			add_years_of_income = 0.35		
+		}
+		else = {
+		    add_years_of_income = 0.50
+		}
+	}
+}
+
+# "Shady Dealers On The Strip"
+country_event = {
+	id = new_vegas.18
+	title = new_vegas.18.title
+	desc = new_vegas.18.desc
+    picture = ULTRALUXE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = NVG
+		has_factions = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 62
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.18" }
+        }
+    }
+    
+	option = { # This is not our business 
+		name = new_vegas.18.option.a
+		add_faction_influence = { faction = the_omertas influence = -2 }	
+		add_faction_influence = { faction = the_white_glove_society influence = -2 }	
+		add_faction_influence = { faction = the_chairmen influence = -2 }
+        capital_scope = {		
+			add_province_modifier = {
+				name = nvg_shady_profit
+				duration = 1000		
+			}
+		}
+		hidden_effect = {
+			random_list = {
+	        	35 = {
+                	country_event = {
+                    	id = new_vegas.19
+                    	days = 35
+                	}			
+	        	}
+	        	65 = {		
+	        	}
+			}
+		}
+	}
+	
+	option = { # Crack down on them
+		name = new_vegas.18.option.b
+
+	}
+}
+
+# "Casino Shootout"
+country_event = {
+	id = new_vegas.19
+	title = new_vegas.19.title
+	desc = new_vegas.19.desc
+    picture = DEAD_JUNKIE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_factions = yes
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.19" }
+        }
+    }
+    
+	option = { # This could of been avoided...
+		name = new_vegas.19.option.a
+		trigger = { faction_in_power = the_omertas }
+		add_faction_influence = { faction = the_omertas influence = -10 }	
+        capital_scope = {
+			add_devastation = 10
+		} 	
+	}
+	
+	option = { # This could of been avoided...
+		name = new_vegas.19.option.b
+		trigger = { faction_in_power = the_white_glove_society }
+		add_faction_influence = { faction = the_white_glove_society influence = -10 }	
+        capital_scope = {
+			add_devastation = 10
+		} 
+	}
+	
+	option = { # This could of been avoided...
+		name = new_vegas.19.option.c
+		trigger = { faction_in_power = the_chairmen }
+		add_faction_influence = { faction = the_chairmen influence = -10 }
+        capital_scope = {
+			add_devastation = 10
+		} 
 	}
 }

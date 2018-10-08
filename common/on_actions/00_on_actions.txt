@@ -295,7 +295,6 @@ on_new_monarch = {
         limit = {
             OR = {
                 tag = NVG
-                tag = SHI
                 tag = X02
                 government = the_think_tank
             }
@@ -341,6 +340,7 @@ on_death_foreign_slave_ruler = {
 	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_foreign_slave_ruler" }
 	events = {
 		wolf.0 # Choose new for the Pack
+		shi.1 # Choose new ruler
 	}
 }
 
@@ -751,6 +751,19 @@ on_four_year_pulse_4 = {
         10 = brotherhood_of_steel.5
         280 = 0
         # 25% any event will be picked per pulse
+    }
+}
+
+on_four_year_pulse_5 = {
+    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_5" }
+    
+    random_events = {
+        10 = shi.18
+        10 = shi.19
+        10 = shi.20
+	10 = shi.22
+        80 = 0
+        # 50% any event will be picked per pulse
     }
 }
 

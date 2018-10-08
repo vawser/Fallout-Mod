@@ -1,0 +1,52 @@
+namespace = fiends
+
+# "Raid Against Khan Drug Shipment" 
+country_event = {
+	id = fiends.1
+	title = fiends.1.title
+	desc = fiends.1.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 45
+	}	
+	
+	trigger = {
+		tag = FIE
+        NOT = {
+            alliance_with = GRK
+        }		
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fiends.1" }
+        }
+    }
+    
+	option = {
+		name = fiends.1.option.a
+        add_prestige = -15
+		add_horde_unity = -10
+
+		ai_chance = {
+			factor = 25
+		}        
+	}
+	
+	option = {
+		name = fiends.1.option.b
+		add_horde_unity = 10
+		hidden_effect = {
+		    GRK = {
+		        country_event = { id = great_khans.3 days = 3 }
+			}
+		}
+		custom_tooltip = fiends_khan_warning
+		ai_chance = {
+			factor = 75
+		}        
+	}
+}

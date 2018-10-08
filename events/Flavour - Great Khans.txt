@@ -1,0 +1,124 @@
+namespace = great_khans
+
+# "Chances Map" 
+country_event = {
+	id = great_khans.1
+	title = great_khans.1.title
+	desc = great_khans.1.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 15
+	}	
+	
+	trigger = {
+		tag = GRK	
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - great_khans.1" }
+        }
+    }
+    
+	option = {
+		name = great_khans.1.option.a
+        add_country_modifier = {
+            name = gkh_chances_map
+            duration = 1111
+        }   		
+		ai_chance = {
+			factor = 100
+		}        
+	}
+}
+
+# "Benny's Betrayal" 
+country_event = {
+	id = great_khans.2
+	title = great_khans.2.title
+	desc = great_khans.2.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 1
+	}	
+	
+	trigger = {
+		tag = GRK	
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - great_khans.2" }
+        }
+    }
+    
+	option = {
+		name = great_khans.2.option.a
+		add_opinion = {
+    		who = NVG
+			modifier = gkh_nvg_benny
+			years = 20
+		}
+		ai_chance = {
+			factor = 100
+		}        
+	}
+}
+
+# "Fiends Raid Drug Caravan" 
+country_event = {
+	id = great_khans.3
+	title = great_khans.3.title
+	desc = great_khans.3.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	is_triggered_only = yes
+	
+	major = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - great_khans.3" }
+        }
+    }
+    
+	option = {
+		name = great_khans.3.option.a
+		FIE = {
+			add_stability = -2
+		}
+		change_price = {
+    		trade_goods = drugs
+    		key = fiends_bite_hand
+    		value = -0.05
+    		duration = -1
+		}
+		add_opinion = {
+    		who = FIE
+			modifier = gkh_fiends_stab
+			years = 10
+		}
+		ai_chance = {
+			factor = 50
+		}        
+	}
+	
+	option = {
+		name = great_khans.3.option.b
+		add_opinion = {
+    		who = FIE
+			modifier = gkh_fiends_stab
+			years = 10
+		}
+		add_stability = -1
+		ai_chance = {
+			factor = 50
+		}        
+	}
+}

@@ -578,6 +578,47 @@ wolf_government = {
 	}
 }
 
+#-------------------------
+# The Shi
+#-------------------------
+shi_empire = {
+    monarchy = yes
+	
+	color = { 250 125 10 }
+
+	unique_government = yes
+
+	valid_for_new_country = no
+	allow_convert = no
+	valid_for_nation_designer = no
+	heir = no
+	queen = no
+	foreign_slave_rulers = yes
+	
+	ai_will_do = {
+		factor = 0
+	}
+	ai_importance = 0
+	
+    max_states = 3
+	rank = {
+		1 = {
+			global_institution_spread = 0.05
+			fabricate_claims_time = 0.25
+		}
+		2 = {
+			global_institution_spread = 0.05
+            advisor_pool = 1
+			fabricate_claims_time = 0.15
+		}
+		3 = {
+			global_institution_spread = 0.10
+			advisor_pool = 1
+			max_absolutism = 5
+		}
+	}
+}
+
 all_mechanics = {
 	monarchy = yes
 	valid_for_new_country = no

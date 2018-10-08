@@ -131,32 +131,27 @@ gov_think_tank_settlement = {
 	}
 }
 
-gov_shi_settlement = {
+gov_shi_empire  = {
 	rank = {
-		1 = minor_settlement
-		2 = settlement
-		3 = large_settlement
+		1 = shi_empire 
+		2 = shi_empire 
+		3 = shi_empire 
 	}	
 	
 	ruler_male = {
-		1 = FM_EMPEROR
-		2 = FM_EMPEROR
-		3 = FM_EMPEROR
+		1 = FM_HEAD_ADVISOR
+		2 = FM_HEAD_ADVISOR
+		3 = FM_HEAD_ADVISOR
 	}
 	
 	ruler_female = {
-		1 = FM_EMPRESS
-		2 = FM_EMPRESS
-		3 = FM_EMPRESS
+		1 = FM_HEAD_ADVISOR
+		2 = FM_HEAD_ADVISOR
+		3 = FM_HEAD_ADVISOR
 	}
 	
 	trigger = {
-		OR = {
-			government = administrative_settlement
-			government = diplomatic_settlement
-			government = military_settlement
-		}	
-		tag = SHI
+		government = shi_empire	
 	}
 }
 
