@@ -171,6 +171,30 @@ severe_winter = {
 	picture = "winter_severe"
 }
 
+mild_monsoon = {
+	local_hostile_attrition = 1
+	local_hostile_movement_speed = -0.20
+	local_friendly_movement_speed = -0.20
+
+	picture = "monsoon_mild"
+}
+
+normal_monsoon = {
+	local_hostile_attrition = 2
+	local_hostile_movement_speed = -0.25
+	local_friendly_movement_speed = -0.25
+
+	picture = "monsoon_normal"
+}
+
+severe_monsoon = {
+	local_hostile_attrition = 3
+	local_hostile_movement_speed = -0.50
+	local_friendly_movement_speed = -0.50
+
+	picture = "monsoon_severe"
+}
+
 blockaded = {
 	regiment_recruit_speed = 0.2
 	ship_recruit_speed = 0.2
@@ -275,6 +299,18 @@ core = {
 }
 
 non_core = {
+	local_missionary_strength = -0.02
+}
+
+territory_core = {
+	local_tax_modifier = 0.75				#90% more in a core
+	local_manpower_modifier = 0.75			#75% more in a core
+	local_sailors_modifier = 0.75
+	local_missionary_strength = -0.02
+}
+
+territory_non_core = {
+	local_missionary_strength = -0.02
 }
 
 march_bonus = {
@@ -860,6 +896,31 @@ over_extension = {
     monthly_militarized_society = -0.1
 }
 
+territory_very_easy_difficulty = { # Penalties for territories on very easy difficulty
+
+}
+
+territory_easy_difficulty = { # Penalties for territories on easy difficulty
+	yearly_corruption = 0.01
+}
+
+territory_normal_difficulty = { # Penalties for territories on normal difficulty
+	yearly_corruption = 0.02
+}
+
+territory_hard_difficulty = { # Penalties for territories on hard difficulty
+	yearly_corruption = 0.02
+}
+
+territory_very_hard_difficulty = { # Penalties for territories on very hard difficulty
+	yearly_corruption = 0.02
+}
+
+territory_ai_difficulty = { #Penalties for territories owned by AI regardless of difficulty.
+	yearly_corruption = 0.02
+}
+
+
 prestige = {
 	global_trade_power = 0.15			#+15/-15 total bonus from prestige.
 	land_morale = 0.1
@@ -1194,24 +1255,6 @@ tutorial_colonial_range = {
 	range = 0.1
 }
 
-
-########################################
-# For Dutch Mechanics
-########################################
-
-statists = {
-	naval_forcelimit_modifier = 0.10
-	global_trade_power = 0.05
-	republican_tradition = 1
-
-}
-
-orangists = {
-	land_forcelimit_modifier = 0.25
-	stability_cost_modifier = -0.10
-	republican_tradition = -1
-}
-
 ########################################
 # Nation Designer
 ########################################
@@ -1450,4 +1493,25 @@ janissary_regiment = {
 
 innovativeness = {
 	all_power_cost	= -0.1
+	army_tradition_decay = -0.01
+	navy_tradition_decay = -0.01
+}
+
+rajput_regiment = {
+	drill_decay_modifier = -0.25
+	reinforce_cost_modifier = -0.5
+	land_morale = 0.05
+}
+
+raiding_parties_modifier = {
+	hostile_attrition = 1
+	movement_speed = 0.1
+}
+
+serfs_recieved_by_cossacks = {
+	global_tax_modifier = -0.1
+}
+
+cossacks_modifier = {
+	stability_cost_modifier = 1.0
 }

@@ -3,33 +3,32 @@
 
 default_monarchy = {
 	rank = {
-		1 = war_tribe
-		2 = war_tribe
-		3 = war_tribe
+		1 = FM_SETTLEMENT
+		2 = FM_SETTLEMENT
+		3 = FM_SETTLEMENT
 	}	
 	
 	ruler_male = {
-		1 = FM_CHIEF
-		2 = FM_CHIEF
-		3 = FM_CHIEF
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
 	}
 	
 	ruler_female = {
-		1 = FM_CHIEFESS
-		2 = FM_CHIEFESS
-		3 = FM_CHIEFESS
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
 	}
 	
 	trigger = {
 		government = monarchy
 	}
 }
-
 default_republic = {
 	rank = {
-		1 = military_republic
-		2 = military_republic
-		3 = military_republic
+		1 = FM_REPUBLIC
+		2 = FM_REPUBLIC
+		3 = FM_REPUBLIC
 	}		
 	
 	ruler_male = {
@@ -48,103 +47,49 @@ default_republic = {
 		government = republic
 	}
 }
-
-default_theocratic_settlement = {
+default_theocracy = {
 	rank = {
-		1 = religious_tribe
-		2 = religious_tribe
-		3 = religious_tribe
+		1 = FM_THEOCRACY
+		2 = FM_THEOCRACY
+		3 = FM_THEOCRACY
 	}	
 	
 	ruler_male = {
-		1 = REVEREND
-		2 = REVEREND
-		3 = REVEREND
+		1 = FM_FATHER
+		2 = FM_FATHER
+		3 = FM_FATHER
 	}
 	
 	ruler_female = {
-		1 = REVEREND_MOTHER
-		2 = REVEREND_MOTHER
-		3 = REVEREND_MOTHER
+		1 = FM_MOTHER
+		2 = FM_MOTHER
+		3 = FM_MOTHER
 	}
 	
 	trigger = {
-		OR = {
-			government = theocratic_settlement
-			government = feudal_theocracy
-		}
-		religion_group = religion_group_christianity
+		government = theocracy
 	}
 }
-
-gov_tribal_kingdom = {
+default_tribal = {
 	rank = {
-		1 = CHIEFDOM
-		2 = TRIBAL_KINGDOM
-		3 = TRIBAL_EMPIRE
-	}
+		1 = FM_TRIBE
+		2 = FM_TRIBE
+		3 = FM_TRIBE
+	}	
 	
 	ruler_male = {
-		1 = HIGH_CHIEF
-		2 = KING
-		3 = EMPEROR
+		1 = FM_CHIEF
+		2 = FM_CHIEF
+		3 = FM_CHIEF
 	}
 	
 	ruler_female = {
-		1 = CHIEFTESS
-		2 = HIGH_CHIEFTESS
-		3 = EMPRESS
+		1 = FM_CHIEFESS
+		2 = FM_CHIEFESS
+		3 = FM_CHIEFESS
 	}
 	
 	trigger = {
-		government = tribal_kingdom
-	}
-}
-
-gov_tribal_federation = {
-	rank = {
-		1 = CHIEFDOM
-		2 = TRIBAL_KINGDOM
-		3 = TRIBAL_EMPIRE
-	}
-	
-	ruler_male = {
-		1 = CHIEF
-		2 = HIGH_CHIEF
-		3 = PARAMOUNT_CHIEF
-	}
-	
-	ruler_female = {
-		1 = CHIEFTESS
-		2 = HIGH_CHIEFTESS
-		3 = PARAMOUNT_CHIEFTESS
-	}
-	
-	trigger = {
-		government = tribal_federation
-	}
-}
-
-gov_tribal_democracy = {
-	rank = {
-		1 = CHIEFDOM
-		2 = GRAND_CHIEFDOM
-		3 = GREAT_CHIEFDOM
-	}
-	
-	ruler_male = {
-		1 = ELDER
-		2 = HIGH_ELDER
-		3 = PARAMOUNT_ELDER
-	}
-	
-	ruler_female = {
-		1 = ELDER_fem
-		2 = HIGH_ELDER_fem
-		3 = PARAMOUNT_ELDER_fem
-	}
-	
-	trigger = {
-		government = tribal_democracy
+		government = tribal
 	}
 }

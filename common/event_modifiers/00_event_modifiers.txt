@@ -9701,6 +9701,143 @@ sufi_order_integration = {
 	local_unrest = -4
 }
 
+#Industrialization
+introduction_of_newcommen_engine = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_production_efficiency = 0.1
+}
+
+introduction_of_coke_blast_furnaces = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_production_efficiency = 0.1
+}
+
+introduction_of_rotherham_plough = {
+	local_development_cost = -0.1
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.15
+}
+
+introduction_of_watt_engine = {
+	local_development_cost = -0.1
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.15
+}
+
+introduction_of_flying_shuttle = {
+	local_development_cost = -0.1
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.1
+	local_unrest = 4
+}
+
+introduction_of_spinning_jenny = {
+	local_development_cost = -0.1
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.1
+	local_unrest = 4
+}
+
+canals_and_turnpikes = {
+	local_development_cost = -0.1
+	local_friendly_movement_speed = 0.1
+}
+
+agricultural_revolution = {
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.1
+}
+
+economic_urbanization_modifier = {
+	local_build_cost = -0.15
+	local_tax_modifier = 0.1
+}
+
+industrial_urbanization_modifier = {
+	local_build_cost = -0.15
+	local_development_cost = -0.1
+	local_unrest = 4
+}
+
+metalworks_modifier = {
+	trade_goods_size_modifier = 0.15
+	trade_goods_size = 0.5
+}
+textile_mills_modifier = {
+	trade_goods_size_modifier = 0.15
+	trade_goods_size = 0.5
+}
+
+shipyards_of_x_modifier = {
+	trade_goods_size_modifier = 0.15
+	local_ship_cost = -0.15
+	local_ship_repair = 0.15
+}
+
+gave_in_to_luddite_protests = {
+	trade_goods_size_modifier = -0.25
+	local_unrest = -4
+}
+
+impoverished_artisans = {
+	local_unrest = 4
+	local_tax_modifier = -0.25
+	trade_goods_size_modifier = -0.15
+}
+
+fire_compensation = {
+	local_unrest = -2
+	local_tax_modifier = -0.25
+	trade_goods_size_modifier = -0.2
+}
+
+#Innovativeness
+
+critical_press = {
+	global_unrest = 2
+}
+
+new_royal_society = {
+	global_tax_modifier = -0.1
+	prestige = 0.5
+}
+
+public_schools = {
+	local_unrest = 4
+	local_development_cost = -0.05
+}
+
+unpopular_dissections = {
+	local_unrest = 5
+}
+
+dissenting_academies = {
+	global_heretic_missionary_strength = -0.03
+	religious_unity = -0.1
+}
+
+religion_mocked = {
+	tolerance_own = -1
+}
+
+blasphemous_scientist_punished = {
+	tolerance_own = 1
+}
+
+coffee_houses = {
+	global_unrest = 2
+}
+
+coffee_houses_banned = {
+	global_unrest = -1
+}
+
+cabinet_of_curiosities = {
+	prestige = 1
+}
+
 #Mission:
 new_colony = {
 	trade_efficiency = 0.1
@@ -9718,6 +9855,429 @@ trading_post_modifier = {
 rise_of_the_ayyubids = {
 	years_of_nationalism = -5
 	prestige = 1
+}
+
+# Anglican Church event modifiers
+
+political_recusancy = {
+	spy_offence = 0.2
+}
+
+commons_decide_doctrine = {
+	prestige = -1
+}
+
+prayer_book_rebels_appeased = {
+	local_missionary_strength = -0.05
+}
+
+prayers_to_saints_banned = {
+	local_missionary_strength = 0.02
+}
+
+prayers_to_saints_allowed = {
+	local_unrest = -5
+}
+
+feast_days_abolished = {
+	global_unrest = 3
+}
+
+anglican_feast_days = {
+	church_power_modifier = -0.5
+}
+
+puritan_colonists = {
+	global_colonial_growth = 10
+}
+
+puritan_settlement = {
+	local_missionary_strength = -1
+	local_colonial_growth = 20
+}
+
+priest_hunters = {
+	global_spy_defence = 0.25
+}
+
+anglican_evangelism = {
+	diplomatic_reputation = -3
+}
+
+ignore_marprelate = {
+	global_missionary_strength = -0.01
+}
+
+respond_marprelate = {
+	prestige = -0.5
+}
+
+imprison_marprelate = {
+	global_unrest = 1
+}
+
+fancy_vestments = {
+	prestige = 1
+}
+
+anglican_iconoclasm = {
+	local_unrest = 10
+}
+
+nonconformist_anglican_monarch = {
+	church_power_modifier = -1
+	tolerance_own = -2
+}
+
+angry_nonconformists = {
+	tolerance_heretic = -2
+}
+
+# Indian Estates
+look_up_purbias = {
+	is_rajput_modifier = yes
+	fire_damage = 0.1
+}
+
+look_up_purbias_upgraded = {
+	is_rajput_modifier = yes
+	discipline = 0.05
+	fire_damage = 0.1
+}
+
+jain_temples_built = {
+	local_development_cost = -0.1
+}
+
+marathi_poet_saint = {
+	local_unrest = -3
+}
+
+marathi_poet_saint_suppressed = {
+	local_unrest = 8
+}
+
+bargi_giri = {
+	cavalry_power = 0.15
+	movement_speed = 0.15
+}
+
+marathi_expensive_horses = {
+	cavalry_cost = 0.25
+}
+
+maratha_stopped_militarizing = {
+	local_manpower_modifier = -0.33
+	local_unrest = 5
+}
+
+muslim_brahmin_legitimacy = {
+	religious_unity = 0.2
+	tolerance_heathen = 1
+}
+
+popular_palkhis = {
+	local_unrest = -3
+	local_monthly_devastation = -0.03
+	local_development_cost = -0.05
+}
+
+organized_palkhis = {
+	tolerance_own = 1
+}
+
+organized_palkhis_nonhindu = {
+	tolerance_heathen = 1
+	tolerance_heretic = 1
+}
+
+brahmin_peshwa = {
+	religion = yes
+	global_missionary_strength = 0.01
+	stability_cost_modifier = -0.05
+	tolerance_own = 1
+	tolerance_heretic = -1
+	tolerance_heathen = -1
+}
+
+brahmin_peshwa_nonhindu = {
+	religion = yes
+	religious_unity = 0.2
+	stability_cost_modifier = -0.05
+	tolerance_own = -1
+	tolerance_heathen = 1
+}
+
+brahmins_alienating_merchants = {
+	province_trade_power_modifier = -0.33
+	local_development_cost = 0.1
+}
+
+brahmins_stopped_alienating_merchants = {
+	province_trade_power_modifier = 0.33
+	local_development_cost = -0.1
+}
+
+brahmin_orthodoxy_enforced = {
+	local_unrest = 5
+	local_autonomy = -0.05
+}
+
+nonbrahmin_movements = {
+	local_unrest = -5
+	local_autonomy = 0.05
+}
+
+brahmin_fort = {
+	local_defensiveness = -0.2
+	local_unrest = -3
+}
+
+nobles_retain_fort = {
+	local_defensiveness = 0.2
+	local_unrest = 3
+}
+
+social_banditry_modiifer = {
+	province_trade_power_modifier = -0.33
+}
+
+addressing_social_banditry = {
+	local_autonomy = 0.5
+	local_tax_modifier = -0.33
+	local_production_efficiency = -0.33
+}
+
+vaisya_manufactories = {
+	local_production_efficiency = 0.25
+	local_development_cost = -0.15
+}
+
+vaisya_gem_production = {
+	local_production_efficiency = 0.2
+}
+
+vaisya_spices_trade = {
+	province_trade_power_modifier = 0.2
+}
+
+vaisya_silk_goods = {
+	trade_goods_size_modifier = 0.2
+}
+
+vaisya_caste_system_enforced = {
+	stability_cost_modifier = -0.1
+}
+
+drylands_frontier_development = {
+	local_development_cost = -0.2
+	local_tax_modifier = -0.15
+}
+
+drylands_stagnation = {
+	local_tax_modifier = -0.2
+	local_production_efficiency = -0.2
+	local_manpower_modifier = -0.2
+	province_trade_power_modifier = -0.2
+}
+
+jain_resistance = {
+	interest = 2
+	yearly_corruption = 0.02
+}
+
+passive_resistance = {
+	local_tax_modifier = -0.33
+	local_production_efficiency = -0.33
+	province_trade_power_modifier = -0.33
+}
+
+preferred_jain_bankers = {
+	interest = -0.5
+}
+
+preferred_brahmin_bankers = {
+	stability_cost_modifier = -0.1
+}
+
+jain_administration = {
+	interest = -0.5
+	yearly_corruption = -0.02
+}
+
+paryushana = {
+	local_unrest = -3
+	local_state_maintenance_modifier = -0.2
+}
+
+suppressed_jain_festivals = {
+	local_unrest = 3
+}
+
+vaisya_merchant_debt = {
+	production_efficiency = -0.1
+}
+
+jain_debt_forgiven = {
+	interest = 1
+}
+
+jain_theological_debates = {
+	tolerance_heathen = 1
+}
+
+jains_denounced_as_khafirs = {
+	tolerance_own = 1
+}
+
+jain_religious_concessions = {
+	tolerance_own = -1
+	tolerance_heathen = -1
+}
+
+jain_peshwa = {
+	land_maintenance_modifier = -0.1
+	global_tax_modifier = 0.1
+	development_cost = -0.05
+}
+
+rajput_marriage_alliances = {
+	diplomatic_upkeep = -1
+}
+
+rajput_scion_province_modifier = {
+	local_development_cost = -0.15
+}
+
+rajput_dharma = {
+	is_rajput_modifier = yes
+	reinforce_cost_modifier = -0.25
+	land_morale = 0.05
+}
+
+rajput_connections = {
+	diplomatic_reputation = 1
+}
+
+rajput_claims_modifier = {
+	fabricate_claims_cost = -0.25
+}
+
+rajputs_curtailed_modifier = {
+	is_rajput_modifier = yes
+	land_morale = -0.1
+}
+
+maratha_benign_neglect = {
+	local_manpower_modifier = 0.25
+}
+
+# Investment events
+
+sepoys_modifier = {
+	local_regiment_cost = -0.2
+	regiment_recruit_speed = -0.25
+}
+
+fair_land_negotiations = {
+	diplomatic_reputation = 1
+}
+
+opium_modifier = {
+	trade_goods_size_modifier = 0.5
+	province_trade_power_modifier = 0.25
+}
+
+trade_company_rule = {
+	trade_efficiency = 0.15
+}
+
+restricted_company_missionaries = {
+	tolerance_heathen = 1
+}
+
+approprioated_currency = {
+	inflation_reduction = 0.02
+}
+
+company_and_personal_interests = {
+	province_trade_power_modifier = 0.25
+	local_production_efficiency = 0.15
+	local_unrest = -3
+}
+
+honorable_company = {
+	yearly_corruption = -0.05
+}
+
+company_missionary_activity = {
+	local_unrest = 10
+}
+
+company_mint = {
+	trade_value_modifier = 0.25
+}
+
+developing_company_settlement = {
+	local_build_cost = -0.33
+}
+
+monopoly_enforced = {
+	province_trade_power_modifier = 0.25
+}
+
+rogue_traders_prosecuted = {
+	global_ship_trade_power = 0.2
+}
+
+province_rogue_traders_prosecuted = {
+	trade_value_modifier = 0.25
+}
+
+company_interference = {
+	spy_offence = 0.2
+}
+
+# Monsoon
+
+failed_monsoon = {
+	local_tax_modifier = -0.2
+	local_monthly_devastation = 0.15
+}
+
+good_monsoon_modifier = {
+	local_tax_modifier = 0.2
+}
+
+company_drought = {
+	local_tax_modifier = -0.2
+	trade_goods_size_modifier = -0.2
+	local_development_cost = 0.25
+}
+
+plum_rains = {
+	local_production_efficiency = 0.2
+}
+
+
+revoked_estate_modifier = {
+	local_unrest = 5
+}
+
+pru_confederation_curtailed_modifier = {
+	global_unrest = -1
+}
+
+mayan_dinosaur_cavalry = {
+	cavalry_power = 0.5
+}
+
+mayan_ufo_support = {
+	fire_damage = 0.33
+}
+
+swiss_guard_last_stand = {
+	discipline = 0.1
 }
 
 ##################################################
@@ -9755,3 +10315,25 @@ tutorial_negative_modifier = {
 
 
 hints_timer = { }
+
+## RB Oxbridge events
+
+rb_eng_passage_spheres = {
+	global_institution_spread = 0.15
+}
+
+rb_eng_theory_warfare = {
+	army_tradition = 0.5
+}
+
+rb_eng_philosophy_royalty = {
+	legitimacy = 0.5
+}
+
+rb_eng_divine_common = {
+	global_unrest = -1
+}
+
+rb_eng_national_economy = {
+	global_tax_modifier = 0.05
+}

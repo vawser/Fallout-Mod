@@ -1,0 +1,155 @@
+#-----------------------------------------
+# Variants
+#-----------------------------------------
+gov_catholic_theocracy = {
+	rank = {
+		1 = FM_BISHOPRIC
+		2 = FM_ARCHBISHOPRIC
+		3 = FM_PATRIARCHATE
+	}
+	
+	ruler_male = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_PATRIARCH
+	}
+	
+	ruler_female = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_MATRIARCH
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+		religion = catholic
+	}
+}
+gov_orthodox_theocracy = {
+	rank = {
+		1 = FM_METROPOLIS
+		2 = FM_METROPOLIS
+		3 = FM_PATRIARCHATE
+	}
+	
+	ruler_male = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_PATRIARCH
+	}
+	
+	ruler_female = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_MATRIARCH
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+		OR = {
+			religion = orthodox
+			religion = coptic
+		}
+	}
+}
+gov_protestant_theocracy = {
+	rank = {
+		1 = FM_THEOCRACY
+		2 = FM_THEOCRACY
+		3 = FM_THEOCRACY
+	}
+	
+	ruler_male = {
+		1 = FM_REVEREND
+		2 = FM_REVEREND
+		3 = FM_REVEREND
+	}
+	
+	ruler_female = {
+		1 = FM_REVEREND
+		2 = FM_REVEREND
+		3 = FM_REVEREND
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+        OR = {
+            religion = protestant
+            religion = baptist
+        }
+	}
+}
+
+#-----------------------------------------
+# Base
+#-----------------------------------------
+gov_theocracy = {
+	rank = {
+		1 = FM_THEOCRACY
+		2 = FM_THEOCRACY
+		3 = FM_THEOCRACY
+	}	
+	
+	ruler_male = {
+		1 = FM_FATHER
+		2 = FM_FATHER
+		3 = FM_FATHER
+	}
+	
+	ruler_female = {
+		1 = FM_MOTHER
+		2 = FM_MOTHER
+		3 = FM_MOTHER
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+	}
+}
+
+gov_brotherhood = {
+	rank = {
+		1 = FM_BROTHERHOOD
+		2 = FM_BROTHERHOOD
+		3 = FM_BROTHERHOOD
+	}			
+	
+	ruler_male = {
+		1 = FM_HIGH_ELDER
+		2 = FM_HIGH_ELDER
+		3 = FM_HIGH_ELDER
+	}
+	
+	ruler_female = {
+		1 = FM_HIGH_ELDER
+		2 = FM_HIGH_ELDER
+		3 = FM_HIGH_ELDER
+	}
+	
+	trigger = {
+		has_reform = brotherhood_reform
+	}
+}
+gov_cult = {
+	rank = {
+		1 = FM_CULT
+		2 = FM_CULT
+		3 = FM_CULT
+	}	
+	
+	ruler_male = {
+		1 = FM_OVERSEER
+		2 = FM_OVERSEER
+		3 = FM_OVERSEER
+	}
+	
+	ruler_female = {
+		1 = FM_OVERSEER
+		2 = FM_OVERSEER
+		3 = FM_OVERSEER
+	}
+	
+	trigger = {
+		has_reform = cult_reform
+	}
+}
