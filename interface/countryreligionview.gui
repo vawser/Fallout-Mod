@@ -356,7 +356,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "secondary_religion_name"
-			position = { x = 50 y = 156 }
+			position = { x = 75 y = 156 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
@@ -547,8 +547,9 @@ guiTypes = {
 			format = centre
 		}
 		
-############## ORTHODOX PATRIARCH AUTHORITY	###### 
-
+        #------------------------------------------
+        # ORTHODOX ICONS
+        #------------------------------------------
 		windowType = {
 			name = "orthodox_specific_window"
 			backGround =""
@@ -655,8 +656,9 @@ guiTypes = {
 			
 		}
 
-		############## SHINTO ISOLATIONISM ###### 
-
+		#------------------------------------------
+        # INCIDENTS
+        #------------------------------------------
 		windowType = {
 			name = "shinto_specific_window"
 			backGround =""
@@ -769,7 +771,9 @@ guiTypes = {
 			}
 		}
 	
-		############## CONFUCIANISM HARMONY ##############
+		#------------------------------------------
+        # HARMONY
+        #------------------------------------------
 		windowType = {
 			name = "confucianism_specific_window"
 			backGround =""
@@ -931,8 +935,9 @@ guiTypes = {
 			}
 		}
 
-############## COPTIC HOLY SITES	###### 
-
+        #------------------------------------------
+        # BLESSINGS
+        #------------------------------------------
 		windowType = {
 			name = "coptic_specific_window"
 			backGround =""
@@ -1066,7 +1071,9 @@ guiTypes = {
 		}
 		
 		
-################# MUSLIM PIETY		
+        #------------------------------------------
+        # PIETY
+        #------------------------------------------
 		windowType = {
 			name = "muslim_specific_window"
 			backGround =""
@@ -1087,20 +1094,20 @@ guiTypes = {
 			iconType ={
 				name ="current_piety_progress_bg"
 				spriteType = "GFX_piety_bar_bg"
-				position = { x= 68 y = -30 }
+				position = { x= 68 y = -20 }
 			}
 			
 			iconType ={
 				name ="current_piety_progress_frame"
 				spriteType = "GFX_piety_bar_frame"
-				position = { x= 52 y = -68 }
+				position = { x= 52 y = -58 }
 			}
 			
 			iconType =
 			{
 				name ="low_piety"
 				spriteType = "GFX_piety_icon_low"
-				position = { x= 30 y = -40 }
+				position = { x= -15 y = -55 }
 				Orientation = "CENTER_LEFT"
 			}
 			
@@ -1108,7 +1115,7 @@ guiTypes = {
 			{
 				name ="high_piety"
 				spriteType = "GFX_piety_icon_high"
-				position = { x= 252 y = -40 }
+				position = { x= 255 y = -55 }
 				Orientation = "CENTER_LEFT"
 			}
 			
@@ -1133,7 +1140,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "current_piety_text"
-				position = { x = 78 y = -60 }
+				position = { x = 78 y = -50 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = "CURRENT_PIETY"	
@@ -1146,14 +1153,14 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "low_piety_action"
-				position = { x=71 y = -11}
+				position = { x=71 y = -8}
 				quadTextureSprite ="GFX_low_piety_action"
 				Orientation = "LEFT"
 			}
 			
 			guiButtonType = {
 				name = "high_piety_action"
-				position = { x=200 y = -11}
+				position = { x=200 y = -8 }
 				quadTextureSprite ="GFX_high_piety_action"
 				Orientation = "LEFT"
 			}
@@ -1161,7 +1168,10 @@ guiTypes = {
 
 
 		}
-################# BUDDHIST KARMA		
+
+        #------------------------------------------
+        # KARMA
+        #------------------------------------------
 		windowType = {
 			name = "buddhist_specific_window"
 			backGround =""
@@ -1251,7 +1261,9 @@ guiTypes = {
 			}
 		}
 		
-		################# personal deity		
+		#------------------------------------------
+        # PERSONAL DEITY
+        #------------------------------------------
 		windowType = {
 			name = "personal_deity"
 			backGround =""
@@ -1298,7 +1310,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "deity_effect"
-				position = { x = 40 y = -25 }
+				position = { x = 40 y = -22 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = ""	
@@ -1318,7 +1330,9 @@ guiTypes = {
 			}
 		}
 
-		################# Fetishist cults	
+		#------------------------------------------
+        # FETISHIST CULTS
+        #------------------------------------------
 		windowType = {
 			name = "fetishist_cult"
 			backGround =""
@@ -1385,10 +1399,9 @@ guiTypes = {
 			}
 		}
 		
-		
-		
-			
-		###Religion specific datafield
+		#------------------------------------------
+        # PAPACY
+        #------------------------------------------
 		windowType = {
 			name = "catholic_specific_window"
 			backGround =""
@@ -1403,7 +1416,7 @@ guiTypes = {
 			{
 				name = "catholic_bg"
 				spriteType = "GFX_country_religion_view_catholic_bg"
-				position = { x = 6 y = -63 }
+				position = { x = 6 y = -9999 }
 				Orientation = "UPPER_LEFT"
 			}
 			
@@ -1411,7 +1424,7 @@ guiTypes = {
 			{
 				name ="papacy_controller"
 				quadTextureSprite = "GFX_shield_small"
-				position = { x= 231 y = -56 }
+				position = { x= 231 y = -9999 }
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -1424,7 +1437,7 @@ guiTypes = {
 			{
 				name ="papacy_icon"
 				quadTextureSprite = "GFX_menubar_floating_strip"
-				position = { x= 227 y = -20 }
+				position = { x= 120 y = -50 }
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -1434,7 +1447,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "no_active_cardinals"
-				position = { x = 11 y = -50 }
+				position = { x = 11 y = -9999 }
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
 				text = "NO_ACTVIVE_CARDINALS"
@@ -1446,7 +1459,7 @@ guiTypes = {
 			
 			OverlappingElementsBoxType = {
 					name = "active_cardinals"
-					position = { x= 15 y = -32 }
+					position = { x= 15 y = -9999 }
 					size = { x = 180 y = 32 }
 					Orientation = "UPPER_LEFT"
 					format = left
@@ -1457,14 +1470,14 @@ guiTypes = {
 			{
 				name = "papal_influence_icon"
 				spriteType = "GFX_papal_influence"
-				position = { x = 11 y = -17 }
+				position = { x = 11 y = -9999 }
 				Orientation = "UPPER_LEFT"
 				hint_tag = "hint_papalinfluence"
 			}
 			
 			instantTextBoxType = {
 				name = "papal_influence_value"
-				position = { x = 52 y = -8 }
+				position = { x = 52 y = -9999 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = "3,1"
@@ -1479,14 +1492,14 @@ guiTypes = {
 			{
 				name = "reform_desire_icon"
 				spriteType = "GFX_icon_catholic_reform_desire"
-				position = { x = 120 y = -15 }
+				position = { x = 120 y = -9999 }
 				Orientation = "UPPER_LEFT"
 				hint_tag = "hint_reformdesire"
 			}
 			
 			instantTextBoxType = {
 				name = "reform_desire_value"
-				position = { x = 157 y = -8 }
+				position = { x = 157 y = -9999 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = "3,1"
@@ -1497,7 +1510,9 @@ guiTypes = {
 			}			
 		}
 		
-		###Religion specific datafield
+		#------------------------------------------
+        # CHURCH POWER
+        #------------------------------------------
 		windowType = {
 			name = "protestant_specific_window"
 			backGround =""
@@ -1556,6 +1571,9 @@ guiTypes = {
 			}
 		}
 
+        #------------------------------------------
+        # CHURCH POWER (effects)
+        #------------------------------------------
 		windowType = { # Used when religion can't unlock aspects, only one-time fire them
 			name = "anglican_specific_window"
 			backGround =""
@@ -1597,6 +1615,9 @@ guiTypes = {
 			}
 		}
 		
+        #------------------------------------------
+        # FERVOR
+        #------------------------------------------
 		windowType = {
 			name = "fervor_specific_window"
 			backGround =""
@@ -2267,7 +2288,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "deity_item_effect"
-			position = { x = 58 y = 6 }
+			position = { x = 58 y = 0 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "DeityEffect"	
@@ -2501,7 +2522,7 @@ guiTypes = {
 	################################################################################################
 	################# Church aspect item (for selection) For Protestants
 	windowType = {
-		name = "countryreligionview_aspectitem_asoiaf_rhllor"
+		name = "countryreligionview_aspectitem_atomic_worship"
 		backGround =""
 		position = { x=10 y=-20 }	
 		size = { x=50 y=46 }
@@ -2551,61 +2572,10 @@ guiTypes = {
 		}
 	}
     
-    windowType = {
-		name = "countryreligionview_aspectitem_asoiaf_white_walker"
-		backGround =""
-		position = { x=10 y=-20 }	
-		size = { x=50 y=46 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder = ""
-		Orientation = "UPPER_LEFT"
-		
-		iconType =
-		{
-			name ="aspect_icon"
-			spriteType = "GFX_hindu_deities_strip"
-			position = { x= 45 y = -14 }
-		}
-		
-		instantTextBoxType = {
-			name = "aspect_name"
-			position = { x= -42 y = 6 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}
-			text = "AspectName"	
-			maxWidth = 102
-			maxHeight = 24
-			Orientation = "UPPER_LEFT"
-			format = left
-		}
-		
-		instantTextBoxType = {
-			name = "aspect_effect"
-			position = { x = 98 y = -2 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}
-			text = "AspectEffect"	
-			maxWidth = 206
-			maxHeight = 24
-			Orientation = "UPPER_LEFT"
-			format = left
-		}
-		
-		guiButtonType = {
-			name = "pick_aspect"
-			position = { x=301 y = 1}
-			quadTextureSprite ="GFX_standard_button_71"
-			buttonText = "SELECT"
-			buttonFont = "vic_18"
-			Orientation = "LEFT"
-		}
-	}
-
 	################################################################################################
 	################# Church aspect item (for selection) For Anglican
 	windowType = {
-		name = "countryreligionview_aspectitem_asoiaf_lady_of_the_waves"
+		name = "countryreligionview_aspectitem_unused"
 		backGround =""
 		position = { x=10 y=-30 }	
 		size = { x=50 y=46 }
