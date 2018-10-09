@@ -1,0 +1,106 @@
+guiTypes = {
+    windowType = {
+        name ="goto_box"
+        backGround="goto_box"
+        position = { x= 150 y =150 }	
+        size = { x=256 y =370 }
+        moveable = 1
+        dontRender = ""
+        horizontalBorder= ""
+        verticalBorder= ""
+        upsound = ""
+        downsound = ""
+        fullscreen=no
+	
+        listboxType = {
+            name ="provinces"
+            position = { x= 36 y = 80 }
+            backGround=""
+            size = { x = 280 y = 300}
+            horizontal = 0
+            spacing = 2
+            scrollbartype = "standardlistbox_noslider"
+            borderSize = {x = 10 y = 10}
+            Orientation = "UPPER_LEFT"
+        }
+
+        iconType = {
+			name ="goto_entry_bg"
+			spriteType = "GFX_fallout_background_300_64"
+			position = { x=15 y = 20 }
+            scale = 0.9
+		}
+        
+        guiButtonType = {
+            name = "goto_box"
+            position = { x = 0 y = 0 }
+            quadTextureSprite ="GFX_fallout_background_300_604"	
+        }
+	
+        guiButtonType = {
+            name = "goto"
+            position = { x = 5000 y = 272 }
+            quadTextureSprite ="button_type_1"	
+            buttonText = "GOTO_GOTO"
+            buttonFont = "monofonto_outline_12"
+            clicksound = click
+        }
+	
+        guiButtonType = {
+            name = "button_home"
+            position = { x = 100 y = 500 }
+            quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+            buttonText = "Home"
+            buttonFont = "monofonto_outline_12"
+            clicksound = click
+        }
+	
+        guiButtonType = {
+            name = "cancel"
+            position = { x = 100 y = 540 }
+            quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+            buttonText = "GOTO_CANCEL"
+            buttonFont = "monofonto_outline_12"
+            shortcut = "ESCAPE"
+            clicksound = click
+        }
+
+        instantTextBoxType = {
+            name = "goto_text"
+            position = {x = 36 y = 80 }
+            font = "monofonto_outline_12"
+            borderSize = {x = 8 y = 0}	
+            maxWidth = 188
+            maxHeight = 18
+            text = ""	
+            orientation = "UPPER_LEFT"
+            format = centre
+        }
+	
+        editBoxType = {
+            position = { x = 25 y = 30 }
+            name = "goto_edit"
+            font = "monofonto_outline_16"
+            borderSize = { x = 8 y = 6  }	
+            size = { x=198 y=32 }
+            text = ""	
+            orientation = "UPPER_LEFT"
+        }
+	
+        instantTextBoxType = {
+            name = "exact_label"
+            position = { x = 90 y = 460 }
+            font = "monofonto_outline_12"
+            borderSize = {x = 0 y = 0}
+            text = "GOTO_EXACT"
+            maxWidth = 200
+            maxHeight = 32
+        }
+
+        guiButtonType = {
+            name = "exact_checkbox"
+            position = { x = 46 y = 452 }
+            quadTextureSprite ="GFX_checkbox_gold_32"
+        }
+	}
+}

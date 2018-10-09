@@ -1,0 +1,176 @@
+guiTypes = {
+	
+	### DEFAULT POPUP
+	eu3dialogtype = {
+		name = "NameHeirDialog"
+		backGround="Background"
+		position = { x=-225 y=-160 }
+		size = { x=500 y=320 }
+		orientation="CENTER"
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite ="SandboxFloaterBackground"
+		}
+		
+		iconType = {
+			name ="message_band"
+			spriteType = "GFX_button_400"
+			position = { x= 68 y = 12 }
+            scale = 0.9
+		}
+		
+		instantTextBoxType = {
+            name = "Header"
+			position = { x = 59 y = 20 }
+			textureFile = ""
+			font = "monofonto_outline_16"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 380
+			maxHeight = 20
+			fixedsize = yes
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "Line1"
+			position = { x = 59 y = 90 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			text = "Title"	
+			maxWidth = 380
+			maxHeight = 24
+			format = centre
+		}
+	
+		instantTextBoxType = {
+			name = "Line2"
+			position = { x = 59 y = 120 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 380
+			maxHeight = 20	
+			format = centre
+		}
+		
+        iconType = {
+			name ="popup_edittextbox_bg"
+			spriteType = "GFX_fallout_background_500_64"
+			position = { x= 80 y = 104 }
+            scale = 0.5
+		}
+        
+        # Naming field
+		editBoxType = {
+			name = "Line3"
+			font = "monofonto_outline_12"
+			position = { x= 90 y= 110 }
+			borderSize = { x = 0 y = 0 }	
+			text = ""
+			size = { x=307 y=20 }
+		}
+		
+		guiButtonType = {
+			name = "random_heir_name"
+			position = { x = 370 y = 100 }
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"
+			buttonText = "Random"
+			buttonFont = "monofonto_outline_12"
+		}
+
+		instantTextBoxType = {
+			name = "Line4"
+			position = { x = 19 y = 135 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 460
+			maxHeight = 20	
+			format = centre
+		}
+			
+		instantTextBoxType = {
+			name = "Line5"
+			position = { x = 19 y =160 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 460
+			maxHeight = 20	
+			format = centre
+		}
+			
+		instantTextBoxType = {
+			name = "Line6"
+			position = { x = 19 y = 185 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 460
+			maxHeight = 20	
+			format = centre
+		}
+		
+		shieldtype = {
+			name ="LeftShield"
+			spriteType = "standarddialogshield"
+			position = { x= 3 y = -4 }
+		}
+		
+		shieldtype = {
+			name ="RightShield"
+			spriteType = "standarddialogshield"
+			position = { x= 413 y = -4 }
+		}
+
+		guiButtonType = {
+			name = "DeclineButton"
+			position = { x=280 y =270}
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"
+			buttonText = "CANCEL"
+			buttonFont = "monofonto_outline_12"
+			shortcut = "ESCAPE"
+		}
+		
+		guiButtonType = {
+			name = "AgreeButton"
+			position = { x=280 y =270}
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"
+			buttonText = "OK"
+			buttonFont = "monofonto_outline_12"
+			shortcut = "RETURN"
+			clicksound = ok_click
+		}
+		
+		guiButtonType = {
+			name = "CenterOK"
+			position = { x=200 y =270}
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"
+			buttonText = "OK"
+			buttonFont = "monofonto_outline_12"
+			shortcut = "RETURN"
+			clicksound = ok_click
+		}
+		
+		
+		guiButtonType = {
+			name = "Settings"	
+			quadTextureSprite ="MessageSettingsButton"
+			position = { x=32 y=32 }
+		}
+	}
+	
+}
+
