@@ -296,7 +296,7 @@ on_new_monarch = {
             OR = {
                 tag = NVG
                 tag = X02
-                government = the_think_tank
+                has_reform = think_tank_reform
             }
         }
         add_ruler_modifier = {
@@ -339,7 +339,7 @@ on_death_election = {
 on_death_foreign_slave_ruler = {
 	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_foreign_slave_ruler" }
 	events = {
-		wolf.0 # Choose new for the Pack
+		wolf_pack.1 # Choose new for the Pack
 		shi.1 # Choose new ruler
 	}
 }
@@ -622,27 +622,26 @@ on_bi_yearly_pulse = {
     }
     
     random_events = {
-		## TRIBAL FLAVOR ##
-		100 = randomeventsstapehordes.1
-		100 = randomeventsstapehordes.2
-		100 = randomeventsstapehordes.3
-		100 = randomeventsstapehordes.4
-		100 = randomeventsstapehordes.5
-		100 = randomeventsstapehordes.6
-		100 = randomeventsstapehordes.7
-		100 = randomeventsstapehordes.8
-		100 = randomeventsstapehordes.13
-		100 = randomeventsstapehordes.14
-		50 = randomeventsstapehordes.15
-		20 = randomeventsstapehordes.16
-		90 = randomeventsstapehordes.17
-		15 = randomeventsstapehordes.18
-		10 = randomeventsstapehordes.19
-		100 = randomeventsstapehordes.20
-		100 = randomeventsstapehordes.21
-		100 = randomeventsstapehordes.22
-		100 = randomeventsstapehordes.23
-		100 = randomeventsstapehordes.24
+		100 = tribal_flavour.1
+		100 = tribal_flavour.2
+		100 = tribal_flavour.3
+		100 = tribal_flavour.4
+		100 = tribal_flavour.5
+		100 = tribal_flavour.6
+		100 = tribal_flavour.7
+		100 = tribal_flavour.8
+		100 = tribal_flavour.13
+		100 = tribal_flavour.14
+		50 = tribal_flavour.15
+		20 = tribal_flavour.16
+		90 = tribal_flavour.17
+		15 = tribal_flavour.18
+		10 = tribal_flavour.19
+		100 = tribal_flavour.20
+		100 = tribal_flavour.21
+		100 = tribal_flavour.22
+		100 = tribal_flavour.23
+		100 = tribal_flavour.24
     }
 }
 
@@ -1087,8 +1086,6 @@ on_consecrate_patriarch = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_consecrate_patriarch" }
 }
 
-
-}
 
 on_reform_changed = {
 }

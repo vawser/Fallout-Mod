@@ -1,5 +1,625 @@
-set_country_flag = allow_tributary_state
-create_subject = {
-    subject_type = tributary_state
-    subject = NVG
-}
+#-------------------------------------------
+    # BUILDINGS START
+    #-------------------------------------------
+    
+	windowType = {
+		name = "new_buildings_entry"
+		backGround=""
+		position = { x=0 y =0}	
+		size = { x=400 y = 320}
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = no
+	
+        #---------------------------------------------------------
+        # Civic
+        #---------------------------------------------------------
+        iconType = {
+			name = "civic_banner"
+			position = { x = 30 y = -12 }
+			spriteType = "GFX_macro_diplomacy_green_banner"
+		}
+		
+		instantTextBoxType={
+			name = "title_civic"
+			position = {x = 190 y = -1 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 120
+			maxHeight = 18
+			text = "Civic"	
+		}
+        
+		checkboxType = {
+			name = "build_fbs_office"
+			position = { x = 29 y = 32 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_office_cost"
+			position = {x = 29 y = 82 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_factory"
+			position = { x = 81 y = 32 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_factory_cost"
+			position = {x = 81 y = 82 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_marketplace"
+			position = { x = 133 y = 32 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_marketplace_cost"
+			position = {x = 133 y = 82 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_bank"
+			position = { x = 185 y = 32 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_bank_cost"
+			position = {x = 185 y = 82 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_research_lab"
+			position = { x = 236 y = 32 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_research_lab_cost"
+			position = {x = 236 y = 82 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_police_station"
+			position = { x = 288 y = 32 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_police_station_cost"
+			position = {x = 288 y = 82 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_religious_centre"
+			position = { x = 340 y = 32 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_religious_centre_cost"
+			position = {x = 340 y = 82 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        #---------------------------------------------------------
+        # Military
+        #---------------------------------------------------------
+        iconType = {
+			name = "military_banner"
+			position = { x = 30 y = 100 }
+			spriteType = "GFX_macro_diplomacy_green_banner"
+		}
+		
+		instantTextBoxType={
+			name = "title_military"
+			position = {x = 182 y = 109 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 120
+			maxHeight = 18
+			text = "Military"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_military_camp"
+			position = { x = 29 y = 148 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_military_camp_cost"
+			position = {x = 29 y = 198 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_outpost"
+			position = { x = 81 y = 148 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_outpost_cost"
+			position = {x = 81 y = 198 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_barracks"
+			position = { x = 133 y = 148 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_barracks_cost"
+			position = {x = 133 y = 198 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_dock"
+			position = { x = 185 y = 148 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_dock_cost"
+			position = {x = 185 y = 198 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_shipyard"
+			position = { x = 236 y = 148 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_shipyard_cost"
+			position = {x = 236 y = 198 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_arsenal"
+			position = { x = 288 y = 148 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_arsenal_cost"
+			position = {x = 288 y = 198 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_highway"
+			position = { x = 340 y = 148 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_highway_cost"
+			position = {x = 340 y = 198 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        
+        #---------------------------------------------------------
+        # Utility
+        #---------------------------------------------------------
+        iconType = {
+			name = "utility_banner"
+			position = { x = 30 y = 215 }
+			spriteType = "GFX_macro_diplomacy_green_banner"
+		}
+		
+		instantTextBoxType={
+			name = "title_utility"
+			position = {x = 186 y = 224 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 120
+			maxHeight = 18
+			text = "Utility"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_fort_1"
+			position = { x = 29 y = 255 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_fort_1_cost"
+			position = {x = 29 y = 305 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_fort_2"
+			position = { x = 81 y = 255 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_fort_2_cost"
+			position = {x = 81 y = 305 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_fort_3"
+			position = { x = 133 y = 255 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_fort_3_cost"
+			position = {x = 133 y = 305 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_fort_4"
+			position = { x = 185 y = 255 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_fort_4_cost"
+			position = {x = 185 y = 305 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_manufactory"
+			position = { x = 236 y = 255 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "manufactory_cost"
+			position = {x = 236 y = 305 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        
+        #---------------------------------------------------------
+        # Grand Projects
+        #---------------------------------------------------------
+        iconType = {
+			name = "unique_banner"
+			position = { x = 30 y = 320 }
+			spriteType = "GFX_macro_diplomacy_green_banner"
+		}
+		
+		instantTextBoxType={
+			name = "title_unique"
+			position = {x = 165 y = 329 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 120
+			maxHeight = 18
+			text = "Grand Projects"	
+		}
+        
+        checkboxType = {
+			name = "build_fbs_army_command"
+			position = { x = 29 y = 360 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_army_command_cost"
+			position = {x = 29 y = 410 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_navy_command"
+			position = { x = 81 y = 360 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_navy_command_cost"
+			position = {x = 81 y = 410 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_planning_command"
+			position = { x = 133 y = 360 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_planning_command_cost"
+			position = {x = 133 y = 410 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_infantry_recruitment_centre"
+			position = { x = 185 y = 360 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_infantry_recruitment_centre_cost"
+			position = {x = 185 y = 410 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_sailor_recruitment_centre"
+			position = { x = 236 y = 360 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_sailor_recruitment_centre_cost"
+			position = {x = 236 y = 410 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_propaganda_centre"
+			position = { x = 288 y = 360 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_propaganda_centre_cost"
+			position = {x = 288 y = 410 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_centre_of_harmony"
+			position = { x = 340 y = 360 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_centre_of_harmony_cost"
+			position = {x = 340 y = 410 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_casino"
+			position = { x = 29 y = 430 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_casino_cost"
+			position = {x = 29 y = 480 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_slave_pit"
+			position = { x = 81 y = 430 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_slave_pit_cost"
+			position = {x = 81 y = 480 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_brothel"
+			position = { x = 133 y = 430 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_brothel_cost"
+			position = {x = 133 y = 480 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_shooting_range"
+			position = { x = 185 y = 430 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_shooting_range_cost"
+			position = {x = 185 y = 480 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_chem_lab"
+			position = { x = 236 y = 430 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_chem_lab_cost"
+			position = {x = 236 y = 480 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_junkyard"
+			position = { x = 288 y = 430 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_junkyard_cost"
+			position = {x = 288 y = 480 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+        
+        checkboxType = {
+			name = "build_fbs_science_centre"
+			position = { x = 340 y = 430 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_science_centre_cost"
+			position = {x = 340 y = 480 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
+	}
+	
+    #-------------------------------------------
+    # BUILDINGS END
+    #-------------------------------------------

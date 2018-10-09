@@ -643,16 +643,8 @@ fertile_personality = {
 	}
 	allow = {
 		OR = {
-			is_true_monarchy = yes
-			is_hereditary_government = yes
-			AND = {
-				is_tribe_government = yes
-				NOT = {
-					government = wolf_government
-					government = tribal_democracy
-					government = tribal_council
-				}
-			}
+			government = monarchy
+            government = tribal
 		}
 		NOT = { cannot_breed = yes	}
 	}
@@ -1210,7 +1202,6 @@ entrepreneur_personality = {
 	chance = {
 		modifier = {
 			factor = 1
-			government = merchant_republic
 		}
 	}
 	
@@ -1254,7 +1245,6 @@ industrious_personality = {
 	chance = {
 		modifier = {
 			factor = 1
-			government = merchant_republic
 		}
 	}
 	
@@ -2176,18 +2166,10 @@ infertile_personality = {
 
 	 allow = {
 		OR = {
-			is_true_monarchy = yes
-			is_hereditary_government = yes
-			AND = {
-				is_tribe_government = yes
-				NOT = {
-					government = wolf_government
-					government = tribal_democracy
-					government = tribal_council
-				}
-			}
+			government = monarchy
+            government = tribal
 		}
-		NOT = { cannot_breed = yes	}
+		NOT = { cannot_breed = yes }
 	}
 	
 	chance = {

@@ -95,7 +95,12 @@ country_event = {
 		}
 		change_primary_culture = raider
 		change_religion = tribalism
-		change_government = war_tribe
+        
+        if = {
+            limit = { NOT = { has_reform = raider_reform } }
+            change_government_via_reform = raider_reform
+        }
+        
 		ai_chance = {
 			factor = 98
 		}  

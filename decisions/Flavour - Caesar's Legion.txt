@@ -4,7 +4,7 @@ country_decisions = {
 			OR = {
 				tag = CAE
 				tag = X01
-				government = legion
+				has_reform = legion_reform
 			}
 			NOT = { has_country_modifier = the_glory_of_rome }
 		}
@@ -42,7 +42,7 @@ country_decisions = {
             NOT = { has_dlc = "The Cossacks" }
             OR = {
 				tag = CAE
-				government = legion
+                has_reform = legion_reform
 			}
 		}
 		allow =  {

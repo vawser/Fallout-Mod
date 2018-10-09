@@ -155,21 +155,11 @@ feral_ghoul_rebels = {
 	demands_enforced_effect = {
 		if = { limit = { has_global_flag = enable_common_logging } log = "raiders.txt - demands_enforced_effect - [Root.GetName]" }
 		add_prestige = -50
-		if = {
-			limit = {
-				OR = {
-					is_true_monarchy = yes
-					is_hereditary_government = yes
-					government = administrative_settlement
-					government = diplomatic_settlement
-					government = military_Settlement
-				}
-            }
-			add_legitimacy = -50
-		}
-		if = { limit = { is_republic_government = yes } add_republican_tradition = -50 }
-		if = { limit = { is_tribe_government = yes } add_horde_unity = -50 }
-		if = { limit = { is_theocracy_government = yes } add_devotion = -50 }
-		add_stability = -2
+        add_stability = -2
+        
+		if = { limit = { government = monarchy } add_legitimacy = -50 }
+		if = { limit = { government = republic } add_republican_tradition = -50 }
+		if = { limit = { is_nomad = yes} add_horde_unity = -50 }
+		if = { limit = { government = theocracy } add_devotion = -50 }
 	}
 }

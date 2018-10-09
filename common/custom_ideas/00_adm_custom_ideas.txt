@@ -81,10 +81,7 @@ adm_idea_modifiers = {
 			factor = 1
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { government = monarchy }
-					government = steppe_horde
-				}
+				NOT = { government = monarchy }
 			}
 		}
 	}
@@ -98,7 +95,7 @@ adm_idea_modifiers = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { government = steppe_horde }
+				NOT = { is_nomad = yes }
 			}
 		}
 	}
@@ -112,7 +109,7 @@ adm_idea_modifiers = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { government = theocratic_settlement }
+				NOT = { government = theocracy }
 			}
 		}	
 	}

@@ -1,31 +1,21 @@
-##############################################################################
-# Vanilla Rendition Flavor events for Steppe Countries & Some other Tribals  #
-##############################################################################
-
-namespace = randomeventsstapehordes
-
+namespace = tribal_flavour
 
 #-----------------------------
 # Born To Be Wild
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.1
-	title = "randomeventsstapehordes.1.EVTNAME"
-	desc = "randomeventsstapehordes.1.EVTDESC"
+	id = tribal_flavour.1
+	title = "tribal_flavour.1.title"
+	desc = "tribal_flavour.1.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 
 	is_triggered_only = yes	
 	
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
-			government = wolf_government
-		}
+            government = tribal
+            has_reform = legion_reform
+        }
 		is_at_war = no
 		NOT = { religion_group = religion_group_christianity }
 		NOT = { had_recent_war = 2 }
@@ -41,7 +31,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.1.EVTOPTA"
+		name = "tribal_flavour.1.option.a"
 		ai_chance = { factor = 10 }
 		add_prestige = 5
 	}
@@ -50,23 +40,18 @@ country_event = {
 #-----------------------------
 # Exhaustion is for the Weak
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.2
-	title = "randomeventsstapehordes.2.EVTNAME"
-	desc = "randomeventsstapehordes.2.EVTDESC"
+	id = tribal_flavour.2
+	title = "tribal_flavour.2.title"
+	desc = "tribal_flavour.2.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 
 	is_triggered_only = yes
 	
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
-			government = wolf_government
+            government = tribal
+            has_reform = legion_reform
 			religion = cult_of_mars
 			tag = PIT
 		}
@@ -78,13 +63,13 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.2.EVTOPTA"
+		name = "tribal_flavour.2.option.a"
 		ai_chance = { factor = 10 }
 		add_war_exhaustion = -2.5
 		add_prestige = 5
 	}
 	option = {
-		name = "randomeventsstapehordes.2.EVTOPTB"
+		name = "tribal_flavour.2.option.b"
 		trigger = { has_idea_group = espionage_ideas }		
 		ai_chance = { factor = 90 }
 		add_war_exhaustion = -5
@@ -95,22 +80,18 @@ country_event = {
 #-----------------------------
 # This is a Good Day to Die
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.3
-	title = "randomeventsstapehordes.3.EVTNAME"
-	desc = "randomeventsstapehordes.3.EVTDESC"
+	id = tribal_flavour.3
+	title = "tribal_flavour.3.title"
+	desc = "tribal_flavour.3.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = wolf_government
+            government = tribal
+            has_reform = legion_reform
 		}
 		is_at_war = yes
 		NOT = { manpower_percentage = 0.9 }
@@ -121,12 +102,12 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.3.EVTOPTA"
+		name = "tribal_flavour.3.option.a"
 		ai_chance = { factor = 10 }
 		add_yearly_manpower = 1.00
 	}
 	option = {
-		name = "randomeventsstapehordes.3.EVTOPTB"
+		name = "tribal_flavour.3.option.b"
 		trigger = { has_idea_group = army_organisation_ideas }		
 		ai_chance = { factor = 90 }
 		add_army_tradition = 15
@@ -137,22 +118,18 @@ country_event = {
 #-----------------------------
 #	Friendly Migrating Tribes
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.4
-	title = "randomeventsstapehordes.4.EVTNAME"
-	desc = "randomeventsstapehordes.4.EVTDESC"
+	id = tribal_flavour.4
+	title = "tribal_flavour.4.title"
+	desc = "tribal_flavour.4.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = wolf_government
+            government = tribal
+            has_reform = legion_reform
 		}
 	}
 
@@ -161,7 +138,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.4.EVTOPTA"
+		name = "tribal_flavour.4.option.a"
 		ai_chance = { factor = 100 }
 		add_yearly_manpower = 0.5
 		add_treasury = 50
@@ -171,11 +148,10 @@ country_event = {
 #-----------------------------
 #	Hostile Migrating Tribes
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.5
-	title = "randomeventsstapehordes.5.EVTNAME"
-	desc = "randomeventsstapehordes.5.EVTDESC"
+	id = tribal_flavour.5
+	title = "tribal_flavour.5.title"
+	desc = "tribal_flavour.5.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
@@ -189,19 +165,15 @@ country_event = {
 			NOT = { has_opinion = { who = ROOT value = 50 } }
 			NOT = { religion_group = religion_group_christianity }
 			OR = {
-				NOT = {	has_slavery_forbidden = yes	}
+				NOT = { has_slavery_forbidden = yes	}
 				tag = GD1
 				tag = GD2
-				government = legion
-				government = wolf_government
+				has_reform = legion_reform
+                has_reform = wolf_pack_reform
 			}
 			OR = {
-				government = steppe_horde
-				government = religious_tribe
-				government = trade_tribe
-				government = war_tribe
-				government = wolf_government
-				government = legion
+				government = tribal
+                has_reform = legion_reform
 				tag = GD1
 				tag = GD2
 			}
@@ -214,7 +186,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.5.EVTOPTA"
+		name = "tribal_flavour.5.option.a"
 		ai_chance = { factor = 100 }
 		random_list = {
 			40 = { add_stability = -1 }
@@ -230,33 +202,26 @@ country_event = {
 #-----------------------------
 #	Migrating Herdsmen
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.6
-	title = "randomeventsstapehordes.6.EVTNAME"
-	desc = "randomeventsstapehordes.6.EVTDESC"
+	id = tribal_flavour.6
+	title = "tribal_flavour.6.title"
+	desc = "tribal_flavour.6.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = wolf_government
+            government = tribal
+            has_reform = legion_reform
 		}
+        
 		any_neighbor_country = {  
 			has_opinion = { who = ROOT value = 0 }
 			OR = {
-				government = steppe_horde
-				government = religious_tribe
-				government = trade_tribe
-				government = war_tribe
-				government = wolf_government
-				is_tribe_government = yes
-			}
+                government = tribal
+                has_reform = legion_reform
+            }
 		}
 		any_owned_province = { 
 			trade_goods = meat
@@ -285,7 +250,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.6.EVTOPTA"
+		name = "tribal_flavour.6.option.a"
 		ai_chance = { factor = 100 }
 		event_target:migration_province = {
 			add_base_production = 2
@@ -298,9 +263,9 @@ country_event = {
 #-----------------------------
 
 country_event = {
-	id = randomeventsstapehordes.7
-	title = "randomeventsstapehordes.7.EVTNAME"
-	desc = "randomeventsstapehordes.7.EVTDESC"
+	id = tribal_flavour.7
+	title = "tribal_flavour.7.title"
+	desc = "tribal_flavour.7.desc"
 	picture = DEAD_JUNKIE_eventPicture
 	
 	is_triggered_only = yes	
@@ -342,7 +307,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "randomeventsstapehordes.7.EVTOPTA"
+		name = "tribal_flavour.7.option.a"
 		ai_chance = { factor = 100 }
 		add_treasury = 25
 		event_target:migration_province = {
@@ -354,29 +319,21 @@ country_event = {
 #-----------------------------
 #	War Games
 #-----------------------------
-
 country_event = { # War Games begin
-	id = randomeventsstapehordes.8
-	title = "randomeventsstapehordes.8.EVTNAME"
-	desc = "randomeventsstapehordes.8.EVTDESC"
+	id = tribal_flavour.8
+	title = "tribal_flavour.8.title"
+	desc = "tribal_flavour.8.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = wolf_government
-			government = militia_gov
+            government = tribal
+            has_reform = legion_reform
 			tag = GD1
 			tag = GD2
-			AND = {
-				religion = cult_of_mars
-				NOT = { government = legion }
-			}
+			religion = cult_of_mars
 		}
 		is_at_war = no
 		has_regency = no
@@ -387,26 +344,26 @@ country_event = { # War Games begin
 	}
 
 	option = {
-		name = "randomeventsstapehordes.8.EVTOPTA"
+		name = "tribal_flavour.8.option.a"
 		ai_chance = { factor = 100 }
 		random_list = {
 			25 = {
-				country_event = { id = randomeventsstapehordes.9 days = 3 random = 2 }
+				country_event = { id = tribal_flavour.9 days = 3 random = 2 }
 			}
 			25 = {
-				country_event = { id = randomeventsstapehordes.10 days = 3 random = 2 }
+				country_event = { id = tribal_flavour.10 days = 3 random = 2 }
 			}
 			25 = {
-				country_event = { id = randomeventsstapehordes.11 days = 3 random = 2 }
+				country_event = { id = tribal_flavour.11 days = 3 random = 2 }
 			}
 			25 = {
-				country_event = { id = randomeventsstapehordes.12 days = 3 random = 2 }
+				country_event = { id = tribal_flavour.12 days = 3 random = 2 }
 			}
 			15 = {
-				country_event = { id = randomeventsstapehordes.15 days = 3 random = 2 }
+				country_event = { id = tribal_flavour.15 days = 3 random = 2 }
 			}
 			5 = {
-				country_event = { id = randomeventsstapehordes.16 days = 3 random = 2 }
+				country_event = { id = tribal_flavour.16 days = 3 random = 2 }
 			}			
 		}		
 	}
@@ -415,11 +372,10 @@ country_event = { # War Games begin
 #-----------------------------
 #	Glorious Khan
 #-----------------------------
-
 country_event = { # The Khan wins!
-	id = randomeventsstapehordes.9
-	title = "randomeventsstapehordes.9.EVTNAME"
-	desc = "randomeventsstapehordes.9.EVTDESC"
+	id = tribal_flavour.9
+	title = "tribal_flavour.9.title"
+	desc = "tribal_flavour.9.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
@@ -440,7 +396,7 @@ country_event = { # The Khan wins!
 	}
 
 	option = {
-		name = "randomeventsstapehordes.9.EVTOPTA"
+		name = "tribal_flavour.9.option.a"
 		ai_chance = { factor = 33 }
 		add_horde_unity = 40
 		hidden_effect = {
@@ -450,12 +406,12 @@ country_event = { # The Khan wins!
 		}
 	}
 	option = {
-		name = "randomeventsstapehordes.9.EVTOPTB"
+		name = "tribal_flavour.9.option.b"
 		ai_chance = { factor = 33 }
 		add_prestige = 30
 	}
 	option = {
-		name = "randomeventsstapehordes.9.EVTOPTC"
+		name = "tribal_flavour.9.option.c"
 		ai_chance = { factor = 17 }
 		trigger = {
 			
@@ -473,11 +429,10 @@ country_event = { # The Khan wins!
 #-----------------------------
 #	Successful Games
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.10
-	title = "randomeventsstapehordes.10.EVTNAME"
-	desc = "randomeventsstapehordes.10.EVTDESC"
+	id = tribal_flavour.10
+	title = "tribal_flavour.10.title"
+	desc = "tribal_flavour.10.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
@@ -487,7 +442,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.10.EVTOPTA"
+		name = "tribal_flavour.10.option.a"
 		ai_chance = { factor = 100 }
 		add_stability_or_adm_power = yes
 		add_army_tradition = 5
@@ -500,11 +455,10 @@ country_event = {
 #-----------------------------
 #	Ruinous Games
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.11
-	title = "randomeventsstapehordes.11.EVTNAME"
-	desc = "randomeventsstapehordes.11.EVTDESC"
+	id = tribal_flavour.11
+	title = "tribal_flavour.11.title"
+	desc = "tribal_flavour.11.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
@@ -514,7 +468,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.11.EVTOPTA"
+		name = "tribal_flavour.11.option.a"
 		ai_chance = { factor = 75 }
 		add_stability = -1
 		add_army_tradition = -5		
@@ -527,10 +481,10 @@ country_event = {
 	}
 	
 	option = {
-		name = "randomeventsstapehordes.11.EVTOPTB"
+		name = "tribal_flavour.11.option.b"
 		ai_chance = { factor = 25 }
 
-		custom_tooltip = randomeventsstapehordes.11.EVTOPTB2
+		custom_tooltip = tribal_flavour.11.option.b.tooltip
 		add_treasury = -150
 		hidden_effect = { 
 			add_horde_unity = -5
@@ -555,11 +509,10 @@ country_event = {
 #-----------------------------
 #	Legendary Games
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.12
-	title = "randomeventsstapehordes.12.EVTNAME"
-	desc = "randomeventsstapehordes.12.EVTDESC"
+	id = tribal_flavour.12
+	title = "tribal_flavour.12.title"
+	desc = "tribal_flavour.12.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
@@ -569,7 +522,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.12.EVTOPTA"
+		name = "tribal_flavour.12.option.a"
 		ai_chance = { factor = 100 }
 		add_prestige = 20
 		add_yearly_manpower = 0.25
@@ -579,27 +532,16 @@ country_event = {
 #-----------------------------
 #	Clansmen Flock our Hosts
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.13
-	title = "randomeventsstapehordes.13.EVTNAME"
-	desc = "randomeventsstapehordes.13.EVTDESC"
+	id = tribal_flavour.13
+	title = "tribal_flavour.13.title"
+	desc = "tribal_flavour.13.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
-		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = wolf_government
-			AND = {
-				religion = cult_of_mars
-				NOT = { government = legion }
-			}
-		}
+		government = tribal
 		NOT = { manpower_percentage = 0.5 }
 	}
 
@@ -608,7 +550,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.13.EVTOPTA"
+		name = "tribal_flavour.13.option.a"
 		ai_chance = { factor = 100 }
 		add_yearly_manpower = 0.2
 	}
@@ -617,33 +559,18 @@ country_event = {
 #-----------------------------
 #	Restless Nomads
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.14
-	title = "randomeventsstapehordes.14.EVTNAME"
-	desc = "randomeventsstapehordes.14.EVTDESC"
+	id = tribal_flavour.14
+	title = "tribal_flavour.14.title"
+	desc = "tribal_flavour.14.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = wolf_government
-			AND = {
-				government = legion
-				NOT = {
-					tag = GD1
-					tag = GD2
-				}
-			}
-			AND = {
-				religion = cult_of_mars
-				NOT = { government = legion }
-			}
+			government = tribal
+            has_reform = legion_reform
 		}
 		NOT = { manpower_percentage = 0.5 }
 		NOT = { religion_group = religion_group_christianity }
@@ -656,7 +583,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.14.EVTOPTA"
+		name = "tribal_flavour.14.option.a"
 		ai_chance = { factor = 100 }
 		add_yearly_manpower = -0.45
 		add_prestige = -5
@@ -667,11 +594,10 @@ country_event = {
 #-----------------------------
 #	Rising Star
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.15
-	title = "randomeventsstapehordes.15.EVTNAME"
-	desc = "randomeventsstapehordes.15.EVTDESC"
+	id = tribal_flavour.15
+	title = "tribal_flavour.15.title"
+	desc = "tribal_flavour.15.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
@@ -682,29 +608,21 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = wolf_government
-			government = militia_gov
-			tag = GD1
-			tag = GD2
-			AND = {
-				religion = cult_of_mars
-				NOT = { government = legion }
-			}
+			government = tribal
+            has_reform = legion_reform
 		}
 	}
 
 	option = {
-		name = "randomeventsstapehordes.15.EVTOPTA"
+		name = "tribal_flavour.15.option.a"
 		ai_chance = { factor = 85 }
 		add_prestige = 2
-		create_general = 50
+		create_general = {
+            tradition = 50
+        }
 	}
 	option = {
-		name = "randomeventsstapehordes.15.EVTOPTB"
+		name = "tribal_flavour.15.option.b"
 		ai_chance = {
 			factor = 15
 		}
@@ -714,11 +632,10 @@ country_event = {
 #-----------------------------
 #	Shining Star
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.16
-	title = "randomeventsstapehordes.16.EVTNAME"
-	desc = "randomeventsstapehordes.16.EVTDESC"
+	id = tribal_flavour.16
+	title = "tribal_flavour.16.title"
+	desc = "tribal_flavour.16.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
@@ -730,30 +647,23 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = militia_gov
-			tag = GD1
-			tag = GD2
-			AND = {
-				religion = cult_of_mars
-				NOT = { government = legion }
-			}
+			government = tribal
+            has_reform = legion_reform
 		}
 	}
 
 	option = {
-		name = "randomeventsstapehordes.16.EVTOPTA"
+		name = "tribal_flavour.16.option.a"
 		ai_chance = {
 			factor = 50
 		}
 		add_prestige = 5
-		create_general = 75
+		create_general = {
+            tradition = 75
+        }
 	}
 	option = {
-		name = "randomeventsstapehordes.15.EVTOPTB"
+		name = "tribal_flavour.15.option.b"
 		ai_chance = {
 			factor = 50
 		}
@@ -763,28 +673,18 @@ country_event = {
 #-----------------------------
 #	Tribal Feud
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.17
-	title = "randomeventsstapehordes.17.EVTNAME"
-	desc = "randomeventsstapehordes.17.EVTDESC"
+	id = tribal_flavour.17
+	title = "tribal_flavour.17.title"
+	desc = "tribal_flavour.17.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
-			government = wolf_government
-			religion = cult_of_mars
-		}
-		NOT = {
-			tag = GD1
-			tag = GD2
+			government = tribal
+            has_reform = legion_reform
 		}
 	}
 
@@ -793,14 +693,14 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.17.EVTOPTA"
+		name = "tribal_flavour.17.option.a"
 		ai_chance = { factor = 100 }
 		add_prestige = -5		
 		add_stability = -1
 	}
 	
 	option = {
-		name = "randomeventsstapehordes.17.EVTOPTA"
+		name = "tribal_flavour.17.option.a"
 		ai_chance = { factor = 100 }
 		add_prestige = -15	
 		add_horde_unity = -5
@@ -810,28 +710,18 @@ country_event = {
 #-----------------------------
 #	Tribal Feud
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.18
-	title = "randomeventsstapehordes.18.EVTNAME"
-	desc = "randomeventsstapehordes.18.EVTDESC"
+	id = tribal_flavour.18
+	title = "tribal_flavour.18.title"
+	desc = "tribal_flavour.18.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
-			government = wolf_government
-			religion = cult_of_mars
-		}
-		NOT = {
-			tag = GD1
-			tag = GD2
+			government = tribal
+            has_reform = legion_reform
 		}
 		has_heir = yes
 		is_lesser_in_union = no
@@ -842,7 +732,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.18.EVTOPTA"
+		name = "tribal_flavour.18.option.a"
 		ai_chance = { factor = 100 }
 		add_horde_unity = -20
 		add_stability = -1
@@ -853,23 +743,18 @@ country_event = {
 #-----------------------------
 #	Hunting Accident
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.19
-	title = "randomeventsstapehordes.19.EVTNAME"
-	desc = "randomeventsstapehordes.19.EVTDESC"
+	id = tribal_flavour.19
+	title = "tribal_flavour.19.title"
+	desc = "tribal_flavour.19.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
-			government = wolf_government
+			government = tribal
+            has_reform = legion_reform
 			religion = cult_of_mars
 			tag = PIT
 			religion = ghoul_tribalism
@@ -889,7 +774,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.19.EVTOPTA"
+		name = "tribal_flavour.19.option.a"
 		ai_chance = { factor = 100 }
 		add_prestige = 15
 		add_stability = -1
@@ -900,28 +785,22 @@ country_event = {
 #-----------------------------
 #	We Look Weak
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.20
-	title = "randomeventsstapehordes.20.EVTNAME"
-	desc = "randomeventsstapehordes.20.EVTDESC"
+	id = tribal_flavour.20
+	title = "tribal_flavour.20.title"
+	desc = "tribal_flavour.20.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
+			government = tribal
+            has_reform = legion_reform
 			religion = cult_of_mars
 			tag = ENC
 			tag = MTM
 			tag = GUN
-			government = militia_gov
-			government = wolf_government
 		}
 		NOT = { army_size_percentage = 0.5 }
 	}
@@ -932,7 +811,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.20.EVTOPTA"
+		name = "tribal_flavour.20.option.a"
 		ai_chance = { factor = 100 }
 		add_prestige = -10
 	}
@@ -941,28 +820,22 @@ country_event = {
 #-----------------------------
 #	Authority Undermined
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.21
-	title = "randomeventsstapehordes.21.EVTNAME"
-	desc = "randomeventsstapehordes.21.EVTDESC"
+	id = tribal_flavour.21
+	title = "tribal_flavour.21.title"
+	desc = "tribal_flavour.21.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
+			government = tribal
+            has_reform = legion_reform
 			religion = cult_of_mars
 			tag = MTM
 			tag = GUN
 			tag = ENC
-			government = militia_gov
-			government = wolf_government
 		}
 		NOT = {
 			tag = GD1
@@ -977,7 +850,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.21.EVTOPTA"
+		name = "tribal_flavour.21.option.a"
 		ai_chance = { factor = 100 }
 		add_horde_unity = -5
 		add_prestige = -10
@@ -987,28 +860,22 @@ country_event = {
 #-----------------------------
 #	Military Tradition Scorned
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.22
-	title = "randomeventsstapehordes.22.EVTNAME"
-	desc = "randomeventsstapehordes.22.EVTDESC"
+	id = tribal_flavour.22
+	title = "tribal_flavour.22.title"
+	desc = "tribal_flavour.22.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
-			government = wolf_government
+			government = tribal
+            has_reform = legion_reform
 			religion = cult_of_mars
 			tag = MTM
 			tag = GUN
 			tag = ENC
-			government = militia_gov
 		}
 		NOT = {
 			tag = GD1
@@ -1022,7 +889,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.22.EVTOPTA"
+		name = "tribal_flavour.22.option.a"
 		ai_chance = { factor = 100 }
 		add_army_tradition = -5
 		random = {
@@ -1035,23 +902,18 @@ country_event = {
 #-----------------------------
 #	Military Tradition Scorned
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.23
-	title = "randomeventsstapehordes.23.EVTNAME"
-	desc = "randomeventsstapehordes.23.EVTDESC"
+	id = tribal_flavour.23
+	title = "tribal_flavour.23.title"
+	desc = "tribal_flavour.23.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
 		OR = {
-			government = steppe_horde
-			government = religious_tribe
-			government = trade_tribe
-			government = war_tribe
-			government = legion
-			government = wolf_government
+			government = tribal
+            has_reform = legion_reform
 			religion = cult_of_mars
 			tag = ENC
 		}
@@ -1067,7 +929,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.23.EVTOPTA"
+		name = "tribal_flavour.23.option.a"
 		ai_chance = { factor = 100 }
 		add_prestige = -2		
 		add_yearly_manpower = -0.3
@@ -1081,16 +943,16 @@ country_event = {
 #-----------------------------
 #	War, What is it Good For
 #-----------------------------
-
 country_event = {
-	id = randomeventsstapehordes.24
-	title = "randomeventsstapehordes.24.EVTNAME"
-	desc = "randomeventsstapehordes.24.EVTDESC"
+	id = tribal_flavour.24
+	title = "tribal_flavour.24.title"
+	desc = "tribal_flavour.24.desc"
 	picture = GFX_event_blood_soaked_tribal_hall	
 	
 	is_triggered_only = yes	
 
 	trigger = {
+        government = tribal
 		legitimacy_equivalent = 100
 		is_at_war = yes	
 		NOT = {
@@ -1103,7 +965,7 @@ country_event = {
 	}
 
 	option = {
-		name = "randomeventsstapehordes.24.EVTOPTA"
+		name = "tribal_flavour.24.option.a"
 		add_prestige = 5
 		add_stability_or_adm_power = yes
 		add_mil_power = 100

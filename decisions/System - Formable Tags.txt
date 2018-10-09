@@ -7,7 +7,7 @@ country_decisions = {
 			OR = {
 				tag = CAE
 				tag = GD2
-				government = legion
+				has_reform = legion_reform
 			}
 		}
 		
@@ -207,7 +207,10 @@ country_decisions = {
 			add_prestige = 25
 			change_tag = X03
 			set_government_rank = 3
-			change_government = grand_republic
+            if = {
+                limit = { NOT = { has_reform = ncr_reform } }
+                change_government_via_reform = ncr_reform
+            }
 		}
 	}
 	
@@ -594,14 +597,11 @@ country_decisions = {
 			OR = {
 				technology_group = tech_bos
 				religion = creatorism
-				government = administrative_brotherhood_chapter
-				government = diplomatic_brotherhood_chapter
-				government = fascist_brotherhood_chapter
+				has_reform = brotherhood_reform
 			}
 		}
 		allow =  {
 			has_country_modifier = unified_brotherhood
-#            religion = creatorism
 			total_development = 250
 			num_of_cities = 20
 		}
@@ -652,8 +652,12 @@ country_decisions = {
 			change_tag = X06
 			change_religion = mormon
 			swap_free_idea_group = yes
-			
-			change_government = theocratic_settlement
+            if = {
+                limit = { 
+                    NOT = { has_reform = theocracy_reform }
+                }
+                change_government_via_reform = theocracy_reform
+            }
 		}
 	}
     
@@ -802,72 +806,6 @@ country_decisions = {
 			change_tag = X08
 			swap_free_idea_group = yes
 			set_government_rank = 3
-		}
-	}
-
-	establish_empire = {
-		major = yes
-		potential = {
-			OR = {
-				government = administrative_settlement
-				government = diplomatic_settlement
-				government = military_settlement
-				government = administrative_monarchy
-				government = constitutional_monarchy
-				government = elective_monarchy
-				government = patriarchy
-				government = iqta
-				is_hereditary_government = yes
-			}
-			NOT = { has_country_flag = got_empire }
-			NOT = {
-				tag = ENC
-				government = enclave_gov
-			}
-		}
-		allow =  {
-			stability = 3
-			total_development = 700
-		}
-	  	effect = {
-			add_stability = -3
-			set_government_rank = 3
-			change_government = fm_empire
-			set_country_flag = got_empire
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	establish_grand_republic = {
-		major = yes
-		potential = {
-			OR = {
-				government = administrative_republic
-				government = trade_republic
-				government = military_republic
-				government = federal_republic
-				government = dictatorship
-				government = merchant_republic
-				government = constitutional_republic
-				is_republic_government = yes
-			}
-			NOT = { has_country_flag = basically_merica }
-			NOT = { tag = ENC }
-			NOT = { government = enclave_gov }
-		}
-		allow =  {
-			stability = 3
-			total_development = 700
-		}
-	  	effect = {
-			add_stability = -3
-			set_country_flag = basically_merica
-			change_government = grand_republic
-		}
-		ai_will_do = {
-			factor = 1
 		}
 	}
 }

@@ -8,13 +8,6 @@ is_primitive_state = {
             technology_group = tech_rodent
             technology_group = tech_children
         }
-        NOT = {
-            culture_group = robot_group
-            government = the_think_tank
-            government = the_institute
-            government = bastardized_institute
-            religion = robotics
-        }
     }
 }
 
@@ -30,8 +23,6 @@ is_urban_state = {
             technology_group = tech_ncr
             technology_group = tech_ghoul
             technology_group = tech_wastelander
-            government = the_think_tank
-            government = vault
         }
     }
 }
@@ -46,102 +37,11 @@ is_scientific_state = {
             technology_group = tech_enclave
             technology_group = tech_alien
             technology_group = tech_robot
-            government = the_think_tank
-            government = the_institute
-            government = bastardized_institute
-            government = vault
-            culture_group = robot_group
-            religion = robotics
-            tag = SHI
-            tag = INS
-            tag = TNK
-            tag = FBZ
         }
     }
 }
 
-
-is_tribe_government = {
-    OR = {
-        government = religious_tribe
-        government = trade_tribe
-        government = war_tribe
-        government = steppe_horde
-        government = tribal_kingdom
-        government = tribal_federation
-        government = tribal_democracy
-        government = native_council
-        government = wolf_government
-    }
-}
-
-is_settlement_government = {
-    OR = {
-        government = administrative_settlement
-        government = diplomatic_settlement
-        government = military_settlement
-    }
-}
-
-is_hereditary_government = { # Does not count tribesmen
-     OR = {
-        government = administrative_settlement
-        government = diplomatic_settlement
-        government = military_settlement
-        government = fm_empire
-        government = tribal_kingdom
-        government = tribal_federation
-        government = iqta
-    }
-}
-
-is_republic_government = {
-    OR = {
-        government = administrative_republic
-        government = trade_republic
-        government = military_republic
-        government = federal_republic
-        government = grand_republic
-        government = merchant_republic
-        government = constitutional_republic
-        government = trading_city
-        government = american_republic
-        government = patriarchy
-        government = enclave_gov
-        government = dictatorship
-        government = tribal_democracy
-        government = native_council
-    }
-}
-
-is_brotherhood_government = {
-    OR = {
-        government = administrative_brotherhood_order
-        government = diplomatic_brotherhood_order
-        government = fascist_brotherhood_order
-    }
-}
-
-is_theocracy_government = {
-	OR = {
-		government = theocratic_settlement
-		government = monastic_order
-		government = feudal_theocracy
-	}
-}
-
-is_true_monarchy = {
-	OR = {
-		government = legion
-		government = administrative_monarchy
-		government = constitutional_monarchy
-		government = tribal_kingdom
-		government = steppe_horde
-		government = fm_empire
-	}
-}
-
-is_antebellum_nation = { # Continent-spanning nations that existed before the Great War as well as former nations (e.g. Texas, California)
+is_prewar_nation = {
 	OR = {
 		tag = X04 # USA
 		tag = X07 # Mexico
@@ -151,7 +51,7 @@ is_antebellum_nation = { # Continent-spanning nations that existed before the Gr
 	}
 }
 
-is_antebellum_north_american_state = { # The minor formable nations consisting of the USA states and Canadian provinces (and eventually the Mexican states)
+is_prewar_state = {
 	OR = {
 		tag = X10
 		tag = X11

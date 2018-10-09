@@ -218,11 +218,7 @@ city_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			government = administrative_settlement
-            government = diplomatic_settlement
-            government = military_settlement
-		}
+		has_reform = settlement_reform
         capital_scope = {
             development = 20
         }
@@ -275,11 +271,7 @@ settlement_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			government = administrative_settlement
-            government = diplomatic_settlement
-            government = military_settlement
-		}
+		has_reform = settlement_reform
 	}
 	free = yes
 	

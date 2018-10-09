@@ -336,15 +336,32 @@ commune_reform = {
         
     }
 }
-gang_reform = {
+raider_reform = {
     icon = "castle"
     
     potential = {
-        has_reform = gang_reform
+        has_reform = raider_reform
     }
     
     allow_normal_conversion = yes
-    legacy_equivalent = gang_legacy
+    legacy_equivalent = raider_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        
+    }
+}
+super_mutant_reform = {
+    icon = "castle"
+    
+    potential = {
+        has_reform = super_mutant_reform
+    }
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = super_mutant_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0

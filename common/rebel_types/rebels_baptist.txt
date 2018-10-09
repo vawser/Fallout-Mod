@@ -2,7 +2,7 @@ baptist_rebels = {
     color = { 85 128 138 }
     
 	area = nation 					            # Sticks to provinces of their nation
-	government = baptist_convention				        # Desires Baptist Convention
+	government = theocracy				        # Desires Theocracy
 	religion = baptist
 	defection = religion			            # Defects to countries of their religion
 	defect_delay = 120				            # Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
@@ -162,8 +162,7 @@ baptist_rebels = {
 		OR = {
 			religion_group = religion_group_christianity
 			dominant_religion = baptist
-			government = theocratic_settlement
-			government = monastic_order
+			government = theocracy
 		}
 	}
 	
@@ -206,16 +205,6 @@ baptist_rebels = {
 			}
 			change_religion = baptist
 			force_converted = yes
-		}
-		if = {
-			limit = {
-				OR = {
-					government = theocratic_settlement
-					government = feudal_theocratic_settlement
-					government = monastic_order
-				}
-			}
-			change_government = baptist_convention
 		}
 	}
 }

@@ -147,29 +147,21 @@ religion_group_postwar = {
 				}
 				effect = {
 					if = {
-                        limit = {
-                            OR = {
-                                is_true_monarchy = yes
-                                is_hereditary_government = yes
-                                government = administrative_settlement
-                                government = diplomatic_settlement
-                                government = military_settlement
-                            }
-                        }
+                        limit = { government = monarchy }
                         add_legitimacy = 10
                     }
                     if = {
-                        limit = { is_republic_government = yes }
+                        limit = { government = republic }
                         
                         add_republican_tradition = 10
                     }
                     if = {
-                        limit = { is_theocracy_government = yes}
+                        limit = { government = theocracy }
                         
                         add_devotion = 10
                     }
                     if = {
-                        limit = { is_tribe_government = yes }
+                        limit = { is_nomad = yes }
                         
                         add_horde_unity = 10
                     }

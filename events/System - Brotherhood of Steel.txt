@@ -11,12 +11,7 @@ country_event = {
     
 	trigger = {
 		NOT = { has_country_flag = in_brotherhood_heir_selection }
-		OR = {
-			government = administrative_brotherhood_order
-			government = diplomatic_brotherhood_order
-			government = fascist_brotherhood_order
-		}
-		NOT = { government = theocratic_government }
+		has_reform = brotherhood_reform
 	}
     
 	immediate = {
@@ -43,7 +38,9 @@ country_event = {
 			hidden = yes
 		}
         add_devotion = 5
-        create_general = 50
+        create_general = {
+            tradition = 50
+        }
         
         clr_country_flag = in_brotherhood_heir_selection
 	}

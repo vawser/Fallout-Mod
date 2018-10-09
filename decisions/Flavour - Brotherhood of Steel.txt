@@ -3,9 +3,7 @@ country_decisions = {
 		potential = {
 			OR = {
 				technology_group = tech_bos
-				government = administrative_government_order
-				government = diplomatic_government_order
-				government = fascist_brotherhood_order
+				has_reform = brotherhood_reform
 				has_country_flag = brotherhood_chapter
 			}
 			NOT = { has_country_modifier = unified_brotherhood }
@@ -32,18 +30,12 @@ country_decisions = {
     
 	follow_the_original_directive = {
 		potential = {
-			OR = {
-				government = administrative_brotherhood_order
-				government = diplomatic_brotherhood_order
-			}
+			has_reform = brotherhood_reform
 			NOT = { has_country_modifier = original_directive }
 			NOT = { has_country_modifier = brotherhood_fascist_directive }
 		}
 		allow =  {
-			OR = {
-				government = administrative_brotherhood_order
-				government = diplomatic_brotherhood_order
-			}
+			has_reform = brotherhood_reform
 		}
 	  	effect = {
 			add_country_modifier = { 
@@ -62,25 +54,18 @@ country_decisions = {
 	
 	adopt_a_more_fascist_directive = {
 		potential = {	
-			OR = {
-				government = administrative_brotherhood_order
-				government = diplomatic_brotherhood_order
-			}
+			has_reform = brotherhood_reform
 			NOT = { has_country_modifier = original_directive }
 			NOT = { has_country_modifier = brotherhood_fascist_directive }
 		}
 		allow =  {
-			OR = {
-				government = administrative_brotherhood_order
-				government = diplomatic_brotherhood_order
-			}
+			has_reform = brotherhood_reform
 		}
 	  	effect = {
 			add_country_modifier = { 
 				name = brotherhood_fascist_directive
 				duration = -1
 			}
-			change_government = fascist_brotherhood_order
 		}
 		ai_will_do = {
 			factor = 1

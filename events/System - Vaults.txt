@@ -11,7 +11,7 @@ country_event = {
     is_triggered_only = yes
     
 	trigger = {
-		government = vault 
+		has_reform = vault_reform
 		NOT = { has_ruler_modifier = overseer_for_life }
 	}
 	
@@ -107,7 +107,7 @@ country_event = {
     picture = VAULT_CLASSROOM_eventPicture
     
 	trigger = {
-		government = vault 
+		has_reform = vault_reform
 		NOT = { has_country_modifier = vault_goat_cooldown }
 	}
 	
@@ -359,7 +359,7 @@ country_event = {
     picture = VAULT_CHAT_eventPicture
 
 	trigger = {
-		government = vault 
+		has_reform = vault_reform
 		num_of_cities = 1
 		NOT = { has_country_modifier = VAU_DEP_SYNDROME }
 		NOT = { has_country_modifier = VAU_DEP_SYNDROME_MEDICATED }

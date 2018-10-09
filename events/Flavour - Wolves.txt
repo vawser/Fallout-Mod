@@ -1,20 +1,15 @@
-## TURTLESHROOM PROUDLY PRESENTS ##
-## EVENTS FOR THE WOLF PACK OF "FALLOUT IV ##
-
-# Copied from Vanilla rendition's Mamluk Succession
-
-namespace = wolf
+namespace = wolf_pack
 
 country_event = {
-	id = wolf.0
-	title = wolf.0.t
-	desc = wolf.0.d
+	id = wolf_pack.1
+	title = wolf_pack.1.title
+	desc = wolf_pack.1.desc
 	picture = GFX_event_wolf_flag
 
 	is_triggered_only = yes
 	
 	trigger = {
-		government = wolf_government
+		has_reform = wolf_pack_reform
 	}
 	
 	immediate = {
@@ -87,7 +82,7 @@ country_event = {
 	}
 
 	option = {
-		name = "wolf.0.a" # First Wolf
+		name = wolf_pack.1.option.a
 		ai_chance = {
 			factor = 20
 		}
@@ -148,7 +143,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "wolf.0.b"	# Second Wolf
+		name = wolf_pack.1.option.b
 		ai_chance = {
 			factor = 20
 		}
@@ -209,7 +204,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "wolf.0.c"
+		name = wolf_pack.1.option.c
 		trigger = {
 			has_saved_event_target = third_ruler_alternative_province
 		}
@@ -271,7 +266,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "wolf.0.d"
+		name = wolf_pack.1.option.d
 		trigger = {
 			has_saved_event_target = fourth_ruler_alternative_province
 		}
@@ -333,7 +328,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "wolf.0.e"
+		name = wolf_pack.1.option.e
 		trigger = {
 			has_saved_event_target = fifth_ruler_alternative_province
 		}

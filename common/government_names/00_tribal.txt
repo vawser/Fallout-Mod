@@ -21,7 +21,7 @@ gov_marked_legion = {
 	}
 
 	trigger = {
-		has_reform = gang_reform
+		has_reform = raider_reform
 		tag = GD2
 	}
 }
@@ -45,35 +45,34 @@ gov_marked_ncr = {
 	}
 
 	trigger = { 
-        has_reform = gang_reform
+        has_reform = raider_reform
 		tag = GD1
 	}
 }
-gov_gang_raider = {
+gov_super_mutant_jacobstown = {
 	rank = {
-		1 = FM_RAIDER_GANG
-		2 = FM_RAIDER_GANG
-		3 = FM_RAIDER_GANG
+		1 = FM_JACOBSTOWN
+		2 = FM_JACOBSTOWN
+		3 = FM_JACOBSTOWN
 	}	
 	
 	ruler_male = {
-		1 = FM_OVERBOSS
-		2 = FM_OVERBOSS
-		3 = FM_OVERBOSS
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
 	}
 	
 	ruler_female = {
-		1 = FM_OVERBOSS
-		2 = FM_OVERBOSS
-		3 = FM_OVERBOSS
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
 	}
 	
 	trigger = {
-		has_reform = gang_reform
-        is_raider = yes
+		has_reform = super_mutant_reform
+        tag = JAC
 	}
 }
-
 #-----------------------------------------
 # Base
 #-----------------------------------------
@@ -123,11 +122,11 @@ gov_commune = {
 		has_reform = commune_reform
 	}
 }
-gov_gang = {
+gov_raider = {
 	rank = {
-		1 = FM_GANG
-		2 = FM_GANG
-		3 = FM_GANG
+		1 = FM_RAIDER_GANG
+		2 = FM_RAIDER_GANG
+		3 = FM_RAIDER_GANG
 	}	
 	
 	ruler_male = {
@@ -143,7 +142,30 @@ gov_gang = {
 	}
 	
 	trigger = {
-		has_reform = gang_reform
+		has_reform = raider_reform
+	}
+}
+gov_super_mutant = {
+	rank = {
+		1 = FM_SUPER_MUTANT
+		2 = FM_SUPER_MUTANT
+		3 = FM_SUPER_MUTANT
+	}	
+	
+	ruler_male = {
+		1 = FM_OVERBOSS
+		2 = FM_OVERBOSS
+		3 = FM_OVERBOSS
+	}
+	
+	ruler_female = {
+		1 = FM_OVERBOSS
+		2 = FM_OVERBOSS
+		3 = FM_OVERBOSS
+	}
+	
+	trigger = {
+		has_reform = super_mutant_reform
 	}
 }
 gov_swarm = {
@@ -171,9 +193,9 @@ gov_swarm = {
 }
 gov_wolf_pack = {
 	rank = {
-		1 = WOLF_PACK
-		2 = WOLF_PACK
-		3 = WOLF_PACK
+		1 = FM_WOLF_PACK
+		2 = FM_WOLF_PACK
+		3 = FM_WOLF_PACK
 	}
 
 	ruler_male = {
