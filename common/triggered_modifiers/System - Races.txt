@@ -21,6 +21,8 @@ race_wastelander = {
 	trigger = {
 		is_wastelander = yes
 	}
+    
+    land_forcelimit_modifier = 0.05
 }
 
 race_raider = {
@@ -31,7 +33,7 @@ race_raider = {
 		is_raider = yes
 	}
 
-	
+	reinforce_cost_modifier = -0.05
 }
 race_tribal = {
 	potential = {
@@ -41,7 +43,7 @@ race_tribal = {
 		is_tribal_race = yes
 	}
 
-	
+	global_manpower_modifier = 0.05
 }
 race_robot = {
 	potential = {
@@ -59,7 +61,7 @@ race_super_mutant = {
 		is_super_mutant = yes
 	}
 
-	
+	shock_damage = 0.05
 }
 race_ghoul = {
 	potential = {
@@ -69,7 +71,7 @@ race_ghoul = {
 		is_ghoul = yes
 	}
 
-	
+	land_attrition = -0.05
 }
 race_swampfolk = {
 	potential = {
@@ -79,7 +81,7 @@ race_swampfolk = {
 		is_swampfolk = yes
 	}
 
-	
+	reinforce_speed = 0.1
 }
 race_synth = {
 	potential = {
@@ -89,7 +91,7 @@ race_synth = {
 		is_synth = yes
 	}
 
-	
+	fire_damage = 0.05
 }
 race_mutant = {
 	potential = {
@@ -99,7 +101,7 @@ race_mutant = {
 		is_mutant = yes
 	}
 
-	
+	manpower_recovery_speed = 0.05
 }
 race_beastlord = {
 	potential = {
@@ -109,7 +111,7 @@ race_beastlord = {
 		is_beastlord = yes
 	}
 
-	
+	recover_army_morale_speed = 0.05
 }
 race_alien = {
 	potential = {
@@ -119,7 +121,7 @@ race_alien = {
 		is_alien = yes
 	}
 
-	
+	war_exhaustion = -0.05
 }
 race_deathclaw = {
 	potential = {
@@ -129,7 +131,7 @@ race_deathclaw = {
 		is_deathclaw = yes
 	}
 
-	
+	land_morale = 0.05
 }
 race_fungal = {
 	potential = {
@@ -139,7 +141,7 @@ race_fungal = {
 		is_fungal = yes
 	}
 
-	
+	global_regiment_recruit_speed = -0.25
 }
 race_dwarf = {
 	potential = {
@@ -149,5 +151,5 @@ race_dwarf = {
 		is_dwarf = yes
 	}
 
-	
+	movement_speed = 0.1
 }

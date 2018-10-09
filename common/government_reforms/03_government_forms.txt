@@ -41,14 +41,7 @@ militia_reform = {
 	nation_designer_cost = 0
     
 	allow_migration = yes
-    
-    conditional = {
-        allow = {
-            has_dlc = "Cradle of Civilization"
-        }
-        has_pashas = yes
-    }
-    
+
     modifiers = {
         global_manpower_modifier = 0.1
         max_absolutism = 10
@@ -81,13 +74,6 @@ legion_reform = {
             russian_mechanic
         }
         claim_states = yes
-    }
-    
-    conditional = {
-        allow = {
-            has_dlc = "Cradle of Civilization"
-        }
-        has_pashas = yes
     }
     
     modifiers = {
@@ -590,7 +576,6 @@ raider_reform = {
         government_abilities = {
             tribal_federation_mechanic
         }
-        has_pashas = yes
     }
     
     modifiers = {
@@ -624,7 +609,6 @@ super_mutant_reform = {
         government_abilities = {
             tribal_federation_mechanic
         }
-        has_pashas = yes
     }
     
     modifiers = {
@@ -694,7 +678,6 @@ wolf_pack_reform = {
         government_abilities = {
             tribal_federation_mechanic
         }
-        has_pashas = yes
     }
     
     modifiers = {
@@ -729,7 +712,6 @@ great_khan_reform = {
         government_abilities = {
             tribal_federation_mechanic
         }
-        has_pashas = yes
     }
     
     modifiers = {
