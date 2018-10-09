@@ -2,7 +2,7 @@
 # Monarchy
 #--------------------------------------------
 settlement_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = settlement_reform
@@ -14,12 +14,21 @@ settlement_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        advisor_pool = 1
     }
 }
 militia_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = militia_reform
@@ -31,12 +40,22 @@ militia_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+	allow_migration = yes
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        has_pashas = yes
+    }
+    
     modifiers = {
-        
+        global_manpower_modifier = 0.1
+        max_absolutism = 10
     }
 }
 legion_reform = {
-    icon = "castle"
+    icon = "union"
     
     heir = yes
 	queen = no
@@ -51,12 +70,34 @@ legion_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+	different_religion_acceptance = -25
+	different_religion_group_acceptance = -25
+    
+    conditional = {
+        allow = {
+            has_dlc = "Third Rome"
+        }
+        government_abilities = {
+            russian_mechanic
+        }
+        claim_states = yes
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        has_pashas = yes
+    }
+    
     modifiers = {
-        
+        army_tradition = 1
+        max_absolutism = 20
+        global_autonomy = -0.05
     }
 }
 think_tank_reform = {
-    icon = "castle"
+    icon = "union"
     
     heir = no
 	queen = no
@@ -71,12 +112,20 @@ think_tank_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+	different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
     modifiers = {
-        
+        technology_cost = -0.2
+        max_absolutism = 20
+        global_autonomy = -0.05
     }
 }
 new_vegas_reform = {
-    icon = "castle"
+    icon = "union"
     
     heir = no
 	queen = no
@@ -91,12 +140,26 @@ new_vegas_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            mamluk_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        all_power_cost = -0.05
+        max_absolutism = 10
+        global_autonomy = -0.05
     }
 }
 zetan_reform = {
-    icon = "castle"
+    icon = "union"
     
     heir = no
 	queen = no
@@ -111,12 +174,19 @@ zetan_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    royal_marriage = no
+    
+    different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
     modifiers = {
-        
+        discipline = 0.1
+        max_absolutism = 50
+        global_autonomy = -0.1
     }
 }
 shi_reform = {
-    icon = "castle"
+    icon = "union"
     
     heir = no
 	queen = no
@@ -131,8 +201,16 @@ shi_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    conditional = {
+        allow = {
+            has_dlc = "Mandate of Heaven"
+        }
+        has_meritocracy = yes
+    }
+    
     modifiers = {
-        
+        idea_cost = -0.05
+        global_autonomy = -0.05
     }
 }
 
@@ -140,7 +218,7 @@ shi_reform = {
 # Republic
 #--------------------------------------------
 republic_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = republic_reform
@@ -152,12 +230,25 @@ republic_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+	royal_marriage = yes
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        diplomatic_reputation = 1
+        max_absolutism = -20
     }
 }
 dictatorship_reform = {
-    icon = "castle"
+    icon = "union"
 
     potential = {
         has_reform = dictatorship_reform
@@ -171,12 +262,25 @@ dictatorship_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+	royal_marriage = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        production_efficiency = 0.1
+        max_absolutism = -10
     }
 }
 ncr_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = ncr_reform
@@ -188,12 +292,35 @@ ncr_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+    
+    different_religion_acceptance = 25
+	different_religion_group_acceptance = 25
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_parliament = yes
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        global_tax_modifier = 0.15
+        max_absolutism = -10
+        global_autonomy = -0.05
     }
 }
 institute_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = institute_reform
@@ -205,12 +332,28 @@ institute_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    royal_marriage = no
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+    factions = {
+        facilities
+        bioscience
+        advanced_systems 
+        synth_retention_bureau
+        robotics
+    }
+    
     modifiers = {
-        
+        technology_cost = -0.1
+        idea_cost = -0.1
+        max_absolutism = 10
+        global_autonomy = -0.05
     }
 }
 enclave_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = enclave_reform
@@ -222,12 +365,27 @@ enclave_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+    royal_marriage = no
+
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+    conditional = {
+        allow = { 
+            has_dlc = "Rights of Man"
+        }
+        militarised_society  = yes
+    }
+
     modifiers = {
-        
+        land_morale = 0.1
+        max_absolutism = 20
+        global_autonomy = -0.05
     }
 }
 vault_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = vault_reform
@@ -239,8 +397,13 @@ vault_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = no
+	royal_marriage = no
+
     modifiers = {
-        
+        development_cost = -0.1
+        max_absolutism = -10
+        global_autonomy = -0.05
     }
 }
 
@@ -248,7 +411,7 @@ vault_reform = {
 # Theocracy
 #--------------------------------------------
 theocracy_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = theocracy_reform
@@ -260,12 +423,21 @@ theocracy_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
     modifiers = {
-        
+        tolerance_own = 1
+        max_absolutism = -10
+        global_autonomy = -0.05
     }
 }
 brotherhood_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = brotherhood_reform
@@ -277,12 +449,30 @@ brotherhood_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            feudal_theocracy_mechanic
+        }
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
     modifiers = {
-        
+        fire_damage = 0.1
+        max_absolutism = 10
+        global_autonomy = -0.05
     }
 }
 cult_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = cult_reform
@@ -294,8 +484,16 @@ cult_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
     modifiers = {
-        
+        global_missionary_strength = 0.03
+        global_autonomy = -0.05
     }
 }
 
@@ -303,7 +501,7 @@ cult_reform = {
 # Tribal
 #--------------------------------------------
 tribe_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = tribe_reform
@@ -315,12 +513,26 @@ tribe_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        global_unrest = -2
     }
 }
 commune_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = commune_reform
@@ -332,12 +544,29 @@ commune_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    republican_name = yes
+	royal_marriage = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            iqta_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        stability_cost_modifier = -0.15
     }
 }
 raider_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = raider_reform
@@ -349,12 +578,29 @@ raider_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+        has_pashas = yes
+    }
+    
     modifiers = {
-        
+        mercenary_discipline = 0.05
+        merc_maintenance_modifier = -0.1
+        max_absolutism = 20
     }
 }
 super_mutant_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = super_mutant_reform
@@ -366,12 +612,29 @@ super_mutant_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+        has_pashas = yes
+    }
+    
     modifiers = {
-        
+        shock_damage_received = -0.1
+        fire_damage_received = -0.1
+        max_absolutism = 20
     }
 }
 swarm_reform = {
-    icon = "castle"
+    icon = "union"
     
     potential = {
         has_reform = swarm_reform
@@ -383,12 +646,29 @@ swarm_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    royal_marriage = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
+    
     modifiers = {
-        
+        global_regiment_recruit_speed = -0.25
+        max_absolutism = 20
     }
 }
 wolf_pack_reform = {
-    icon = "castle"
+    icon = "union"
     
     nomad = yes
     
@@ -402,12 +682,28 @@ wolf_pack_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+        has_pashas = yes
+    }
+    
     modifiers = {
-        
+        infantry_power = 0.1
+        max_absolutism = 20
     }
 }
 great_khan_reform = {
-    icon = "castle"
+    icon = "union"
     
     nomad = yes
     
@@ -421,7 +717,23 @@ great_khan_reform = {
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+        has_pashas = yes
+    }
+    
     modifiers = {
-        
+        loot_amount = 1.0
+        max_absolutism = 20
     }
 }

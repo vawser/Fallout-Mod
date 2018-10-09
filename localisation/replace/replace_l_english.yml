@@ -78,37 +78,41 @@
  #------------------------------------------------------
  # Pasha
  #------------------------------------------------------
- ADD_PASHA_BUTTON:0 "WITH DEADLY FORCE!"
- REMOVE_PASHA_BUTTON:0 "Remove Commander"
- ADD_PASHA_TOOLTIP:0 "§YAssign Commander, WITH DEADLY FORCE!§!"
- REMOVE_PASHA_TOOLTIP:0 "§YRemove Commander§!"
- ADD_PASHA_TOOLTIP_DESC:0 "We are capable of assigning dedicated Commanders in States to hunt down Communists, spies, and threats WITH DEADLY FORCE.\nAssigning a Pasha in $STATE|Y$ will give us the following effects, WITH DEADLY FORCE:\n$EFFECT$"
- REMOVE_PASHA_TOOLTIP_DESC:0 "Removing the Commander in $STATE|Y$ will give us the following effects:\n$EFFECT$"
- CONFIRMADDPASHA:0 "Commander Assigned!"
- CONFIRMADDPASHA_TEXT:1 "Assigning a Commander in $STATE|Y$ will give us the following effects, WITH DEADLY FORCE:\n$EFFECT$"
- CONFIRMREMOVEPASHA:0 "Remove Commander"
- CONFIRMREMOVEPASHA_TEXT:1 "Removing the Commander in $STATE|Y$ will give us the following effects:\n$EFFECT$"
- pasha_removed_modifier:0 "Commander Removed WITHOUT DEADLY FORCE"
- PASHA_MODIFIER:0 "Commander At Post"
- PASHA_MODIFIER_desc: "Special attention has been given to this state and a commissioned officer is personally overseeing the mustering of men and preservation of order in this state, WITH DEADLY FORCE."
+ ADD_PASHA_BUTTON:0 "Assign Encampment"
+ REMOVE_PASHA_BUTTON:0 "Remove Encampment"
+ ADD_PASHA_TOOLTIP:0 "§YAssign Encampment§!"
+ REMOVE_PASHA_TOOLTIP:0 "§YRemove Encampment§!"
+ ADD_PASHA_TOOLTIP_DESC:0 "We are capable of assigning an Encampment to this state.\nAssigning a Encampment in $STATE|Y$ will give us the following effects:\n$EFFECT$"
+ REMOVE_PASHA_TOOLTIP_DESC:0 "Removing the Encampment in $STATE|Y$ will give us the following effects:\n$EFFECT$"
+ CONFIRMADDPASHA:0 "Encampment Assigned"
+ CONFIRMADDPASHA_TEXT:1 "Assigning a Encampment in $STATE|Y$ will give us the following effects:\n$EFFECT$"
+ CONFIRMREMOVEPASHA:0 "Remove Encampment"
+ CONFIRMREMOVEPASHA_TEXT:1 "Removing the Encampment in $STATE|Y$ will give us the following effects:\n$EFFECT$"
+ pasha_removed_modifier:0 "Encampment Removed"
+ PASHA_MODIFIER:0 "Encampment"
+ PASHA_MODIFIER_desc: "An encampment has been constructed in this state and a commissioned officer is personally overseeing the mustering of men and preservation of order in this state."
+ pasha_state:0 "Encampment"
+ PASHA_WRONG_GOVERNMENT:0 "\n§RYou aren't militarized enough to assign Encampments§!"
+ PASHA_CORRECT_GOVERNMENT:0 "Due to our martial status under our §Y[Root.GovernmentName]§!, we are capable of assigning Encampments.\n"
+ 
+ #------------------------------------------------------
+ # Janissaries
+ #------------------------------------------------------
  STATE_JANISSARIES_MIL_POWER:0 "Costs $AMOUNT|Y$ £mil£"
  CREATEJANISSARIES_TEXT:0 "$EFFECT$"
- STATE_JANISSARIES_CREATED_REGIMENTS:0 "$NUM|Y$ Cynic Raiders will spawn in $PROV|Y$"
+ STATE_JANISSARIES_CREATED_REGIMENTS:0 "$NUM|Y$ Berserkers will spawn in $PROV|Y$"
  STATE_JANISSARIES_HEATHEN_PROVINCES:1 "State needs at least $AMOUNT|Y$ development of a faith that is not your own. It must be fully cored and controlled by you."
- STATE_JANISSARIES_BATTLE_OR_SIEGE:0 "You cannot hire Cynic Raiders in a province with an ongoing battle or siege."
- pasha_state:0 "Commander"
- CREATE_JANISSARIES_BUTTON:1 "Hire Cynic Raiders"
- CREATEJANISSARIES:1 "Hire Cynic Raiders"
- JANISSARIES_REGIMENT:0 "Cynic Raider Regiment\n$EFFECT$"
- ONLY_JANISSARY_MODIFIER:0 "§YAffects only Cynic Raiders§!"
- STATE_JANISSARIES_GOVERNMENT_ALLOWS:0 "Only nations with extremely militaristic governments can call upon Cynic Raiders."
- STATE_JANISSARIES_COOLDOWN:0 "Can hire more Cynic Raiders at $DATE|Y$."
- STATE_JANISSARIES_NEED_MIL_POWER:0 "You need $AMOUNT|Y$ £mil£ to hire Cynic Raiders"
- STATE_JANISSARIES_DESC:1 "§YConscript Cynic Raiders§!\nRaiders are all around the Wasteland and willing to serve for a price. However, only the greatest Raiders will do for us! Although provinces following the true $COUNTRY_RELIGION$ faith are pretty much locked down in terms of raiders camping out, heathen provinces, alien to our beliefs, remain full of raiders. They serve no god but plunder. Some are sheltered to wreak havoc in our conquered lands, while others simply haven't been driven out. \nThis is to our benefit! Due to the military focus of our §Y[Root.GovernmentName]§!, we can call up these hosts of Cynic Raiders in exchange for promising them immense loot and wealth. \nThe more heathen development, the more Cynic Raiders we can draw from them. This can only be done once every five years."
- PASHA_WRONG_GOVERNMENT:0 "\n§RYou aren't militarized enough to assign dedicated Commanders WITH DEADLY FORCE!§!"
- PASHA_CORRECT_GOVERNMENT:0 "Due to our martial status under our §Y[Root.GovernmentName]§!, we are capable of giving out positions of Commanders States, WITH DEADLY FORCE!\n"
-
+ STATE_JANISSARIES_BATTLE_OR_SIEGE:0 "You cannot hire Berserkers in a province with an ongoing battle or siege."
  
+ CREATE_JANISSARIES_BUTTON:1 "Hire Berserkers"
+ CREATEJANISSARIES:1 "Hire Berserkers"
+ JANISSARIES_REGIMENT:0 "Berserkers Regiment\n$EFFECT$"
+ ONLY_JANISSARY_MODIFIER:0 "§YAffects only Berserkers§!"
+ STATE_JANISSARIES_GOVERNMENT_ALLOWS:0 "Only nations with extremely militaristic governments can call upon Berserkers."
+ STATE_JANISSARIES_COOLDOWN:0 "Can hire more Berserkers at $DATE|Y$."
+ STATE_JANISSARIES_NEED_MIL_POWER:0 "You need $AMOUNT|Y$ £mil£ to hire Berserkers"
+ STATE_JANISSARIES_DESC:1 "§YConscript Berserkers§!\nThis can only be done once every five years."
+
  #------------------------------------------------------
  # Gov Abilities
  #------------------------------------------------------
@@ -196,17 +200,17 @@
  # Tribal Allegiance (Tribes)
  enlist_general:0 "Enlist General"
  enlist_general_desc:0 "You will get a new General with $TRADITION|Y$ Tradition.\n"
- train_horsemanship:0 "Expand Tribal Influence"
+ train_horsemanship:0 "Expand Influence"
  train_horsemanship_desc:0 ""
- conscript_from_tribes:0 "Form Roaming Death Squad"
+ conscript_from_tribes:0 "Form Veteran Squad"
  conscript_from_tribes_desc:0 ""
  
  tribal_allegiance:0 "Tribal Allegiance"
  tribal_allegiance_desc:1 "By winning battles and humiliating rivals, a Tribe can increase their Tribal Allegiance, whereas losing battles and being humiliated will decrease it.\n\nIt also changes by $CHANGE$ every year, due to:\n$WHY$\n"
  tribal_allegiance_effect:0 "Effects from $VAL|Y$ Tribal Allegiance:\n$EFFECTS$"
  
- train_horsemanship_modifier:0 "Expanded Tribal Influence"
- desc_train_horsemanship_modifier:0 "Let our tribesmen settle new lands and exert control over them."
+ train_horsemanship_modifier:0 "Expanded Influence"
+ desc_train_horsemanship_modifier:0 "Let our soldiers settle new lands and exert control over them."
  
  
  #------------------------------------------------------
@@ -295,24 +299,6 @@
  COSSACKS_REGIMENT:0 "Veteran Mechanized Regiment\nShock Damage Bonus: $VAL$"
  STRELTSY_NAME:0 "$HOME$'s $NUM$$ORDER$ Veteran Infantry Regiment"
  STRELTSY_REGIMENT:0 "Veteran Infantry Regiment\nFire Damage Bonus: $VAL$"
-
- #------------------------------------------------------
- # Dutch Mechanics
- #------------------------------------------------------
- orangists:0 "Authoritarians in Power"
- statists:0 "Liberals in Power"
- ORANGISTS_NOT_IN_POWER:0 "Authoritarians NOT in power"
- STATISTS_NOT_IN_POWER:0 "Liberals NOT in power"
- ORANGISTS_IN_POWER:0 "Authoritarians in Power"
- STATISTS_IN_POWER:0 "Liberals in Power"
- STATIST_VS_ORANGISTS_LESS_THAN:0 "Liberals vs Authoritarians less than $VAL$"
- STATIST_VS_ORANGISTS_AT_LEAST:0 "Liberals vs Authoritarians at least $VAL$"
- STRENG_ORANGISTS_EFFECT:0 "Strengthen Authoritarians by §Y$VAL$§!"
- STRENG_STATISTS_EFFECT:0 "Strengthen Liberals by §Y$VAL$§!"
- ORANGISTS_IRO:0 "§YAuthoritarians§!\n"
- ORANGISTS_DRO:0 "When Authoritarians are in power, our current ruler will continue to rule until his/her death."
- STATISTS_IRO:0 "§YLiberals§!\n"
- STATISTS_DRO:0 "When Liberals are in power we will get new rulers elected every 4 years, but no ruler can hold more than 1 term at a time."
  
  #---------------------------------------------------------
  # Peace Terms
@@ -1062,17 +1048,3 @@
  MAINTENANCE_DUC: " bottlecaps each month."
  COST_TIME: "Cost: §Y$AMOUNT$§W bottlecaps \nTime: §Y$TIME$§W Days."
  
- 
- 
- #------------------------------------------------------
- # Other
- #------------------------------------------------------
- 
- gov_monastic_order: "Monastic Order"
- gov_religious_order: "Monastic Order"
- monastic_order: "Monastic Order"
- GRAND_MASTER: "Grandmaster"
- GRAND_MISTRESS: "Grandmistress"
- MONASTIC_ORDER: "Monastic Order"
- SOVREIGN_MONASTIC_ORDER: "Sovereign Monastic Order"
- SOVREIGN_MONASTIC_CONFEDERATION: "Sovereign Order"

@@ -1,0 +1,162 @@
+guiTypes = {
+
+	windowType = {
+		name = "select_mission_entry"
+		position = { x=0 y=-1 }	
+		size = { x=100 y=54 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		
+		guiButtonType =
+		{
+			name ="select_button"
+			spriteType = "GFX_fallout_background_300_64"
+			position = { x= 0 y = 13 }
+            scale = 0.9
+		}				
+		
+		iconType =
+		{
+			name ="icon"
+			spriteType = "GFX_naval_missions"
+			position = { x= 6 y = 18 }
+			Orientation = "UPPER_LEFT"
+			allwaystransparent = yes
+		}	
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 70 y = 33 }
+			textureFile = ""
+			font = "monofonto_outline_12"
+			text = "name"	
+			maxWidth = 260
+			maxHeight = 15
+			format = left
+			fixedsize = yes	
+			allwaystransparent = yes	
+		}		
+	}
+
+
+	windowType = {
+		name = "navalmissions"
+		position = { x = 16 y = 160 }
+		size = { x= 492 y = 384 }
+		orientation = CENTER
+
+        iconType = {
+			name ="navalmissions_bg"
+			spriteType = "GFX_regiment_bg"
+			position = { x= 0 y = 65 }
+			Orientation = "UPPER_LEFT"
+		}
+        
+		guiButtonType = {
+            name = "close"
+            position = { x = 390 y = 83 }
+            quadTextureSprite ="GFX_unitpanel_close"	
+        }
+		
+		listboxType = {
+			name = "mission_listbox"
+			backGround = ""
+			position = { x = 90 y = 80 }
+			size = { x=270 y=300 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 1.5
+			scrollbartype = "standardlistbox_noslider"
+			borderSize = {x = 0 y = 0}
+		}
+
+
+		windowType = {
+			name = "tradenodelists"
+			moveable = 0
+			position = { x = 0 y = -50 }
+
+			positionType = {
+				name ="exploration_dialog_position"
+				position = { x = 70 y = 135 }
+			}
+
+			guiButtonType = {
+				name ="sort_shield"
+				position = { x = 20 y = 130 }
+                quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+                buttonFont = "monofonto_outline_12"
+                buttonText = "Trade Leader"
+			}
+			guiButtonType = {
+				name ="sort_name"
+				quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+                buttonFont = "monofonto_outline_12"
+                buttonText = "Name"
+				position = { x = 20 y = 160 }
+				buttonText = "TRADENODE"
+				pdx_tooltip = "TRADE_NAME_SORT_TOOLTIP"
+				pdx_tooltip_delayed = "TRADE_NAME_SORT_TOOLTIP_DELAYED"
+			}
+			guiButtonType = {
+				name ="sort_trader"
+				quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+                buttonFont = "monofonto_outline_12"
+                buttonText = "Trader"
+				position = { x = 20 y = 190 }
+				pdx_tooltip = "TRADE_TRADER_SORT_TOOLTIP"
+				pdx_tooltip_delayed = "TRADE_TRADER_SORT_TOOLTIP_DELAYED"
+			}
+			guiButtonType = {
+				name ="sort_income_indicator"
+				quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+                buttonFont = "monofonto_outline_12"
+                buttonText = "Indicator"
+				position = { x = 20 y = 220 }
+				pdx_tooltip = "TRADE_MISSION_SORT"
+				pdx_tooltip_delayed = "TRADE_MISSION_SORT_DELAYED"
+			}
+			guiButtonType = {
+				name ="sort_current_power"
+				quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+                buttonFont = "monofonto_outline_12"
+                buttonText = "Trade Power"
+				position = { x = 20 y = 250 }
+				pdx_tooltip = "TRADE_CURRENT_POWER_SORT"
+				pdx_tooltip_delayed = "TRADE_CURRENT_POWER_SORT_DELAYED"
+			}
+			iconType = {
+				name = "sort_nothing"
+				spriteType = "GFX_sort_62_icon"
+				position = { x = 277 y = -9999 }
+			}
+			
+			listboxType = 
+			{
+				name ="tradenodelist"
+				position = { x = 118 y = 130 }
+				backGround=""
+				size = { x=305  y =250}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_noslider"
+				borderSize = {x = 0 y = 0}
+			}
+			
+			listboxType = 
+			{
+				name ="privateernodelist"
+				position = { x = 118 y = 130 }
+				backGround=""
+				size = { x=320  y =215}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_noslider"
+				borderSize = {x = 0 y = 0}
+			}
+		}
+	}
+}
+

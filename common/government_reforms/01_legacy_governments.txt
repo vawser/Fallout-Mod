@@ -2,7 +2,7 @@
 # Monarchy
 #--------------------------------------------
 settlement_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     
@@ -13,14 +13,18 @@ settlement_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
-    modifiers = {
-        
+    government_abilities = { 
+        iqta_mechanic
     }
     
+    modifiers = {
+        advisor_pool = 1
+    }
+
 	ai = { factor = 1 }
 }
 militia_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     
@@ -30,15 +34,20 @@ militia_legacy = {
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+
+	allow_migration = yes
+    
+    has_pashas = yes
     
     modifiers = {
-        
+        global_manpower_modifier = 0.1
+        max_absolutism = 10
     }
     
 	ai = { factor = 1 }
 }
 legion_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     
@@ -49,14 +58,27 @@ legion_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+	claim_states = yes
+    
+	different_religion_acceptance = -25
+	different_religion_group_acceptance = -25
+    
+    government_abilities = {
+		russian_mechanic
+	}
+    
+    has_pashas = yes
+    
     modifiers = {
-        
+        army_tradition = 1
+        max_absolutism = 20
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 think_tank_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     
@@ -67,14 +89,24 @@ think_tank_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+	queen = no
+	heir = no
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+	different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
     modifiers = {
-        
+        technology_cost = -0.2
+        max_absolutism = 20
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 new_vegas_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     
@@ -85,14 +117,25 @@ new_vegas_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    queen = no
+	heir = no
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+    government_abilities = {
+		mamluk_mechanic
+	}
+    
     modifiers = {
-        
+        all_power_cost = -0.05
+        max_absolutism = 10
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 zetan_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     
@@ -103,14 +146,21 @@ zetan_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    royal_marriage = no
+    
+    different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
     modifiers = {
-        
+        discipline = 0.1
+        max_absolutism = 50
+        global_autonomy = -0.1
     }
     
 	ai = { factor = 1 }
 }
 shi_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     
@@ -121,8 +171,14 @@ shi_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    heir = no
+	queen = no
+    
+    has_meritocracy = yes
+    
     modifiers = {
-        
+        idea_cost = -0.05
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
@@ -132,7 +188,7 @@ shi_legacy = {
 # Republic
 #--------------------------------------------
 republic_legacy = {
-    icon = "crown"
+    icon = "union"
     
     republic = yes
     
@@ -143,14 +199,22 @@ republic_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+	royal_marriage = yes
+    
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
     modifiers = {
-        
+        diplomatic_reputation = 1
+        max_absolutism = -20
     }
     
 	ai = { factor = 1 }
 }
 dictatorship_legacy = {
-    icon = "crown"
+    icon = "union"
     
     republic = yes
     
@@ -161,16 +225,24 @@ dictatorship_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+	royal_marriage = no
+    
     duration = 0
     
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
     modifiers = {
-        
+        production_efficiency = 0.1
+        max_absolutism = -10
     }
     
 	ai = { factor = 1 }
 }
 ncr_legacy = {
-    icon = "crown"
+    icon = "union"
     
     republic = yes
     
@@ -181,14 +253,26 @@ ncr_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+    has_parliament = yes
+    
+    different_religion_acceptance = 25
+	different_religion_group_acceptance = 25
+    
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
     modifiers = {
-        
+        global_tax_modifier = 0.15
+        max_absolutism = -10
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 institute_legacy = {
-    icon = "crown"
+    icon = "union"
     
     republic = yes
     
@@ -199,14 +283,30 @@ institute_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    royal_marriage = no
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+    factions = {
+        facilities
+        bioscience
+        advanced_systems 
+        synth_retention_bureau
+        robotics
+    }
+    
     modifiers = {
-        
+        technology_cost = -0.1
+        idea_cost = -0.1
+        max_absolutism = 10
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 enclave_legacy = {
-    icon = "crown"
+    icon = "union"
     
     republic = yes
     
@@ -217,14 +317,24 @@ enclave_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = yes
+    royal_marriage = no
+
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+    militarised_society  = yes
+    
     modifiers = {
-        
+        land_morale = 0.1
+        max_absolutism = 20
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 vault_legacy = {
-    icon = "crown"
+    icon = "union"
     
     republic = yes
     
@@ -235,8 +345,13 @@ vault_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    republican_name = no
+	royal_marriage = no
+    
     modifiers = {
-        
+        development_cost = -0.1
+        max_absolutism = -10
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
@@ -246,7 +361,7 @@ vault_legacy = {
 # Theocracy
 #--------------------------------------------
 theocracy_legacy = {
-    icon = "crown"
+    icon = "union"
     
     religion = yes
     
@@ -257,14 +372,18 @@ theocracy_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    has_devotion = yes
+    
     modifiers = {
-        
+        tolerance_own = 1
+        max_absolutism = -10
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 brotherhood_legacy = {
-    icon = "crown"
+    icon = "union"
     
     religion = yes
     
@@ -275,14 +394,22 @@ brotherhood_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    has_devotion = yes
+    
+    government_abilities = {
+		feudal_theocracy_mechanic
+	}
+    
     modifiers = {
-        
+        fire_damage = 0.1
+        max_absolutism = 10
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
 }
 cult_legacy = {
-    icon = "crown"
+    icon = "union"
     
     religion = yes
     
@@ -293,8 +420,11 @@ cult_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    has_devotion = yes
+    
     modifiers = {
-        
+        global_missionary_strength = 0.03
+        global_autonomy = -0.05
     }
     
 	ai = { factor = 1 }
@@ -304,7 +434,7 @@ cult_legacy = {
 # Tribal
 #--------------------------------------------
 tribe_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     tribal = yes
@@ -316,14 +446,23 @@ tribe_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    government_abilities = {
+        tribal_federation_mechanic
+    }
+    
     modifiers = {
-        
+        global_unrest = -2
     }
     
 	ai = { factor = 1 }
 }
 commune_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     tribal = yes
@@ -334,15 +473,27 @@ commune_legacy = {
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+
+    native_mechanic = no
+	allow_migration = yes
+    
+    republican_name = yes
+	royal_marriage = no
+    
+    min_autonomy = 50
+    
+    government_abilities = {
+        iqta_mechanic
+    }
     
     modifiers = {
-        
+        stability_cost_modifier = -0.15
     }
     
 	ai = { factor = 1 }
 }
 raider_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     tribal = yes
@@ -354,14 +505,27 @@ raider_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    government_abilities = {
+        tribal_federation_mechanic
+    }
+    
+    has_pashas = yes
+    
     modifiers = {
-        
+        mercenary_discipline = 0.05
+        merc_maintenance_modifier = -0.1
+        max_absolutism = 20
     }
     
 	ai = { factor = 1 }
 }
 super_mutant_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     tribal = yes
@@ -372,15 +536,26 @@ super_mutant_legacy = {
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    government_abilities = {
+        tribal_federation_mechanic
+    }
     
     modifiers = {
-        
+        shock_damage_received = -0.1
+        fire_damage_received = -0.1
+        max_absolutism = 20
     }
     
 	ai = { factor = 1 }
 }
 swarm_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     tribal = yes
@@ -392,17 +567,30 @@ swarm_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    royal_marriage = no
+
+    min_autonomy = 50
+    
+    government_abilities = {
+        tribal_federation_mechanic
+    }
+    
     modifiers = {
-        
+        global_regiment_recruit_speed = -0.25
+        max_absolutism = 20
     }
     
 	ai = { factor = 1 }
 }
 wolf_pack_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     tribal = yes
+    nomad = yes
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -411,17 +599,30 @@ wolf_pack_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+
+    government_abilities = {
+        tribal_federation_mechanic
+    }
+    
+    has_pashas = yes
+    
     modifiers = {
-        
+        infantry_power = 0.1
+        max_absolutism = 20
     }
     
 	ai = { factor = 1 }
 }
 great_khan_legacy = {
-    icon = "crown"
+    icon = "union"
     
     monarchy = yes
     tribal = yes
+    nomad = yes
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -430,8 +631,20 @@ great_khan_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    native_mechanic = no
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    government_abilities = {
+        tribal_federation_mechanic
+    }
+    
+    has_pashas = yes
+    
     modifiers = {
-        
+        loot_amount = 1.0
+        max_absolutism = 20
     }
     
 	ai = { factor = 1 }

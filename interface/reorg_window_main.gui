@@ -1,0 +1,741 @@
+guiTypes = {
+	windowType = {
+		name = "reorg_window"
+		backGround="reorg_bg"
+		position = { x= -543 y= -144 }	
+		size = { x=400 y=100 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+		Orientation = "CENTER"
+
+		guiButtonType = {
+			name = "reorg_bg"
+			position = { x= 0 y = 0 }
+			quadTextureSprite ="GFX_fallout_background_750_580"	
+			Orientation = "UPPER_LEFT"
+		}	
+
+        #-------------------------------------
+        # Naval
+        #-------------------------------------
+		windowType = {
+            name = "naval_window"
+            backGround=""
+            position = { x= 0 y = 0 }
+            size = { x=400 y=100 }
+            moveable = 0
+            dontRender = ""
+            horizontalBorder= ""
+            verticalBorder= ""
+            fullScreen = no	
+		
+			iconType = {
+				name ="ship_load_capacity_bg"
+				spriteType = "GFX_reorg_bg_navalTop_bg"
+				position = { x= -10 y = -9999 }
+				Orientation = "UPPER_LEFT"
+			}
+                
+            #-------------------------------------
+            # Mass Send
+            #-------------------------------------
+			guiButtonType = {
+				name = "naval_transfer_left1"
+				position = { x = 68 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}	
+
+			guiButtonType = {
+				name = "naval_transfer_left2"
+				position = { x = 137 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}		
+
+			guiButtonType = {
+				name = "naval_transfer_left3"
+				position = { x = 208 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}	
+			
+			guiButtonType = {
+				name = "naval_transfer_left4"
+				position = { x = 277 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}			
+
+			guiButtonType = {
+				name = "naval_transfer_right1"
+				position = { x = 435 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button_reverse"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}	
+
+			guiButtonType = {
+				name = "naval_transfer_right2"
+				position = { x = 504 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button_reverse"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}			
+
+			guiButtonType = {
+				name = "naval_transfer_right3"
+				position = { x = 574 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button_reverse"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}
+
+			guiButtonType = {
+				name = "naval_transfer_right4"
+				position = { x = 646 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button_reverse"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}	
+            
+            #-------------------------------------
+			# Unit Icons / Values
+            #-------------------------------------
+            guiButtonType = {
+				name = "nu_unit_type_1_left"
+				position = { x= 49 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+			guiButtonType = {
+				name = "nu_unit_type_2_left"
+				position = { x= 119 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+            guiButtonType = {
+				name = "nu_unit_type_3_left"
+				position = { x= 189 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}				
+			guiButtonType = {
+				name = "nu_unit_type_4_left"
+				position = { x= 260 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}
+            
+            guiButtonType = {
+				name = "nu_unit_type_1_right"
+				position = { x= 406 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}
+			guiButtonType = {
+				name = "nu_unit_type_2_right"
+				position = { x= 476 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}		
+			guiButtonType = {
+				name = "nu_unit_type_3_right"
+				position = { x= 546 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+			guiButtonType = {
+				name = "nu_unit_type_4_right"
+				position = { x= 616 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}
+            
+            instantTextBoxType = {
+				name = "nu_unit_type_1_count_left"
+				position = { x = 75 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+
+				format=center
+			}
+			instantTextBoxType = {
+				name = "nu_unit_type_2_count_left"
+				position = { x = 145 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+				format=center
+			}
+			instantTextBoxType = {
+				name = "nu_unit_type_3_count_left"
+				position = { x = 215 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+
+				format=center
+			}
+			instantTextBoxType = {
+				name = "nu_unit_type_4_count_left"
+				position = { x = 285 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+
+				format=center
+			}	
+						
+			instantTextBoxType = {
+				name = "nu_unit_type_1_count_right"
+				position = { x = 432 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+				format=center
+			}
+			instantTextBoxType = {
+				name = "nu_unit_type_2_count_right"
+				position = { x = 502 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+				format=center
+			}
+			instantTextBoxType = {
+				name = "nu_unit_type_3_count_right"
+				position = { x = 572 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+				format=center
+			}
+			instantTextBoxType = {
+				name = "nu_unit_type_4_count_right"
+				position = { x = 642 y = 74 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 35
+				maxHeight = 32	
+
+				format=center
+			}	
+		}
+		
+        #-------------------------------------
+        # Land
+        #-------------------------------------
+		windowType = {
+            name = "army_window"
+            backGround=""
+            position = { x= 10 y = 0 }
+            size = { x=400 y=100 }
+            moveable = 0
+            dontRender = ""
+            horizontalBorder= ""
+            verticalBorder= ""
+            fullScreen = no	
+
+			#-------------------------------------
+            # Unit Icons / Values
+            #-------------------------------------
+			guiButtonType = {
+				name = "lu_unit_type_1_left"
+				position = { x= 52 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "monofonto_outline_12"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}
+			
+			instantTextBoxType = {
+				name = "lu_unit_type_1_count_left"
+				position = { x = 83 y = 68 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+			instantTextBoxType = {
+				name = "lu_unit_type_1_value_left"
+				position = { x = 83 y = 84 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "123"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+
+			guiButtonType = {
+				name = "lu_unit_type_2_left"
+				position = { x= 140 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "monofonto_outline_12"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+			
+			instantTextBoxType = {
+				name = "lu_unit_type_2_count_left"
+				position = { x = 170 y = 68 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+			instantTextBoxType = {
+				name = "lu_unit_type_2_value_left"
+				position = { x = 170 y = 84 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "123"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+
+			guiButtonType = {
+				name = "lu_unit_type_3_left"
+				position = { x= 228 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "monofonto_outline_12"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+			
+			instantTextBoxType = {
+				name = "lu_unit_type_3_count_left"
+				position = { x = 257 y = 68 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+			instantTextBoxType = {
+				name = "lu_unit_type_3_value_left"
+				position = { x = 257 y = 84 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "123"	
+				maxWidth =  42
+				maxHeight = 32	
+
+				format=right
+			}
+
+			
+			guiButtonType = {
+				name = "lu_unit_type_1_right"
+				position = { x= 418 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "monofonto_outline_12"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+			
+			instantTextBoxType = {
+				name = "lu_unit_type_1_count_right"
+				position = { x = 448 y = 68 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+			instantTextBoxType = {
+				name = "lu_unit_type_1_value_right"
+				position = { x = 448 y = 84 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "123"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+
+			guiButtonType = {
+				name = "lu_unit_type_2_right"
+				position = { x= 506 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "monofonto_outline_12"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+
+			instantTextBoxType = {
+				name = "lu_unit_type_2_count_right"
+				position = { x = 536 y = 68 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+			instantTextBoxType = {
+				name = "lu_unit_type_2_value_right"
+				position = { x = 536 y = 84 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "123"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+			
+			guiButtonType = {
+				name = "lu_unit_type_3_right"
+				position = { x= 594 y = 70 }
+				quadTextureSprite ="GFX_unit_types_strip"	
+				buttonFont = "monofonto_outline_12"
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}			
+			
+			instantTextBoxType = {
+				name = "lu_unit_type_3_count_right"
+				position = { x = 624 y = 68 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "12"	
+				maxWidth = 42
+				maxHeight = 32	
+
+				format=right
+			}
+			instantTextBoxType = {
+				name = "lu_unit_type_3_value_right"
+				position = { x = 624 y = 84 }
+				textureFile = ""
+				font = "monofonto_outline_12"
+				borderSize = {x = 0 y = 0}
+				text = "123"	
+				maxWidth =  42
+				maxHeight = 32	
+
+				format=right
+			}
+			
+            #-------------------------------------
+            # Mass Send
+            #-------------------------------------
+			guiButtonType = {
+				name = "land_transfer_left1"
+				position = { x = 88 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}	
+
+			guiButtonType = {
+				name = "land_transfer_left2"
+				position = { x = 177 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}		
+
+			guiButtonType = {
+				name = "land_transfer_left3"
+				position = { x = 263 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}	
+
+			guiButtonType = {
+				name = "land_transfer_right1"
+				position = { x = 455 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button_reverse"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}	
+
+			guiButtonType = {
+				name = "land_transfer_right2"
+				position = { x = 544 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button_reverse"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}			
+
+			guiButtonType = {
+				name = "land_transfer_right3"
+				position = { x = 634 y = 103 }
+				quadTextureSprite ="GFX_transfer_all_button_reverse"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "monofonto_outline_12"
+			}				
+		}
+		
+		#-------------------------------------
+        # Headers
+		#-------------------------------------
+		instantTextBoxType = {
+			name = "reorg_label"
+			position = { x = 125 y = -9999 }
+			format = centre
+			textureFile = ""
+			font = "monofonto_outline_16"
+			borderSize = {x = 4 y = 0}
+			text = "UNIT_PANEL"	
+			maxWidth = 512
+			maxHeight = 24	
+			Orientation = "UPPER_LEFT"
+		}
+
+        iconType = {
+			name ="army_1_bg"
+			spriteType = "GFX_button_300"
+			position = { x = 33 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+        
+		instantTextBoxType = {
+			name = "unitname_1"
+			position = { x = 14 y = 28 }
+			format = centre
+			textureFile = ""
+			font = "monofonto_outline_14"
+			borderSize = {x = 4 y = 0}
+			text = ""	
+			maxWidth = 200
+			maxHeight = 24	
+			Orientation = "UPPER_LEFT"	
+		}
+		
+        iconType = {
+			name ="army_2_bg"
+			spriteType = "GFX_button_300"
+			position = { x = 390 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+        
+		instantTextBoxType = {
+			name = "unitname_2"
+			position = { x = 345 y = 28 }
+			format = centre
+			textureFile = ""
+			font = "monofonto_outline_14"
+			borderSize = {x = 4 y = 0}
+			text = ""	
+			maxWidth = 200
+			maxHeight = 24	
+			Orientation = "UPPER_LEFT"
+		}
+		
+        guiButtonType = {
+            name = "closebutton"
+            position = { x= 120 y= 400 }
+            quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+            buttonFont = "monofonto_outline_12"
+            buttonText = "Close"
+            Orientation = "CENTER"
+            clicksound = close_window
+        }
+        
+		guiButtonType = {
+			name = "select_button_left"
+			position = { x= -60 y= 400 }
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+			buttonText = "Select"
+			buttonFont = "monofonto_outline_12"
+			Orientation = "CENTER"
+			clicksound = close_window
+			shortcut = "x"
+		}
+
+		guiButtonType = {
+			name = "select_button_right"
+			position = { x= 310 y= 400 }
+			quadTextureSprite ="GFX_fallout_buttontype_1_94x31"	
+			buttonText = "Select"
+			buttonFont = "monofonto_outline_12"
+			Orientation = "CENTER"
+			clicksound = close_window
+			shortcut = "c"
+		}
+
+		listboxType = {
+			name ="left_list"
+			position = { x = 53 y = 170 }
+			backGround=""
+			size = { x=290  y =260}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2
+			scrollbartype = "standardlistbox_noslider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		listboxType = {
+			name ="right_list"
+			position = { x = 408 y = 170 }
+			backGround=""
+			size = { x=290  y =260}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2
+			scrollbartype = "standardlistbox_noslider"
+			borderSize = {x = 0 y = 0}
+		}
+		
+		guiButtonType = {
+			name ="sort_type_left"
+			quadTextureSprite = "GFX_fallout_sort_160"
+			position = { x = 33 y = 135 }
+			buttonFont = "monofonto_outline_12"
+			buttonText = "LEDGER_TYPE"
+			pdx_tooltip = "SORT_BY_TYPE"
+			pdx_tooltip_delayed = ""
+		}			
+		
+		guiButtonType = {
+			name ="sort_condition_left"
+			quadTextureSprite = "GFX_fallout_sort_160"
+			position = { x = 202 y = 135 }
+			buttonFont = "monofonto_outline_12"
+			buttonText = "CONDITION"
+			pdx_tooltip = "SORT_BY_CONDITION"
+			pdx_tooltip_delayed = ""	
+		}
+
+		guiButtonType = {
+			name ="sort_type_right"
+			quadTextureSprite = "GFX_fallout_sort_160"
+			position = { x = 391 y = 135 }
+			buttonFont = "monofonto_outline_12"
+			buttonText = "LEDGER_TYPE"
+			pdx_tooltip = "SORT_BY_TYPE"
+			pdx_tooltip_delayed = ""			
+		}			
+
+		guiButtonType = {
+			name ="sort_condition_right"
+			quadTextureSprite = "GFX_fallout_sort_160"
+			position = { x = 560 y = 135 }
+			buttonFont = "monofonto_outline_12"
+			buttonText = "CONDITION"
+			pdx_tooltip = "SORT_BY_CONDITION"
+			pdx_tooltip_delayed = ""	
+		}		
+	}
+}
