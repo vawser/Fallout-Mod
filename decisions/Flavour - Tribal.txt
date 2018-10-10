@@ -11,7 +11,16 @@ country_decisions = {
             }
 		}
 	  	effect = {
-			change_government_via_reform = vault
+            if = {
+                limit = {
+                    NOT = { has_reform = vault_reform }
+                }
+                change_government_effect = {
+                    TYPE = vault
+                    REFORM = vault_reform
+                    LEGACY = vault_legacy
+                }
+            }
             add_stability = -6
 		}
 		ai_will_do = {

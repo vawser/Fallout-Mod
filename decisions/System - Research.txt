@@ -1,0 +1,66 @@
+country_decisions = {
+	invest_into_research = {
+		potential = {
+			NOT = { check_variable = { research = 100 } }
+		}
+		allow = {	
+			treasury = 1000
+		}
+		effect = {
+			add_treasury = -1000
+            add_research_5 = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+    divert_administrative_power = {
+		potential = {
+			NOT = { check_variable = { research = 100 } }
+		}
+		allow = {	
+			adm_power = 100
+		}
+		effect = {
+			add_adm_power = -100
+            add_research_5 = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+    
+    divert_diplomatic_power = {
+		potential = {
+			NOT = { check_variable = { research = 100 } }
+		}
+		allow = {	
+			dip_power = 100
+		}
+		effect = {
+			add_dip_power = -100
+            add_research_5 = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+    
+    divert_military_power = {
+		potential = {
+			NOT = { check_variable = { research = 100 } }
+		}
+		allow = {	
+			mil_power = 100
+		}
+		effect = {
+			add_mil_power = -100
+            add_research_5 = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+

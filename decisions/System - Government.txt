@@ -13,7 +13,11 @@ country_decisions = {
                 limit = {
                     NOT = { has_reform = settlement_reform }
                 }
-                change_government_via_reform = settlement
+                change_government_effect = {
+                    TYPE = settlement
+                    REFORM = settlement_reform
+                    LEGACY = settlement_legacy
+                }
             }
 		}
 		ai_will_do = {
@@ -35,7 +39,11 @@ country_decisions = {
                 limit = {
                     NOT = { has_reform = republic_reform }
                 }
-                change_government_via_reform = republic
+                change_government_effect = {
+                    TYPE = republic
+                    REFORM = republic_reform
+                    LEGACY = republic_legacy
+                }
             }
 		}
 		ai_will_do = {

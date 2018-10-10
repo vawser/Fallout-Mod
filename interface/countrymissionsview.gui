@@ -59,9 +59,9 @@ guiTypes = {
 		
 		smoothListboxType = {
 			name ="countrymissionsview_missions_gridbox_listbox"
-			position = { x=40 y =140}
+			position = { x=20 y =130}
 			backGround=""
-			size = { x=518 y=412 }
+			size = { x=530 y=305 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -80,24 +80,79 @@ guiTypes = {
 		gridBoxType = {
 			name = "countrymissionsview_missions_gridbox"
 			position = { x = 0 y = 0 }
-			size = { width = 400 height = 80 }
-			slotsize = { width = 160 height = 80 }
-			max_slots_horizontal = 3
+			size = { width = 128 height = 128 }
+			slotsize = { width = 128 height = 128 }
+			max_slots_horizontal = 4
 			format = "UPPER_LEFT"
 		}
 	}
 
 	windowType={
 		name = "countrymissionsview_missions_entry"
-		#size = { width = 104 height = 122 }
-		
+        
 		iconType = {
 			name = "mission_icon"
-			position = { x=22 y=20 }
+			position = { x=0 y=0 }
 			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+        
+		iconType = {
+			name = "mission_entry_icon"
+			position = {x=0 y=0}
+			quadTextureSprite ="GFX_mission_icons_frame"
+		}
+
+		guiButtonType = {
+			name = "mission_entry_button"
+			quadTextureSprite ="GFX_mission_icons_frame_complete"
+			position = { x= 0 y = 0 }
 		}
 		
 		iconType = {
+			name = "mission_entry_rewards_glow"
+			position = { x=84 y=-9999 }
+			quadTextureSprite = "GFX_mission_effect_glow"
+		}
+		
+        iconType = {
+			name = "mission_entry_rewards"
+			position = { x=90 y=90 }
+			quadTextureSprite = "GFX_mission_effect_icon"
+		}
+        
+		iconType = {
+			name = "mission_entry_conditions"
+			position = { x=5 y=90 }
+			quadTextureSprite = "GFX_mission_trigger_icon"
+		}
+		
+		guiButtonType = {
+			name = "mission_entry_conditions_button"
+			quadTextureSprite ="gfx_mission_trigger"
+			position = { x=5 y =90 }
+		}
+
+		instantTextBoxType= {
+			position = { x=17 y=20}
+			name = "mission_title"
+			font = "monofonto_outline_12"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 95
+			maxHeight = 16
+			text = "Subjective and a Noun"
+			orientation = "UPPER_LEFT"
+			format = center
+			allwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="country_icon"
+			position = { x= 35 y = 3 }
+			quadTextureSprite = "GFX_shield_small"
+		}
+ 
+        # Not used
+        iconType = {
 			name = "arrow_half_top"
 			position = {x=46 y=121}
 			quadTextureSprite ="gfx_arrow_verticall_tile"
@@ -165,66 +220,6 @@ guiTypes = {
 			position = {x=-5 y=127}
 			quadTextureSprite ="gfx_arrow_right_in"
 			allwaystransparent = yes
-		}
-		
-		
-		
-		
-		iconType = {
-			name = "mission_entry_icon"
-			position = {x=0 y=0}
-			quadTextureSprite ="GFX_mission_icons_frame"
-		}
-		
-		guiButtonType = {
-			name = "mission_entry_button"
-			quadTextureSprite ="GFX_mission_icons_frame_complete"
-			position = { x= 0 y = 0 }
-		}
-		
-		iconType = {
-			name = "mission_entry_rewards_glow"
-			position = { x=58 y=-9999 }
-			quadTextureSprite = "GFX_mission_effect_glow"
-		}
-		
-		iconType = {
-			name = "mission_entry_rewards"
-			position = { x=65 y=32 }
-			quadTextureSprite = "gfx_mission_effect"
-            scale = 0.6
-		}
-		
-
-		iconType = {
-			name = "mission_entry_conditions"
-			position = { x=0 y=-9999 }
-			quadTextureSprite = "gfx_mission_trigger"
-		}
-		
-		guiButtonType = {
-			name = "mission_entry_conditions_button"
-			quadTextureSprite ="gfx_mission_trigger"
-			position = { x= 0 y = -9999 }
-		}
-
-		instantTextBoxType= {
-			position = { x=5 y=12}
-			name = "mission_title"
-			font = "monofonto_outline_12"
-			borderSize = {x = 0 y = 0}
-			maxWidth = 140
-			maxHeight = 16
-			text = "Subjective and a Noun"
-			orientation = "UPPER_LEFT"
-			format = center
-			allwaystransparent = yes
-		}
-		
-		iconType = {
-			name ="country_icon"
-			position = { x= 35 y = 3 }
-			quadTextureSprite = "GFX_shield_small"
 		}
 	}
 }

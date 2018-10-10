@@ -207,9 +207,16 @@ country_decisions = {
 			add_prestige = 25
 			change_tag = X03
 			set_government_rank = 3
+            
             if = {
-                limit = { NOT = { has_reform = ncr_reform } }
-                change_government_via_reform = new_california_republic
+                limit = {
+                    NOT = { has_reform = ncr_reform }
+                }
+                change_government_effect = {
+                    TYPE = new_california_republic
+                    REFORM = ncr_reform
+                    LEGACY = ncr_legacy
+                }
             }
 		}
 	}
@@ -653,10 +660,14 @@ country_decisions = {
 			change_religion = mormon
 			swap_free_idea_group = yes
             if = {
-                limit = { 
+                limit = {
                     NOT = { has_reform = theocracy_reform }
                 }
-                change_government_via_reform = theocracy
+                change_government_effect = {
+                    TYPE = theocracy
+                    REFORM = theocracy_reform
+                    LEGACY = theocracy_legacy
+                }
             }
 		}
 	}

@@ -53,6 +53,15 @@ can_claim_defender_of_faith = {
 }
 
 can_change_national_focus = {
+    condition = {
+		tooltip = "CAN_CHANGE_NATIONAL_FOCUS"
+		potential = {
+            always = yes
+		}
+		allow = {
+            has_country_modifier = comms_system
+		}
+	}
 }
 
 can_increase_stability = {

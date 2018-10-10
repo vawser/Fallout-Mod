@@ -1,0 +1,335 @@
+generic_slot_1 = {
+    slot = 1
+    generic = yes
+
+    potential = {
+        always = yes
+    }
+    
+    discovery_auto_binder = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_adm_tech = 1
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_babelfish_unit = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_dip_tech = 1
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_atomic_focusing_lens = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_mil_tech = 1
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_autodoc = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            custom_tooltip = AUTODOC_SUITE_TOOLTIP
+            add_country_modifier = {
+                name = autodoc_system
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_radiation_suit = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            custom_tooltip = MAY_COLONISE_IRRADIATED_WASTELANDS
+            add_country_modifier = {
+                name = radiation_adaptation
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+}
+
+generic_slot_2 = {
+    slot = 2
+    generic = yes
+
+    potential = {
+        always = yes
+    }
+    
+    discovery_military_documents = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_army_tradition = 50
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_assaultron = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            define_general = {
+                name = "Assaultron"
+                shock = 6
+                fire = 4
+                manuever = 4
+                siege = 4
+                female = yes
+                trait = ruthless_personality
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_combat_vests = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = combat_vests
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_comms_system = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            custom_tooltip = MAY_CHANGE_NATIONAL_FOCUS
+            add_country_modifier = {
+                name = comms_system
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_beryllium_agitator = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = beryllium_agitator
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+}
+
+generic_slot_3 = {
+    slot = 3
+    generic = yes
+
+    potential = {
+        always = yes
+    }
+    
+    discovery_prewar_money = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_treasury = 1000
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_fll3_turbopump = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = fll3_turbopump
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_nx_42_guidance_chip = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = nx_42_guidance_chip
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_cybernetic_pain_inhibitor = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = cybernetic_pain_inhibitor
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_prototype_x13 = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = prototype_x13
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+}
+
+generic_slot_4 = {
+    slot = 4
+    generic = yes
+
+    potential = {
+        always = yes
+    }
+    
+    discovery_valence_radii_accentuator = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = valence_radii_accentuator
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_isotope_239 = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = isotope_239
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_bomb_collar = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_absolutism = 50
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_plasma_schematics = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = plasma_schematics
+                duration = -1
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+    discovery_t45d_power_armor = {
+		icon = dummy
+		required_missions = {  }
+        
+		trigger = {
+			has_research_for_discovery = yes
+		}
+		effect = {
+            add_country_modifier = {
+                name = t45d_power_armor
+                duration = -1
+            }
+            capital_scope = {
+                add_institution_embracement = {
+                    which = power_armor
+                    value = 100
+                }
+            }
+            hidden_effect = { lose_research_on_discovery = yes }
+        }
+	}
+}

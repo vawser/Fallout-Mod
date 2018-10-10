@@ -98,7 +98,11 @@ country_event = {
         
         if = {
             limit = { NOT = { has_reform = raider_reform } }
-            change_government_via_reform = raider
+            change_government_effect = {
+                TYPE = raider
+                REFORM = raider_reform
+                LEGACY = raider_legacy
+            }
         }
         
 		ai_chance = {
