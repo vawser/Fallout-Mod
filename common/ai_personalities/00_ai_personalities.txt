@@ -107,7 +107,7 @@ ai_militarist = {
 		modifier = {
 			factor = 0.5
 			AND = {
-				government = republic
+				is_republic_government = yes
 				NOT = { tag = ENC }
 			}
 		}

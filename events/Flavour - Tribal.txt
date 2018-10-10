@@ -13,7 +13,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-            government = tribal
+            is_tribal_government = yes
             has_reform = legion_reform
         }
 		is_at_war = no
@@ -50,7 +50,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-            government = tribal
+            is_tribal_government = yes
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = PIT
@@ -90,7 +90,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-            government = tribal
+            is_tribal_government = yes
             has_reform = legion_reform
 		}
 		is_at_war = yes
@@ -128,7 +128,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-            government = tribal
+            is_tribal_government = yes
             has_reform = legion_reform
 		}
 	}
@@ -169,10 +169,10 @@ country_event = {
 				tag = GD1
 				tag = GD2
 				has_reform = legion_reform
-                has_reform = wolf_pack_reform
+                government = wolf_pack
 			}
 			OR = {
-				government = tribal
+				is_tribal_government = yes
                 has_reform = legion_reform
 				tag = GD1
 				tag = GD2
@@ -212,14 +212,14 @@ country_event = {
 
 	trigger = {
 		OR = {
-            government = tribal
+            is_tribal_government = yes
             has_reform = legion_reform
 		}
         
 		any_neighbor_country = {  
 			has_opinion = { who = ROOT value = 0 }
 			OR = {
-                government = tribal
+                is_tribal_government = yes
                 has_reform = legion_reform
             }
 		}
@@ -329,7 +329,7 @@ country_event = { # War Games begin
 
 	trigger = {
 		OR = {
-            government = tribal
+            is_tribal_government = yes
             has_reform = legion_reform
 			tag = GD1
 			tag = GD2
@@ -541,7 +541,7 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		government = tribal
+		is_tribal_government = yes
 		NOT = { manpower_percentage = 0.5 }
 	}
 
@@ -569,7 +569,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 		}
 		NOT = { manpower_percentage = 0.5 }
@@ -608,7 +608,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 		}
 	}
@@ -647,7 +647,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 		}
 	}
@@ -683,7 +683,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 		}
 	}
@@ -720,7 +720,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 		}
 		has_heir = yes
@@ -753,7 +753,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = PIT
@@ -795,7 +795,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = ENC
@@ -830,7 +830,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = MTM
@@ -870,7 +870,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = MTM
@@ -912,7 +912,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			government = tribal
+			is_tribal_government = yes
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = ENC
@@ -952,7 +952,7 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-        government = tribal
+        is_tribal_government = yes
 		legitimacy_equivalent = 100
 		is_at_war = yes	
 		NOT = {

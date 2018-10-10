@@ -209,7 +209,7 @@ country_decisions = {
 			set_government_rank = 3
             if = {
                 limit = { NOT = { has_reform = ncr_reform } }
-                change_government_via_reform = ncr_reform
+                change_government_via_reform = new_california_republic
             }
 		}
 	}
@@ -597,7 +597,7 @@ country_decisions = {
 			OR = {
 				technology_group = tech_bos
 				religion = creatorism
-				has_reform = brotherhood_reform
+				government = brotherhood
 			}
 		}
 		allow =  {
@@ -656,7 +656,7 @@ country_decisions = {
                 limit = { 
                     NOT = { has_reform = theocracy_reform }
                 }
-                change_government_via_reform = theocracy_reform
+                change_government_via_reform = theocracy
             }
 		}
 	}

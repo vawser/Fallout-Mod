@@ -147,16 +147,16 @@ religion_group_postwar = {
 				}
 				effect = {
 					if = {
-                        limit = { government = monarchy }
+                        limit = { is_monarchy_government = yes }
                         add_legitimacy = 10
                     }
                     if = {
-                        limit = { government = republic }
+                        limit = { is_republic_government = yes }
                         
                         add_republican_tradition = 10
                     }
                     if = {
-                        limit = { government = theocracy }
+                        limit = { is_theocracy_government = yes }
                         
                         add_devotion = 10
                     }

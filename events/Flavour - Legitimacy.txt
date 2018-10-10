@@ -10,8 +10,8 @@ country_event = {
     is_triggered_only = yes
     
 	trigger = {
-        government = monarchy
-        NOT = { government = tribal }
+        is_monarchy_government = yes
+        NOT = { is_tribal_government = yes }
         is_nomad = no
 	}
 
@@ -64,8 +64,8 @@ country_event = {
     is_triggered_only = yes
     
 	trigger = {
-        government = monarchy
-        NOT = { government = tribal }
+        is_monarchy_government = yes
+        NOT = { is_tribal_government = yes }
         is_nomad = no
 	}
 

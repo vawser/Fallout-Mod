@@ -1,0 +1,100 @@
+#---------------------------
+# Overseer
+#---------------------------
+vault_serve_for_life_reform = {
+    icon = "union"
+
+    modifiers = {
+        max_absolutism = 5
+    }
+}
+vault_elections_reform = {
+    icon = "union"
+    
+    modifiers = {
+        republican_tradition = 0.03
+    }
+}
+vault_central_council_reform = {
+    icon = "union"
+    
+    modifiers = {
+        state_maintenance_modifier = -0.1
+        max_states = 2
+    }
+}
+
+#---------------------------
+# Vault-Tec Directive
+#---------------------------
+vault_reclamation_reform = {
+    icon = "union"
+
+    modifiers = {
+        global_colonial_growth = 15
+    }
+}
+vault_experimental_reform = {
+    icon = "union"
+
+    modifiers = {
+        global_unrest = 2
+        free_policy = 1
+    }
+}
+vault_abandoned_reform = {
+    icon = "union"
+
+    modifiers = {
+        stability_cost_modifier = -0.1
+    }
+}
+
+#---------------------------
+# Dealing with Outsiders
+#---------------------------
+vault_customs_office_reform = {
+    icon = "union"
+
+    modifiers = {
+        merchants = 1
+        trade_steering = 0.05
+        global_spy_defence = -0.1
+    }
+}
+vault_free_trade_reform = {
+    icon = "union"
+
+    modifiers = {
+        merchants = 1
+        caravan_power = 0.1
+        global_spy_defence = -0.2
+    }
+}
+vault_isolationism_reform = {
+    icon = "union"
+
+    modifiers = {
+        global_spy_defence = 0.15
+        embargo_efficiency = 0.25
+        stability_cost_modifier = -0.05
+    }
+}
+
+#---------------------------
+# Vault Security
+#---------------------------
+vault_police_force_reform = {
+    icon = "union"
+
+    modifiers = {
+        global_unrest = -2
+    }
+}
+vault_military_force_reform = {
+    icon = "union"
+
+    modifiers = {
+        land_forcelimit = 5
+    }
+}

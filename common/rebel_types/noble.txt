@@ -6,7 +6,7 @@ noble_rebels = {
 	color = { 179 75 75 }
 
 	area = nation 					# Stays within the nation
-	government = monarchy			# Likes monarchy
+	is_monarchy_government = yes			# Likes monarchy
 	defection = none				# Does not defect
 	independence = none				# Does not strive for independence
 	unit_transfer = no
@@ -46,7 +46,7 @@ noble_rebels = {
 		modifier = {
 			factor = 0.0
 			owner = {
-				government = republic
+				is_republic_government = yes
 				republican_tradition = 80
 			}
 		}	
@@ -54,14 +54,14 @@ noble_rebels = {
 		modifier = {
 			factor = 2.5
 			owner = {
-				government = republic
+				is_republic_government = yes
 				NOT = { republican_tradition = 33 }
 			}
 		}
 		modifier = {
 			factor = 2.5
 			owner = {
-				government = republic
+				is_republic_government = yes
 				NOT = { republican_tradition = 66 }
 			}
 		}

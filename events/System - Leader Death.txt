@@ -9,7 +9,7 @@ country_event = {
 	
 	trigger = {
         has_regency = no
-		NOT = { government = republic }
+		NOT = { is_republic_government = yes }
         NOT = { has_immortal_ruler = yes }
 	}
 	
@@ -126,7 +126,7 @@ country_event = {
     picture = USA_FLAG_eventPicture
 	
 	trigger = {
-		government = republic
+		is_republic_government = yes
         has_regency = no
         NOT = { has_immortal_ruler = yes }
 	}

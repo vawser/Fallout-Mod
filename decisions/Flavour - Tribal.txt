@@ -1,17 +1,17 @@
 country_decisions = {
     claim_vault = {
 		potential = {
-			government = tribal
+			is_tribal_government = yes
             NOT = { num_of_cities = 5 } # Four cities or less, roughly the same size in terms of land as Vault City
 		}
 		allow =  {
-            government = tribal
+            is_tribal_government = yes
 			any_owned_province = {
                 has_province_modifier = pf_vault
             }
 		}
 	  	effect = {
-			change_government_via_reform = vault_reform
+			change_government_via_reform = vault
             add_stability = -6
 		}
 		ai_will_do = {
@@ -21,11 +21,11 @@ country_decisions = {
     
 	assemble_a_raiding_party = {
 		potential = {
-			government = tribal
+			is_tribal_government = yes
 			NOT = { has_country_modifier = assembled_raiding_party }
 		}
 		allow =  {
-            government = tribal
+            is_tribal_government = yes
 			is_at_war = yes
 		}
 	  	effect = {
@@ -46,7 +46,7 @@ country_decisions = {
 	
 	construct_chem_lab = {
 		potential = {
-			government = tribal
+			is_tribal_government = yes
 			NOT = { has_country_modifier = chem_lab }
 			NOT = {
 				tag = TWM
@@ -54,7 +54,7 @@ country_decisions = {
 			}
 		}
 		allow =  {
-            government = tribal
+            is_tribal_government = yes
 			treasury = 500
 			OR = {
 				has_narcotics_allowed = yes

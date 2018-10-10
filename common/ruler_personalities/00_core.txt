@@ -142,8 +142,8 @@ righteous_personality = {
 	
 	allow = {
 		OR = {
-			government = republic
-			government = monarchy
+			is_republic_government = yes
+			is_monarchy_government = yes
 		}
 	}
 	
@@ -643,8 +643,8 @@ fertile_personality = {
 	}
 	allow = {
 		OR = {
-			government = monarchy
-            government = tribal
+			is_monarchy_government = yes
+            is_tribal_government = yes
 		}
 		NOT = { cannot_breed = yes	}
 	}
@@ -2166,8 +2166,8 @@ infertile_personality = {
 
 	 allow = {
 		OR = {
-			government = monarchy
-            government = tribal
+			is_monarchy_government = yes
+            is_tribal_government = yes
 		}
 		NOT = { cannot_breed = yes }
 	}

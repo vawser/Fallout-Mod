@@ -258,7 +258,7 @@ monarchy_ideas = {
     # legitimacy
     
     trigger = {
-        government = monarchy
+        is_monarchy_government = yes
     }
     
     bonus = {
@@ -291,7 +291,7 @@ republic_ideas = {
     # republican_tradition
     
     trigger = {
-        government = republic
+        is_republic_government = yes
     }
     
     bonus = {
@@ -324,7 +324,7 @@ primitive_ideas = {
     # cavalry_power
     
     trigger = {
-        government = tribal
+        is_tribal_government = yes
     }
     
     bonus = {
@@ -783,11 +783,11 @@ infantry_ideas = {
     }
     
     ai_will_do = {
-	factor = 1
-	modifier = {
-		factor = 1.1
-		has_reform = militia_reform
-	}
+        factor = 1
+        modifier = {
+            factor = 1.1
+            has_reform = militia_reform
+        }
     }
 }
 

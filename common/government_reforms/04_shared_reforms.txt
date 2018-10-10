@@ -1,15 +1,187 @@
 #--------------------------------------------
-# Monarchy
+# Outlook
 #--------------------------------------------
+administrative_outlook_reform = {
+    icon = "union"
+    
+    modifiers = {
+        state_maintenance_modifier = -0.15
+    }
+}
+diplomatic_outlook_reform = {
+    icon = "union"
+    
+    modifiers = {
+        diplomatic_reputation = 1
+    }
+}
+naval_outlook_reform = {
+    icon = "union"
+    
+    potential = {
+        any_owned_province = {
+            has_port = yes
+        }
+    }
+    
+    modifiers = {
+        global_ship_cost = -0.15
+    }
+}
+army_outlook_reform = {
+    icon = "union"
+    
+    modifiers = {
+        global_regiment_cost = -0.15
+    }
+}
+#--------------------------------------------
+# Rule of Law
+#--------------------------------------------
+central_authority_reform = {
+    icon = "union"
+    
+    modifiers = {
+        global_autonomy = -0.1
+        global_unrest = 2
+    }
+}
+regional_authority_reform = {
+    icon = "union"
+    
+    modifiers = {
+        global_autonomy = -0.05
+    }
+}
+local_authority_reform = {
+    icon = "union"
+    
+    modifiers = {
+        global_autonomy = 0.05
+        global_unrest = -2
+    }
+}
 
 #--------------------------------------------
-# Republic
+# Diversity
 #--------------------------------------------
+ethnostate_reform = {
+    icon = "union"
+    
+    modifiers = {
+        culture_conversion_cost = -0.25
+        same_culture_advisor_cost = -0.25
+    }
+}
+measured_immigration_reform = {
+    icon = "union"
+    
+    potential = {
+        # Check for humanoid races. Other races don't allow immigration.
+        OR = {
+            is_variable_equal = { which = race_id value = 1 }
+            is_variable_equal = { which = race_id value = 2 }
+            is_variable_equal = { which = race_id value = 3 }
+            is_variable_equal = { which = race_id value = 14 }
+        }
+    }
+    
+    modifiers = {
+        global_tax_modifier = 0.1
+        improve_relation_modifier = 0.1
+    }
+}
+open_immigration_reform = {
+    icon = "union"
+    
+    potential = {
+        # Check for humanoid races. Other races don't allow immigration.
+        OR = {
+            is_variable_equal = { which = race_id value = 1 }
+            is_variable_equal = { which = race_id value = 2 }
+            is_variable_equal = { which = race_id value = 3 }
+            is_variable_equal = { which = race_id value = 14 }
+        }
+    }
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        development_cost = -0.1
+        global_unrest = 2
+    }
+}
 
 #--------------------------------------------
-# Theocracy
+# Ambitions
 #--------------------------------------------
-
-#--------------------------------------------
-# Tribal
-#--------------------------------------------
+disciplined_army_reform = {
+    icon = "union"
+    
+    modifiers = {
+        discipline = 0.05
+    }
+}
+peerless_navy_reform = {
+    icon = "union"
+    
+    modifiers = {
+        ship_durability = 0.1
+    }
+}
+fearless_troops_reform = {
+    icon = "union"
+    
+    modifiers = {
+        land_morale = 0.05
+    }
+}
+excellent_education_reform = {
+    icon = "union"
+    
+    modifiers = {
+        leader_cost = -0.25
+    }
+}
+masterful_administration_reform = {
+    icon = "union"
+    
+    modifiers = {
+        core_creation = -0.05
+    }
+}
+charismatic_diplomacy_reform = {
+    icon = "union"
+    
+    modifiers = {
+        ae_impact = -0.1
+    }
+}
+inquisitive_minds_reform = {
+    icon = "union"
+    
+    modifiers = {
+        idea_cost = -0.05
+    }
+}
+fury_of_the_gods_reform = {
+    icon = "union"
+    
+    potential = {
+        NOT = { religion = secular }
+    }
+    
+    modifiers = {
+        global_missionary_strength = 0.03
+    }
+}
+religious_freedom_reform = {
+    icon = "union"
+    
+    potential = {
+        religion = secular
+    }
+    
+    modifiers = {
+        religious_unity = 0.25
+    }
+}

@@ -1,6 +1,30 @@
 #-----------------------------------------
 # Variants
 #-----------------------------------------
+gov_vault = {
+	rank = {
+		1 = FM_VAULT
+		2 = FM_VAULT
+		3 = FM_VAULT
+	}		
+	
+	ruler_male = {
+		1 = FM_FIRST_CITIZEN
+		2 = FM_FIRST_CITIZEN
+		3 = FM_FIRST_CITIZEN
+	}
+	
+	ruler_female = {
+		1 = FM_FIRST_CITIZEN
+		2 = FM_FIRST_CITIZEN
+		3 = FM_FIRST_CITIZEN
+	}
+	
+	trigger = {
+		has_reform = vault_reform
+        has_reform = vault_central_council_reform
+	}
+}
 
 #-----------------------------------------
 # Base
