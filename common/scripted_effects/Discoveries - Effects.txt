@@ -1,0 +1,62 @@
+# Effects
+# add_research_1
+# add_research_5
+# add_research_10
+# lose_research_1
+# lose_research_5
+# lose_research_10
+
+add_research_1 = {
+    custom_tooltip = INCREASE_RESEARCH_BY_ONE
+    hidden_effect = {
+        change_variable = { which = research value = 1 }
+    }
+}
+add_research_5 = {
+    custom_tooltip = INCREASE_RESEARCH_BY_FIVE
+    hidden_effect = {
+        change_variable = { which = research value = 5 }
+    }
+}
+add_research_10 = {
+    custom_tooltip = INCREASE_RESEARCH_BY_TEN
+    hidden_effect = {
+        change_variable = { which = research value = 10 }
+    }
+}
+lose_research_1 = {
+    custom_tooltip = DECREASE_RESEARCH_BY_ONE
+    hidden_effect = {
+        subtract_variable = { which = research value = 1 }
+        if = {
+            limit = {
+                NOT = { check_variable = { research = 0 } }
+            }
+            set_variable = { which = research value = 0 }
+        }
+    }
+}
+lose_research_5 = {
+    custom_tooltip = DECREASE_RESEARCH_BY_FIVE
+    hidden_effect = {
+        subtract_variable = { which = research value = 5 }
+        if = {
+            limit = {
+                NOT = { check_variable = { research = 0 } }
+            }
+            set_variable = { which = research value = 0 }
+        }
+    }
+}
+lose_research_10 = {
+    custom_tooltip = DECREASE_RESEARCH_BY_TEN
+    hidden_effect = {
+        subtract_variable = { which = research value = 10 }
+        if = {
+            limit = {
+                NOT = { check_variable = { research = 0 } }
+            }
+            set_variable = { which = research value = 0 }
+        }
+    }
+}
