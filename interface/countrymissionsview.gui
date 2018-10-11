@@ -59,9 +59,9 @@ guiTypes = {
 		
 		smoothListboxType = {
 			name ="countrymissionsview_missions_gridbox_listbox"
-			position = { x=20 y =130}
+			position = { x=60 y =140}
 			backGround=""
-			size = { x=530 y=305 }
+			size = { x=530 y=350 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -80,8 +80,8 @@ guiTypes = {
 		gridBoxType = {
 			name = "countrymissionsview_missions_gridbox"
 			position = { x = 0 y = 0 }
-			size = { width = 128 height = 128 }
-			slotsize = { width = 128 height = 128 }
+			size = { width = 400 height = 128 }
+			slotsize = { width = 400 height = 32 }
 			max_slots_horizontal = 4
 			format = "UPPER_LEFT"
 		}
@@ -110,38 +110,38 @@ guiTypes = {
 		
 		iconType = {
 			name = "mission_entry_rewards_glow"
-			position = { x=84 y=-9999 }
+			position = { x=390 y=-10 }
 			quadTextureSprite = "GFX_mission_effect_glow"
 		}
 		
         iconType = {
 			name = "mission_entry_rewards"
-			position = { x=90 y=90 }
-			quadTextureSprite = "GFX_mission_effect_icon"
+			position = { x=400 y=0 }
+			quadTextureSprite = "gfx_mission_effect"
 		}
         
 		iconType = {
 			name = "mission_entry_conditions"
-			position = { x=5 y=90 }
-			quadTextureSprite = "GFX_mission_trigger_icon"
+			position = { x=360 y=0 }
+			quadTextureSprite = "gfx_mission_trigger"
 		}
 		
 		guiButtonType = {
 			name = "mission_entry_conditions_button"
 			quadTextureSprite ="gfx_mission_trigger"
-			position = { x=5 y =90 }
+			position = { x=360 y =0 }
 		}
 
 		instantTextBoxType= {
-			position = { x=17 y=20}
+			position = { x=25 y=7}
 			name = "mission_title"
-			font = "monofonto_outline_12"
+			font = "vic_18"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 95
+			maxWidth = 300
 			maxHeight = 16
 			text = "Subjective and a Noun"
 			orientation = "UPPER_LEFT"
-			format = center
+			format = left
 			allwaystransparent = yes
 		}
 		
