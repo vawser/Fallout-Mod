@@ -2,21 +2,21 @@
 # Outlook
 #--------------------------------------------
 administrative_outlook_reform = {
-    icon = "union"
+    icon = "office"
     
     modifiers = {
         state_maintenance_modifier = -0.15
     }
 }
 diplomatic_outlook_reform = {
-    icon = "union"
+    icon = "doc"
     
     modifiers = {
         diplomatic_reputation = 1
     }
 }
 naval_outlook_reform = {
-    icon = "union"
+    icon = "ship"
     
     potential = {
         any_owned_province = {
@@ -29,7 +29,7 @@ naval_outlook_reform = {
     }
 }
 army_outlook_reform = {
-    icon = "union"
+    icon = "bunker"
     
     modifiers = {
         global_regiment_cost = -0.15
@@ -39,7 +39,7 @@ army_outlook_reform = {
 # Rule of Law
 #--------------------------------------------
 central_authority_reform = {
-    icon = "union"
+    icon = "state_house"
     
     modifiers = {
         global_autonomy = -0.1
@@ -47,14 +47,14 @@ central_authority_reform = {
     }
 }
 regional_authority_reform = {
-    icon = "union"
+    icon = "comms"
     
     modifiers = {
         global_autonomy = -0.05
     }
 }
 local_authority_reform = {
-    icon = "union"
+    icon = "ranch"
     
     modifiers = {
         global_autonomy = 0.05
@@ -66,7 +66,7 @@ local_authority_reform = {
 # Diversity
 #--------------------------------------------
 ethnostate_reform = {
-    icon = "union"
+    icon = "barbed_wall"
     
     modifiers = {
         culture_conversion_cost = -0.25
@@ -74,7 +74,7 @@ ethnostate_reform = {
     }
 }
 measured_immigration_reform = {
-    icon = "union"
+    icon = "usa_flag"
     
     potential = {
         # Check for humanoid races. Other races don't allow immigration.
@@ -92,7 +92,7 @@ measured_immigration_reform = {
     }
 }
 open_immigration_reform = {
-    icon = "union"
+    icon = "person"
     
     potential = {
         # Check for humanoid races. Other races don't allow immigration.
@@ -115,56 +115,56 @@ open_immigration_reform = {
 # Ambitions
 #--------------------------------------------
 disciplined_army_reform = {
-    icon = "union"
+    icon = "military"
     
     modifiers = {
         discipline = 0.05
     }
 }
 peerless_navy_reform = {
-    icon = "union"
+    icon = "ship"
     
     modifiers = {
         ship_durability = 0.1
     }
 }
 fearless_troops_reform = {
-    icon = "union"
+    icon = "artillery"
     
     modifiers = {
         land_morale = 0.05
     }
 }
 excellent_education_reform = {
-    icon = "union"
+    icon = "classroom"
     
     modifiers = {
         leader_cost = -0.25
     }
 }
 masterful_administration_reform = {
-    icon = "union"
+    icon = "office"
     
     modifiers = {
         core_creation = -0.05
     }
 }
 charismatic_diplomacy_reform = {
-    icon = "union"
+    icon = "charismatic_person"
     
     modifiers = {
         ae_impact = -0.1
     }
 }
 inquisitive_minds_reform = {
-    icon = "union"
+    icon = "satellite"
     
     modifiers = {
         idea_cost = -0.05
     }
 }
 fury_of_the_gods_reform = {
-    icon = "union"
+    icon = "cross"
     
     potential = {
         NOT = { religion = secular }
@@ -175,7 +175,7 @@ fury_of_the_gods_reform = {
     }
 }
 religious_freedom_reform = {
-    icon = "union"
+    icon = "peace"
     
     potential = {
         religion = secular

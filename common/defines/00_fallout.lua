@@ -17,6 +17,19 @@ NDefines.NCountry.ALLOW_ZERO_BASE_VALUES = 1
 NDefines.NCountry.SPLENDOR_ABILITY_COST = 2000
 
 --------------------------------
+-- Conversion
+--------------------------------
+NDefines.NCountry.CAN_CONVERT_TERRITORY_CULTURE = 1     -- Allow conversion
+NDefines.NCountry.CAN_CONVERT_TERRITORY_RELIGION = 1    -- Allow conversion
+
+--------------------------------
+-- Migration
+--------------------------------
+NDefines.NCountry.MIGRATION_BOOST = 5
+NDefines.NCountry.MIGRATION_COOLDOWN = 12
+NDefines.NCountry.MIGRATION_DEPLETION_TIME = 365
+
+--------------------------------
 -- Diplomacy
 --------------------------------
 NDefines.NDiplomacy.STUDY_TECHNOLOGY_MIN_TECHS_AHEAD = 0 -- Allow power gain from Study Technology always
@@ -91,8 +104,12 @@ NDefines.NAI.AGGRESSIVENESS = 500 -- Make AI more war-happy
 NDefines.NAI.AGGRESSIVENESS_BONUS_EASY_WAR = 500 -- Make AI more war-happy
 NDefines.NAI.NAVY_BUDGET_FRACTION = 0.2 -- Reduce AI spending on navy
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 30 -- Allow AI to develop more
-NDefines.NAI.PEACE_TIME_MONTHS = 24 -- Reduce AI stubbornness
+NDefines.NAI.PEACE_TIME_MONTHS = 6 -- Reduce AI stubbornness
+NDefines.NAI.PEACE_EXCESSIVE_DEMANDS_THRESHOLD = 5
+NDefines.NAI.PEACE_TIME_MAX_MONTHS = 12
 NDefines.NAI.PEACE_INCONCLUSIVE_THRESHOLD = 0 -- Allow for peace demands at 0
+
+
 --------------------------------
 -- Military 
 --------------------------------
@@ -105,8 +122,13 @@ NDefines.NMilitary.ARTILLERY_SPEED = 1.0 -- Revert speed nerf Paradox introducte
 NDefines.NMilitary.FORT_PER_DEV_RATIO = 100 -- Make army trad. from forts easier to get.
 NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.05 -- Represents difficulty in supply across wasteland
 NDefines.NMilitary.MONTHLY_REINFORCE = 0.05 -- Represents difficulty in supply across wasteland
-NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 80 -- Battles more important than capture in the wasteland
-NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 9999 -- Disable Naval Doctrines
+
+NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 100 -- Battles more important than capture in the wasteland
+NDefines.NMilitary.WARGOAL_MAX_BONUS = 100
+NDefines.NMilitary.DEFAULT_WARGOAL_WARSCORE_BONUS = 20
+NDefines.NMilitary.DEFAULT_WARGOAL_BATTLESCORE_BONUS = 10
+NDefines.NMilitary.SUPERIORITY_WARGOAL_WARSCORE_THRESHOLD = 1
+NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 2
 
 --------------------------------
 -- GOVERNMENT
