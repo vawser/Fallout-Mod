@@ -764,3 +764,52 @@ country_event = {
 		} 
 	}
 }
+
+# The House Always Wins
+country_event = {
+	id = new_vegas.20
+	title = new_vegas.20.title
+	desc = new_vegas.20.desc
+    picture = STRIP_CASINO_eventPicture
+	
+	trigger = {
+        tag = NVG
+        alliance_with = NCR
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.20" }
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 24
+        
+        modifier = {
+            factor = 10
+            
+            is_at_war = yes
+        }
+        
+        modifier = {
+            factor = 0.9
+            
+            stability = 2
+        }
+        
+        modifier = {
+            factor = 2
+            
+            NOT = { stability = 0 }
+        }
+    }
+    
+	option = {
+		name = new_vegas.20.option.a
+		
+        add_years_of_income = 1
+	}
+}
+
+
