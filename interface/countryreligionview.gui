@@ -1321,8 +1321,8 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "pick_deity"
-				position = { x=40 y = -17}
-				quadTextureSprite ="GFX_standard_button_71"
+				position = { x=30 y = -17}
+				quadTextureSprite ="GFX_standard_button_224"
 				buttonText = "SELECT"
 				buttonFont = "vic_18"
 				Orientation = "LEFT"
@@ -1432,16 +1432,12 @@ guiTypes = {
 				clicksound = click
 			}
 			
-			guiButtonType = 
-			{
+			guiButtonType = {
 				name ="papacy_icon"
-				quadTextureSprite = "GFX_menubar_floating_strip"
-				position = { x= 120 y = -50 }
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "Main_14_black"
-				Orientation = "LEFT"
+				quadTextureSprite= "GFX_standard_button_224"
+                position = { x= 40 y = -50 }
+                buttonText = "State Decrees"
+                buttonFont = "vic_18"
 			}
 			
 			instantTextBoxType = {
