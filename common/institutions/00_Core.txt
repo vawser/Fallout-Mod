@@ -1,5 +1,109 @@
-# Institutions
-# Each one symbolises the nation "learning" of the institution, not that it has occured
+#-------------------------
+# Currency
+#-------------------------
+# Represents the adoption of the cap standard, 
+# or other currency standards when the NCR cap doesn't apply.
+# ---
+# Exists for settled nations at game start.
+# Starts in the Hub.
+# ---
+# Gained through:
+# - Free Trade or Economic Innovations ideas
+# - Nuka Cola trade good
+# - 25+ development
+# - Neighbour with institution
+# ---
+# Unlocks:
+# - Cap Counterfeiting events
+# - Legion Currency events
+# - NCR Currency events
+# - Currency decision (not for NCR and Legion)
+
+#-------------------------
+# Old World Blues
+#-------------------------
+# Represents old world technology and its rediscovery.
+# ---
+# Requires Currency to exist.
+# Spawns in a nation with any technology above 10 or own a province in the Think Tank region. 
+# ---
+# Gained through:
+# - Pre-war Technology trade good
+# - 25+ Innovation
+# - Being a Scientific state
+# - Being Robotics religion
+# - Neighbour with institution
+# ---
+# Unlocks:
+# - Decision to unlock full potential of HELIOS ONE
+# - Elijah's Madness if Sierra Madre is uncolonized
+# - Think Tank Awakening modifiers
+# - Think Tank Awakening events
+# - Tribal Luddites events
+# ---
+# Special case: Think Tank nations get automatic 100% of Old World Blues when it spawns to represent them being the source of the tech.
+
+#-------------------------
+# Americana
+#-------------------------
+# Represents the rediscovery of pre-war ideals and American traditions.
+# ---
+# Requires Old World Blues to exist.
+# Spawned for the Enclave or any nation with Pre-war Books trade goods.
+# ---
+# Gained through:
+# - Pre-war importance provinces (i.e. Washington)
+# - Having Mixed or Market economg
+# - Having Democratic Law
+# - Having State Courts
+# - Having Pre-war Books trade goods
+# - Having Vault government
+# - Neighbour with institution
+# --- 
+# Unlocks:
+# - Pre-war Book events
+# - Americana events
+# - Decision to form the USA
+# - Enclave events
+
+#-------------------------
+# Manifest Destiny
+#-------------------------
+# Represents the colonialism of the wasteland
+# ---
+# Requires Americana
+# Spawns for any country with a colony
+# ---
+# Gained through:
+# - Exploration ideas
+# - Vault government
+# - Number of colonies
+# - Neighbour with institution
+# ---
+# Unlocks:
+# - Scavenging system
+# - Vault C.A.M.P events
+
+#-------------------------
+# Industrial Reawakening
+#-------------------------
+# Represents the re-establishment of industrial processes in the wasteland.
+# ---
+# Requires Manifest Destiny
+# Spawns for New Vegas, the Pitt or any country with 5+ manufactories
+# ---
+# Gained through:
+# - Province with Industry modifier
+# - Manufacturing ideas
+# - Is New Vegas or the Pitt
+# - Province has manufactory whilst > 10 development
+# ---
+# Unlocks:
+# - New Vegas events
+# - Pitt events
+# - Industry events
+# - Trade Boom events
+
 
 # Bottlecaps
 bottlecaps = {
