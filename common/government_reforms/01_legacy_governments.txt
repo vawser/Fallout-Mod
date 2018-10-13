@@ -1,7 +1,7 @@
 #--------------------------------------------
 # Monarchy
 #--------------------------------------------
-settlement_legacy = {
+frontier_settlement_legacy = {
     icon = "union"
     
     monarchy = yes
@@ -18,7 +18,54 @@ settlement_legacy = {
     }
     
     modifiers = {
-        advisor_pool = 1
+        global_colonial_growth = 10
+        colonist_placement_chance = 0.05
+    }
+
+	ai = { factor = 1 }
+}
+mercantile_settlement_legacy = {
+    icon = "union"
+    
+    monarchy = yes
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
+    modifiers = {
+        global_own_trade_power = 0.1
+        trade_efficiency = 0.05
+    }
+
+	ai = { factor = 1 }
+}
+militarized_settlement_legacy = {
+    icon = "union"
+    
+    monarchy = yes
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        global_regiment_cost = -0.1
     }
 
 	ai = { factor = 1 }

@@ -1,7 +1,7 @@
 # General
 is_monarchy_government = {
     OR = {
-        has_reform = settlement_reform
+        is_settlement_government = yes
         has_reform = militia_reform
         has_reform = legion_reform
         has_reform = think_tank_reform
@@ -39,6 +39,14 @@ is_tribal_government = {
         has_reform = swarm_reform
         has_reform = wolf_pack_reform
         has_reform = great_khan_reform
+    }
+}
+
+is_settlement_government = {
+    OR = {
+        has_reform = frontier_settlement_reform
+        has_reform = mercantile_settlement_reform
+        has_reform = militarized_settlement_reform
     }
 }
 

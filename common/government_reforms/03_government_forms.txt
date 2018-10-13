@@ -1,21 +1,50 @@
 #--------------------------------------------
 # Monarchy
 #--------------------------------------------
-settlement_reform = {
-    icon = "union"
+frontier_settlement_reform = {
+    icon = "peace"
 
     allow_normal_conversion = yes
-    legacy_equivalent = settlement_legacy
+    legacy_equivalent = frontier_settlement_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
     modifiers = {
-        advisor_pool = 1
+        global_colonial_growth = 10
+        colonist_placement_chance = 0.05
+    }
+}
+mercantile_settlement_reform = {
+    icon = "diamond_city"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = mercantile_settlement_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_own_trade_power = 0.1
+        trade_efficiency = 0.05
+    }
+}
+militarized_settlement_reform = {
+    icon = "military"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = militarized_settlement_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        global_regiment_cost = -0.1
     }
 }
 militia_reform = {
-    icon = "union"
+    icon = "military"
     
     allow_normal_conversion = yes
     legacy_equivalent = militia_legacy
@@ -29,7 +58,7 @@ militia_reform = {
     }
 }
 legion_reform = {
-    icon = "union"
+    icon = "cross"
     
     allow_normal_conversion = yes
     legacy_equivalent = legion_legacy
@@ -44,7 +73,7 @@ legion_reform = {
     }
 }
 new_vegas_reform = {
-    icon = "union"
+    icon = "gambling"
     
     allow_normal_conversion = yes
     legacy_equivalent = new_vegas_legacy
@@ -59,7 +88,7 @@ new_vegas_reform = {
     }
 }
 think_tank_reform = {
-    icon = "union"
+    icon = "satellite"
     
     allow_normal_conversion = yes
     legacy_equivalent = think_tank_legacy
@@ -74,7 +103,7 @@ think_tank_reform = {
     }
 }
 zetan_reform = {
-    icon = "union"
+    icon = "satellite"
     
     allow_normal_conversion = yes
     legacy_equivalent = zetan_legacy
@@ -89,7 +118,7 @@ zetan_reform = {
     }
 }
 shi_reform = {
-    icon = "union"
+    icon = "vault_computer"
     
     allow_normal_conversion = yes
     legacy_equivalent = shi_legacy
@@ -107,7 +136,7 @@ shi_reform = {
 # Republic
 #--------------------------------------------
 republic_reform = {
-    icon = "union"
+    icon = "person"
     
     allow_normal_conversion = yes
     legacy_equivalent = republic_legacy
@@ -121,7 +150,7 @@ republic_reform = {
     }
 }
 dictatorship_reform = {
-    icon = "union"
+    icon = "burned_man"
 
     allow_normal_conversion = yes
     legacy_equivalent = dictatorship_legacy
@@ -135,7 +164,7 @@ dictatorship_reform = {
     }
 }
 ncr_reform = {
-    icon = "union"
+    icon = "artillery"
 
     allow_normal_conversion = yes
     legacy_equivalent = ncr_legacy
@@ -150,7 +179,7 @@ ncr_reform = {
     }
 }
 institute_reform = {
-    icon = "union"
+    icon = "console"
 
     allow_normal_conversion = yes
     legacy_equivalent = institute_legacy
@@ -166,7 +195,7 @@ institute_reform = {
     }
 }
 enclave_reform = {
-    icon = "union"
+    icon = "usa_flag"
 
     allow_normal_conversion = yes
     legacy_equivalent = enclave_legacy
@@ -181,7 +210,7 @@ enclave_reform = {
     }
 }
 vault_reform = {
-    icon = "union"
+    icon = "overseer"
     
     allow_normal_conversion = yes
     legacy_equivalent = vault_legacy
@@ -200,7 +229,7 @@ vault_reform = {
 # Theocracy
 #--------------------------------------------
 theocracy_reform = {
-    icon = "union"
+    icon = "burned_man"
     
     allow_normal_conversion = yes
     legacy_equivalent = theocracy_legacy
@@ -215,7 +244,7 @@ theocracy_reform = {
     }
 }
 brotherhood_reform = {
-    icon = "union"
+    icon = "power_armor"
     
     allow_normal_conversion = yes
     legacy_equivalent = brotherhood_legacy
@@ -231,7 +260,7 @@ brotherhood_reform = {
     }
 }
 cult_reform = {
-    icon = "union"
+    icon = "charismatic_person"
 
     allow_normal_conversion = yes
     legacy_equivalent = cult_legacy
@@ -249,7 +278,7 @@ cult_reform = {
 # Tribal
 #--------------------------------------------
 tribe_reform = {
-    icon = "union"
+    icon = "brahmin"
     
     allow_normal_conversion = yes
     legacy_equivalent = tribe_legacy
@@ -262,7 +291,7 @@ tribe_reform = {
     }
 }
 commune_reform = {
-    icon = "union"
+    icon = "person"
     
     allow_normal_conversion = yes
     legacy_equivalent = commune_legacy
@@ -275,7 +304,7 @@ commune_reform = {
     }
 }
 raider_reform = {
-    icon = "union"
+    icon = "raider"
 
     allow_normal_conversion = yes
     legacy_equivalent = raider_legacy
@@ -305,7 +334,7 @@ super_mutant_reform = {
     }
 }
 swarm_reform = {
-    icon = "union"
+    icon = "factory"
     
     allow_normal_conversion = yes
     legacy_equivalent = swarm_legacy
@@ -319,7 +348,7 @@ swarm_reform = {
     }
 }
 wolf_pack_reform = {
-    icon = "union"
+    icon = "military"
     
     allow_normal_conversion = yes
     legacy_equivalent = wolf_pack_legacy
@@ -333,7 +362,7 @@ wolf_pack_reform = {
     }
 }
 great_khan_reform = {
-    icon = "union"
+    icon = "cross"
     
     allow_normal_conversion = yes
     legacy_equivalent = great_khan_legacy

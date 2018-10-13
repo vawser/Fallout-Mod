@@ -11,12 +11,12 @@ country_decisions = {
 			add_stability = -6
 			if = {
                 limit = {
-                    NOT = { has_reform = settlement_reform }
+                    NOT = { is_settlement_government = yes }
                 }
                 change_government_effect = {
                     TYPE = settlement
-                    REFORM = settlement_reform
-                    LEGACY = settlement_legacy
+                    REFORM = frontier_settlement_reform
+                    LEGACY = frontier_settlement_legacy
                 }
             }
 		}
