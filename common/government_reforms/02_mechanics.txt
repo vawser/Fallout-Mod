@@ -1,13 +1,73 @@
 #--------------------------------------------
 # Monarchy
 #--------------------------------------------
-monarchy_mechanic = {
+settlement_mechanic = {
     basic_reform = yes
     
 	monarchy = yes
     
 	heir = yes
-	queen = yes
+	queen = no
+
+	valid_for_nation_designer = no
+}
+militia_mechanic = {
+    basic_reform = yes
+    
+	monarchy = yes
+    
+	heir = yes
+	queen = no
+
+	valid_for_nation_designer = no
+}
+legion_mechanic = {
+    basic_reform = yes
+    
+	monarchy = yes
+    
+	heir = yes
+	queen = no
+
+	valid_for_nation_designer = no
+}
+new_vegas_mechanic = {
+    basic_reform = yes
+    
+	monarchy = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+}
+think_tank_mechanic = {
+    basic_reform = yes
+    
+	monarchy = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+}
+mothership_mechanic = {
+    basic_reform = yes
+    
+	monarchy = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+}
+shi_mechanic = {
+    basic_reform = yes
+    
+	monarchy = yes
+    
+	heir = no
+	queen = no
 
 	valid_for_nation_designer = no
 }
@@ -16,6 +76,66 @@ monarchy_mechanic = {
 # Republic
 #--------------------------------------------
 republic_mechanic = {
+    basic_reform = yes
+    
+	republic = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+}
+dictatorship_mechanic = {
+    basic_reform = yes
+    
+	republic = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 0
+}
+ncr_mechanic = {
+    basic_reform = yes
+    
+	republic = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+}
+institute_mechanic = {
+    basic_reform = yes
+    
+	republic = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 0
+}
+enclave_mechanic = {
+    basic_reform = yes
+    
+	republic = yes
+    
+	heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 0
+}
+vault_mechanic = {
     basic_reform = yes
     
 	republic = yes
@@ -47,11 +167,123 @@ theocracy_mechanic = {
     
 	valid_for_nation_designer = no
 }
+brotherhood_mechanic = {
+    basic_reform = yes
+    
+	religion = yes
+    
+	has_devotion = yes
+
+	royal_marriage = no
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+}
+cult_mechanic = {
+    basic_reform = yes
+    
+	religion = yes
+    
+	has_devotion = yes
+
+	royal_marriage = no
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+}
 
 #--------------------------------------------
 # Tribal
 #--------------------------------------------
-tribal_mechanic = {
+tribe_mechanic = {
+    basic_reform = yes
+    
+	tribal = yes
+	monarchy = yes
+    
+	heir = yes
+	queen = yes
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+}
+commune_mechanic = {
+    basic_reform = yes
+    
+	tribal = yes
+	monarchy = yes
+    
+	heir = no
+	queen = no
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+}
+raider_mechanic = {
+    basic_reform = yes
+    
+	tribal = yes
+	monarchy = yes
+    
+	heir = yes
+	queen = yes
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+}
+super_mutant_mechanic = {
+    basic_reform = yes
+    
+	tribal = yes
+	monarchy = yes
+    
+	heir = no
+	queen = no
+    
+    native_mechanic = no
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+}
+swarm_mechanic = {
+    basic_reform = yes
+    
+	tribal = yes
+	monarchy = yes
+    
+	heir = no
+	queen = no
+    
+    native_mechanic = no
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+}
+wolf_pack_mechanic = {
+    basic_reform = yes
+    
+	tribal = yes
+	monarchy = yes
+    
+	heir = no
+	queen = no
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+}
+tribe_mechanic = {
     basic_reform = yes
     
 	tribal = yes
@@ -64,7 +296,20 @@ tribal_mechanic = {
     
 	valid_for_nation_designer = no
 }
-
+great_khan_mechanic = {
+    basic_reform = yes
+    
+	tribal = yes
+	monarchy = yes
+    
+	heir = yes
+	queen = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+}
 
 
 
