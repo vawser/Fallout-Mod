@@ -23,7 +23,7 @@ country_event = {
             country_event = { id = megaton.3 days = 7 }
             country_event = { id = megaton.4 days = 90 }
             
-            3017 = {
+            1260 = {
                 remove_province_modifier = megaton_bomb 
                 remove_core = owner
                 cede_province = ---
@@ -59,7 +59,7 @@ country_event = {
 	
 	trigger = {
         NOT = { exists = MEG }
-        3017 = { NOT = { has_province_modifier = megaton_bomb } }
+        1260 = { NOT = { has_province_modifier = megaton_bomb } }
         NOT = { has_country_flag = received_refugees }
 		capital_scope = {
 			region = the_capital_wasteland_region

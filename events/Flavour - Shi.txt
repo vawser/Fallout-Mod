@@ -477,7 +477,7 @@ country_event = {
 	
 	trigger = {
 		tag = SHI
-		owns = 4055
+		owns = 383
 		always = no
 	}
     
@@ -489,7 +489,7 @@ country_event = {
     
 	option = {
 		name = shi.11.option.a
-        4055 = {
+        383 = {
 			add_base_production = 2
 			add_base_manpower = 2
 			add_base_tax = 2
@@ -525,7 +525,7 @@ country_event = {
 	trigger = {
 		tag = SHI
         has_country_flag = angsty_lopan
-		owns = 4055 
+		owns = 383 
 		always = no
 	}
     
@@ -539,9 +539,9 @@ country_event = {
 		name = shi.12.option.a
 		if = {
 		    limit { 
-			    owns = 4055 
+			    owns = 383 
 			}
-            4055 = {
+            383 = {
 			    add_core = LPN
 				cede_province = LPN
 			}
@@ -549,9 +549,9 @@ country_event = {
 		}
 		if = {
 		    limit { 
-			    owns = 2021 
+			    owns = 383 
 			}
-            2021 = {
+            383 = {
 				add_base_manpower = -2
 			}
 		}
@@ -568,9 +568,9 @@ country_event = {
 		add_stability = -2
 		if = {
 		    limit { 
-			    owns = 2021 
+			    owns = 383 
 			}
-            2021 = {
+            383 = {
 				add_base_production = -2
 				add_base_manpower = -2
 				add_base_tax = -2

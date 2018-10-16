@@ -15,7 +15,7 @@ country_event = {
 	
 	trigger = {
         tag = SLN 		
-		owns_core_province = 4052 
+		owns_core_province = 1427 
 		has_ruler_flag = chomps_living
 	}
     
@@ -27,7 +27,7 @@ country_event = {
     
 	option = {
 		name = sloan.1.option.a
-		4052 = {
+		1427 = {
 			change_trade_goods = drugs 
 		}
 		set_global_flag = chomps_path_sln
@@ -46,7 +46,7 @@ country_event = {
     		mil = 0
     		female = yes
 		}		
-		4052 = {
+		1427 = {
 			add_base_production = 1
 			change_trade_goods = brew
 		}
@@ -67,7 +67,7 @@ country_event = {
     		dip = 0
     		mil = 0
 		}		
-		4052 = {
+		1427 = {
 			add_base_production = 2
 		}
 		set_ruler_flag = sloan_event1_randomruleroption
@@ -93,7 +93,7 @@ country_event = {
 	
 	trigger = {
         tag = SLN 		
-		owns_core_province = 4052 
+		owns_core_province = 1427 
 		has_country_flag = bar_sln
 	}
     
@@ -106,7 +106,7 @@ country_event = {
 	option = {
 		name = sloan.2.option.a
 		trigger = {	NOT = { has_ruler_flag = wilkins_jas_rules } }
-		4052 = {
+		1427 = {
 			add_base_production = 1
 		}
 		clr_country_flag = bar_sln
@@ -122,7 +122,7 @@ country_event = {
 	option = {
 		name = sloan.2.option.b	
 		trigger = {	has_ruler_flag = wilkins_jas_rules }
-		4052 = {
+		1427 = {
 			add_base_production = 3
 		}
 		clr_country_flag = bar_sln
@@ -150,7 +150,7 @@ country_event = {
 	trigger = {
         tag = GRK 		
 		SLN = { 
-		    owns_core_province = 4052 
+		    owns_core_province = 1427 
 		    exists = yes
 		}
 		has_global_flag = chomps_path_sln

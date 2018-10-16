@@ -1,625 +1,752 @@
-#-------------------------------------------
-    # BUILDINGS START
-    #-------------------------------------------
-    
-	windowType = {
-		name = "new_buildings_entry"
-		backGround=""
-		position = { x=0 y =0}	
-		size = { x=400 y = 320}
-		moveable = 0
-		dontRender = ""
-		horizontalBorder= ""
-		verticalBorder= ""
-		fullscreen = no
-	
-        #---------------------------------------------------------
-        # Civic
-        #---------------------------------------------------------
-        iconType = {
-			name = "civic_banner"
-			position = { x = 30 y = -12 }
-			spriteType = "GFX_macro_diplomacy_green_banner"
-		}
-		
-		instantTextBoxType={
-			name = "title_civic"
-			position = {x = 190 y = -1 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 120
-			maxHeight = 18
-			text = "Civic"	
-		}
-        
-		checkboxType = {
-			name = "build_fbs_office"
-			position = { x = 29 y = 32 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_office_cost"
-			position = {x = 29 y = 82 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_factory"
-			position = { x = 81 y = 32 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_factory_cost"
-			position = {x = 81 y = 82 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_marketplace"
-			position = { x = 133 y = 32 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_marketplace_cost"
-			position = {x = 133 y = 82 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_bank"
-			position = { x = 185 y = 32 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_bank_cost"
-			position = {x = 185 y = 82 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_research_lab"
-			position = { x = 236 y = 32 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_research_lab_cost"
-			position = {x = 236 y = 82 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_police_station"
-			position = { x = 288 y = 32 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_police_station_cost"
-			position = {x = 288 y = 82 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_religious_centre"
-			position = { x = 340 y = 32 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_religious_centre_cost"
-			position = {x = 340 y = 82 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        #---------------------------------------------------------
-        # Military
-        #---------------------------------------------------------
-        iconType = {
-			name = "military_banner"
-			position = { x = 30 y = 100 }
-			spriteType = "GFX_macro_diplomacy_green_banner"
-		}
-		
-		instantTextBoxType={
-			name = "title_military"
-			position = {x = 182 y = 109 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 120
-			maxHeight = 18
-			text = "Military"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_military_camp"
-			position = { x = 29 y = 148 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_military_camp_cost"
-			position = {x = 29 y = 198 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_outpost"
-			position = { x = 81 y = 148 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_outpost_cost"
-			position = {x = 81 y = 198 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_barracks"
-			position = { x = 133 y = 148 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_barracks_cost"
-			position = {x = 133 y = 198 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_dock"
-			position = { x = 185 y = 148 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_dock_cost"
-			position = {x = 185 y = 198 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_shipyard"
-			position = { x = 236 y = 148 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_shipyard_cost"
-			position = {x = 236 y = 198 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_arsenal"
-			position = { x = 288 y = 148 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_arsenal_cost"
-			position = {x = 288 y = 198 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_highway"
-			position = { x = 340 y = 148 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_highway_cost"
-			position = {x = 340 y = 198 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        
-        #---------------------------------------------------------
-        # Utility
-        #---------------------------------------------------------
-        iconType = {
-			name = "utility_banner"
-			position = { x = 30 y = 215 }
-			spriteType = "GFX_macro_diplomacy_green_banner"
-		}
-		
-		instantTextBoxType={
-			name = "title_utility"
-			position = {x = 186 y = 224 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 120
-			maxHeight = 18
-			text = "Utility"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_fort_1"
-			position = { x = 29 y = 255 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_fort_1_cost"
-			position = {x = 29 y = 305 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_fort_2"
-			position = { x = 81 y = 255 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_fort_2_cost"
-			position = {x = 81 y = 305 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_fort_3"
-			position = { x = 133 y = 255 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_fort_3_cost"
-			position = {x = 133 y = 305 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_fort_4"
-			position = { x = 185 y = 255 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_fort_4_cost"
-			position = {x = 185 y = 305 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_manufactory"
-			position = { x = 236 y = 255 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "manufactory_cost"
-			position = {x = 236 y = 305 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        
-        #---------------------------------------------------------
-        # Grand Projects
-        #---------------------------------------------------------
-        iconType = {
-			name = "unique_banner"
-			position = { x = 30 y = 320 }
-			spriteType = "GFX_macro_diplomacy_green_banner"
-		}
-		
-		instantTextBoxType={
-			name = "title_unique"
-			position = {x = 165 y = 329 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 120
-			maxHeight = 18
-			text = "Grand Projects"	
-		}
-        
-        checkboxType = {
-			name = "build_fbs_army_command"
-			position = { x = 29 y = 360 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_army_command_cost"
-			position = {x = 29 y = 410 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_navy_command"
-			position = { x = 81 y = 360 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_navy_command_cost"
-			position = {x = 81 y = 410 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_planning_command"
-			position = { x = 133 y = 360 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_planning_command_cost"
-			position = {x = 133 y = 410 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_infantry_recruitment_centre"
-			position = { x = 185 y = 360 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_infantry_recruitment_centre_cost"
-			position = {x = 185 y = 410 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_sailor_recruitment_centre"
-			position = { x = 236 y = 360 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_sailor_recruitment_centre_cost"
-			position = {x = 236 y = 410 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_propaganda_centre"
-			position = { x = 288 y = 360 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_propaganda_centre_cost"
-			position = {x = 288 y = 410 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_centre_of_harmony"
-			position = { x = 340 y = 360 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_centre_of_harmony_cost"
-			position = {x = 340 y = 410 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_casino"
-			position = { x = 29 y = 430 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_casino_cost"
-			position = {x = 29 y = 480 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_slave_pit"
-			position = { x = 81 y = 430 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_slave_pit_cost"
-			position = {x = 81 y = 480 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_brothel"
-			position = { x = 133 y = 430 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_brothel_cost"
-			position = {x = 133 y = 480 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_shooting_range"
-			position = { x = 185 y = 430 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_shooting_range_cost"
-			position = {x = 185 y = 480 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_chem_lab"
-			position = { x = 236 y = 430 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_chem_lab_cost"
-			position = {x = 236 y = 480 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_junkyard"
-			position = { x = 288 y = 430 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_junkyard_cost"
-			position = {x = 288 y = 480 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
-		}
-        
-        checkboxType = {
-			name = "build_fbs_science_centre"
-			position = { x = 340 y = 430 }
-			quadTextureSprite = "GFX_courthouse_muslimgfx"
-		}
-
-		instantTextBoxType={
-			name = "fbs_science_centre_cost"
-			position = {x = 340 y = 480 }
-			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 128
-			maxHeight = 18
-			text = "2000¤"
+node_manitoba={
+	location=613
+	inland=yes
+	outgoing={
+		name="node_north_dakota"
+	}
+	outgoing={
+		name="node_saskatchewan"
+	}
+	outgoing={
+		name="node_minnesota"
+	}
+	outgoing={
+		name="node_ontario"
+	}
+	members={
+		613 647 655 650 649 651 653 657 648 656 654 652 
+	}
+}
+node_newfoundland_and_labrador={
+	location=615
+	outgoing={
+		name="node_quebec"
+	}
+	outgoing={
+		name="node_nova_scotia"
+	}
+	members={
+		614 615 
+	}
+}
+node_quebec={
+	location=175
+	outgoing={
+		name="node_ontario"
+	}
+	outgoing={
+		name="node_the_commonwealth"
+	}
+	members={
+		175 177 182 183 184 185 186 187 188 616 617 618 619 620 
+        621 622 623 624 625 626 627 628
+	}
+}
+node_nova_scotia={
+	location=171
+	outgoing={
+		name="node_new_brunswick"
+	}
+	outgoing={
+		name="node_the_commonwealth"
+	}
+	members={
+		170 171 172 173 181 
+	}
+}
+node_new_brunswick={
+	location=176
+	outgoing={
+		name="node_ontario"
+	}
+	outgoing={
+		name="node_the_commonwealth"
+	}
+	members={
+		169 174 176 
+	}
+}
+node_ontario={
+	location=1197
+	inland=yes
+	outgoing={
+		name="node_minnesota"
+	}
+	outgoing={
+		name="node_michigan"
+	}
+	outgoing={
+		name="node_new_york"
+	}
+	members={
+		178 179 189 190 298 629 630 631 632 633 634 635 636 637 
+        638 639 640 641 642 643 644 645 646 910 987 988 989 1001 
+        1007 1118 1190 1191 1197 1198
+	}
+}
+node_saskatchewan={
+	location=612
+	inland=yes
+	outgoing={
+		name="node_alberta"
+	}
+	outgoing={
+		name="node_montana"
+	}
+	outgoing={
+		name="node_north_dakota"
+	}
+	members={
+        612 677 678 679 680 681 682 683 684 685 686 687 688 689 
+        690 691
+	}
+}
+node_north_dakota={
+	location=477
+	inland=yes
+	outgoing={
+		name="node_minnesota"
+	}
+	outgoing={
+		name="node_south_dakota"
+	}
+	outgoing={
+		name="node_montana"
+	}
+	members={
+		241 242 469 476 477 658 659 660 661 662 663 666 906
+	}
+}
+node_south_dakota={
+	location=471
+	inland=yes
+	outgoing={
+		name="node_wyoming"
+	}
+	outgoing={
+		name="node_nebraska"
+	}
+	outgoing={
+		name="node_iowa"
+	}
+	members={
+		419 420 470 471 472 473 665 903 1112
+	}
+}
+node_alberta={
+	location=611
+	inland=yes
+	outgoing={
+		name="node_british_columbia"
+	}
+	outgoing={
+		name="node_montana"
+	}
+	members={
+		611 692 693 694 695 696 697 698 699 700 701 702 703 
+	}
+}
+node_montana={
+	location=245
+	inland=yes
+	outgoing={
+		name="node_wyoming"
+	}
+	outgoing={
+		name="node_idaho"
+	}
+	members={
+		237 239 240 243 245 459 460 461 462 466 467 468 667 668 
+        669 670 671 672 673 674 675 676 
+        1137 1138 1351 1352 1353 1354
+	}
+}
+node_minnesota={
+	location=1142
+	inland=yes
+	outgoing={
+		name="node_wisconsin"
+	}
+	outgoing={
+		name="node_iowa"
+	}
+	members={
+        474 475 664 904 908 1142 1147
+	}
+}
+node_michigan={
+	location=1151
+	inland=yes
+	outgoing={
+		name="node_indiana"
+	}
+	outgoing={
+		name="node_wisconsin"
+	}
+	outgoing={
+		name="node_ohio"
+	}
+	members={
+        180 485 911 944 945 1150 1151
+	}
+}
+node_wisconsin={
+	location=487
+	inland=yes
+	outgoing={
+		name="node_illinois"
+	}
+	members={
+		478 487 488 912 913 914 1148 1396
+	}
+}
+node_west_virginia={
+	location=948
+	inland=yes
+	outgoing={
+		name="node_kentucky"
+	}
+	outgoing={
+		name="node_ohio"
+	}
+	outgoing={
+		name="node_pennsylvania"
+	}
+	members={
+		233 271 289 296 371 372 373 374 375 376 378 948 951 
+        1173 1176 1180
+	}
+}
+node_ohio={
+	location=946
+	inland=yes
+	outgoing={
+		name="node_indiana"
+	}
+	outgoing={
+		name="node_pennsylvania"
+	}
+	members={
+		10 29 53 70 76 77 89 295 297 946 1154
+	}
+}
+node_british_columbia={
+	location=231
+	outgoing={
+		name="node_washington"
+	}
+	outgoing={
+		name="node_idaho"
+	}
+	members={
+		230 231 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723
+	}
+}
+node_washington={
+	location=1434
+	outgoing={
+		name="node_oregon"
+	}
+	outgoing={
+		name="node_idaho"
+	}
+	members={
+		229 274 275 276 277 724 725 873 874 
+        1126 1434 1128 1433 1314 1315 1316 1317 1318 1319 1321 
+        1322 1323 1324 1325 1326 1322 1331 1332 1333 1334 1336
+	}
+}
+node_idaho={
+	location=1347
+	inland=yes
+	outgoing={
+		name="node_oregon"
+	}
+	outgoing={
+		name="node_utah"
+	}
+	outgoing={
+		name="node_nevada"
+	}
+	members={
+		108 131 249 250 
+        1119 1129 1253 1313 1335 1337 1338 1339 1340 1341 1342 
+        1343 1344 1345 1346 1347 1350 1355 1356 1360 1361 1362 
+        1363 1365 1366 1367 1368 1369 1429 1430
+	}
+}
+node_wyoming={
+	location=1250
+	inland=yes
+	outgoing={
+		name="node_utah"
+	}
+	outgoing={
+		name="node_colorado"
+	}
+	members={
+		418 421 455 458 463 464 465 
+        1130 1139 1140 1250 1374 1375 1376
+	}
+}
+node_nebraska={
+	location=898
+	inland=yes
+	outgoing={
+		name="node_iowa"
+	}
+	outgoing={
+		name="node_kansas"
+	}
+	outgoing={
+		name="node_colorado"
+	}
+	members={
+		436 438 447 448 452 456 457 490 898 1113 1141 1193 
+	}
+}
+node_kansas={
+	location=446
+	inland=yes
+	outgoing={
+		name="node_colorado"
+	}
+	outgoing={
+		name="node_oklahoma"
+	}
+	outgoing={
+		name="node_missouri"
+	}
+	members={
+		 141 142 147 164 165 325 437 440 446 446 772 773 774 890 
+         1145 1199 1232 1246 1249 1393 1397 1398
+	}
+}
+node_iowa={
+	location=449
+	inland=yes
+	outgoing={
+		name="node_illinois"
+	}
+	outgoing={
+		name="node_missouri"
+	}
+	members={
+        145 449 450 453 454 902 1143 1400 
+	}
+}
+node_colorado={
+	location=1251
+	inland=yes
+	outgoing={
+		name="node_new_mexico"
+	}
+	outgoing={
+		name="node_texas"
+	}
+	members={
+		54 55 56 57 133 134 135 136 137 138 139 331 333 337 348 349 416 417 434 435 570 571 875 878 880 889 
+        1251 1257 1258 1381 1382 1384 1406 1431
+	}
+}
+node_oklahoma={
+	location=143
+	inland=yes
+	outgoing={
+		name="node_new_mexico"
+	}
+	outgoing={
+		name="node_texas"
+	}
+	outgoing={
+		name="node_arkansas"
+	}
+	members={
+		140 143 314 315 327 828 829 830 831 832 834 835 836 837 838 839 840 892
+	}
+}
+node_caribbean={
+	location=216
+	outgoing={
+		name="node_florida"
+	}
+	members={
+		227 226 225 224 222 223 221 220 219 218 217 216 215 213 214 
+	}
+}
+node_florida={
+	location=928
+	outgoing={
+		name="node_alabama"
+	}
+	outgoing={
+		name="node_georgia"
+	}
+	members={
+		 592 593 594 595 596 923 926 927 928 
+         1162 1163 1164
+	}
+}
+node_georgia={
+	location=580
+	outgoing={
+		name="node_south_carolina"
+	}
+	outgoing={
+		name="node_tennessee"
+	}
+	members={
+		578 579 580 581 582 583 584 585 588 929 930 931 
+        1165 1166 1167 1168 1169
+	}
+}
+node_alabama={
+	location=589
+	outgoing={
+		name="node_tennessee"
+	}
+	outgoing={
+		name="node_mississippi"
+	}
+	members={
+		 586 587 589 590 591 788 789 790 791 792 922 924 925 
+         1160 1161
+	}
+}
+node_mississippi={
+	location=1158
+	outgoing={
+		name="node_tennessee"
+	}
+	outgoing={
+		name="node_arkansas"
+	}
+	outgoing={
+		name="node_louisiana"
+	}
+	members={
+        707 793 794 795 796 797 798 799 800 801 802 803 804 919 920 
+        1158 1157 1159
+	}
+}
+node_tennessee={
+	location=934
+	inland=yes
+	outgoing={
+		name="node_kentucky"
+	}
+	outgoing={
+		name="node_arkansas"
+	}
+	outgoing={
+		name="node_missouri"
+	}
+	members={
+		775 776 777 778 779 780 781 782 783 784 785 785 786 787 918 934 935 
+        1156
+	}
+}
+node_kentucky={
+	location=1155
+	inland=yes
+	outgoing={
+		name="node_indiana"
+	}
+	outgoing={
+		name="node_illinois"
+	}
+	outgoing={
+		name="node_missouri"
+	}
+	members={
+		332 339 344 345 346 365 366 367 368 369 370 940 
+        1144 1155
+	}
+}
+node_missouri={
+	location=1244
+	inland=yes
+	outgoing={
+		name="node_illinois"
+	}
+	outgoing={
+		name="node_arkansas"
+	}
+	members={
+		144 146 324 326 441 443 444 445 753 754 755 756 757 758 759 760 761 762 770 771 917 1244 
+        1239 1243 1245 1247 1248 1383 1399
+	}
+}
+node_south_carolina={
+	location=573
+	outgoing={
+		name="node_north_carolina"
+	}
+	members={
+		573 574 577 932 933 
+        1170 1171
+	}
+}
+node_north_carolina={
+	location=598
+	outgoing={
+		name="node_virginia"
+	}
+	members={
+        575 576 597 598 599 600 601 602 604 937 938 949 
+        1172
+	}
+}
+node_indiana={
+	location=943
+	inland=yes
+	outgoing={
+		name="node_illinois"
+	}
+	members={
+		66 95 96 112 114 116 149 232 234 235 238 246 269 270 942
+        943 
+        1152 1153
+	}
+}
+node_arkansas={
+	location=895
+	inland=yes
+	outgoing={
+		name="node_texas"
+	}
+	outgoing={
+		name="node_louisiana"
+	}
+	members={
+        323 819 820 821 822 823 824 825 826 827 894 895 897
+	}
+}
+node_louisiana={
+	location=921
+	outgoing={
+		name="node_texas"
+	}
+	members={
+        805 806 807 808 809 810 811 812 813 814 815 816 817 818 893 921 
+        1117 1146
+	}
+}
+node_texas={
+	location=328
+	outgoing={
+		name="node_mexico"
+	}
+	outgoing={
+		name="node_new_mexico"
+	}
+	members={
+		26 27 31 33 34 35 36 37 148 191 310 311 312 313 316 317 318 319 320 321 328 329 355 489 508 509 524 527 841 842 843 844 846 847 848 849 850 851 852 853 854 855 856 857 858 859 860 861 862 863 864 865 867 869 870 876 881 883 884 885 886 887 888 891 896 899 900 901 907 909 915 936 939 941 959 961 963 971 972 974 975 976 977 978 979 
+        1135 1136 1195 1196
+	}
+}
+node_utah={
+	location=1252
+	inland=yes
+    color = {
+        149 167 196
+    }
+	outgoing={
+		name="node_nevada"
+	}
+	outgoing={
+		name="node_arizona"
+	}
+	members={
+		51 52 58 59 60 99 100 101 102 104 105 106 107 111 113 132 330 341 342 343 414 423 560 568 569 
+        1214 1252 1254 1256 1286 1357 1358 1359 1364 1370 1371 1372 1373 1385 1386 1387 1388 1389 1390 1391 1392 1432
+	}
+}
+node_new_mexico={
+	location=335
+	inland=yes
+	outgoing={
+		name="node_arizona"
+	}
+	outgoing={
+		name="node_mexico"
+	}
+	members={
+        25 25 334 335 336 350 351 357 358 359 360 361 362 363 364 364 498 507 882 982 983 
+        1134
+	}
+}
+node_mexico={
+	location=203
+	outgoing={
+		name="node_baja_california"
+	}
+	outgoing={
+		name="node_arizona"
+	}
+	members={
+		21 22 23 24 28 30 32 192 193 195 196 197 198 199 200 201 
+        202 203 204 205 206 207 208 209 210 211 212 322 499 500 
+        501 502 503 504 505 506 510 511 512 513 514 515 517 518 
+        519 520 521 522 523 525 526 528 529 530 531 532 533 534 
+        535 536 537 980 981 984 985
+	}
+}
+node_baja_california={
+	location=83
+	outgoing={
+		name="node_california"
+	}
+	outgoing={
+		name="node_arizona"
+	}
+	members={
+        78 79 80 81 82 83 166 167 866 1192
+	}
+}
+node_arizona={
+	location=130
+	outgoing={
+		name="node_nevada"
+	}
+	outgoing={
+		name="node_california"
+	}
+	members={
+		87 88 124 125 126 128 129 130 258 259 352 353 354 356 
+        415 491 492 493 494 495 496 497 877 879 
+        1435 1133 1296 1377 1378 1379 1380
+	}
+}
+node_nevada={
+	location=1200
+	inland=yes
+	outgoing={
+		name="node_california"
+	}
+	members={
+        61 62 71 84 90 91 92 93 94 97 98 103 109 110 115 117 118 
+        119 120 121 122 123 127 251 252 253 254 255 256 257 260 
+        261 262 263 264 265 266 267 268 272 273 284 285 309 338 
+        340 347 412 413 426 427 428 429 430 431 432 433 556 557 
+        566 567 1019 1020 1044 1045 1057 1062 1063 1064 1065 
+        1066 1067 1068 1069 1070 1074 1075 1076 1077 1078 1079 
+        1080 1081 1082 1083 1084 1085 1086 1087 1088 1089 1090 
+        1091 1092 1093 1094 1095 1096 1097 1098 1099 1100 
+        1131 1200 1201 1209 1210 1211 1212 1213 1217 1218 1219 
+        1220 1223 1227 1228 1255 1281 1282 1349 1401 1407 1410 
+        1425 1426 1427 1428
+	}
+}
+node_oregon={
+	location=1329
+	outgoing={
+		name="node_california"
+	}
+	members={
+		247 278 279 872 1035 1036 1111 
+        1125 1309 1310 1311 1312 1320 1328 1329 1330 1348
+	}
+}
+node_new_jersey={
+	location=299
+	outgoing={
+		name="node_new_york"
+	}
+	outgoing={
+		name="node_the_capital_wasteland"
+	}
+	members={
+        299 726 727 728 729 730 731 962 1284
+	}
+}
+node_new_york={
+	location=965
+	outgoing={
+		name="node_pennsylvania"
+	}
+	outgoing={
+		name="node_the_commonwealth"
+	}
+	members={
+		163 732 733 734 735 736 737 738 739 740 741 742 743 744 745 746 747 748 749 750 751 752 958 960 964 965 
+        1183 1194 1283
+	}
+}
+node_pennsylvania={
+	location=283
+	outgoing={
+		name="node_the_capital_wasteland"
+	}
+	members={
+        281 282 283 290 291 292 293 294 300 301 305 306 307 308 379 380 381 386 389 393 394 402 404 439 451 516 947 954 955 956 957 
+        1121 1181 1182
+	}
+}
+node_virginia={
+	location=608
+	outgoing={
+		name="node_the_capital_wasteland"
+		path={
+			572 2985 
+		}
+		control={
+			3881.000000 983.000000 
 		}
 	}
-	
-    #-------------------------------------------
-    # BUILDINGS END
-    #-------------------------------------------
+	members={
+		950 608 952 603 2549 606 607 609 605 610 160 2550 286 287 161 288 1177 1115 
+	}
+}
+node_bermuda={
+	location=228
+	outgoing={
+		name="node_the_commonwealth"
+		path={
+			1572 1570 1499 968 539 
+		}
+		control={
+			4286.000000 1088.000000 
+		}
+	}
+	members={
+		228 
+	}
+}
+node_the_commonwealth={
+	location=539
+	members={
+        168 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 833 845 966 967 968 969 970 986 990 991 992 993 994 995 
+        1114 1116 1184 1185 1186 1187 1188 1189 1261 1262 1263 1264 1265 1266 1267 1268 1269 1270 1271 1272 1273 1274 1275 1276 1277 1278 1288 1289 1290 1291 1292 1293 1294 1295 1297 1298 1299 1301
+	}
+	end=yes
+}
+node_the_capital_wasteland={
+	location=1229
+	members={
+        4 5 13 14 15 16 17 18 19 20 38 39 40 41 42 43 44 46 47 48 49 50 156 157 158 159 162 194 248 280 302 303 304 953 
+        1178 1179 1229 1230 1231 1260 1280 1285 1300 1408 1409 1412 1414 1417 1418 1419
+	}
+	end=yes
+}
+node_illinois={
+	location=1259
+	inland=yes
+	members={
+        150 151 152 153 154 155 442 479 480 481 482 483 484 486 763 764 765 766 767 768 769 905 
+        1149 1233 1234 1235 1236 1237 1238 1240 1241 1242 1259 1394 1395
+	}
+	end=yes
+}
+node_california={
+	location=1202
+	members={
+        1 2 3 45 63 64 65 67 68 69 72 73 74 75 85 86 236 244 377 
+        382 383 384 385 387 388 390 391 392 395 396 397 398 399 400 401 403 405 406 407 408 409 410 411 422 424 425 555 558 559 561 562 563 564 565 868 871 916 973 996 997 998 999 1000 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1021 1022 1023 1024 1025 1026 1027 1028 1029 1030 1031 1032 1033 1034 1037 1038 1039 1040 1041 1042 1043 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1058 1059 1060 1061 1071 1072 1073 
+        1120 1122 1123 1124 1202 1203 1204 1205 1206 1207 1208 1215 1216 1221 1222 1224 1225 1226 1279 1287 1302 1303 1304 1305 1306 1307 1308 1402 1403 1404 1405 1411 1413 1415 1416 1420 1421 1422 1423 1424
+	}
+	end=yes
+}
+
+
+    

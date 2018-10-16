@@ -106,9 +106,9 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = cyberdog_bmt 
-		owns_core_province = 4013
+		owns_core_province = 1388
 		NOT = { 
-		    4013 = { 
+		    1388 = { 
 			    has_province_modifier = cyberdog_facility
 			}
 		}
@@ -123,7 +123,7 @@ country_event = {
 	option = {	
 		name = big_mountain.3.option.a	
 
-		4013 = {
+		1388 = {
 		    add_base_manpower = 3 
 			add_permanent_province_modifier = {
     			name =  cyberdog_facility
@@ -144,10 +144,10 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = loboto_bmt
-		owns_core_province = 4014
+		owns_core_province = 1389
 		has_dlc = "Rights of Man"
 		NOT = { 
-		    4014 = { 
+		    1389 = { 
 			    has_province_modifier = cuckoo_nest 
 			}
 		}
@@ -170,7 +170,7 @@ country_event = {
 	
 	option = {	
 		name = big_mountain.4.option.b	
-		4014 = {
+		1389 = {
 		    add_base_manpower = 3 
 			add_base_production = 1
 			add_base_tax = 1
@@ -187,7 +187,7 @@ country_event = {
 
 	option = {	
 		name = big_mountain.4.option.c
-		4014 = {
+		1389 = {
 		    add_base_manpower = 3 
 			add_base_production = 3
 			add_base_tax = 3
@@ -197,7 +197,7 @@ country_event = {
     		    duration = -1  
 		    }
 		}
-		4014 = {
+		1389 = {
 		    add_base_manpower = 1
 			add_base_production = 1
 			add_base_tax = 1
@@ -283,7 +283,7 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = hvy_construction_bmt
-		owns_core_province = 4012
+		owns_core_province = 1387
 		NOT = { has_global_flag = hvy_hex_bld }
 	}
 
@@ -299,7 +299,7 @@ country_event = {
     
 	option = {	
 		name = big_mountain.6.option.a	
-		4012 = {
+		1387 = {
 		    add_permanent_province_modifier = {
     		    name =  exper_dev_one
     		    duration = -1  
@@ -313,7 +313,7 @@ country_event = {
 	
 	option = {	
 		name = big_mountain.6.option.b	
-		4012 = {
+		1387 = {
 		    add_base_manpower = 1 
 			add_base_production = 1
 			add_base_tax = 1
@@ -336,14 +336,14 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = hvy_construction_bmt
-		owns_core_province = 4012
-		4012 = {
+		owns_core_province = 1387
+		1387 = {
 		    has_province_modifier = exper_dev_one
 		}
 	}
 
     immediate = { 
-	    4012 = {
+	    1387 = {
 	        remove_province_modifier = exper_dev_one 
 		}
         hidden_effect = {
@@ -357,7 +357,7 @@ country_event = {
 	
 	option = {	
 		name = big_mountain.7.option.a	
-		4012 = {
+		1387 = {
 		    add_permanent_province_modifier = {
     		    name =  hex_result
     		    duration = -1  

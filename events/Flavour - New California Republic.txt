@@ -150,10 +150,10 @@ country_event = {
         }
 		if = {
 		    limit = {
-			    owns = 4028 
+			    owns = 1403 
 			}
 			set_country_flag = bos_war_sab_great_wan
-			4028 = {
+			1403 = {
 			    add_base_production = -5
 				change_trade_goods = radioactive_waste 
 			}
@@ -175,10 +175,10 @@ country_event = {
 		add_years_of_income = -0.25
 		if = {
 		    limit = {
-			    owns = 4028
+			    owns = 1403
 			}
 			set_country_flag = bos_war_sab_great_wan
-			4028 = {
+			1403 = {
 			    add_base_production = -5
 				change_trade_goods = radioactive_waste 
 			}
@@ -195,7 +195,7 @@ country_event = {
     is_triggered_only = yes
     
     trigger = {
-        owns_core_province = 4028
+        owns_core_province = 1403
     }
     
     immediate = {
@@ -206,7 +206,7 @@ country_event = {
     
 	option = {
 		name = ncr.5.option.a
-		4028 = {
+		1403 = {
 			add_base_production = 5
 			change_trade_goods = gold
 		}

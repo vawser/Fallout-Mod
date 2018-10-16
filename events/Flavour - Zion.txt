@@ -518,9 +518,9 @@ country_event = {
 	
 	trigger = {
 	    AND = {
-			owns = 3011
-			owns = 2969
-			owns = 4050
+			owns = 1254
+			owns = 1214
+			owns = 1425
 			owns = 111
 			OR = {
 				tag = DED
@@ -545,7 +545,7 @@ country_event = {
 		name = zion.15.option.a	
 		add_horde_unity = 10
 		add_stability = 1
-		4050 = {
+		1425 = {
 		    add_base_production = 1
 		}
 	}
@@ -593,8 +593,8 @@ country_event = {
 	fire_only_once = yes 
 	
 	trigger = {
-	    owns = 2969
-		2969 = {
+	    owns = 1214
+		1214 = {
 			trade_goods = weaponry
 		}
 		has_country_flag = non_combat_ded
@@ -613,14 +613,14 @@ country_event = {
     
 	option = {
 		name = zion.17.option.a
-		2969 = {
+		1214 = {
 			change_trade_goods = food
 		}
 	}
 
 	option = {
 		name = zion.17.option.b
-		2969 = {
+		1214 = {
 			change_trade_goods = fish
 		}
 	}
@@ -640,8 +640,8 @@ country_event = {
 	fire_only_once = yes 
 	
 	trigger = {
-	    owns = 2969
-		2969 = {
+	    owns = 1214
+		1214 = {
 			trade_goods = fish
 		}
 		tag = DED
@@ -659,7 +659,7 @@ country_event = {
     
 	option = {
 		name = zion.18.option.a
-		2969 = {
+		1214 = {
 			add_base_production = 2
 		}
 	}	
