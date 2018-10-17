@@ -116,6 +116,213 @@ policy_conscription = {
     }
     
     #-----------------------
+    # Volunteer
+    #-----------------------
+    interaction = {
+        name = "recruit_commandant"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_volunteer_conscription = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_commandant
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "recruit_spec_ops"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_volunteer_conscription = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_spec_ops
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "emphasis_discipline"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_volunteer_conscription = yes
+        }
+        trigger = {        
+            mil_power = 100
+        }
+        effect = {
+            add_mil_power = -100
+            
+            add_army_tradition = 25
+            add_army_professionalism = 10
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Limited
+    #-----------------------
+    interaction = {
+        name = "recruit_recruiter"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_limited_conscription = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_recruiter
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "recruit_drill_sergeant"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_limited_conscription = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_drill_sergeant
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "recruit_general"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_limited_conscription = yes
+        }
+        trigger = {        
+            mil_power = 100
+        }
+        effect = {
+            add_mil_power = -100
+            
+            create_general = {
+                tradition = 100
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Full
+    #-----------------------
+    interaction = {
+        name = "recruit_forager"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_full_conscription = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_forager
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "recruit_sapper"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_full_conscription = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_sapper
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "scrap_the_barrel"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_full_conscription = yes
+        }
+        trigger = {        
+            mil_power = 100
+        }
+        effect = {
+            add_mil_power = -100
+            
+            add_yearly_manpower = 1
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
     # Ignorable
     #-----------------------
 	keep_on_conquest = no

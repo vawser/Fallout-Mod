@@ -29,19 +29,19 @@ policy_innovation = {
 	country_modifier_happy = {
 		global_institution_spread = 0.5
         embracement_cost = 0.5
-        monthly_support_heir_gain = 2
+        imperial_mandate = 2
 	}
     # Sponsored
 	country_modifier_neutral = {
 		global_institution_spread = 0.1
         embracement_cost = -0.1
-        monthly_support_heir_gain = 6
+        imperial_mandate = 6
 	}	
     # State
 	country_modifier_angry = {
         global_institution_spread = -0.5
         embracement_cost = -0.5
-        monthly_support_heir_gain = 10
+        imperial_mandate = 10
 	}
 	
     #-----------------------
@@ -116,19 +116,23 @@ policy_innovation = {
             factor = 0
         }
     }
+    
+    #-----------------------
+    # Research
+    #-----------------------
     interaction = {
         name = "invest_in_research"
         icon = 1
-        years_between_use = 1
+        years_between_use = 5
         
         potential = { 
             always = yes
         }
         trigger = {        
-            treasury = 100
+            treasury = 250
         }
         effect = {
-            add_treasury = -100
+            add_treasury = -250
             
             add_research_5 = yes
         }
@@ -137,23 +141,81 @@ policy_innovation = {
         }
     }
     interaction = {
-        name = "invest_heavily_in_research"
+        name = "focus_administrative_research"
         icon = 1
-        years_between_use = 1
+        years_between_use = 5
         
         potential = { 
             always = yes
         }
         trigger = {        
-            treasury = 1000
+            adm_power = 100
         }
         effect = {
-            add_treasury = -1000
+            add_adm_power = -100
             
-            add_research_100 = yes
+            add_research_5 = yes
         }
         ai_will_do = {
-            factor = 0
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { adm_power = 300 }
+            }
+        }
+    }
+    interaction = {
+        name = "focus_diplomatic_research"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            always = yes
+        }
+        trigger = {        
+            dip_power = 100
+        }
+        effect = {
+            add_dip_power = -100
+            
+            add_research_5 = yes
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { dip_power = 300 }
+            }
+        }
+    }
+    interaction = {
+        name = "focus_military_research"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            always = yes
+        }
+        trigger = {        
+            mil_power = 100
+        }
+        effect = {
+            add_mil_power = -100
+            
+            add_research_5 = yes
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { mil_power = 300 }
+            }
         }
     }
     

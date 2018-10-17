@@ -114,14 +114,228 @@ policy_law = {
     #-----------------------
     # Democratic
     #-----------------------
+    interaction = {
+        name = "recruit_politician"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_democratic_law = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_politician
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "recruit_civil_servant"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_democratic_law = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_civil_servant
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "ensure_due_process"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_democratic_law = yes
+        }
+        trigger = {        
+            adm_power = 100
+        }
+        effect = {
+            add_adm_power = -100
+            
+            add_legitimacy = 15
+            add_republican_tradition = 15
+            add_devotion = 15
+            add_horde_unity = 15
+            add_meritocracy = 15
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { adm_power = 200 }
+            }
+        }
+    }
     
     #-----------------------
     # Oligarchic
     #-----------------------
+    interaction = {
+        name = "recruit_orator"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_oligarchic_law = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_orator
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "recruit_spy"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_oligarchic_law = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_spy
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "pander_to_the_barons"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_oligarchic_law = yes
+        }
+        trigger = {        
+            dip_power = 100
+        }
+        effect = {
+            add_dip_power = -100
+            
+            change_government_reform_progress = 50
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { dip_power = 200 }
+            }
+        }
+    }
     
     #-----------------------
     # Autocratic
     #-----------------------
+    interaction = {
+        name = "recruit_enforcer"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_autocratic_law = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_enforcer
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "recruit_police_officer"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_autocratic_law = yes
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_scaled_estate_advisor = {
+                ADVISOR = fm_police_officer
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "establish_absolute_rule"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_autocratic_law = yes
+        }
+        trigger = {        
+            mil_power = 100
+        }
+        effect = {
+            add_mil_power = -100
+            
+            add_absolutism = 5
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { dip_power = 200 }
+            }
+        }
+    }
     
     #-----------------------
     # Ignorable

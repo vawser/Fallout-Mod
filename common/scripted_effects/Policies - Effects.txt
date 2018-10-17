@@ -459,7 +459,7 @@ set_scavenging_forbidden = {
 #-----------------------------------
 # Research
 #-----------------------------------
-# Twice a year
+# Every Two Years
 research_update = {
     hidden_effect = {
         if = {
@@ -467,20 +467,20 @@ research_update = {
                 has_individual_innovation = yes
             }
             add_research_1 = yes
+            add_research_1 = yes
         }
         if = {
             limit = {
                 has_sponsored_innovation = yes
             }
-            add_research_1 = yes
-            add_research_1 = yes
+            add_research_5 = yes
             add_research_1 = yes
         }
         if = {
             limit = {
                 has_state_innovation = yes
             }
-            add_research_5 = yes
+            add_research_10 = yes
         }
     }
 }

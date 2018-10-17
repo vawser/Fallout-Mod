@@ -100,6 +100,7 @@ policy_justice = {
                 has_imprisonment_punishment = yes
                 has_execution_punishment = yes
             }
+            NOT = { has_slavery_forbidden = yes }
         }
         trigger = {        
             stability = 3           
@@ -111,6 +112,105 @@ policy_justice = {
         }
         ai_will_do = {
             factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Imprisonment
+    #-----------------------
+    interaction = {
+        name = "imprison_undesirables"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_imprisonment_punishment = yes
+        }
+        trigger = {        
+            mil_power = 100      
+        }
+        effect = {
+            add_mil_power = -100
+            
+            add_country_modifier = {
+                name = imprisoning_undesirables
+                duration = 3650
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { mil_power = 300 }
+            }
+        }
+    }
+    
+    #-----------------------
+    # Execution
+    #-----------------------
+    interaction = {
+        name = "execute_undesirables"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_execution_punishment = yes
+        }
+        trigger = {        
+            mil_power = 100      
+        }
+        effect = {
+            add_mil_power = -100
+            
+            add_country_modifier = {
+                name = executing_undesirables
+                duration = 3650
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { mil_power = 300 }
+            }
+        }
+    }
+    
+    #-----------------------
+    # Enslavement
+    #-----------------------
+    interaction = {
+        name = "enslave_undesirables"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            has_slavery_punishment = yes
+        }
+        trigger = {        
+            mil_power = 100      
+        }
+        effect = {
+            add_mil_power = -100
+            
+            add_country_modifier = {
+                name = enslaving_undesirables
+                duration = 3650
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { mil_power = 300 }
+            }
         }
     }
     
