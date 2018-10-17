@@ -1,0 +1,135 @@
+policy_firearms = {
+	icon = 9
+	color = { 94 23 164 }
+	
+    trigger = {	
+        OR = {
+            has_firearms_allowed = yes
+            has_firearms_licensed = yes
+            has_firearms_forbidden = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = firearms_allowed
+		trigger = { has_firearms_allowed = yes } 
+	}
+    custom_name = {
+		desc = firearms_licensed
+		trigger = { has_firearms_licensed = yes } 
+	}
+    custom_name = {
+		desc = firearms_forbidden
+		trigger = { has_firearms_forbidden = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Allowed
+	country_modifier_happy = {
+		infantry_power = 0.05
+        harsh_treatment_cost = 1.0
+	}
+    # Licensed
+	country_modifier_neutral = {
+        harsh_treatment_cost = -0.1
+	}	
+    # Forbidden
+	country_modifier_angry = {
+        harsh_treatment_cost = -0.5
+        global_unrest = 1
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_firearms_allowed"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_firearms_licensed = yes
+                has_firearms_forbidden = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_firearms_allowed = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_firearms_licensed"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_firearms_allowed = yes
+                has_firearms_forbidden = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_firearms_licensed = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_firearms_forbidden"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_firearms_allowed = yes
+                has_firearms_licensed = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_firearms_forbidden = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}

@@ -1,0 +1,133 @@
+policy_law = {
+	icon = 2
+	color = { 50 100 70 }
+	
+    trigger = {	
+        OR = {
+            has_democratic_law = yes
+            has_oligarchic_law = yes
+            has_autocratic_law = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = democratic_law
+		trigger = { has_democratic_law = yes } 
+	}
+    custom_name = {
+		desc = oligarchic_law
+		trigger = { has_oligarchic_law = yes } 
+	}
+    custom_name = {
+		desc = autocratic_law
+		trigger = { has_autocratic_law = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Democratic Law
+	country_modifier_happy = {
+		diplomatic_reputation = 2
+	}
+    # Oligarchic Law
+	country_modifier_neutral = {
+		advisor_cost = -0.15
+	}	
+    # Autocratic Law
+	country_modifier_angry = {
+		administrative_efficiency = 0.1
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_democratic_law"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_oligarchic_law = yes
+                has_autocratic_law = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_democratic_law = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_oligarchic_law"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_democratic_law = yes
+                has_autocratic_law = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_oligarchic_law = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_autocratic_law"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_oligarchic_law = yes
+                has_democratic_law = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_autocratic_law = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}

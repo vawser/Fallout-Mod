@@ -1,0 +1,137 @@
+policy_gambling = {
+	icon = 7
+	color = { 81 203 123 }
+	
+    trigger = {	
+        OR = {
+            has_gambling_allowed = yes
+            has_gambling_licensed = yes
+            has_gambling_forbidden = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = gambling_allowed
+		trigger = { has_gambling_allowed = yes } 
+	}
+    custom_name = {
+		desc = gambling_licensed
+		trigger = { has_gambling_licensed = yes } 
+	}
+    custom_name = {
+		desc = gambling_forbidden
+		trigger = { has_gambling_forbidden = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Allowed
+	country_modifier_happy = {
+		global_tax_modifier = 0.15
+        production_efficiency = -0.2
+	}
+    # Licensed
+	country_modifier_neutral = {
+        global_tax_modifier = 0.1
+        production_efficiency = -0.1
+	}	
+    # Forbidden
+	country_modifier_angry = {
+        global_unrest = -0.5
+        production_efficiency = 0.1
+        prestige = 0.1
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_gambling_allowed"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_gambling_licensed = yes
+                has_gambling_forbidden = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_gambling_allowed = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_gambling_licensed"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_gambling_allowed = yes
+                has_gambling_forbidden = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_gambling_licensed = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_gambling_forbidden"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_gambling_allowed = yes
+                has_gambling_licensed = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_gambling_forbidden = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}

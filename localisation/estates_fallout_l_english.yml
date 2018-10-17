@@ -1,332 +1,253 @@
 ﻿l_english:
- #-------------------------------------------------------------------
- # Estates                                 
- #-------------------------------------------------------------------
- estate_bureaucrats: "Bureaucrats"
- estate_bureaucrats_desc: "The bureaucrats that help assist the leader of the state. They tend to be aloof and uncaring of the lower classes, preferring to work towards more abstract goals."
- estate_settlers: "Citizens"
- estate_settlers_desc: "The lowest class, citizens represent the farmers, workers and settlers under our control. They want stability above all else."
- estate_officers: "Officers"
- estate_officers_desc: "The officers of our military, both land and sea. They wish to see expansion in military power and seek their own fortunes over pretty much everything else."
- estate_caravanners: "Caravanners"
- estate_caravanners_desc: "Although not the lowest class, Caravanners are widely regarded as minor players in the game of politics. When they gain leverage however, they seek to fill their pockets with valuables."
- estate_scientists: "Scientists"
- estate_scientists_desc: "A valuable member of society, a scientist tends to seek what is best for society. However, often the thirst for knowledge can distort such desires, and create ruthless men and women whom seek knowledge above all else."
- estate_slavers: "Slavers"
- estate_slavers_desc: "A demonized member of society, the slaver purchases and sells slaves. What a slaver lacks in morality, he makes up in greed."
+ POLICIES: "National Policies"
+ 
+ #------------------------------------------
+ # Economy
+ #------------------------------------------
+ policy_economy: "Economy"
+ policy_economy_desc: "How our nation handles the economy."
+ 
+ traditional_economy: "Traditional Economy"
+ command_economy: "Command Economy"
+ market_economy: "Market Economy"
+ 
+ SET_TRADITIONAL_ECONOMY: "Set §YEconomy Policy§! to §YTraditional Economy§!."
+ SET_COMMAND_ECONOMY: "Set §YEconomy Policy§! to §YCommand Economy§!."
+ SET_MARKET_ECONOMY: "Set §YEconomy Policy§! to §YMarket Economy§!."
+ SET_MIXED_ECONOMY: "Set §YEconomy Policy§! to §YMixed Economy§!."
+ 
+ ALREADY_TRADITIONAL_ECONOMY: "Our §YEconomic Policy§! is already set to §YTraditional Economy§!."
+ ALREADY_COMMAND_ECONOMY: "Our §YEconomic Policy§! is already set to §YCommand Economy§!."
+ ALREADY_MARKET_ECONOMY: "Our §YEconomic Policy§! is already set to §YMarket Economy§!."
+ ALREADY_MIXED_ECONOMY: "Our §YEconomic Policy§! is already set to §YMixed Economy§!."
+
+ switch_to_traditional_economy: "Switch to Traditional Economy"
+ switch_to_command_economy: "Switch to Command Economy"
+ switch_to_market_economy: "Switch to Market Economy"
+ 
+ enforce_taxation: "Enforce Taxation"
+ print_money: "Print Money"
+ accept_kickbacks: "Accept Kickbacks"
+ 
+ #------------------------------------------
+ # Law
+ #------------------------------------------
+ policy_law: "Law"
+ policy_law_desc: "How our nation handles law and order."
+ 
+ democratic_law: "Democratic Law"
+ oligarchic_law: "Oligarchic Law"
+ autocratic_law: "Autocratic Law"
+ 
+ SET_DEMOCRATIC_LAW: "Set §YLaw Policy§! to §YDemocratic Law§!."
+ SET_OLIGARCHIC_LAW: "Set §YLaw Policy§! to §YOligarchic Law§!."
+ SET_AUTOCRATIC_LAW: "Set §YLaw Policy§! to §YAutocratic Law§!."
+ 
+ ALREADY_DEMOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YDemocratic Law§!."
+ ALREADY_OLIGARCHIC_LAW: "Our §YLaw Policy§! is already set to §YOligarchic Law§!."
+ ALREADY_AUTOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YAutocratic Law§!."
+ 
+ switch_to_democratic_law: "Switch to Democratic Law"
+ switch_to_oligarchic_law: "Switch to Oligarchic Law"
+ switch_to_autocratic_law: "Switch to Autocratic Law"
+ 
+ #------------------------------------------
+ # Justice
+ #------------------------------------------
+ policy_justice: "Justice"
+ policy_justice_desc: "How our nation handles common criminals."
+
+ imprisonment_punishment: "Imprisonment"
+ execution_punishment: "Execution"
+ slavery_punishment: "Enslavement"
+ 
+ SET_IMPRISONMENT_PUNISHMENT: "Set §YJustice Policy§! to §YImprisonment§!."
+ SET_EXECUTION_PUNISHMENT: "Set §YJustice Policy§! to §YExecution§!."
+ SET_SLAVERY_PUNISHMENT: "Set §YJustice Policy§! to §YEnslavement§!."
+
+ ALREADY_IMPRISONMENT_PUNISHMENT: "Our §YJustice Policy§! is already set to §YImprisonment§!."
+ ALREADY_EXECUTION_PUNISHMENT: "Our §YJustice Policy§! is already set to §YExecution§!."
+ ALREADY_SLAVERY_PUNISHMENT: "Our §YJustice Policy§! is already set to §YEnslavement§!."
+ 
+ switch_to_imprisonment: "Switch to Imprisonment"
+ switch_to_execution: "Switch to Execution"
+ switch_to_enslavement: "Switch to Enslavement"
+ 
+ #------------------------------------------
+ # Innovation
+ #------------------------------------------
+ policy_innovation: "Innovation"
+ policy_innovation_desc: "How our nation handles technological innovation."
+ 
+ individual_innovation: "Individual Innovation"
+ sponsored_innovation: "Sponsored Innovation"
+ state_innovation: "State Innovation"
+ 
+ SET_INDIVIDUAL_INNOVATION: "Set §YInnovation Policy§! to §YIndividual§!."
+ SET_SPONSORED_INNOVATION: "Set §YInnovation Policy§! to §YState-sponsored§!."
+ SET_STATE_INNOVATION: "Set §YInnovation Policy§! to §YState§!."
+ 
+ ALREADY_INDIVIDUAL_INNOVATION: "Our §YInnovation Policy§! is already set to §YIndividual§!."
+ ALREADY_SPONSORED_INNOVATION: "Our §YInnovation Policy§! is already set to §YState-sponsored§!."
+ ALREADY_STATE_INNOVATION: "Our §YInnovation Policy§! is already set to §YState§!."
+ 
+ switch_to_individual_innovation: "Switch to Individual Innovation"
+ switch_to_sponsored_innovation: "Switch to Sponsored Innovation"
+ switch_to_state_innovation: "Switch to State Innovation"
+ invest_in_research: "Invest in Research"
+ invest_heavily_in_research: "Invest Heavily in Research"
+ 
+ #------------------------------------------
+ # Conscription
+ #------------------------------------------
+ policy_conscription: "Conscription"
+ policy_conscription_desc: "How our nation handles conscription of troops."
+ 
+ volunteer_conscription: "Volunteer Conscription"
+ limited_conscription: "Limited Conscription"
+ full_conscription: "Full Conscription"
+ 
+ SET_VOLUNTEER_CONSCRIPTION: "Set §YConscription Policy§! to §YVolunteer§!."
+ SET_LIMITED_CONSCRIPTION: "Set §YConscription Policy§! to §YLimited§!."
+ SET_FULL_CONSCRIPTION: "Set §YConscription Policy§! to §YFull§!."
+ 
+ ALREADY_VOLUNTEER_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YVolunteer§!."
+ ALREADY_LIMITED_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YLimited§!."
+ ALREADY_FULL_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YFull§!."
+ 
+ switch_to_volunteer_conscription: "Switch to Volunteer Conscription"
+ switch_to_limited_conscription: "Switch to Limited Conscription"
+ switch_to_full_conscription: "Switch to Full Conscription"
+ 
+ #------------------------------------------
+ # Slavery
+ #------------------------------------------
+ policy_slavery: "Slavery"
+ policy_slavery_desc: "How our nation handles slavery."
+ 
+ slavery_allowed: "Slavery Allowed"
+ slavery_licensed: "Slavery Licensed"
+ slavery_forbidden: "Slavery Forbidden"
+ 
+ SET_SLAVERY_ALLOWED: "Set §YSlavery Policy§! to §YAllowed§!."
+ SET_SLAVERY_LICENSED: "Set §YSlavery Policy§! to §YLicensed§!."
+ SET_SLAVERY_FORBIDDEN: "Set §YSlavery Policy§! to §YForbidden§!."
+
+ ALREADY_ALLOW_SLAVERY: "Our §YSlavery Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SLAVERY: "Our §YSlavery Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SLAVERY: "Our §YSlavery Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_slavery_allowed: "Switch to Slavery Allowed"
+ switch_to_slavery_licensed: "Switch to Slavery Licensed"
+ switch_to_slavery_forbidden: "Switch to Slavery Forbidden"
 
  #------------------------------------------
- # Names
+ # Gambling
  #------------------------------------------
- estate_initiates: "Initiates"
- estate_initiates_desc: ""
- estate_scribes: "Scribes"
- estate_scribes_desc: ""
- estate_knights: "Knights"
- estate_knights_desc: ""
- estate_proctors: "Proctors"
- estate_proctors_desc: ""
+ policy_gambling: "Gambling"
+ policy_gambling_desc: "How our nation handles gambling."
  
- estate_patrician: "Patricians"
- estate_patrician_desc: ""
- estate_plebeians: "Plebeians"
- estate_plebeians_desc: ""
- estate_legionarii: "Legionarii"
- estate_legionarii_desc: ""
- estate_mercantores: "Mercatores"
- estate_mercantores_desc: ""
- estate_quaesitores: "Quaesitores"
- estate_quaesitores_desc: ""
- estate_adoratores: "Adoratores"
- estate_adoratores_desc: ""
- estate_dominus_servo: "Dominus Servo"
- estate_dominus_servo_desc: ""
+ gambling_allowed: "Gambling Allowed"
+ gambling_licensed: "Gambling Licensed"
+ gambling_forbidden: "Gambling Forbidden"
+ 
+ SET_GAMBLING_ALLOWED: "Set §YGambling Policy§! to §YAllowed§!."
+ SET_GAMBLING_LICENSED: "Set §YGambling Policy§! to §YLicensed§!."
+ SET_GAMBLING_FORBIDDEN: "Set §YGambling Policy§! to §YForbidden§!."
+ 
+ ALREADY_ALLOW_GAMBLING: "Our §YGambling Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_GAMBLING: "Our §YGambling Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_GAMBLING: "Our §YGambling Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_gambling_allowed: "Switch to Gambling Allowed"
+ switch_to_gambling_licensed: "Switch to Gambling Licensed"
+ switch_to_gambling_forbidden: "Switch to Gambling Forbidden"
+ 
+ #------------------------------------------
+ # Prostitution
+ #------------------------------------------
+ policy_prostitution: "Prostitution"
+ policy_prostitution_desc: "How our nation handles prostitution."
+ 
+ prostitution_allowed: "Prostitution Allowed"
+ prostitution_licensed: "Prostitution Licensed"
+ prostitution_forbidden: "Prostitution Forbidden"
+ 
+ SET_PROSTITUTION_ALLOWED: "Set §YProstitution Policy§! to §YAllowed§!."
+ SET_PROSTITUTION_LICENSED: "Set §YProstitution Policy§! to §YLicensed§!."
+ SET_PROSTITUTION_FORBIDDEN: "Set §YProstitution Policy§! to §YForbidden§!."
 
- #------------------------------------------
- # Events
- #------------------------------------------
- fallout_estates.1.title: "Scheming $ESTATE_BUREAUCRATS$"
- fallout_estates.1.desc: "Several members of our bureaucracy are hatching a scheme to claim more power for themselves. Rumour has it that they are upset with their current lot, and will only back down in exchange for substantial change."
- fallout_estates.1.option.a: "Grant them wider powers."
- fallout_estates.1.option.b: "Ignore such scheming"
+ ALREADY_ALLOW_PROSTITUTION: "Our §YProstitution Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_PROSTITUTION: "Our §YProstitution Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_PROSTITUTION: "Our §YProstitution Policy§! is already set to §YForbidden§!."
  
- fallout_estates.2.title: "Efficient Bureaucracy"
- fallout_estates.2.desc: "Our bureaucracy is operating at peak efficiency! It would be wise to reward the bureaucrats that have made this possible, otherwise, their action may become inaction."
- fallout_estates.2.option.a: "Reward them of course!"
- fallout_estates.2.option.c: "Reap the reward of their actions"
- 
- fallout_estates.3.title: "Civil Disobedience"
- fallout_estates.3.desc: "Our citizenry have become distraught with our rule, and wish to take matters into their own hands. Permitting such action will severely weaken the stability of the state."
- fallout_estates.3.option.a: "Grant them privileges"
- fallout_estates.3.option.b: "Refuse their demands"
- 
- fallout_estates.4.title: "Prosperous State"
- fallout_estates.4.desc: "Our citizens revel in the prosperity of the state. It would be wise to grant them a reward for their obedience."
- fallout_estates.4.option.a: "Shower them with gold!"
- fallout_estates.4.option.b: "Grant them reprieves!"
- 
- fallout_estates.5.title: "Power Creep"
- fallout_estates.5.desc: "Reverence of our military officers has persisted for far too long. They have begun demanding more and more resources to accomplish their 'objectives', and often our orders themselves are ignored when the going gets tough."
- fallout_estates.5.option.a: "Continue our reverence"
- fallout_estates.5.option.b: "Cut down these disobedient scumbags!"
- 
- fallout_estates.6.title: "Loyalty to the [Root.Monarch.GetTitle]"
- fallout_estates.6.desc: "Officers within our military display an unbound level of loyalty to their [Root.Monarch.GetTitle]. They are willing to go to the ends of the wasteland and back to please their [Root.Monarch.GetTitle] and in so much place the life of [Root.Monarch.GetTitle] [Root.Monarch.GetName] above their own."
- fallout_estates.6.option.a: "Let us reward our officers for their loyalty"
- fallout_estates.6.option.b: "Let us exploit their blind trust"
- 
- fallout_estates.7.title: "Pesky Merchants"
- fallout_estates.7.desc: "The merchants who represent us at the markets across the wasteland have begun demanding more favours in exchange for sub-standard service. Unfortunately resisting these demands will be costly."
- fallout_estates.7.option.a: "Capitulate to the merchants"
- fallout_estates.7.option.b: "Resist the merchant's demands"
- 
- fallout_estates.8.title: "Bountiful Supply"
- fallout_estates.8.desc: "Our merchants have had much success over the recent months. Their toil has brought home the fruits of their labour, and our trade income has never been better. It is only right we reward them in some way."
- fallout_estates.8.option.a: "Reward the merchants"
- fallout_estates.8.option.b: "Keep adding to the stockpile"
- 
- fallout_estates.9.title: "Nefarious Plans"
- fallout_estates.9.desc: "Rumours have emerged that a cabal of scientists within our institutions is planning to enact a nefarious scheme. If we permit such activities, who knows what could happen."
- fallout_estates.9.option.a: "Ignore these rumours"
- fallout_estates.9.option.b: "Sweep and purge those found wanting"
- 
- fallout_estates.10.title: "Revolutionary Innovations"
- fallout_estates.10.desc: "The delivery of a recent report from our top scientists makes it clear they have succeeded with a recent experiment. The results of this experiment mean much to the scientific community within our state, and the innovations that may spring from this result could be groundbreaking."
- fallout_estates.10.option.a: "Grant the scientists a reward"
- fallout_estates.10.option.b: "Funnel their efforts towards our own goals"
- 
- fallout_estates.20.title: "The $ESTATE_BUREAUCRATS$ Seize Power"
- fallout_estates.20.desc: "$MONARCH$ has allowed the $ESTATE_BUREAUCRATS$ of $COUNTRY$ to grow too powerful and now they have made their move. Exercising the wide range of privileges and rights granted to them, they have effectively seized the reins of the state and turned the $MONARCHTITLE$ into little more than their puppet."
- fallout_estates.20.option.a: "We should have seen this coming..."
- 
- fallout_estates.21.title: "The $ESTATE_BUREAUCRATS$ Curtailed"
- fallout_estates.21.desc: "We have managed to limit the influence of the $ESTATE_BUREAUCRATS$ to tolerable levels. $ESTATE_BUREAUCRATS$ privileges have been revoked and their positions removed. The $ESTATE_BUREAUCRATS$ themselves have grudgingly agreed that the $MONARCHTITLE$ is the undisputable leader of this country."
- fallout_estates.21.option.a: "The $MONARCHTITLE$ is back in control."
-
- fallout_estates.22.title: "The $ESTATE_SETTLERS$ Seize Power"
- fallout_estates.22.desc: "$MONARCH$ has allowed the $ESTATE_SETTLERS$ of $COUNTRY$ to grow too powerful and now they have made their move. Uniting together and turning against their overseers, they have effectively seized the reins of the state, appointing their own leader and turned the $MONARCHTITLE$ into little more than their puppet."
- fallout_estates.22.option.a: "We should have seen this coming..."
- 
- fallout_estates.23.title: "The $ESTATE_SETTLERS$ Curtailed"
- fallout_estates.23.desc: "We have managed to limit the influence of the $ESTATE_SETTLERS$ to tolerable levels. $ESTATE_SETTLERS$ encampments have been broken up and their leaders killed. The $ESTATE_SETTLERS$ themselves have grudgingly agreed that the $MONARCHTITLE$ is the undisputable leader of this country."
- fallout_estates.23.option.a: "The $MONARCHTITLE$ is back in control."
- 
- fallout_estates.24.title: "The $ESTATE_OFFICERS$ Seize Power"
- fallout_estates.24.desc: "$MONARCH$ has allowed the $ESTATE_OFFICERS$ of $COUNTRY$ to grow too powerful and now they have made their move. Exercising the wide range of privileges and rights granted to them, they have effectively seized the reins of the state and turned the $MONARCHTITLE$ into little more than their puppet."
- fallout_estates.24.option.a: "We should have seen this coming..."
- 
- fallout_estates.25.title: "The $ESTATE_OFFICERS$ Curtailed"
- fallout_estates.25.desc: "We have managed to limit the influence of the $ESTATE_OFFICERS$ to tolerable levels. $ESTATE_OFFICERS$ privileges have been revoked and their positions removed. The $ESTATE_OFFICERS$ themselves have grudgingly agreed that the $MONARCHTITLE$ is the undisputable leader of this country."
- fallout_estates.25.option.a: "The $MONARCHTITLE$ is back in control."
- 
- fallout_estates.26.title: "The $ESTATE_CARAVANNERS$ Seize Power"
- fallout_estates.26.desc: "$MONARCH$ has allowed the $ESTATE_CARAVANNERS$ of $COUNTRY$ to grow too powerful and now they have made their move. Exercising the wide range of privileges and rights granted to them, they have effectively seized the reins of the state and turned the $MONARCHTITLE$ into little more than their puppet."
- fallout_estates.26.option.a: "We should have seen this coming..."
- 
- fallout_estates.27.title: "The $ESTATE_CARAVANNERS$ Curtailed"
- fallout_estates.27.desc: "We have managed to limit the influence of the $ESTATE_CARAVANNERS$ to tolerable levels. $ESTATE_CARAVANNERS$ privileges have been revoked and their positions removed. The $ESTATE_CARAVANNERS$ themselves have grudgingly agreed that the $MONARCHTITLE$ is the undisputable leader of this country."
- fallout_estates.27.option.a: "The $MONARCHTITLE$ is back in control."
- 
- fallout_estates.28.title: "The $ESTATE_SCIENTISTS$ Seize Power"
- fallout_estates.28.desc: "$MONARCH$ has allowed the $ESTATE_SCIENTISTS$ of $COUNTRY$ to grow too powerful and now they have made their move. Exercising the wide range of privileges and rights granted to them, they have effectively seized the reins of the state and turned the $MONARCHTITLE$ into little more than their puppet."
- fallout_estates.28.option.a: "We should have seen this coming..."
- 
- fallout_estates.29.title: "The $ESTATE_SCIENTISTS$ Curtailed"
- fallout_estates.29.desc: "We have managed to limit the influence of the $ESTATE_SCIENTISTS$ to tolerable levels. $ESTATE_SCIENTISTS$ privileges have been revoked and their positions removed. The $ESTATE_SCIENTISTS$ themselves have grudgingly agreed that the $MONARCHTITLE$ is the undisputable leader of this country."
- fallout_estates.29.option.a: "The $MONARCHTITLE$ is back in control."
- 
- fallout_estates.30.title: "The $ESTATE_SLAVERS$ Seize Power"
- fallout_estates.30.desc: "$MONARCH$ has allowed the $ESTATE_SLAVERS$ of $COUNTRY$ to grow too powerful and now they have made their move. Exercising the wide range of privileges and rights granted to them, they have effectively seized the reins of the state and turned the $MONARCHTITLE$ into little more than their puppet."
- fallout_estates.30.option.a: "We should have seen this coming..."
- 
- fallout_estates.31.title: "The $ESTATE_SLAVERS$ Curtailed"
- fallout_estates.31.desc: "We have managed to limit the influence of the $ESTATE_SLAVERS$ to tolerable levels. $ESTATE_SLAVERS$ privileges have been revoked and their positions removed. The $ESTATE_SLAVERS$ themselves have grudgingly agreed that the $MONARCHTITLE$ is the undisputable leader of this country."
- fallout_estates.31.option.a: "The $MONARCHTITLE$ is back in control."
- 
- fallout_estates.11.title: "Settlement Established"
- fallout_estates.11.desc: "A contingent of our $ESTATE_SETTLERS$ have created a new settlement out on our frontier."
- fallout_estates.11.option.a: "Proactive citizens, I like it"
- 
- fallout_estates.12.title: "Experiment Results"
- fallout_estates.12.desc: "A contingent of our $ESTATE_SCIENTISTS$ have finished a promising experiment. Here are the results."
- fallout_estates.12.option.a: "Let's see..."
- 
- fallout_estates.13.title: "Settlement Reinforced"
- fallout_estates.13.desc: "A contingent of our $ESTATE_SETTLERS$ have reinforced a settlement out on our frontier."
- fallout_estates.13.option.a: "Wonderful"
+ switch_to_prostitution_allowed: "Switch to Prostitution Allowed"
+ switch_to_prostitution_licensed: "Switch to Prostitution Licensed"
+ switch_to_prostitution_forbidden: "Switch to Prostitution Forbidden"
  
  #------------------------------------------
- # Decisions
+ # Firearms
  #------------------------------------------
- curtail_estate_bureaucrats_title: "Curtail the Bureaucrats"
- curtail_estate_bureaucrats_desc: "Our realm is run by and for the bureaucrats. To adopt a more centralized administration we will need to curtail their power and privileges."
+ policy_firearms: "Firearms"
+ policy_firearms_desc: "How our nation handles firearms."
  
- curtail_estate_settlers_title: "Curtail the Citizenry"
- curtail_estate_settlers_desc: "Our realm is run by and for our citizenry. To adopt a more centralized administration we will need to curtail their power and privileges."
+ firearms_allowed: "Firearms Allowed"
+ firearms_licensed: "Firearms Licensed"
+ firearms_forbidden: "Firearms Forbidden"
  
- curtail_estate_officers_title: "Curtail the Officers"
- curtail_estate_officers_desc: "Our realm is run by and for the Officers. To adopt a more centralized administration we will need to curtail their power and privileges."
+ SET_FIREARMS_ALLOWED: "Set §YFirearms Policy§! to §YAllowed§!."
+ SET_FIREARMS_LICENSED: "Set §YFirearms Policy§! to §YLicensed§!."
+ SET_FIREARMS_FORBIDDEN: "Set §YFirearms Policy§! to §YForbidden§!."
  
- curtail_estate_caravanners_title: "Curtail the Caravanners"
- curtail_estate_caravanners_desc: "Our realm is run by and for the Caravanners. To adopt a more centralized administration we will need to curtail their power and privileges."
+ ALREADY_ALLOW_FIREARMS: "Our §YFirearms Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_FIREARMS: "Our §YFirearms Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_FIREARMS: "Our §YFirearms Policy§! is already set to §YForbidden§!."
  
- curtail_estate_scientists_title: "Curtail the Scientists"
- curtail_estate_scientists_desc: "Our realm is run by and for the Scientists. To adopt a more centralized administration we will need to curtail their power and privileges."
- 
- curtail_estate_slavers_title: "Curtail the Slavers"
- curtail_estate_slavers_desc: "Our realm is run by and for the Slavers. To adopt a more centralized administration we will need to curtail their power and privileges."
- 
- #------------------------------------------
- # Actions
- #------------------------------------------
- DEMAND_BACKING: "Demand Backing"
- CORRUPT_BUREAUCRATS: "Corrupt Officials"
- SEEK_SUPPORT_OF_BUREAUCRATS: "Seek Support of Bureaucrats"
- RECRUIT_BUREAUCRAT: "Recruit Bureaucrat"
- RECRUIT_BANKER: "Recruit Banker"
- RECRUIT_AUDITOR: "Recruit Auditor"
- PURGE_BUREAUCRACY: "Purge Bureaucracy"
- CONSOLIDATE_DEBT: "Consolidate Debt"
- LEGITIMIZE_GOVERNMENT: "Legitimize Government"
- 
- BRIBE_MERCHANTS: "Bribe Merchants"
- SEEK_SUPPORT_OF_CARAVANNERS: "Seek Support of Caravanners"
- RECRUIT_MERCHANT: "Recruit Merchant"
- RECRUIT_CARAVANNER: "Recruit Caravanner"
- RECRUIT_SPY: "Recruit Spy"
- DEMAND_CONTRIBUTION: "Demand Contribution"
- PROMOTE_MERCANTILISM: "Promote Mercantilism"
- EMPLOY_MERCHANT: "Employ Merchant"
- ENACT_MARKET_PROPAGANDA: "Enact Mercantile Propaganda"
- 
- CORRUPT_OFFICERS: "Corrupt Officers"
- SEEK_SUPPORT_OF_OFFICERS: "Seek Support of Caravanners"
- RECRUIT_ARMY_OFFICER: "Recruit Army Officer"
- RECRUIT_ARMY_RECRUITER: "Recruit Army Recruiter"
- RECRUIT_SHARPSHOOTER: "Recruit Sharpshooter"
- ESTABLISH_TRADITIONS: "Establish Traditions"
- APPOINT_GENERAL: "Appoint General"
- APPOINT_ADMIRAL: "Appoint Admiral"
- MUSTER_SOLDIERS: "Muster Soldiers"
- MUSTER_SAILORS: "Muster Sailors"
- 
- BRIBE_SCIENTISTS: "Bribe Scientists"
- SEEK_SUPPORT_OF_SCIENTISTS: "Seek Scientist Support"
- RECRUIT_RESEARCHER: "Recruit Researcher"
- RECRUIT_ARCHITECT: "Recruit Architect"
- RECRUIT_DIPLOMAT: "Recruit Diplomat"
- CONDUCT_RESEARCH: "Conduct Research"
- AUTHORIZE_SCIENTIFIC_FORUM: "Authorize Scientific Forum"
- UTILIZE_SEDATION_GASES: "Utilize Sedation Gases"
- INSTITUTE_AUTOMATED_CHECKS: "Institute Automated Checks"
- 
- BRIBE_GOVERNERS: "Bribe Settlers"
- SEEK_SUPPORT_OF_SETTLERS: "Seek Settler Support"
- RECRUIT_COLONIST: "Recruit Colonist"
- RECRUIT_ADMINISTRATOR: "Recruit Administrator"
- RECRUIT_ENFORCER: "Recruit Enforcer"
- INSTITUTE_FRONTIER_RUSH: "Institute Frontier Rush"
- ENCOURAGE_FREETHINKERS: "Encourage Freethinkers"
- EMPLOY_FOREIGN_ADVISORS: "Employ Foreign Advisors"
- DISCOVER_LOST_TEXTS: "Discover Lost Texts"
- 
- FUND_SLAVERS: "Fund Slavers"
- SEEK_SUPPORT_OF_SLAVERS: "Seek Slaver Support"
- RECRUIT_SLAVE_JOCKEY: "Recruit Slave Jockey"
- RECRUIT_SLAVE_DRIVER: "Recruit Slave Driver"
- HUNT_DISSIDENTS: "Hunt Dissidents"
- HASTEN_CONSTRUCTION_PROJECTS: "Hasten Construction Projects"
- EXPLOIT_SLAVE_SOLDIERS: "Exploit Slave Soldiers"
- EMPLOY_SLAVE_WORKERS: "Employ Slave Workers"
- ALLOW_RAPE_AND_PILLAGE: "Allow Rape and Pillage"
+ switch_to_firearms_allowed: "Switch to Firearms Allowed"
+ switch_to_firearms_licensed: "Switch to Firearms Licensed"
+ switch_to_firearms_forbidden: "Switch to Firearms Forbidden"
  
  #------------------------------------------
- # Influence
+ # Narcotics
  #------------------------------------------
- EST_VAL_LEGION_INFLUENCE: "Legion: §Y$VAL$%§!"
- EST_VAL_NCR_INFLUENCE: "NCR: §Y$VAL$%§!"
- EST_VAL_COMMONWEALTH_INFLUENCE: "The Institute: §Y$VAL$%§!"
+ policy_narcotics: "Narcotics"
+ policy_narcotics_desc: "How our nation handles narcotics."
  
- EST_VAL_RECRUITED_LEADER: "Recruited Leader: §Y$VAL$§!"
- EST_VAL_RECRUITED_ADVISOR: "Recruited Advisor: §Y$VAL$§!"
- EST_VAL_SOUGHT_SUPPORT: "Sought Support: §Y$VAL$§!"
- EST_VAL_LEGITIMIZED_GOVERNMENT: "Legitimized Government: §Y$VAL$§!"
- EST_VAL_CONSOLIDATED_DEBT: "Consolidated Debt: §Y$VAL$§!"
- EST_VAL_PROMOTED_MERCANTILISM: "Promoted Mercantilism: §Y$VAL$§!"
- EST_VAL_GROUNDBREAKING_RESEARCH: "Groundbreaking Research: §Y$VAL$§!"
- EST_VAL_SCIENTIFIC_FORUM: "Scientific Forum: §Y$VAL$§!"
- EST_VAL_FRONTIER_RUSH: "Frontier Rush: §Y$VAL$§!"
- EST_VAL_AUTOMATED_CHECKS: "Automated Checks: §Y$VAL$§!"
- EST_VAL_SEDATION_GASES: "Sedation Gases: §Y$VAL$§!"
- EST_VAL_MERCANTILE_PROPAGANDA: "Mercantile Propaganda: §Y$VAL$§!"
- EST_VAL_ADDITIONAL_MERCHANTS: "Additional Merchants: §Y$VAL$§!"
- EST_VAL_FREETHINKERS: "Freethinkers: §Y$VAL$§!"
- EST_VAL_FOREIGN_ADVISORS: "Foreign Advisors: §Y$VAL$§!"
- EST_VAL_RAPE_AND_PILLAGE: "Rape and Pillage: §Y$VAL$§!"
+ narcotics_allowed: "Narcotics Allowed"
+ narcotics_licensed: "Narcotics Licensed"
+ narcotics_forbidden: "Narcotics Forbidden"
  
- EST_VAL_EMPOWERED_BUREAUCRATS: "Empowered Bureaucrats: §Y$VAL$%§!"
- EST_VAL_EMPOWERED_SETTLERS: "Empowered Settlers: §Y$VAL$%§!"
- EST_VAL_EMPOWERED_OFFICERS: "Empowered Officers: §Y$VAL$%§!"
- EST_VAL_EMPOWERED_CARAVANNERS: "Empowered Caravanners: §Y$VAL$%§!"
- EST_VAL_EMPOWERED_SCIENTISTS: "Empowered Scientists: §Y$VAL$%§!"
+ SET_NARCOTICS_ALLOWED: "Set §YNarcotics Policy§! to §YAllowed§!."
+ SET_NARCOTICS_LICENSED: "Set §YNarcotics Policy§! to §YLicensed§!."
+ SET_NARCOTICS_FORBIDDEN: "Set §YNarcotics Policy§! to §YForbidden§!."
+ 
+ ALREADY_ALLOW_NARCOTICS: "Our §YNarcotics Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_NARCOTICS: "Our §YNarcotics Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_NARCOTICS: "Our §YNarcotics Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_narcotics_allowed: "Switch to Narcotics Allowed"
+ switch_to_narcotics_licensed: "Switch to Narcotics Licensed"
+ switch_to_narcotics_forbidden: "Switch to Narcotics Forbidden"
  
  #------------------------------------------
- # Loyalty
+ # Scavenging
  #------------------------------------------
- EST_VAL_LEGITIMATE: "Legitimate Government: §Y$VAL$§!"
- EST_VAL_ILLEGITIMATE: "Illegitimate Government: §Y$VAL$§!"
- EST_VAL_HIGH_MERCANTILISM: "High Mercantilism: §Y$VAL$§!"
- EST_VAL_LOW_MERCANTILISM: "Low Mercantilism: §Y$VAL$§!"
- EST_VAL_HIGH_TRADITION: "High Army Tradition: §Y$VAL$§!"
- EST_VAL_LOW_TRADITION: "Low Army Tradition: §Y$VAL$§!"
-
- #------------------------------------------
- # Event Modifiers
- #------------------------------------------
- frontier_rush: "Frontier Rush"
- desc_frontier_rush: "Our settlers are rushing to settle on our frontier."
- scientific_forum: "Scientific Forum"
- desc_scientific_forum: "Our scientists have collobrated in a scientific forum, encouraging the exchange of ideas."
- slavery_construction: "Slave Builders"
- desc_slavery_construction: "We are using slave builders."
- slavery_production: "Slave Labourers"
- desc_slavery_production: "We are using slave labourers."
- additional_merchants: "Additional Merchants"
- desc_additional_merchants: ""
- persuasive_merchants: "Persuasive Merchants"
- desc_persuasive_merchants: ""
- sedation_gases: "Sedation Gases"
- desc_sedation_gases: ""
- automated_checks: "Automated Checks"
- desc_automated_checks: ""
- freethinking_settlers: "Freethinkers"
- desc_freethinking_settlers: ""
- foreign_advisors: "Foreign Advisors"
- desc_foreign_advisors: ""
- rape_and_pillage: "Rape and Pillage"
- desc_rape_and_pillage: ""
+ policy_scavenging: "Scavenging"
+ policy_scavenging_desc: "How our nation handles scavenging of goods."
  
- #------------------------------------------
- # Disasters
- #------------------------------------------
- estate_bureaucrats_disaster: "Bureaucrat Dominance"
- estate_settlers_disaster: "Citizen Dominance"
- estate_officers_disaster: "Officer Dominance"
- estate_caravanners_disaster: "Caravanner Dominance"
- estate_scientists_disaster: "Scientist Dominance"
- estate_slavers_disaster: "Slaver Dominance"
+ scavenging_allowed: "Scavenging Allowed"
+ scavenging_licensed: "Scavenging Licensed"
+ scavenging_forbidden: "Scavenging Forbidden"
  
- EST_CRUSHED_BUREAUCRATS: "Bureaucrats have been curtailed"
- EST_CRUSHED_SETTLERS: "The Citizenry have been curtailed"
- EST_CRUSHED_OFFICERS: "Officers have been curtailed"
- EST_CRUSHED_CARAVANNERS: "Caravanners have been curtailed"
- EST_CRUSHED_SCIENTISTS: "Scientists have been curtailed"
- EST_CRUSHED_SLAVERS: "Slavers have been curtailed"
+ SET_SCAVENGING_ALLOWED: "Set §YScavenging Policy§! to §YAllowed§!."
+ SET_SCAVENGING_LICENSED: "Set §YScavenging Policy§! to §YLicensed§!."
+ SET_SCAVENGING_FORBIDDEN: "Set §YScavenging Policy§! to §YForbidden§!."
  
- TT_ESTATE_BUREAUCRATS_DISASTER_EVENT: "[Root.GetName] will now be controlled by the §YBureaucrats§! until the §Y'Curtail the Bureaucrats'§! decision is taken."
- TT_ESTATE_SETTLERS_DISASTER_EVENT: "[Root.GetName] will now be controlled by the §YCitizenry§! until the §Y'Curtail the Citizenry'§! decision is taken."
- TT_ESTATE_OFFICERS_DISASTER_EVENT: "[Root.GetName] will now be controlled by the §YOfficers§! until the §Y'Curtail the Officers'§! decision is taken."
- TT_ESTATE_CARAVANNERS_DISASTER_EVENT: "[Root.GetName] will now be controlled by the §YCaravanners§! until the §Y'Curtail the Caravanners'§! decision is taken."
- TT_ESTATE_SCIENTISTS_DISASTER_EVENT: "[Root.GetName] will now be controlled by the §YScientists§! until the §Y'Curtail the Scientists'§! decision is taken."
- TT_ESTATE_SLAVERS_DISASTER_EVENT: "[Root.GetName] will now be controlled by the §YSlavers§! until the §Y'Curtail the Slavers'§! decision is taken."
+ ALREADY_ALLOW_SCAVENGING: "Our §YScavenging Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SCAVENGING: "Our §YScavenging Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SCAVENGING: "Our §YScavenging Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_scavenging_allowed: "Switch to Scavenging Allowed"
+ switch_to_scavenging_licensed: "Switch to Scavenging Licensed"
+ switch_to_scavenging_forbidden: "Switch to Scavenging Forbidden"
  

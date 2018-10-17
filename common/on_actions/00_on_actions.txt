@@ -614,9 +614,7 @@ on_colonial_pulse = {
 on_bi_yearly_pulse = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse" }
     
-    events = {
-        civil_unrest_events.100
-    }
+    research_update = yes
     
     random_events = {
         5000 = 0
@@ -759,7 +757,7 @@ on_four_year_pulse_5 = {
         10 = shi.18
         10 = shi.19
         10 = shi.20
-	10 = shi.22
+        10 = shi.22
         80 = 0
         # 50% any event will be picked per pulse
     }
@@ -767,22 +765,6 @@ on_four_year_pulse_5 = {
 
 on_five_year_pulse = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse" }
-
-    random_events = {
-        10 = fallout_estates.1
-        10 = fallout_estates.2
-        10 = fallout_estates.3
-        10 = fallout_estates.4
-        10 = fallout_estates.5
-        10 = fallout_estates.6
-        10 = fallout_estates.7
-        10 = fallout_estates.8
-        10 = fallout_estates.9
-        10 = fallout_estates.10
-        
-        200 = 0
-        # 50% any event will be picked per pulse
-	}
 }
 
 on_five_year_pulse_2 = {

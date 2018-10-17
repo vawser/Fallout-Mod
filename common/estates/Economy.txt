@@ -1,0 +1,231 @@
+policy_economy = {
+	icon = 1
+	color = { 185 64 130 }
+	
+    trigger = {	
+        OR = {
+            has_traditional_economy = yes
+            has_command_economy = yes
+            has_market_economy = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = traditional_economy
+		trigger = { has_traditional_economy = yes } 
+	}
+    custom_name = {
+		desc = command_economy
+		trigger = { has_command_economy = yes } 
+	}
+    custom_name = {
+		desc = market_economy
+		trigger = { has_market_economy = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Traditional Economy
+	country_modifier_happy = {
+		global_tax_modifier = -0.25
+        production_efficiency = 0.5
+        trade_efficiency = -0.25
+	}
+    # Command Economy
+	country_modifier_neutral = {
+		global_tax_modifier = 0.25
+        production_efficiency = 0.1
+        trade_efficiency = -0.5
+	}	
+    # Market Economy
+	country_modifier_angry = {
+		global_tax_modifier = -0.35
+        production_efficiency = 0.25
+        trade_efficiency = 0.25
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_traditional_economy"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_command_economy = yes
+                has_market_economy = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_traditional_economy = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_command_economy"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_traditional_economy = yes
+                has_market_economy = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_command_economy = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_market_economy"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_command_economy = yes
+                has_traditional_economy = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_market_economy = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "enforce_taxation"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            has_traditional_economy = yes
+        }
+        trigger = {        
+            prestige = 0
+        }
+        effect = {
+            add_years_of_income = 5
+            add_prestige = -25
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                years_of_income = 1
+            }
+            
+            modifier = {
+                factor = 0
+                NOT = { prestige = 50 }
+            }
+        }
+    }
+    interaction = {
+        name = "print_money"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            has_command_economy = yes
+        }
+        trigger = {        
+            NOT = { inflation = 25 }
+        }
+        effect = {
+            add_years_of_income = 5
+            add_inflation = 10
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                years_of_income = 1
+            }
+            
+            modifier = {
+                factor = 0
+                
+                inflation = 5
+            }
+        }
+    }
+    interaction = {
+        name = "accept_kickbacks"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            has_market_economy = yes
+        }
+        trigger = {        
+            NOT = { corruption = 10 }
+        }
+        effect = {
+            add_years_of_income = 5
+            add_corruption = 5
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                years_of_income = 1
+            }
+            
+            modifier = {
+                factor = 0
+                
+                corruption = 5
+            }
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}

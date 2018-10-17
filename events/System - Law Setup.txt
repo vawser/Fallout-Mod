@@ -28,7 +28,6 @@ country_event = {
                         has_traditional_economy = yes
                         has_command_economy = yes
                         has_market_economy = yes
-                        has_mixed_economy = yes
                     }
                 }
             }
@@ -50,19 +49,6 @@ country_event = {
             limit = {
                 NOT = {
                     OR = {
-                        has_state_courts = yes
-                        has_community_courts = yes
-                        has_secret_courts = yes
-                    }
-                }
-            }
-            set_community_courts = yes
-        }
-        if = {
-            limit = {
-                NOT = {
-                    OR = {
-                        has_fine_punishment = yes
                         has_imprisonment_punishment = yes
                         has_execution_punishment = yes
                         has_slavery_punishment = yes

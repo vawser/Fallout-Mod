@@ -1,0 +1,136 @@
+policy_justice = {
+	icon = 3
+	color = { 120 65 18 }
+	
+    trigger = {	
+        OR = {
+            has_imprisonment_punishment = yes
+            has_execution_punishment = yes
+            has_slavery_punishment = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = imprisonment_punishment
+		trigger = { has_imprisonment_punishment = yes } 
+	}
+    custom_name = {
+		desc = execution_punishment
+		trigger = { has_execution_punishment = yes } 
+	}
+    custom_name = {
+		desc = slavery_punishment
+		trigger = { has_slavery_punishment = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Imprisonment
+	country_modifier_happy = {
+		global_unrest = -1
+	}
+    # Execution
+	country_modifier_neutral = {
+		global_unrest = -2
+        stability_cost_modifier = 0.25
+	}	
+    # Slavery
+	country_modifier_angry = {
+        global_manpower_modifier = 0.1
+		global_unrest = -1
+        stability_cost_modifier = 0.25
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_imprisonment"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_execution_punishment = yes
+                has_slavery_punishment = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_imprisonment_punishment = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_execution"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_imprisonment_punishment = yes
+                has_slavery_punishment = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_execution_punishment = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_enslavement"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_imprisonment_punishment = yes
+                has_execution_punishment = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_slavery_punishment = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}

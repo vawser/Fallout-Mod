@@ -1,0 +1,135 @@
+policy_narcotics = {
+	icon = 10
+	color = { 19 134 231 }
+	
+    trigger = {	
+        OR = {
+            has_narcotics_allowed = yes
+            has_narcotics_licensed = yes
+            has_narcotics_forbidden = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = narcotics_allowed
+		trigger = { has_narcotics_allowed = yes } 
+	}
+    custom_name = {
+		desc = narcotics_licensed
+		trigger = { has_narcotics_licensed = yes } 
+	}
+    custom_name = {
+		desc = narcotics_forbidden
+		trigger = { has_narcotics_forbidden = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Allowed
+	country_modifier_happy = {
+		shock_damage_received = -0.1
+        native_uprising_chance = -0.1
+        global_unrest = 2
+	}
+    # Licensed
+	country_modifier_neutral = {
+        native_uprising_chance = -0.05
+	}	
+    # Forbidden
+	country_modifier_angry = {
+        global_unrest = -2
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_narcotics_allowed"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_narcotics_licensed = yes
+                has_narcotics_forbidden = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_narcotics_allowed = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_narcotics_licensed"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_narcotics_allowed = yes
+                has_narcotics_forbidden = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_narcotics_licensed = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_narcotics_forbidden"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_narcotics_allowed = yes
+                has_narcotics_licensed = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_narcotics_forbidden = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}

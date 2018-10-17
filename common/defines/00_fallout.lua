@@ -38,7 +38,6 @@ NDefines.NDiplomacy.STUDY_TECHNOLOGY_MIN_TECHS_AHEAD = 0 -- Allow power gain fro
 -- Country
 --------------------------------
 NDefines.NCountry.POWER_MAX = 1000 -- Clean
-NDefines.NCountry.ALLOW_ESTATE_AND_PARLIAMENT_SEAT_IN_PROVINCE = 1
 NDefines.NCountry.MAX_EXTRA_PERSONALITIES = 3 -- Allow 3 modifiers
 NDefines.NCountry.YEARS_PER_EXTRA_PERSONALITY = 10 
 NDefines.NCountry.MAX_CROWN_COLONIES = 9999 -- Disable colonial nations
@@ -255,3 +254,13 @@ NDefines.NReligion.INITIAL_ISOLATIONISM = 1	-- Level of isolationism for a newly
 --------------------------------
 NDefines.NGraphics.SHOW_MONTHLY_TAX_INCOME = 1
 
+
+--------------------------------
+-- Estates
+--------------------------------
+-- Stuff for the Policy system that uses the Estates mechanic
+NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MIN = 0.0   -- no decay
+NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MAX = 0.0   -- no decay
+NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_1 = 1
+NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_2 = 1
+NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_3 = 1

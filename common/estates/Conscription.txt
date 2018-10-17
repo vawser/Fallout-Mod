@@ -1,0 +1,137 @@
+policy_conscription = {
+	icon = 5
+	color = { 40 128 128 }
+	
+    trigger = {	
+        OR = {
+            has_volunteer_conscription = yes
+            has_limited_conscription = yes
+            has_full_conscription = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = volunteer_conscription
+		trigger = { has_volunteer_conscription = yes } 
+	}
+    custom_name = {
+		desc = limited_conscription
+		trigger = { has_limited_conscription = yes } 
+	}
+    custom_name = {
+		desc = full_conscription
+		trigger = { has_full_conscription = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Volunteer
+	country_modifier_happy = {
+		global_manpower_modifier = -0.5
+        land_morale = 0.05
+        discipline = 0.05
+	}
+    # Limited
+	country_modifier_neutral = {
+        global_manpower_modifier = 0.05
+	}	
+    # Full
+	country_modifier_angry = {
+        global_manpower_modifier = 0.5
+        land_morale = -0.05
+        discipline = -0.05
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_volunteer_conscription"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_limited_conscription = yes
+                has_full_conscription = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_volunteer_conscription = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_limited_conscription"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_volunteer_conscription = yes
+                has_full_conscription = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_limited_conscription = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_full_conscription"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_volunteer_conscription = yes
+                has_limited_conscription = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_full_conscription = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}

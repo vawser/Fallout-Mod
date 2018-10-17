@@ -1,0 +1,176 @@
+policy_innovation = {
+	icon = 4
+	color = { 123 85 12 }
+	
+    trigger = {	
+        OR = {
+            has_individual_innovation = yes
+            has_sponsored_innovation = yes
+            has_state_innovation = yes
+        }
+	}
+
+    #-----------------------
+    # State
+    #-----------------------
+    custom_name = {
+		desc = individual_innovation
+		trigger = { has_individual_innovation = yes } 
+	}
+    custom_name = {
+		desc = sponsored_innovation
+		trigger = { has_sponsored_innovation = yes } 
+	}
+    custom_name = {
+		desc = state_innovation
+		trigger = { has_state_innovation = yes } 
+	}
+    
+    #-----------------------
+    # Modifiers
+    #-----------------------
+    # Individual
+	country_modifier_happy = {
+		global_institution_spread = 0.5
+        embracement_cost = 0.5
+	}
+    # Sponsored
+	country_modifier_neutral = {
+		global_institution_spread = 0.1
+        embracement_cost = -0.1
+	}	
+    # State
+	country_modifier_angry = {
+        global_institution_spread = -0.5
+        embracement_cost = -0.5
+	}
+	
+    #-----------------------
+    # Actions
+    #-----------------------
+    interaction = {
+        name = "switch_to_individual_innovation"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_sponsored_innovation = yes
+                has_state_innovation = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_individual_innovation = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_sponsored_innovation"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_individual_innovation = yes
+                has_state_innovation = yes  
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_sponsored_innovation = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "switch_to_state_innovation"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_individual_innovation = yes
+                has_sponsored_innovation = yes
+            }
+        }
+        trigger = {        
+            stability = 3           
+        }
+        effect = {
+            add_stability = -3
+            
+            set_state_innovation = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "invest_in_research"
+        icon = 1
+        years_between_use = 1
+        
+        potential = { 
+            treasury = 100
+        }
+        trigger = {        
+            treasury = 100
+        }
+        effect = {
+            add_treasury = -100
+            
+            add_research_5 = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "invest_heavily_in_research"
+        icon = 1
+        years_between_use = 1
+        
+        potential = { 
+            treasury = 1000
+        }
+        trigger = {        
+            treasury = 1000
+        }
+        effect = {
+            add_treasury = -1000
+            
+            add_research_100 = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Ignorable
+    #-----------------------
+	keep_on_conquest = no
+	always_remove_on_religious_conquest = yes
+    min_territory = 0
+    min_provinces_to_want_territory = 0
+	min_autonomy = 0
+    base_influence = 100
+    province_trigger = { always = no }
+    
+    province_modifier_happy = { }
+	province_modifier_neutral = { }
+	province_modifier_angry = { }
+    ai_grant_province = { factor = 0 }
+}
