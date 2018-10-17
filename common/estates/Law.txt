@@ -3,11 +3,7 @@ policy_law = {
 	color = { 50 100 70 }
 	
     trigger = {	
-        OR = {
-            has_democratic_law = yes
-            has_oligarchic_law = yes
-            has_autocratic_law = yes
-        }
+        always = yes
 	}
 
     #-----------------------
@@ -114,6 +110,18 @@ policy_law = {
             factor = 0
         }
     }
+    
+    #-----------------------
+    # Democratic
+    #-----------------------
+    
+    #-----------------------
+    # Oligarchic
+    #-----------------------
+    
+    #-----------------------
+    # Autocratic
+    #-----------------------
     
     #-----------------------
     # Ignorable

@@ -3,11 +3,7 @@ policy_firearms = {
 	color = { 94 23 164 }
 	
     trigger = {	
-        OR = {
-            has_firearms_allowed = yes
-            has_firearms_licensed = yes
-            has_firearms_forbidden = yes
-        }
+        always = yes
 	}
 
     #-----------------------

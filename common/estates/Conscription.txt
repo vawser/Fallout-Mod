@@ -3,11 +3,7 @@ policy_conscription = {
 	color = { 40 128 128 }
 	
     trigger = {	
-        OR = {
-            has_volunteer_conscription = yes
-            has_limited_conscription = yes
-            has_full_conscription = yes
-        }
+        always = yes
 	}
 
     #-----------------------

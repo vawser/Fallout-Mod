@@ -3,11 +3,7 @@ policy_scavenging = {
 	color = { 156 178 230 }
 	
     trigger = {	
-        OR = {
-            has_scavenging_allowed = yes
-            has_scavenging_licensed = yes
-            has_scavenging_forbidden = yes
-        }
+        always = yes
 	}
 
     #-----------------------

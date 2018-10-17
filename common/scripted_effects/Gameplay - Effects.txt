@@ -1103,32 +1103,9 @@ add_iqta_government_power = {
 }
 
 add_scaled_estate_advisor = {
-    hidden_effect = {
-        random_owned_province = {
-            limit = {
-                has_estate = $ESTATE$
-            }
-            save_event_target_as = estate_target_province
-        }
-    }
     if = {
         limit = {
             monthly_income = 25
-            has_saved_event_target = estate_target_province
-        }
-        define_advisor = {
-            type = $ADVISOR$
-            skill = 3
-            culture = event_target:estate_target_province
-            religion = event_target:estate_target_province
-            location = event_target:estate_target_province
-            discount = yes
-        }
-    }
-    else_if = {
-        limit = {
-            monthly_income = 25
-            NOT = { has_saved_event_target = estate_target_province }
         }
         define_advisor = {
             type = $ADVISOR$
@@ -1139,25 +1116,20 @@ add_scaled_estate_advisor = {
     else_if = {
         limit = {
             NOT = { monthly_income = 25 }
-            has_saved_event_target = estate_target_province
         }
         define_advisor = {
             type = $ADVISOR$
             skill = 2
             discount = yes
-            culture = event_target:estate_target_province
-            religion = event_target:estate_target_province
-            location = event_target:estate_target_province
         }
     }
     else_if = {
         limit = {
-            NOT = { monthly_income = 25 }
-            NOT = { has_saved_event_target = estate_target_province }
+            NOT = { monthly_income = 10 }
         }
         define_advisor = {
             type = $ADVISOR$
-            skill = 2
+            skill = 1
             discount = yes
         }
     }

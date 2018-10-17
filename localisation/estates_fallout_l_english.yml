@@ -1,15 +1,19 @@
 ﻿l_english:
  POLICIES: "National Policies"
  
+ # Note:
+ # The color codes in the names are used to sort the entries (due to the inherent name sort)
+ # They do not appear in game and are purely for sorting purposes.
+  
  #------------------------------------------
  # Economy
  #------------------------------------------
  policy_economy: "Economy"
  policy_economy_desc: "How our nation handles the economy."
  
- traditional_economy: "Traditional Economy"
- command_economy: "Command Economy"
- market_economy: "Market Economy"
+ traditional_economy: "§B§!Economy: Traditional"
+ command_economy: "§B§!Economy: Command"
+ market_economy: "§B§!Economy: Market"
  
  SET_TRADITIONAL_ECONOMY: "Set §YEconomy Policy§! to §YTraditional Economy§!."
  SET_COMMAND_ECONOMY: "Set §YEconomy Policy§! to §YCommand Economy§!."
@@ -26,8 +30,19 @@
  switch_to_market_economy: "Switch to Market Economy"
  
  enforce_taxation: "Enforce Taxation"
+ recruit_brahmin_whisperer: "Recruit Brahmin Whisperer"
+ recruit_missionary: "Recruit Missionary"
+ recind_arrangements: "Recind Debt Arrangement"
+ 
  print_money: "Print Money"
+ recruit_architect: "Recruit Architect"
+ recruit_disciplinarian: "Recruit Disciplinarian"
+ renounce_debt: "Renounce Debt"
+ 
  accept_kickbacks: "Accept Kickbacks"
+ recruit_banker: "Recruit Banker"
+ recruit_auditor: "Recruit Auditor"
+ establish_debt_contract: "Establish Debt Contract"
  
  #------------------------------------------
  # Law
@@ -35,9 +50,9 @@
  policy_law: "Law"
  policy_law_desc: "How our nation handles law and order."
  
- democratic_law: "Democratic Law"
- oligarchic_law: "Oligarchic Law"
- autocratic_law: "Autocratic Law"
+ democratic_law: "§G§!Law: Democratic"
+ oligarchic_law: "§G§!Law: Oligarchic"
+ autocratic_law: "§G§!Law: Autocratic"
  
  SET_DEMOCRATIC_LAW: "Set §YLaw Policy§! to §YDemocratic Law§!."
  SET_OLIGARCHIC_LAW: "Set §YLaw Policy§! to §YOligarchic Law§!."
@@ -57,9 +72,9 @@
  policy_justice: "Justice"
  policy_justice_desc: "How our nation handles common criminals."
 
- imprisonment_punishment: "Imprisonment"
- execution_punishment: "Execution"
- slavery_punishment: "Enslavement"
+ imprisonment_punishment: "§M§!Justice: Imprisonment"
+ execution_punishment: "§M§!Justice: Execution"
+ slavery_punishment: "§M§!Justice: Enslavement"
  
  SET_IMPRISONMENT_PUNISHMENT: "Set §YJustice Policy§! to §YImprisonment§!."
  SET_EXECUTION_PUNISHMENT: "Set §YJustice Policy§! to §YExecution§!."
@@ -79,9 +94,9 @@
  policy_innovation: "Innovation"
  policy_innovation_desc: "How our nation handles technological innovation."
  
- individual_innovation: "Individual Innovation"
- sponsored_innovation: "Sponsored Innovation"
- state_innovation: "State Innovation"
+ individual_innovation: "§O§!Innovation: Individual"
+ sponsored_innovation: "§O§!Innovation: Sponsored"
+ state_innovation: "§O§!Innovation: State"
  
  SET_INDIVIDUAL_INNOVATION: "Set §YInnovation Policy§! to §YIndividual§!."
  SET_SPONSORED_INNOVATION: "Set §YInnovation Policy§! to §YState-sponsored§!."
@@ -103,9 +118,9 @@
  policy_conscription: "Conscription"
  policy_conscription_desc: "How our nation handles conscription of troops."
  
- volunteer_conscription: "Volunteer Conscription"
- limited_conscription: "Limited Conscription"
- full_conscription: "Full Conscription"
+ volunteer_conscription: "§T§!Conscription: Volunteer"
+ limited_conscription: "§T§!Conscription: Limited"
+ full_conscription: "§T§!Conscription: Full"
  
  SET_VOLUNTEER_CONSCRIPTION: "Set §YConscription Policy§! to §YVolunteer§!."
  SET_LIMITED_CONSCRIPTION: "Set §YConscription Policy§! to §YLimited§!."
@@ -125,9 +140,9 @@
  policy_slavery: "Slavery"
  policy_slavery_desc: "How our nation handles slavery."
  
- slavery_allowed: "Slavery Allowed"
- slavery_licensed: "Slavery Licensed"
- slavery_forbidden: "Slavery Forbidden"
+ slavery_allowed: "§Y§!Slavery: Allowed"
+ slavery_licensed: "§Y§!Slavery: Licensed"
+ slavery_forbidden: "§Y§!Slavery: Forbidden"
  
  SET_SLAVERY_ALLOWED: "Set §YSlavery Policy§! to §YAllowed§!."
  SET_SLAVERY_LICENSED: "Set §YSlavery Policy§! to §YLicensed§!."
@@ -147,9 +162,9 @@
  policy_gambling: "Gambling"
  policy_gambling_desc: "How our nation handles gambling."
  
- gambling_allowed: "Gambling Allowed"
- gambling_licensed: "Gambling Licensed"
- gambling_forbidden: "Gambling Forbidden"
+ gambling_allowed: "§Y§!Gambling: Allowed"
+ gambling_licensed: "§Y§!Gambling: Licensed"
+ gambling_forbidden: "§Y§!Gambling: Forbidden"
  
  SET_GAMBLING_ALLOWED: "Set §YGambling Policy§! to §YAllowed§!."
  SET_GAMBLING_LICENSED: "Set §YGambling Policy§! to §YLicensed§!."
@@ -169,9 +184,9 @@
  policy_prostitution: "Prostitution"
  policy_prostitution_desc: "How our nation handles prostitution."
  
- prostitution_allowed: "Prostitution Allowed"
- prostitution_licensed: "Prostitution Licensed"
- prostitution_forbidden: "Prostitution Forbidden"
+ prostitution_allowed: "§Y§!Prostitution: Allowed"
+ prostitution_licensed: "§Y§!Prostitution: Licensed"
+ prostitution_forbidden: "§Y§!Prostitution: Forbidden"
  
  SET_PROSTITUTION_ALLOWED: "Set §YProstitution Policy§! to §YAllowed§!."
  SET_PROSTITUTION_LICENSED: "Set §YProstitution Policy§! to §YLicensed§!."
@@ -191,9 +206,9 @@
  policy_firearms: "Firearms"
  policy_firearms_desc: "How our nation handles firearms."
  
- firearms_allowed: "Firearms Allowed"
- firearms_licensed: "Firearms Licensed"
- firearms_forbidden: "Firearms Forbidden"
+ firearms_allowed: "§Y§!Firearms: Allowed"
+ firearms_licensed: "§Y§!Firearms: Licensed"
+ firearms_forbidden: "§Y§!Firearms: Forbidden"
  
  SET_FIREARMS_ALLOWED: "Set §YFirearms Policy§! to §YAllowed§!."
  SET_FIREARMS_LICENSED: "Set §YFirearms Policy§! to §YLicensed§!."
@@ -213,9 +228,9 @@
  policy_narcotics: "Narcotics"
  policy_narcotics_desc: "How our nation handles narcotics."
  
- narcotics_allowed: "Narcotics Allowed"
- narcotics_licensed: "Narcotics Licensed"
- narcotics_forbidden: "Narcotics Forbidden"
+ narcotics_allowed: "§Y§!Narcotics: Allowed"
+ narcotics_licensed: "§Y§!Narcotics: Licensed"
+ narcotics_forbidden: "§Y§!Narcotics: Forbidden"
  
  SET_NARCOTICS_ALLOWED: "Set §YNarcotics Policy§! to §YAllowed§!."
  SET_NARCOTICS_LICENSED: "Set §YNarcotics Policy§! to §YLicensed§!."
@@ -235,9 +250,9 @@
  policy_scavenging: "Scavenging"
  policy_scavenging_desc: "How our nation handles scavenging of goods."
  
- scavenging_allowed: "Scavenging Allowed"
- scavenging_licensed: "Scavenging Licensed"
- scavenging_forbidden: "Scavenging Forbidden"
+ scavenging_allowed: "§Y§!Scavenging: Allowed"
+ scavenging_licensed: "§Y§!Scavenging: Licensed"
+ scavenging_forbidden: "§Y§!Scavenging: Forbidden"
  
  SET_SCAVENGING_ALLOWED: "Set §YScavenging Policy§! to §YAllowed§!."
  SET_SCAVENGING_LICENSED: "Set §YScavenging Policy§! to §YLicensed§!."

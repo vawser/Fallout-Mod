@@ -3,11 +3,7 @@ policy_justice = {
 	color = { 120 65 18 }
 	
     trigger = {	
-        OR = {
-            has_imprisonment_punishment = yes
-            has_execution_punishment = yes
-            has_slavery_punishment = yes
-        }
+        always = yes
 	}
 
     #-----------------------

@@ -3,11 +3,7 @@ policy_narcotics = {
 	color = { 19 134 231 }
 	
     trigger = {	
-        OR = {
-            has_narcotics_allowed = yes
-            has_narcotics_licensed = yes
-            has_narcotics_forbidden = yes
-        }
+        always = yes
 	}
 
     #-----------------------

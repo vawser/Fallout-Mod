@@ -3,11 +3,7 @@ policy_prostitution = {
 	color = { 123 85 84 }
 	
     trigger = {	
-        OR = {
-            has_prostitution_allowed = yes
-            has_prostitution_licensed = yes
-            has_prostitution_forbidden = yes
-        }
+        always = yes
 	}
 
     #-----------------------
