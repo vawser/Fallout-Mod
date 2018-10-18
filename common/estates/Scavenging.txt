@@ -149,6 +149,36 @@ policy_scavenging = {
         }
     }
     
+    interaction = {
+        name = "search_for_lost_texts"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            OR = {
+                has_scavenging_allowed = yes
+                has_scavenging_licensed = yes
+            }
+        }
+        trigger = {        
+            years_of_income = 0.1
+        }
+        effect = {
+            add_years_of_income = -0.1
+            
+            hidden_effect = {
+                set_country_flag = search_for_lost_texts
+            }
+            
+            tooltip = {
+                country_event = { id = lost_religions.1 }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
     #-----------------------
     # Ignorable
     #-----------------------

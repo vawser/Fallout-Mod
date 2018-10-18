@@ -10,7 +10,7 @@ country_event = {
 	fire_only_once = yes	
 	
 	mean_time_to_happen = {
-		months = 15
+		months = 24
 	}	
 	
 	trigger = {
@@ -25,13 +25,11 @@ country_event = {
     
 	option = {
 		name = great_khans.1.option.a
+        
         add_country_modifier = {
             name = gkh_chances_map
             duration = 1111
-        }   		
-		ai_chance = {
-			factor = 100
-		}        
+        }   	   
 	}
 }
 

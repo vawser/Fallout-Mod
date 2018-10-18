@@ -13,6 +13,7 @@ frontier_settlement_reform = {
     modifiers = {
         global_colonial_growth = 10
         colonist_placement_chance = 0.05
+        max_states = 3
     }
 }
 mercantile_settlement_reform = {
@@ -27,6 +28,7 @@ mercantile_settlement_reform = {
     modifiers = {
         global_own_trade_power = 0.1
         trade_efficiency = 0.05
+        max_states = 3
     }
 }
 militarized_settlement_reform = {
@@ -41,6 +43,7 @@ militarized_settlement_reform = {
     modifiers = {
         global_manpower_modifier = 0.1
         global_regiment_cost = -0.1
+        max_states = 3
     }
 }
 militia_reform = {
@@ -55,6 +58,7 @@ militia_reform = {
     modifiers = {
         global_manpower_modifier = 0.1
         max_absolutism = 10
+        max_states = 3
     }
 }
 legion_reform = {
@@ -70,6 +74,7 @@ legion_reform = {
         army_tradition = 1
         max_absolutism = 20
         global_autonomy = -0.05
+        max_states = 5
     }
 }
 new_vegas_reform = {
@@ -85,6 +90,7 @@ new_vegas_reform = {
         all_power_cost = -0.05
         max_absolutism = 10
         global_autonomy = -0.05
+        max_states = 3
     }
 }
 think_tank_reform = {
@@ -100,6 +106,7 @@ think_tank_reform = {
         technology_cost = -0.2
         max_absolutism = 20
         global_autonomy = -0.05
+        max_states = 3
     }
 }
 zetan_reform = {
@@ -115,6 +122,7 @@ zetan_reform = {
         discipline = 0.1
         max_absolutism = 50
         global_autonomy = -0.1
+        max_states = 10
     }
 }
 shi_reform = {
@@ -129,6 +137,7 @@ shi_reform = {
     modifiers = {
         idea_cost = -0.05
         global_autonomy = -0.05
+        max_states = 3
     }
 }
 
@@ -147,6 +156,7 @@ republic_reform = {
     modifiers = {
         diplomatic_reputation = 1
         max_absolutism = -20
+        max_states = 3
     }
 }
 dictatorship_reform = {
@@ -161,6 +171,7 @@ dictatorship_reform = {
     modifiers = {
         production_efficiency = 0.1
         max_absolutism = -10
+        max_states = 3
     }
 }
 ncr_reform = {
@@ -176,6 +187,7 @@ ncr_reform = {
         global_tax_modifier = 0.15
         max_absolutism = -10
         global_autonomy = -0.05
+        max_states = 5
     }
 }
 institute_reform = {
@@ -192,6 +204,7 @@ institute_reform = {
         idea_cost = -0.1
         max_absolutism = 10
         global_autonomy = -0.05
+        max_states = 5
     }
 }
 enclave_reform = {
@@ -207,6 +220,7 @@ enclave_reform = {
         land_morale = 0.1
         max_absolutism = 20
         global_autonomy = -0.05
+        max_states = 5
     }
 }
 vault_reform = {
@@ -222,6 +236,7 @@ vault_reform = {
         development_cost = -0.1
         max_absolutism = -10
         global_autonomy = -0.05
+        max_states = 3
     }
 }
 
@@ -241,6 +256,7 @@ theocracy_reform = {
         tolerance_own = 1
         max_absolutism = -10
         global_autonomy = -0.05
+        max_states = 3
     }
 }
 brotherhood_reform = {
@@ -257,6 +273,7 @@ brotherhood_reform = {
         free_mil_policy = 1
         max_absolutism = 10
         global_autonomy = -0.05
+        max_states = 5
     }
 }
 cult_reform = {
@@ -271,6 +288,7 @@ cult_reform = {
     modifiers = {
         global_missionary_strength = 0.03
         global_autonomy = -0.05
+        max_states = 2
     }
 }
 
@@ -288,6 +306,7 @@ tribe_reform = {
     
     modifiers = {
         global_unrest = -2
+        max_states = 1
     }
 }
 commune_reform = {
@@ -301,6 +320,7 @@ commune_reform = {
     
     modifiers = {
         global_unrest = -2
+        max_states = 1
     }
 }
 raider_reform = {
@@ -316,6 +336,7 @@ raider_reform = {
         mercenary_discipline = 0.05
         merc_maintenance_modifier = -0.1
         max_absolutism = 20
+        max_states = 2
     }
 }
 super_mutant_reform = {
@@ -331,6 +352,7 @@ super_mutant_reform = {
         shock_damage_received = -0.1
         fire_damage_received = -0.1
         max_absolutism = 20
+        max_states = 1
     }
 }
 swarm_reform = {
@@ -345,6 +367,7 @@ swarm_reform = {
     modifiers = {
         global_regiment_recruit_speed = -0.25
         max_absolutism = 20
+        max_states = 1
     }
 }
 wolf_pack_reform = {
@@ -359,6 +382,7 @@ wolf_pack_reform = {
     modifiers = {
         infantry_power = 0.1
         max_absolutism = 20
+        max_states = 2
     }
 }
 great_khan_reform = {
@@ -373,5 +397,6 @@ great_khan_reform = {
     modifiers = {
         loot_amount = 1.0
         max_absolutism = 20
+        max_states = 2
     }
 }

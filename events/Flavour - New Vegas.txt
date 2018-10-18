@@ -28,6 +28,13 @@ country_event = {
 		
 		add_faction_influence = { faction = the_omertas influence = 5 }
 	}
+    option = {
+		name = new_vegas.1.option.b
+		
+        add_years_of_income = 1
+        
+		add_faction_influence = { faction = the_omertas influence = -5 }
+	}
 }
 
 # Top profits at the Tops
@@ -57,6 +64,13 @@ country_event = {
 		name = new_vegas.2.option.a
 		
 		add_faction_influence = { faction = the_chairmen influence = 5 }
+	}
+    option = {
+		name = new_vegas.2.option.b
+		
+        add_years_of_income = 1
+        
+		add_faction_influence = { faction = the_chairmen influence = -5 }
 	}
 }
 
@@ -88,6 +102,13 @@ country_event = {
 		name = new_vegas.3.option.a
 		
 		add_faction_influence = { faction = the_white_glove_society influence = 5 }
+	}
+    option = {
+		name = new_vegas.3.option.b
+		
+        add_years_of_income = 1
+        
+		add_faction_influence = { faction = the_white_glove_society influence = -5 }
 	}
 }
 
@@ -295,19 +316,19 @@ country_event = {
 	option = {  # Billy Knight
 		name = new_vegas.7.option.b
 		add_faction_influence = { faction = the_chairmen influence = 5 }
-		add_treasury = -25
+        add_years_of_income = -0.25
 	}
 	
 	option = {  # Bruce Isaac
 		name = new_vegas.7.option.c
 		add_faction_influence = { faction = the_chairmen influence = 10 }
-		add_treasury = -50
+		add_years_of_income = -0.5
 	}
 	
 	option = {  #  The Lonesome Drifter
 		name = new_vegas.7.option.d
 		add_faction_influence = { faction = the_chairmen influence = 15 }
-		add_treasury = -75
+		add_years_of_income = -0.75
 	}
 }
 
@@ -495,7 +516,7 @@ country_event = {
     
 	option = { 
 		name = new_vegas.13.option.a
-		add_treasury = -100
+		add_years_of_income = -1
         121 = {
 			change_province_name = "H&H Factory"
 			add_base_production = 2
@@ -556,7 +577,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 21
+		months = 120
 	}
 	
     immediate = {
@@ -590,7 +611,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 55
+		months = 120
 	}
 	
     immediate = {
@@ -784,7 +805,7 @@ country_event = {
     }
     
     mean_time_to_happen = {
-        months = 24
+        months = 120
         
         modifier = {
             factor = 10

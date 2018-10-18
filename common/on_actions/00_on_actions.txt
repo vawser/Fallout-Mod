@@ -394,8 +394,9 @@ on_weak_heir_claim = {
 on_heir_needed_theocracy = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_heir_needed_theocracy" }
 	events = {
-		brotherhood_of_steel_government.1 # For Brotherhood of Steal temples
-		theocracy.1 # For every other religion
+		brotherhood_of_steel_government.1   # For Brotherhood of Steel
+        renewal_cult.1                      # For the Renewal Cult
+		theocracy.1                         # For everyone else
 	}
 }
 
@@ -615,30 +616,6 @@ on_bi_yearly_pulse = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse" }
 
     research_update = yes
-    
-    random_events = {
-        5000 = 0
-		100 = tribal_flavour.1
-		100 = tribal_flavour.2
-		100 = tribal_flavour.3
-		100 = tribal_flavour.4
-		100 = tribal_flavour.5
-		100 = tribal_flavour.6
-		100 = tribal_flavour.7
-		100 = tribal_flavour.8
-		100 = tribal_flavour.13
-		100 = tribal_flavour.14
-		50 = tribal_flavour.15
-		20 = tribal_flavour.16
-		90 = tribal_flavour.17
-		15 = tribal_flavour.18
-		10 = tribal_flavour.19
-		100 = tribal_flavour.20
-		100 = tribal_flavour.21
-		100 = tribal_flavour.22
-		100 = tribal_flavour.23
-		100 = tribal_flavour.24
-    }
 }
 
 on_bi_yearly_pulse_2 = {
@@ -745,8 +722,7 @@ on_four_year_pulse_4 = {
         10 = brotherhood_of_steel.3
         10 = brotherhood_of_steel.4
         10 = brotherhood_of_steel.5
-        280 = 0
-        # 25% any event will be picked per pulse
+        1400 = 0
     }
 }
 
@@ -765,6 +741,30 @@ on_four_year_pulse_5 = {
 
 on_five_year_pulse = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse" }
+    
+    random_events = {
+		10 = tribal_flavour.1
+		10 = tribal_flavour.2
+		10 = tribal_flavour.3
+		10 = tribal_flavour.4
+		10 = tribal_flavour.5
+		10 = tribal_flavour.6
+		10 = tribal_flavour.7
+		10 = tribal_flavour.8
+		10 = tribal_flavour.13
+		10 = tribal_flavour.14
+		10 = tribal_flavour.15
+		10 = tribal_flavour.16
+		10 = tribal_flavour.17
+		10 = tribal_flavour.18
+		10 = tribal_flavour.19
+		10 = tribal_flavour.20
+		10 = tribal_flavour.21
+		10 = tribal_flavour.22
+		10 = tribal_flavour.23
+		10 = tribal_flavour.24
+        1000 = 0
+    }
 }
 
 on_five_year_pulse_2 = {

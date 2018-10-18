@@ -116,13 +116,13 @@ guiTypes = {
 		{
 			name ="icon_government_desc_1"
 			spriteType = "GFX_idea_empty"
-			position = { x= 47 y = 155 }
+			position = { x= 47 y = -9999 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.5
 		}
 		instantTextBoxType = {
 			name = "government_desc_1"
-			position = { x = 72 y = 159 }
+			position = { x = 72 y = -9999 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -136,14 +136,14 @@ guiTypes = {
 		{
 			name ="icon_government_desc_2"
 			spriteType = "GFX_idea_empty"
-			position = { x= 129 y = 155 }
+			position = { x= 129 y = -9999 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.5
 		}
 
 		instantTextBoxType = {
 			name = "government_desc_2"
-			position = { x = 155 y = 159 }
+			position = { x = 155 y = -9999 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -157,7 +157,7 @@ guiTypes = {
 		{
 			name ="icon_government_desc_3"
 			spriteType = "GFX_idea_empty"
-			position = { x= 210 y = 155 }
+			position = { x= 210 y = -9999 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.5
 
@@ -165,7 +165,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "government_desc_3"
-			position = { x = 235 y = 159 }
+			position = { x = 235 y = -9999 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -190,14 +190,14 @@ guiTypes = {
 		{
 			name ="absolutism_icon"
 			spriteType = "GFX_icon_absolutism"
-			position = { x= 294 y = 160 }
+			position = { x= 64 y = 154 }
 			Orientation = "UPPER_LEFT"
 			scale = 1
 
 		}
 		instantTextBoxType = {
 			name = "absolutism_value"
-			position = { x = 320 y = 160 }
+			position = { x = 84 y = 154 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -211,14 +211,14 @@ guiTypes = {
 		{
 			name ="max_absolutism_icon"
 			spriteType = "GFX_icon_max_absolutism"
-			position = { x= 294 y = 192 }
+			position = { x= 144 y = 154 }
 			Orientation = "UPPER_LEFT"
 			scale = 1
 
 		}
 		instantTextBoxType = {
 			name = "max_absolutism_value"
-			position = { x = 320 y = 192 }
+			position = { x = 164 y = 154 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -321,7 +321,7 @@ guiTypes = {
 		windowType = {
 			name = "prussian_monarchy"
 			backGround =""
-			position = { x=18 y=273 }
+			position = { x=18 y=240 }
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -332,7 +332,7 @@ guiTypes = {
 			{
 				name ="prussian_progress"
 				spriteType = "GFX_prussian_progressbar"
-				position = { x= 18 y = 9 }
+				position = { x= 28 y = 9 }
 				Orientation = "UPPER_LEFT"
 			}
 
@@ -340,13 +340,13 @@ guiTypes = {
 			{
 				name ="prussian_progress_frame"
 				spriteType = "GFX_prussian_bar_frame"
-				position = { x= 0 y = -47 }
+				position = { x= 10 y = -47 }
 				Orientation = "UPPER_LEFT"
 			}
 
 			instantTextBoxType = {
 				name = "prussian_change"
-				position = { x= 133 y =  12 }
+				position = { x= 143 y =  12 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = ""
@@ -360,8 +360,8 @@ guiTypes = {
 			{
 				name ="prussia_boost"
 				quadTextureSprite= "GFX_standard_button_224"
-				position = { x= 38 y = -28 }
-                buttonText = "Boost"
+				position = { x= 55 y = -28 }
+                buttonText = "Rally"
                 buttonFont = "vic_18"
 			}
 
@@ -879,52 +879,43 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "RUSABIL_SUDEBNIK_button"
-			position = { x = 24 y = 10 }
-			quadTextureSprite ="GFX_russian_ability_ADM"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 5 y = -20 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Reduce Autonomy"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "RUSABIL_OPRICHNINA_button"
-			position = { x = 142 y = 10 }
-			quadTextureSprite ="GFX_russian_ability_DIP"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 5 y = 15 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Suppress Rebellion"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "RUSABIL_STRELTSY_button"
-			position = { x = 260 y = 10 }
-			quadTextureSprite ="GFX_russian_ability_MIL"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 5 y = 50 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Muster Veterans"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 
 		iconType = {
 			name ="russian_adm_power_bar"
 			spriteType = "GFX_russian_government_bar"
-			position = { x = 18 y = 71 }
+			position = { x = 250 y = -13 }
 			Orientation = "UPPER_LEFT"
 
 		}
 		iconType = {
 			name ="russian_adm_power_frame"
 			spriteType = "GFX_russian_government_bar_frame"
-			position = { x = 5 y = 48 }
+			position = { x = 235 y = -37 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
@@ -932,14 +923,14 @@ guiTypes = {
 		iconType = {
 			name ="russian_dip_power_bar"
 			spriteType = "GFX_russian_government_bar"
-			position = { x = 136 y = 71 }
+			position = { x = 250 y = 21 }
 			Orientation = "UPPER_LEFT"
 
 		}
 		iconType = {
 			name ="russian_dip_power_frame"
 			spriteType = "GFX_russian_government_bar_frame"
-			position = { x = 123 y = 48 }
+			position = { x = 235 y = -2 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
@@ -947,14 +938,14 @@ guiTypes = {
 		iconType = {
 			name ="russian_mil_power_bar"
 			spriteType = "GFX_russian_government_bar"
-			position = { x = 254 y = 71 }
+			position = { x = 250 y = 55 }
 			Orientation = "UPPER_LEFT"
 
 		}
 		iconType = {
 			name ="russian_mil_power_frame"
 			spriteType = "GFX_russian_government_bar_frame"
-			position = { x = 241 y = 48 }
+			position = { x = 235 y = 33 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
@@ -1079,54 +1070,45 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
-		guiButtonType = {
+        guiButtonType = {
 			name = "promote_culture_in_government_button"
-			position = { x = 32 y = 10 }
-			quadTextureSprite ="GFX_promote_culture_in_government_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 5 y = -20 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Empower Securitrons"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "sell_off_culture_slaves_button"
-			position = { x = 142 y = 10 }
-			quadTextureSprite ="GFX_sell_off_culture_slaves_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 5 y = 15 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Advertise Casinos"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "recruit_from_culture_lands_button"
-			position = { x = 252 y = 10 }
-			quadTextureSprite ="GFX_recruit_from_culture_lands_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 5 y = 50 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Conscript Tribals"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 
 		iconType = {
 			name ="mamluk_adm_power_bar"
 			spriteType = "GFX_russian_government_bar"
-			position = { x = 27 y = 74 }
+			position = { x = 250 y = -13 }
 			Orientation = "UPPER_LEFT"
 
 		}
 		iconType = {
 			name ="mamluk_adm_power_frame"
-			spriteType = "GFX_mamluk_mechanic_bar_frame"
-			position = { x = 14 y = 70 }
+			spriteType = "GFX_russian_government_bar_frame"
+			position = { x = 235 y = -37 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
@@ -1134,14 +1116,14 @@ guiTypes = {
 		iconType = {
 			name ="mamluk_dip_power_bar"
 			spriteType = "GFX_russian_government_bar"
-			position = { x = 138 y = 74 }
+			position = { x = 250 y = 21 }
 			Orientation = "UPPER_LEFT"
 
 		}
 		iconType = {
 			name ="mamluk_dip_power_frame"
-			spriteType = "GFX_mamluk_mechanic_bar_frame"
-			position = { x = 124 y = 70 }
+			spriteType = "GFX_russian_government_bar_frame"
+			position = { x = 235 y = -2 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
@@ -1149,14 +1131,14 @@ guiTypes = {
 		iconType = {
 			name ="mamluk_mil_power_bar"
 			spriteType = "GFX_russian_government_bar"
-			position = { x = 248 y = 74 }
+			position = { x = 250 y = 55 }
 			Orientation = "UPPER_LEFT"
 
 		}
 		iconType = {
 			name ="mamluk_mil_power_frame"
-			spriteType = "GFX_mamluk_mechanic_bar_frame"
-			position = { x = 234 y = 70 }
+			spriteType = "GFX_russian_government_bar_frame"
+			position = { x = 235 y = 33 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
@@ -1182,39 +1164,30 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "seize_clerical_holdings_button"
-			position = { x = 41 y = 10 }
-			quadTextureSprite ="GFX_seize_clerical_holdings_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = -20 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Contribute to Codex"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "invite_minorities_button"
-			position = { x = 133 y = 10 }
-			quadTextureSprite ="GFX_invite_minorities_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = 15 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Conscript Outsiders"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "sanction_holy_war_button"
-			position = { x = 225 y = 10 }
-			quadTextureSprite ="GFX_sanction_holy_war_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = 50 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Quell Enemies"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 	}
 
@@ -1238,52 +1211,43 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "enlist_general_button"
-			position = { x = 41 y = 10 }
-			quadTextureSprite ="GFX_enlist_general_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = -35 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Enlist General"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "train_horsemanship_button"
-			position = { x = 138 y = 10 }
-			quadTextureSprite ="GFX_train_horsemanship_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = 0 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Expand Influence"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "conscript_from_tribes_button"
-			position = { x = 235 y = 10 }
-			quadTextureSprite ="GFX_conscript_from_tribes_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = 35 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Muster Road Warriors"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 
 		iconType = {
 			name ="tribal_allegiance_bar"
 			spriteType = "GFX_tribal_allegiance_bar"
-			position = { x = 64 y = 71 }
+			position = { x = 55 y = 71 }
 			Orientation = "UPPER_LEFT"
 
 		}
 		iconType = {
 			name ="tribal_allegiance_frame"
 			spriteType = "GFX_tribal_federation_bar_frame"
-			position = { x = 53 y = 68 }
+			position = { x = 46 y = 68 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
@@ -1309,39 +1273,30 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "efficient_tax_farming_button"
-			position = { x = 47 y = 10 }
-			quadTextureSprite ="GFX_efficient_tax_farming_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = -20 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Taxation"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "land_acquisition_button"
-			position = { x = 134 y = 10 }
-			quadTextureSprite ="GFX_land_acquisition_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = 15 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Recruitment"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 		guiButtonType = {
 			name = "lenient_taxation_button"
-			position = { x = 221 y = 10 }
-			quadTextureSprite ="GFX_lenient_taxation_button"
-			tooltip = ""
-			tooltipText =""
-			delayedTooltipText = ""
+			position = { x = 60 y = 50 }
+			quadTextureSprite ="GFX_standard_button_224"
 			buttonFont = "vic_18"
+            buttonText = "Production"
 			Orientation = "UPPER_LEFT"
 			clicksound = back_click
-			text = ""
 		}
 	}
 

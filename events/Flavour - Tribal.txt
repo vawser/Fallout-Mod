@@ -32,8 +32,10 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.1.option.a"
-		ai_chance = { factor = 10 }
+		
 		add_prestige = 5
+        
+        ai_chance = { factor = 10 }
 	}
 }
  
@@ -64,16 +66,27 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.2.option.a"
-		ai_chance = { factor = 10 }
+		
+        trigger = { 
+            NOT = { has_idea_group = espionage_ideas }
+        }
+        
 		add_war_exhaustion = -2.5
 		add_prestige = 5
+        
+        ai_chance = { factor = 10 }
 	}
 	option = {
 		name = "tribal_flavour.2.option.b"
-		trigger = { has_idea_group = espionage_ideas }		
-		ai_chance = { factor = 90 }
+        
+		trigger = { 
+            has_idea_group = espionage_ideas 
+        }		
+		
 		add_war_exhaustion = -5
 		add_prestige = 10
+        
+        ai_chance = { factor = 90 }
 	}	
 } 
 
@@ -103,15 +116,20 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.3.option.a"
-		ai_chance = { factor = 10 }
+		
 		add_yearly_manpower = 1.00
+        
+        ai_chance = { factor = 10 }
 	}
 	option = {
 		name = "tribal_flavour.3.option.b"
+        
 		trigger = { has_idea_group = army_organisation_ideas }		
-		ai_chance = { factor = 90 }
+		
 		add_army_tradition = 15
 		add_prestige = 5
+        
+        ai_chance = { factor = 90 }
 	}	
 }
 
@@ -139,9 +157,9 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.4.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_yearly_manpower = 0.5
-		add_treasury = 50
+		add_years_of_income = 0.25
 	}
 }
 
@@ -251,17 +269,18 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.6.option.a"
-		ai_chance = { factor = 100 }
+		
 		event_target:migration_province = {
 			add_base_production = 2
 		}
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
 #-----------------------------
 #	Migrating Cartels
 #-----------------------------
-
 country_event = {
 	id = tribal_flavour.7
 	title = "tribal_flavour.7.title"
@@ -271,7 +290,8 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_narcotics_allowed = yes # Drug Policy is unrestricted
+		has_narcotics_allowed = yes
+        
 		any_neighbor_country = {  
 			has_opinion = { who = ROOT value = 50 }
 			OR = {
@@ -308,18 +328,21 @@ country_event = {
 	
 	option = {
 		name = "tribal_flavour.7.option.a"
-		ai_chance = { factor = 100 }
-		add_treasury = 25
+		
+		add_years_of_income = 0.25
+        
 		event_target:migration_province = {
 			add_base_production = 1
 		}		
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
 #-----------------------------
 #	War Games
 #-----------------------------
-country_event = { # War Games begin
+country_event = {
 	id = tribal_flavour.8
 	title = "tribal_flavour.8.title"
 	desc = "tribal_flavour.8.desc"
@@ -397,32 +420,34 @@ country_event = { # The Khan wins!
 
 	option = {
 		name = "tribal_flavour.9.option.a"
-		ai_chance = { factor = 33 }
-		add_horde_unity = 40
-		hidden_effect = {
-			add_legitimacy = 40
-			add_devotion = 40
-			add_militarised_society = 10
-		}
+		
+		add_horde_unity = 33
+        add_legitimacy = 33
+        add_devotion = 33
+        add_militarised_society = 33
+        
+        ai_chance = { factor = 33 }
 	}
 	option = {
 		name = "tribal_flavour.9.option.b"
-		ai_chance = { factor = 33 }
-		add_prestige = 30
+		
+		add_prestige = 33
+        
+        ai_chance = { factor = 33 }
 	}
 	option = {
 		name = "tribal_flavour.9.option.c"
-		ai_chance = { factor = 17 }
-		trigger = {
-			
-		}
+		
+
 		event_target:khan_gets_high = {
 			add_base_production = 1
 		}
 		random_list = {
 			35 = { add_stability = 1 }
-			65 = { add_horde_unity = 15}
+			65 = { add_horde_unity = 15 }
 		}
+        
+        ai_chance = { factor = 33 }
 	}
 }
 
@@ -443,12 +468,11 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.10.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_stability_or_adm_power = yes
 		add_army_tradition = 5
-		hidden_effect = {
-			add_militarised_society = 3
-		}
+
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -469,30 +493,28 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.11.option.a"
-		ai_chance = { factor = 75 }
+		
 		add_stability = -1
 		add_army_tradition = -5		
 		add_horde_unity = -5
-		hidden_effect = {
-			add_legitimacy = -5
-			add_devotion = -5
-			add_militarised_society = -5
-		}
+        add_legitimacy = -5
+        add_devotion = -5
+
+        ai_chance = { factor = 75 }
 	}
 	
 	option = {
 		name = "tribal_flavour.11.option.b"
-		ai_chance = { factor = 25 }
-
+		
 		custom_tooltip = tribal_flavour.11.option.b.tooltip
+        
 		add_treasury = -150
-		hidden_effect = { 
-			add_horde_unity = -5
-			add_devotion = -5
-			add_army_tradition = -5
-			add_militarised_society = -5
-		}
+        add_army_tradition = -5
+		add_horde_unity = -5
+        add_legitimacy = -5
+        add_devotion = -5
 		add_prestige = -10
+        
 		trigger = {
 			OR = {
 				any_owned_province = { 
@@ -503,6 +525,8 @@ country_event = {
 			NOT = { has_narcotics_forbidden = yes }
 			NOT = { religion_group = religion_group_christianity }
 		}
+        
+        ai_chance = { factor = 25 }
 	}
 }
 
@@ -523,9 +547,11 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.12.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_prestige = 20
 		add_yearly_manpower = 0.25
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -551,8 +577,10 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.13.option.a"
-		ai_chance = { factor = 100 }
-		add_yearly_manpower = 0.2
+		
+		add_yearly_manpower = 0.25
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -584,9 +612,11 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.14.option.a"
-		ai_chance = { factor = 100 }
-		add_yearly_manpower = -0.45
+		
+		add_yearly_manpower = -0.5
 		add_prestige = -5
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -615,14 +645,20 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.15.option.a"
-		ai_chance = { factor = 85 }
-		add_prestige = 2
+		
+		add_prestige = 5
+        
 		create_general = {
             tradition = 50
         }
+        
+        ai_chance = { factor = 85 }
 	}
 	option = {
 		name = "tribal_flavour.15.option.b"
+        
+        add_corruption = -5
+        
 		ai_chance = {
 			factor = 15
 		}
@@ -654,16 +690,22 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.16.option.a"
-		ai_chance = {
-			factor = 50
-		}
+		
 		add_prestige = 5
+        
 		create_general = {
             tradition = 75
         }
+        
+        ai_chance = {
+			factor = 50
+		}
 	}
 	option = {
 		name = "tribal_flavour.15.option.b"
+        
+        add_corruption = -5
+        
 		ai_chance = {
 			factor = 50
 		}
@@ -694,16 +736,18 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.17.option.a"
-		ai_chance = { factor = 100 }
-		add_prestige = -5		
+			
 		add_stability = -1
+        
+        ai_chance = { factor = 100 }
 	}
 	
 	option = {
 		name = "tribal_flavour.17.option.a"
-		ai_chance = { factor = 100 }
-		add_prestige = -15	
-		add_horde_unity = -5
+
+		add_horde_unity = -25
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -733,10 +777,12 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.18.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_horde_unity = -20
 		add_stability = -1
 		kill_heir = yes
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -775,10 +821,12 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.19.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_prestige = 15
 		add_stability = -1
 		kill_heir = yes
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -812,8 +860,10 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.20.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_prestige = -10
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -851,9 +901,11 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.21.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_horde_unity = -5
 		add_prestige = -10
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -890,12 +942,14 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.22.option.a"
-		ai_chance = { factor = 100 }
+		
 		add_army_tradition = -5
 		random = {
 			chance = 15
 			add_stability = -1
 		}
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -930,13 +984,16 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.23.option.a"
-		ai_chance = { factor = 100 }
-		add_prestige = -2		
-		add_yearly_manpower = -0.3
+		
+		add_prestige = -5
+		add_yearly_manpower = -0.25
+        
 		random = {
 			chance = 15
 			add_stability = -1
 		}
+        
+        ai_chance = { factor = 100 }
 	}
 }
 
@@ -966,6 +1023,7 @@ country_event = {
 
 	option = {
 		name = "tribal_flavour.24.option.a"
+        
 		add_prestige = 5
 		add_stability_or_adm_power = yes
 		add_mil_power = 100

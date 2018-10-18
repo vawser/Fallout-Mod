@@ -250,14 +250,17 @@
  new_vegas.1.title: "Profits at the Gomorrah"
  new_vegas.1.desc: "The Omertas family is reporting high profits this month and is asking for permission to extend part of their casino. It would be best to placate them lest we lose their wealth."
  new_vegas.1.option.a: "Vegas is as Vegas does..."
+ new_vegas.1.option.b: "Expand our cut!"
  
  new_vegas.2.title: "Top profits at the Tops"
  new_vegas.2.desc: "The Chairmen family is reporting high profits this month and is asking for some flashy technology to woo a group of important guests. It would be best to give them what they want."
  new_vegas.2.option.a: "Vegas is as Vegas does..."
+ new_vegas.2.option.b: "Expand our cut!"
  
  new_vegas.3.title: "Elegance at the Ultra-Luxe"
  new_vegas.3.desc: "The White Glove society is reporting high profits this month and is asking for permission to import some 'special' meat for a grand feast. It would be best to give them what they want."
  new_vegas.3.option.a: "Vegas is as Vegas does..."
+ new_vegas.3.option.b: "Expand our cut!"
  
  new_vegas.4.title: "Family Disputes"
  new_vegas.4.desc: "There has been a dispute going on between the three families during the past month. Apparently, a rogue wastelander has been sneaking in and murdering some high rollers during the busy hours. Each family blames one another for these transgressions, and now look to you for validation."
@@ -1118,9 +1121,9 @@
  #-----------------------------------------------
  freeside.1.title: "Cleaning up Freeside" 
  freeside.1.desc: "Forcibly restraining the violent masses of Freeside is not enough to ensure its security. Its economy must be reformed, by focusing in on one of its services we can finally solve many of Freeside's woes."
- freeside.option.a: "Freeside's future lies as 'little vegas'" 
- freeside.option.b: "The Van Graffs know whats best"
- freeside.option.c: "Freeside belongs to the people"
+ freeside.1.option.a: "Freeside's future lies as 'little vegas'" 
+ freeside.1.option.b: "The Van Graffs know whats best"
+ freeside.1.option.c: "Freeside belongs to the people"
  
  freeside.2.title: "Drug Epidemic in Freeside"
  freeside.2.desc: "Addiction to debilitating drugs and alcohol has spread rapidly throughout one of the biggest slums in New Vegas. Despite our best efforts, many residents are still addicted, some are dying due to their addictions and a few are even going crazy.\n\nJulie Farkas from the Followers of the Apocalypse, based in the Old Mormon Fort, are asking for assistance help stop the problem."
@@ -1298,13 +1301,13 @@
  # Slavery
  #----------------------------------------------------------------------
  slavery.1.title: "Victory over $FROMCOUNTRY$"
- slavery.1.desc: "Our victory over $FROMCOUNTRY$ in a recent battle has led to numerous prisoners of war being collected. What shall we do with them?\n\nYou currently own §Y[Root.slave_count.GetValue]§! Slaves."
+ slavery.1.desc: "Our victory over $FROMCOUNTRY$ in a recent battle has led to numerous prisoners of war being collected. What shall we do with them?"
  slavery.1.option.a: "Make them slaves"
  slavery.1.option.b: "Ransom them"
  slavery.1.option.c: "Slay them"
  
  slavery.2.title: "Slaves of War"
- slavery.2.desc: "Our victory over $FROMCOUNTRY$ in a recent battle has led to the acquisition of numerous slavery. They will be sent back the capital for processing.\n\nYou currently own §Y[Root.slave_count.GetValue]§! Slaves."
+ slavery.2.desc: "Our victory over $FROMCOUNTRY$ in a recent battle has led to the acquisition of numerous slavery. They will be sent back the capital for processing."
  slavery.2.option.a: "Good work"
  
  slavery.3.title: "Slaver's Haul"
@@ -1437,3 +1440,22 @@
  tribal_flavour.26.t: "Military Traditions"
  tribal_flavour.26.d: "Our ancestors where nomads and our society remain dominated by a mounted martial class but over time we have come to see that there is much to be learned from our neighbors. While we are far from abandoning the traditions of our predecessors our armies will develop along the lines of our settled neighbors as our society evolves."
  tribal_flavour.26.a: "Forward!"
+
+ #----------------------------------
+ # Theocracy
+ #----------------------------------
+ theocracy.1.title: "Heir needed in $COUNTRY$!"
+ theocracy.1.desc: "As we currently have no designated heir for $MONARCHTITLE$ $MONARCH$, we have several options to pick from."
+ theocracy.1.option.a: "I've heard great things about a zealous bureaucrat..."
+ theocracy.1.option.b: "The next town over's got some true believers..."
+ theocracy.1.option.c: "I know the local capitalist has a really promising kid..."
+ theocracy.1.option.d: "Let's go for a religious scholar..."
+ 
+ #----------------------------------
+ # Renewal Cult
+ #----------------------------------
+ renewal_cult.1.title: "Heir needed in [Root.GetName]"
+ renewal_cult.1.desc: "As we currently have no designated heir for [Root.Monarch.GetTitle] [Root.Monarch.GetName]."
+ renewal_cult.1.option.a: "The Renewal Cult is nothing without good old Zomak."
+ renewal_cult.1.option.b: "As in Gecko, so it shall be here. Salute the Mole Rats!"
+ 

@@ -25,17 +25,7 @@ country_event = {
 	option = {
 		name = slavery.1.option.a
 		
-		trigger = {
-			has_dlc = "The Cossacks"
-			has_estate = estate_slavers
-		}
-		
-		add_estate_loyalty = {
-			estate = estate_slavers
-			loyalty = 10
-		}
-		
-        add_prestige = -5
+		add_yearly_manpower = 1
 	}
     
     option = {
@@ -47,7 +37,7 @@ country_event = {
     option = {
 		name = slavery.1.option.c
 		
-        add_prestige = 5
+        add_prestige = 10
 	}
 }
 
@@ -61,8 +51,6 @@ country_event = {
     is_triggered_only = yes
     
     trigger = {
-		has_dlc = "The Cossacks"
-		has_estate = estate_slavers
         OR = {
 			has_slavery_allowed = yes
 			has_slavery_licensed = yes
@@ -78,10 +66,7 @@ country_event = {
 	option = {
 		name = slavery.2.option.a
 		
-        add_estate_loyalty = {
-            estate = estate_slavers
-            loyalty = 5
-        }
+        add_yearly_manpower = 1
 	}
 }
 
@@ -93,17 +78,15 @@ country_event = {
 	picture = ENCAMPMENT_eventPicture
     
     trigger = {
-		has_dlc = "The Cossacks"
-		has_estate = estate_slavers
 		OR = {
 			has_slavery_allowed = yes
 			has_slavery_licensed = yes
 		}
-        treasury = 100
+        years_of_income = 0.25
     }
     
     mean_time_to_happen = {
-		months = 120
+		months = 240
 	}
     
     immediate = {
@@ -115,12 +98,9 @@ country_event = {
 	option = {
 		name = slavery.3.option.a
 		
-        add_treasury = -100
+        add_years_of_income = -0.25
         
-        add_estate_loyalty = {
-            estate = estate_slavers
-            loyalty = 10
-        }
+        add_yearly_manpower = 1
 	}
     
     option = {
