@@ -13,13 +13,14 @@ country_decisions = {
 			NOT = { has_country_modifier = drug_purge_cooldown }
 		}
 		allow =  {
-            mil_power = 100
+            years_of_income = 1
 			any_owned_province = {
 				trade_goods = drugs
             }
 		}
 		effect = {
-            add_mil_power = -100
+            add_years_of_income = -1
+            
 			hidden_effect = {
 				add_country_modifier = { 
 					name = drug_purge_cooldown
@@ -50,52 +51,8 @@ country_decisions = {
             modifier = {
                 factor = 0
                 
-                NOT = { mil_power = 300 }
+                NOT = { years_of_income = 2 }
             }
 		}
     }
-
-	purge_vice = {
-		potential = {
-			OR = {
-				religion_group = religion_group_christianity
-				religion_group = religion_group_jewish
-				religion_group = religion_group_muslim
-				religion = renewal
-			}
-			NOT = { tag = ORL } # New Orleans continues to be more liberal despite Christian objections
-			NOT = { has_country_modifier = drug_purge_cooldown }
-		}
-		allow =  {
-			OR = {
-				has_prostitution_allowed = yes
-				has_prostitution_licensed = yes
-				has_narcotics_allowed = yes
-				has_narcotics_licensed = yes
-				has_full_conscription = yes
-			}
-		}
-		effect = {
-			hidden_effect = {
-				add_country_modifier = { 
-					name = drug_purge_cooldown
-					duration = 3650
-					hidden = yes
-				}
-			}
-			
-			set_prostitution_forbidden = yes
-			set_narcotics_forbidden = yes
-			
-			if = {
-				limit = { has_full_conscription = yes }
-				set_limited_conscription = yes
-			}
-
-			add_dip_power = -100
-		}
-		ai_will_do = {
-			factor = 1
-		}
-    }	
 }

@@ -24,8 +24,11 @@ country_decisions = {
                     is_core = ROOT
                 }
             }
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
 			add_country_modifier = {
 				name = the_glory_of_rome
 				duration = -1
@@ -35,51 +38,6 @@ country_decisions = {
 			factor = 1
 		}
 	}
-    
-    form_veteran_legionary_regiment = {
-        potential = {
-			has_dlc = "Third Rome"
-            NOT = { has_dlc = "The Cossacks" }
-            OR = {
-				tag = CAE
-                has_reform = legion_reform
-			}
-		}
-		allow =  {
-			manpower = 5
-            years_of_income = 5
-		}
-	  	effect = {
-			add_manpower = -5
-            add_years_of_income = -5
-            
-            custom_tooltip = VETERAN_LEGIONARIES_RECRUITMENT
-            hidden_effect = {
-                capital_scope = {
-                    ROOT = {
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                    }
-                }
-            }
-		}
-		ai_will_do = {
-			factor = 0
-            
-            modifier = {
-                factor = 10
-                years_of_income = 10
-            }
-            
-            modifier = {
-                factor = 0
-                army_size_percentage = 0.9
-            }
-		}
-    }
     
     conduct_enslavement_sweep = {
         potential = {
@@ -99,10 +57,11 @@ country_decisions = {
                     NOT = { religion = ROOT }
                 }
             }
-            mil_power = 50
+            years_of_income = 1
 		}
 	  	effect = {
-			add_mil_power = -50
+			add_years_of_income = -1
+            
             hidden_effect = {
                 add_country_modifier = {
                     name = decision_cooldown
@@ -165,7 +124,7 @@ country_decisions = {
                     NOT = { religion = ROOT }
                 }
             }
-            mil_power = 250
+            years_of_income = 1
 		}
 	  	effect = {
             hidden_effect = {
@@ -175,7 +134,7 @@ country_decisions = {
                     hidden = yes
                 }
             }
-			add_mil_power = -250
+			add_years_of_income = -1
             
             custom_tooltip = EXTERMINATION_EFFECT
             hidden_effect = {
@@ -235,77 +194,6 @@ country_decisions = {
 		}
     }
     
-    mint_aureaus = {
-        potential = {
-            tag = CAE
-            NOT = { has_dlc = "The Cossacks" }
-            NOT = { has_country_modifier = minting_cooldown }
-		}
-		allow =  {
-			NOT = { inflation = 10 }
-		}
-	  	effect = {
-            hidden_effect = {
-                add_country_modifier = { 
-                    name = minting_cooldown
-                    duration = 365
-                    hidden = yes
-                }
-            }
-			add_inflation = 5
-            add_years_of_income = 1
-		}
-		ai_will_do = {
-			factor = 0
-            
-            modifier = {
-                factor = 1
-                NOT = { years_of_income = 0.2 }
-            }
-            
-            modifier = {
-                factor = 0
-                NOT = { inflation = 20 }
-            }
-		}
-    }
-    
-    mint_denarius = {
-        potential = {
-            tag = CAE
-            NOT = { has_dlc = "The Cossacks" }
-            NOT = { has_country_modifier = minting_cooldown }
-		}
-		allow =  {
-			NOT = { inflation = 10 }
-		}
-	  	effect = {
-            hidden_effect = {
-                add_country_modifier = { 
-                    name = minting_cooldown
-                    duration = 365
-                    hidden = yes
-                }
-            }
-			add_inflation = 2
-            add_years_of_income = 0.25
-		}
-		ai_will_do = {
-			factor = 0
-            
-            modifier = {
-                factor = 1
-                NOT = { years_of_income = 0.2 }
-            }
-            
-            modifier = {
-                factor = 0
-                NOT = { inflation = 20 }
-            }
-		}
-    }
-    
-    
     indoctrinated_by_mars = {
 		major = yes
         potential = {
@@ -317,15 +205,16 @@ country_decisions = {
 		}
 
 		allow =  {
-			adm_power = 50
-			legitimacy_equivalent = 100
+			years_of_income = 1
+            
             NOT = { has_country_modifier = indoctrinated_by_mars }
 		}
 	  	effect = {
-			add_adm_power = -50
+			add_years_of_income = -1
+            
             add_country_modifier = {
                 name = indoctrinated_by_mars
-                duration = 365
+                duration = 1800
             }
 		}
 		ai_will_do = {
@@ -334,6 +223,11 @@ country_decisions = {
             modifier = {
                 factor = 10
                 NOT = { religious_unity = 0.5 }
+            }
+            
+            modifier = {
+                factor = 0
+                religious_unity = 1
             }
 		}
     }

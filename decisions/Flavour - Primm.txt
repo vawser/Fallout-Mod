@@ -12,9 +12,12 @@ country_decisions = {
 		}
 		allow =  {
 			NOT = { has_country_flag = new_sheriff }
+            years_of_income = 0.25
 		}
 	  	effect = {
-			set_country_flag = new_sheriff
+			hidden_effect = { set_country_flag = new_sheriff }
+            add_years_of_income = -0.25
+            
 			country_event = { id = primm.1 }
 		}
 		ai_will_do = {

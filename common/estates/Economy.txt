@@ -297,6 +297,85 @@ policy_economy = {
     }
     
     #-----------------------
+    # Unique
+    #-----------------------
+    interaction = {
+        name = "mint_aureaus"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            tag = CAE
+        }
+        trigger = {        
+            NOT = { inflation = 10 }
+        }
+        effect = {
+            add_inflation = 2
+            add_years_of_income = 1
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { inflation = 10 }
+            }
+        }
+    }
+    interaction = {
+        name = "mint_denarius"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            tag = CAE
+        }
+        trigger = {        
+            NOT = { inflation = 10 }
+        }
+        effect = {
+            add_inflation = 1
+            add_years_of_income = 0.5
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { inflation = 10 }
+            }
+        }
+    }
+    interaction = {
+        name = "mint_ncr_dollars"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            tag = NCR
+        }
+        trigger = {        
+            NOT = { inflation = 10 }
+        }
+        effect = {
+            add_inflation = 1
+            add_years_of_income = 0.5
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { inflation = 10 }
+            }
+        }
+    }
+    
+    #-----------------------
     # Ignorable
     #-----------------------
 	keep_on_conquest = no

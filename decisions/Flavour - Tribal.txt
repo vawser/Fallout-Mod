@@ -9,8 +9,11 @@ country_decisions = {
 			any_owned_province = {
                 has_province_modifier = pf_vault
             }
+            stability = 0
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
             if = {
                 limit = {
                     NOT = { has_reform = vault_reform }
@@ -36,8 +39,11 @@ country_decisions = {
 		allow =  {
             is_tribal_government = yes
 			is_at_war = yes
+            years_of_income = 0.1
 		}
 	  	effect = {
+            add_years_of_income = -0.1
+            
 			capital_scope = {
 				infantry = ROOT
 				cavalry = ROOT
@@ -64,14 +70,15 @@ country_decisions = {
 		}
 		allow =  {
             is_tribal_government = yes
-			treasury = 500
+			years_of_income = 1
 			OR = {
 				has_narcotics_allowed = yes
 				has_narcotics_licensed = yes
 			}
 		}
 	  	effect = {
-			add_treasury = -500
+			add_years_of_income = -1
+            
 			add_country_modifier = { 
 				name = chem_lab
 				duration = -1

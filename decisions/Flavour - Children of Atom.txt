@@ -5,9 +5,11 @@ country_decisions = {
             NOT = { has_country_modifier = anti_savage_edict }
 		}
 		allow =  {
-			stability = 1
+			years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
 			add_country_modifier = {
 				name = anti_savage_edict
 				duration = -1
@@ -25,8 +27,11 @@ country_decisions = {
 		}
 		allow =  { 
 			adm_tech = 10
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
 			add_country_modifier = {
 				name = roaming_preachers
 				duration = -1

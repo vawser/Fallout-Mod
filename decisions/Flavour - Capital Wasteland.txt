@@ -17,13 +17,15 @@ country_decisions = {
                     type = all
                 }
             }
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
 			add_country_modifier = { 
 				name = the_capitol
 				duration = -1
 			}
-			add_stability = 1
 		}
 		ai_will_do = {
 			factor = 1
@@ -41,10 +43,10 @@ country_decisions = {
             }
 		}
 		allow =  {
-            mil_power = 100
+            years_of_income = 1
 		}
 	  	effect = {
-            add_mil_power = -100
+            add_years_of_income = -1
             
             random_list = {
                 50 = {

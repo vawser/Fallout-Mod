@@ -5,9 +5,12 @@ country_decisions = {
 			NOT = { has_country_modifier = super_mutant_base }
 		}
 		allow =  {
-			total_development = 50
+			total_development = 100
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
 			add_country_modifier = { 
 				name = super_mutant_base
 				duration = -1

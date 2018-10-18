@@ -16,8 +16,11 @@ country_decisions = {
 				}
 			}
 			total_development = 100
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
 			add_country_modifier = {
 				name = unified_brotherhood
 				duration = -1
@@ -36,8 +39,10 @@ country_decisions = {
 		}
 		allow =  {
 			has_reform = brotherhood_reform
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
 			add_country_modifier = { 
 				name = original_directive
 				duration = -1
@@ -60,8 +65,10 @@ country_decisions = {
 		}
 		allow =  {
 			has_reform = brotherhood_reform
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
 			add_country_modifier = { 
 				name = brotherhood_fascist_directive
 				duration = -1

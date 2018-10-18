@@ -4,11 +4,14 @@ country_decisions = {
 			is_tribal_government = yes
 		}
 		allow =  {
-			stability = 3
+			stability = 0
 			total_development = 100
+            years_of_income = 2
 		}
 	  	effect = {
 			add_stability = -6
+            add_years_of_income = -2
+            
 			if = {
                 limit = {
                     NOT = { is_settlement_government = yes }
@@ -30,11 +33,14 @@ country_decisions = {
 			is_tribal_government = yes
 		}
 		allow =  {
-			stability = 3
+			stability = 0
 			total_development = 100
+            years_of_income = 2
 		}
 	  	effect = {
 			add_stability = -6
+            add_years_of_income = -2
+            
 			if = {
                 limit = {
                     NOT = { has_reform = republic_reform }

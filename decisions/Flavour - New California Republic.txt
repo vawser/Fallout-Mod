@@ -41,8 +41,11 @@ country_decisions = {
                     is_core = ROOT
                 }
             }
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
 			add_country_modifier = {
 				name = the_great_western_peace
 				duration = -1
@@ -52,49 +55,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-    
-    form_ranger_regiment = {
-        potential = {
-			has_dlc = "Third Rome"
-#            NOT = { has_dlc = "The Cossacks" }
-            OR = {
-				tag = NCR
-				tag = GD1
-			}
-		}
-		allow =  {
-			manpower = 5
-            years_of_income = 5
-		}
-	  	effect = {
-			add_manpower = -5
-            add_years_of_income = -5
-            
-            custom_tooltip = RANGER_RECRUITMENT
-            hidden_effect = {
-                capital_scope = {
-                    ROOT = {
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                        streltsy_infantry = PREV
-                    }
-                }
-            }
-		}
-		ai_will_do = {
-			factor = 0
-            
-            modifier = {
-                factor = 10
-                years_of_income = 10
-            }
-            
-            modifier = {
-                factor = 0
-                army_size_percentage = 0.9
-            }
-		}
-    }
 }

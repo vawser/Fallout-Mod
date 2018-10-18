@@ -6,11 +6,13 @@ country_decisions = {
             NOT = { has_country_modifier = securitron_bunker }
 		}
 		allow =  {
-            #has_country_modifier = power_of_the_courier
             owns_core_province = 258
+            years_of_income = 2
 		}
 	  	effect = {
             custom_tooltip = UNLOCK_MKII_SECURITRONS
+            
+            add_years_of_income = -2
             
 			add_country_modifier = {
                 name = securitron_bunker

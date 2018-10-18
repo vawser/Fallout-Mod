@@ -60,6 +60,11 @@ province_event = {
 
         add_colonysize = 100
 	}
+    option = {
+		name = colonial_pulse.2.option.b
+
+        owner = { add_prestige = 10 }
+	}
 }
 
 # "Super Mutants!"
@@ -90,6 +95,11 @@ province_event = {
 		
 		add_colonysize = -100
 	}
+    option = {
+		name = colonial_pulse.3.option.b
+		
+		owner = { add_years_of_income = -1 }
+	}
 }
 
 # "Raiders!
@@ -119,6 +129,11 @@ province_event = {
 		name = colonial_pulse.4.option.a
 		
 		add_colonysize = -50
+	}
+    option = {
+		name = colonial_pulse.4.option.b
+		
+		owner = { add_years_of_income = -1 }
 	}
 }
 

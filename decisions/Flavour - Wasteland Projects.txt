@@ -6,12 +6,13 @@ country_decisions = {
 			1200 = { NOT = { has_province_modifier = building_lucky38 } }
 		}
 		allow = {
-			treasury = 1000
+			years_of_income = 5
 			total_development = 35
 		}
 		
 		effect = {
-			add_treasury = -1000
+			add_years_of_income = -5
+            
 			1200 = {
 				add_permanent_province_modifier = {
                     name = building_lucky38
@@ -31,10 +32,11 @@ country_decisions = {
             118 = { NOT = { has_province_modifier = building_the_bison_steve_casino } }
 		}
 		allow =  {
-			treasury = 500
+			years_of_income = 2
 		}
 	  	effect = {
-			add_treasury = -500
+			add_years_of_income = -2
+            
 			118 = {
 				add_permanent_province_modifier = {
                     name = building_the_bison_steve_casino
@@ -54,11 +56,12 @@ country_decisions = {
 			1414 = { NOT = { has_province_modifier = building_lincoln_memorial } }
 		}
 		allow = {
-			treasury = 500
+			years_of_income = 2
 		}
 		
 		effect = {
-			add_treasury = -500
+			add_years_of_income = -2
+            
 			1414 = {
 				add_permanent_province_modifier = {
                     name = building_lincoln_memorial
@@ -82,12 +85,13 @@ country_decisions = {
 			}
 		}
 		allow = {
-			treasury = 250
+			years_of_income = 1
 		}
 		
 		effect = {
-			add_treasury = -250
-			set_global_flag = cleaned_freeside
+            hidden_effect = { set_global_flag = cleaned_freeside }
+            
+			add_years_of_income = -1
 			country_event = { id = freeside.1 }
 		}
 		

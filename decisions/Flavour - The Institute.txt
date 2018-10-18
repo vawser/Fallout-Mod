@@ -6,11 +6,11 @@ country_decisions = {
             NOT = { has_country_modifier = fusion_reactor }
 		}
 		allow =  {
-            years_of_income = 1
+            years_of_income = 2
             full_idea_group = institute_ideas
 		}
 	  	effect = {
-			add_years_of_income = -1
+			add_years_of_income = -2
             
             add_country_modifier = {
                 name = "fusion_reactor"
@@ -32,8 +32,11 @@ country_decisions = {
 			capital_scope = {
                 has_siege = yes 
             }
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
+            
             capital_scope = {
                 kill_units = {
                     who = enemy

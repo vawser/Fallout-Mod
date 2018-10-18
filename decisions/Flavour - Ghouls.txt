@@ -5,14 +5,15 @@ country_decisions = {
 			NOT = { has_country_modifier = ghoul_sanctuary }
 		}
 		allow =  {
-			total_development = 50
+			total_development = 100
+            years_of_income = 1
 		}
 	  	effect = {
+            add_years_of_income = -1
 			add_country_modifier = { 
 				name = ghoul_sanctuary
 				duration = -1
 			}
-			add_stability = 1
 		}
 		ai_will_do = {
 			factor = 1
