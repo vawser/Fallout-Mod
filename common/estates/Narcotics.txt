@@ -119,6 +119,114 @@ policy_narcotics = {
         }
     }
     
+    interaction = {
+        name = "synthesize_xcell"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_narcotics_licensed = yes
+                has_narcotics_allowed = yes
+            }
+        }
+        trigger = {
+            NOT = { has_ruler_modifier = ruler_xcell }
+            years_of_income = 3
+        }
+        effect = {
+            add_years_of_income = -3
+            
+            change_adm = 1
+            
+            add_ruler_modifier = {
+                name = ruler_xcell
+                duration = 9125
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
+        }
+    }
+    
+    interaction = {
+        name = "synthesize_mentats"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_narcotics_licensed = yes
+                has_narcotics_allowed = yes
+            }
+        }
+        trigger = {
+            NOT = { has_ruler_modifier = ruler_mentats }
+            years_of_income = 3
+        }
+        effect = {
+            add_years_of_income = -3
+            
+            change_dip = 1
+            
+            add_ruler_modifier = {
+                name = ruler_mentats
+                duration = 9125
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
+        }
+    }
+    
+    interaction = {
+        name = "synthesize_psycho"
+        icon = 1
+        years_between_use = 25
+        
+        potential = { 
+            OR = {
+                has_narcotics_licensed = yes
+                has_narcotics_allowed = yes
+            }
+        }
+        trigger = {
+            NOT = { has_ruler_modifier = ruler_psycho }
+            years_of_income = 3
+        }
+        effect = {
+            add_years_of_income = -3
+            
+            change_mil = 1
+            
+            add_ruler_modifier = {
+                name = ruler_psycho
+                duration = 9125
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
+        }
+    }
+    
     #-----------------------
     # Ignorable
     #-----------------------

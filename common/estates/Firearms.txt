@@ -119,6 +119,135 @@ policy_firearms = {
         }
     }
     
+    interaction = {
+        name = "utilize_plasma_weaponry"
+        icon = 1
+        years_between_use = 10
+        
+        potential = { 
+            NOT = { has_country_modifier = plasma_weaponry }
+            NOT = { has_country_modifier = laser_weaponry }
+            NOT = { has_country_modifier = nuclear_weaponry }
+            NOT = { has_country_modifier = junk_weaponry }
+        }
+        trigger = {        
+            years_of_income = 2
+        }
+        effect = {
+            add_years_of_income = -2
+            
+            add_country_modifier = {
+                name = plasma_weaponry
+                duration = 3650
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 5 }
+            }
+        }
+    }
+    interaction = {
+        name = "utilize_laser_weaponry"
+        icon = 1
+        years_between_use = 10
+        
+        potential = { 
+            NOT = { has_country_modifier = plasma_weaponry }
+            NOT = { has_country_modifier = laser_weaponry }
+            NOT = { has_country_modifier = nuclear_weaponry }
+            NOT = { has_country_modifier = junk_weaponry }
+        }
+        trigger = {        
+            years_of_income = 2
+        }
+        effect = {
+            add_years_of_income = -2
+            
+            add_country_modifier = {
+                name = laser_weaponry
+                duration = 3650
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 5 }
+            }
+        }
+    }
+    interaction = {
+        name = "utilize_nuclear_weaponry"
+        icon = 1
+        years_between_use = 10
+        
+        potential = { 
+            NOT = { has_country_modifier = plasma_weaponry }
+            NOT = { has_country_modifier = laser_weaponry }
+            NOT = { has_country_modifier = nuclear_weaponry }
+            NOT = { has_country_modifier = junk_weaponry }
+        }
+        trigger = {        
+            years_of_income = 2
+        }
+        effect = {
+            add_years_of_income = -2
+            
+            add_country_modifier = {
+                name = nuclear_weaponry
+                duration = 3650
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 5 }
+            }
+        }
+    }
+    interaction = {
+        name = "utilize_junk_weaponry"
+        icon = 1
+        years_between_use = 10
+        
+        potential = { 
+            NOT = { has_country_modifier = plasma_weaponry }
+            NOT = { has_country_modifier = laser_weaponry }
+            NOT = { has_country_modifier = nuclear_weaponry }
+            NOT = { has_country_modifier = junk_weaponry }
+        }
+        trigger = {        
+            years_of_income = 1
+        }
+        effect = {
+            add_years_of_income = -1
+            
+            add_country_modifier = {
+                name = junk_weaponry
+                duration = 3650
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
+        }
+    }
+    
     #-----------------------
     # Ignorable
     #-----------------------

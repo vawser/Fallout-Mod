@@ -119,6 +119,36 @@ policy_scavenging = {
         }
     }
     
+    interaction = {
+        name = "start_scavenger_hunt"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            OR = {
+                has_scavenging_allowed = yes
+                has_scavenging_licensed = yes
+            }
+        }
+        trigger = {        
+            years_of_income = 0.1
+        }
+        effect = {
+            add_years_of_income = -0.1
+            
+            hidden_effect = {
+                set_country_flag = scavenging_flavour_1
+            }
+            
+            tooltip = {
+                country_event = { id = scavenging_flavour.1 }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
     #-----------------------
     # Ignorable
     #-----------------------
