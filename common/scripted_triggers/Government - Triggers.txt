@@ -50,3 +50,16 @@ is_settlement_government = {
     }
 }
 
+uses_heir = {
+    OR = {
+        has_reform = settlement_mechanic
+        has_reform = militia_mechanic
+        has_reform = legion_mechanic
+        has_reform = theocracy_mechanic
+        has_reform = brotherhood_mechanic
+        has_reform = cult_mechanic
+        has_reform = tribe_mechanic
+        has_reform = raider_mechanic
+        has_reform = great_khan_mechanic
+    }
+}

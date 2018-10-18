@@ -1,0 +1,393 @@
+namespace = prostitution_flavour
+
+country_event = {
+	id = prostitution_flavour.1
+	title = prostitution_flavour.1.title
+	desc = prostitution_flavour.1.desc
+	picture = FREESIDE_eventPicture
+	
+	trigger = {
+		has_country_flag = prostitution_flavour_1
+	}
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = prostitution_flavour_1 }
+    }
+
+    # Blonde
+	option = {
+		name = prostitution_flavour.1.option.a
+
+        random_list = {
+            50 = {
+                add_country_modifier = {
+                    name = radiant_glow
+                    duration = 1800
+                }
+            }
+            50 = {
+                country_event = { id = prostitution_flavour.2 }
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+    # Brunette
+    option = {
+		name = prostitution_flavour.1.option.b
+
+        random_list = {
+            50 = {
+                add_country_modifier = {
+                    name = radiant_glow
+                    duration = 1800
+                }
+            }
+            50 = {
+                country_event = { id = prostitution_flavour.3 }
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+    # Redhead
+    option = {
+		name = prostitution_flavour.1.option.c
+
+        random_list = {
+            50 = {
+                add_country_modifier = {
+                    name = radiant_glow
+                    duration = 1800
+                }
+            }
+            50 = {
+                country_event = { id = prostitution_flavour.4 }
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+    # Mysterious
+    option = {
+		name = prostitution_flavour.1.option.d
+
+        random_list = {
+            50 = {
+                add_country_modifier = {
+                    name = radiant_glow
+                    duration = 1800
+                }
+            }
+            50 = {
+                country_event = { id = prostitution_flavour.5 }
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+    # Robot
+    option = {
+		name = prostitution_flavour.1.option.e
+
+        random_list = {
+            50 = {
+                add_country_modifier = {
+                    name = robotic_energies
+                    duration = 1800
+                }
+            }
+            50 = {
+                country_event = { id = prostitution_flavour.6 }
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+    # Mutant
+    option = {
+		name = prostitution_flavour.1.option.f
+
+        random_list = {
+            50 = {
+                add_country_modifier = {
+                    name = mutant_vigor
+                    duration = 1800
+                }
+            }
+            50 = {
+                country_event = { id = prostitution_flavour.7 }
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+    # Ghoul
+    option = {
+		name = prostitution_flavour.1.option.g
+
+        random_list = {
+            50 = {
+                add_country_modifier = {
+                    name = radiant_glow
+                    duration = 1800
+                }
+            }
+            50 = {
+                country_event = { id = prostitution_flavour.8 }
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+}
+
+# The Radiant Blonde
+country_event = {
+	id = prostitution_flavour.2
+	title = prostitution_flavour.2.title
+	desc = prostitution_flavour.2.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = prostitution_flavour.2.option.a
+
+        define_heir = {
+            adm = 0
+            dip = 3
+            mil = 0
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+	}
+    
+    option = {
+		name = prostitution_flavour.2.option.b
+    }
+}
+
+# The Enthralling Brunette
+country_event = {
+	id = prostitution_flavour.3
+	title = prostitution_flavour.3.title
+	desc = prostitution_flavour.3.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = prostitution_flavour.3.option.a
+
+        define_heir = {
+            adm = 3
+            dip = 0
+            mil = 0
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+	}
+    
+    option = {
+		name = prostitution_flavour.3.option.b
+    }
+}
+
+# The Fiery Redhead
+country_event = {
+	id = prostitution_flavour.4
+	title = prostitution_flavour.4.title
+	desc = prostitution_flavour.4.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = prostitution_flavour.4.option.a
+
+        define_heir = {
+            adm = 0
+            dip = 0
+            mil = 3
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+	}
+    
+    option = {
+		name = prostitution_flavour.4.option.b
+    }
+}
+
+# The Mysterious Figure
+country_event = {
+	id = prostitution_flavour.5
+	title = prostitution_flavour.5.title
+	desc = prostitution_flavour.5.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = prostitution_flavour.5.option.a
+
+        define_heir = {
+            adm = 2
+            dip = 2
+            mil = 2
+            max_random_adm = 6
+            max_random_dip = 6
+            max_random_mil = 6
+        }
+	}
+    
+    option = {
+		name = prostitution_flavour.5.option.b
+    }
+}
+
+# The Robotic Stallion
+country_event = {
+	id = prostitution_flavour.6
+	title = prostitution_flavour.6.title
+	desc = prostitution_flavour.6.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = prostitution_flavour.6.option.a
+
+        define_heir = {
+            culture = robot
+            mil = 4
+        }
+	}
+    
+    option = {
+		name = prostitution_flavour.6.option.b
+    }
+}
+
+# The Mutant Beauty
+country_event = {
+	id = prostitution_flavour.7
+	title = prostitution_flavour.7.title
+	desc = prostitution_flavour.7.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = prostitution_flavour.7.option.a
+
+        define_heir = {
+            culture = super_mutant
+        }
+	}
+    
+    option = {
+		name = prostitution_flavour.7.option.b
+    }
+}
+
+# The Ghoulish Beauty
+country_event = {
+	id = prostitution_flavour.8
+	title = prostitution_flavour.8.title
+	desc = prostitution_flavour.8.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = prostitution_flavour.8.option.a
+
+        define_heir = {
+            culture = ghoul
+        }
+	}
+    
+    option = {
+		name = prostitution_flavour.8.option.b
+    }
+}
+
+# Radiant Glow
+country_event = {
+	id = prostitution_flavour.9
+	title = prostitution_flavour.9.title
+	desc = prostitution_flavour.9.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+    
+    option = {
+		name = prostitution_flavour.9.option.a
+        
+        add_country_modifier = {
+            name = radiant_glow
+            duration = 1800
+        }
+    }
+}
+
+# Robotic Energies
+country_event = {
+	id = prostitution_flavour.10
+	title = prostitution_flavour.10.title
+	desc = prostitution_flavour.10.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+    
+    option = {
+		name = prostitution_flavour.10.option.a
+        
+        add_country_modifier = {
+            name = robotic_energies
+            duration = 1800
+        }
+    }
+}
+
+# Mutant Vigor
+country_event = {
+	id = prostitution_flavour.11
+	title = prostitution_flavour.11.title
+	desc = prostitution_flavour.11.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+    
+    option = {
+		name = prostitution_flavour.11.option.a
+        
+        add_country_modifier = {
+            name = mutant_vigor
+            duration = 1800
+        }
+    }
+}

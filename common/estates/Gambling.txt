@@ -57,10 +57,12 @@ policy_gambling = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_gambling_allowed = yes
         }
@@ -80,10 +82,12 @@ policy_gambling = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_gambling_licensed = yes
         }
@@ -103,15 +107,51 @@ policy_gambling = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_gambling_forbidden = yes
         }
         ai_will_do = {
             factor = 0
+        }
+    }
+
+    #-----------------------
+    # Gambling
+    #-----------------------
+    interaction = {
+        name = "host_casino_night"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            OR = {
+                has_gambling_allowed = yes
+                has_gambling_licensed = yes
+            }
+        }
+        trigger = {        
+            years_of_income = 0.1
+        }
+        effect = {
+            add_years_of_income = -0.1
+            
+            # This is so random_list is seeded properly
+            hidden_effect = {
+                set_country_flag = gambling_flavour_1
+            }
+            
+            tooltip = {
+                country_event = { id = gambling_flavour.1 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     

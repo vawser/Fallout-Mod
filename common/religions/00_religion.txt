@@ -44,7 +44,7 @@ religion_group_postwar = {
             trade_efficiency = 0.05
 		}
         country_as_secondary = { 
-            stability_cost_modifier = -0.1
+            global_unrest = -2
 		}
         
         harmonized_modifier = harmonized_secular
@@ -1173,7 +1173,7 @@ religion_group_christianity = {
 		color = { 0.7 0.5 0 }
 		icon = 13
 		country = {
-			stability_cost_modifier = -0.1
+			global_unrest = -1
 			tolerance_own = 1
 		}
 		country_as_secondary = {
@@ -1383,7 +1383,7 @@ religion_group_eastern = {
 		}
 		country_as_secondary = {
 			adm_tech_cost_modifier = -0.1
-			stability_cost_modifier = -0.1
+			global_unrest = -1
 		}
 		heretic = { TAOIST }
         

@@ -60,10 +60,12 @@ policy_slavery = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_slavery_allowed = yes
         }
@@ -83,10 +85,12 @@ policy_slavery = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_slavery_licensed = yes
         }
@@ -106,12 +110,70 @@ policy_slavery = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_slavery_forbidden = yes
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    #-----------------------
+    # Slavery
+    #-----------------------
+    interaction = {
+        name = "recruit_slave_soldiers"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            OR = {
+                has_slavery_allowed = yes
+                has_slavery_licensed = yes
+            }
+        }
+        trigger = {        
+            years_of_income = 0.25
+        }
+        effect = {
+            add_years_of_income = -0.25
+            
+            add_country_modifier = {
+                name = slave_soldiers
+                duration = 1800
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    interaction = {
+        name = "harden_slave_soldiers"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            OR = {
+                has_slavery_allowed = yes
+                has_slavery_licensed = yes
+            }
+        }
+        trigger = {        
+            years_of_income = 0.25
+        }
+        effect = {
+            add_years_of_income = -0.25
+            
+            add_country_modifier = {
+                name = whipped_slaves
+                duration = 1800
+            }
         }
         ai_will_do = {
             factor = 0

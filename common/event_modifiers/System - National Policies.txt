@@ -1,4 +1,30 @@
 #-------------------------------
+# Economy
+#-------------------------------
+reduce_inflation = {
+    inflation_reduction = 0.05
+}
+
+#-------------------------------
+# Law
+#-------------------------------
+improve_legitimacy = {
+    legitimacy = 1
+    republican_tradition = 1
+    devotion = 1
+    horde_unity = 1
+    meritocracy = 1
+}
+
+improve_government = {
+    reform_progress_growth = 1
+}
+
+improve_absolutism = {
+    yearly_absolutism = 1
+}
+
+#-------------------------------
 # Justice
 #-------------------------------
 imprisoning_undesirables = {
@@ -13,3 +39,45 @@ executing_undesirables = {
 enslaving_undesirables = {
     land_maintenance_modifier = -0.15
 }
+
+#-------------------------------
+# Conscription
+#-------------------------------
+improve_army_tradition = {
+    army_tradition = 1
+}
+
+improve_navy_tradition = {
+    navy_tradition = 1
+}
+
+reduce_war_exhaustion = {
+    war_exhaustion = -0.1
+}
+
+#------------------------------- 
+# Slavery
+#-------------------------------
+slave_soldiers = {
+    manpower_recovery_speed = 0.25
+}
+
+whipped_slaves = {
+    recover_army_morale_speed = 0.1
+}
+
+#-------------------------------
+# Prostitution
+#-------------------------------
+radiant_glow = {
+    prestige = 1
+}
+
+robotic_energies = {
+    shock_damage = 0.05
+}
+
+mutant_vigor = {
+    shock_damage_received = -0.05 
+}
+

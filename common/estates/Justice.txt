@@ -32,13 +32,13 @@ policy_justice = {
     # Execution
 	country_modifier_neutral = {
 		global_unrest = -2
-        stability_cost_modifier = 0.25
+        years_of_nationalism = 5
 	}	
     # Slavery
 	country_modifier_angry = {
         global_manpower_modifier = 0.1
 		global_unrest = -1
-        stability_cost_modifier = 0.25
+        years_of_nationalism = 3
 	}
 	
     #-----------------------
@@ -56,10 +56,12 @@ policy_justice = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_imprisonment_punishment = yes
         }
@@ -79,10 +81,12 @@ policy_justice = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_execution_punishment = yes
         }
@@ -103,15 +107,43 @@ policy_justice = {
             NOT = { has_slavery_forbidden = yes }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_slavery_punishment = yes
         }
         ai_will_do = {
             factor = 0
+        }
+    }
+    interaction = {
+        name = "improve_stability"
+        icon = 1
+        years_between_use = 5
+        
+        potential = {
+            NOT = { stability = 3 }
+        }
+        trigger = {        
+            years_of_income = 1     
+        }
+        effect = {
+            add_years_of_income = -1
+            
+            add_stability = 1
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 1 }
+            }
         }
     }
     
@@ -127,10 +159,10 @@ policy_justice = {
             has_imprisonment_punishment = yes
         }
         trigger = {        
-            mil_power = 100      
+            years_of_income = 1
         }
         effect = {
-            add_mil_power = -100
+            add_years_of_income = -1
             
             add_country_modifier = {
                 name = imprisoning_undesirables
@@ -160,10 +192,10 @@ policy_justice = {
             has_execution_punishment = yes
         }
         trigger = {        
-            mil_power = 100      
+            years_of_income = 1
         }
         effect = {
-            add_mil_power = -100
+            add_years_of_income = -1
             
             add_country_modifier = {
                 name = executing_undesirables
@@ -193,10 +225,10 @@ policy_justice = {
             has_slavery_punishment = yes
         }
         trigger = {        
-            mil_power = 100      
+            years_of_income = 1
         }
         effect = {
-            add_mil_power = -100
+            add_years_of_income = -1
             
             add_country_modifier = {
                 name = enslaving_undesirables

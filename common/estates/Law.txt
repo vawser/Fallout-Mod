@@ -53,10 +53,12 @@ policy_law = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_democratic_law = yes
         }
@@ -76,10 +78,12 @@ policy_law = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_oligarchic_law = yes
         }
@@ -99,15 +103,124 @@ policy_law = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_autocratic_law = yes
         }
         ai_will_do = {
             factor = 0
+        }
+    }
+    interaction = {
+        name = "improve_legitimacy"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            always = yes
+        }
+        trigger = {        
+            years_of_income = 0.25
+        }
+        effect = {
+            add_years_of_income = -0.25
+            
+            add_country_modifier = {
+                name = improve_legitimacy
+                duration = 1800
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                legitimacy = 80
+            }
+            modifier = {
+                factor = 0
+                
+                republican_tradition = 80
+            }
+            modifier = {
+                factor = 0
+                
+                devotion = 80
+            }
+            modifier = {
+                factor = 0
+                
+                horde_unity = 80
+            }
+            modifier = {
+                factor = 0
+                
+                meritocracy = 80
+            }
+        }
+    }
+    interaction = {
+        name = "improve_government"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            always = yes
+        }
+        trigger = {        
+            years_of_income = 0.5
+        }
+        effect = {
+            add_years_of_income = -0.5
+            
+            add_country_modifier = {
+                name = improve_government
+                duration = 1800
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
+        }
+    }
+    interaction = {
+        name = "improve_absolutism"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            always = yes
+        }
+        trigger = {        
+            years_of_income = 0.5
+        }
+        effect = {
+            add_years_of_income = -0.5
+            
+            add_country_modifier = {
+                name = improve_absolutism
+                duration = 1800
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
         }
     }
     
@@ -123,10 +236,10 @@ policy_law = {
             has_democratic_law = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_politician
@@ -145,10 +258,10 @@ policy_law = {
             has_democratic_law = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_civil_servant
@@ -156,36 +269,6 @@ policy_law = {
         }
         ai_will_do = {
             factor = 0
-        }
-    }
-    interaction = {
-        name = "ensure_due_process"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_democratic_law = yes
-        }
-        trigger = {        
-            adm_power = 100
-        }
-        effect = {
-            add_adm_power = -100
-            
-            add_legitimacy = 15
-            add_republican_tradition = 15
-            add_devotion = 15
-            add_horde_unity = 15
-            add_meritocracy = 15
-        }
-        ai_will_do = {
-            factor = 1
-            
-            modifier = {
-                factor = 0
-                
-                NOT = { adm_power = 200 }
-            }
         }
     }
     
@@ -236,32 +319,6 @@ policy_law = {
             factor = 0
         }
     }
-    interaction = {
-        name = "pander_to_the_barons"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_oligarchic_law = yes
-        }
-        trigger = {        
-            dip_power = 100
-        }
-        effect = {
-            add_dip_power = -100
-            
-            change_government_reform_progress = 50
-        }
-        ai_will_do = {
-            factor = 1
-            
-            modifier = {
-                factor = 0
-                
-                NOT = { dip_power = 200 }
-            }
-        }
-    }
     
     #-----------------------
     # Autocratic
@@ -310,33 +367,7 @@ policy_law = {
             factor = 0
         }
     }
-    interaction = {
-        name = "establish_absolute_rule"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_autocratic_law = yes
-        }
-        trigger = {        
-            mil_power = 100
-        }
-        effect = {
-            add_mil_power = -100
-            
-            add_absolutism = 5
-        }
-        ai_will_do = {
-            factor = 1
-            
-            modifier = {
-                factor = 0
-                
-                NOT = { dip_power = 200 }
-            }
-        }
-    }
-    
+
     #-----------------------
     # Ignorable
     #-----------------------

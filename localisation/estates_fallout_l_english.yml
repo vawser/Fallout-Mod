@@ -29,20 +29,15 @@
  switch_to_command_economy: "Switch to Command Economy"
  switch_to_market_economy: "Switch to Market Economy"
  
- enforce_taxation: "Enforce Taxation"
  recruit_brahmin_whisperer: "Recruit Brahmin Whisperer"
  recruit_missionary: "Recruit Missionary"
- recind_arrangements: "Recind Debt Arrangement"
- 
- print_money: "Print Money"
  recruit_architect: "Recruit Architect"
  recruit_disciplinarian: "Recruit Disciplinarian"
- renounce_debt: "Renounce Debt"
- 
- accept_kickbacks: "Accept Kickbacks"
  recruit_banker: "Recruit Banker"
  recruit_auditor: "Recruit Auditor"
- establish_debt_contract: "Establish Debt Contract"
+ 
+ reduce_inflation: "Reduce Inflation"
+ desc_reduce_inflation: "We are currently reducing our inflation."
  
  #------------------------------------------
  # Law
@@ -68,15 +63,21 @@
  
  recruit_politician: "Recruit Politician"
  recruit_civil_servant: "Recruit Civil Servant"
- ensure_due_process: "Ensure Due Process"
  
  recruit_orator: "Recruit Orator"
  recruit_spy: "Recruit Spy"
- pander_to_the_barons: "Pander to the Barons"
  
  recruit_enforcer: "Recruit Enforcer"
  recruit_police_officer: "Recruit Police Officer"
- establish_absolute_rule: "Establish Absolute Rule"
+
+ improve_legitimacy: "Improve Legitimacy"
+ desc_improve_legitimacy: "We are improving the legitimacy of our government."
+ 
+ improve_government: "Improve Government"
+ desc_improve_government: "We are improving the governance of our government."
+ 
+ improve_absolutism: "Improve Absolutism"
+ desc_improve_absolutism: "We are improving the absolutism of our government."
  
  #------------------------------------------
  # Justice
@@ -112,6 +113,8 @@
  
  enslaving_undesirables: "Enslaving Undesirables"
  desc_enslaving_undesirables: "We are currently Enslaving those we deem 'undesirable'." 
+ 
+ improve_stability: "Improve Stability"
  
  #------------------------------------------
  # Innovation
@@ -169,9 +172,14 @@
  recruit_forager: "Recruit Forager"
  recruit_sapper: "Recruit Sapper"
  
- emphasis_discipline: "Emphasis Discipline"
- recruit_general: "Recruit General"
- scrap_the_barrel: "Scrap the Barrel"
+ improve_army_tradition: "Improve Army Tradition"
+ desc_improve_army_tradition: "We are improving our army tradition."
+ 
+ improve_navy_tradition: "Improve Navy Tradition"
+ desc_improve_navy_tradition: "We are improving our navy tradition."
+ 
+ reduce_war_exhaustion: "Reduce War Exhaustion"
+ desc_reduce_war_exhaustion: "We are reducing our war exhaustion."
  
  #------------------------------------------
  # Slavery
@@ -194,6 +202,15 @@
  switch_to_slavery_allowed: "Switch to Slavery Allowed"
  switch_to_slavery_licensed: "Switch to Slavery Licensed"
  switch_to_slavery_forbidden: "Switch to Slavery Forbidden"
+ 
+ recruit_slave_soldiers: "Recruit Slave Soldiers"
+ harden_slave_soldiers: "Harden Slave Soldiers"
+ 
+ slave_soldiers: "Slave Soldiers"
+ desc_slave_soldiers: "We are recruiting slave soldiers as troops."
+ 
+ whipped_slaves: "Whipped Slaves"
+ desc_whipped_slaves: "Our slaves are whipped."
 
  #------------------------------------------
  # Gambling
@@ -217,6 +234,54 @@
  switch_to_gambling_licensed: "Switch to Gambling Licensed"
  switch_to_gambling_forbidden: "Switch to Gambling Forbidden"
  
+ host_casino_night: "Host Casino Night"
+ 
+ gambling_flavour.1.title: "Casino Night"
+ gambling_flavour.1.desc: "It is time to host a luxury casino night for the high rollers of [Root.GetName]. Only the most wealthy are permitted to attend, so the potential rewards for the House tonight are unimaginable."
+ gambling_flavour.1.option.a: "The focus is on Blackjack tonight!"
+ gambling_flavour.1.option.b: "The focus is on Craps tonight!"
+ gambling_flavour.1.option.c: "The focus is on Caravan tonight!"
+ 
+ LOW_RISK: "This is a low risk game. As the House we are unlikely to lose, but we will not win much."
+ MED_RISK: "This is a medium risk game. As the House we are more likely to lose, but we can win much more."
+ HIGH_RISK: "This is a high risk game. As the House we are much more likely to lose, but we can win massively!"
+ 
+ gambling_flavour.2.title: "Blackjack"
+ gambling_flavour.2.desc: "Our high rollers have gathered around the Blackjack table tonight. The night draws on and the transfer of money is endless. Let us see how we fared..."
+ gambling_flavour.2.option.a: "Hm..."
+ 
+ gambling_flavour.3.title: "Craps"
+ gambling_flavour.3.desc: "Our high rollers have gathered around the Craps table tonight. The night draws on and the transfer of money is endless. Let us see how we fared..."
+ gambling_flavour.3.option.a: "Hm..."
+ 
+ gambling_flavour.4.title: "Caravan"
+ gambling_flavour.4.desc: "Our high rollers have gathered around the Caravan table tonight. The night draws on and the transfer of money is endless. Let us see how we fared..."
+ gambling_flavour.4.option.a: "Hm..."
+ 
+ gambling_flavour.10.title: "Big Win!"
+ gambling_flavour.10.desc: "Our high rollers have lost terribly tonight, alas. As the House, we have benefited massively from their misfortune."
+ gambling_flavour.10.option.a: "WOO!"
+ 
+ gambling_flavour.11.title: "Medium Win!"
+ gambling_flavour.11.desc: "Our high rollers have lost tonight, alas. As the House, we have benefited from their misfortune."
+ gambling_flavour.11.option.a: "WOO!"
+ 
+ gambling_flavour.12.title: "Small Win!"
+ gambling_flavour.12.desc: "Our high rollers have lost tonight, alas. As the House, we have benefited minorly from their misfortune."
+ gambling_flavour.12.option.a: "WOO!"
+ 
+ gambling_flavour.13.title: "Big Loss!"
+ gambling_flavour.13.desc: "Our high rollers have won massively tonight, alas. As the House, we have lost massively due to their fortune."
+ gambling_flavour.13.option.a: "..."
+ 
+ gambling_flavour.14.title: "Medium Loss!"
+ gambling_flavour.14.desc: "Our high rollers have won tonight, alas. As the House, we have lost due to their fortune."
+ gambling_flavour.14.option.a: "..."
+ 
+ gambling_flavour.15.title: "Small Loss!"
+ gambling_flavour.15.desc: "Our high rollers have won tonight, alas. As the House, we have lost minorly due to their fortune."
+ gambling_flavour.15.option.a: "..."
+ 
  #------------------------------------------
  # Prostitution
  #------------------------------------------
@@ -238,6 +303,74 @@
  switch_to_prostitution_allowed: "Switch to Prostitution Allowed"
  switch_to_prostitution_licensed: "Switch to Prostitution Licensed"
  switch_to_prostitution_forbidden: "Switch to Prostitution Forbidden"
+ 
+ visit_brothel: "Visit Brothel"
+ 
+ prostitution_flavour.1.title: "The Brothel"
+ prostitution_flavour.1.desc: "As [Root.Monarch.GetName] steps inside, the sights and sounds of the brothel draw [Root.Monarch.GetHerHim] inwards.\n\nHere [Root.Monarch.GetSheHe] peruses the selection of partners available..."
+ prostitution_flavour.1.option.a: "The radiant blonde..."
+ prostitution_flavour.1.option.b: "The enthralling brunette..."
+ prostitution_flavour.1.option.c: "The fiery redhead..."
+ prostitution_flavour.1.option.d: "The mysterious figure by the table..."
+ prostitution_flavour.1.option.e: "The robotic stallion by the door..."
+ prostitution_flavour.1.option.f: "The mutated beauty by the wall..."
+ prostitution_flavour.1.option.g: "The ghoulish beauty by the bar..."
+ 
+ radiant_glow: "Radiant Glow"
+ desc_radiant_glow: "[Root.Monarch.GetName] is on top of the world."
+ 
+ robotic_energies: "Robotic Energies"
+ desc_robotic_energies: "Fisto gives his thanks!"
+ 
+ mutant_vigor: "Mutant Vigor"
+ desc_mutant_vigor: "URGH!"
+ 
+ prostitution_flavour.2.title: "A Baby!"
+ prostitution_flavour.2.desc: "[Root.Monarch.GetName]'s night with the radiant blonde has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution_flavour.2.option.a: "This child is my heir!"
+ prostitution_flavour.2.option.b: "This child is worthless!"
+ 
+ prostitution_flavour.3.title: "A Baby!"
+ prostitution_flavour.3.desc: "[Root.Monarch.GetName]'s night with the enthralling brunette has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution_flavour.3.option.a: "This child is my heir!"
+ prostitution_flavour.3.option.b: "This child is worthless!"
+ 
+ prostitution_flavour.4.title: "A Baby!"
+ prostitution_flavour.4.desc: "[Root.Monarch.GetName]'s night with the fiery redhead has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution_flavour.4.option.a: "This child is my heir!"
+ prostitution_flavour.4.option.b: "This child is worthless!"
+ 
+ prostitution_flavour.5.title: "A Baby!"
+ prostitution_flavour.5.desc: "[Root.Monarch.GetName]'s night with the mysterious figure has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution_flavour.5.option.a: "This child is my heir!"
+ prostitution_flavour.5.option.b: "This child is worthless!"
+ 
+ prostitution_flavour.6.title: "A Robotic Baby!"
+ prostitution_flavour.6.desc: "[Root.Monarch.GetName]'s night with the robotic stallion has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution_flavour.6.option.a: "This child is my heir!"
+ prostitution_flavour.6.option.b: "This child is worthless!"
+ 
+ prostitution_flavour.7.title: "A Mutated Baby!"
+ prostitution_flavour.7.desc: "[Root.Monarch.GetName]'s night with the mutant has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution_flavour.7.option.a: "This child is my heir!"
+ prostitution_flavour.7.option.b: "This child is worthless!"
+ 
+ prostitution_flavour.8.title: "A Ghoul Baby!"
+ prostitution_flavour.8.desc: "[Root.Monarch.GetName]'s night with the ghoul has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution_flavour.8.option.a: "This child is my heir!"
+ prostitution_flavour.8.option.b: "This child is worthless!"
+ 
+ prostitution_flavour.9.title: "Radiant Glow"
+ prostitution_flavour.9.desc: "[Root.Monarch.GetName]'s night at the brothel has left them with a radiant glow."
+ prostitution_flavour.9.option.a: "Ahh...."
+ 
+ prostitution_flavour.10.title: "Robotic Energies"
+ prostitution_flavour.10.desc: "[Root.Monarch.GetName]'s night at the brothel has left them with an electrifying aura."
+ prostitution_flavour.10.option.a: "ELECTRIFYING!"
+ 
+ prostitution_flavour.11.title: "Mutant Vigor"
+ prostitution_flavour.11.desc: "[Root.Monarch.GetName]'s night at the brothel has left them with the vigor of a mutant."
+ prostitution_flavour.11.option.a: "URGH!"
  
  #------------------------------------------
  # Firearms

@@ -296,23 +296,11 @@ guiTypes = {
 		######################################################
 		###   Buttons
 		######################################################
-
-#GFX_take_loan_button
-		guiButtonType =
-		{
-			name ="debase_currency"
-			quadTextureSprite= "GFX_debase_currency"
-			position = { x= 486 y = 396 }
-			Orientation = "LOWER_LEFT"
-#			buttonText = "CV_DEBASE_CURRENCY"
-			buttonFont = "vic_18"
-		}
-		
 		guiButtonType =
 		{
 			name ="take_loan"
 			quadTextureSprite= "GFX_take_loan_button"
-			position = { x= 280 y = 396 }
+			position = { x= 43 y = 396 }
 			Orientation = "LOWER_LEFT"
 			buttonFont = "vic_18"
 			hint_tag = "hint_loans"
@@ -320,7 +308,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "take_loan_sum"
-			position = { x = 282 y = 508 }
+			position = { x = 43 y = 508 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
@@ -335,7 +323,7 @@ guiTypes = {
 		{
 			name ="repay_loan"
 			quadTextureSprite= "GFX_repay_loan"
-			position = { x= 394 y = 396 }
+			position = { x= 165 y = 396 }
 			Orientation = "LOWER_LEFT"
 #			buttonText = "CV_REPAY_LOAN"
 			buttonFont = "vic_18"		
@@ -346,18 +334,27 @@ guiTypes = {
 		{
 			name ="repay_all_loans"
 			quadTextureSprite= "GFX_repay_all_loans"
-			position = { x= 440 y = 396 }
+			position = { x= 215 y = 396 }
 			Orientation = "LOWER_LEFT"
 #			buttonText = "CV_REPAY_X_LOANS"
 			buttonFont = "vic_18"		
 			hint_tag = "hint_loans"	
 		}
 		
+        guiButtonType =
+		{
+			name ="go_bankrupt"
+			quadTextureSprite = "GFX_declare_bankruptcy"
+			position = { x= 265 y = 396 }
+			Orientation = "LOWER_LEFT"
+ 			buttonFont = "vic_18"		
+		}
+        
 		guiButtonType =
 		{
 			name ="raise_wartaxes"
 			quadTextureSprite= "GFX_raise_war_tax"
-			position = { x= 43 y = 396 }
+			position = { x= 43 y = -9999 }
 			Orientation = "LOWER_LEFT"
 			buttonFont = "vic_18"
 			clicksound = war_taxes
@@ -368,21 +365,23 @@ guiTypes = {
 		{
 			name ="combat_inflation"
 			quadTextureSprite= "GFX_reduce_inflation"
-			position = { x= 89 y = 396 }
+			position = { x= 89 y = -9999 }
 			Orientation = "LOWER_LEFT"
 			buttonFont = "vic_18"
 			hint_tag = "hint_inflation"	
 		}		
 		
-		
 		guiButtonType =
 		{
-			name ="go_bankrupt"
-			quadTextureSprite = "GFX_declare_bankruptcy"
-			position = { x= 135 y = 396 }
+			name ="debase_currency"
+			quadTextureSprite= "GFX_debase_currency"
+			position = { x= 486 y = -9999 }
 			Orientation = "LOWER_LEFT"
- 			buttonFont = "vic_18"		
+#			buttonText = "CV_DEBASE_CURRENCY"
+			buttonFont = "vic_18"
 		}
+		
+		
 		
 		################################################################################################
 		### --- Repay loan window

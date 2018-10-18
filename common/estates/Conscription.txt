@@ -57,10 +57,12 @@ policy_conscription = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_volunteer_conscription = yes
         }
@@ -80,10 +82,12 @@ policy_conscription = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_limited_conscription = yes
         }
@@ -103,15 +107,124 @@ policy_conscription = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_full_conscription = yes
         }
         ai_will_do = {
             factor = 0
+        }
+    }
+    interaction = {
+        name = "improve_army_tradition"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            always = yes
+        }
+        trigger = {        
+            years_of_income = 1
+        }
+        effect = {
+            add_years_of_income = -1
+            
+            add_country_modifier = {
+                name = improve_army_tradition
+                duration = 1800
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2}
+            }
+            
+            modifier = {
+                factor = 0
+                
+                army_tradition = 50
+            }
+        }
+    }
+    interaction = {
+        name = "improve_navy_tradition"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            any_owned_province = {
+                has_port = yes
+            }
+        }
+        trigger = {        
+            years_of_income = 1
+        }
+        effect = {
+            add_years_of_income = -1
+            
+            add_country_modifier = {
+                name = improve_navy_tradition
+                duration = 1800
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
+            
+            modifier = {
+                factor = 0
+                
+                navy_tradition = 50
+            }
+        }
+    }
+    interaction = {
+        name = "reduce_war_exhaustion"
+        icon = 1
+        years_between_use = 5
+        
+        potential = { 
+            always = yes
+        }
+        trigger = {        
+            years_of_income = 0.25
+        }
+        effect = {
+            add_years_of_income = -0.25
+            
+            add_country_modifier = {
+                name = reduce_war_exhaustion
+                duration = 1800
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 1 }
+            }
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { war_exhaustion = 5 }
+            }
         }
     }
     
@@ -162,27 +275,7 @@ policy_conscription = {
             factor = 0
         }
     }
-    interaction = {
-        name = "emphasis_discipline"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_volunteer_conscription = yes
-        }
-        trigger = {        
-            mil_power = 100
-        }
-        effect = {
-            add_mil_power = -100
-            
-            add_army_tradition = 25
-            add_army_professionalism = 10
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
+    
     
     #-----------------------
     # Limited
@@ -225,28 +318,6 @@ policy_conscription = {
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_drill_sergeant
-            }
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
-    interaction = {
-        name = "recruit_general"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_limited_conscription = yes
-        }
-        trigger = {        
-            mil_power = 100
-        }
-        effect = {
-            add_mil_power = -100
-            
-            create_general = {
-                tradition = 100
             }
         }
         ai_will_do = {
@@ -296,26 +367,6 @@ policy_conscription = {
             add_scaled_estate_advisor = {
                 ADVISOR = fm_sapper
             }
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
-    interaction = {
-        name = "scrap_the_barrel"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_full_conscription = yes
-        }
-        trigger = {        
-            mil_power = 100
-        }
-        effect = {
-            add_mil_power = -100
-            
-            add_yearly_manpower = 1
         }
         ai_will_do = {
             factor = 0

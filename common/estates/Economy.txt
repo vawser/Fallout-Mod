@@ -59,10 +59,12 @@ policy_economy = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_traditional_economy = yes
         }
@@ -82,10 +84,12 @@ policy_economy = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1   
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_command_economy = yes
         }
@@ -105,10 +109,12 @@ policy_economy = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1    
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_market_economy = yes
         }
@@ -116,23 +122,24 @@ policy_economy = {
             factor = 0
         }
     }
-    #-----------------------------
-    # Traditional
-    #-----------------------------
     interaction = {
-        name = "enforce_taxation"
+        name = "reduce_inflation"
         icon = 1
-        years_between_use = 25
+        years_between_use = 5
         
         potential = { 
-            has_traditional_economy = yes
+            always = yes
         }
         trigger = {        
-            prestige = 0
+            years_of_income = 0.25
         }
         effect = {
-            add_years_of_income = 2
-            add_prestige = -25
+            add_years_of_income = -0.25
+            
+            add_country_modifier = {
+                name = reduce_inflation
+                duration = 1800
+            }
         }
         ai_will_do = {
             factor = 1
@@ -140,15 +147,14 @@ policy_economy = {
             modifier = {
                 factor = 0
                 
-                years_of_income = 1
-            }
-            
-            modifier = {
-                factor = 0
-                NOT = { prestige = 50 }
+                NOT = { inflation = 10 }
             }
         }
     }
+    
+    #-----------------------------
+    # Traditional
+    #-----------------------------
     interaction = {
         name = "recruit_brahmin_whisperer"
         icon = 1
@@ -158,10 +164,10 @@ policy_economy = {
             has_traditional_economy = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_brahmin_whisperer
@@ -180,10 +186,10 @@ policy_economy = {
             has_traditional_economy = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_missionary
@@ -193,67 +199,10 @@ policy_economy = {
             factor = 0
         }
     }
-    interaction = {
-        name = "recind_arrangements"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_traditional_economy = yes
-        }
-        trigger = {        
-            inflation = 0.01
-            dip_power = 100
-        }
-        effect = {
-            add_dip_power = -100
-            add_inflation = -5
-        }
-        ai_will_do = {
-            factor = 1
 
-            modifier = {
-                factor = 0
-                
-                NOT = { inflation = 5 }
-            }
-        }
-    }
-    
     #-----------------------------
     # Command
     #-----------------------------
-    interaction = {
-        name = "print_money"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_command_economy = yes
-        }
-        trigger = {        
-            NOT = { inflation = 25 }
-        }
-        effect = {
-            add_years_of_income = 2
-            add_inflation = 10
-        }
-        ai_will_do = {
-            factor = 1
-            
-            modifier = {
-                factor = 0
-                
-                years_of_income = 1
-            }
-            
-            modifier = {
-                factor = 0
-                
-                inflation = 5
-            }
-        }
-    }
     interaction = {
         name = "recruit_architect"
         icon = 1
@@ -263,10 +212,10 @@ policy_economy = {
             has_command_economy = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_architect
@@ -285,10 +234,10 @@ policy_economy = {
             has_command_economy = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_disciplinarian
@@ -298,67 +247,10 @@ policy_economy = {
             factor = 0
         }
     }
-    interaction = {
-        name = "renounce_debt"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_command_economy = yes
-        }
-        trigger = {        
-            inflation = 0.01
-            adm_power = 100
-        }
-        effect = {
-            add_adm_power = -100
-            add_inflation = -5
-        }
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                
-                NOT = { inflation = 5 }
-            }
-        }
-    }
     
     #-----------------------------
     # Market
     #-----------------------------
-    interaction = {
-        name = "accept_kickbacks"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_market_economy = yes
-        }
-        trigger = {        
-            NOT = { corruption = 10 }
-        }
-        effect = {
-            add_years_of_income = 2
-            add_corruption = 5
-        }
-        ai_will_do = {
-            factor = 1
-            
-            modifier = {
-                factor = 0
-                
-                years_of_income = 1
-            }
-            
-            modifier = {
-                factor = 0
-                
-                corruption = 5
-            }
-        }
-    }
     interaction = {
         name = "recruit_banker"
         icon = 1
@@ -368,10 +260,10 @@ policy_economy = {
             has_market_economy = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_banker
@@ -390,37 +282,13 @@ policy_economy = {
             has_market_economy = yes
         }
         trigger = {        
-            treasury = 100
+            years_of_income = 0.25
         }
         effect = {
-            add_treasury = -100
+            add_years_of_income = -0.25
             
             add_scaled_estate_advisor = {
                 ADVISOR = fm_auditor
-            }
-        }
-        ai_will_do = {
-            factor = 0
-        }
-    }
-    interaction = {
-        name = "establish_debt_contract"
-        icon = 1
-        years_between_use = 25
-        
-        potential = { 
-            has_market_economy = yes
-        }
-        trigger = {        
-            adm_power = 100
-        }
-        effect = {
-            add_adm_power = -100
-            
-            add_loan = {
-                interest_modifier = 0.0
-                fixed_interest = yes
-                duration = 240
             }
         }
         ai_will_do = {

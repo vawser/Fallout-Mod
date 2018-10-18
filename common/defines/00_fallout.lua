@@ -71,9 +71,21 @@ NDefines.NCountry.PARLIAMENT_PRESTIGE_HIT = 0
 NDefines.NCountry.CULTURAL_UNION_MIN_DEV = 9999999 -- Disable cultural union (doesn't make sense with current cultures)
 NDefines.NCountry.CULTURAL_UNION_MIN_RANK = -1 -- Force dev check for cultural union
 NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0 -- Disable cost increase for advisors
-NDefines.NCountry.PS_REDUCE_INFLATION = 100 -- Make inflation more expensive to reduce
 NDefines.NCountry.CORE_LOSE = -1 -- Cores are never lost
 NDefines.NCountry.CORE_LOSE_CULTURE_GROUP = -1 -- Cores are never lost
+
+--------------------------------
+-- Disabled Stuff
+--------------------------------
+-- This stuff has been removed to trim down the button creep
+-- and to allow for more scriptable methods to replicate functionality when applicable
+NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 9999   -- Removed
+NDefines.NCountry.PS_RAISE_WAR_TAXES = 9999         -- Removed
+NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 0         -- Removed
+NDefines.NCountry.PS_REDUCE_INFLATION = 9999        -- Removed, now a modifier over time in Economy Policy
+NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0
+NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0
+NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5
 
 --------------------------------
 -- Economy

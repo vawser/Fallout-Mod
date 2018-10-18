@@ -21,12 +21,31 @@ can_harsh_treatment = {
 }
 
 can_reduce_war_exhaustion = {
+    condition = {
+		tooltip = "BLOCKED"
+		potential = {
+            always = yes
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_reduce_inflation = {
+    condition = {
+		tooltip = "BLOCKED"
+		potential = {
+            always = yes
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_declare_bankruptcy = {
+    
 }
 
 can_release_colonial_nation = {
@@ -65,6 +84,15 @@ can_change_national_focus = {
 }
 
 can_increase_stability = {
+    condition = {
+		tooltip = "BLOCKED"
+		potential = {
+            always = yes
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 # ROOT = province, FROM = country

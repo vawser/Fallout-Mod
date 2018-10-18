@@ -59,10 +59,12 @@ policy_innovation = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_individual_innovation = yes
         }
@@ -82,10 +84,12 @@ policy_innovation = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_sponsored_innovation = yes
         }
@@ -105,10 +109,12 @@ policy_innovation = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_state_innovation = yes
         }
@@ -129,10 +135,10 @@ policy_innovation = {
             always = yes
         }
         trigger = {        
-            treasury = 250
+            years_of_income = 1
         }
         effect = {
-            add_treasury = -250
+            add_years_of_income = -1
             
             add_research_5 = yes
         }

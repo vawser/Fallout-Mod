@@ -534,7 +534,6 @@ positive_stability = {
 	global_unrest = -1					#-1% revolt risk each step
 	global_tax_modifier = 0.05
 	global_missionary_strength = 0.005
-	stability_cost_modifier = 0.50
 	monthly_fervor_increase = 1
 	devotion = 0.5
 	yearly_corruption = -0.02
@@ -542,7 +541,7 @@ positive_stability = {
 	yearly_harmony = 0.25
     papal_influence = 1
     
-    inflation_reduction = 0.1 # Natural deflation
+    inflation_reduction = 0.05
 }
 
 negative_stability = {
@@ -556,12 +555,11 @@ negative_stability = {
 	caravan_power = 0.05
     papal_influence = 1
     
-    inflation_reduction = 0.1 # Natural inflation
+    inflation_reduction = 0.05
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
 	global_unrest = -2.5
-	stability_cost_modifier = -0.1
 }
 
 negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mandate
@@ -574,7 +572,6 @@ negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mand
 
 lost_mandate_of_heaven = {
 	discipline = -0.1
-	stability_cost_modifier = 0.5
 	global_unrest = 10
 	global_trade_goods_size_modifier = -0.5
 	fire_damage_received = 0.5
@@ -669,7 +666,6 @@ doom = {
 }
 
 authority = {
-	stability_cost_modifier = -0.1
 	global_unrest = -2
 }
 
@@ -858,7 +854,6 @@ militarized_society = {
 luck = {
 	#core
 	global_missionary_strength = 0.01
-	stability_cost_modifier = -0.10
 	global_institution_spread = 0.1
 	monthly_splendor = 1
 
@@ -887,7 +882,6 @@ luck = {
 
 over_extension = {
 	global_foreign_trade_power = -1.0
-	stability_cost_modifier = 0.5
 	mercenary_cost = 0.5
 	diplomatic_reputation = -2
 	improve_relation_modifier = -0.5
@@ -930,7 +924,6 @@ republican_tradition = {
 }
 
 inverse_republican_tradition = {
-	stability_cost_modifier = 2.0
     monthly_militarized_society = -0.1
     papal_influence = -2
 }
@@ -939,7 +932,6 @@ inverse_republican_tradition = {
 curia_controller = {
 	diplomats = 1							#1 extra diplomat as curia controller
 	prestige = 1							#1% extra prestige yearly
-	stability_cost_modifier = -0.1			#10% cheaper stability
 	advisor_pool = 2
 	advisor_cost = -0.2
 	free_leader_pool = 1
@@ -953,7 +945,6 @@ religious_unity = {
 }
 
 inverse_religious_unity = {
-	stability_cost_modifier = 1.0		#more expensive to recover stability
 	global_unrest = 3
 	church_power_modifier = -1
 	devotion = -1
@@ -1051,7 +1042,7 @@ high_army_professionalism = {
 }
 
 streltsy_modifier = {
-	stability_cost_modifier = 1.0
+    
 }
 
 power_projection = {
@@ -1169,10 +1160,12 @@ gov_rank_10 = {
 # For autonomy mechanics
 autonomy_increased = {
 	local_unrest = -5
+    local_autonomy = 0.5
 }
 
 autonomy_decreased = {
 	local_unrest = 5
+    local_autonomy = -0.5
 }
 
 revolution_target = {
@@ -1346,7 +1339,6 @@ low_harmony = {
 ########################################
 
 overlord_daimyo_at_peace = {
-	stability_cost_modifier = -0.02
 	legitimacy = 0.1
 }
 
@@ -1355,7 +1347,7 @@ overlord_daimyo_at_peace_max = {
 }
 
 overlord_daimyo_at_peace_min = {
-	stability_cost_modifier = -0.2
+    
 }
 
 overlord_daimyo_same_isolationism = {
@@ -1495,5 +1487,5 @@ serfs_recieved_by_cossacks = {
 }
 
 cossacks_modifier = {
-	stability_cost_modifier = 1.0
+    
 }

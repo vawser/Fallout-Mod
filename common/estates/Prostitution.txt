@@ -57,10 +57,12 @@ policy_prostitution = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_prostitution_allowed = yes
         }
@@ -80,10 +82,12 @@ policy_prostitution = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_prostitution_licensed = yes
         }
@@ -103,15 +107,54 @@ policy_prostitution = {
             }
         }
         trigger = {        
-            stability = 3           
+            stability = 0
+            years_of_income = 1
         }
         effect = {
             add_stability = -3
+            add_years_of_income = -1
             
             set_prostitution_forbidden = yes
         }
         ai_will_do = {
             factor = 0
+        }
+    }
+    
+    interaction = {
+        name = "visit_brothel"
+        icon = 1
+        years_between_use = 5
+        
+        potential = {
+            uses_heir = yes
+            OR = {
+                has_prostitution_allowed = yes
+                has_prostitution_licensed = yes
+            }
+        }
+        trigger = {        
+            years_of_income = 0.1        
+        }
+        effect = {
+            add_years_of_income = -0.1
+            
+            hidden_effect = {
+                set_country_flag = prostitution_flavour_1
+            }
+            
+            tooltip = {
+                country_event = { id = prostitution_flavour.1 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { has_heir = yes }
+            }
         }
     }
     
