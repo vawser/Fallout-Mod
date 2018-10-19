@@ -835,9 +835,9 @@ country_event = {
 
 # "The Obituary Of Mr House"
 country_event = {
-	id = new_vegas.20
-	title = new_vegas.20.title
-	desc = new_vegas.20.desc
+	id = new_vegas.21
+	title = new_vegas.21.title
+	desc = new_vegas.21.desc
     picture = USA_FLAG_eventPicture
 	
 	fire_only_once = yes 
@@ -858,14 +858,14 @@ country_event = {
 	
     immediate = {
         hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.20" }
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.21" }
 			remove_ruler_personality = immortal_personality # Precaution 
         }
 
     }
     
 	option = { #Chaos Descends On New Vegas 
-		name = new_vegas.20.option.a
+		name = new_vegas.21.option.a
 		add_stability = -3
 		kill_ruler = yes
 	}
