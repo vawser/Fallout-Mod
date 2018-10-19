@@ -7,25 +7,74 @@
  
  MODIFIER_IMPERIAL_MANDATE: "Yearly Research"
  
+ EXPENSE_CORRUPTION:0 "Root Out Corruption"
+ root_out_corruption:0 "Rooting Out Corruption"
+ 
+ #------------------------------------------------------
+ # Unique Units
+ #------------------------------------------------------
+ REGCAT_banner:0 "Banners"
+ REGCAT_streltsy:0 "Streltsy"
+ REGCAT_cossacks:0 "Cossacks"
+ REGCAT_janissaries:0 "Janissaries"
+ REGCAT_rajput:0 "Assault"
+ 
+ COSSACKS_NAME:0 "$HOME$'s $NUM$$ORDER$ Cossacks"
+ RAJPUT_NAME:0 "$HOME$'s $NUM$$ORDER$ Assault Securitrons"
+ STRELTSY_NAME:0 "$HOME$'s $NUM$$ORDER$ Veterans"
+ 
+ COSSACKS_REGIMENT:0 "Cossacks Regiment\nShock Damage Bonus: $VAL$"
+ STRELTSY_REGIMENT:0 "Veterans Regiment\nFire Damage Bonus: $VAL$"
+ RAJPUT_REGIMENT:0 "Assault Securitron Regiment\n$EFFECT$"
+ 
+ streltsy_modifier:0 "Reliance on Veterans"
+ cossacks_modifier:0 "Reliance on Cossacks"
+ 
+ ONLY_RAJPUT_MODIFIER:0 "§YAffects only Assault Securitron Regiments§!"
+
+ ADD_STRELTSY_SUB_UNIT_EFFECT:0 "Get '§GVeteran§!' $UNIT$ in §Y$WHERE$§!."
+ ADD_COSSACKS_SUB_UNIT_EFFECT:0 "Get '§GCossack§!' $UNIT$ in $WHERE|Y$."
+ ADD_RAJPUT_SUB_UNIT_EFFECT:0 "Get '§GAssault§!' $UNIT$ in $WHERE|Y$."
+ 
+ HAVE_LESS_JANISSARIES_THAN_PERC:0 "Less than $PERC|%|Y$ of the army is Janissary Regiments ($SHIPS|Y$)"
+ HAVE_MORE_JANISSARIES_THAN_PERC:0 "More than $PERC|%|Y$ of the army is Janissary Regiments ($SHIPS|Y$)"
+ HAVE_LESS_JANISSARIES_THAN:0 "Have less Janissary Regiments than $VALUE|Y$.\n"
+ HAVE_AT_LEAST_JANISSARIES_THAN:0 "Have at least $VALUE|Y$ Janissary Regiments.\n"
+ HAVE_LESS_RAJPUT_THAN:0 "Have less Assault Securitron Regiments than $VALUE|Y$.\n"
+ HAVE_AT_LEAST_RAJPUT_THAN:0 "Have at least $VALUE|Y$ Assault Securitron Regiments.\n"
+ 
+ #------------------------------------------------------
+ # Monsoons
+ #------------------------------------------------------
+ HAS_MONSOON:"$MONSOON$ in $PROVINCE|Y$\n"
+ HAS_NO_MONSOON:"$MONSOON$ not in $PROVINCE|Y$\n"
+ no_monsoon: "No Radstorms"
+ mild_monsoon: "Mild Radstorms"
+ normal_monsoon: "Normal Radstorms"
+ severe_monsoon: "Severe Radstorms"
+ desc_mild_monsoon:"Mild radstorms may occur here."
+ desc_normal_monsoon: "Radstorms may occur here."
+ desc_severe_monsoon:"Extreme radstorms may occur here."
+ 
  #------------------------------------------------------
  # Religious Schools
  #------------------------------------------------------
- CONFIRMSCHOLAR:0 "Confirm Inviting $SCHOOL$ Specialist"
- RELIGIOUS_SCHOLAR_EXPIRY_TITLE:0 "Specialist Has Left"
- RELIGIOUS_SCHOLAR_EXPIRY_SETUP:0 "When a specialist leaves our country."
- RELIGIOUS_SCHOLAR_EXPIRY_HEADER:0 "Specialist Has Left"
- RELIGIOUS_SCHOLAR_EXPIRY_4:0 "The $MOD|Y$ that have been our guests for 20 years have moved on."
- INVITE_SCHOLAR_INSTANT_TOOLTIP:0 "§YInvite a Specialist§!"
- INVITE_SCHOLAR_DELAYED_TOOLTIP:1 "Inviting a Specialist from another country will give us a unique bonus for 20 years."
- alert_can_invite_scholar_instant:0 "Can invite §YSpecialist§!"
- RELIGIOUS_SCHOOL_ITEM_ICON_DELAYED:0 "Has the following relations with other Specializations:\n$RELATION$"
- RELIGION_VIEW_NO_SCHOOL_TOOLTIP:0 "We do not follow any specialization at the moment."
+ CONFIRMSCHOLAR:"Confirm Inviting $SCHOOL$ Specialist"
+ RELIGIOUS_SCHOLAR_EXPIRY_TITLE:"Specialist Has Left"
+ RELIGIOUS_SCHOLAR_EXPIRY_SETUP:"When a specialist leaves our country."
+ RELIGIOUS_SCHOLAR_EXPIRY_HEADER:"Specialist Has Left"
+ RELIGIOUS_SCHOLAR_EXPIRY_4:"The $MOD|Y$ that have been our guests for 20 years have moved on."
+ INVITE_SCHOLAR_INSTANT_TOOLTIP:"§YInvite a Specialist§!"
+ INVITE_SCHOLAR_DELAYED_TOOLTIP: "Inviting a Specialist from another country will give us a unique bonus for 20 years."
+ alert_can_invite_scholar_instant:"Can invite §YSpecialist§!"
+ RELIGIOUS_SCHOOL_ITEM_ICON_DELAYED:"Has the following relations with other Specializations:\n$RELATION$"
+ RELIGION_VIEW_NO_SCHOOL_TOOLTIP:"We do not follow any specialization at the moment."
  
- TRIG_NOT_USES_RELIGIOUS_SCHOOLS:0 "$RELIGION$ does not have specialization.\n"
- TRIG_USES_RELIGIOUS_SCHOOLS:0 "$RELIGION$ have specialization.\n"
- TRIG_NOT_HAS_RELIGIOUS_SCHOOL:0 "$COUNTRY$ does not have a specialization.\n"
- TRIG_HAS_RELIGIOUS_SCHOOL:0 "$COUNTRY$ have a specialization.\n"
- EFFECT_SET_RELIGIOUS_SCHOOL:1 "$COUNTRY$ will specialize in $SCHOOL$.\n($MODIFIER$)"
+ TRIG_NOT_USES_RELIGIOUS_SCHOOLS:"$RELIGION$ does not have specialization.\n"
+ TRIG_USES_RELIGIOUS_SCHOOLS:"$RELIGION$ have specialization.\n"
+ TRIG_NOT_HAS_RELIGIOUS_SCHOOL:"$COUNTRY$ does not have a specialization.\n"
+ TRIG_HAS_RELIGIOUS_SCHOOL:"$COUNTRY$ have a specialization.\n"
+ EFFECT_SET_RELIGIOUS_SCHOOL: "$COUNTRY$ will specialize in $SCHOOL$.\n($MODIFIER$)"
  
  #------------------------------------------------------
  # Blessings
@@ -437,20 +486,7 @@
  PATRIARCH_MAP_TT_HAS: "$NAME|Y$ has a Bunker."
  PATRIARCH_MAP_TT_CAN: "$NAME|Y$ could get a Bunker."
  LASTS_ICON_UNTIL: "This lasts until $WHEN|Y$."
- 
- #------------------------------------------------------
- # Units
- #------------------------------------------------------
- REGCAT_normal: "Regulars"
- REGCAT_mercenary: "Mercenaries"
- REGCAT_banner: "Squadrons"
- REGCAT_streltsy: "Veteran Infantry Regiment"
- REGCAT_cossacks: "Veteran Mechanized Regiment"
- COSSACKS_NAME: "$HOME$'s $NUM$$ORDER$ Veteran Mechanized Regiment"
- COSSACKS_REGIMENT: "Veteran Mechanized Regiment\nShock Damage Bonus: $VAL$"
- STRELTSY_NAME: "$HOME$'s $NUM$$ORDER$ Veteran Infantry Regiment"
- STRELTSY_REGIMENT: "Veteran Infantry Regiment\nFire Damage Bonus: $VAL$"
- 
+
  #---------------------------------------------------------
  # Peace Terms
  #---------------------------------------------------------

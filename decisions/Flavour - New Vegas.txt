@@ -23,4 +23,23 @@ country_decisions = {
 			factor = 1
 		}
 	}
+    
+    construct_assault_securitrons = {
+		potential = {
+			tag = NVG
+		}
+		allow =  {
+            has_country_modifier = securitron_bunker
+            years_of_income = 1
+            NOT = { num_of_rajput = 20 }
+		}
+	  	effect = {
+            add_years_of_income = -1
+            
+			capital_scope = { rajput_infantry = ROOT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

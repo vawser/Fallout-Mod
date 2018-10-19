@@ -95,18 +95,12 @@ NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 99999   -- Removed
 NDefines.NEconomy.COLONIAL_MAINTENANCE_FACTOR = 2.0 -- Make colonisation cheaper
 NDefines.NEconomy.BASE_INTERESTS = 10.0 -- Loans more risky in the wasteland
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.05 -- 50% increase after all (20) mil techs taken
-NDefines.NEconomy.DECREASE_AUTONOMY_STEP = -10  -- Make autonomy changes more gradual
-NDefines.NEconomy.DECREASE_AUTONOMY_MIN = 10 
-NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 10 -- Make autonomy changes more gradual
-NDefines.NEconomy.INCREASE_AUTONOMY_MAX = 90
-NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 3650 -- Allow autonomy buttons every 10 years
 NDefines.NEconomy.COLONY_MIN_AUTONOMY = 75 
 NDefines.NEconomy.OVERSEAS_MIN_AUTONOMY = 50
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 25 -- Make claims better
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 75 -- Make unclaimed conquest worse
 NDefines.NEconomy.AUTONOMY_AT_DIPLO_ANNEX = 25 -- Make diplo annex better
-NDefines.NEconomy.DEBASE_ADDED_CORRUPTION = 1 -- Make debase better
-NDefines.NEconomy.DEBASE_MAX_STORED_MONTHS = 1200 -- Why not?
+NDefines.NEconomy.EDICTS_COST_INCREASE = 1.0
 
 --------------------------------
 -- AI
@@ -135,6 +129,7 @@ NDefines.NMilitary.ARTILLERY_SPEED = 1.0 -- Revert speed nerf Paradox introducte
 NDefines.NMilitary.FORT_PER_DEV_RATIO = 100 -- Make army trad. from forts easier to get.
 NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.05 -- Represents difficulty in supply across wasteland
 NDefines.NMilitary.MONTHLY_REINFORCE = 0.05 -- Represents difficulty in supply across wasteland
+NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_FRACTION = 0.05 -- Reduce forcelimit influence on merc limit
 
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 100 -- Battles more important than capture in the wasteland
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 100
@@ -142,6 +137,8 @@ NDefines.NMilitary.DEFAULT_WARGOAL_WARSCORE_BONUS = 20
 NDefines.NMilitary.DEFAULT_WARGOAL_BATTLESCORE_BONUS = 10
 NDefines.NMilitary.SUPERIORITY_WARGOAL_WARSCORE_THRESHOLD = 1
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 2
+
+NDefines.NMilitary.FORT_FLIPPING_TIME = 365
 
 --------------------------------
 -- GOVERNMENT
