@@ -833,4 +833,220 @@ country_event = {
 	}
 }
 
+# "The Obituary Of Mr House"
+country_event = {
+	id = new_vegas.20
+	title = new_vegas.20.title
+	desc = new_vegas.20.desc
+    picture = USA_FLAG_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		OR = {
+			has_reform = anarchic_vegas_reform
+			has_reform = independent_vegas_reform
+		}
+		tag = NVG
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	major = yes
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.20" }
+			remove_ruler_personality = immortal_personality # Precaution 
+        }
 
+    }
+    
+	option = { #Chaos Descends On New Vegas 
+		name = new_vegas.20.option.a
+		add_stability = -3
+		kill_ruler = yes
+	}
+}
+
+#############################
+## New Vegas Government(s) ##
+#############################
+
+## Anarchic Vegas Ruler Selection ##
+# "Rule Of The Powerfull"
+country_event = {
+	id = new_vegas.30
+	title = new_vegas.30.title
+	desc = new_vegas.30.desc
+    picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_reform = anarchic_vegas_reform
+		tag = NVG
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.30" }
+        }
+
+    }
+    
+	option = { #Only One Can Rule
+		name = new_vegas.30.option.a
+		if = {
+			limit = {
+				has_country_modifier = power_of_the_courier
+				NOT = { 
+					has_country_flag = courier_rules_vegas
+				}
+			}
+			define_ruler = {
+				name = "The Courier"
+				adm = 6
+				dip = 6
+				mil = 6
+				age = 25
+				claim = 100
+			}
+			set_country_flag = courier_rules_vegas
+		}
+		else = {
+			define_ruler = {
+				mil = 6
+				claim = 100
+			}			
+			capital_scope = {
+				add_devastation = 20	
+			}
+			add_army_tradition = 5	
+			add_corruption = -1
+		}
+	}
+}
+
+# "Selecting A New President"
+country_event = {
+	id = new_vegas.31
+	title = new_vegas.31.title
+	desc = new_vegas.31.desc
+    picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_reform = independent_vegas_reform
+		tag = NVG
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.31" }
+        }
+    }
+    
+	option = { #The Courier
+		name = new_vegas.31.option.a
+		trigger = {
+			has_country_modifier = power_of_the_courier
+			NOT = { 
+				has_country_flag = courier_rules_vegas
+			}		
+		}
+		define_ruler = {
+			name = "Courier"
+			dynasty = "Six"
+			adm = 6
+			dip = 6
+			mil = 6
+			age = 25
+			claim = 100
+		}
+		set_country_flag = courier_rules_vegas
+	}
+	
+	option = { #Benny 
+		name = new_vegas.31.option.b
+		trigger = {
+			NOT = { 
+				OR = {
+					has_country_flag = courier_rules_vegas
+					has_country_modifier = power_of_the_courier
+					has_country_flag = benny_has_ruled_nv
+				}
+			}		
+		}
+		define_ruler = {
+			name = "Benny"
+			dynasty = "The Joker"
+			adm = 4
+			dip = 6
+			mil = 2
+			fixed = yes 
+			claim = 85
+		}
+		set_country_flag = benny_has_ruled_nv
+	}
+	
+	option = {  
+		name = new_vegas.31.option.c
+		define_ruler = {
+
+		}		
+	}
+	
+	option = {  
+		name = new_vegas.31.option.e
+		define_ruler = {
+			name = "Yes"
+			dynasty = "Man"
+			adm = 4
+			dip = 3
+			mil = 3
+			fixed = yes 
+			claim = 50
+		}		
+	}
+	
+	option = { #A Representative From The Most Powerful Family
+		name = new_vegas.31.option.d
+		trigger = { 
+			has_factions = yes
+		}
+		if = {
+			limit = {
+				faction_in_power = the_omertas  
+			}
+			define_ruler = {
+				mil = 5			
+			}			
+			tooltip = independent_vegas_omerta_in_power.tt
+			set_ruler_flag = omerta_ruler_nv
+		}
+		else_if = {
+			limit = {
+				faction_in_power = the_chairmen   
+			}
+			define_ruler = {
+				adm = 5			
+			}			
+			tooltip = independent_vegas_chairmen_in_power.tt		
+			set_ruler_flag = chairmen_ruler_nv
+		}
+		else_if = {
+			limit = {
+				faction_in_power = the_white_glove_society    
+			}
+			define_ruler = {
+				dip = 5			
+			}			
+			tooltip = independent_vegas_white_glove_in_power.tt	
+			set_ruler_flag = white_glove_ruler_nv
+		}
+	}
+}
