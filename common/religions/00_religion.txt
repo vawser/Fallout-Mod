@@ -29,12 +29,15 @@
     # personal_deity = yes
 
 religion_group_postwar = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	can_form_personal_unions = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 1 18 }
     
+    #-------------------------------------
+    # Secular
+    #-------------------------------------
     secular = {
 		color = { 0.6 0.33 0.5 }
 		icon = 1
@@ -411,16 +414,18 @@ religion_group_postwar = {
 		} 
 	}
     
+    #-------------------------------------
+    # Creatorism
+    #-------------------------------------
     creatorism = {
 		color = { 0.3 0.5 0.3 }
 		icon = 2
 
 		country = { 
-            technology_cost = -0.05
-            embracement_cost = -0.1
+            mil_tech_cost_modifier = -0.1
 		}
         country_as_secondary = { 
-            technology_cost = -0.05
+            mil_tech_cost_modifier = -0.1
 		}
         
         has_patriarchs = yes
@@ -428,40 +433,23 @@ religion_group_postwar = {
         harmonized_modifier = harmonized_creatorism
         
         orthodox_icons = {
-			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
-
-            focus_production = {
-				production_efficiency = 0.1
+            focus_military_drills = {
+				discipline = 0.05
 				
 				allow = {
 					always = yes
 				}
 				ai_will_do = {
 					factor = 1
+                    
 					modifier = {
 						factor = 0
-						is_at_war = yes
+						NOT = { is_at_war = yes }
 					}
 				}
 			}
-            
-			focus_construction = {
-				build_time = -0.1
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 1
-					modifier = {
-						factor = 0
-						is_at_war = yes
-					}
-				}
-			}
-            
-            focus_transport = {
-				movement_speed = 0.1
+            focus_recruitment = {
+				global_manpower_modifier = 0.15
 				
 				allow = {
 					always = yes
@@ -470,79 +458,8 @@ religion_group_postwar = {
 					factor = 1
 				}
 			}
-            
-            focus_trade = {
-				global_own_trade_power = 0.1
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 1
-					modifier = {
-						factor = 0
-						is_at_war = yes
-					}
-				}
-			}
-            
-            focus_air_support = {
-				hostile_attrition = 1
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 1
-				}
-			}
-            
-            focus_naval_support = {
-				naval_morale = 0.25
-				
-				allow = {
-					num_of_ports = 1
-				}
-				ai_will_do = {
-					factor = 1
-				}
-			}
-            
-            focus_naval_defence = {
-				ship_durability = 0.05
-				
-				allow = {
-					num_of_ports = 1
-				}
-				ai_will_do = {
-					factor = 1
-				}
-			}
-            
-            focus_land_defence = {
-				defensiveness = 0.25
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 1
-				}
-			}
-            
-            focus_air_defence = {
-				land_attrition = -0.1
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 1
-				}
-			}
-            
             focus_infrastructure = {
-				development_cost = -0.1
+				development_cost = -0.15
 				
 				allow = {
 					always = yes
@@ -555,63 +472,42 @@ religion_group_postwar = {
 					}
 				}
 			}
-            
-            focus_communication = {
-				ae_impact = -0.05
+            focus_conquest = {
+				province_warscore_cost = -0.15
 				
 				allow = {
 					always = yes
 				}
 				ai_will_do = {
 					factor = 1
-					modifier = {
-						factor = 1.5
-						is_at_war = yes
-					}
-                    modifier = {
-						factor = 3
-						is_in_important_war = yes
-					}
-				}
-			}
-            
-            focus_bombardment = {
-				siege_ability = 0.05
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 1
-					modifier = {
-						factor = 2
-						is_at_war = yes
-					}
-                    modifier = {
-						factor = 4
-						is_in_important_war = yes
-					}
-				}
-			}
-            
-            focus_technology = {
-				technology_cost = -0.05
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 1
+                    
 					modifier = {
 						factor = 0
-						is_at_war = yes
+						NOT = { is_at_war = yes }
+					}
+				}
+			}
+            focus_technology_scavenging = {
+				idea_cost = -0.1
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+                    
+					modifier = {
+						factor = 0
+                        is_at_war = yes
 					}
 				}
 			}
         }
     }
     
-    # Cult of Mars (unique)
+    #-------------------------------------
+    # Cult of Mars
+    #-------------------------------------
     cult_of_mars = {
 		color = { 0.3 0.1 0.1 }
 		icon = 3
@@ -639,6 +535,9 @@ religion_group_postwar = {
 		} 
     }
     
+    #-------------------------------------
+    # Hubology
+    #-------------------------------------
     hubology = {
 		color = { 0.2 0.3 0.6 }
 		icon = 4
@@ -653,6 +552,8 @@ religion_group_postwar = {
         
         harmonized_modifier = harmonized_hubology
         
+        fervor = yes
+        
 		on_convert = {
 			add_prestige = -100
 			add_stability = -3
@@ -662,10 +563,11 @@ religion_group_postwar = {
 				duration = 3650
 			}
 		} 
-        
-        fervor = yes
 	}
     
+    #-------------------------------------
+    # Robotics
+    #-------------------------------------
     robotics = {
 		color = { 0.75 0.23 0.55 }
 		icon = 37
@@ -678,11 +580,28 @@ religion_group_postwar = {
             idea_cost = -0.15
 		}
         
-        harmonized_modifier = harmonized_robotics
+        holy_sites = { 
+            1200 # New Vegas
+            1202 # Shady Sands
+            424  # Lost Hills Military Base
+            1230 # Arlington
+            545  # C.I.T Ruins
+        }
+		
+		blessings = {
+			combat_simulation
+            titanium_plating
+            proton_blades
+            primsmatic_lens
+            sonic_emitters
+		}
         
-        fervor = yes
+        harmonized_modifier = harmonized_robotics
 	}
 
+    #-------------------------------------
+    # Lord of the Pitt
+    #-------------------------------------
 	lord_of_the_pitt = {
 		color = { 0.659 0.487 0.145 }
 		icon = 22
@@ -706,8 +625,6 @@ religion_group_postwar = {
 				duration = 3650
 			}			
 		}
-        
-		fervor = yes
 	}
     
     crusade_name = CRUSADE
@@ -716,12 +633,15 @@ religion_group_postwar = {
 
 # Atom
 religion_group_atomic = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	can_form_personal_unions = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 1 18 }
     
+    #-------------------------------------
+    # Atomic Worship
+    #-------------------------------------
     atomic_worship = {
 		color = { 0.523 0.0244 0.282 }
 		icon = 6
@@ -752,6 +672,9 @@ religion_group_atomic = {
 		aspects_name = ATOMIC_ASPECTS
 	}
 
+    #-------------------------------------
+    # Bright Brotherhood
+    #-------------------------------------
 	bright_brotherhood = {
 		color = { 0.0383 0.697 0.325 }
 		icon = 4
@@ -786,6 +709,9 @@ religion_group_atomic = {
 		declare_war_in_regency = yes
 	}
 
+    #-------------------------------------
+    # Renewal Cult
+    #-------------------------------------
  	renewal = {
 		icon = 8
 		color = { 123 81 82 }
@@ -823,13 +749,218 @@ religion_group_atomic = {
 }
 
 religion_group_pagan = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	can_form_personal_unions = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 1 18 }
 
-    # For non-religious raider states
+    religious_schools = {
+        speciality_chems = {
+            picture = "GFX_icon_speciality_chems"
+            invite_scholar_modifier_display = speciality_chems_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_chems_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_chems_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            shock_damage = 0.1
+        }
+        speciality_slaves = {
+            picture = "GFX_icon_speciality_slaves"
+            invite_scholar_modifier_display = speciality_slaves_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_slaves_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_slaves_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            global_manpower_modifier = 0.15
+        }
+        speciality_technology = {
+            picture = "GFX_icon_speciality_technology"
+            invite_scholar_modifier_display = speciality_technology_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_technology_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_technology_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            technology_cost = -0.1
+        }
+        speciality_caps = {
+            picture = "GFX_icon_speciality_caps"
+            invite_scholar_modifier_display = speciality_caps_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_caps_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_caps_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            global_tax_income = 64
+        }
+        speciality_weaponry = {
+            picture = "GFX_icon_speciality_weaponry"
+            invite_scholar_modifier_display = speciality_weaponry_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_weaponry_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_weaponry_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            army_tradition = 1
+        }
+        speciality_water = {
+            picture = "GFX_icon_speciality_water"
+            invite_scholar_modifier_display = speciality_water_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_water_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_water_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            diplomatic_reputation = 2
+        }
+        speciality_explosives = {
+            picture = "GFX_icon_speciality_explosives"
+            invite_scholar_modifier_display = speciality_explosives_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_explosives_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_explosives_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            siege_ability = 0.15
+        }
+        speciality_alcohol = {
+            picture = "GFX_icon_speciality_alcohol"
+            invite_scholar_modifier_display = speciality_alcohol_modifier
+            
+            potential_invite_scholar = {
+                knows_of_specialization_country_capital_trigger = yes
+            }
+            can_invite_scholar = {
+                years_of_income = 1
+                reverse_has_opinion = { who = FROM value = 100 }
+                NOT = { has_country_modifier = speciality_alcohol_modifier }
+                hidden_progressive_opinion_for_specialization_trigger = yes
+            }
+            on_invite_scholar = {
+                add_years_of_income = -1
+				clear_specialization_modifiers_effect = yes
+				custom_tooltip = ADOPT_SPECIALIZATION_COUNTRY_TEXT
+				add_country_modifier = { 
+                    name = speciality_alcohol_modifier 
+                    duration = 7300 
+                }
+            }
+            
+            core_creation = -0.1
+        }
+    }
+    
+    #-------------------------------------
+    # Tribalism
+    #-------------------------------------
     tribalism = {
 		color = { 0.204 0.22 0.32 }
 		icon = 5
@@ -849,7 +980,9 @@ religion_group_pagan = {
         personal_deity = yes
 	}
     
-    # For raider ghouls and feral ghouls. Peaceful ghoul states should use Secular
+    #-------------------------------------
+    # Ghoul Tribalism
+    #-------------------------------------
     ghoul_tribalism = {
 		color = { 0.98 0.77 0.87 }
 		icon = 8
@@ -869,7 +1002,9 @@ religion_group_pagan = {
         personal_deity = yes
 	}
     
-    # For Super mutants and other mutant states
+    #-------------------------------------
+    # Mutant Tribalism
+    #-------------------------------------
     mutant_tribalism = {
 		color = { 0.76 0.46 0.21 }
 		icon = 9
@@ -889,7 +1024,9 @@ religion_group_pagan = {
         personal_deity = yes
 	}
     
-    # For swamp people states
+    #-------------------------------------
+    # Swamp Tribalism
+    #-------------------------------------
     swamp_tribalism = {
 		color = { 0.54 0.40 0.67 }
 		icon = 31
@@ -908,6 +1045,9 @@ religion_group_pagan = {
         fetishist_cult = yes
 	}
     
+    #-------------------------------------
+    # Zion Tribalism
+    #-------------------------------------
     zion_tribal = {
 		color = { 0.145 0.188 0.195 }
 		icon = 7
@@ -924,11 +1064,12 @@ religion_group_pagan = {
 			tolerance_heretic = -1
 		}
         
-        can_have_secondary_religion = yes
+        personal_deity = yes
 	}
 
-    # 20
+    #-------------------------------------
     # Animist
+    #-------------------------------------
     animism = {
 		color = { 0.374 0.418 0.252 }
 		icon = 20
@@ -948,8 +1089,9 @@ religion_group_pagan = {
         fetishist_cult = yes
 	}
     
-    # 21
+    #-------------------------------------
     # Fetishist
+    #-------------------------------------
     fetishism = {
 		color = { 0.374 0.418 0.252 }
 		icon = 21
@@ -968,8 +1110,9 @@ religion_group_pagan = {
 		fetishist_cult = yes
 	}
     
-    # 22
+    #-------------------------------------
     # Totemist
+    #-------------------------------------
     totemism = {
 		color = { 0.374 0.418 0.252 }
 		icon = 22
@@ -988,6 +1131,9 @@ religion_group_pagan = {
         fetishist_cult = yes
 	}
     
+    #-------------------------------------
+    # Tengri
+    #-------------------------------------
     tengri = {
         color = { 0.1 0.3 0.85 }
 		icon = 36
@@ -1000,11 +1146,13 @@ religion_group_pagan = {
             migration_cooldown = -0.1
             native_uprising_chance = -0.10
 		}
-		can_have_secondary_religion = yes
-        
+
 		heretic = { OLD_TENGRI }
 	}
     
+    #-------------------------------------
+    # Norse
+    #-------------------------------------
     norse = {
 		icon = 30
 		color = { 0.75 0.75 0.75 }
@@ -1019,9 +1167,7 @@ religion_group_pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-		
-		personal_deity = yes
-		
+
 		heretic = { OLD_NORSE }	
 	}
     
@@ -1032,12 +1178,15 @@ religion_group_pagan = {
 
 # Christians and Mormons
 religion_group_christianity = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	can_form_personal_unions = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 1 18 }
 
+    #-------------------------------------
+    # Catholic
+    #-------------------------------------
     catholic = {
 		color = { 0.8 0.8 0 }
 		icon = 10
@@ -1067,6 +1216,9 @@ religion_group_christianity = {
 		misguided_heretic = yes # Other christians hate them less
 	}
     
+    #-------------------------------------
+    # Baptist
+    #-------------------------------------
 	baptist = {
 		color = { 0.33 0.2 0.5 }
 		icon = 11
@@ -1078,7 +1230,6 @@ religion_group_christianity = {
 		}
 		
 		country_as_secondary = { 
-			#can_transfer_vassal_wargoal = yes This cannot be used outside of ages
 			liberty_desire_from_subject_development = -0.05
 			global_autonomy = 0.02
 		}
@@ -1114,6 +1265,9 @@ religion_group_christianity = {
 		misguided_heretic = yes # Other christians hate them less
 	}
 	
+    #-------------------------------------
+    # Protestant
+    #-------------------------------------
 	protestant = {
 		color = { 0.33 0.2 0.5 }
 		icon = 11
@@ -1142,6 +1296,9 @@ religion_group_christianity = {
 		misguided_heretic = yes # Other christians hate them less
 	}
     
+    #-------------------------------------
+    # Mormon
+    #-------------------------------------
 	mormon = {
 		color = { 0.353 0.0913 0.438 }
 		icon = 12
@@ -1169,6 +1326,9 @@ religion_group_christianity = {
 		fervor = yes
 	}
     
+    #-------------------------------------
+    # Orthodox
+    #-------------------------------------
     orthodox = {
 		color = { 0.7 0.5 0 }
 		icon = 13
@@ -1185,11 +1345,13 @@ religion_group_christianity = {
 		}
 		
 		heretic = { OLD_BELIEVER ICONOCLAST }
-		
-        fervor = yes
+
 		misguided_heretic = yes		# Other christians hate them less
 	}
     
+    #-------------------------------------
+    # Coptic
+    #-------------------------------------
     coptic = {
 		color = { 0.7 0.5 0.5 }
 		icon = 23
@@ -1205,8 +1367,6 @@ religion_group_christianity = {
 			local_missionary_strength = -0.02
 		}
 		
-
-        fervor = yes
 		misguided_heretic = yes		# Other christians hate them less
 	}
     
@@ -1214,11 +1374,14 @@ religion_group_christianity = {
 }
 
 religion_group_muslim = {
-	defender_of_faith = yes
+	defender_of_faith = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 97 106 } #Including Star of David / Seal of Suleyman
     
+    #-------------------------------------
+    # Sunni
+    #-------------------------------------
     sunni = {
 		color = { 0 0.6 0 }
 		icon = 14
@@ -1233,11 +1396,11 @@ religion_group_muslim = {
 		province = {
 			local_missionary_strength = -0.02
 		}
-		
-        fervor = yes
-        
 	}
 
+    #-------------------------------------
+    # Shia
+    #-------------------------------------
 	shia = {
 		color = { 0 0.8 0 }
 		icon = 15
@@ -1252,11 +1415,11 @@ religion_group_muslim = {
 		province = {
 			local_missionary_strength = -0.02
 		}
-		
-        fervor = yes
-        
 	}
 	
+    #-------------------------------------
+    # Ibadi
+    #-------------------------------------
 	ibadi = {
 		color = { 0 0.4 0 }
 		icon = 25
@@ -1271,8 +1434,6 @@ religion_group_muslim = {
 		province = {
 			local_missionary_strength = -0.02
 		}
-		
-        fervor = yes
         
 		heretic = { HARURI SUFRI NAJADAT AZRAQI }
 	}
@@ -1283,10 +1444,13 @@ religion_group_muslim = {
 }
 
 religion_group_eastern = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 58 80 }
 
+    #-------------------------------------
+    # Theravada
+    #-------------------------------------
 	theravada = { 
 		color = { 0.8 0.3 0 }
 		icon = 33
@@ -1312,10 +1476,11 @@ religion_group_eastern = {
 		}
 		
 		heretic = { ZEN }
-		
-		fervor = yes
 	}
 	
+    #-------------------------------------
+    # Vajrayana
+    #-------------------------------------
 	vajrayana = {
 		color = { 0.8 0.3 0.3 }
 		icon = 34
@@ -1341,10 +1506,11 @@ religion_group_eastern = {
 		}
 		
 		heretic = { ZEN }
-		
-		fervor = yes
 	}
 	
+    #-------------------------------------
+    # Mahayana
+    #-------------------------------------
 	mahayana = {
 		color = { 0.8 0.3 0.5 }
 		icon = 32
@@ -1370,10 +1536,11 @@ religion_group_eastern = {
 		}
 		
 		heretic = { ZEN }
-		
-		fervor = yes
 	}
 
+    #-------------------------------------
+    # Taoism
+    #-------------------------------------
 	taoism = {
 		color = { 0.84 0.9 0.55 }
 		icon = 18
@@ -1386,10 +1553,11 @@ religion_group_eastern = {
 			global_unrest = -1
 		}
 		heretic = { TAOIST }
-        
-        fervor = yes
 	}
 
+    #-------------------------------------
+    # Shinto
+    #-------------------------------------
 	shinto = {
 		color = { 0.8 0 0 }
 		icon = 19
@@ -1404,8 +1572,6 @@ religion_group_eastern = {
 			global_unrest = -1
 		}
 		heretic = { SHUGENDO }
-        
-        fervor = yes
 	}
 	
 	crusade_name = CRUSADE
@@ -1414,10 +1580,13 @@ religion_group_eastern = {
 }
 
 religion_group_dharmic = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 61 82 } #Many shared with Eastern
 
+    #-------------------------------------
+    # Hinduism
+    #-------------------------------------
 	hinduism = {
 		color = { 0 0.8 0.8 }
 		icon = 17
@@ -1433,8 +1602,6 @@ religion_group_dharmic = {
 			tolerance_heathen = 2
 		}
 		
-		personal_deity = yes
-		
 		on_convert = {
 			change_religion = sikhism
 			add_prestige = -100
@@ -1448,6 +1615,9 @@ religion_group_dharmic = {
 		heretic = { BHAKTI }
 	}
 
+    #-------------------------------------
+    # Sikhism
+    #-------------------------------------
 	sikhism = {
 		color = { 0 0.6 0.6 }
 		icon = 24
@@ -1476,8 +1646,6 @@ religion_group_dharmic = {
 			}
 		}
 
-        fervor = yes
-        
 		heretic = { MASANDIS }
 	}
 	
@@ -1487,10 +1655,13 @@ religion_group_dharmic = {
 }
 
 religion_group_jewish = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 106 107 }
 
+    #-------------------------------------
+    # Jewish
+    #-------------------------------------
 	jewish = {
 		icon = 29
 		color = { 0.6 0.1 0.4 }
@@ -1507,8 +1678,6 @@ religion_group_jewish = {
 		}
 		
 		heretic = { SAMARITAN KARAITE }
-        
-        fervor = yes
 	}
 	
 	crusade_name = HOLY_WAR
@@ -1517,9 +1686,12 @@ religion_group_jewish = {
 }
 
 religion_group_zoroastrian = {
-	defender_of_faith = yes
+	defender_of_faith = no
 	flag_emblem_index_range = { 110 110 }
     
+    #-------------------------------------
+    # Zoroastrian
+    #-------------------------------------
 	zoroastrian = {
 		icon = 35
 		color = { 0.5 0.7 0.2 }
@@ -1536,8 +1708,6 @@ religion_group_zoroastrian = {
 		}
 		
 		heretic = { MAZDAKI MANICHEAN }	
-        
-        fervor = yes
 	}
 	
 	crusade_name = HOLY_WAR

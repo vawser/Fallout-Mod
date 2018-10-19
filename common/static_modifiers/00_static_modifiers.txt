@@ -1435,14 +1435,62 @@ invite_minorities_modifier = {
 ########################################
 # Religious Schools
 ########################################
-#hanafi_scholar_modifier = {
-#	religion_sub_modifier = yes # Will make icon placed next to religion modifier
-#	religion = yes
-#	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
-#	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-#	adm_tech_cost_modifier = -0.05
-#}
-
+speciality_chems_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	shock_damage = 0.1
+}
+speciality_slaves_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	global_manpower_modifier = 0.2
+}
+speciality_technology_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	technology_cost = -0.1
+}
+speciality_caps_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	global_tax_income = 64
+}
+speciality_weaponry_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	army_tradition = 1
+}
+speciality_water_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	diplomatic_reputation = 2
+}
+speciality_explosives_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	siege_ability = 0.15
+}
+speciality_alcohol_modifier = {
+	religion_sub_modifier = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+    
+	core_creation = -0.1
+}
 
 ########################################
 # Regiment Types Modifiers

@@ -86,7 +86,8 @@ NDefines.NCountry.PS_REDUCE_INFLATION = 9999        -- Removed, now a modifier o
 NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0
 NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0
 NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5
-NDefines.NMilitary.SLACKEN_AP_DROP = 2.0            -- Removed
+NDefines.NMilitary.SLACKEN_AP_DROP = 2.0                    -- Removed
+NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 99999   -- Removed
 
 --------------------------------
 -- Economy

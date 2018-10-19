@@ -41,6 +41,31 @@ is_scientific_state = {
     }
 }
 
+is_west_coast_chapter = {
+    OR = {
+        tag = BOS
+        tag = MCT
+        tag = VBO
+        tag = VB1
+    }
+}
+
+is_east_coast_chapter = {
+    OR = {
+        tag = BEC
+        tag = BOC
+        
+    }
+}
+
+is_midwest_chapter = {
+    OR = {
+        tag = BMW
+        tag = BMO
+        tag = BTX
+    }
+}
+
 is_prewar_nation = {
 	OR = {
 		tag = X04 # USA

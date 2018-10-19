@@ -8,12 +8,51 @@
  MODIFIER_IMPERIAL_MANDATE: "Yearly Research"
  
  #------------------------------------------------------
+ # Religious Schools
+ #------------------------------------------------------
+ CONFIRMSCHOLAR:0 "Confirm Inviting $SCHOOL$ Specialist"
+ RELIGIOUS_SCHOLAR_EXPIRY_TITLE:0 "Specialist Has Left"
+ RELIGIOUS_SCHOLAR_EXPIRY_SETUP:0 "When a specialist leaves our country."
+ RELIGIOUS_SCHOLAR_EXPIRY_HEADER:0 "Specialist Has Left"
+ RELIGIOUS_SCHOLAR_EXPIRY_4:0 "The $MOD|Y$ that have been our guests for 20 years have moved on."
+ INVITE_SCHOLAR_INSTANT_TOOLTIP:0 "§YInvite a Specialist§!"
+ INVITE_SCHOLAR_DELAYED_TOOLTIP:1 "Inviting a Specialist from another country will give us a unique bonus for 20 years."
+ alert_can_invite_scholar_instant:0 "Can invite §YSpecialist§!"
+ RELIGIOUS_SCHOOL_ITEM_ICON_DELAYED:0 "Has the following relations with other Specializations:\n$RELATION$"
+ RELIGION_VIEW_NO_SCHOOL_TOOLTIP:0 "We do not follow any specialization at the moment."
+ 
+ TRIG_NOT_USES_RELIGIOUS_SCHOOLS:0 "$RELIGION$ does not have specialization.\n"
+ TRIG_USES_RELIGIOUS_SCHOOLS:0 "$RELIGION$ have specialization.\n"
+ TRIG_NOT_HAS_RELIGIOUS_SCHOOL:0 "$COUNTRY$ does not have a specialization.\n"
+ TRIG_HAS_RELIGIOUS_SCHOOL:0 "$COUNTRY$ have a specialization.\n"
+ EFFECT_SET_RELIGIOUS_SCHOOL:1 "$COUNTRY$ will specialize in $SCHOOL$.\n($MODIFIER$)"
+ 
+ #------------------------------------------------------
+ # Blessings
+ #------------------------------------------------------
+ HOLY_SITE: "Pre-war Site"
+ ALREADY_PICKED_BLESSING: "Already picked this Upgrade!"
+ ALL_BLESSINGS_PICKED: "§GAll possible Upgrades picked already!§!"
+ LOST_HOLY_SITES: "§RNot all Pre-war sites are controlled by your religion. Effects of your $NUM_LOST$ most recently chosen Upgrades are disabled.§!"
+ TOO_FEW_HOLY_SITES: "§RToo few Pre-war sites are controlled and converted by your religion to pick another Upgrade (currently $CURR|Y$ of $MAX$).§!"
+ CAN_PICK_BLESSING: "It is possible to pick another Upgrade for your faith!"
+ CAN_VIEW_BLESSING: "View Upgrades not yet picked"
+ PICK_BLESSING_DESC: "§GClick to pick $NAME|Y$ to be among your favored Upgrades.§!"
+ BLESSINGS_EXPLAIN: "The number of Upgrades you can pick corresponds to the number of Pre-war sites countries of your religion control and have converted."
+ M_BLESSINGS_AND_HOLY_SITES: "Upgrades"
+ CONFIRM_PICK_BLESSING_TITLE: "Confirm Pick Upgrade"
+ CONFIRM_PICK_BLESSING_DESC: "Do you wish to add $NAME|Y$ to be among our favored Upgrades? This cannot be undone later."
+ HOLY_SITES: "Pre-war Sites"
+ PICK_BLESSING: "Pick Upgrade"
+ PATRIARCHAL_BLESSINGS: "Upgrades"
+ 
+ #------------------------------------------------------
  # Centers of Trade
  #------------------------------------------------------
  FROM_CENTER_OF_TRADE: "$COT$"
  COT_EFFECT: "Create a level $LEVEL|Y$ Urban Centre in $PROVINCE|G$\n"
- COT_ADD_LEVEL_EFFECT:3 "Urban Centre level in $PROVINCE|Y$ is increased by $DELTA|Y$\n"
- COT_REMOVE_LEVEL_EFFECT:2 "Urban Centre level in $PROVINCE|Y$ is decreased by $DELTA|R$\n"
+ COT_ADD_LEVEL_EFFECT: "Urban Centre level in $PROVINCE|Y$ is increased by $DELTA|Y$\n"
+ COT_REMOVE_LEVEL_EFFECT: "Urban Centre level in $PROVINCE|Y$ is decreased by $DELTA|R$\n"
  COT_COASTAL: "Coastal"
  COT_INLAND: "Inland"
  COT_DESCRIPTION_SHORT: "$NAME|Y$ (Level $LEVEL|Y$ $TYPE$ Urban Centre)\n"

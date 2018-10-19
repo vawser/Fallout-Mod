@@ -1,0 +1,147 @@
+namespace = adherence
+
+# Questioning the Codex
+# Many have begun to flout the teachings of the Codex, with many pointing to their disillusionment of the [Root.GetName] as the cause.
+# Calm those incensed by the troublemakers
+# Make concessions to disillusioned
+country_event = {
+	id = adherence.1
+	title = adherence.1.title
+	desc = adherence.1.desc
+    picture = BOS_WORKSHOP_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_patriarch_authority = yes
+	}
+
+	option = {
+		name = adherence.1.option.a
+
+        add_patriarch_authority = 0.1
+        
+        ai_chance = { factor = 50 }
+	}
+    
+    option = {
+		name = adherence.1.option.b
+
+        add_stability = 1
+        add_patriarch_authority = -0.1
+        
+        ai_chance = { factor = 50 }
+	}
+}
+
+# The Plight of the Outsider
+# Although knowledge of [Root.GetName] is kept secret, many local outsiders have begun to send messages via scouts of their plight. They request support from the Brotherhood of Steel, to protect them where they cannot.
+# That is not our duty
+# We must assist these people
+country_event = {
+	id = adherence.2
+	title = adherence.2.title
+	desc = adherence.2.desc
+    picture = BOS_CAFETERIA_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_patriarch_authority = yes
+	}
+
+	option = {
+		name = adherence.2.option.a
+
+        add_patriarch_authority = 0.1
+        
+        ai_chance = { factor = 50 }
+	}
+    
+    option = {
+		name = adherence.2.option.b
+
+        add_prestige = 25
+        add_patriarch_authority = -0.1
+        
+        ai_chance = { factor = 50 }
+	}
+}
+
+# Revision of the Codex
+# Although the process of learning is a continuous one, many members of the chapter reject the notion that the codex should be revised. Much of the information contained within the codex is no longer relevant, but there are those that would call heresy if such a notion is acted upon.
+# Revise the codex
+# Adhere to traditions
+country_event = {
+	id = adherence.3
+	title = adherence.3.title
+	desc = adherence.3.desc
+    picture = BOS_CHAT_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_patriarch_authority = yes
+	}
+
+	option = {
+		name = adherence.3.option.a
+
+        add_patriarch_authority = -0.1
+        add_army_tradition = 15
+        
+        ai_chance = { factor = 50 }
+	}
+    
+    option = {
+		name = adherence.3.option.b
+
+        add_patriarch_authority = 0.1
+        
+        ai_chance = { factor = 50 }
+	}
+}
+
+# Creatorism Florishes!
+# The citizens of [Root.GetName] have strengthened their faith in Creatorism recently, and the principles of the Codex are espoused throughout the chapter.
+# Excellent
+country_event = {
+	id = adherence.4
+	title = adherence.4.title
+	desc = adherence.4.desc
+    picture = BOS_CHAT_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_patriarch_authority = yes
+	}
+
+	option = {
+		name = adherence.4.option.a
+
+        add_patriarch_authority = 0.25
+	}
+}
+
+# Creatorism Diminishes...
+# The citizens of [Root.GetName] have faltered in their faith in Creatorism recently, and as such the principles of the Codex are flouted throughout the chapter.
+# Oh dear...
+country_event = {
+	id = adherence.5
+	title = adherence.5.title
+	desc = adherence.5.desc
+    picture = BOS_CHAT_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_patriarch_authority = yes
+	}
+
+	option = {
+		name = adherence.5.option.a
+
+        add_patriarch_authority = -0.25
+	}
+}

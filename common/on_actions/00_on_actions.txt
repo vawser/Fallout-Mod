@@ -1,16 +1,17 @@
 # country
 on_startup = {
     events = {
-        startup.1    		# Global flags
-        startup.2    		# Country flags
-        processor.1		    # Processor assignment for Caravan system		
-        discovery.1 		    # Initial FoW setup
-		law_setup.1			# Fallback law setup
-        race.1               # Fallback race setup
-        cults.100       	    # Initial cult setup
-        immortality.1  	    # Setup immortal rulers
-        caravans.1      	    # Initial caravan placement
-        zion.7 			    # Revert Sorrows/Dead Horses to Mormon if the Cossacks isn't installed
+        startup.1       # Global flags
+        startup.2       # Country flags
+        processor.1     # Processor assignment for Caravan system		
+        discovery.1     # Initial FoW setup
+		law_setup.1     # Fallback law setup
+        race.1          # Fallback race setup
+        cults.100       # Initial cult setup
+        immortality.1   # Setup immortal rulers
+        caravans.1      # Initial caravan placement
+        zion.7          # 
+        speciality.1    # Pick Tribalism specialities
         
     }
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_startup" }
@@ -19,6 +20,10 @@ on_startup = {
 # country
 on_religion_change = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_religion_change" }
+    
+    events = {
+        speciality.1    # Pick Tribalism specialities
+    }
 }
 
 # country. Spawned when Enforcing Rebel Demands through a Support Rebels-war.
@@ -303,6 +308,10 @@ on_new_monarch = {
             name = immortality
             duration = -1
         }
+    }
+    
+    events = {
+        speciality.1    # Pick Tribalism specialities
     }
 }
 
@@ -769,6 +778,15 @@ on_five_year_pulse = {
 
 on_five_year_pulse_2 = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse_2" }
+    
+    random_events = {
+		10 = adherence.1
+		10 = adherence.2
+		10 = adherence.3
+        10 = adherence.4
+        10 = adherence.5
+        100 = 0
+    }
 }
 
 on_five_year_pulse_3 = {

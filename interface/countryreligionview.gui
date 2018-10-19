@@ -373,12 +373,12 @@ guiTypes = {
 			iconType = {
 				name ="religious_school_banner"
 				spriteType = "GFX_secondary_religion_banner"
-				position = { x = 80 y = 152 }
+				position = { x = 93 y = 152 }
 			}
 
 			instantTextBoxType = {
 				name = "religious_school_name"
-				position = { x = 50 y = 156 }
+				position = { x = 60 y = 156 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}	
@@ -392,12 +392,10 @@ guiTypes = {
 			guiButtonType = 
 			{
 				name ="invite_scholar_button"
-				quadTextureSprite = "GFX_muslim_school_button"
-				position = { x= 180 y = 148 }
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonFont = "Main_14"
+				quadTextureSprite = "GFX_standard_button_71"
+				position = { x= 130 y = 188 }
+				buttonFont = "vic_18"
+                buttonText = "Switch"
 				Orientation = "UPPER_LEFT"
 				hint_tag = "hint_changereligion"
 			}
@@ -566,33 +564,43 @@ guiTypes = {
 				position = { x= 50 y = 231 }
 			}
 			
+            # GFX_banner_yellow_160
+            iconType =
+			{
+				name ="orthodox_banner_bg"
+				spriteType = "GFX_macro_diplomacy_green_banner"
+				position = { x= 60 y = 235 }
+			}
+            
 			iconType =
 			{
 				name ="current_patriarch_authority_progress_bg"
 				spriteType = "GFX_piety_bar_bg"
-				position = { x= 91 y = 290 }
+				position = { x= 142 y = 290 }
 			}
 			
 			iconType =
 			{
 				name ="current_patriarch_authority_progress_frame"
 				spriteType = "GFX_ideaView_progress_frame_long"
-				position = { x= 84 y = 286 }
+				position = { x= 136 y = 286 }
 			}
 			
 			iconType =
 			{
 				name ="low_patriarch_authority"
 				spriteType = "GFX_icon_low_patriarch_authority"
-				position = { x= 54 y = 273 }
+				position = { x= 100 y = 273 }
 			}
 			
 			iconType =
 			{
 				name ="high_patriarch_authority"
 				spriteType = "GFX_icon_high_patriarch_authority"
-				position = { x= 272 y = 273 }
+				position = { x= 328 y = 273 }
 			}
+            
+            # 272
 			
 			iconType =
 			{
@@ -615,7 +623,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "current_patriarch_authority_text"
-				position = { x = 50 y = 255 }
+				position = { x = 110 y = 244 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = "CURRENT_PATRIARCH_AUTHORITY"	
@@ -630,7 +638,7 @@ guiTypes = {
 			{
 				name ="no_current_icon"
 				spriteType = "GFX_icon_none"
-				position = { x = 314 y = 240 }
+				position = { x = 450 y = 235 }
 				Orientation = "UPPER_LEFT"
 			}
 			
@@ -638,21 +646,19 @@ guiTypes = {
 			{
 				name ="current_icon"
 				spriteType = "GFX_russian_icons_strip"
-				position = { x = 314 y = 240 }
+				position = { x = 450 y = 235 }
                 frame = 1
 			}
 			
 			
 			guiButtonType = {
 				name = "pick_icon_button"
-				position = { x=304 y = 300}
-				quadTextureSprite ="GFX_standard_button_71"
+				position = { x= 425 y = 295}
+				quadTextureSprite ="GFX_standard_button_105"
 				buttonText = "SELECT"
 				buttonFont = "vic_18"
 				Orientation = "LEFT"
 			}
-			
-			
 		}
 
 		#------------------------------------------
@@ -956,116 +962,105 @@ guiTypes = {
 			
 			OverlappingElementsBoxType = {
 					name = "blessings"
-					position = { x = 30 y = 234 }
+					position = { x = 30 y = -9999 }
 					size = { x = 160 y = 32 }
 					Orientation = "UPPER_LEFT"
 					format = center
 					spacing = 7
 			}
 
-			iconType =
-			{
+			iconType = {
 				name ="holy_site_icon_1"
-				spriteType = "GFX_icon_religion_small"
+				spriteType = "GFX_standard_button_224"
 				position = { x = 35 y = 266 }
-				frame = 6
-#				scale = 0.75
 			}
 			
 			instantTextBoxType = {
 				name = "holy_site_name_1"
-				position = { x = 65 y = 271 }
+				position = { x = 85 y = 271 }
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
 				text = "Alexanderia"	
 				maxWidth = 128
 				maxHeight = 24
 				Orientation = "UPPER_LEFT"
-				format = left
+				format = center
 			}
 			
 			iconType =
 			{
 				name ="holy_site_icon_2"
-				spriteType = "GFX_icon_religion_small"
+				spriteType = "GFX_standard_button_224"
 				position = { x = 35 y = 296 }
-				frame = 6
-#				scale = 0.75
 			}
 			
 			instantTextBoxType = {
 				name = "holy_site_name_2"
-				position = { x = 65 y = 301 }
+				position = { x = 85 y = 301 }
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
 				text = "Alexanderia"	
 				maxWidth = 128
 				maxHeight = 24
 				Orientation = "UPPER_LEFT"
-				format = left
+				format = center
 			}
 			
 			iconType =
 			{
 				name ="holy_site_icon_3"
-				spriteType = "GFX_icon_religion_small"
-				position = { x = 195 y = 236 }
-				frame = 6
-#				scale = 0.75
+				spriteType = "GFX_standard_button_224"
+				position = { x = 150 y = 236 }
 			}
 			
 			instantTextBoxType = {
 				name = "holy_site_name_3"
-				position = { x = 225 y = 241 }
+				position = { x = 160 y = 241 }
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
 				text = "Alexanderia"	
-				maxWidth = 128
+				maxWidth = 200
 				maxHeight = 24
 				Orientation = "UPPER_LEFT"
-				format = left
+				format = center
 			}
 			
 			iconType =
 			{
 				name ="holy_site_icon_4"
-				spriteType = "GFX_icon_religion_small"
-				position = { x = 195 y = 266 }
-				frame = 6
-#				scale = 0.75
+				spriteType = "GFX_standard_button_224"
+				position = { x = 260 y = 266 }
 			}
 			
 			instantTextBoxType = {
 				name = "holy_site_name_4"
-				position = { x = 225 y = 271 }
+				position = { x = 305 y = 271 }
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
 				text = "Alexanderia"	
 				maxWidth = 128
 				maxHeight = 24
 				Orientation = "UPPER_LEFT"
-				format = left
+				format = center
 			}
 			
 			iconType =
 			{
 				name ="holy_site_icon_5"
-				spriteType = "GFX_icon_religion_small"
-				position = { x = 195 y = 296 }
-				frame = 6
-#				scale = 0.75
+				spriteType = "GFX_standard_button_224"
+				position = { x = 260 y = 296 }
 			}
 			
 			instantTextBoxType = {
 				name = "holy_site_name_5"
-				position = { x = 225 y = 301 }
+				position = { x = 305 y = 301 }
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
 				text = "Alexanderia"	
 				maxWidth = 128
 				maxHeight = 24
 				Orientation = "UPPER_LEFT"
-				format = left
+				format = center
 			}
 		}
 		
@@ -1076,7 +1071,7 @@ guiTypes = {
 		windowType = {
 			name = "muslim_specific_window"
 			backGround =""
-			position = { x=32 y=300 }	
+			position = { x=120 y=295 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1114,7 +1109,7 @@ guiTypes = {
 			{
 				name ="high_piety"
 				spriteType = "GFX_piety_icon_high"
-				position = { x= 255 y = -55 }
+				position = { x= 251 y = -55 }
 				Orientation = "CENTER_LEFT"
 			}
 			
@@ -1266,7 +1261,7 @@ guiTypes = {
 		windowType = {
 			name = "personal_deity"
 			backGround =""
-			position = { x=32 y=300 }	
+			position = { x=125 y=300 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1335,7 +1330,7 @@ guiTypes = {
 		windowType = {
 			name = "fetishist_cult"
 			backGround =""
-			position = { x=32 y=300 }	
+			position = { x=125 y=300 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1435,7 +1430,7 @@ guiTypes = {
 			guiButtonType = {
 				name ="papacy_icon"
 				quadTextureSprite= "GFX_standard_button_224"
-                position = { x= 40 y = -50 }
+                position = { x= 125 y = -35 }
                 buttonText = "State Decrees"
                 buttonFont = "vic_18"
 			}
@@ -1616,7 +1611,7 @@ guiTypes = {
 		windowType = {
 			name = "fervor_specific_window"
 			backGround =""
-			position = { x=32 y=300 }	
+			position = { x=130 y=300 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1918,7 +1913,7 @@ guiTypes = {
 		{
 			name ="become_Defender_of_the_Faith"
 			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
-			position = { x = 99393 y = 260 }
+			position = { x = 99393 y = -9999 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -1929,7 +1924,7 @@ guiTypes = {
 		{
 			name ="defender_of_the_faith_button"
 			quadTextureSprite = "button_defender_of_faith"
-			position = { x = 414 y = 258 }
+			position = { x = 414 y = -9999 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -1940,7 +1935,7 @@ guiTypes = {
 		{
 			name ="defender_of_the_faith_shield"
 			quadTextureSprite = "GFX_shield_thin"
-			position = { x = 401 y = 250 }
+			position = { x = 401 y = -9999 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -1952,7 +1947,7 @@ guiTypes = {
 # Needs txt linking	
 		instantTextBoxType = {
 				name = "defender_title"
-				position = { x = 360 y = 233 }
+				position = { x = 360 y = -9999 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}	
