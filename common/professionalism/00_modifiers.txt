@@ -41,7 +41,7 @@ ap_rank_2_modifier = {
 		always = yes
 	}
     
-    movement_speed = 0.25
+    movement_speed = 0.2
     
     drill_gain_modifier = 0.1
 }
@@ -77,8 +77,7 @@ ap_rank_4_modifier = {
 		always = yes
 	}
 	
-    shock_damage = 0.1
-    fire_damage = 0.1
+    reserves_organisation = 0.5
     
 	drill_gain_modifier = 0.1
 }
@@ -135,7 +134,7 @@ ap_rank_7_modifier = {
 		always = yes
 	}
     
-    general_cost = -0.5
+    recover_army_morale_speed = 0.1
     
     drill_gain_modifier = 0.1
 }
@@ -154,7 +153,8 @@ ap_rank_8_modifier = {
 		always = yes
 	}
     
-    land_morale = 0.1
+    fire_damage_received = -0.1
+    shock_damage_received = -0.1
     
     drill_gain_modifier = 0.1
 }
@@ -173,7 +173,7 @@ ap_rank_9_modifier = {
 		always = yes
 	}
     
-    siege_ability = 0.1
+    leader_cost = -0.5
     
     drill_gain_modifier = 0.1
 }
@@ -192,7 +192,7 @@ ap_rank_10_modifier = {
 		always = yes
 	}
     
-    discipline = 0.1
+    army_tradition = 1
     
     drill_gain_modifier = 0.1
 }
