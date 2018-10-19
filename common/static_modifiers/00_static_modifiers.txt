@@ -1032,21 +1032,6 @@ absolutism = {
 	core_decay_on_your_own = -0.5
 }
 
-low_army_professionalism = {
-	mercenary_cost = -0.15
-	possible_mercenaries = 0.15
-}
-
-high_army_professionalism = {
-	fire_damage = 0.1
-	shock_damage = 0.1
-	siege_ability = 0.2
-}
-
-streltsy_modifier = {
-    
-}
-
 power_projection = {
 	defensiveness = 0.1
 	global_trade_power = 0.2
@@ -1404,10 +1389,6 @@ serfs_recieved_by_cossacks = {
 	global_tax_modifier = -0.1
 }
 
-cossacks_modifier = {
-    
-}
-
 #---------------------------------------------
 # Religious Schools
 #---------------------------------------------
@@ -1469,19 +1450,36 @@ speciality_alcohol_modifier = {
 }
 
 #---------------------------------------------
-# Regiment Types Modifiers
+# Units
 #---------------------------------------------
+low_army_professionalism = {
+	mercenary_cost = -0.15
+	possible_mercenaries = 0.15
+}
+
+high_army_professionalism = {
+	reserves_organisation = 0.5
+}
+
 # Used by individual regiments
 regiment_drill_modifier = { 
-	shock_damage = 0.1
-	fire_damage = 0.1
-	fire_damage_received = -0.1
-	shock_damage_received = -0.1
+	shock_damage = 0.25
+	fire_damage = 0.25
+	fire_damage_received = -0.25
+	shock_damage_received = -0.25
 }
 
 # Used by an entire army, is the average of all subunits drill
 army_drill_modifier = { 
 	
+}
+
+streltsy_modifier = {
+    
+}
+
+cossacks_modifier = {
+    
 }
 
 janissary_regiment = {
@@ -1492,8 +1490,8 @@ janissary_regiment = {
 }
 
 rajput_regiment = {
-	siege_ability = 1.0
-	land_morale = 1.0
+	siege_ability = 0.25
+	land_morale = 0.25
 }
 
 #---------------------------------------------
