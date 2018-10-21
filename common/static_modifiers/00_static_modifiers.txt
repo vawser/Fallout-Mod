@@ -511,6 +511,7 @@ base_values = {
 	monthly_splendor = 1
 	artillery_bonus_vs_fort = 5
 	cav_to_inf_ratio = 0.5
+    monthly_militarized_society = -0.05
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -532,7 +533,7 @@ stability = {
 }
 
 positive_stability = {
-    monthly_militarized_society = 0.15
+    monthly_militarized_society = 0.03
 
 	global_unrest = -1					#-1% revolt risk each step
 	global_tax_modifier = 0.05
@@ -548,7 +549,7 @@ positive_stability = {
 }
 
 negative_stability = {
-    monthly_militarized_society = -0.15
+    monthly_militarized_society = -0.05
     
 	global_unrest = -2					#-1% EXTRA revolt risk each step
 	legitimacy = 1
@@ -921,7 +922,7 @@ no_debate_in_parliament = {
 republican_tradition = {
 	global_unrest = -2
     papal_influence = 2
-    monthly_militarized_society = 0.1
+    monthly_militarized_society = 0.05
 }
 
 inverse_republican_tradition = {
