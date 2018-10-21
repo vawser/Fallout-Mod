@@ -24,8 +24,9 @@ independent_vegas_reform = {
 	
 	effect = {
         if = {
-            limit = { 
-                has_ruler_flag = is_mr_house    # Added in history
+            limit = {
+                has_ruler = "Robert"
+                dynasty = "House"
             }
             country_event = { id = new_vegas.21 } # Kill Mr. House
         }
@@ -41,7 +42,8 @@ anarchic_vegas_reform = {
     effect = {
         if = {
             limit = { 
-                has_ruler_flag = is_mr_house    # Added in history
+                has_ruler = "Robert"
+                dynasty = "House"
             }
             country_event = { id = new_vegas.21 } # Kill Mr. House
         }
