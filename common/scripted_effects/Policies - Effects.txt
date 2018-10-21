@@ -459,6 +459,47 @@ set_scavenging_forbidden = {
 #-----------------------------------
 # Research
 #-----------------------------------
+setup_research = {
+    set_variable = {
+        which = research_cost_addition
+        value = 50
+    }
+    set_variable = {
+        which = research_cost
+        value = 100
+    }
+    set_variable = {
+        which = research
+        value = 0
+    }
+}
+
+researched_discovery = {
+    if = {
+        limit = {
+            check_variable = { 
+                which = research
+                value = 100
+            }
+        }
+        subtract_variable = {
+            which = research
+            value = 100
+        }
+    }
+    else = {
+        set_variable = {
+            which = research
+            value = 0
+        }
+    }
+    
+    change_variable = {
+        which = research_cost
+        which = research_cost_addition
+    }
+}
+
 # Every Two Years
 research_update = {
     hidden_effect = {
@@ -482,12 +523,6 @@ research_update = {
             }
             add_research_10 = yes
         }
-    }
-}
-
-lose_research_on_discovery = {
-    subtract_variable = {
-        research = 100
     }
 }
 
