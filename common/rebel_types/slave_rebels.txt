@@ -34,9 +34,9 @@ slave_rebels = {
 		factor = 1
 
         modifier = {
-			factor = 200
-            owner = { has_country_flag = slave_rebellion_underway }
-		}
+            factor = 0
+            owner = { has_slavery_forbidden = yes }
+        }
 	 	modifier = {
 			factor = 0.001
 			is_colony = yes
