@@ -153,6 +153,7 @@ land_province = {
 mild_winter = {
 	local_hostile_attrition = 1
 	supply_limit_modifier = -0.1
+    local_colonial_growth = -5
 
 	picture = "winter_mild"
 }
@@ -160,6 +161,7 @@ mild_winter = {
 normal_winter = {
 	local_hostile_attrition = 2
 	supply_limit_modifier = -0.2
+    local_colonial_growth = -10
 
 	picture = "winter_normal"
 }
@@ -167,6 +169,7 @@ normal_winter = {
 severe_winter = {
 	local_hostile_attrition = 3
 	supply_limit_modifier = -0.3
+    local_colonial_growth = -15
 
 	picture = "winter_severe"
 }
@@ -408,6 +411,7 @@ intolerance = {
 unrest = {
 	regiment_recruit_speed = 0.1			#10% longer time to build troops for each rr
 	ship_recruit_speed = 0.1
+    local_colonial_growth = -1
 }
 
 nationalism = {
@@ -544,6 +548,7 @@ positive_stability = {
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
     papal_influence = 1
+    global_colonial_growth = 5
     
     inflation_reduction = 0.05
 }
@@ -558,6 +563,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
     papal_influence = 1
+    global_colonial_growth = -5
     
     inflation_reduction = -0.05
 }
