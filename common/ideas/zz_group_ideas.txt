@@ -263,8 +263,8 @@ city_ideas = {
 
 settlement_ideas = {
 	start = {
-		global_colonial_growth = 10
-		colonists = 1
+		ae_impact = -0.05
+		improve_relation_modifier = 0.1
 	}
 	bonus = {
 		native_assimilation = 0.5
@@ -278,6 +278,7 @@ settlement_ideas = {
 	# Survivalists
 	settlement_1 = {
 		colonist_placement_chance = 0.05
+        global_colonial_growth = 10
 	}
 	
 	# Recyclers

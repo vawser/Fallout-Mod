@@ -25,9 +25,9 @@ NDefines.NCountry.CAN_CONVERT_TERRITORY_RELIGION = 1    -- Allow conversion
 --------------------------------
 -- Migration
 --------------------------------
-NDefines.NCountry.MIGRATION_BOOST = 5
-NDefines.NCountry.MIGRATION_COOLDOWN = 12
-NDefines.NCountry.MIGRATION_DEPLETION_TIME = 365
+NDefines.NCountry.MIGRATION_BOOST = 25
+NDefines.NCountry.MIGRATION_COOLDOWN = 64
+NDefines.NCountry.MIGRATION_DEPLETION_TIME = 1800
 
 --------------------------------
 -- Diplomacy
@@ -41,7 +41,6 @@ NDefines.NCountry.POWER_MAX = 1000 -- Clean
 NDefines.NCountry.MAX_EXTRA_PERSONALITIES = 3 -- Allow 3 modifiers
 NDefines.NCountry.YEARS_PER_EXTRA_PERSONALITY = 10 
 NDefines.NCountry.MAX_CROWN_COLONIES = 9999 -- Disable colonial nations
-NDefines.NCountry.MIGRATION_COOLDOWN = 240 -- Slow down migration
 NDefines.NCountry.INNOVATIVENESS_FIRST_REACHED_TECH_LEVEL = 5.0 -- Make innovativeness easier to gain
 NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 5.0 -- Make innovativeness easier to gain
 NDefines.NCountry.INNOVATIVENESS_BEHIND_IN_TECH_PENALTY = -0.05 -- Make it easier to lose innovativeness
