@@ -49,13 +49,23 @@ country_event = {
 	trigger = {
         OR = {
             AND = {
-                tag = NVG
                 NOT = { has_ruler = "Robert" }
+                OR = {
+                    AND = {
+                        has_dlc = "Dharma"
+                        NOT = { has_reform = independent_vegas_reform }
+                        NOT = { has_reform = anarchic_vegas_reform }
+                    }
+                    AND = {
+                        NOT = { has_dlc = "Dharma" }
+                        tag = NVG
+                    }
+                }
             }
-	AND = {
-		tag = RNC
-		NOT = { has_ruler = "Brain" }
-	}
+            AND = {
+                tag = RNC
+                NOT = { has_ruler = "Brain" }
+            }
         }
 	}
 
