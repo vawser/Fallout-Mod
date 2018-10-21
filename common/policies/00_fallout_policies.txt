@@ -45,7 +45,10 @@ conversion_focus = {
 		always = yes
 	}
 	allow = {
-        full_idea_group = religion_ideas
+        OR = {
+            full_idea_group = religion_ideas
+            full_idea_group = dummy_ideas
+        }
 	}
 	
 	missionaries = 1
@@ -62,7 +65,10 @@ diversity_focus = {
 		always = yes
 	}
 	allow = {
-        full_idea_group = tolerance_ideas
+        OR = {
+            full_idea_group = tolerance_ideas
+            full_idea_group = dummy_ideas
+        }
 	}
 	
 	num_accepted_cultures = 1
@@ -120,8 +126,10 @@ colonisation_focus = {
 		always = yes
 	}
 	allow = {
-        full_idea_group = exploration_ideas
-        full_idea_group = naval_trade_ideas
+        OR = {
+            full_idea_group = exploration_ideas
+            full_idea_group = naval_trade_ideas
+        }
 	}
 	
 	global_colonial_growth = 20
@@ -158,8 +166,10 @@ construction_focus = {
 		always = yes
 	}
 	allow = {
-        full_idea_group = manufacturing_ideas
-        full_idea_group = civil_organisation_ideas
+        OR = {
+            full_idea_group = manufacturing_ideas
+            full_idea_group = civil_organisation_ideas
+        }
 	}
 	
 	build_time = -0.25
@@ -277,7 +287,10 @@ tactical_focus = {
 		always = yes
 	}
 	allow = {
-        full_idea_group = army_organisation_ideas
+        OR = {
+            full_idea_group = army_organisation_ideas
+            full_idea_group = dummy_ideas
+        }
 	}
 	
 	land_attrition = -0.1
@@ -294,7 +307,10 @@ leadership_focus = {
 		always = yes
 	}
 	allow = {
-        full_idea_group = army_leadership_ideas
+        OR = {  
+            full_idea_group = army_leadership_ideas
+            full_idea_group = dummy_ideas
+        }
 	}
 	
 	army_tradition = 1
@@ -331,7 +347,10 @@ mercenary_focus = {
 		always = yes
 	}
 	allow = {
-        full_idea_group = merc_ideas
+        OR = {
+            full_idea_group = merc_ideas
+            full_idea_group = dummy_ideas
+        }
 	}
 	
 	mercenary_cost = -0.1
