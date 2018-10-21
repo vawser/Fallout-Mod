@@ -152,6 +152,13 @@ policy_gambling = {
         }
         ai_will_do = {
             factor = 1
+            
+            # Discourage the AI from losing money unless they are loaded
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 10 }
+            }
         }
     }
     
