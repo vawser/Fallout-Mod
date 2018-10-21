@@ -1,36 +1,4 @@
 country_decisions = {
-    claim_vault = {
-		potential = {
-			is_tribal_government = yes
-            NOT = { num_of_cities = 5 } # Four cities or less, roughly the same size in terms of land as Vault City
-		}
-		allow =  {
-            is_tribal_government = yes
-			any_owned_province = {
-                has_province_modifier = pf_vault
-            }
-            stability = 0
-            years_of_income = 1
-		}
-	  	effect = {
-            add_years_of_income = -1
-            if = {
-                limit = {
-                    NOT = { has_reform = vault_reform }
-                }
-                change_government_effect = {
-                    TYPE = vault
-                    REFORM = vault_reform
-                    LEGACY = vault_legacy
-                }
-            }
-            add_stability = -6
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-    
 	assemble_a_raiding_party = {
 		potential = {
 			is_tribal_government = yes

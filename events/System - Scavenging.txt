@@ -1,0 +1,26 @@
+namespace = scavenging
+
+country_event = {
+	id = scavenging.1
+	title = scavenging.1.title
+	desc = scavenging.1.desc
+	picture = BOOMER_ANDERSON_SHELTER_eventPicture
+	
+	trigger = {
+		has_country_flag = scavenging_1
+	}
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = scavenging_1 }
+    }
+
+	option = {
+		name = scavenging.1.option.a
+
+        
+	}
+}

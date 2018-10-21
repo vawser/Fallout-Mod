@@ -146,6 +146,38 @@ policy_justice = {
             }
         }
     }
+    interaction = {
+        name = "enforce_stability"
+        icon = 1
+        years_between_use = 25
+        
+        potential = {
+            NOT = { stability = 3 }
+        }
+        trigger = {        
+            NOT = { corruption = 25 }  
+        }
+        effect = {
+            add_corruption = 5
+            custom_tooltip = ENFORCE_STABILITY_TT
+            hidden_effect = { set_country_flag = enforce_stability }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                corruption = 10
+            }
+            
+            modifier = {
+                factor = 0
+                
+                stability = 0
+            }
+        }
+    }
     
     #-----------------------
     # Imprisonment

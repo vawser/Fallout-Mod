@@ -22,13 +22,18 @@ country_event = {
 	option = {
 		name = diplomatic_actions.1.option.a
  
+        clr_country_flag = sent_assassin
+        
         clear_global_event_target = ass_killer
         save_global_event_target_as = ass_killer
 
         every_country = {
             limit = {
-                has_country_flag = got_assassin
+                has_country_flag = being_assassinated
+                is_neighbor_of = ROOT
             }
+            
+            clr_country_flag = being_assassinated
             
             clear_global_event_target = ass_target
             save_global_event_target_as = ass_target
@@ -54,12 +59,6 @@ country_event = {
                     ROOT = { country_event = { id = diplomatic_actions.7 } }
                 }
             }
-        }
-        
-        # Tidy up
-        every_country = {
-            clr_country_flag = sent_assassin
-            clr_country_flag = got_assassin
         }
 	}
 }

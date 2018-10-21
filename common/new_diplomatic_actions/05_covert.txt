@@ -17,30 +17,46 @@ establish_cult = {
                 is_capital = no
             }
 		}
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
 	}
     
 	is_allowed = {
         is_neighbor_of = FROM
         has_spy_network_in = {
             who = FROM
-            value = 50
+            value = 100
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
         }
 	}
 	on_accept = {
         log = "Establish Cult used by [Root.GetName]"
-        add_spy_network_in = { who = FROM value = -50 }
+        add_spy_network_in = { who = FROM value = -100 }
 		FROM = {
             random_owned_province = {
                 change_religion = ROOT
+            }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
             }
         }
 	}
 	on_decline =
 	{
-        add_spy_network_in = { who = FROM value = -50 }
+        add_spy_network_in = { who = FROM value = -100 }
         FROM = {
             random_owned_province = {
                 change_religion = ROOT
+            }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
             }
         }
 	}
@@ -75,6 +91,10 @@ spread_propaganda_action = {
                 is_capital = no
             }
 		}
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
 	}
     
 	is_allowed = {
@@ -82,6 +102,10 @@ spread_propaganda_action = {
         has_spy_network_in = {
             who = FROM
             value = 50
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
         }
 	}
 	on_accept = {
@@ -91,6 +115,10 @@ spread_propaganda_action = {
             random_owned_province = {
                 change_culture = ROOT
             }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
+            }
         }
 	}
 	on_decline =
@@ -99,6 +127,10 @@ spread_propaganda_action = {
         FROM = {
             random_owned_province = {
                 change_culture = ROOT
+            }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
             }
         }
 	}
@@ -132,10 +164,10 @@ assassinate_leader = {
 	is_visible = {
 		is_neighbor_of = FROM
         FROM = { has_regency = no }
-        NOT = {
-            any_country = {
-                has_country_flag = sent_assassin
-            }
+        NOT = { has_country_flag = sent_assassin }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
         }
 	}
     
@@ -145,36 +177,40 @@ assassinate_leader = {
             who = FROM
             value = 100
         }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
 	}
 	on_accept = {
         log = "Assassinate Leader used by [Root.GetName]"
         add_spy_network_in = { who = FROM value = -100 }
         
-        # Prevent overlay if different countries use the action at the same time.
-        # Will simply fail the assassinate, which is fine
-        every_country = {
-            clr_country_flag = sent_assassin
-            clr_country_flag = got_assassin
-        }
-        
-        # Allow the event to be triggered for the assassination
         set_country_flag = sent_assassin
-        FROM = { set_country_flag = got_assassin }
+        
+        FROM = { 
+            set_country_flag = being_assassinated
+            
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 3650
+            }
+        }
 	}
 	on_decline =
 	{
         add_spy_network_in = { who = FROM value = -100 }
         
-        # Prevent overlay if different countries use the action at the same time.
-        # Will simply fail the assassinate, which is fine
-        every_country = {
-            clr_country_flag = sent_assassin
-            clr_country_flag = got_assassin
-        }
-        
-        # Allow the event to be triggered for the assassination
         set_country_flag = sent_assassin
-        FROM = { set_country_flag = got_assassin }
+        
+        FROM = { 
+            set_country_flag = being_assassinated
+            
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 3650
+            }
+        }
 	}
 	
 	ai_acceptance = {
@@ -210,10 +246,9 @@ conduct_slave_raid = {
                 NOT = { has_province_modifier = slave_raid }
             }
         }
-        NOT = {
-            any_country = {
-                has_country_flag = sent_slave_raid
-            }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_SLAVE_RAID
+            FROM = { NOT = { has_country_modifier = target_of_slave_raid } }
         }
 	}
     
@@ -222,6 +257,10 @@ conduct_slave_raid = {
         has_spy_network_in = {
             who = FROM
             value = 50
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_SLAVE_RAID
+            FROM = { NOT = { has_country_modifier = target_of_slave_raid } }
         }
 	}
 	on_accept = {
@@ -237,6 +276,13 @@ conduct_slave_raid = {
         # Allow the event to be triggered
         set_country_flag = sent_slave_raid
         FROM = { set_country_flag = got_slave_raid }
+        
+        FROM = {
+            add_country_modifier = { 
+                name = target_of_slave_raid
+                duration = 3650
+            }
+        }
 	}
 	on_decline =
 	{
@@ -251,6 +297,13 @@ conduct_slave_raid = {
         # Allow the event to be triggered
         set_country_flag = sent_slave_raid
         FROM = { set_country_flag = got_slave_raid }
+        
+        FROM = {
+            add_country_modifier = { 
+                name = target_of_slave_raid
+                duration = 3650
+            }
+        }
 	}
 	
 	ai_acceptance = {
