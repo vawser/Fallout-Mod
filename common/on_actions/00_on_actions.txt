@@ -321,6 +321,11 @@ on_new_consort = {
 
 on_monarch_death = { 
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_monarch_death" }
+    
+    events = {
+        new_vegas.30 # Anarcho Vegas
+		new_vegas.31 # Independent Vegas	
+    }
 }
 
 # country 
@@ -350,8 +355,6 @@ on_death_foreign_slave_ruler = {
 	events = {
 		wolf_pack.1 # Choose new for the Pack
 		shi.1 # Choose new ruler
-		new_vegas.30 #Anarcho Vegas
-		new_vegas.31 #Independent Vegas		
 	}
 }
 

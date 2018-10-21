@@ -22,10 +22,15 @@ liberal_autocracy_reform = {
 independent_vegas_reform = {
     icon = "person"
 	
-    custom_attributes = {
-        foreign_slave_rulers = yes
+	effect = {
+        if = {
+            limit = { 
+                has_ruler_flag = is_mr_house    # Added in history
+            }
+            country_event = { id = new_vegas.21 } # Kill Mr. House
+        }
     }
-	
+    
     modifiers = {
         improve_relation_modifier = 0.15
     }
@@ -33,10 +38,15 @@ independent_vegas_reform = {
 anarchic_vegas_reform = {
     icon = "cross"
 	
-    custom_attributes = {
-        foreign_slave_rulers = yes
+    effect = {
+        if = {
+            limit = { 
+                has_ruler_flag = is_mr_house    # Added in history
+            }
+            country_event = { id = new_vegas.21 } # Kill Mr. House
+        }
     }
-
+    
     modifiers = {
 		global_tax_modifier = -0.1	
 		hostile_attrition = 1
