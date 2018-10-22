@@ -22,6 +22,16 @@ fm_naval_officer = {
 
 	chance = {
 		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = {
+                any_owned_province = {
+                    has_port = yes
+                }
+            }
+        }
 	}
 	ai_will_do = {
 		factor = 1
@@ -89,6 +99,16 @@ fm_keel_hauler = {
 
 	chance = {
 		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = {
+                any_owned_province = {
+                    has_port = yes
+                }
+            }
+        }
 	}
 	ai_will_do = {
 		factor = 1
@@ -194,6 +214,16 @@ fm_naval_captain = {
 
 	chance = {
 		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = {
+                any_owned_province = {
+                    has_port = yes
+                }
+            }
+        }
 	}
 	ai_will_do = {
 		factor = 1
@@ -224,6 +254,16 @@ fm_shipwright = {
 
 	chance = {
 		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = {
+                any_owned_province = {
+                    has_port = yes
+                }
+            }
+        }
 	}
 	ai_will_do = {
 		factor = 1
@@ -239,6 +279,16 @@ fm_press_ganger = {
 
 	chance = {
 		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = {
+                any_owned_province = {
+                    has_port = yes
+                }
+            }
+        }
 	}
 	ai_will_do = {
 		factor = 1
