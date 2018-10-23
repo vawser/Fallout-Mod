@@ -91,9 +91,8 @@ industrialisation = {
     start = 2300
     
     can_start = {
-        calc_true_if = {
-            all_country = { total_development = 500 }
-            amount = 10
+        any_country = {
+            adm_tech = 10
         }
     }
 
