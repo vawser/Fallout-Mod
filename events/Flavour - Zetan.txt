@@ -28,39 +28,18 @@ country_event = {
             random_province = {
                 limit = {
                     is_empty = yes
+                    is_wasteland = no
+                    is_island = no
+                    is_sea = no
+                    has_empty_adjacent_province = yes
                     continent = america
                 }
                 cede_province = ZET
                 add_core = ZET
                 change_religion = ZET
                 change_culture = ZET
-                
-                random_empty_neighbor_province = {
-                    cede_province = ZET
-                    add_core = ZET
-                    change_religion = ZET
-                    change_culture = ZET
-                }
-                random_empty_neighbor_province = {
-                    cede_province = ZET
-                    add_core = ZET
-                    change_religion = ZET
-                    change_culture = ZET
-                }
-                random_empty_neighbor_province = {
-                    cede_province = ZET
-                    add_core = ZET
-                    change_religion = ZET
-                    change_culture = ZET
-                }
-                random_empty_neighbor_province = {
-                    cede_province = ZET
-                    add_core = ZET
-                    change_religion = ZET
-                    change_culture = ZET
-                }
             }
-            
+
             america = {
                 discover_country = ZET
             }
@@ -78,66 +57,7 @@ country_event = {
             }
             
             ZET = {
-                every_owned_province = {
-                    add_institution_embracement = {
-                        which = bottlecaps
-                        value = 100
-                    }
-                    if = {
-                        limit = {
-                            is_institution_enabled = robco
-                        }
-                        add_institution_embracement = {
-                            which = robco
-                            value = 100
-                        }
-                    }
-                    if = {
-                        limit = {
-                            is_institution_enabled = repconn
-                        }
-                        add_institution_embracement = {
-                            which = repconn
-                            value = 100
-                        }
-                    }
-                    if = {
-                        limit = {
-                            is_institution_enabled = rads
-                        }
-                        add_institution_embracement = {
-                            which = rads
-                            value = 100
-                        }
-                    }
-                    if = {
-                        limit = {
-                            is_institution_enabled = power_armor
-                        }
-                        add_institution_embracement = {
-                            which = power_armor
-                            value = 100
-                        }
-                    }
-                    if = {
-                        limit = {
-                            is_institution_enabled = vault_tec
-                        }
-                        add_institution_embracement = {
-                            which = vault_tec
-                            value = 100
-                        }
-                    }
-                    if = {
-                        limit = {
-                            is_institution_enabled = geck
-                        }
-                        add_institution_embracement = {
-                            which = geck
-                            value = 100
-                        }
-                    }
-                }
+                country_event = { id = zetan.2 days = 30 }
             }
         }
 	}
@@ -148,3 +68,140 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = zetan.2
+	title = zetan.2.title
+	desc = zetan.2.desc
+	picture = NIGHT_SKY_eventPicture
+    
+    hidden = yes
+    is_triggered_only = yes
+    
+    option = {
+        name = zetan.2.option.a
+   
+        add_years_of_income = 5
+        add_yearly_manpower = 5
+        add_yearly_sailors = 5
+        add_legitimacy = 100
+        add_stability = 6
+                
+        define_ruler = {
+            name = "Overlord"
+            dynasty = "Izzat"
+            adm = 6
+            dip = 6
+            mil = 6
+        }
+        add_ruler_personality = immortal_personality
+
+        capital_scope = {
+            random_empty_neighbor_province = {
+                limit = {
+                    is_wasteland = no
+                }
+                cede_province = ZET
+                add_core = ZET
+                change_religion = ZET
+                change_culture = ZET
+            }
+            random_empty_neighbor_province = {
+                limit = {
+                    is_wasteland = no
+                }
+                cede_province = ZET
+                add_core = ZET
+                change_religion = ZET
+                change_culture = ZET
+            }
+            random_empty_neighbor_province = {
+                limit = {
+                    is_wasteland = no
+                }
+                cede_province = ZET
+                add_core = ZET
+                change_religion = ZET
+                change_culture = ZET
+            }
+            random_empty_neighbor_province = {
+                limit = {
+                    is_wasteland = no
+                }
+                cede_province = ZET
+                add_core = ZET
+                change_religion = ZET
+                change_culture = ZET
+            }
+            random_empty_neighbor_province = {
+                limit = {
+                    is_wasteland = no
+                }
+                cede_province = ZET
+                add_core = ZET
+                change_religion = ZET
+                change_culture = ZET
+            }
+        }
+        
+        every_owned_province = {
+            add_institution_embracement = {
+                which = bottlecaps
+                value = 100
+            }
+            if = {
+                limit = {
+                    is_institution_enabled = robco
+                }
+                add_institution_embracement = {
+                    which = robco
+                    value = 100
+                }
+            }
+            if = {
+                limit = {
+                    is_institution_enabled = repconn
+                }
+                add_institution_embracement = {
+                    which = repconn
+                    value = 100
+                }
+            }
+            if = {
+                limit = {
+                    is_institution_enabled = rads
+                }
+                add_institution_embracement = {
+                    which = rads
+                    value = 100
+                }
+            }
+            if = {
+                limit = {
+                    is_institution_enabled = power_armor
+                }
+                add_institution_embracement = {
+                    which = power_armor
+                    value = 100
+                }
+            }
+            if = {
+                limit = {
+                    is_institution_enabled = vault_tec
+                }
+                add_institution_embracement = {
+                    which = vault_tec
+                    value = 100
+                }
+            }
+            if = {
+                limit = {
+                    is_institution_enabled = geck
+                }
+                add_institution_embracement = {
+                    which = geck
+                    value = 100
+                }
+            }
+        }
+    }
+}
