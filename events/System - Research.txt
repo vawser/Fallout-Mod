@@ -1,6 +1,28 @@
 namespace = research
 
-# has_government_attribute = enables_bos_research_event
+# Adds research variables to new countries that appear after on_startup
+country_event = {
+	id = research.100
+	title = research.100.title
+	desc = research.100.desc
+	picture = BOS_WORKSHOP_eventPicture
+	
+    hidden = yes
+    
+    trigger = {
+        NOT = { has_country_flag = setup_discoveries }
+    }
+    
+    mean_time_to_happen = {
+		months = 1
+	}
+    
+    option = {
+		name = research.100.option.a
+    
+        setup_research = yes
+    }
+}
 
 # New Research!
 # Our scientists have been persuing the latest scavenging finds sent to their labs for any potential technology. Progress with the latest batch has been excellent, and many promising artefacts have been discovered.

@@ -133,3 +133,9 @@ is_prewar_state = {
 	}
 }
 
+# These tags cannot switch to a new tag
+is_unswitchable_nation = {
+    OR = {
+        tag = ZET
+    }
+}

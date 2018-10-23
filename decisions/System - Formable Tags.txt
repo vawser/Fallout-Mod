@@ -9,6 +9,7 @@ country_decisions = {
 				tag = GD2
 				has_reform = legion_reform
 			}
+            NOT = { is_unswitchable_nation = yes }
 		}
 		
 		allow = {
@@ -71,6 +72,7 @@ country_decisions = {
 				technology_group = tech_shi
 				tag = SHI
 			}
+            NOT = { is_unswitchable_nation = yes }
 		}
 		
 		allow = { 
@@ -121,6 +123,7 @@ country_decisions = {
 				tag = NCR
 				tag = D01
 			}
+            NOT = { is_unswitchable_nation = yes }
 		}
 		
 		allow = {
@@ -243,6 +246,7 @@ country_decisions = {
 				tag = ENC
 			}
 			NOT = { exists = X04 }
+            NOT = { is_unswitchable_nation = yes }
 		}
 		
 		allow = { 
@@ -614,6 +618,7 @@ country_decisions = {
 				religion = creatorism
 				government = brotherhood
 			}
+            NOT = { is_unswitchable_nation = yes }
 		}
 		allow =  {
 			has_country_modifier = unified_brotherhood
@@ -692,6 +697,7 @@ country_decisions = {
 			capital_scope = {
                 superregion = mexico_superregion
             }
+            NOT = { is_unswitchable_nation = yes }
 		}
 		allow =  {
             own_header = yes
@@ -754,6 +760,7 @@ country_decisions = {
 			capital_scope = {
                 superregion = canada_superregion
             }
+            NOT = { is_unswitchable_nation = yes }
 		}
 		allow =  {
             own_header = yes
