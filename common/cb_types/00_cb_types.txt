@@ -661,3 +661,30 @@ cb_force_tributary = {
 	
 	war_goal = take_capital_force_tributary
 }
+
+# Tribal vs Tribal Feud
+cb_primitive_coercion = {
+	valid_for_subject = no
+
+	prerequisites = {
+		tag = CAE
+        is_neighbor_of = FROM
+        FROM = {
+            OR = {
+                technology_group = tech_tribal
+                technology_group = tech_super_mutant
+            }
+        }
+	}
+
+	war_goal = take_province_tribal_feud
+}
+
+cb_zetan_supremacy = {
+	prerequisites = {
+		tag = ZET
+	}
+
+	war_goal = take_province_nationalist
+}
+
