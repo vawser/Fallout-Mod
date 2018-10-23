@@ -1,4 +1,4 @@
-post_war_age = {
+great_war_aftermath = {
     start = 2260
     
     can_start = {
@@ -8,274 +8,174 @@ post_war_age = {
     religious_conflicts = yes
     absolutism = {
         harsh_treatment = 1
-        stability = 1
         decrease_autonomy_command = 1
-        strengthen_government = 2
-        
         increase_autonomy_command = -2
-        debase_currency = -1
         execute_rebel_acceptance_command = -10
         seat_in_parliament = -3
-        war_exhaustion = -1
     }
 
+    objectives = { } 
+    
     abilities = {
         ab_army_tradition = {
             modifier = {
                 army_tradition = 1
             }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
-        ab_discipline = {
+        ab_war_exhaustion = {
             modifier = {
-                discipline = 0.05
+                war_exhaustion = -0.1
             }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
-        ab_land_morale = {
+        ab_improve_relation_modifier = {
             modifier = {
-                land_morale = 0.1
+                improve_relation_modifier = 0.15
             }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
-        ab_siege_ability = {
+        ab_inflation_reduction = {
             modifier = {
-                siege_ability = 0.1
+                inflation_reduction = 0.1
             }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_movement_speed = {
-            modifier = {
-                movement_speed = 0.2
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_fire_damage = {
-            modifier = {
-                fire_damage = 0.1
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_fire_damage_received = {
-            modifier = {
-                fire_damage_received = -0.2
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_shock_damage = {
-            modifier = {
-                shock_damage = 0.1
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_shock_damage_received = {
-            modifier = {
-                shock_damage_received = -0.2
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_province_warscore_cost = {
-            modifier = {
-                province_warscore_cost = -0.25
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_ae_impact = {
-            modifier = {
-                ae_impact = -0.15
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_administrative_efficiency = {
-            modifier = {
-                administrative_efficiency = 0.05
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_core_creation = {
-            modifier = {
-                core_creation = -0.1
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_technology_cost = {
-            modifier = {
-                technology_cost = -0.1
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_idea_cost = {
-            modifier = {
-                idea_cost = -0.1
-            }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
         ab_yearly_corruption = {
             modifier = {
                 yearly_corruption = -0.05
             }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_max_absolutism = {
-            modifier = {
-                max_absolutism = 20
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_yearly_absolutism = {
-            modifier = {
-                yearly_absolutism = 1
-            }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
         ab_years_of_nationalism = {
             modifier = {
-                years_of_nationalism = -10
+                years_of_nationalism = -5
             }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_global_missionary_strength = {
-            modifier = {
-                global_missionary_strength = 0.03
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_warscore_cost_vs_other_religion = {
-            modifier = {
-                warscore_cost_vs_other_religion = -0.33
-            }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
         ab_global_colonial_growth = {
             modifier = {
-                global_colonial_growth = 25
+                global_colonial_growth = 20
             }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
-        ab_colony_boost_development = {
+        ab_global_trade_goods_size_modifier = {
+            modifier = {
+                global_trade_goods_size_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_advisor_cost = {
+            modifier = {
+                advisor_cost = -0.2
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_settlement_frontier = {
+            modifier = {
+                colonists = 1
+                colonist_placement_chance = 0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_coring_distance = {
             rule = {
-                can_colony_boost_development = yes
+                ignore_coring_distance = yes
             }
-            ai_will_do = {
-                factor = 10
-            }
+            ai_will_do = { factor = 1 }
         }
-        ab_can_bypass_forts = {
-            rule = {
-                can_bypass_forts = yes
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        ab_can_chain_claim = {
-            rule = {
-                can_chain_claim = yes
-            }
-            ai_will_do = {
-                factor = 10
-            }
-        }
-        
     }
-    
-    objectives = {
-        # Prestigious Capital
-        obj_prestigious_capital = {
-            capital_scope = {
-                development = 50
-            }
-            capital_scope = {
-                religion = ROOT
-            }
-            capital_scope = {
-                culture = ROOT
-            }
-            capital_scope = {
-                NOT = { devastation = 5 }
-            }
-        }
-        # Wise Ruler
-        obj_wise_ruler = {
-            OR = {
-                adm = 5
-                dip = 5
-                mil = 5
-            }
-        }
-        # United People
-        obj_wasteland_unity = {
-            religious_unity = 1.0
-            dominant_culture = ROOT
-        }
-        obj_colossal_fleet = {
-            naval_forcelimit = 50
-            navy_size_percentage = 0.5
-        }
-        obj_colossal_army = {
-            land_forcelimit = 50
-            army_size_percentage = 0.5
-        }
-        obj_realm_of_virtues = {
-            prestige = 75
-            NOT = { corruption = 5 }
-            OR = {
-                legitimacy = 75
-                horde_unity = 75
-                devotion = 75
-                republican_tradition = 75
-                meritocracy = 75
-            }
-        }
-        obj_diplomatic_connections = {
-            num_of_allies = 4
-        }
-        obj_lord_of_the_wasteland = {
-            is_great_power = yes
-        }
-    }        
 }
+
+industrialisation = {
+    start = 2300
+    
+    can_start = {
+        calc_true_if = {
+            all_country = { total_development = 500 }
+            amount = 10
+        }
+    }
+
+    religious_conflicts = yes
+    absolutism = {
+        harsh_treatment = 1
+        decrease_autonomy_command = 1
+        increase_autonomy_command = -2
+        execute_rebel_acceptance_command = -10
+        seat_in_parliament = -3
+    }
+
+    objectives = { } 
+    
+    abilities = {
+        ab_army_tradition = {
+            modifier = {
+                army_tradition = 1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_war_exhaustion = {
+            modifier = {
+                war_exhaustion = -0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_improve_relation_modifier = {
+            modifier = {
+                improve_relation_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_inflation_reduction = {
+            modifier = {
+                inflation_reduction = 0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_yearly_corruption = {
+            modifier = {
+                yearly_corruption = -0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_years_of_nationalism_fallout = {
+            modifier = {
+                years_of_nationalism = -5
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_colonial_growth = {
+            modifier = {
+                global_colonial_growth = 20
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_trade_goods_size_modifier = {
+            modifier = {
+                global_trade_goods_size_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_advisor_cost = {
+            modifier = {
+                advisor_cost = -0.2
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_settlement_frontier = {
+            modifier = {
+                colonists = 1
+                colonist_placement_chance = 0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_coring_distance = {
+            rule = {
+                ignore_coring_distance = yes
+            }
+            ai_will_do = { factor = 1 }
+        }
+    }
+}
+

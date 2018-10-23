@@ -14,7 +14,7 @@ NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 5
 NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 0
 NDefines.NCountry.MONARCH_DEATH = 0
 NDefines.NCountry.ALLOW_ZERO_BASE_VALUES = 1
-NDefines.NCountry.SPLENDOR_ABILITY_COST = 2000
+NDefines.NCountry.SPLENDOR_ABILITY_COST = 600
 
 --------------------------------
 -- Conversion
