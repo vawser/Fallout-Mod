@@ -81,10 +81,10 @@ province_event = {
             is_colony = yes
         }
         trade_goods = food
-        NOT = { has_province_modifier = bountiful_harvest }
+        NOT = { has_province_modifier = bountiful_harvest_fallout }
         owner = {
             capital_scope = {
-                NOT = { has_province_modifier = bountiful_harvest }
+                NOT = { has_province_modifier = bountiful_harvest_fallout }
             }
         }
     }
@@ -122,7 +122,7 @@ province_event = {
 		owner = {
 			capital_scope = {
 				add_province_modifier = {
-					name = bountiful_harvest
+					name = bountiful_harvest_fallout
 					duration = 1800
 				}
                 
@@ -147,7 +147,7 @@ province_event = {
 		name = province_discoveries.2.option.c
 		
 		add_province_modifier = {
-			name = bountiful_harvest
+			name = bountiful_harvest_fallout
 			duration = 1800
 		}
 		

@@ -17,7 +17,7 @@ country_decisions = {
                     NOT = { is_settlement_government = yes }
                 }
                 change_government_effect = {
-                    TYPE = settlement
+                    TYPE = settlement_government
                     REFORM = frontier_settlement_reform
                     LEGACY = frontier_settlement_legacy
                 }
@@ -46,7 +46,7 @@ country_decisions = {
                     NOT = { has_reform = republic_reform }
                 }
                 change_government_effect = {
-                    TYPE = republic
+                    TYPE = republic_government
                     REFORM = republic_reform
                     LEGACY = republic_legacy
                 }
@@ -77,7 +77,7 @@ country_decisions = {
                     NOT = { has_reform = vault_reform }
                 }
                 change_government_effect = {
-                    TYPE = vault
+                    TYPE = vault_government
                     REFORM = vault_reform
                     LEGACY = vault_legacy
                 }

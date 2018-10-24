@@ -1,0 +1,490 @@
+﻿l_english:
+ POLICIES: "National Policies"
+ 
+ # Note:
+ # The color codes in the names are used to sort the entries (due to the inherent name sort)
+ # They do not appear in game and are purely for sorting purposes.
+  
+ #------------------------------------------
+ # Economy
+ #------------------------------------------
+ policy_economy: "Economy"
+ policy_economy_desc: "How our nation handles the economy."
+ 
+ traditional_economy: "§B§!Economy: Traditional"
+ command_economy: "§B§!Economy: Command"
+ market_economy: "§B§!Economy: Market"
+ 
+ SET_TRADITIONAL_ECONOMY: "Set §YEconomy Policy§! to §YTraditional Economy§!."
+ SET_COMMAND_ECONOMY: "Set §YEconomy Policy§! to §YCommand Economy§!."
+ SET_MARKET_ECONOMY: "Set §YEconomy Policy§! to §YMarket Economy§!."
+ SET_MIXED_ECONOMY: "Set §YEconomy Policy§! to §YMixed Economy§!."
+ 
+ ALREADY_TRADITIONAL_ECONOMY: "Our §YEconomic Policy§! is already set to §YTraditional Economy§!."
+ ALREADY_COMMAND_ECONOMY: "Our §YEconomic Policy§! is already set to §YCommand Economy§!."
+ ALREADY_MARKET_ECONOMY: "Our §YEconomic Policy§! is already set to §YMarket Economy§!."
+ ALREADY_MIXED_ECONOMY: "Our §YEconomic Policy§! is already set to §YMixed Economy§!."
+
+ switch_to_traditional_economy: "Switch to Traditional Economy"
+ switch_to_command_economy: "Switch to Command Economy"
+ switch_to_market_economy: "Switch to Market Economy"
+ 
+ recruit_brahmin_whisperer: "Recruit Brahmin Whisperer"
+ recruit_missionary: "Recruit Missionary"
+ recruit_architect: "Recruit Architect"
+ recruit_disciplinarian: "Recruit Disciplinarian"
+ recruit_banker: "Recruit Banker"
+ recruit_auditor: "Recruit Auditor"
+ 
+ reduce_inflation: "Reduce Inflation"
+ desc_reduce_inflation: "We are currently reducing our inflation."
+ 
+ mint_aureaus: "Mint Aureaus"
+ mint_denarius: "Mint Denarius"
+ mint_ncr_dollars: "Mint NCR Dollars"
+ 
+ #------------------------------------------
+ # Law
+ #------------------------------------------
+ policy_law: "Law"
+ policy_law_desc: "How our nation handles law and order."
+ 
+ democratic_law: "§G§!Law: Democratic"
+ oligarchic_law: "§G§!Law: Oligarchic"
+ autocratic_law: "§G§!Law: Autocratic"
+ 
+ SET_DEMOCRATIC_LAW: "Set §YLaw Policy§! to §YDemocratic Law§!."
+ SET_OLIGARCHIC_LAW: "Set §YLaw Policy§! to §YOligarchic Law§!."
+ SET_AUTOCRATIC_LAW: "Set §YLaw Policy§! to §YAutocratic Law§!."
+ 
+ ALREADY_DEMOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YDemocratic Law§!."
+ ALREADY_OLIGARCHIC_LAW: "Our §YLaw Policy§! is already set to §YOligarchic Law§!."
+ ALREADY_AUTOCRATIC_LAW: "Our §YLaw Policy§! is already set to §YAutocratic Law§!."
+ 
+ switch_to_democratic_law: "Switch to Democratic Law"
+ switch_to_oligarchic_law: "Switch to Oligarchic Law"
+ switch_to_autocratic_law: "Switch to Autocratic Law"
+ 
+ recruit_politician: "Recruit Politician"
+ recruit_civil_servant: "Recruit Civil Servant"
+ 
+ recruit_orator: "Recruit Orator"
+ recruit_spy: "Recruit Spy"
+ 
+ recruit_enforcer: "Recruit Enforcer"
+ recruit_police_officer: "Recruit Police Officer"
+
+ improve_legitimacy: "Improve Legitimacy"
+ desc_improve_legitimacy: "We are improving the legitimacy of our government."
+ 
+ improve_government: "Improve Government"
+ desc_improve_government: "We are improving the governance of our government."
+ 
+ improve_absolutism: "Improve Absolutism"
+ desc_improve_absolutism: "We are improving the absolutism of our government."
+ 
+ #------------------------------------------
+ # Justice
+ #------------------------------------------
+ policy_justice: "Justice"
+ policy_justice_desc: "How our nation handles common criminals."
+
+ imprisonment_punishment: "§M§!Justice: Imprisonment"
+ execution_punishment: "§M§!Justice: Execution"
+ slavery_punishment: "§M§!Justice: Enslavement"
+ 
+ SET_IMPRISONMENT_PUNISHMENT: "Set §YJustice Policy§! to §YImprisonment§!."
+ SET_EXECUTION_PUNISHMENT: "Set §YJustice Policy§! to §YExecution§!."
+ SET_SLAVERY_PUNISHMENT: "Set §YJustice Policy§! to §YEnslavement§!."
+
+ ALREADY_IMPRISONMENT_PUNISHMENT: "Our §YJustice Policy§! is already set to §YImprisonment§!."
+ ALREADY_EXECUTION_PUNISHMENT: "Our §YJustice Policy§! is already set to §YExecution§!."
+ ALREADY_SLAVERY_PUNISHMENT: "Our §YJustice Policy§! is already set to §YEnslavement§!."
+ 
+ switch_to_imprisonment: "Switch to Imprisonment"
+ switch_to_execution: "Switch to Execution"
+ switch_to_enslavement: "Switch to Enslavement"
+ 
+ imprison_undesirables: "Imprison Undesirables"
+ execute_undesirables: "Execute Undesirables"
+ enslave_undesirables: "Enslave Undesirables"
+ 
+ imprisoning_undesirables: "Imprisoning Undesirables"
+ desc_imprisoning_undesirables: "We are currently imprisoning those we deem 'undesirable'." 
+ 
+ executing_undesirables: "Executing Undesirables"
+ desc_executing_undesirables: "We are currently executing those we deem 'undesirable'." 
+ 
+ enslaving_undesirables: "Enslaving Undesirables"
+ desc_enslaving_undesirables: "We are currently Enslaving those we deem 'undesirable'." 
+ 
+ improve_stability: "Improve Stability"
+ enforce_stability: "Enforce Stability"
+ 
+ ENFORCE_STABILITY_TT: "May increase Stability."
+ 
+ justice.1.title: "Enforcing Stability"
+ justice.1.desc: "The people of [Root.GetName] are riotous, and are baying for blood. Let us attempt to strongarm them into submission by calling upon the forces of influencial members of our government."
+ justice.1.option.a: "Come on..."
+ 
+ #------------------------------------------
+ # Innovation
+ #------------------------------------------
+ policy_innovation: "Innovation"
+ policy_innovation_desc: "How our nation handles technological innovation."
+ 
+ individual_innovation: "§O§!Innovation: Individual"
+ sponsored_innovation: "§O§!Innovation: Sponsored"
+ state_innovation: "§O§!Innovation: State"
+ 
+ SET_INDIVIDUAL_INNOVATION: "Set §YInnovation Policy§! to §YIndividual§!."
+ SET_SPONSORED_INNOVATION: "Set §YInnovation Policy§! to §YState-sponsored§!."
+ SET_STATE_INNOVATION: "Set §YInnovation Policy§! to §YState§!."
+ 
+ ALREADY_INDIVIDUAL_INNOVATION: "Our §YInnovation Policy§! is already set to §YIndividual§!."
+ ALREADY_SPONSORED_INNOVATION: "Our §YInnovation Policy§! is already set to §YState-sponsored§!."
+ ALREADY_STATE_INNOVATION: "Our §YInnovation Policy§! is already set to §YState§!."
+ 
+ switch_to_individual_innovation: "Switch to Individual Innovation"
+ switch_to_sponsored_innovation: "Switch to Sponsored Innovation"
+ switch_to_state_innovation: "Switch to State Innovation"
+ 
+ invest_in_research: "Invest in Research"
+ focus_administrative_research: "Focus Administrative Research"
+ focus_diplomatic_research: "Focus Diplomatic Research"
+ focus_military_research: "Focus Military Research"
+ 
+ #------------------------------------------
+ # Conscription
+ #------------------------------------------
+ policy_conscription: "Conscription"
+ policy_conscription_desc: "How our nation handles conscription of troops."
+ 
+ volunteer_conscription: "§T§!Conscription: Volunteer"
+ limited_conscription: "§T§!Conscription: Limited"
+ full_conscription: "§T§!Conscription: Full"
+ 
+ SET_VOLUNTEER_CONSCRIPTION: "Set §YConscription Policy§! to §YVolunteer§!."
+ SET_LIMITED_CONSCRIPTION: "Set §YConscription Policy§! to §YLimited§!."
+ SET_FULL_CONSCRIPTION: "Set §YConscription Policy§! to §YFull§!."
+ 
+ ALREADY_VOLUNTEER_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YVolunteer§!."
+ ALREADY_LIMITED_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YLimited§!."
+ ALREADY_FULL_CONSCRIPTION: "Our §YConscription Policy§! is already set to §YFull§!."
+ 
+ switch_to_volunteer_conscription: "Switch to Volunteer Conscription"
+ switch_to_limited_conscription: "Switch to Limited Conscription"
+ switch_to_full_conscription: "Switch to Full Conscription"
+ 
+ recruit_commandant: "Recruit Commandant"
+ recruit_spec_ops: "Recruit Spec Ops"
+ recruit_recruiter: "Recruit Recruiter"
+ recruit_drill_sergeant: "Recruit Drill Sergeant"
+ recruit_forager: "Recruit Forager"
+ recruit_sapper: "Recruit Sapper"
+ 
+ improve_army_tradition: "Improve Army Tradition"
+ desc_improve_army_tradition: "We are improving our army tradition."
+ 
+ improve_navy_tradition: "Improve Navy Tradition"
+ desc_improve_navy_tradition: "We are improving our navy tradition."
+ 
+ reduce_war_exhaustion: "Reduce War Exhaustion"
+ desc_reduce_war_exhaustion: "We are reducing our war exhaustion."
+ 
+ #------------------------------------------
+ # Slavery
+ #------------------------------------------
+ policy_slavery: "Slavery"
+ policy_slavery_desc: "How our nation handles slavery."
+ 
+ slavery_allowed: "§Y§!Slavery: Allowed"
+ slavery_licensed: "§Y§!Slavery: Licensed"
+ slavery_forbidden: "§Y§!Slavery: Forbidden"
+ 
+ SET_SLAVERY_ALLOWED: "Set §YSlavery Policy§! to §YAllowed§!."
+ SET_SLAVERY_LICENSED: "Set §YSlavery Policy§! to §YLicensed§!."
+ SET_SLAVERY_FORBIDDEN: "Set §YSlavery Policy§! to §YForbidden§!."
+
+ ALREADY_ALLOW_SLAVERY: "Our §YSlavery Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SLAVERY: "Our §YSlavery Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SLAVERY: "Our §YSlavery Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_slavery_allowed: "Switch to Slavery Allowed"
+ switch_to_slavery_licensed: "Switch to Slavery Licensed"
+ switch_to_slavery_forbidden: "Switch to Slavery Forbidden"
+ 
+ recruit_slave_soldiers: "Recruit Slave Soldiers"
+ harden_slave_soldiers: "Harden Slave Soldiers"
+ 
+ slave_soldiers: "Slave Soldiers"
+ desc_slave_soldiers: "We are recruiting slave soldiers as troops."
+ 
+ whipped_slaves: "Whipped Slaves"
+ desc_whipped_slaves: "Our slaves are whipped."
+
+ #------------------------------------------
+ # Gambling
+ #------------------------------------------
+ policy_gambling: "Gambling"
+ policy_gambling_desc: "How our nation handles gambling."
+ 
+ gambling_allowed: "§Y§!Gambling: Allowed"
+ gambling_licensed: "§Y§!Gambling: Licensed"
+ gambling_forbidden: "§Y§!Gambling: Forbidden"
+ 
+ SET_GAMBLING_ALLOWED: "Set §YGambling Policy§! to §YAllowed§!."
+ SET_GAMBLING_LICENSED: "Set §YGambling Policy§! to §YLicensed§!."
+ SET_GAMBLING_FORBIDDEN: "Set §YGambling Policy§! to §YForbidden§!."
+ 
+ ALREADY_ALLOW_GAMBLING: "Our §YGambling Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_GAMBLING: "Our §YGambling Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_GAMBLING: "Our §YGambling Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_gambling_allowed: "Switch to Gambling Allowed"
+ switch_to_gambling_licensed: "Switch to Gambling Licensed"
+ switch_to_gambling_forbidden: "Switch to Gambling Forbidden"
+ 
+ host_casino_night: "Host Casino Night"
+ 
+ gambling.1.title: "Casino Night"
+ gambling.1.desc: "It is time to host a luxury casino night for the high rollers of [Root.GetName]. Only the most wealthy are permitted to attend, so the potential rewards for the House tonight are unimaginable."
+ gambling.1.option.a: "The focus is on Blackjack tonight!"
+ gambling.1.option.b: "The focus is on Craps tonight!"
+ gambling.1.option.c: "The focus is on Caravan tonight!"
+ 
+ LOW_RISK: "This is a low risk game. As the House we are unlikely to lose, but we will not win much."
+ MED_RISK: "This is a medium risk game. As the House we are more likely to lose, but we can win much more."
+ HIGH_RISK: "This is a high risk game. As the House we are much more likely to lose, but we can win massively!"
+ 
+ gambling.2.title: "Blackjack"
+ gambling.2.desc: "Our high rollers have gathered around the Blackjack table tonight. The night draws on and the transfer of money is endless. Let us see how we fared..."
+ gambling.2.option.a: "Hm..."
+ 
+ gambling.3.title: "Craps"
+ gambling.3.desc: "Our high rollers have gathered around the Craps table tonight. The night draws on and the transfer of money is endless. Let us see how we fared..."
+ gambling.3.option.a: "Hm..."
+ 
+ gambling.4.title: "Caravan"
+ gambling.4.desc: "Our high rollers have gathered around the Caravan table tonight. The night draws on and the transfer of money is endless. Let us see how we fared..."
+ gambling.4.option.a: "Hm..."
+ 
+ gambling.10.title: "Big Win!"
+ gambling.10.desc: "Our high rollers have lost terribly tonight, alas. As the House, we have benefited massively from their misfortune."
+ gambling.10.option.a: "WOO!"
+ 
+ gambling.11.title: "Medium Win!"
+ gambling.11.desc: "Our high rollers have lost tonight, alas. As the House, we have benefited from their misfortune."
+ gambling.11.option.a: "WOO!"
+ 
+ gambling.12.title: "Small Win!"
+ gambling.12.desc: "Our high rollers have lost tonight, alas. As the House, we have benefited minorly from their misfortune."
+ gambling.12.option.a: "WOO!"
+ 
+ gambling.13.title: "Big Loss!"
+ gambling.13.desc: "Our high rollers have won massively tonight, alas. As the House, we have lost massively due to their fortune."
+ gambling.13.option.a: "..."
+ 
+ gambling.14.title: "Medium Loss!"
+ gambling.14.desc: "Our high rollers have won tonight, alas. As the House, we have lost due to their fortune."
+ gambling.14.option.a: "..."
+ 
+ gambling.15.title: "Small Loss!"
+ gambling.15.desc: "Our high rollers have won tonight, alas. As the House, we have lost minorly due to their fortune."
+ gambling.15.option.a: "..."
+ 
+ #------------------------------------------
+ # Prostitution
+ #------------------------------------------
+ policy_prostitution: "Prostitution"
+ policy_prostitution_desc: "How our nation handles prostitution."
+ 
+ prostitution_allowed: "§Y§!Prostitution: Allowed"
+ prostitution_licensed: "§Y§!Prostitution: Licensed"
+ prostitution_forbidden: "§Y§!Prostitution: Forbidden"
+ 
+ SET_PROSTITUTION_ALLOWED: "Set §YProstitution Policy§! to §YAllowed§!."
+ SET_PROSTITUTION_LICENSED: "Set §YProstitution Policy§! to §YLicensed§!."
+ SET_PROSTITUTION_FORBIDDEN: "Set §YProstitution Policy§! to §YForbidden§!."
+
+ ALREADY_ALLOW_PROSTITUTION: "Our §YProstitution Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_PROSTITUTION: "Our §YProstitution Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_PROSTITUTION: "Our §YProstitution Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_prostitution_allowed: "Switch to Prostitution Allowed"
+ switch_to_prostitution_licensed: "Switch to Prostitution Licensed"
+ switch_to_prostitution_forbidden: "Switch to Prostitution Forbidden"
+ 
+ visit_brothel: "Visit Brothel"
+ 
+ prostitution.1.title: "The Brothel"
+ prostitution.1.desc: "As [Root.Monarch.GetName] steps inside, the sights and sounds of the brothel draw [Root.Monarch.GetHerHim] inwards.\n\nHere [Root.Monarch.GetSheHe] peruses the selection of partners available..."
+ prostitution.1.option.a: "The radiant blonde..."
+ prostitution.1.option.b: "The enthralling brunette..."
+ prostitution.1.option.c: "The fiery redhead..."
+ prostitution.1.option.d: "The mysterious figure by the table..."
+ prostitution.1.option.e: "The robotic stallion by the door..."
+ prostitution.1.option.f: "The mutated beauty by the wall..."
+ prostitution.1.option.g: "The ghoulish beauty by the bar..."
+ 
+ radiant_glow: "Radiant Glow"
+ desc_radiant_glow: "[Root.Monarch.GetName] is on top of the world."
+ 
+ robotic_energies: "Robotic Energies"
+ desc_robotic_energies: "Fisto gives his thanks!"
+ 
+ mutant_vigor: "Mutant Vigor"
+ desc_mutant_vigor: "URGH!"
+ 
+ prostitution.2.title: "A Baby!"
+ prostitution.2.desc: "[Root.Monarch.GetName]'s night with the radiant blonde has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution.2.option.a: "This child is my heir!"
+ prostitution.2.option.b: "This child is worthless!"
+ 
+ prostitution.3.title: "A Baby!"
+ prostitution.3.desc: "[Root.Monarch.GetName]'s night with the enthralling brunette has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution.3.option.a: "This child is my heir!"
+ prostitution.3.option.b: "This child is worthless!"
+ 
+ prostitution.4.title: "A Baby!"
+ prostitution.4.desc: "[Root.Monarch.GetName]'s night with the fiery redhead has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution.4.option.a: "This child is my heir!"
+ prostitution.4.option.b: "This child is worthless!"
+ 
+ prostitution.5.title: "A Baby!"
+ prostitution.5.desc: "[Root.Monarch.GetName]'s night with the mysterious figure has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution.5.option.a: "This child is my heir!"
+ prostitution.5.option.b: "This child is worthless!"
+ 
+ prostitution.6.title: "A Robotic Baby!"
+ prostitution.6.desc: "[Root.Monarch.GetName]'s night with the robotic stallion has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution.6.option.a: "This child is my heir!"
+ prostitution.6.option.b: "This child is worthless!"
+ 
+ prostitution.7.title: "A Mutated Baby!"
+ prostitution.7.desc: "[Root.Monarch.GetName]'s night with the mutant has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution.7.option.a: "This child is my heir!"
+ prostitution.7.option.b: "This child is worthless!"
+ 
+ prostitution.8.title: "A Ghoul Baby!"
+ prostitution.8.desc: "[Root.Monarch.GetName]'s night with the ghoul has caught up with [Root.Monarch.GetHerHim]. They have been blessed with a child they could call heir."
+ prostitution.8.option.a: "This child is my heir!"
+ prostitution.8.option.b: "This child is worthless!"
+ 
+ prostitution.9.title: "Radiant Glow"
+ prostitution.9.desc: "[Root.Monarch.GetName]'s night at the brothel has left them with a radiant glow."
+ prostitution.9.option.a: "Ahh...."
+ 
+ prostitution.10.title: "Robotic Energies"
+ prostitution.10.desc: "[Root.Monarch.GetName]'s night at the brothel has left them with an electrifying aura."
+ prostitution.10.option.a: "ELECTRIFYING!"
+ 
+ prostitution.11.title: "Mutant Vigor"
+ prostitution.11.desc: "[Root.Monarch.GetName]'s night at the brothel has left them with the vigor of a mutant."
+ prostitution.11.option.a: "URGH!"
+ 
+ #------------------------------------------
+ # Firearms
+ #------------------------------------------
+ policy_firearms: "Firearms"
+ policy_firearms_desc: "How our nation handles firearms."
+ 
+ firearms_allowed: "§Y§!Firearms: Allowed"
+ firearms_licensed: "§Y§!Firearms: Licensed"
+ firearms_forbidden: "§Y§!Firearms: Forbidden"
+ 
+ SET_FIREARMS_ALLOWED: "Set §YFirearms Policy§! to §YAllowed§!."
+ SET_FIREARMS_LICENSED: "Set §YFirearms Policy§! to §YLicensed§!."
+ SET_FIREARMS_FORBIDDEN: "Set §YFirearms Policy§! to §YForbidden§!."
+ 
+ ALREADY_ALLOW_FIREARMS: "Our §YFirearms Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_FIREARMS: "Our §YFirearms Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_FIREARMS: "Our §YFirearms Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_firearms_allowed: "Switch to Firearms Allowed"
+ switch_to_firearms_licensed: "Switch to Firearms Licensed"
+ switch_to_firearms_forbidden: "Switch to Firearms Forbidden"
+ 
+ utilize_plasma_weaponry: "Utilize Plasma Weaponry"
+ utilize_laser_weaponry: "Utilize Laser Weaponry"
+ utilize_nuclear_weaponry: "Utilize Nuclear Weaponry"
+ utilize_junk_weaponry: "Utilize Junk Weaponry"
+ 
+ plasma_weaponry: "Plasma Weaponry"
+ desc_plasma_weaponry: "Our troops are equipped with plasma weaponry."
+ laser_weaponry: "Laser Weaponry"
+ desc_laser_weaponry: "Our troops are equipped with laser weaponry."
+ nuclear_weaponry: "Nuclear Weaponry"
+ desc_nuclear_weaponry: "Our troops are equipped with nuclear weaponry"
+ junk_weaponry: "Junk Weaponry"
+ desc_junk_weaponry: "Our troops are equipped with junk weaponry."
+ 
+ #------------------------------------------
+ # Narcotics
+ #------------------------------------------
+ policy_narcotics: "Narcotics"
+ policy_narcotics_desc: "How our nation handles narcotics."
+ 
+ narcotics_allowed: "§Y§!Narcotics: Allowed"
+ narcotics_licensed: "§Y§!Narcotics: Licensed"
+ narcotics_forbidden: "§Y§!Narcotics: Forbidden"
+ 
+ SET_NARCOTICS_ALLOWED: "Set §YNarcotics Policy§! to §YAllowed§!."
+ SET_NARCOTICS_LICENSED: "Set §YNarcotics Policy§! to §YLicensed§!."
+ SET_NARCOTICS_FORBIDDEN: "Set §YNarcotics Policy§! to §YForbidden§!."
+ 
+ ALREADY_ALLOW_NARCOTICS: "Our §YNarcotics Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_NARCOTICS: "Our §YNarcotics Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_NARCOTICS: "Our §YNarcotics Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_narcotics_allowed: "Switch to Narcotics Allowed"
+ switch_to_narcotics_licensed: "Switch to Narcotics Licensed"
+ switch_to_narcotics_forbidden: "Switch to Narcotics Forbidden"
+ 
+ synthesize_xcell: "Sythesize X-cell"
+ synthesize_mentats: "Synthesize Mentats"
+ synthesize_psycho: "Synthesize Psycho"
+ 
+ ruler_xcell: "X-cell"
+ desc_ruler_xcell: "[Root.Monarch.GetName] has consumed X-cell."
+ 
+ ruler_mentats: "Mentats"
+ desc_ruler_mentats: "[Root.Monarch.GetName] has consumed Mentats."
+ 
+ ruler_psycho: "Psycho"
+ desc_ruler_psycho: "[Root.Monarch.GetName] has consumed Psycho."
+ 
+ purge_drug_manufacturing_title: "Purge Drug Manufacturing"
+ purge_drug_manufacturing_desc: "The fiends that partake in the manufacture of drugs must be eliminated. We shall run them out of our lands, and burn their operations to the ground."
+ 
+ drug_purge_cooldown: "Drug Purge"
+ desc_drug_purge_cooldown: ""
+ 
+ #------------------------------------------
+ # Scavenging
+ #------------------------------------------
+ policy_scavenging: "Scavenging"
+ policy_scavenging_desc: "How our nation handles scavenging of goods."
+ 
+ scavenging_allowed: "§Y§!Scavenging: Allowed"
+ scavenging_licensed: "§Y§!Scavenging: Licensed"
+ scavenging_forbidden: "§Y§!Scavenging: Forbidden"
+ 
+ SET_SCAVENGING_ALLOWED: "Set §YScavenging Policy§! to §YAllowed§!."
+ SET_SCAVENGING_LICENSED: "Set §YScavenging Policy§! to §YLicensed§!."
+ SET_SCAVENGING_FORBIDDEN: "Set §YScavenging Policy§! to §YForbidden§!."
+ 
+ ALREADY_ALLOW_SCAVENGING: "Our §YScavenging Policy§! is already set to §YAllowed§!."
+ ALREADY_LICENSE_SCAVENGING: "Our §YScavenging Policy§! is already set to §YLicensed§!."
+ ALREADY_FORBID_SCAVENGING: "Our §YScavenging Policy§! is already set to §YForbidden§!."
+ 
+ switch_to_scavenging_allowed: "Switch to Scavenging Allowed"
+ switch_to_scavenging_licensed: "Switch to Scavenging Licensed"
+ switch_to_scavenging_forbidden: "Switch to Scavenging Forbidden"
+ 
+ start_scavenger_hunt: "Start Scavenger Hunt"
+ search_for_lost_texts: "Search for Lost Texts"
+ 
+ scavenging.1.title: "Scavenger Hunt"
+ scavenging.1.desc: ""
+ scavenging.1.option.a: ""
