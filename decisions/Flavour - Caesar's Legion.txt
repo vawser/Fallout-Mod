@@ -47,7 +47,7 @@ country_decisions = {
                 has_slavery_allowed = yes
                 has_slavery_licensed = yes
             }
-            NOT = { has_country_modifier = decision_cooldown }
+            NOT = { has_country_modifier = enslavement_cooldown }
 		}
 		allow =  {
 			any_owned_province = {
@@ -64,7 +64,7 @@ country_decisions = {
             
             hidden_effect = {
                 add_country_modifier = {
-                    name = decision_cooldown
+                    name = enslavement_cooldown
                     duration = 1800
                     hidden = yes
                 }
@@ -93,7 +93,7 @@ country_decisions = {
                 if = {
                     limit = { check_variable = { which = counter value = 5 } }
                     
-                    country_event = { id = the_legion.5 days = 30 }
+                    country_event = { id = legion_actions.1 days = 30 }
                 }
             }
 		}
@@ -115,7 +115,7 @@ country_decisions = {
                 has_slavery_allowed = yes
                 has_slavery_licensed = yes
             }
-            NOT = { has_country_modifier = decision_cooldown }
+            NOT = { has_country_modifier = extermination_cooldown }
 		}
 		allow =  {
 			any_owned_province = {
@@ -129,7 +129,7 @@ country_decisions = {
 	  	effect = {
             hidden_effect = {
                 add_country_modifier = {
-                    name = decision_cooldown
+                    name = extermination_cooldown
                     duration = 1800
                     hidden = yes
                 }
@@ -180,7 +180,7 @@ country_decisions = {
                 if = {
                     limit = { check_variable = { which = counter value = 5 } }
                     
-                    country_event = { id = the_legion.6 days = 30 }
+                    country_event = { id = legion_actions.2 days = 30 }
                 }
             }
 		}

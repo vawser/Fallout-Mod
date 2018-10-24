@@ -1,0 +1,34 @@
+namespace = legion_actions
+
+# Unease over Recent Enslavements
+country_event = {
+	id = legion_actions.1
+	title = legion_actions.1.title
+	desc = legion_actions.1.desc
+    picture = LEGION_CAMP_eventPicture
+
+    is_triggered_only = yes
+
+	option = {
+		name = legion_actions.1.option.a
+
+        add_stability = -1
+	}
+}
+
+# Unease over Recent Exterminations
+country_event = {
+	id = legion_actions.2
+	title = legion_actions.2.title
+	desc = legion_actions.2.desc
+    picture = LEGION_CAMP_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = legion_actions.2.option.a
+
+        add_stability = -2
+	}
+}
+

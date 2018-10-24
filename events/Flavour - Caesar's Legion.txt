@@ -1,318 +1,107 @@
-namespace = the_legion
+namespace = legion_flavour
 
-# "An United Legion"
+#-------------------------------------
+# "Caesar, Son of Mars"
+#-------------------------------------
 country_event = {
-	id = the_legion.1
-	title = the_legion.1.title
-	desc = the_legion.1.desc
+	id = legion_flavour.1
+	title = legion_flavour.1.title
+	desc = legion_flavour.1.desc
     picture = LEGION_CROSS_eventPicture
 	
+    fire_only_once = yes
+    
 	trigger = {
 		tag = CAE
-	    NOT = { has_global_flag = legion_start }
+	    NOT = { has_country_modifier = burn_the_profligates }
+        NOT = { has_country_modifier = divide_and_conquer }
+        NOT = { has_country_modifier = deeds_not_words }
 	}
 	
     mean_time_to_happen = {
-		months = 120
+		months = 1
 	}
     
     immediate = {
-        set_global_flag = legion_start
         hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - the_legion.1" }
+            country_event = { 
+                id = legion_flavour.2
+                days = 90
+                random = 90
+            }
         }
     }
 	
 	option = {
-		name = the_legion.1.option.a
+		name = legion_flavour.1.option.a
 		
-        add_prestige = 10
+        add_country_modifier = {
+            name = burn_the_profligates
+            duration = -1
+        }
+	}
+    option = {
+		name = legion_flavour.1.option.b
+		
+        add_country_modifier = {
+            name = divide_and_conquer
+            duration = -1
+        }
+	}
+    option = {
+		name = legion_flavour.1.option.c
+		
+        add_country_modifier = {
+            name = deeds_not_words
+            duration = -1
+        }
 	}
 }
 
-# "The Death of Caesar"
+#-------------------------------------
+# "Alea Iacta Est"
+#-------------------------------------
 country_event = {
-	id = the_legion.2
-	title = the_legion.2.title
-	desc = the_legion.2.desc
+	id = legion_flavour.2
+	title = legion_flavour.2.title
+	desc = legion_flavour.2.desc
     picture = LEGION_CROSS_eventPicture
 	
+    is_triggered_only = yes
+    
 	trigger = {
 		tag = CAE
-        NOT = { has_ruler_modifier = son_of_mars }
-        NOT = { has_disaster = legion_turmoil }
-        NOT = { has_ruler_flag = new_caesar }
-		NOT = { has_global_flag = final_caesar_tribal_successor_chosen }
 	}
 	
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - the_legion.2" }
-        }
-    }
+    mean_time_to_happen = {
+		months = 1
+	}
     
-    option = {	
-    	name = the_legion.2.option.a	
-    	trigger = {
-    		has_leader_with = {
-				general = yes
-    			fire = 5
-    			shock = 6
-    			manuever = 4
-    			siege = 2
-    		}
-			NOT = { has_global_flag = appointed_the_eastern_monster }
-    	}
-    	define_ruler = {
-    		name = "Lanius"
-    		dynasty = "of the Eastern Monsters"
-			adm = 4
-			dip = 2
-			mil = 6		
-			claim = 100
-    	}
-    	add_ruler_modifier = {
-    		name = legion_monster_east
-			duration = -1
-    	}
-		set_ruler_flag = new_caesar
-		set_global_flag = caesar_sallow_dead
-		set_global_flag = appointed_the_eastern_monster
+	option = {
+		name = legion_flavour.2.option.a
 		
-		ai_chance = {
-			factor = 50
-		}
-    }
-    
+        east_vegas_area = {
+            add_claim = ROOT
+        }
+        
+        ai_chance = { factor = 100 }
+	}
     option = {
-    	name = the_legion.2.option.b	
-    	trigger = {
-    		has_leader_with = {
-			general = yes
-    			fire = 4
-    			shock = 4
-    			manuever = 2
-    			siege = 3
-    		}
-			NOT = { has_global_flag = got_phoenix }
-    	}
-    	define_ruler = {
-    		name = "Aurelius"
-    		dynasty = "of Phoenix"
-    	    adm = 5
-    	    dip = 3
-    	    mil = 5
-            claim = 100
-    	}
-    	add_ruler_modifier = {
-    		name = legion_pheonix_oa
-            duration = -1
-    	}
-		set_ruler_flag = new_caesar
-		set_global_flag = got_phoenix
-		set_global_flag = caesar_sallow_dead
+		name = legion_flavour.2.option.b
 		
-		ai_chance = {
-			factor = 50
-		}
-    }
-    
-    option = {	
-    	name = the_legion.2.option.c
-		trigger = { NOT = { has_global_flag = caesar_sallow_dead } }
-    	
-        random_list = {
-            10 = {
-                define_ruler = {
-                    dynasty = "Blackfoot"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Fredonian"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Kaibab"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Twisted Hair"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Hidebark"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Painted Rock"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Hangdog"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Sun Dog"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 25
-                }
-            }
-        }
+        add_adm_power = 100
         
-        add_ruler_modifier = {
-    		name = tribal_origins
-            duration = -1
-    	}
-		set_ruler_flag = new_caesar
-		set_global_flag = caesar_sallow_dead
-		
-		ai_chance = {
-			factor = 20
-		}
-    }
-	
-	option = {	
-    	name = the_legion.2.option.c
-		trigger = { has_global_flag = caesar_sallow_dead }
-    	
-        random_list = {
-            10 = {
-                define_ruler = {
-                    dynasty = "Blackfoot"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 6
-                    claim = 50
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Fredonian"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 6
-                    claim = 50
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Kaibab"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 6
-                    claim = 50
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Twisted Hair"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 6
-                    claim = 50
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Hidebark"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 6
-                    claim = 50
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Painted Rock"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 6
-                    claim = 50
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Hangdog"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 6
-                    claim = 50
-                }
-            }
-            10 = {
-                define_ruler = {
-                    dynasty = "Sun Dog"	
-                    max_random_adm = 3
-                    max_random_dip = 3
-                    max_random_mil = 3
-                    claim = 50
-                }
-            }
-        }
-        
-        add_ruler_modifier = {
-    		name = tribal_successor
-            duration = -1
-    	}
-
-		set_ruler_flag = new_caesar
-		set_global_flag = final_caesar_tribal_successor_chosen
-		
-		ai_chance = {
-			factor = 5
-			modifier = { 
-				factor = 999 # Only guarentees firing after the other two men have had the chance become Caesar
-				AND = {
-					has_global_flag = appointed_the_eastern_monster
-					has_global_flag = got_phoenix
-				}
-			}
-		}
-    }
+        ai_chance = { factor = 0 }
+	}
 }
 
-# The Howitzer
+#-------------------------------------
+# "The Howitzer"
+#-------------------------------------
 country_event = {
-	id = the_legion.3
-	title = the_legion.3.title
-	desc = the_legion.3.desc
+	id = legion_flavour.3
+	title = legion_flavour.3.title
+	desc = legion_flavour.3.desc
     picture = HOWITIZER_eventPicture
 	
 	fire_only_once = yes
@@ -320,6 +109,7 @@ country_event = {
 	trigger = {
 		tag = CAE
         exists = NCR
+        years_of_income = 1
         NOT = { has_country_modifier = howitizer_firing_pin }
 	}
 	
@@ -327,16 +117,10 @@ country_event = {
 		months = 64
 	}
  
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - the_legion.3" }
-        }
-    }
-    
 	option = {
-		name = the_legion.3.option.a
+		name = legion_flavour.3.option.a
 		
-        add_years_of_income = -2
+        add_years_of_income = -1
 
 		add_country_modifier = {
             name = howitizer_firing_pin
@@ -349,7 +133,7 @@ country_event = {
 	}
 	
 	option = {
-		name = the_legion.3.option.b
+		name = legion_flavour.3.option.b
 
         ai_chance = {
             factor = 50
@@ -357,11 +141,13 @@ country_event = {
 	}
 }
 
-# Born into Slavery
+#-------------------------------------
+# "Born into Slavery"
+#-------------------------------------
 country_event = {
-	id = the_legion.4
-	title = the_legion.4.title
-	desc = the_legion.4.desc
+	id = legion_flavour.4
+	title = legion_flavour.4.title
+	desc = legion_flavour.4.desc
     picture = LEGION_CROSS_eventPicture
 	
 	fire_only_once = yes
@@ -372,17 +158,11 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 12
+		months = 64
 	}
 	
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - the_legion.4" }
-        }
-    }
-    
 	option = {
-		name = the_legion.4.option.a
+		name = legion_flavour.4.option.a
         
         add_ruler_modifier = {
 			name = legion_birth 
@@ -391,7 +171,7 @@ country_event = {
 	}
 
 	option = {
-		name = the_legion.4.option.b
+		name = legion_flavour.4.option.b
         
 		add_adm_power = 25
 		add_dip_power = 25
@@ -399,46 +179,3 @@ country_event = {
 	}
 }
 
-# Unease over Recent Enslavements
-country_event = {
-	id = the_legion.5
-	title = the_legion.5.title
-	desc = the_legion.5.desc
-    picture = LEGION_CAMP_eventPicture
-
-    is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - the_legion.5" }
-        }
-    }
-    
-	option = {
-		name = the_legion.5.option.a
-
-        add_stability = -1
-	}
-}
-
-# Unease over Recent Exterminations
-country_event = {
-	id = the_legion.6
-	title = the_legion.6.title
-	desc = the_legion.6.desc
-    picture = LEGION_CAMP_eventPicture
-
-    is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - the_legion.6" }
-        }
-    }
-    
-	option = {
-		name = the_legion.6.option.a
-
-        add_stability = -2
-	}
-}
