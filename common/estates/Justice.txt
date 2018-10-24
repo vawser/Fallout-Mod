@@ -123,16 +123,16 @@ policy_justice = {
     interaction = {
         name = "improve_stability"
         icon = 14
-        years_between_use = 5
+        years_between_use = 1
         
         potential = {
             NOT = { stability = 3 }
         }
         trigger = {        
-            years_of_income = 1     
+            years_of_income = 0.25    
         }
         effect = {
-            add_years_of_income = -1
+            add_years_of_income = -0.25
             
             add_stability = 1
         }
