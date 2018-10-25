@@ -13,7 +13,16 @@ country_event = {
     
 	trigger = {
 		tag = CAE
+        NOT = { has_country_flag = setting_ruler }
 	}
+    
+    immediate = {
+        set_country_flag = setting_ruler 
+    }
+    
+    after = {
+        clr_country_flag = setting_ruler 
+    }
     
     option = {	
     	name = legion_ruler.1.option.a	
