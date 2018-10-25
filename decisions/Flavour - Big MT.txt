@@ -26,6 +26,12 @@ country_decisions = {
 	  	effect = {
             set_country_flag = destroying_fence
 			add_years_of_income = -1
+            
+            add_country_modifier = {
+                name = bypassed_the_fence
+                duration = -1
+            }
+            
             hidden_effect = {
                 west_coast_superregion = {
                     discover_country = ROOT
