@@ -1,8 +1,31 @@
 # Base
-# Do not use the following prefixs: C, E, D, K, O
 REB = "countries/Rebels.txt"
 PIR = "countries/Pirates.txt"
 NAT = "countries/Natives.txt"
+
+# Mexico
+HEM = "countries/HEM - Hemasil.txt"         #
+KIK = "countries/KIK - Kikuakua.txt"        #
+VUE = "countries/VUE - Vuevo.txt"           #
+DUU = "countries/DUU - Duurgo.txt"          #
+XAL = "countries/XAL - Xalapo.txt"          #
+TAM = "countries/TAM - Tamalpi.txt"         #
+JAL = "countries/JAL - Jalizo.txt"          #
+# Hemasil
+# Kikuakua
+# Vuevo
+# Duurgo
+# Xalapo
+# Tamalpi
+# Jalizo
+
+# Canada
+ACR = "countries/ACR - Arch-Royalists.txt"  # monarchy, royalist, protestant
+
+# Anywhere
+BLS = "countries/BLS - Blue Sons.txt"       # settlement, blue_son, secular
+HLA = "countries/HLA - The Happy Lads.txt"  # raider, happy_lad, tribalism
+CRN = "countries/CRN - Church of Nuka.txt"  # settlement, nuka,
 
 #-----------------------------------------
 # Southwest Commonwealth
@@ -214,16 +237,19 @@ EBC = "countries/EBC - Eboncaste.txt"
 # Texas and Arkansas
 
 AUS = "countries/AUS - Austin.txt"
-LUB = "countries/LUB - Lubbock.txt"                   
+LUB = "countries/LUB - Lubbock.txt"         
 LNS = "countries/LNS - Lone Star.txt"
 BTX = "countries/BTX - Texas Chapter.txt"   
-CZH = "countries/CZH - Crazy Horns.txt"     # add map   901
-SRS = "countries/SRS - Scarred Sun.txt"     # add map   862 861 863
-IRO = "countries/IRO - Ironbask.txt"        # add map   853
-ATF = "countries/ATF - Atomicflare.txt"     # add map   821 895
-SOL = "countries/SOL - Sol.txt"             # add map   36 1195
-BCB = "countries/BCB - Bleached Bones.txt"  # add map   1136 843 524
-RCA = "countries/RCA - Red Scar.txt"        # add map   884 888 881
+CZH = "countries/CZH - Crazy Horns.txt"     
+SRS = "countries/SRS - Scarred Sun.txt"     
+IRO = "countries/IRO - Ironbask.txt"        
+ATF = "countries/ATF - Atomicflare.txt"     
+SOL = "countries/SOL - Sol.txt"             
+BCB = "countries/BCB - Bleached Bones.txt"  
+RCA = "countries/RCA - Red Scar.txt"        
+FMF = "countries/FMF - Flamefoot.txt"        
+GHR = "countries/GHR - Ghoulroad.txt"        
+SSP = "countries/SSP - Steel Scorpions.txt" 
 
 #-----------------------------------------
 # East Central Commonwealth
@@ -233,42 +259,34 @@ RCA = "countries/RCA - Red Scar.txt"        # add map   884 888 881
 COB = "countries/COB - Cobras.txt" 
 IRF = "countries/IRF - Iron Fist.txt" 
 SPA = "countries/SPA - Sparta.txt" 
-FMF = "countries/FMF - Flamefoot.txt"       # add map   779 
-GHR = "countries/GHR - Ghoulroad.txt"       # add map   233 1173 271
-SSP = "countries/SSP - Steel Scorpions.txt" # add map   981 783 781
 
 #-----------------------------------------
 # Northern Commonwealth
 #-----------------------------------------
 # Montana, Wyoming, North Dakota and South Dakota
 
-BMO = "countries/BMO - Montana Chapter.txt"   
-RTS = "countries/RTS - Ratspeakers.txt"     # add map   662 666
-GMT = "countries/GMT - Grimtooth.txt"       # add map   673
+BMO = "countries/BMO - Montana Chapter.txt" 
+RTS = "countries/RTS - Ratspeakers.txt"     
+GMT = "countries/GMT - Grimtooth.txt"       
 HAW = "countries/HAW - Moose.txt"
-
-#-----------------------------------------
-# Southweast Commonwealth
-#-----------------------------------------
-# North Carolina, South Carolina and Georgia
-
-ATL = "countries/ATL - Atlanta.txt"  
-NKS = "countries/NKS - Nukaspike.txt"       # add map   605
-DUF = "countries/DUF - Dustfury.txt"        # add map   602 937
-MKI = "countries/MKI - Murkiron.txt"        # add map   932 1169
-TDG = "countries/TDG - The Degenerates.txt" # add map   577 578 576
 
 #-----------------------------------------
 # Gulf Commonwealth
 #-----------------------------------------
-# Louisiana, Mississippi, Alabama and Florida
+# Louisiana, Mississippi, Alabama, North Carolina, 
+# South Carolina, Georgia and Florida
 
+ATL = "countries/ATL - Atlanta.txt"  
 ORL = "countries/ORL - New Orleans.txt"  
 SWF = "countries/SWF - Swampfolk.txt"
-TAR = "countries/TAR - Tar Walkers.txt"     # add map   982 
-SES = "countries/SES - Steel Stalkers.txt"  # add map   591 590 589
-LTC = "countries/LTC - Lost Caste.txt"      # add map   793 1159 805
-GVW = "countries/GVW - Gravewatch.txt"      # add map   919 920 1158
+TAR = "countries/TAR - Tar Walkers.txt"     
+SES = "countries/SES - Steel Stalkers.txt"  
+LTC = "countries/LTC - Lost Caste.txt"      
+GVW = "countries/GVW - Gravewatch.txt"      
+NKS = "countries/NKS - Nukaspike.txt"       
+DUF = "countries/DUF - Dustfury.txt"        
+MKI = "countries/MKI - Murkiron.txt"        
+TDG = "countries/TDG - The Degenerates.txt" 
 
 #-----------------------------------------
 # Canada
@@ -291,8 +309,8 @@ MEX = "countries/MEX - Mexico City.txt"
 SIN = "countries/SIN - Sinaloa.txt" 
 LOZ = "countries/LOZ - Los Zetas.txt" 
 BUC = "countries/BUC - Bulwark of Christ.txt" 
-PUE = "countries/PUE - Puebla.txt"          # add map   30
-HDG = "countries/HDG - Hidalgo.txt"         # add map   536
+PUE = "countries/PUE - Puebla.txt"          
+HDG = "countries/HDG - Hidalgo.txt"
 
 #-----------------------------------------
 # Other

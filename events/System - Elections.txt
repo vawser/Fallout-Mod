@@ -8,6 +8,10 @@ country_event = {
 	picture = USA_FLAG_eventPicture
 	
 	is_triggered_only = yes
+    
+    trigger = {
+        NOT = { has_reform = enclave_reform }
+    }
 	
     immediate = {
         hidden_effect = {
@@ -113,6 +117,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+    trigger = {
+        NOT = { has_reform = enclave_reform }
+    }
+    
     immediate = {
         hidden_effect = {
             if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - elections.2" }
