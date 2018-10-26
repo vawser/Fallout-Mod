@@ -17,6 +17,7 @@ guiTypes = {
 
 	windowType = {
 		name = "countrymissionsview"
+		#position = { x=0 y=140 }
 		position = { x=0 y=140 }	
 		show_position = { x=0 y =140 }
 		hide_position = { x=-600 y =140 }
@@ -51,7 +52,7 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_29s"
 			borderSize = {x = 4 y = 4}
-			text = "Discoveries"
+			text = "HEADER_MISSIONS"
 			maxWidth = 512
 			maxHeight = 32
 			format = centre
@@ -59,9 +60,9 @@ guiTypes = {
 		
 		smoothListboxType = {
 			name ="countrymissionsview_missions_gridbox_listbox"
-			position = { x=60 y =140}
+			position = { x=20 y =140}
 			backGround=""
-			size = { x=530 y=350 }
+			size = { x=518 y=412 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -80,28 +81,102 @@ guiTypes = {
 		gridBoxType = {
 			name = "countrymissionsview_missions_gridbox"
 			position = { x = 0 y = 0 }
-			size = { width = 400 height = 128 }
-			slotsize = { width = 400 height = 32 }
-			max_slots_horizontal = 4
+			size = { width = 400 height = 400 }
+			slotsize = { width = 104 height = 180 }
+			max_slots_horizontal = 5
 			format = "UPPER_LEFT"
 		}
 	}
 
 	windowType={
 		name = "countrymissionsview_missions_entry"
-        
+		#size = { width = 104 height = 122 }
+		
 		iconType = {
 			name = "mission_icon"
-			position = { x=0 y=0 }
+			position = { x=8 y=8 }
 			quadTextureSprite ="GFX_event_bg_transparency"
 		}
-        
+		
+		iconType = {
+			name = "arrow_half_top"
+			position = {x=45 y=151}
+			quadTextureSprite ="gfx_arrow_verticall_tile"
+			allwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "arrow_half_bottom_center"
+			position = {x=37 y=171}
+			quadTextureSprite ="gfx_arrow_end"
+			allwaystransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_half_bottom_left"
+			position = {x=14 y=171}
+			quadTextureSprite ="gfx_arrow_end"
+			allwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "arrow_half_bottom_right"
+			position = {x=60 y=171}
+			quadTextureSprite ="gfx_arrow_end"
+			allwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "skip_tier"
+			position = {x=45 y=171}
+			quadTextureSprite ="gfx_arrow_verticall_skip_tier"
+			allwaystransparent = yes
+		}
+		
+		
+		iconType = {
+			name = "skip_slot"
+			position = {x=-7 y=157}
+			quadTextureSprite ="gfx_arrow_horizontal_skip_slot"
+			allwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "left_branch_out"
+			position = {x=3 y=152}
+			quadTextureSprite ="gfx_arrow_left_out"
+			allwaystransparent = yes
+		}
+		iconType = {
+			name = "right_branch_in"
+			position = {x=68 y=155}
+			quadTextureSprite ="gfx_arrow_left_in"
+			allwaystransparent = yes
+		}
+		
+		
+		iconType = {
+			name = "right_branch_out"
+			position = {x=59 y=152}
+			quadTextureSprite ="gfx_arrow_right_out"
+			allwaystransparent = yes
+		}
+		iconType = {
+			name = "left_branch_in"
+			position = {x=-6 y=157}
+			quadTextureSprite ="gfx_arrow_right_in"
+			allwaystransparent = yes
+		}
+		
+		
+		
+		
 		iconType = {
 			name = "mission_entry_icon"
 			position = {x=0 y=0}
 			quadTextureSprite ="GFX_mission_icons_frame"
 		}
-
+		
 		guiButtonType = {
 			name = "mission_entry_button"
 			quadTextureSprite ="GFX_mission_icons_frame_complete"
@@ -110,38 +185,39 @@ guiTypes = {
 		
 		iconType = {
 			name = "mission_entry_rewards_glow"
-			position = { x=390 y=-10 }
+			position = { x=58 y=-9999 }
 			quadTextureSprite = "GFX_mission_effect_glow"
 		}
 		
-        iconType = {
+		iconType = {
 			name = "mission_entry_rewards"
-			position = { x=400 y=0 }
-			quadTextureSprite = "gfx_mission_effect"
+			position = { x=50 y=150 }
+			quadTextureSprite = "GFX_mission_effect_button"
 		}
-        
+		
+
 		iconType = {
 			name = "mission_entry_conditions"
-			position = { x=360 y=0 }
-			quadTextureSprite = "gfx_mission_trigger"
+			position = { x=2 y=150 }
+			quadTextureSprite = "GFX_mission_trigger_button"
 		}
 		
 		guiButtonType = {
 			name = "mission_entry_conditions_button"
-			quadTextureSprite ="gfx_mission_trigger"
-			position = { x=360 y =0 }
+			quadTextureSprite ="GFX_mission_trigger_button"
+			position = { x= 2 y = 150 }
 		}
 
 		instantTextBoxType= {
-			position = { x=25 y=7}
+			position = { x=4 y=102}
 			name = "mission_title"
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 300
-			maxHeight = 16
+			maxWidth = 90
+			maxHeight = 64
 			text = "Subjective and a Noun"
 			orientation = "UPPER_LEFT"
-			format = left
+			format = center
 			allwaystransparent = yes
 		}
 		
@@ -149,77 +225,6 @@ guiTypes = {
 			name ="country_icon"
 			position = { x= 35 y = 3 }
 			quadTextureSprite = "GFX_shield_small"
-		}
- 
-        # Not used
-        iconType = {
-			name = "arrow_half_top"
-			position = {x=46 y=121}
-			quadTextureSprite ="gfx_arrow_verticall_tile"
-			allwaystransparent = yes
-		}
-		
-		iconType = {
-			name = "arrow_half_bottom_center"
-			position = {x=38 y=141}
-			quadTextureSprite ="gfx_arrow_end"
-			allwaystransparent = yes
-		}
-
-		iconType = {
-			name = "arrow_half_bottom_left"
-			position = {x=15 y=141}
-			quadTextureSprite ="gfx_arrow_end"
-			allwaystransparent = yes
-		}
-		
-		iconType = {
-			name = "arrow_half_bottom_right"
-			position = {x=61 y=141}
-			quadTextureSprite ="gfx_arrow_end"
-			allwaystransparent = yes
-		}
-		
-		iconType = {
-			name = "skip_tier"
-			position = {x=46 y=141}
-			quadTextureSprite ="gfx_arrow_verticall_skip_tier"
-			allwaystransparent = yes
-		}
-		
-		
-		iconType = {
-			name = "skip_slot"
-			position = {x=-6 y=127}
-			quadTextureSprite ="gfx_arrow_horizontal_skip_slot"
-			allwaystransparent = yes
-		}
-		
-		iconType = {
-			name = "left_branch_out"
-			position = {x=4 y=122}
-			quadTextureSprite ="gfx_arrow_left_out"
-			allwaystransparent = yes
-		}
-		iconType = {
-			name = "right_branch_in"
-			position = {x=69 y=125}
-			quadTextureSprite ="gfx_arrow_left_in"
-			allwaystransparent = yes
-		}
-		
-		
-		iconType = {
-			name = "right_branch_out"
-			position = {x=60 y=122}
-			quadTextureSprite ="gfx_arrow_right_out"
-			allwaystransparent = yes
-		}
-		iconType = {
-			name = "left_branch_in"
-			position = {x=-5 y=127}
-			quadTextureSprite ="gfx_arrow_right_in"
-			allwaystransparent = yes
 		}
 	}
 }

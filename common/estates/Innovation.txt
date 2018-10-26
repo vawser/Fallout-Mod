@@ -27,21 +27,17 @@ policy_innovation = {
     #-----------------------
     # Individual
 	country_modifier_happy = {
-		global_institution_spread = 0.5
-        embracement_cost = 0.5
-        imperial_mandate = 2
+        idea_cost = -0.15
+        technology_cost = 0.1
 	}
     # Sponsored
 	country_modifier_neutral = {
-		global_institution_spread = 0.1
         embracement_cost = -0.1
-        imperial_mandate = 6
 	}	
     # State
 	country_modifier_angry = {
-        global_institution_spread = -0.5
-        embracement_cost = -0.5
-        imperial_mandate = 10
+        idea_cost = 0.1
+        technology_cost = -0.15
 	}
 	
     #-----------------------
@@ -122,105 +118,63 @@ policy_innovation = {
             factor = 0
         }
     }
-    
-    #-----------------------
-    # Research
-    #-----------------------
     interaction = {
-        name = "invest_in_research"
-        icon = 10
-        years_between_use = 5
+        name = "switch_to_state_innovation"
+        icon = 1
+        years_between_use = 25
         
         potential = { 
-            always = yes
+            OR = {
+                has_individual_innovation = yes
+                has_sponsored_innovation = yes
+            }
         }
         trigger = {        
+            stability = 0
             years_of_income = 1
         }
         effect = {
+            add_stability = -3
             add_years_of_income = -1
             
-            add_research_5 = yes
+            set_state_innovation = yes
         }
         ai_will_do = {
             factor = 0
         }
     }
     interaction = {
-        name = "focus_administrative_research"
-        icon = 11
-        years_between_use = 5
+        name = "research_hazmat_suits"
+        icon = 1
+        years_between_use = 25
         
         potential = { 
-            always = yes
+            NOT = { has_country_modifier = radiation_adaptation }
         }
         trigger = {        
             adm_power = 100
+            dip_power = 100
+            mil_power = 100
+            years_of_income = 5
         }
         effect = {
             add_adm_power = -100
-            
-            add_research_5 = yes
-        }
-        ai_will_do = {
-            factor = 1
-            
-            modifier = {
-                factor = 0
-                
-                NOT = { adm_power = 300 }
-            }
-        }
-    }
-    interaction = {
-        name = "focus_diplomatic_research"
-        icon = 12
-        years_between_use = 5
-        
-        potential = { 
-            always = yes
-        }
-        trigger = {        
-            dip_power = 100
-        }
-        effect = {
             add_dip_power = -100
+            add_mil_power = -100
+            add_years_of_income = -5
             
-            add_research_5 = yes
-        }
-        ai_will_do = {
-            factor = 1
-            
-            modifier = {
-                factor = 0
-                
-                NOT = { dip_power = 300 }
+            add_country_modifier = {
+                name = radiation_adaptation
+                duration = -1
             }
         }
-    }
-    interaction = {
-        name = "focus_military_research"
-        icon = 13
-        years_between_use = 5
-        
-        potential = { 
-            always = yes
-        }
-        trigger = {        
-            mil_power = 100
-        }
-        effect = {
-            add_mil_power = -100
-            
-            add_research_5 = yes
-        }
         ai_will_do = {
             factor = 1
             
             modifier = {
                 factor = 0
                 
-                NOT = { mil_power = 300 }
+                NOT = { years_of_income = 10 }
             }
         }
     }

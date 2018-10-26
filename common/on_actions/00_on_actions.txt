@@ -631,8 +631,6 @@ on_colonial_pulse = {
 # country random events
 on_bi_yearly_pulse = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse" }
-
-    research_update = yes
 }
 
 on_bi_yearly_pulse_2 = {

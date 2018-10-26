@@ -63,7 +63,7 @@ can_claim_defender_of_faith = {
     condition = {
 		tooltip = "CANNOT_CLAIM_DEFENDER_OF_THE_FAITH"
 		potential = {
-            religion = secular
+            always = yes
 		}
 		allow = {
 			always = no
@@ -72,15 +72,7 @@ can_claim_defender_of_faith = {
 }
 
 can_change_national_focus = {
-    condition = {
-		tooltip = "CAN_CHANGE_NATIONAL_FOCUS"
-		potential = {
-            always = yes
-		}
-		allow = {
-            has_country_modifier = comms_system
-		}
-	}
+    
 }
 
 can_increase_stability = {
