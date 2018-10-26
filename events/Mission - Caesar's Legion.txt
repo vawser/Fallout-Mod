@@ -115,3 +115,88 @@ country_event = {
 	}
 }
 
+#-------------------------------------
+# "Push into Utah"
+#-------------------------------------
+country_event = {
+	id = mission_legion.5
+	title = mission_legion.5.title
+	desc = mission_legion.5.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.5.option.a
+        
+        if = {
+            limit = {
+                exists = DED
+                NOT = { is_subject_of = ROOT }
+            }
+            add_casus_belli = {
+                target = DED
+                type = cb_vassalize_mission
+                months = 120
+            }
+        }
+        if = {
+            limit = {
+                exists = SOR
+                NOT = { is_subject_of = ROOT }
+            }
+            add_casus_belli = {
+                target = SOR
+                type = cb_vassalize_mission
+                months = 120
+            }
+        }
+        if = {
+            limit = {
+                exists = WLS
+                NOT = { is_subject_of = ROOT }
+            }
+            add_casus_belli = {
+                target = WLS
+                type = cb_vassalize_mission
+                months = 120
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Push into Texas"
+#-------------------------------------
+country_event = {
+	id = mission_legion.6
+	title = mission_legion.6.title
+	desc = mission_legion.6.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.6.option.a
+        
+        if = {
+            limit = {
+                exists = MAL
+                NOT = { is_subject_of = ROOT }
+            }
+            MAL = {
+                every_owned_province = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+}

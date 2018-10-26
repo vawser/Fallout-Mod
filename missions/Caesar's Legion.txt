@@ -1,10 +1,6 @@
-# "Caesar, Son of Mars"
-# "Alea Iacta Est"
-# "The Howitzer"
-# "Born into Slavery"
-
-
-
+#---------------------------------------
+# Story
+#---------------------------------------
 CAE_slot_6 = {
     slot = 6
     ai = yes
@@ -29,7 +25,7 @@ CAE_slot_6 = {
                 set_country_flag = mission_active
             }
             
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_1
             
             tooltip = {
                 country_event = { id = mission_legion.1 days = 365 }
@@ -48,11 +44,11 @@ CAE_slot_6 = {
 		}
 		effect = {
             hidden_effect = {
-                country_event = { id = mission_legion.2 days = 365 }
+                country_event = { id = mission_legion.2 days = 730 }
                 set_country_flag = mission_active
             }
             
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_2
             
             tooltip = {
                 east_vegas_area = {
@@ -62,7 +58,6 @@ CAE_slot_6 = {
         }
 	}
 }
-
 CAE_slot_5 = {
     slot = 5
     ai = yes
@@ -84,11 +79,11 @@ CAE_slot_5 = {
 		}
 		effect = {
             hidden_effect = {
-                country_event = { id = mission_legion.3 days = 365 }
+                country_event = { id = mission_legion.3 days = 730 }
                 set_country_flag = mission_active
             }
             
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_2
             
             tooltip = {
                 add_country_modifier = {
@@ -99,7 +94,6 @@ CAE_slot_5 = {
         }
 	}
 }
-
 CAE_slot_7 = {
     slot = 7
     ai = yes
@@ -121,17 +115,361 @@ CAE_slot_7 = {
 		}
 		effect = {
             hidden_effect = {
-                country_event = { id = mission_legion.4 days = 365 }
+                country_event = { id = mission_legion.4 days = 730 }
                 set_country_flag = mission_active
             }
             
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_2
             
             tooltip = {
                 add_ruler_modifier = {
                     name = legion_birth 
                     duration = -1
                 }
+            }
+        }
+	}
+}
+
+#---------------------------------------
+# Conquest
+#---------------------------------------
+# Push into Utah - DED, SOR, WLS
+# Push into Texas - MAL
+# Push into the Midwest - IRR
+# Push into Baja California - DRG
+CAE_slot_1 = {
+    slot = 1
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    push_into_utah = {
+		icon = mission_zion
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            if = {
+                limit = {
+                    OR = {  
+                        exists = DED
+                        exists = SOR
+                        exists = WLS
+                    }
+                }
+                hidden_effect = {
+                    country_event = { id = mission_legion.5 days = 730 }
+                    set_country_flag = mission_active
+                }
+                
+                custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_2
+                
+                tooltip = {
+                    if = {
+                        limit = {
+                            exists = DED
+                            NOT = { is_subject_of = ROOT }
+                        }
+                        add_casus_belli = {
+                            target = DED
+                            type = cb_vassalize_mission
+                            months = 120
+                        }
+                    }
+                    if = {
+                        limit = {
+                            exists = SOR
+                            NOT = { is_subject_of = ROOT }
+                        }
+                        add_casus_belli = {
+                            target = SOR
+                            type = cb_vassalize_mission
+                            months = 120
+                        }
+                    }
+                    if = {
+                        limit = {
+                            exists = WLS
+                            NOT = { is_subject_of = ROOT }
+                        }
+                        add_casus_belli = {
+                            target = WLS
+                            type = cb_vassalize_mission
+                            months = 120
+                        }
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = TOOLTIP_MISSION_SKIPPED
+            }
+        }
+	}
+}
+CAE_slot_2 = {
+    slot = 2
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    push_into_texas = {
+		icon = mission_legion_camp
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            if = {
+                limit = {
+                    exists = MAL
+                    NOT = { is_subject_of = ROOT }
+                }
+               
+                hidden_effect = {
+                    country_event = { id = mission_legion.6 days = 730 }
+                    set_country_flag = mission_active
+                }
+                
+                custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_2
+                
+                tooltip = {
+                    if = {
+                        limit = {
+                            exists = MAL
+                            NOT = { is_subject_of = ROOT }
+                        }
+                        MAL = {
+                            every_owned_province = {
+                                add_permanent_claim = ROOT
+                            }
+                        }
+                    }
+                }
+            }
+            else = {
+                custom_tooltip = TOOLTIP_MISSION_SKIPPED
+            }
+        }
+	}
+}
+CAE_slot_3 = {
+    slot = 3
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    mission_3 = {
+		icon = mission_jail
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            hidden_effect = {
+                #country_event = { id = mission_legion.4 days = 365 }
+                set_country_flag = mission_active
+            }
+            
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            
+            tooltip = {
+                
+            }
+        }
+	}
+}
+CAE_slot_4 = {
+    slot = 4
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    mission_4 = {
+		icon = mission_jail
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            hidden_effect = {
+                #country_event = { id = mission_legion.4 days = 365 }
+                set_country_flag = mission_active
+            }
+            
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            
+            tooltip = {
+                
+            }
+        }
+	}
+}
+
+#---------------------------------------
+# Economy
+#---------------------------------------
+CAE_slot_8 = {
+    slot = 8
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    mission_8 = {
+		icon = mission_jail
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            hidden_effect = {
+                #country_event = { id = mission_legion.4 days = 365 }
+                set_country_flag = mission_active
+            }
+            
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            
+            tooltip = {
+                
+            }
+        }
+	}
+}
+CAE_slot_9 = {
+    slot = 9
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    mission_9 = {
+		icon = mission_jail
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            hidden_effect = {
+                #country_event = { id = mission_legion.4 days = 365 }
+                set_country_flag = mission_active
+            }
+            
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            
+            tooltip = {
+                
+            }
+        }
+	}
+}
+
+#---------------------------------------
+# Military
+#---------------------------------------
+CAE_slot_10 = {
+    slot = 10
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    mission_10 = {
+		icon = mission_jail
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            hidden_effect = {
+                #country_event = { id = mission_legion.4 days = 365 }
+                set_country_flag = mission_active
+            }
+            
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            
+            tooltip = {
+                
+            }
+        }
+	}
+}
+CAE_slot_11 = {
+    slot = 11
+    ai = yes
+
+    potential = {
+        tag = CAE
+    }
+    
+    mission_11 = {
+		icon = mission_jail
+		required_missions = { }
+        
+		trigger = {
+            mission_completed = caesar_son_of_mars
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                NOT = { has_country_flag = mission_active }
+            }
+		}
+		effect = {
+            hidden_effect = {
+                #country_event = { id = mission_legion.4 days = 365 }
+                set_country_flag = mission_active
+            }
+            
+            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            
+            tooltip = {
+                
             }
         }
 	}
