@@ -1480,18 +1480,12 @@ country_event = {
     
     mean_time_to_happen = {
         months = 120
-        
-        modifier = {
-            factor = 0.25
-            
-            treasury = 1000
-        }
     }
     
 	option = {
 		name = caravans.21.option.a
         
-        add_treasury = -200
+        add_dip_power = -100
         
         add_country_modifier = {
             name = local_caravan_investment

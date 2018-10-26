@@ -1,3 +1,10 @@
+has_no_active_mission = {
+    custom_trigger_tooltip = {
+        tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+        NOT = { has_country_flag = mission_active }
+    }
+}
+
 is_west_coast = {
     OR = {
         region = washington_region

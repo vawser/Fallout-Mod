@@ -200,3 +200,263 @@ country_event = {
         }
 	}
 }
+
+#-------------------------------------
+# "Finish Colorado"
+#-------------------------------------
+country_event = {
+	id = mission_legion.7
+	title = mission_legion.7.title
+	desc = mission_legion.7.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.7.option.a
+        
+        if = {
+            limit = {
+                exists = IRR
+                NOT = { is_subject_of = ROOT }
+            }
+            IRR = {
+                every_owned_province = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Push into Baja California"
+#-------------------------------------
+country_event = {
+	id = mission_legion.8
+	title = mission_legion.8.title
+	desc = mission_legion.8.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.8.option.a
+        
+        if = {
+            limit = {
+                exists = DRG
+                NOT = { is_subject_of = ROOT }
+            }
+            DRG = {
+                every_owned_province = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Utah"
+#-------------------------------------
+country_event = {
+	id = mission_legion.9
+	title = mission_legion.9.title
+	desc = mission_legion.9.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.9.option.a
+        
+        utah_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Texas"
+#-------------------------------------
+country_event = {
+	id = mission_legion.10
+	title = mission_legion.10.title
+	desc = mission_legion.10.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.10.option.a
+        
+        texas_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Kansas"
+#-------------------------------------
+country_event = {
+	id = mission_legion.11
+	title = mission_legion.11.title
+	desc = mission_legion.11.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.11.option.a
+        
+        kansas_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Baja California"
+#-------------------------------------
+country_event = {
+	id = mission_legion.12
+	title = mission_legion.12.title
+	desc = mission_legion.12.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.12.option.a
+        
+        baja_california_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Utah"
+#-------------------------------------
+country_event = {
+	id = mission_legion.13
+	title = mission_legion.13.title
+	desc = mission_legion.13.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.13.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_utah
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Texas"
+#-------------------------------------
+country_event = {
+	id = mission_legion.14
+	title = mission_legion.14.title
+	desc = mission_legion.14.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.14.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_texas
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Kansas"
+#-------------------------------------
+country_event = {
+	id = mission_legion.15
+	title = mission_legion.15.title
+	desc = mission_legion.15.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.15.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_kansas
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Baja California"
+#-------------------------------------
+country_event = {
+	id = mission_legion.16
+	title = mission_legion.16.title
+	desc = mission_legion.16.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.16.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_baja_california
+            duration = -1
+        }
+	}
+}

@@ -14,19 +14,11 @@ CAE_slot_6 = {
 		required_missions = {  }
         
 		trigger = {
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                country_event = { id = mission_legion.1 days = 1800 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_5
-            
+            execute_event_in_5_years = { EVENT = mission_legion.1 }
+ 
             tooltip = {
                 country_event = { id = mission_legion.1 days = 1800 }
             }
@@ -37,18 +29,10 @@ CAE_slot_6 = {
 		required_missions = { caesar_son_of_mars }
         
 		trigger = {
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                country_event = { id = mission_legion.2 days = 1800 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_5
+            execute_event_in_5_years = { EVENT = mission_legion.2 }
             
             tooltip = {
                 east_vegas_area = {
@@ -72,18 +56,10 @@ CAE_slot_5 = {
 		required_missions = { alea_iacta_est }
         
 		trigger = {
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                country_event = { id = mission_legion.3 days = 1800 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_5
+            execute_event_in_5_years = { EVENT = mission_legion.3 }
             
             tooltip = {
                 add_country_modifier = {
@@ -108,18 +84,10 @@ CAE_slot_7 = {
 		required_missions = { alea_iacta_est }
         
 		trigger = {
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                country_event = { id = mission_legion.4 days = 1800 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_5
+            execute_event_in_5_years = { EVENT = mission_legion.4 }
             
             tooltip = {
                 add_ruler_modifier = {
@@ -135,9 +103,6 @@ CAE_slot_7 = {
 # Conquest
 #---------------------------------------
 # Push into Utah - DED, SOR, WLS
-# Push into Texas - MAL
-# Push into the Midwest - IRR
-# Push into Baja California - DRG
 CAE_slot_1 = {
     slot = 1
     ai = yes
@@ -152,10 +117,10 @@ CAE_slot_1 = {
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            NOT = { mission_completed = push_into_baja_california }
+            NOT = { mission_completed = push_into_texas }
+            NOT = { mission_completed = finish_colorado }
+            has_no_active_mission = yes
 		}
 		effect = {
             if = {
@@ -166,12 +131,7 @@ CAE_slot_1 = {
                         exists = WLS
                     }
                 }
-                hidden_effect = {
-                    country_event = { id = mission_legion.5 days = 3650 }
-                    set_country_flag = mission_active
-                }
-                
-                custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_10
+                execute_event_in_5_years = { EVENT = mission_legion.5 }
                 
                 tooltip = {
                     if = {
@@ -214,7 +174,50 @@ CAE_slot_1 = {
             }
         }
 	}
+    conquer_utah = {
+		icon = mission_zion_2
+		required_missions = { push_into_utah }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.9 }
+            
+            tooltip = {
+                utah_region = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    conquerer_of_utah = {
+		icon = mission_legion_skeleton
+		required_missions = { conquer_utah }
+        
+		trigger = {
+            utah_region = {
+                type = all
+                OR = {
+                    is_empty = yes
+                    owned_by = ROOT
+                }
+            }
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_immediate = { EVENT = mission_legion.13 }
+
+            tooltip = {
+                add_country_modifier = {
+                    name = conqueror_of_utah
+                    duration = -1
+                }
+            }
+        }
+	}
 }
+# Push into Texas - MAL
 CAE_slot_2 = {
     slot = 2
     ai = yes
@@ -229,10 +232,10 @@ CAE_slot_2 = {
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            NOT = { mission_completed = push_into_utah }
+            NOT = { mission_completed = push_into_baja_california }
+            NOT = { mission_completed = finish_colorado }
+            has_no_active_mission = yes
 		}
 		effect = {
             if = {
@@ -241,12 +244,7 @@ CAE_slot_2 = {
                     NOT = { is_subject_of = ROOT }
                 }
                
-                hidden_effect = {
-                    country_event = { id = mission_legion.6 days = 3650 }
-                    set_country_flag = mission_active
-                }
-                
-                custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_10
+                execute_event_in_5_years = { EVENT = mission_legion.6 }
                 
                 tooltip = {
                     if = {
@@ -267,7 +265,50 @@ CAE_slot_2 = {
             }
         }
 	}
+    conquer_texas = {
+		icon = mission_wasteland_3
+		required_missions = { push_into_texas }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.10 }
+            
+            tooltip = {
+                texas_region = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    conquerer_of_texas = {
+		icon = mission_legion_skeleton
+		required_missions = { conquer_texas }
+        
+		trigger = {
+            texas_region = {
+                type = all
+                OR = {
+                    is_empty = yes
+                    owned_by = ROOT
+                }
+            }
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_immediate = { EVENT = mission_legion.14 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = conqueror_of_texas
+                    duration = -1
+                }
+            }
+        }
+	}
 }
+# Push into Colorado - IRR
 CAE_slot_3 = {
     slot = 3
     ai = yes
@@ -276,31 +317,89 @@ CAE_slot_3 = {
         tag = CAE
     }
     
-    mission_3 = {
-		icon = mission_jail
+    finish_colorado = {
+		icon = mission_hangers
 		required_missions = { }
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            NOT = { mission_completed = push_into_utah }
+            NOT = { mission_completed = push_into_texas }
+            NOT = { mission_completed = push_into_baja_california }
+            has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                #country_event = { id = mission_legion.4 days = 365 }
-                set_country_flag = mission_active
+            if = {
+                limit = {
+                    exists = IRR
+                    NOT = { is_subject_of = ROOT }
+                }
+               
+                execute_event_in_5_years = { EVENT = mission_legion.7 }
+                
+                tooltip = {
+                    if = {
+                        limit = {
+                            exists = IRR
+                            NOT = { is_subject_of = ROOT }
+                        }
+                        IRR = {
+                            every_owned_province = {
+                                add_permanent_claim = ROOT
+                            }
+                        }
+                    }
+                }
             }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            else = {
+                custom_tooltip = TOOLTIP_MISSION_SKIPPED
+            }
+        }
+	}
+    conquer_kansas = {
+		icon = mission_legion_fire
+		required_missions = { finish_colorado }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.11 }
             
             tooltip = {
-                
+                kansas_region = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    conquerer_of_kansas = {
+		icon = mission_legion_skeleton
+		required_missions = { conquer_kansas }
+        
+		trigger = {
+            kansas_region = {
+                type = all
+                OR = {
+                    is_empty = yes
+                    owned_by = ROOT
+                }
+            }
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_immediate = { EVENT = mission_legion.15 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = conqueror_of_kansas
+                    duration = -1
+                }
             }
         }
 	}
 }
+# Push into Baja California - DRG
 CAE_slot_4 = {
     slot = 4
     ai = yes
@@ -309,27 +408,84 @@ CAE_slot_4 = {
         tag = CAE
     }
     
-    mission_4 = {
-		icon = mission_jail
+    push_into_baja_california = {
+		icon = mission_wasteland_2
 		required_missions = { }
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            NOT = { mission_completed = push_into_utah }
+            NOT = { mission_completed = push_into_texas }
+            NOT = { mission_completed = finish_colorado }  
+            has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                #country_event = { id = mission_legion.4 days = 365 }
-                set_country_flag = mission_active
+            if = {
+                limit = {
+                    exists = DRG
+                    NOT = { is_subject_of = ROOT }
+                }
+               
+                execute_event_in_5_years = { EVENT = mission_legion.8 }
+                
+                tooltip = {
+                    if = {
+                        limit = {
+                            exists = DRG
+                            NOT = { is_subject_of = ROOT }
+                        }
+                        DRG = {
+                            every_owned_province = {
+                                add_permanent_claim = ROOT
+                            }
+                        }
+                    }
+                }
             }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            else = {
+                custom_tooltip = TOOLTIP_MISSION_SKIPPED
+            }
+        }
+	}
+    conquer_baja_california = {
+		icon = mission_wasteland_3
+		required_missions = { push_into_baja_california }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.12 }
             
             tooltip = {
-                
+                baja_california_region = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    conquerer_of_baja_california = {
+		icon = mission_legion_skeleton
+		required_missions = { conquer_baja_california }
+        
+		trigger = {
+            baja_california_region = {
+                type = all
+                OR = {
+                    is_empty = yes
+                    owned_by = ROOT
+                }
+            }
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_immediate = { EVENT = mission_legion.16 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = conqueror_of_baja_california
+                    duration = -1
+                }
             }
         }
 	}
@@ -352,10 +508,7 @@ CAE_slot_8 = {
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
             hidden_effect = {
@@ -385,10 +538,7 @@ CAE_slot_9 = {
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
             hidden_effect = {
@@ -422,10 +572,7 @@ CAE_slot_10 = {
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
             hidden_effect = {
@@ -455,10 +602,7 @@ CAE_slot_11 = {
         
 		trigger = {
             mission_completed = caesar_son_of_mars
-            custom_trigger_tooltip = {
-                tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
-                NOT = { has_country_flag = mission_active }
-            }
+            has_no_active_mission = yes
 		}
 		effect = {
             hidden_effect = {
