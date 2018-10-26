@@ -1,222 +1,603 @@
-generic_slot_1 = {
-    slot = 1
-    generic = yes
-    ai = yes
+# generic_slot_1 = {
+    # slot = 1
+    # generic = yes
+    # ai = yes
 
-    potential = {
-        always = yes
-    }
+    # potential = {
+        # always = yes
+    # }
     
-    test_mission_1 = {
-		icon = mission_bos_power_armour
-		required_missions = {  }
+    # test_mission_1 = {
+		# icon = mission_bos_power_armour
+		# required_missions = {  }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            # hidden_effect = {
+                # country_event = { id = mission_generic.1 days = 365 }
+                # set_country_flag = mission_active
+            # }
             
-		}
-		effect = {
+            # custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
             
-        }
-	}
-    test_mission_2 = {
-		icon = mission_bos_power_armour
-		required_missions = { test_mission_1 }
+            # tooltip = {
+                # add_adm_power = 100
+            # }
+        # }
+	# }
+    # test_mission_2 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { test_mission_1 }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            # hidden_effect = {
+                # country_event = { id = mission_generic.1 days = 365 }
+                # set_country_flag = mission_active
+            # }
             
-		}
-		effect = {
+            # custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
             
-        }
-	}
-    test_mission_3 = {
-		icon = mission_bos_power_armour
-		required_missions = { test_mission_2 }
+            # tooltip = {
+                # add_adm_power = 100
+            # }
+        # }
+	# }
+    # test_mission_3 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { test_mission_2 }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-    }
-}
+        # }
+    # }
+# }
 
-generic_slot_2 = {
-    slot = 2
-    generic = yes
-    ai = yes
+# generic_slot_2 = {
+    # slot = 2
+    # generic = yes
+    # ai = yes
 
-    potential = {
-        always = yes
-    }
+    # potential = {
+        # always = yes
+    # }
     
-    test_mission_4 = {
-		icon = mission_bos_power_armour
-		required_missions = { test_mission_2 }
-        position = 3
+    # test_mission_4 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { test_mission_2 }
+        # position = 3
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_5 = {
-		icon = mission_bos_power_armour
-		required_missions = { test_mission_4 }
-        position = 4
+        # }
+	# }
+    # test_mission_5 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { test_mission_4 }
+        # position = 4
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_6 = {
-		icon = mission_bos_power_armour
-		required_missions = { test_mission_6 }
-        position = 5
+        # }
+	# }
+    # test_mission_6 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { test_mission_5 }
+        # position = 5
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-    }
-}
+        # }
+    # }
+# }
 
-generic_slot_3 = {
-    slot = 3
-    generic = yes
-    ai = yes
+# generic_slot_3 = {
+    # slot = 3
+    # generic = yes
+    # ai = yes
 
-    potential = {
-        always = yes
-    }
+    # potential = {
+        # always = yes
+    # }
     
-    test_mission_7 = {
-		icon = mission_bos_power_armour
-		required_missions = { }
+    # test_mission_7 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_8 = {
-		icon = mission_bos_power_armour
-		required_missions = { test_mission_7 }
+        # }
+	# }
+    # test_mission_8 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { test_mission_7 }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_9 = {
-		icon = mission_bos_power_armour
-		required_missions = { test_mission_8 }
+        # }
+	# }
+    # test_mission_9 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { test_mission_8 }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-    }
-}
+        # }
+    # }
+# }
 
-generic_slot_4 = {
-    slot = 4
-    generic = yes
-    ai = yes
+# generic_slot_4 = {
+    # slot = 4
+    # generic = yes
+    # ai = yes
 
-    potential = {
-        always = yes
-    }
+    # potential = {
+        # always = yes
+    # }
     
-    test_mission_10 = {
-		icon = mission_bos_power_armour
-		required_missions = { }
+    # test_mission_10 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_11 = {
-		icon = mission_bos_power_armour
-		required_missions = { }
+        # }
+	# }
+    # test_mission_11 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_12 = {
-		icon = mission_bos_power_armour
-		required_missions = { }
+        # }
+	# }
+    # test_mission_12 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-    }
-}
+        # }
+    # }
+# }
 
-generic_slot_5 = {
-    slot = 5
-    generic = yes
-    ai = yes
+# generic_slot_5 = {
+    # slot = 5
+    # generic = yes
+    # ai = yes
 
-    potential = {
-        always = yes
-    }
+    # potential = {
+        # always = yes
+    # }
     
-    test_mission_13 = {
-		icon = mission_bos_power_armour
-		required_missions = { }
+    # test_mission_13 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_14 = {
-		icon = mission_bos_power_armour
-		required_missions = { }
+        # }
+	# }
+    # test_mission_14 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
-            
-        }
-	}
-    test_mission_15 = {
-		icon = mission_bos_power_armour
-		required_missions = { }
+        # }
+	# }
+    # test_mission_15 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
         
-		trigger = {
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-		}
-		effect = {
+        # }
+    # }
+# }
+
+# generic_slot_6 = {
+    # slot = 6
+    # generic = yes
+    # ai = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # test_mission_16 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
             
-        }
-    }
-}
+        # }
+	# }
+    # test_mission_17 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_18 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+    # }
+# }
+
+# generic_slot_7 = {
+    # slot = 7
+    # generic = yes
+    # ai = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # test_mission_19 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_21 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_22 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+    # }
+# }
+
+# generic_slot_8 = {
+    # slot = 8
+    # generic = yes
+    # ai = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # test_mission_23 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_24 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_25 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+    # }
+# }
+
+# generic_slot_9 = {
+    # slot = 9
+    # generic = yes
+    # ai = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # test_mission_26 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_27 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_28 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+    # }
+# }
+
+# generic_slot_10 = {
+    # slot = 10
+    # generic = yes
+    # ai = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # test_mission_29 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_30 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_31 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+    # }
+# }
+
+# generic_slot_11 = {
+    # slot = 11
+    # generic = yes
+    # ai = yes
+
+    # potential = {
+        # always = yes
+    # }
+    
+    # test_mission_32 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_33 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+	# }
+    # test_mission_34 = {
+		# icon = mission_bos_power_armour
+		# required_missions = { }
+        
+		# trigger = {
+            # custom_trigger_tooltip = {
+                # tooltip = TOOLTIP_NO_MISSION_IS_ACTIVE
+                # NOT = { has_country_flag = mission_active }
+            # }
+		# }
+		# effect = {
+            
+        # }
+    # }
+# }

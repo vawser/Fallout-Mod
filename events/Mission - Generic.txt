@@ -1,0 +1,26 @@
+namespace = mission_generic
+
+country_event = {
+	id = mission_generic.1
+	title = "mission_generic.1.title"
+	desc = "mission_generic.1.desc"
+    picture = USA_FLAG_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+        
+	}
+
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = mission_active
+        }
+    }
+    
+	option = {
+		name = mission_generic.1.option.a
+        
+        add_adm_power = 100
+	}	
+}

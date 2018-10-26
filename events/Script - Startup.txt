@@ -51,8 +51,6 @@ country_event = {
     option = {
         name = startup.1.option.a
 
-        setup_research = yes
-        
         if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - Start startup" }
     }  
 }

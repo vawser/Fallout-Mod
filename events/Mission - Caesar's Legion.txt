@@ -1,0 +1,117 @@
+namespace = mission_legion
+
+#-------------------------------------
+# "Caesar, Son of Mars"
+#-------------------------------------
+country_event = {
+	id = mission_legion.1
+	title = mission_legion.1.title
+	desc = mission_legion.1.desc
+    picture = LEGION_CROSS_eventPicture
+	
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+    
+	option = {
+		name = mission_legion.1.option.a
+		
+        add_country_modifier = {
+            name = burn_the_profligates
+            duration = -1
+        }
+	}
+    option = {
+		name = mission_legion.1.option.b
+		
+        add_country_modifier = {
+            name = divide_and_conquer
+            duration = -1
+        }
+	}
+    option = {
+		name = mission_legion.1.option.c
+		
+        add_country_modifier = {
+            name = deeds_not_words
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Alea Iacta Est"
+#-------------------------------------
+country_event = {
+	id = mission_legion.2
+	title = mission_legion.2.title
+	desc = mission_legion.2.desc
+    picture = LEGION_CROSS_eventPicture
+	
+    is_triggered_only = yes
+    
+	immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+    
+	option = {
+		name = mission_legion.2.option.a
+		
+        east_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "The Howitzer"
+#-------------------------------------
+country_event = {
+	id = mission_legion.3
+	title = mission_legion.3.title
+	desc = mission_legion.3.desc
+    picture = HOWITIZER_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+ 
+	option = {
+		name = mission_legion.3.option.a
+    
+		add_country_modifier = {
+            name = howitizer_firing_pin
+            duration = 3650
+        }
+	}
+}
+
+#-------------------------------------
+# "Born into Slavery"
+#-------------------------------------
+country_event = {
+	id = mission_legion.4
+	title = mission_legion.4.title
+	desc = mission_legion.4.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.4.option.a
+        
+        add_ruler_modifier = {
+			name = legion_birth 
+            duration = -1
+		}
+	}
+}
+
