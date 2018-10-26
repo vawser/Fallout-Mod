@@ -672,6 +672,11 @@ on_bi_yearly_pulse_4 = {
 # country random events
 on_thri_yearly_pulse = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse" }
+    
+    random_events = {
+        1000 = legion_turmoil.1
+        1000 = 0
+    }
 }
 
 on_thri_yearly_pulse_2 = {

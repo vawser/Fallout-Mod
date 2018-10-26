@@ -254,6 +254,9 @@ republic_legacy = {
     republican_name = yes
 	royal_marriage = yes
     
+    duration = 5
+    has_term_election = yes
+    
     government_abilities = { 
         iqta_mechanic
     }
@@ -312,6 +315,9 @@ ncr_legacy = {
     
     different_religion_acceptance = 25
 	different_religion_group_acceptance = 25
+    
+    duration = 5
+    has_term_election = yes
     
     government_abilities = { 
         iqta_mechanic
@@ -382,6 +388,7 @@ enclave_legacy = {
     militarised_society  = yes
     
     duration = 5
+    has_term_election = yes
     
     modifiers = {
         land_morale = 0.1
@@ -406,6 +413,9 @@ vault_legacy = {
     
     republican_name = no
 	royal_marriage = no
+    
+    duration = 5
+    has_term_election = yes
     
     modifiers = {
         development_cost = -0.1

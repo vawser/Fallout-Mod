@@ -17,7 +17,10 @@ country_event = {
 	}
     
     immediate = {
-        set_country_flag = setting_ruler 
+        hidden_effect = {
+            set_country_flag = setting_ruler
+            
+        }
     }
     
     after = {

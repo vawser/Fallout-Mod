@@ -17,6 +17,16 @@ add_stability_or_adm_power = {
 	}
 }
 
+spawn_pretender_rebels = {
+    spawn_rebels = {
+        type = pretender_rebels
+        size = $SIZE$
+        win = yes
+        unrest = $UNREST$
+        friend = $TAG$
+    }
+}
+
 #Legitimacy
 #Country Scope
 increase_legitimacy_small_effect = { #No IFs as the game hides these itself when incorrect.
