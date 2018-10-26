@@ -129,10 +129,10 @@ policy_justice = {
             NOT = { stability = 3 }
         }
         trigger = {        
-            years_of_income = 0.25    
+            years_of_income = 0.5    
         }
         effect = {
-            add_years_of_income = -0.25
+            add_years_of_income = -0.5
             
             add_stability = 1
         }
@@ -142,7 +142,7 @@ policy_justice = {
             modifier = {
                 factor = 0
                 
-                NOT = { years_of_income = 1 }
+                NOT = { years_of_income = 2 }
             }
         }
     }
