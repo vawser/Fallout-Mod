@@ -9,7 +9,7 @@ CAE_slot_6 = {
         tag = CAE
     }
     
-    caesar_son_of_mars = {
+    CAE_caesar_son_of_mars = {
 		icon = mission_legion_cross
 		required_missions = {  }
         
@@ -24,9 +24,9 @@ CAE_slot_6 = {
             }
         }
 	}
-    alea_iacta_est = {
+    CAE_alea_iacta_est = {
 		icon = mission_legion_camp
-		required_missions = { caesar_son_of_mars }
+		required_missions = { CAE_caesar_son_of_mars }
         
 		trigger = {
             has_no_active_mission = yes
@@ -41,9 +41,9 @@ CAE_slot_6 = {
             }
         }
 	}
-    jewel_of_new_vegas = {
+    CAE_jewel_of_new_vegas = {
 		icon = mission_casino
-		required_missions = { alea_iacta_est }
+		required_missions = { CAE_alea_iacta_est }
         
 		trigger = {
             has_no_active_mission = yes
@@ -60,6 +60,23 @@ CAE_slot_6 = {
         }
 	}
     
+    # The Water Merchants
+    #   completed jewel_of_new_vegas
+    #   gain claim on the Hub
+    
+    # The Followers
+    #   completed the_water_merchants
+    #   gain claim on the boneyard
+    
+    # The Council
+    #   completed the_followers
+    #   gain claim on Shady Sands
+    
+    # Conqueror of California
+    #   own shady_sands area
+    #   completed the_council
+    #   gain conqueror_of_california
+    
 }
 CAE_slot_5 = {
     slot = 5
@@ -69,10 +86,10 @@ CAE_slot_5 = {
         tag = CAE
     }
     
-    the_howitzer = {
+    CAE_the_howitzer = {
 		icon = mission_artillery
         position = 3
-		required_missions = { alea_iacta_est }
+		required_missions = { CAE_alea_iacta_est }
         
 		trigger = {
             has_no_active_mission = yes
@@ -88,10 +105,10 @@ CAE_slot_5 = {
             }
         }
 	}
-    subjugate_the_locals = {
+    CAE_subjugate_the_locals = {
 		icon = mission_freeside
         position = 4
-		required_missions = { jewel_of_new_vegas }
+		required_missions = { CAE_jewel_of_new_vegas }
         
 		trigger = {
             has_no_active_mission = yes
@@ -137,10 +154,10 @@ CAE_slot_7 = {
         tag = CAE
     }
     
-    born_into_slavery = {
+    CAE_born_into_slavery = {
 		icon = mission_jail
         position = 3
-		required_missions = { alea_iacta_est }
+		required_missions = { CAE_alea_iacta_est }
         
 		trigger = {
             has_no_active_mission = yes
@@ -156,10 +173,10 @@ CAE_slot_7 = {
             }
         }
 	}
-    control_the_securitrons = {
+    CAE_control_the_securitrons = {
 		icon = mission_console
         position = 4
-		required_missions = { jewel_of_new_vegas }
+		required_missions = { CAE_jewel_of_new_vegas }
         
 		trigger = {
             has_no_active_mission = yes
@@ -189,15 +206,15 @@ CAE_slot_1 = {
         tag = CAE
     }
     
-    push_into_utah = {
+    CAE_push_into_utah = {
 		icon = mission_zion
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
-            NOT = { mission_completed = push_into_baja_california }
-            NOT = { mission_completed = push_into_texas }
-            NOT = { mission_completed = finish_colorado }
+            mission_completed = CAE_caesar_son_of_mars
+            NOT = { mission_completed = CAE_push_into_baja_california }
+            NOT = { mission_completed = CAE_push_into_texas }
+            NOT = { mission_completed = CAE_finish_colorado }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -252,9 +269,9 @@ CAE_slot_1 = {
             }
         }
 	}
-    conquer_utah = {
+    CAE_conquer_utah = {
 		icon = mission_zion_2
-		required_missions = { push_into_utah }
+		required_missions = { CAE_push_into_utah }
         
 		trigger = {
             has_no_active_mission = yes
@@ -269,9 +286,9 @@ CAE_slot_1 = {
             }
         }
 	}
-    conquerer_of_utah = {
+    CAE_conquerer_of_utah = {
 		icon = mission_legion_skeleton
-		required_missions = { conquer_utah }
+		required_missions = { CAE_conquer_utah }
         
 		trigger = {
             utah_region = {
@@ -304,15 +321,15 @@ CAE_slot_2 = {
         tag = CAE
     }
     
-    push_into_texas = {
+    CAE_push_into_texas = {
 		icon = mission_legion_camp
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
-            NOT = { mission_completed = push_into_utah }
-            NOT = { mission_completed = push_into_baja_california }
-            NOT = { mission_completed = finish_colorado }
+            mission_completed = CAE_caesar_son_of_mars
+            NOT = { mission_completed = CAE_push_into_utah }
+            NOT = { mission_completed = CAE_push_into_baja_california }
+            NOT = { mission_completed = CAE_finish_colorado }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -343,9 +360,9 @@ CAE_slot_2 = {
             }
         }
 	}
-    conquer_texas = {
+    CAE_conquer_texas = {
 		icon = mission_wasteland_3
-		required_missions = { push_into_texas }
+		required_missions = { CAE_push_into_texas }
         
 		trigger = {
             has_no_active_mission = yes
@@ -360,9 +377,9 @@ CAE_slot_2 = {
             }
         }
 	}
-    conquerer_of_texas = {
+    CAE_conquerer_of_texas = {
 		icon = mission_legion_skeleton
-		required_missions = { conquer_texas }
+		required_missions = { CAE_conquer_texas }
         
 		trigger = {
             texas_region = {
@@ -395,15 +412,15 @@ CAE_slot_3 = {
         tag = CAE
     }
     
-    finish_colorado = {
+    CAE_finish_colorado = {
 		icon = mission_hangers
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
-            NOT = { mission_completed = push_into_utah }
-            NOT = { mission_completed = push_into_texas }
-            NOT = { mission_completed = push_into_baja_california }
+            mission_completed = CAE_caesar_son_of_mars
+            NOT = { mission_completed = CAE_push_into_utah }
+            NOT = { mission_completed = CAE_push_into_texas }
+            NOT = { mission_completed = CAE_push_into_baja_california }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -434,9 +451,9 @@ CAE_slot_3 = {
             }
         }
 	}
-    conquer_kansas = {
+    CAE_conquer_kansas = {
 		icon = mission_legion_fire
-		required_missions = { finish_colorado }
+		required_missions = { CAE_finish_colorado }
         
 		trigger = {
             has_no_active_mission = yes
@@ -451,9 +468,9 @@ CAE_slot_3 = {
             }
         }
 	}
-    conquerer_of_kansas = {
+    CAE_conquerer_of_kansas = {
 		icon = mission_legion_skeleton
-		required_missions = { conquer_kansas }
+		required_missions = { CAE_conquer_kansas }
         
 		trigger = {
             kansas_region = {
@@ -486,15 +503,15 @@ CAE_slot_4 = {
         tag = CAE
     }
     
-    push_into_baja_california = {
+    CAE_push_into_baja_california = {
 		icon = mission_wasteland_2
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
-            NOT = { mission_completed = push_into_utah }
-            NOT = { mission_completed = push_into_texas }
-            NOT = { mission_completed = finish_colorado }  
+            mission_completed = CAE_caesar_son_of_mars
+            NOT = { mission_completed = CAE_push_into_utah }
+            NOT = { mission_completed = CAE_push_into_texas }
+            NOT = { mission_completed = CAE_finish_colorado }  
             has_no_active_mission = yes
 		}
 		effect = {
@@ -525,9 +542,9 @@ CAE_slot_4 = {
             }
         }
 	}
-    conquer_baja_california = {
+    CAE_conquer_baja_california = {
 		icon = mission_wasteland_3
-		required_missions = { push_into_baja_california }
+		required_missions = { CAE_push_into_baja_california }
         
 		trigger = {
             has_no_active_mission = yes
@@ -542,9 +559,9 @@ CAE_slot_4 = {
             }
         }
 	}
-    conquerer_of_baja_california = {
+    CAE_conquerer_of_baja_california = {
 		icon = mission_legion_skeleton
-		required_missions = { conquer_baja_california }
+		required_missions = { CAE_conquer_baja_california }
         
 		trigger = {
             baja_california_region = {
@@ -585,7 +602,7 @@ CAE_slot_8 = {
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
+            mission_completed = CAE_caesar_son_of_mars
             has_no_active_mission = yes
 		}
 		effect = {
@@ -615,7 +632,7 @@ CAE_slot_9 = {
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
+            mission_completed = CAE_caesar_son_of_mars
             has_no_active_mission = yes
 		}
 		effect = {
@@ -649,7 +666,7 @@ CAE_slot_10 = {
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
+            mission_completed = CAE_caesar_son_of_mars
             has_no_active_mission = yes
 		}
 		effect = {
@@ -679,7 +696,7 @@ CAE_slot_11 = {
 		required_missions = { }
         
 		trigger = {
-            mission_completed = caesar_son_of_mars
+            mission_completed = CAE_caesar_son_of_mars
             has_no_active_mission = yes
 		}
 		effect = {
