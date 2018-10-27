@@ -2,7 +2,10 @@ country_decisions = {
     activate_securitron_bunker = {
         major = yes
 		potential = {
-			tag = NVG
+            OR = {
+                has_country_flag = conquered_new_vegas
+                tag = NVG
+            }
             NOT = { has_country_modifier = securitron_bunker }
 		}
 		allow =  {
@@ -26,7 +29,10 @@ country_decisions = {
     
     construct_assault_securitrons = {
 		potential = {
-			tag = NVG
+            OR = {
+                tag = NVG
+                has_country_flag = conquered_new_vegas
+            }
 		}
 		allow =  {
             has_country_modifier = securitron_bunker

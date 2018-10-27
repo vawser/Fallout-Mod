@@ -460,3 +460,95 @@ country_event = {
         }
 	}
 }
+
+#-------------------------------------
+# "Jewel of New Vegas"
+#-------------------------------------
+country_event = {
+	id = mission_legion.17
+	title = mission_legion.17.title
+	desc = mission_legion.17.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.17.option.a
+        
+        new_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Subjugate the Locals"
+#-------------------------------------
+country_event = {
+	id = mission_legion.18
+	title = mission_legion.18.title
+	desc = mission_legion.18.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.18.option.a
+        
+        north_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+        goodsprings_area = {
+            add_permanent_claim = ROOT
+        }
+        helios_area = {
+            add_permanent_claim = ROOT
+        }
+        clark_area = {
+            add_permanent_claim = ROOT
+        }
+        nipton_area = {
+            add_permanent_claim = ROOT
+        }
+        boulder_city_area = {
+            add_permanent_claim = ROOT
+        }
+        black_mountain_area = {
+            add_permanent_claim = ROOT
+        }
+        west_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Control the Securitrons"
+#-------------------------------------
+country_event = {
+	id = mission_legion.19
+	title = mission_legion.19.title
+	desc = mission_legion.19.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = mission_active }
+	}
+	
+	option = {
+		name = mission_legion.19.option.a
+        
+        custom_tooltip = TOOLTIP_CONQUERED_NEW_VEGAS
+        hidden_effect = { set_country_flag = conquered_new_vegas }
+	}
+}

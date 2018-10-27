@@ -41,6 +41,25 @@ CAE_slot_6 = {
             }
         }
 	}
+    jewel_of_new_vegas = {
+		icon = mission_casino
+		required_missions = { alea_iacta_est }
+        
+		trigger = {
+            has_no_active_mission = yes
+            owns_core_province = 267        # Hoover Dam
+		}
+		effect = {
+            execute_event_in_5_years = { EVENT = mission_legion.17 }
+            
+            tooltip = {
+                new_vegas_area = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    
 }
 CAE_slot_5 = {
     slot = 5
@@ -65,6 +84,46 @@ CAE_slot_5 = {
                 add_country_modifier = {
                     name = howitizer_firing_pin
                     duration = 3650
+                }
+            }
+        }
+	}
+    subjugate_the_locals = {
+		icon = mission_freeside
+        position = 4
+		required_missions = { jewel_of_new_vegas }
+        
+		trigger = {
+            has_no_active_mission = yes
+            owns_core_province = 1200        # New Vegas
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.18 }
+            
+            tooltip = {
+                north_vegas_area = {
+                    add_permanent_claim = ROOT
+                }
+                goodsprings_area = {
+                    add_permanent_claim = ROOT
+                }
+                helios_area = {
+                    add_permanent_claim = ROOT
+                }
+                clark_area = {
+                    add_permanent_claim = ROOT
+                }
+                nipton_area = {
+                    add_permanent_claim = ROOT
+                }
+                boulder_city_area = {
+                    add_permanent_claim = ROOT
+                }
+                black_mountain_area = {
+                    add_permanent_claim = ROOT
+                }
+                west_vegas_area = {
+                    add_permanent_claim = ROOT
                 }
             }
         }
@@ -94,6 +153,25 @@ CAE_slot_7 = {
                     name = legion_birth 
                     duration = -1
                 }
+            }
+        }
+	}
+    control_the_securitrons = {
+		icon = mission_console
+        position = 4
+		required_missions = { jewel_of_new_vegas }
+        
+		trigger = {
+            has_no_active_mission = yes
+            NOT = { exists = NVG }
+            owns_core_province = 1200        # New Vegas
+		}
+		effect = {
+            execute_event_in_25_years = { EVENT = mission_legion.19 }
+            
+            tooltip = {
+                custom_tooltip = TOOLTIP_CONQUERED_NEW_VEGAS
+                hidden_effect = { set_country_flag = conquered_new_vegas }
             }
         }
 	}
