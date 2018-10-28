@@ -662,11 +662,15 @@ CAE_slot_8 = {
     }
     
     CAE_tame_the_dog_city = {
-		icon = mission_jail
+		icon = mission_rubble_1
 		required_missions = { }
         
 		trigger = {
             mission_completed = CAE_caesar_son_of_mars
+            denver_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -682,10 +686,14 @@ CAE_slot_8 = {
         }
 	}
     CAE_legion_scavengers = {
-		icon = mission_jail
+		icon = mission_crashed_satellite
 		required_missions = { CAE_tame_the_dog_city }
         
 		trigger = {
+            denver_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -700,7 +708,7 @@ CAE_slot_8 = {
         }
 	}
     CAE_pax_hominibus = {
-		icon = mission_jail
+		icon = mission_wasteland_4
 		required_missions = { CAE_legion_scavengers }
         
 		trigger = {
@@ -738,11 +746,15 @@ CAE_slot_9 = {
     }
     
     CAE_tame_two_sun = {
-		icon = mission_jail
+		icon = mission_encampment
 		required_missions = { }
         
 		trigger = {
             mission_completed = CAE_caesar_son_of_mars
+            phoenix_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -758,10 +770,14 @@ CAE_slot_9 = {
         }
 	}
     CAE_tribal_ferocity = {
-		icon = mission_jail
+		icon = mission_raider_1
 		required_missions = { CAE_tame_two_sun }
         
 		trigger = {
+            phoenix_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -776,7 +792,7 @@ CAE_slot_9 = {
         }
 	}
     CAE_tempus_belli = {
-		icon = mission_jail
+		icon = mission_legion_skeleton
 		required_missions = { CAE_tribal_ferocity }
         
 		trigger = {
@@ -807,11 +823,15 @@ CAE_slot_10 = {
     }
     
     CAE_fortify_flagstaff = {
-		icon = mission_jail
+		icon = mission_legion_camp
 		required_missions = { }
         
 		trigger = {
             mission_completed = CAE_caesar_son_of_mars
+            flagstaff_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -827,10 +847,14 @@ CAE_slot_10 = {
         }
 	}
     CAE_centro_imperium = {
-		icon = mission_jail
+		icon = mission_hidden_bunker
 		required_missions = { CAE_fortify_flagstaff }
         
 		trigger = {
+            flagstaff_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -845,10 +869,14 @@ CAE_slot_10 = {
         }
 	}
     CAE_patientia_opportuna = {
-		icon = mission_jail
+		icon = mission_deathclaw
 		required_missions = { CAE_centro_imperium }
         
 		trigger = {
+            flagstaff_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -875,11 +903,15 @@ CAE_slot_11 = {
     }
     
     CAE_via_militaris = {
-		icon = mission_jail
+		icon = mission_highway
 		required_missions = { }
         
 		trigger = {
             mission_completed = CAE_caesar_son_of_mars
+            santa_fe_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -895,10 +927,14 @@ CAE_slot_11 = {
         }
 	}
     CAE_celeri_motus = {
-		icon = mission_jail
+		icon = mission_hangers
 		required_missions = { CAE_via_militaris }
         
 		trigger = {
+            santa_fe_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -913,10 +949,14 @@ CAE_slot_11 = {
         }
 	}
     CAE_loci_praesido = {
-		icon = mission_jail
+		icon = mission_bridge
 		required_missions = { CAE_celeri_motus }
         
 		trigger = {
+            santa_fe_area = {
+                type = all
+                owned_by = ROOT
+            }
             has_no_active_mission = yes
 		}
 		effect = {
