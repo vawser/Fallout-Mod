@@ -59,24 +59,85 @@ CAE_slot_6 = {
             }
         }
 	}
-    
-    # The Water Merchants
-    #   completed jewel_of_new_vegas
-    #   gain claim on the Hub
-    
-    # The Followers
-    #   completed the_water_merchants
-    #   gain claim on the boneyard
-    
-    # The Council
-    #   completed the_followers
-    #   gain claim on Shady Sands
-    
-    # Conqueror of California
-    #   own shady_sands area
-    #   completed the_council
-    #   gain conqueror_of_california
-    
+    CAE_the_water_merchants = {
+		icon = mission_market
+		required_missions = { CAE_jewel_of_new_vegas }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.20 }
+            
+            tooltip = {
+                the_hub_area = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    CAE_the_followers = {
+		icon = mission_foa_tent
+		required_missions = { CAE_the_water_merchants }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.21 }
+            
+            tooltip = {
+                boneyard_outskirts_area = {
+                    add_permanent_claim = ROOT
+                }
+                boneyard_area = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    CAE_seat_of_the_council = {
+		icon = mission_government_ruins
+		required_missions = { CAE_the_followers }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.22 }
+            
+            tooltip = {
+                shady_sands_area = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+    CAE_conquerer_of_the_ncr = {
+		icon = mission_legion_cross
+		required_missions = { CAE_seat_of_the_council }
+        
+		trigger = {
+            shady_sands_area = {
+                type = all
+                OR = {
+                    is_empty = yes
+                    owned_by = ROOT
+                }
+            }
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_immediate = { EVENT = mission_legion.23 }
+
+            tooltip = {
+                add_country_modifier = {
+                    name = conqueror_of_california
+                    duration = -1
+                }
+            }
+        }
+	}
 }
 CAE_slot_5 = {
     slot = 5
@@ -587,8 +648,11 @@ CAE_slot_4 = {
 }
 
 #---------------------------------------
-# Economy
+# Nation
 #---------------------------------------
+# Tame the Dog City         # denver_area
+# Legion Scavengers
+# Pax Hominibus (Peace of Men)
 CAE_slot_8 = {
     slot = 8
     ai = yes
@@ -597,7 +661,7 @@ CAE_slot_8 = {
         tag = CAE
     }
     
-    mission_8 = {
+    CAE_tame_the_dog_city = {
 		icon = mission_jail
 		required_missions = { }
         
@@ -606,19 +670,65 @@ CAE_slot_8 = {
             has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                #country_event = { id = mission_legion.4 days = 365 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            execute_event_in_10_years = { EVENT = mission_legion.24 }
             
             tooltip = {
-                
+                denver_area = {
+                    add_base_tax = 2
+                    add_base_production = 2
+                    add_base_manpower = 2
+                }
+            }
+        }
+	}
+    CAE_legion_scavengers = {
+		icon = mission_jail
+		required_missions = { CAE_tame_the_dog_city }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.25 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = legion_scavengers
+                    duration = -1
+                }
+            }
+        }
+	}
+    CAE_pax_hominibus = {
+		icon = mission_jail
+		required_missions = { CAE_legion_scavengers }
+        
+		trigger = {
+            canyon_city_area = {
+                type = all
+                owned_by = ROOT
+            }
+            denver_area = {
+                type = all
+                owned_by = ROOT
+            }
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.26 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = pax_hominibus
+                    duration = -1
+                }
             }
         }
 	}
 }
+# Tame Two Sun              # phoenix_area
+# Tribal Ferocity
+# Tempus Belli (Time for War)
 CAE_slot_9 = {
     slot = 9
     ai = yes
@@ -627,7 +737,7 @@ CAE_slot_9 = {
         tag = CAE
     }
     
-    mission_9 = {
+    CAE_tame_two_sun = {
 		icon = mission_jail
 		required_missions = { }
         
@@ -636,23 +746,58 @@ CAE_slot_9 = {
             has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                #country_event = { id = mission_legion.4 days = 365 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            execute_event_in_10_years = { EVENT = mission_legion.27 }
             
             tooltip = {
-                
+                phoenix_area = {
+                    add_base_tax = 2
+                    add_base_production = 2
+                    add_base_manpower = 2
+                }
+            }
+        }
+	}
+    CAE_tribal_ferocity = {
+		icon = mission_jail
+		required_missions = { CAE_tame_two_sun }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.28 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = tribal_ferocity
+                    duration = -1
+                }
+            }
+        }
+	}
+    CAE_tempus_belli = {
+		icon = mission_jail
+		required_missions = { CAE_tribal_ferocity }
+        
+		trigger = {
+            mission_completed = CAE_caesar_son_of_mars
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.29 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = tempus_belli
+                    duration = -1
+                }
             }
         }
 	}
 }
-
-#---------------------------------------
-# Military
-#---------------------------------------
+# Fortify Flagstaff         # flagstaff_area
+# Centro Imperium (Center of Command)
+# Patientia Opportuna (Strategic Patience)
 CAE_slot_10 = {
     slot = 10
     ai = yes
@@ -661,7 +806,7 @@ CAE_slot_10 = {
         tag = CAE
     }
     
-    mission_10 = {
+    CAE_fortify_flagstaff = {
 		icon = mission_jail
 		required_missions = { }
         
@@ -670,19 +815,57 @@ CAE_slot_10 = {
             has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                #country_event = { id = mission_legion.4 days = 365 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            execute_event_in_10_years = { EVENT = mission_legion.30 }
             
             tooltip = {
-                
+                flagstaff_area = {
+                    add_base_tax = 2
+                    add_base_production = 2
+                    add_base_manpower = 2
+                }
+            }
+        }
+	}
+    CAE_centro_imperium = {
+		icon = mission_jail
+		required_missions = { CAE_fortify_flagstaff }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.31 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = centro_imperium
+                    duration = -1
+                }
+            }
+        }
+	}
+    CAE_patientia_opportuna = {
+		icon = mission_jail
+		required_missions = { CAE_centro_imperium }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.32 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = patientia_opportuna
+                    duration = -1
+                }
             }
         }
 	}
 }
+# Via Militaris             # santa_fe_area
+# Celeri Motus (Swift Movement)
+# Loci Praesido (Local Garrison)
 CAE_slot_11 = {
     slot = 11
     ai = yes
@@ -691,7 +874,7 @@ CAE_slot_11 = {
         tag = CAE
     }
     
-    mission_11 = {
+    CAE_via_militaris = {
 		icon = mission_jail
 		required_missions = { }
         
@@ -700,15 +883,50 @@ CAE_slot_11 = {
             has_no_active_mission = yes
 		}
 		effect = {
-            hidden_effect = {
-                #country_event = { id = mission_legion.4 days = 365 }
-                set_country_flag = mission_active
-            }
-            
-            custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_365
+            execute_event_in_10_years = { EVENT = mission_legion.33 }
             
             tooltip = {
-                
+                santa_fe_area = {
+                    add_base_tax = 2
+                    add_base_production = 2
+                    add_base_manpower = 2
+                }
+            }
+        }
+	}
+    CAE_celeri_motus = {
+		icon = mission_jail
+		required_missions = { CAE_via_militaris }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.34 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = celeri_motus
+                    duration = -1
+                }
+            }
+        }
+	}
+    CAE_loci_praesido = {
+		icon = mission_jail
+		required_missions = { CAE_celeri_motus }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_15_years = { EVENT = mission_legion.35 }
+            
+            tooltip = {
+                add_country_modifier = {
+                    name = loci_praesido
+                    duration = -1
+                }
             }
         }
 	}
