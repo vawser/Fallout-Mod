@@ -1,0 +1,57 @@
+#---------------------------------------
+# Story
+#---------------------------------------
+
+# Raider Ambitions
+# Drugged Up
+# Lightning Raids
+# All's Fair in Love and War
+# Loot and Pillage
+# Expanding the Garage
+# Start'em Young
+# Ceaseless Hazing
+# Terror on the Road
+# Alpha Males
+# Booming Business
+# Jury-rigging
+# Warboys
+# Custom Rigs
+# Roaring Machines
+# Grease Monkeys
+# Slave Labour
+# Forced Labour
+# Chem Dealers
+# Stolen Blueprints
+# Skulls on Sticks
+# Terroizing the Locals
+# Territorial Loyalty
+# Manifest Destiny
+
+raider_slot_6 = {
+    slot = 6
+    ai = yes
+    generic = yes
+    
+    potential = {
+        has_raider_missions = yes
+        always = no
+    }
+    
+    raider_traditions = {
+		icon = mission_legion_cross
+		required_missions = {  }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_5_years = { EVENT = mission_generic.1 }
+ 
+            tooltip = {
+                country_event = { id = mission_generic.1 days = 1800 }
+            }
+        }
+	}
+}
+
+# 

@@ -1,0 +1,31 @@
+#---------------------------------------
+# Story
+#---------------------------------------
+INS_slot_6 = {
+    slot = 6
+    ai = yes
+    generic = yes
+    
+    potential = {
+        has_institute_missions = yes
+        always = no
+    }
+    
+    INS_traditions = {
+		icon = mission_legion_cross
+		required_missions = {  }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_5_years = { EVENT = mission_generic.1 }
+ 
+            tooltip = {
+                country_event = { id = mission_generic.1 days = 1800 }
+            }
+        }
+	}
+}
+
+# 

@@ -6,7 +6,7 @@ CAE_slot_6 = {
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_caesar_son_of_mars = {
@@ -144,7 +144,7 @@ CAE_slot_5 = {
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_the_howitzer = {
@@ -212,7 +212,7 @@ CAE_slot_7 = {
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_born_into_slavery = {
@@ -221,6 +221,10 @@ CAE_slot_7 = {
 		required_missions = { CAE_alea_iacta_est }
         
 		trigger = {
+            OR = {
+                has_slavery_allowed = yes
+                has_slavery_licensed = yes
+            }
             has_no_active_mission = yes
 		}
 		effect = {
@@ -264,7 +268,7 @@ CAE_slot_1 = {
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_push_into_utah = {
@@ -379,7 +383,7 @@ CAE_slot_2 = {
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_push_into_texas = {
@@ -470,7 +474,7 @@ CAE_slot_3 = {
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_finish_colorado = {
@@ -561,7 +565,7 @@ CAE_slot_4 = {
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_push_into_baja_california = {
@@ -650,15 +654,12 @@ CAE_slot_4 = {
 #---------------------------------------
 # Nation
 #---------------------------------------
-# Tame the Dog City         # denver_area
-# Legion Scavengers
-# Pax Hominibus (Peace of Men)
 CAE_slot_8 = {
     slot = 8
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_tame_the_dog_city = {
@@ -734,15 +735,12 @@ CAE_slot_8 = {
         }
 	}
 }
-# Tame Two Sun              # phoenix_area
-# Tribal Ferocity
-# Tempus Belli (Time for War)
 CAE_slot_9 = {
     slot = 9
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_tame_two_sun = {
@@ -811,15 +809,12 @@ CAE_slot_9 = {
         }
 	}
 }
-# Fortify Flagstaff         # flagstaff_area
-# Centro Imperium (Center of Command)
-# Patientia Opportuna (Strategic Patience)
 CAE_slot_10 = {
     slot = 10
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_fortify_flagstaff = {
@@ -891,15 +886,12 @@ CAE_slot_10 = {
         }
 	}
 }
-# Via Militaris             # santa_fe_area
-# Celeri Motus (Swift Movement)
-# Loci Praesido (Local Garrison)
 CAE_slot_11 = {
     slot = 11
     ai = yes
 
     potential = {
-        tag = CAE
+        has_legion_missions = yes
     }
     
     CAE_via_militaris = {

@@ -5,6 +5,100 @@ has_no_active_mission = {
     }
 }
 
+has_legion_missions = {
+    OR = {
+        tag = CAE
+        has_reform = legion_reform
+    }
+}
+
+has_think_tank_missions = {
+    OR = {
+        tag = FBZ
+        tag = TNK
+        has_reform = think_tank_reform
+    }
+}
+
+has_new_vegas_missions = {
+    OR = {
+        tag = NVG
+        has_reform = new_vegas_reform
+    }
+}
+
+has_zetan_missions = {
+    OR = {
+        tag = ZET
+        has_reform = zetan_reform
+    }
+}
+
+has_ncr_missions = {
+    OR = {
+        tag = NCR
+        has_reform = ncr_reform
+    }
+}
+
+has_institute_missions = {
+    OR = {
+        tag = INS
+        has_reform = institute_reform
+    }
+}
+
+has_enclave_missions = {
+    OR = {
+        tag = ENC
+        has_reform = enclave_reform
+    }
+}
+
+has_vault_missions = {
+    OR = {
+        has_reform = vault_reform
+    }
+}
+
+has_bos_missions = {
+    OR = {
+        has_reform = brotherhood_reform
+    }
+}
+
+has_super_mutant_missions = {
+    OR = {
+        has_reform = super_mutant_reform
+    }
+}
+
+has_settler_missions = {
+    OR = {
+        is_settlement_government = yes
+        has_reform = militia_reform
+        has_reform = republic_reform
+        has_reform = dictatorship_reform
+        has_reform = theocracy_reform
+        has_reform = cult_reform
+        has_reform = commune_reform
+    }
+}
+
+has_raider_missions = {
+    OR = {
+        has_reform = raider_reform
+        has_reform = wolf_pack_reform
+        has_reform = great_khan_reform
+    }
+}
+
+has_tribal_missions = {
+    OR = {
+        has_reform = tribe_reform
+    }
+}
+
 is_west_coast = {
     OR = {
         region = washington_region

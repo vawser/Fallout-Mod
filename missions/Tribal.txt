@@ -1,0 +1,64 @@
+#---------------------------------------
+# Story
+#---------------------------------------
+
+# Gift of the Ancestors
+# Establish Schools
+# Medical Research
+# Chemistry Lab
+# Scavengers
+# Firefighters
+# Police Officers
+# Doctors
+# Labourers
+# Recruit Caravan Guards
+# Hire Gunsmiths
+# Establish Armory
+# Funding the Garage
+# Local Transportation
+# Wheels of War
+# Militia Drills
+# Militia Organisation
+# Recruitment Posters
+# Standardise Military
+# Women Will Serve
+# Old World Tactics
+# Point Defence
+# Marching Drills
+# Community Centres
+# Tato Farmers
+# Brahmin Ranchers
+# Establish Trade Routes
+# Enforce Trade Laws
+# Develop Roadways
+# Local Pride
+# 
+
+tribal_slot_6 = {
+    slot = 6
+    ai = yes
+    generic = yes
+    
+    potential = {
+        has_tribal_missions = yes
+        always = no
+    }
+    
+    tribal_traditions = {
+		icon = mission_legion_cross
+		required_missions = {  }
+        
+		trigger = {
+            has_no_active_mission = yes
+		}
+		effect = {
+            execute_event_in_5_years = { EVENT = mission_generic.1 }
+ 
+            tooltip = {
+                country_event = { id = mission_generic.1 days = 1800 }
+            }
+        }
+	}
+}
+
+# 
