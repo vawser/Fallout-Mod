@@ -1,0 +1,58 @@
+followers_apocalypse_ideas = {
+    start = {
+        idea_cost = -0.1
+        development_cost = -0.15
+    }
+    bonus = {
+        global_unrest = -1
+    }
+    
+    trigger = {
+        tag = FOA
+    }
+    free = yes
+    
+    # Guiding Ethos
+    # The Followers of the Apocalypse was founded with the principle philosophy to restore the wasteland to its pre-war glory by uplifting its inhabitants, in an attempt to preserve peace and eliminate war.
+    followers_apocalypse_1 = {
+        diplomatic_reputation = 3
+    }
+    
+    # Shared Knowledge
+    #Unlike other factions, the Followers openly share their knowledge with the denizens of the wasteland, guaranteeing a free exchange of ideas and mutual technological advancement.    
+    followers_apocalypse_2 = {
+        technology_cost = -0.05
+    }
+    
+    # Aid Missions 
+    # The Followers consider it their duty to support impoverished populations throughout the wasteland, whether through helping to cultivate agriculture or by offering medical supplies. 
+    followers_apocalypse_3 = {
+        improve_relation_modifier = 0.1
+    }
+    
+    # Surgical Implants
+    # A number of trained follower physicians have the medical capabilities to perform surgeries to insert implants which can strengthen the performance of any part of the body.
+    followers_apocalypse_4 = {
+        discipline = 0.025
+        land_morale = 0.05
+    }
+    
+    # Expert Scavangers
+    # Before other groups offered supplies through donations, the Followers scavanged widely across the West Coast and learnt how to find often hidden resources.
+    followers_apocalypse_5 = {
+        leader_land_manuever = 1
+    }
+    
+    # Rebuilding the Wasteland 
+    # The Followers have made practical gains in rebuilding the wasteland through the construction of infrastructure and irrigation. 
+    followers_apocalypse_6 = {
+        build_cost = -0.1 
+    }
+    
+    # Tribal Expeditions 
+    # With the expansion of the Followers engagement with the wasteland, so did its ability to coordinate with native tribes. By examining tribal cultures and examining their dialects, we can gain their trust and coexist in peace.
+    followers_apocalypse_7 = {
+        merc_maintenance_modifier = -0.1
+    }
+}
+
