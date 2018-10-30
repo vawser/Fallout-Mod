@@ -103,7 +103,7 @@ just_personality = {
 	fair_fights = yes
 	
 	global_unrest = -2
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 less bad
 
 righteous_personality = {
@@ -155,7 +155,7 @@ righteous_personality = {
 	
 	legitimacy = 1
 	republican_tradition = 0.5
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 better, 1 less bad
 
 tolerant_personality = {
@@ -203,7 +203,7 @@ tolerant_personality = {
 	
 	tolerance_heretic = 1
 	tolerance_heathen = 1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 }
 
 kind_hearted_personality = {
@@ -239,7 +239,7 @@ kind_hearted_personality = {
 	alliance_acceptance = 10
 	
 	war_exhaustion = -0.05
-	nation_designer_cost = 10
+	nation_designer_cost = 5
 } # 1 better
 
 free_thinker_personality = {
@@ -319,10 +319,10 @@ free_thinker_personality = {
 	chance = {
 	}
 	
-	custom_ai_explanation = "AI_RULER_SPEND_UNLOCK_INSTIT"
+	knowledge_sharing = yes
 	
 	idea_cost = -0.05
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 easier event, 1 better event
 
 well_connected_personality = {
@@ -374,7 +374,7 @@ well_connected_personality = {
 	other_ai_help_us_multiplier = 2
 	
 	advisor_cost = -0.2
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 better event
 
 calm_personality = {
@@ -479,7 +479,7 @@ careful_personality = {
 	enemy_strength_multiplier = 1.2
 	
 	ae_impact = -0.10
-	nation_designer_cost = 10
+	nation_designer_cost = 5
 } #modifies scandal at court, 
 
 secretive_personality = {
@@ -532,7 +532,7 @@ secretive_personality = {
 	wants_condottieri = yes
 	
 	global_spy_defence = 0.2
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 }
 
 intricate_web_weaver_personality = {
@@ -595,7 +595,7 @@ intricate_web_weaver_personality = {
 	wants_condottieri = yes
 	
 	spy_offence = 0.3
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 easier event
 fertile_personality = {
 	#personality_events.21
@@ -603,7 +603,7 @@ fertile_personality = {
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = infertile_personality }
-			NOT = { ruler_age = 45 }
+			NOT = { ruler_age = 35 }
 		}
 	
 		chance = {
@@ -617,7 +617,7 @@ fertile_personality = {
 	heir_allow = {
 		allow = {
 			NOT = { heir_has_personality = infertile_personality }
-			NOT = { heir_age = 45 }
+			NOT = { heir_age = 35 }
 		}
 	
 		chance = {
@@ -631,7 +631,7 @@ fertile_personality = {
 	consort_allow = {
 		allow = {
 			NOT = { consort_has_personality = infertile_personality }
-			NOT = { consort_age = 45 }
+			#NOT = { consort_age = 35 }
 		}
 
 		chance = {
@@ -646,7 +646,7 @@ fertile_personality = {
 			is_monarchy_government = yes
             is_tribal_government = yes
 		}
-		NOT = { cannot_breed = yes	}
+		has_government_attribute = heir
 	}
 	
 	chance = {
@@ -655,7 +655,7 @@ fertile_personality = {
 	royal_marriage_acceptance = 20
 	
 	heir_chance = 0.5
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 }
 
 well_advised_personality = {
@@ -696,7 +696,7 @@ well_advised_personality = {
 	war_chance_multiplier = 0.6
 	
 	advisor_pool = 1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #2 better events
 
 benevolent_personality = {
@@ -757,7 +757,7 @@ benevolent_personality = {
 	gift_chance = 25
 	
 	reduced_liberty_desire = 5
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 }
 
 zealot_personality = { 
@@ -821,7 +821,7 @@ zealot_personality = {
 	wants_heretic_land = yes
 	
 	global_missionary_strength = 0.01
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 }#1 better event, 1 less bad
 pious_personality = {
 	#personality_events.27
@@ -864,10 +864,9 @@ pious_personality = {
 	different_religion_war_multiplier = 1.5
 	wants_excommunicate = yes
 	heretic_ally_acceptance = -30
-	diplomatic_reputation = 1
 	
 	devotion = 1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 Less bad
 
 #Economic/Administrative Traits
@@ -923,7 +922,7 @@ lawgiver_personality = {
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	
 	global_autonomy = -0.05
-	nation_designer_cost = 10
+	nation_designer_cost = 5
 } #2 easier events
 
 midas_touched_personality = {
@@ -993,7 +992,7 @@ midas_touched_personality = {
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	
 	global_tax_modifier = 0.1 
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #Opens Exceptional Year, 1 better event
 
 incorruptible_personality = {
@@ -1052,7 +1051,7 @@ incorruptible_personality = {
 	wants_avoid_debase = yes
 	
 	yearly_corruption = -0.05
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 better, 1 less bad
 
 architectural_visionary_personality = {
@@ -1105,7 +1104,7 @@ architectural_visionary_personality = {
 	building_budget_multiplier = 1.8
 	
 	build_cost = -0.1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 }
 
 scholar_personality = {
@@ -1151,8 +1150,10 @@ scholar_personality = {
 	
 	custom_ai_explanation = "AI_RULER_SPEND_UNLOCK_INSTIT"
 	
+	knowledge_sharing = yes
+	
 	technology_cost = -0.05
-	nation_designer_cost = 10
+	nation_designer_cost = 5
 } #comet chance less likely and makes it good (1 easier event), 2 easier events
 entrepreneur_personality = {
 	#personality_events.33
@@ -1208,7 +1209,7 @@ entrepreneur_personality = {
 	building_budget_multiplier = 1.5
 	
 	trade_efficiency = 0.1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #Opens Exceptional Year, 1 better event, 3 less bad
 
 industrious_personality = {
@@ -1249,10 +1250,10 @@ industrious_personality = {
 	}
 	
 	building_budget_multiplier = 1.2
-#	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
+	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	
 	global_trade_goods_size_modifier = 0.1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #Opens Exceptional Year, 1 better event
 
 expansionist_personality = {
@@ -1285,6 +1286,13 @@ expansionist_personality = {
 	}
 	
 	allow = {
+		OR = {
+			num_of_colonists = 1 
+			AND = {
+				has_game_started = no
+				is_playing_custom_nation = yes
+			}
+		}
 	}
 	
 	chance = {
@@ -1312,11 +1320,9 @@ expansionist_personality = {
 	}
 	
 	wants_colonies = yes
-
-	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	
 	global_colonial_growth = 15
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #Better Event
 
 #Diplomacy Traits
@@ -1382,7 +1388,7 @@ charismatic_negotiator_personality = {
 	other_ai_peace_term_bonus = 10
 	
 	diplomatic_reputation = 1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 easier event, 2 better events
 
 silver_tongue_personality = {
@@ -1449,7 +1455,7 @@ silver_tongue_personality = {
 	other_ai_war_chance_multiplier = 0.5
 	
 	improve_relation_modifier = 0.2
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #2 easier events, 3 better events
 
 #Military Traits
@@ -1505,7 +1511,7 @@ conqueror_personality = {
 		
 	}
 	years_of_nationalism = -5
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 	
 	easy_war_chance_multiplier = 2
 	war_chance_multiplier = 1.75
@@ -1576,7 +1582,7 @@ tactical_genius_personality = {
 	easy_war_chance_multiplier = 1.4
 	
 	leader_land_manuever = 1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 better
 bold_fighter_personality = {
 	ruler_allow = {
@@ -1631,7 +1637,7 @@ bold_fighter_personality = {
 	enemy_strength_multiplier = 0.85
 	
 	leader_land_shock = 1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #
 strict_personality = {
 	ruler_allow = {
@@ -1678,7 +1684,7 @@ strict_personality = {
 	wants_avoid_loans = yes
 	
 	discipline = 0.05
-	nation_designer_cost = 10
+	nation_designer_cost = 5
 } #1 easier event
 
 inspiring_leader_personality = {
@@ -1738,10 +1744,8 @@ inspiring_leader_personality = {
 	chance = {
 	}
 	
-	alliance_acceptance = 10
-	
 	land_morale = 0.05
-	nation_designer_cost = 10
+	nation_designer_cost = 5
 } #1 better
 martial_educator_personality = {
 	ruler_allow = {
@@ -1790,17 +1794,17 @@ martial_educator_personality = {
 	}
 	
 	easy_war_chance_multiplier = 1.2
-#	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
+	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	
 	army_tradition_decay = -0.01
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 easier event, 2 better events
 navigator_personality = {
 	ruler_allow = {
 		chance = {
 			modifier = {
 				factor = 1
-				DIP = 4
+				DIP = 6
 			}
 		}
 	}
@@ -1809,7 +1813,7 @@ navigator_personality = {
 		chance = {
 			modifier = {
 				factor = 1
-				heir_DIP = 4
+				heir_DIP = 6
 			}
 		}
 	}
@@ -1818,12 +1822,19 @@ navigator_personality = {
 		chance = {
 			modifier = {
 				factor = 1
-				consort_DIP = 4
+				consort_DIP = 6
 			}
 		}
 	}
 
-	allow = { # Navigators no longer need to have ports to spawn
+	allow = {
+		OR = {
+			AND = {
+				has_game_started = no
+				is_playing_custom_nation = yes
+			}
+			num_of_ports = 1
+		}
 	}
 	
 	chance = {
@@ -1833,7 +1844,7 @@ navigator_personality = {
 	wants_explorers = yes
 	
 	ship_durability = 0.1
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 better event
 
 fierce_negotiator_personality = {
@@ -1887,7 +1898,7 @@ fierce_negotiator_personality = {
 	peace_desire = -10
 	
 	merc_maintenance_modifier = -0.25
-	nation_designer_cost = 5
+	nation_designer_cost = 2
 } #1 easier event
 
 ###############################################
@@ -1977,9 +1988,10 @@ babbling_buffoon_personality = {
 		
 	}
 	diplomatic_reputation = -1
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 	
 	random_insults = yes
+	wants_disclose_attack = yes
 	
 	chance = {
 		
@@ -2074,7 +2086,7 @@ embezzler_personality = {
 	wants_sell_provinces = yes
 	
 	yearly_corruption = 0.05
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #1 easier event, 4 better event, 1 less bad
 infertile_personality = {
 	ruler_allow = {
@@ -2169,7 +2181,7 @@ infertile_personality = {
 			is_monarchy_government = yes
             is_tribal_government = yes
 		}
-		NOT = { cannot_breed = yes }
+		has_government_attribute = heir
 	}
 	
 	chance = {
@@ -2179,7 +2191,7 @@ infertile_personality = {
 	royal_marriage_acceptance = -20
 	
 	heir_chance = -0.25
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 }
 drunkard_personality = {
 	ruler_allow = {
@@ -2271,11 +2283,11 @@ drunkard_personality = {
 	chance = {
 	}
 	
-	random_troop_moves = yes
+	#random_troop_moves = yes Commenting out since often indistinguishable from a bug.
 	wants_loans = yes
 	
 	trade_efficiency = -0.10
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #Scandal at court more likely
 sinner_personality =  {
 
@@ -2368,7 +2380,7 @@ sinner_personality =  {
 	razing = yes
 	
 	tolerance_own = -2
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #1 better
 greedy_personality = {
 	ruler_allow = {
@@ -2486,8 +2498,9 @@ greedy_personality = {
 		}
 	}
 	
+	trade_league_acceptance = -10
 	global_tax_modifier = -0.1
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #2 better
 cruel_personality = {
 
@@ -2575,7 +2588,7 @@ cruel_personality = {
 	lower_autonomy = yes
 	
 	global_unrest = 2
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #4 less bad
 naive_personality = {
 	ruler_allow = {
@@ -2680,7 +2693,7 @@ naive_personality = {
 	gift_chance = 90
 	
 	improve_relation_modifier = -0.2
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #1 Less bad event
 
 craven_personality = {
@@ -2776,7 +2789,7 @@ craven_personality = {
 	enemy_strength_multiplier = 1.25
 	
 	land_morale = -0.05
-	nation_designer_cost = -10
+	nation_designer_cost = -2
 }
 loose_lips_personality = {
 	ruler_allow = {
@@ -2866,7 +2879,7 @@ loose_lips_personality = {
 	wants_disclose_attack = yes
 	
 	global_spy_defence = -0.2
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 }
 obsessive_perfectionist_personality = {
 	ruler_allow = {
@@ -2953,7 +2966,7 @@ obsessive_perfectionist_personality = {
 	wants_avoid_ugly_borders = yes
 	
 	build_cost = 0.1
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #1 better, 1 less bad
 malevolent_personality = {
 	ruler_allow = {
@@ -3043,10 +3056,11 @@ malevolent_personality = {
 	
 	wants_betray_allies = yes
 	wants_threaten_war = yes
+	wants_disclose_attack = yes
 	send_warning_desire = 50
 	
 	reduced_liberty_desire = -5
-	nation_designer_cost = -5
+	nation_designer_cost = -2
 } #1 less bad
 
 # Immortal, for games converted from CKII, but also available in Nation Designer.

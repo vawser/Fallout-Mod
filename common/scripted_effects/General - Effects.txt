@@ -27,3 +27,12 @@ grant_immortality = {
         duration = -1
     }
 }
+
+nuke_province = {
+    cede_province = ---
+    remove_core = ROOT
+    add_province_modifier = {
+        name = nuked_province
+        duration = 36500
+    }
+}
