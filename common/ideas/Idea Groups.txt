@@ -8,17 +8,6 @@
 # groups set to colonial=yes will be higher prioritized by the AI when spending power
 
 #--------------------------
-# Used for Policies
-#--------------------------
-dummy_ideas = {
-    category = ADM
-    
-    trigger = {
-        always = no
-    }
-}
-
-#--------------------------
 # ADM Ideagroups
 #--------------------------
 idea_global_tax_income = {
@@ -224,7 +213,7 @@ idea_possible_adm_policy = {
 	category = ADM
 
 	idea_possible_adm_policy = {
-		possible_adm_policy = 2
+		possible_adm_policy = 1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -232,7 +221,7 @@ idea_possible_dip_policy = {
 	category = ADM
 
 	idea_possible_dip_policy = {
-		possible_dip_policy = 2
+		possible_dip_policy = 1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -240,7 +229,7 @@ idea_possible_mil_policy = {
 	category = ADM
 
 	idea_possible_mil_policy = {
-		possible_mil_policy = 2
+		possible_mil_policy = 1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -736,7 +725,7 @@ idea_monthly_piety = {
     }
     
 	idea_monthly_piety = {
-		monthly_piety = 1
+		monthly_piety = 0.5
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -856,7 +845,7 @@ idea_claim_duration = {
 	category = DIP
 
 	idea_claim_duration = {
-		claim_duration = 0.5
+		claim_duration = 1.0
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1642,6 +1631,10 @@ idea_sea_repair = {
 idea_may_establish_frontier = {
 	category = DIP
 
+    trigger = {
+        has_dlc = "Third Rome"
+    }
+    
 	idea_may_establish_frontier = {
 		may_establish_frontier = yes
 	}
@@ -1739,7 +1732,7 @@ idea_infantry_power = {
 	category = MIL
 
 	idea_infantry_power = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1755,7 +1748,7 @@ idea_cavalry_power = {
 	category = MIL
 
 	idea_cavalry_power = {
-		cavalry_power = 0.15
+		cavalry_power = 0.1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1779,7 +1772,7 @@ idea_artillery_power = {
 	category = MIL
 
 	idea_artillery_power = {
-		artillery_power = 0.15
+		artillery_power = 0.1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1795,7 +1788,7 @@ idea_backrow_artillery_damage = {
 	category = MIL
 
 	idea_backrow_artillery_damage = {
-		backrow_artillery_damage = 0.15
+		backrow_artillery_damage = 0.25
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1803,7 +1796,7 @@ idea_discipline = {
 	category = MIL
 
 	idea_discipline = {
-		discipline = 0.1
+		discipline = 0.05
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1811,7 +1804,7 @@ idea_mercenary_discipline = {
 	category = MIL
 
 	idea_mercenary_discipline = {
-		mercenary_discipline = 0.1
+		mercenary_discipline = 0.05
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1819,7 +1812,7 @@ idea_land_morale = {
 	category = MIL
 
 	idea_land_morale = {
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1835,7 +1828,7 @@ idea_siege_ability = {
 	category = MIL
 
 	idea_siege_ability = {
-		siege_ability = 0.15
+		siege_ability = 0.1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1851,7 +1844,7 @@ idea_fire_damage = {
 	category = MIL
 
 	idea_fire_damage = {
-		fire_damage = 0.15
+		fire_damage = 0.1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1859,7 +1852,7 @@ idea_fire_damage_received = {
 	category = MIL
 
 	idea_fire_damage_received = {
-		fire_damage_received = -0.25
+		fire_damage_received = -0.15
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1867,7 +1860,7 @@ idea_shock_damage = {
 	category = MIL
 
 	idea_shock_damage = {
-		shock_damage = 0.15
+		shock_damage = 0.1
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1875,7 +1868,7 @@ idea_shock_damage_received = {
 	category = MIL
 
 	idea_shock_damage_received = {
-		shock_damage_received = -0.25
+		shock_damage_received = -0.15
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -2003,7 +1996,7 @@ idea_hostile_attrition = {
 	category = MIL
 
 	idea_hostile_attrition = {
-		hostile_attrition = 2
+		hostile_attrition = 5
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -2076,14 +2069,6 @@ idea_leader_siege = {
 
 	idea_leader_siege = {
 		leader_siege = 1
-	}
-	ai_will_do = { factor = 1 }
-}
-idea_general_cost = {
-	category = MIL
-
-	idea_general_cost = {
-		general_cost = -0.25
 	}
 	ai_will_do = { factor = 1 }
 }

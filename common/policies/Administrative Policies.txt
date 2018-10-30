@@ -1,0 +1,726 @@
+policy_state_maintenance_modifier = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	state_maintenance_modifier = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_inflation_reduction = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	inflation_reduction = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_interest = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	interest = -1
+
+	ai_will_do = { factor = 1 }
+}
+policy_development_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	development_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_build_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	build_cost = -0.15
+
+	ai_will_do = { factor = 1 }
+}
+policy_build_time = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	build_time = -0.15
+
+	ai_will_do = { factor = 1 }
+}
+policy_prestige = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	prestige = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_yearly_corruption = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	yearly_corruption = -0.03
+
+	ai_will_do = { factor = 1 }
+}
+policy_advisor_pool = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	advisor_pool = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_heir_chance = {
+	monarch_power = ADM
+
+	potential = {
+		uses_heir = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	heir_chance = 0.25
+
+	ai_will_do = { factor = 1 }
+}
+policy_adm_advisor_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	adm_advisor_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_dip_advisor_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	dip_advisor_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_mil_advisor_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	mil_advisor_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_yearly_absolutism = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	yearly_absolutism = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_legitimacy = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+            has_reform = settlement_mechanic
+            has_reform = militia_mechanic
+            has_reform = legion_mechanic
+            has_reform = new_vegas_mechanic
+            has_reform = think_tank_mechanic
+            has_reform = mothership_mechanic
+            has_reform = shi_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	legitimacy = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_republican_tradition = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+            has_reform = republic_mechanic
+            has_reform = dictatorship_mechanic
+            has_reform = ncr_mechanic
+            has_reform = institute_mechanic
+            has_reform = enclave_mechanic
+            has_reform = vault_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	republican_tradition = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_devotion = {
+	monarch_power = ADM
+
+	potential = {
+		uses_devotion = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	devotion = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_horde_unity = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+            has_reform = wolf_pack_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	horde_unity = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_meritocracy = {
+	monarch_power = ADM
+
+	potential = {
+		always = no
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	meritocracy = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_monthly_militarized_society = {
+	monarch_power = ADM
+
+	potential = {
+		has_dlc = "Rights of Man"
+        has_reform = enclave_mechanic
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	monthly_militarized_society = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_yearly_tribal_allegiance = {
+	monarch_power = ADM
+
+	potential = {
+		has_dlc = "Cradle of Civilization"
+        OR = {
+            has_reform = tribe_mechanic
+            has_reform = raider_mechanic
+            has_reform = super_mutant_mechanic
+            has_reform = swarm_mechanic
+            has_reform = wolf_pack_mechanic
+            has_reform = great_khan_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	yearly_tribal_allegiance = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_election_cycle_gain = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+            has_reform = republic_mechanic
+            has_reform = dictatorship_mechanic
+            has_reform = ncr_mechanic
+            has_reform = institute_mechanic
+            has_reform = enclave_mechanic
+            has_reform = vault_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	election_cycle = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_election_cycle_loss = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+            has_reform = republic_mechanic
+            has_reform = dictatorship_mechanic
+            has_reform = ncr_mechanic
+            has_reform = institute_mechanic
+            has_reform = enclave_mechanic
+            has_reform = vault_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	election_cycle = -1
+
+	ai_will_do = { factor = 1 }
+}
+policy_candidate_random_bonus = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+            has_reform = republic_mechanic
+            has_reform = dictatorship_mechanic
+            has_reform = ncr_mechanic
+            has_reform = institute_mechanic
+            has_reform = enclave_mechanic
+            has_reform = vault_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	candidate_random_bonus = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_reelection_cost = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+            has_reform = republic_mechanic
+            has_reform = dictatorship_mechanic
+            has_reform = ncr_mechanic
+            has_reform = institute_mechanic
+            has_reform = enclave_mechanic
+            has_reform = vault_mechanic
+        }
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	reelection_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_reform_progress_growth = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	reform_progress_growth = 0.25
+
+	ai_will_do = { factor = 1 }
+}
+policy_culture_conversion_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	culture_conversion_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_num_accepted_cultures = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	num_accepted_cultures = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_same_culture_advisor_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	same_culture_advisor_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_promote_culture_cost = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	promote_culture_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_unrest = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	global_unrest = -1
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_autonomy = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	global_autonomy = -0.03
+
+	ai_will_do = { factor = 1 }
+}
+policy_autonomy_change_time = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	autonomy_change_time = -0.15
+
+	ai_will_do = { factor = 1 }
+}
+policy_years_of_nationalism = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	years_of_nationalism = -3
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_missionary_strength = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	global_missionary_strength = 0.01
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_heretic_missionary_strength = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	global_heretic_missionary_strength = 0.02
+
+	ai_will_do = { factor = 1 }
+}
+policy_missionaries = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	missionaries = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_religious_unity = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	religious_unity = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_tolerance_heathen = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	tolerance_heathen = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_tolerance_heretic = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	tolerance_heretic = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_tolerance_own = {
+	monarch_power = ADM
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	tolerance_own = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_papal_influence = {
+	monarch_power = ADM
+
+	potential = {
+		uses_papacy = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	papal_influence = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_church_power_modifier = {
+	monarch_power = ADM
+
+	potential = {
+		uses_church_aspects = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	church_power_modifier = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_monthly_fervor_increase = {
+	monarch_power = ADM
+
+	potential = {
+		uses_fervor = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	monthly_fervor_increase = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_harmonization_speed = {
+	monarch_power = ADM
+
+	potential = {
+		always = no
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	harmonization_speed = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_yearly_harmony = {
+	monarch_power = ADM
+
+	potential = {
+		always = no
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	yearly_harmony = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_monthly_piety = {
+	monarch_power = ADM
+
+	potential = {
+		uses_piety = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	monthly_piety = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_monthly_karma = {
+	monarch_power = ADM
+
+	potential = {
+		uses_karma = yes
+	}
+	allow = {
+		is_adm_ideagroup = yes
+	}
+
+	monthly_karma = 0.5
+
+	ai_will_do = { factor = 1 }
+}

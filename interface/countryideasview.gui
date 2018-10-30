@@ -657,6 +657,13 @@ guiTypes = {
 			clicksound = click
 		}
 		
+        iconType = {
+			name ="idea_text_bg"
+			spriteType = "GFX_idea_text_bg"
+			position = { x = 42 y = 1 }
+			Orientation = "UPPER_LEFT"
+		}
+        
 		iconType =
 		{
 			name ="ideas_category"
@@ -676,14 +683,14 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "ideas_idea_title"
-			position = { x = 30 y = 5 }
+			position = { x = 50 y = 3 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 200
+			text = "xtz"	
+			maxWidth = 203
 			maxHeight = 32
-			format = centre
+			format = left
 		}	
 
 		iconType =
@@ -703,5 +710,7 @@ guiTypes = {
             format = left
             spacing = 1
 		}		
+        
+        
 	}	
 }

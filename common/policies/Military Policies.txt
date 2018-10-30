@@ -1,0 +1,742 @@
+policy_army_tradition = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	army_tradition = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_army_tradition_decay = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	army_tradition_decay = -0.01
+
+	ai_will_do = { factor = 1 }
+}
+policy_army_tradition_from_battle = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	army_tradition_from_battle = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_yearly_army_professionalism = {
+	monarch_power = MIL
+
+	potential = {
+		has_dlc = "Cradle of Civilization"
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	yearly_army_professionalism = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_drill_gain_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		has_dlc = "Cradle of Civilization"
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	drill_gain_modifier = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_drill_decay_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		has_dlc = "Cradle of Civilization"
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	drill_decay_modifier = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_infantry_cost = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	infantry_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_infantry_power = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	infantry_power = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_cavalry_cost = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	cavalry_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_cavalry_power = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	cavalry_power = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_cav_to_inf_ratio = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	cav_to_inf_ratio = 0.25
+
+	ai_will_do = { factor = 1 }
+}
+policy_artillery_cost = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	artillery_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_artillery_power = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	artillery_power = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_artillery_bonus_vs_fort = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	artillery_bonus_vs_fort = 2
+
+	ai_will_do = { factor = 1 }
+}
+policy_backrow_artillery_damage = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	backrow_artillery_damage = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_discipline = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	discipline = 0.025
+
+	ai_will_do = { factor = 1 }
+}
+policy_mercenary_discipline = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	mercenary_discipline = 0.025
+
+	ai_will_do = { factor = 1 }
+}
+policy_land_morale = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	land_morale = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_defensiveness = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	defensiveness = 0.25
+
+	ai_will_do = { factor = 1 }
+}
+policy_siege_ability = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	siege_ability = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_movement_speed = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	movement_speed = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_fire_damage = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	fire_damage = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_fire_damage_received = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	fire_damage_received = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_shock_damage = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	shock_damage = 0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_shock_damage_received = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	shock_damage_received = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_recover_army_morale_speed = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	recover_army_morale_speed = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_siege_blockade_progress = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	siege_blockade_progress = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_reserves_organisation = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	reserves_organisation = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_land_attrition = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	land_attrition = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_reinforce_cost_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	reinforce_cost_modifier = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_reinforce_speed = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	reinforce_speed = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_manpower_recovery_speed = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	manpower_recovery_speed = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_manpower_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	global_manpower_modifier = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_regiment_cost = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	global_regiment_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_regiment_recruit_speed = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	global_regiment_recruit_speed = -0.15
+
+	ai_will_do = { factor = 1 }
+}
+policy_land_forcelimit_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	land_forcelimit_modifier = 0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_land_maintenance_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	land_maintenance_modifier = -0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_mercenary_cost = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	mercenary_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_merc_maintenance_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	merc_maintenance_modifier = -0.05
+
+	ai_will_do = { factor = 1 }
+}
+policy_possible_mercenaries = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	possible_mercenaries = 0.25
+
+	ai_will_do = { factor = 1 }
+}
+policy_hostile_attrition = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	hostile_attrition = 2
+
+	ai_will_do = { factor = 1 }
+}
+policy_garrison_size = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	garrison_size = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_global_garrison_growth = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	global_garrison_growth = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_fort_maintenance_modifier = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	fort_maintenance_modifier = -0.1
+
+	ai_will_do = { factor = 1 }
+}
+policy_war_exhaustion = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	war_exhaustion = -0.03
+
+	ai_will_do = { factor = 1 }
+}
+policy_leader_land_fire = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	leader_land_fire = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_leader_land_manuever = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	leader_land_manuever = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_leader_land_shock = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	leader_land_shock = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_leader_siege = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	leader_siege = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_free_leader_pool = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	free_leader_pool = 1
+
+	ai_will_do = { factor = 1 }
+}
+policy_loot_amount = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	loot_amount = 0.25
+
+	ai_will_do = { factor = 1 }
+}
+policy_prestige_from_land = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	prestige_from_land = 0.5
+
+	ai_will_do = { factor = 1 }
+}
+policy_leader_cost = {
+	monarch_power = MIL
+
+	potential = {
+		always = yes
+	}
+	allow = {
+		is_mil_ideagroup = yes
+	}
+
+	leader_cost = -0.1
+
+	ai_will_do = { factor = 1 }
+}
