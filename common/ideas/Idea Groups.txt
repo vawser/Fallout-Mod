@@ -16,7 +16,21 @@ idea_global_tax_income = {
 	idea_global_tax_income = {
 		global_tax_income = 64
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1
+
+        modifier = {
+            factor = 0
+            
+            monthly_income = 10
+        }
+        
+        modifier = {
+            factor = 5
+            
+            NOT = { monthly_income = 1 }
+        }
+    }
 }
 idea_global_tax_modifier = {
 	category = ADM
@@ -24,7 +38,15 @@ idea_global_tax_modifier = {
 	idea_global_tax_modifier = {
 		global_tax_modifier = 0.25
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1
+        
+        modifier = {
+            factor = 0.5
+            
+            NOT = { tax_income_percentage = 0.33 }
+        }
+    }
 }
 idea_production_efficiency = {
 	category = ADM
@@ -32,7 +54,15 @@ idea_production_efficiency = {
 	idea_production_efficiency = {
 		production_efficiency = 0.25
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1
+        
+        modifier = {
+            factor = 0.5
+            
+            NOT = { production_income_percentage = 0.33 }
+        }
+    }
 }
 idea_state_maintenance_modifier = {
 	category = ADM
@@ -48,7 +78,20 @@ idea_inflation_reduction = {
 	idea_inflation_reduction = {
 		inflation_reduction = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1
+
+        modifier = {
+            factor = 0
+            
+            NOT = { inflation = 5 }
+        }
+        modifier = {
+            factor = 5
+            
+            inflation = 20
+        }
+    }
 }
 idea_interest = {
 	category = ADM
@@ -56,7 +99,20 @@ idea_interest = {
 	idea_interest = {
 		interest = -2
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { num_of_loans = 1 }
+        }
+        modifier = {
+            factor = 2
+            
+            num_of_loans = 5
+        }
+    }
 }
 idea_development_cost = {
 	category = ADM
@@ -88,7 +144,15 @@ idea_administrative_efficiency = {
 	idea_administrative_efficiency = {
 		administrative_efficiency = 0.15
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_core_creation = {
 	category = ADM
@@ -96,7 +160,15 @@ idea_core_creation = {
 	idea_core_creation = {
 		core_creation = -0.15
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_technology_cost = {
 	category = ADM
@@ -104,7 +176,15 @@ idea_technology_cost = {
 	idea_technology_cost = {
 		technology_cost = -0.15
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_adm_tech_cost_modifier = {
 	category = ADM
@@ -175,11 +255,23 @@ idea_all_power_cost = {
 	idea_all_power_cost = {
 		all_power_cost = -0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_innovativeness_gain = {
 	category = ADM
 
+    trigger = {
+        has_dlc = "Rule Britannia"
+    }
+    
 	idea_innovativeness_gain = {
 		innovativeness_gain = 1.0
 	}
@@ -379,7 +471,15 @@ idea_max_states = {
 	idea_max_states = {
 		max_states = 10
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_legitimacy = {
 	category = ADM
@@ -599,7 +699,15 @@ idea_years_of_nationalism = {
 	idea_years_of_nationalism = {
 		years_of_nationalism = -15
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_global_missionary_strength = {
 	category = ADM
@@ -1399,7 +1507,7 @@ idea_discovered_relations_impact = {
 	idea_discovered_relations_impact = {
 		discovered_relations_impact = -0.5
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 0 }
 }
 idea_spy_offence = {
 	category = DIP
@@ -1423,7 +1531,7 @@ idea_rebel_support_efficiency = {
 	idea_rebel_support_efficiency = {
 		rebel_support_efficiency = 1.0
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 0 }
 }
 idea_colonists = {
 	category = DIP
@@ -1618,7 +1726,15 @@ idea_may_explore = {
 	idea_may_explore = {
 		may_explore = yes
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_sea_repair = {
 	category = DIP
@@ -1666,7 +1782,15 @@ idea_army_tradition = {
 	idea_army_tradition = {
 		army_tradition = 1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_army_tradition_decay = {
 	category = MIL
@@ -1734,7 +1858,15 @@ idea_infantry_power = {
 	idea_infantry_power = {
 		infantry_power = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_cavalry_cost = {
 	category = MIL
@@ -1750,7 +1882,15 @@ idea_cavalry_power = {
 	idea_cavalry_power = {
 		cavalry_power = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_cav_to_inf_ratio = {
 	category = MIL
@@ -1774,7 +1914,15 @@ idea_artillery_power = {
 	idea_artillery_power = {
 		artillery_power = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_artillery_bonus_vs_fort = {
 	category = MIL
@@ -1798,7 +1946,15 @@ idea_discipline = {
 	idea_discipline = {
 		discipline = 0.05
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_mercenary_discipline = {
 	category = MIL
@@ -1814,7 +1970,15 @@ idea_land_morale = {
 	idea_land_morale = {
 		land_morale = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_defensiveness = {
 	category = MIL
@@ -1830,7 +1994,15 @@ idea_siege_ability = {
 	idea_siege_ability = {
 		siege_ability = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_movement_speed = {
 	category = MIL
@@ -1846,7 +2018,15 @@ idea_fire_damage = {
 	idea_fire_damage = {
 		fire_damage = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_fire_damage_received = {
 	category = MIL
@@ -1854,7 +2034,15 @@ idea_fire_damage_received = {
 	idea_fire_damage_received = {
 		fire_damage_received = -0.15
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_shock_damage = {
 	category = MIL
@@ -1862,7 +2050,15 @@ idea_shock_damage = {
 	idea_shock_damage = {
 		shock_damage = 0.1
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_shock_damage_received = {
 	category = MIL
@@ -1870,7 +2066,15 @@ idea_shock_damage_received = {
 	idea_shock_damage_received = {
 		shock_damage_received = -0.15
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 10
+            
+            total_development = 250
+        }
+    }
 }
 idea_recover_army_morale_speed = {
 	category = MIL
@@ -2136,7 +2340,14 @@ idea_may_perform_slave_raid = {
 	idea_may_perform_slave_raid = {
 		may_perform_slave_raid = yes
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = {  
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            NOT = { num_of_total_ports = 1 }
+        }
+    }
 }
 
 
