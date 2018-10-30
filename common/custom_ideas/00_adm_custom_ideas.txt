@@ -81,7 +81,7 @@ adm_idea_modifiers = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { is_monarchy_government = yes }
+				NOT = { has_government_attribute = monarchy }
 			}
 		}
 	}
@@ -93,9 +93,10 @@ adm_idea_modifiers = {
 		# Used for random generation
 		chance = {
 			factor = 1
+            
 			modifier = {
 				factor = 0
-				NOT = { is_nomad = yes }
+				NOT = { has_government_attribute = nomad }
 			}
 		}
 	}
@@ -109,7 +110,7 @@ adm_idea_modifiers = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { is_theocracy_government = yes }
+				NOT = { has_government_attribute = has_devotion }
 			}
 		}	
 	}
@@ -124,7 +125,7 @@ adm_idea_modifiers = {
 			factor = 0.1
 			modifier = {
 				factor = 0
-				NOT = { is_republic_government = yes }
+				NOT = { has_government_attribute = republic }
 			}
 		}		
 	}		

@@ -21,12 +21,7 @@ cb_restore_personal_union = {
 	months = 240
 
 	prerequisites = {
-		NOT = { is_republic_government = yes }
-		is_revolution_target = no
-		FROM = {
-			is_monarchy_government = yes
-			is_subject = no
-		}
+		always = no
 	}
 
 	war_goal = take_capital_personal_union

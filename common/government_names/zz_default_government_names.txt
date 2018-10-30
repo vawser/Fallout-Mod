@@ -21,7 +21,7 @@ default_monarchy = {
 	}
 	
 	trigger = {
-		is_monarchy_government = yes
+		has_government_attribute = monarchy
 	}
 }
 default_republic = {
@@ -44,7 +44,10 @@ default_republic = {
 	}
 	
 	trigger = {
-		is_republic_government = yes
+        OR = {
+            has_government_attribute = dictatorship
+            has_government_attribute = republic
+        }
 	}
 }
 default_theocracy = {
@@ -67,7 +70,10 @@ default_theocracy = {
 	}
 	
 	trigger = {
-		is_theocracy_government = yes
+        OR = {
+            has_government_attribute = papacy
+            has_government_attribute = religion
+        }
 	}
 }
 default_tribal = {
@@ -90,6 +96,9 @@ default_tribal = {
 	}
 	
 	trigger = {
-		is_tribal_government = yes
+        OR = {
+            has_government_attribute = nomad
+            has_government_attribute = tribal
+        }
 	}
 }

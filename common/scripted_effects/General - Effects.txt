@@ -28,6 +28,22 @@ grant_immortality = {
     }
 }
 
+damage_legitimacy_rebels = {
+    if = { 
+        limit = { 
+            OR = {
+                has_government_attribute = monarchy
+                has_government_attribute = tribal
+            }
+            NOT = { has_government_attribute = nomad }
+        }
+        add_legitimacy = -50 
+    }
+    if = { limit = { has_government_attribute = republic } add_republican_tradition = -50 }
+    if = { limit = { has_government_attribute = nomad } add_horde_unity = -50 }
+    if = { limit = { has_government_attribute = has_devotion } add_devotion = -50 }
+}
+
 nuke_province = {
     cede_province = ---
     remove_core = ROOT
@@ -36,3 +52,4 @@ nuke_province = {
         duration = 36500
     }
 }
+

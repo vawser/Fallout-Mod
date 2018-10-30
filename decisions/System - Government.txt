@@ -1,7 +1,7 @@
 country_decisions = {
 	establish_settlement = {
 		potential = {
-			is_tribal_government = yes
+			has_government_attribute = tribal
 		}
 		allow =  {
 			stability = 0
@@ -30,7 +30,7 @@ country_decisions = {
     
     establish_republic = {
 		potential = {
-			is_tribal_government = yes
+			has_government_attribute = tribal
 		}
 		allow =  {
 			stability = 0
@@ -59,11 +59,11 @@ country_decisions = {
     
     claim_vault = {
 		potential = {
-			is_tribal_government = yes
+			has_government_attribute = tribal
             NOT = { num_of_cities = 5 } # Four cities or less, roughly the same size in terms of land as Vault City
 		}
 		allow =  {
-            is_tribal_government = yes
+            has_government_attribute = tribal
 			any_owned_province = {
                 has_province_modifier = pf_vault
             }

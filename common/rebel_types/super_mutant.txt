@@ -114,9 +114,6 @@ super_mutant_rebels = {
 		add_prestige = -50
         add_stability = -2
         
-		if = { limit = { is_monarchy_government = yes } add_legitimacy = -50 }
-		if = { limit = { is_republic_government = yes } add_republican_tradition = -50 }
-		if = { limit = { is_nomad = yes} add_horde_unity = -50 }
-		if = { limit = { is_theocracy_government = yes } add_devotion = -50 }
+		damage_legitimacy_rebels = yes
 	}
 }

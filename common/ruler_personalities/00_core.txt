@@ -142,8 +142,9 @@ righteous_personality = {
 	
 	allow = {
 		OR = {
-			is_republic_government = yes
-			is_monarchy_government = yes
+			has_government_attribute = monarchy
+            has_government_attribute = tribal
+            has_government_attribute = republic
 		}
 	}
 	

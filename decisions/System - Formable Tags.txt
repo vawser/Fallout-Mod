@@ -608,37 +608,7 @@ country_decisions = {
 			change_tag = X04
 		}
 	}
-	
-	form_the_brotherhood = {
-		major = yes
-		
-		potential = {
-			OR = {
-				technology_group = tech_bos
-				religion = creatorism
-				government = brotherhood
-			}
-            NOT = { is_unswitchable_nation = yes }
-		}
-		allow =  {
-			has_country_modifier = unified_brotherhood
-			total_development = 250
-			num_of_cities = 20
-            years_of_income = 1
-		}
-		
-		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			change_tag = X05
-			set_government_rank = 3
-		}
-	}
-	
+
 	form_new_canann = {
 		major = yes
 		
