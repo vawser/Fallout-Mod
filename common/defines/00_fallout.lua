@@ -9,6 +9,18 @@ NDefines.NGame.GREAT_POWER_FRENZY_START = "9999.1.1"
 --------------------------------
 -- Compatibility / Disabled 
 --------------------------------
+-- This stuff has been removed to trim down the button creep
+-- and to allow for more scriptable methods to replicate functionality when applicable
+NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 9999   -- Removed
+NDefines.NCountry.PS_RAISE_WAR_TAXES = 9999         -- Removed
+NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 0         -- Removed
+NDefines.NCountry.PS_REDUCE_INFLATION = 9999        -- Removed, now a modifier over time in Economy Policy
+NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0
+NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0
+NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5
+NDefines.NMilitary.SLACKEN_AP_DROP = 2.0                    -- Removed
+NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 99999   -- Removed
+
 NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 5
 NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 0
@@ -47,12 +59,10 @@ NDefines.NCountry.INNOVATIVENESS_BEHIND_IN_TECH_PENALTY = -0.05 -- Make it easie
 NDefines.NCountry.INNOVATIVENESS_ENABLE_ANY_BEHIND_IN_TECH_PENALTY = 1 -- Make it easier to lose innovativeness
 NDefines.NCountry.INNOVATIVENESS_ENABLE_PER_TECH_BEHIND_IN_TECH_PENALTY = 1 -- Make it easier to lose innovativeness
 NDefines.NCountry.INNOVATIVENESS_AHEAD_OF_TIME_BONUS = 0.1 -- Make innovativeness easier to gain
-NDefines.NCountry.FREE_IDEA_GROUP_COST = 1.5  -- Adapt NI unlocks to ideagroup system
-NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 1 -- Remove ideagroup pick restriction
+NDefines.NCountry.FREE_IDEA_GROUP_COST = 1  -- Adapt NI unlocks to ideagroup system
+NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.5
 NDefines.NCountry.TECH_TIME_COST = 0.3	    -- tech grow with 20% cost over time.
 NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1  -- per year ahead.
-NDefines.NCountry.PS_ESTABLISH_SIBERIAN_FRONTIER = 50
-NDefines.NCountry.PS_FACTION_BOOST = 25
 NDefines.NCountry.EXPLOIT_ADM_INCOME = 120      -- Make exploit development more useful
 NDefines.NCountry.EXPLOIT_DIP_SAILORS = 12      -- Make exploit development more useful
 NDefines.NCountry.EXPLOIT_MIL_MANPOWER = 12     -- Make exploit development more useful
@@ -73,20 +83,12 @@ NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0 -- Disable cost increase fo
 NDefines.NCountry.CORE_LOSE = -1 -- Cores are never lost
 NDefines.NCountry.CORE_LOSE_CULTURE_GROUP = -1 -- Cores are never lost
 
---------------------------------
--- Disabled Stuff
---------------------------------
--- This stuff has been removed to trim down the button creep
--- and to allow for more scriptable methods to replicate functionality when applicable
-NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 9999   -- Removed
-NDefines.NCountry.PS_RAISE_WAR_TAXES = 9999         -- Removed
-NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 0         -- Removed
-NDefines.NCountry.PS_REDUCE_INFLATION = 9999        -- Removed, now a modifier over time in Economy Policy
-NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0
-NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0
-NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5
-NDefines.NMilitary.SLACKEN_AP_DROP = 2.0                    -- Removed
-NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 99999   -- Removed
+NDefines.NCountry.SIBERIAN_FRONTIER_DAILY_BASE = 1
+NDefines.NCountry.SIBERIAN_FRONTIER_DAILY_RANGE = 5
+
+NDefines.NCountry.PS_BUY_IDEA = 500
+NDefines.NCountry.PS_ESTABLISH_SIBERIAN_FRONTIER = 100
+NDefines.NCountry.PS_FACTION_BOOST = 25
 
 --------------------------------
 -- Economy
