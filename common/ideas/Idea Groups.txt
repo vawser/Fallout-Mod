@@ -68,7 +68,7 @@ idea_state_maintenance_modifier = {
 	category = ADM
 
 	idea_state_maintenance_modifier = {
-		state_maintenance_modifier = -0.33
+		state_maintenance_modifier = -0.5
 	}
 	ai_will_do = { factor = 1 }
 }
@@ -1694,7 +1694,14 @@ idea_global_ship_trade_power = {
 	idea_global_ship_trade_power = {
 		global_ship_trade_power = 0.5
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = {  
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            NOT = { num_of_total_ports = 1 }
+        }
+    }
 }
 idea_privateer_efficiency = {
 	category = DIP
@@ -1702,7 +1709,14 @@ idea_privateer_efficiency = {
 	idea_privateer_efficiency = {
 		privateer_efficiency = 1.0
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = {  
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            NOT = { num_of_total_ports = 1 }
+        }
+    }
 }
 idea_embargo_efficiency = {
 	category = DIP
@@ -1718,7 +1732,14 @@ idea_ship_power_propagation = {
 	idea_ship_power_propagation = {
 		ship_power_propagation = 0.5
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = {  
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            NOT = { num_of_total_ports = 1 }
+        }
+    }
 }
 idea_may_explore = {
 	category = DIP
@@ -1742,7 +1763,14 @@ idea_sea_repair = {
 	idea_sea_repair = {
 		sea_repair = yes
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = {  
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            NOT = { num_of_total_ports = 1 }
+        }
+    }
 }
 idea_may_establish_frontier = {
 	category = DIP

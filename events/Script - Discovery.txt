@@ -225,6 +225,27 @@ country_event = {
             }
         }
         
+        # Caribbean
+        if = {
+            limit = {
+                capital_scope = {
+                    region = caribbean_region
+                }
+            }
+            mexico_superregion = {
+                discover_country = ROOT
+            }
+            gulf_superregion = {
+                discover_country = ROOT
+            }
+            gulf_of_mexico_region = {
+                discover_country = ROOT
+            }
+            8 = {
+                discover_country = ROOT
+            }
+        }
+        
         # Canada
         if = {
             limit = {

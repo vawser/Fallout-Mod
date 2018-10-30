@@ -11,7 +11,7 @@ country_decisions = {
 		}
 		allow = {
 			any_owned_province = {
-				religion = religion_cult_of_mars
+				religion = cult_of_mars
 			}
 			stability = 1
             years_of_income = 1
@@ -62,7 +62,7 @@ country_decisions = {
 	}
 	adopt_the_hubologists = {
 		potential = {
-			NOT = { religion = religion_hubologist }
+			NOT = { religion = hubology }
 			OR = {
 				any_owned_province = {
 					religion = hubology
