@@ -52,26 +52,26 @@ country_event = {
 	option = {
 		name = ncr_government.1.option.a
 
-        every_subject_country = {
-            limit = {
-                is_subject_of_type = ncr_territory
-            }
-            grant_independence = yes
-        }
-        # Do this here so it doesn't override
-        every_country = {
-            limit = {
-                is_part_of_hre = yes
-                is_emperor = no
-                is_elector = no
-            }
-            emperor = {
-                create_subject = {
-                    subject_type = ncr_territory
-                    subject = PREV
-                }
-            }
-        }
+        # every_subject_country = {
+            # limit = {
+                # is_subject_of_type = ncr_territory
+            # }
+            # grant_independence = yes
+        # }
+        # # Do this here so it doesn't override
+        # every_country = {
+            # limit = {
+                # is_part_of_hre = yes
+                # is_emperor = no
+                # is_elector = no
+            # }
+            # emperor = {
+                # create_subject = {
+                    # subject_type = ncr_territory
+                    # subject = PREV
+                # }
+            # }
+        # }
         
         change_government_effect = {
             TYPE = ncr_state_government
@@ -135,7 +135,7 @@ country_event = {
 	option = {
 		name = ncr_government.5.option.a
 
-        add_scaled_imperial_influence = 10
+        add_scaled_imperial_influence = 5
 	}
 }
 
@@ -151,7 +151,7 @@ country_event = {
 	option = {
 		name = ncr_government.6.option.a
 
-        add_scaled_imperial_influence = 25
+        add_scaled_imperial_influence = 10
 	}
 }
 
@@ -167,7 +167,7 @@ country_event = {
 	option = {
 		name = ncr_government.7.option.a
 
-        add_scaled_imperial_influence = -10
+        add_scaled_imperial_influence = -5
 	}
 }
 
@@ -183,7 +183,7 @@ country_event = {
 	option = {
 		name = ncr_government.8.option.a
 
-        add_scaled_imperial_influence = -25
+        add_scaled_imperial_influence = -10
 	}
 }
 
@@ -199,7 +199,7 @@ country_event = {
 	option = {
 		name = ncr_government.9.option.a
 
-        add_scaled_imperial_influence = 25
+        add_scaled_imperial_influence = 5
 	}
 }
 
