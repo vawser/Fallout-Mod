@@ -1,4 +1,35 @@
+pass_the_thaler_act = {
+    empire = hre
+	member = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	emperor = {
+		global_tax_modifier = 0.1
+	}
+}
 
+usurp_the_brahmin_barons = {
+    empire = hre
+	member = {
+        production_efficiency = 0.1
+	}
+	emperor = {
+        prestige = 1
+	}
+    on_effect = {
+		# TODO: conflict from baron supporting countries
+	}
+}
+
+restore_the_gold_standard = {
+    empire = hre
+	member = {
+        global_unrest = -1
+	}
+	emperor = {
+        legitimacy = 1
+	}
+}
 
 indefinite_terms = {
 	empire = hre
@@ -21,7 +52,7 @@ indefinite_terms = {
 centralize_administration = {
 	empire = hre
 	member = {
-		stability_cost_modifier = -0.10
+		yearly_corruption = -0.05
 	}
 	emperor = {
 		imperial_authority = 0.25
