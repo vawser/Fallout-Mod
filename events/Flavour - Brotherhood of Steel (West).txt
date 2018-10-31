@@ -14,11 +14,10 @@ country_event = {
 	}	
 	
 	trigger = {
-		is_in_war = {
-            attacker_leader = NCR 
-            defender_leader = BOS
+        tag = BOS 	
+		emperor = {
+            war_with = BOS
         }
-        tag = BOS 		
 	}
     
     immediate = {
@@ -30,7 +29,7 @@ country_event = {
 	option = {
 		name = brotherhood_of_steel_west.1.option.a
         hidden_effect = {
-		    NCR = {
+		    emperor = {
                 country_event = { id = ncr.4 days = 5 }
 			}
 		}

@@ -8,7 +8,7 @@ country_event = {
     picture = NCR_STATUE_eventPicture
 	
 	trigger = {
-		tag = NCR
+		is_emperor = yes
         NOT = { has_global_flag = ncr_focus }
 	}
 	
@@ -52,7 +52,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = NCR
+		is_emperor = yes
 		owns_core_province = 266
         266 = { NOT = { has_province_modifier = building_ranger_unification_statue } }
 	}
@@ -99,7 +99,7 @@ country_event = {
 	trigger = {
 		266 = {
             has_province_modifier = building_ranger_unification_statue
-            NOT = { owned_by = NCR }
+            NOT = { owned_by = emperor }
         }
 	}
     
@@ -138,7 +138,7 @@ country_event = {
 	option = {
 		name = ncr.4.option.a
 		trigger = { 		
-		    NCR = {
+		    emperor = {
 				has_parliament = yes
 			}   
 		}
@@ -163,7 +163,7 @@ country_event = {
 	option = {
 		name = ncr.4.option.a
 		trigger = { 		
-		    NCR = {
+		    emperor = {
 				has_parliament = no
 			}   
 		}

@@ -1,17 +1,57 @@
-# reichsreform = {
-	# empire = hre
-	# member = {
-		# build_cost = -0.05
-		# development_cost = -0.05
-	# }
-	# emperor = {
-		# build_cost = -0.05
-		# development_cost = -0.05
-	# }
-	# on_effect = {
-		# imperial_ban_allowed = yes
-	# }
-	# off_effect = {
-		# imperial_ban_allowed = no
-	# }
-# }
+
+indefinite_terms = {
+	empire = hre
+	member = {
+		legitimacy = 0.5
+	}
+	emperor = {
+		imperial_authority = 0.25
+	}
+	on_effect = {
+		hidden_effect = { set_country_flag = stop_elections }
+		hre_inheritable = yes
+	}
+	off_effect = {
+        hidden_effect = { clr_country_flag = stop_elections }
+		hre_inheritable = no
+	}
+}
+
+centralize_administration = {
+	empire = hre
+	member = {
+		stability_cost_modifier = -0.10
+	}
+	emperor = {
+		imperial_authority = 0.25
+	}
+	on_effect = {
+		emperor = {
+			country_event = { 
+                id = ncr_government.10 
+                tooltip = TOOLTIP_CENTRALIZE_ADMINISTRATION
+            }
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					num_of_cities = 1
+					NOT = { vassal_of = ROOT }
+				}
+				country_event = { id = ncr_government.11 }
+			}
+		}
+	}	
+}
+
+unify_the_republic = {
+	empire = hre
+    
+	on_effect = {
+		emperor = {
+			country_event = { id = 9075 tooltip = TOOLTIP_UNIFY_THE_REPUBLIC }
+		}
+	}
+}

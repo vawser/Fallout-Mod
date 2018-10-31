@@ -187,13 +187,12 @@ can_add_seat_in_parliament = {
 can_add_estate = {
 }
 
-### Special functions
-
 # Called by can_add_province_to_hre
 is_possible_hre_province = {
 	condition = {
 		tooltip = "APH_ONLY_EUROPE"
 		potential = {
+            always = yes
 		}
 		allow = {
 			continent = america

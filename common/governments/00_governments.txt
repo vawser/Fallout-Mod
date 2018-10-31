@@ -369,6 +369,111 @@ shi_government = {
         shi_legacy
     }
 }
+ncr_government = {
+    color = { 196 170 117 }
+    
+    basic_reform = ncr_mechanic
+    
+    reform_levels = {
+        government_form_ncr = {
+			reforms = {
+                ncr_reform
+			}
+		}
+        outlook_ncr = {
+            reforms = {
+                administrative_outlook_reform
+                diplomatic_outlook_reform
+                naval_outlook_reform
+                army_outlook_reform
+            }
+        }
+        rule_of_law_ncr = {
+            reforms = {
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+            }
+        }
+        diversity_ncr = {
+            reforms = {
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+            }
+        }
+        ambitions_ncr = {
+            reforms = {
+                disciplined_army_reform
+                peerless_navy_reform
+                fearless_troops_reform
+                excellent_education_reform
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+            }
+        }
+    }
+    
+    legacy_government = {
+        ncr_legacy
+    }
+}
+ncr_state_government = {
+    color = { 196 170 117 }
+    
+    basic_reform = ncr_state_mechanic
+    
+    reform_levels = {
+        government_form_ncr_state = {
+			reforms = {
+                ncr_state_reform
+			}
+		}
+        outlook_ncr_state = {
+            reforms = {
+                administrative_outlook_reform
+                diplomatic_outlook_reform
+                naval_outlook_reform
+                army_outlook_reform
+            }
+        }
+        rule_of_law_ncr_state = {
+            reforms = {
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+            }
+        }
+        diversity_ncr_state = {
+            reforms = {
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+            }
+        }
+        ambitions_ncr_state = {
+            reforms = {
+                disciplined_army_reform
+                peerless_navy_reform
+                fearless_troops_reform
+                excellent_education_reform
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+            }
+        }
+    }
+    
+    legacy_government = {
+        ncr_state_legacy
+    }
+}
+
 #------------------------------------------
 # Republic
 #------------------------------------------
@@ -474,58 +579,6 @@ dictatorship_government = {
     
     legacy_government = {
         dictatorship_legacy
-    }
-}
-ncr_government = {
-    color = { 196 170 117 }
-    
-    basic_reform = ncr_mechanic
-    
-    reform_levels = {
-        government_form_ncr = {
-			reforms = {
-                ncr_reform
-			}
-		}
-        outlook_ncr = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_ncr = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_ncr = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_ncr = {
-            reforms = {
-                disciplined_army_reform
-                peerless_navy_reform
-                fearless_troops_reform
-                excellent_education_reform
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                inquisitive_minds_reform
-                fury_of_the_gods_reform
-                religious_freedom_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        ncr_legacy
     }
 }
 institute_government = {

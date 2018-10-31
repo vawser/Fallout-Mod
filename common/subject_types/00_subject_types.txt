@@ -38,6 +38,7 @@ client_march = {}
 colony = {}
 tributary_state = {}
 sphere = { }
+ncr_territory = { }
 
 default = {
 	# Graphics:
@@ -654,6 +655,85 @@ sphere = {
 	bestow_gifts = yes
 	conscript_general = yes
 	grant_core_claim = no
+	contribute_to_capital = yes
+    
+	# Modifiers:
+	modifier_subject = clear
+}
+
+ncr_territory = {
+	copy_from = default
+
+	# Triggers:
+	is_potential_overlord = {
+        is_emperor = yes
+	}
+
+	# Properties:
+	joins_overlords_wars = yes
+	takes_diplo_slot = no
+	can_have_subjects_of_other_types = yes
+	counts_for_borders = yes
+	can_use_claims = yes
+	share_rebel_popup = yes
+	gets_help_with_rebels = yes
+	overlord_protects_external = yes
+	overlord_enforce_peace_attacking = yes
+	share_rebel_popup = yes
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	can_release_and_play = yes
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+ 	overlord_can_attack = yes
+	can_release_in_peace = yes
+	separatists_become_subjects = yes
+
+	max_government_rank = 0
+	
+	liberty_desire_development_ratio = 0.25
+	liberty_desire_negative_prestige = 1.0
+	trust_on_start = 50
+	
+	can_fight = {
+		independent_nations = yes
+		same_overlord = ncr_territory
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = ncr_territory
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = ncr_territory
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = ncr_territory
+		other_overlord = all
+	}
+
+	# Subject Interactions:
+	support_loyalists = yes
+	subsidize_armies = yes
+	send_officers = yes
+	divert_trade = yes
+	embargo_rivals = yes
+	demand_artifacts = no
+	demand_additional_tribute = no
+	placate_rulers = no
+	enforce_religion = no
+	enforce_culture = no
+	grant_province = yes
+	siphon_income = yes
+	seize_territory = yes
+	takeondebt = yes
+	bestow_gifts = yes
+	conscript_general = yes
+	grant_core_claim = yes
 	contribute_to_capital = yes
     
 	# Modifiers:

@@ -45,8 +45,9 @@ damage_legitimacy_rebels = {
 }
 
 nuke_province = {
-    cede_province = ---
-    remove_core = ROOT
+    #cede_province = ---
+    #remove_core = ROOT
+    add_devastation = 100
     add_province_modifier = {
         name = nuked_province
         duration = 36500

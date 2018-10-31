@@ -202,3 +202,74 @@ gov_settlement = {
 		is_settlement_government = yes
 	}
 }
+gov_ncr_republic = {
+	rank = {
+		1 = FM_NCR
+		2 = FM_NCR
+		3 = FM_NCR
+	}			
+	
+	ruler_male = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+    heir_male = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+	
+	heir_female = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+    
+	trigger = {
+		has_reform = ncr_reform
+	}
+}
+gov_ncr_state_republic = {
+	rank = {
+		1 = FM_NCR_STATE
+		2 = FM_NCR_STATE
+		3 = FM_NCR_STATE
+	}			
+	
+	ruler_male = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+	
+	ruler_female = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+    
+    heir_male = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+	
+	heir_female = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+	
+	trigger = {
+		has_reform = ncr_state_reform
+	}
+}
+

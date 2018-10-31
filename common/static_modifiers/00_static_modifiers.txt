@@ -538,7 +538,6 @@ stability = {
 
 positive_stability = {
     monthly_militarized_society = 0.05
-
 	global_unrest = -1					#-1% revolt risk each step
 	global_tax_modifier = 0.05
 	global_missionary_strength = 0.005
@@ -742,22 +741,23 @@ defender_of_faith = {
 }
 
 emperor = {
-	spy_offence = 0.1					#minor bonus on spies.
-	advisor_pool = 1
-	diplomatic_upkeep = 1
+    diplomatic_reputation = 2
+	advisor_pool = 2
+	diplomatic_upkeep = 2
 	free_leader_pool = 1
 	prestige = 1
 }
 
-states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
-	land_forcelimit	= 0.5					#each state increases forcelimit by 0.5
-	global_manpower = 0.5					#each gives 0.5 MP to the emperor.
+states_in_hre = {
+    global_tax_income = 2
+	land_forcelimit = 2
+	global_manpower = 2
 }
 
-free_cities_in_hre = {							#bonuses for each free city in the HRE.. as emperor
+free_cities_in_hre = {
 	global_tax_income = 2				
-	global_manpower = 1	
-	land_forcelimit	= 0.5
+	land_forcelimit = 2
+	global_manpower = 2
 }
 
 free_city_in_hre = {
@@ -918,6 +918,7 @@ prestige = {
 	embracement_cost = -0.1
     papal_influence = 1
     monthly_militarized_society = 0.05
+    imperial_authority_value = 0.1
 }
 
 no_debate_in_parliament = {
@@ -1050,6 +1051,7 @@ power_projection = {
 	horde_unity = 0.5
 	republican_tradition = 0.2
     papal_influence = 1
+    imperial_authority_value = 0.1
 }
 
 power_projection_25 = {

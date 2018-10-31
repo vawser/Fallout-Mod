@@ -120,8 +120,7 @@ country_decisions = {
             NOT = { exists = X12 }
 			OR = {
 				technology_group = tech_ncr
-				tag = NCR
-				tag = D01
+				is_emperor = yes
 			}
             NOT = { is_unswitchable_nation = yes }
 		}

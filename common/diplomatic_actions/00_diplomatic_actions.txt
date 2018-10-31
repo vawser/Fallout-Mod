@@ -215,7 +215,17 @@ abandon_union_action = {
 	}
 }
 
-
+# Block usage
+grant_freecity = {
+    condition = {
+		potential = {
+            always = yes
+		}
+		allow = {
+			always = no
+		}
+	}
+}
 
 
 form_coalition = {

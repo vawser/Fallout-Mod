@@ -10,7 +10,11 @@ NCR_ideas = {
     }
     
     trigger = {
-        tag = NCR
+        OR = {
+            tag = NCR
+            tag = SHA
+            is_part_of_hre = yes
+        }
     }
     free = yes
     

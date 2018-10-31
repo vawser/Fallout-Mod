@@ -21,7 +21,7 @@ country_event = {
     option = {
         name = courier.1.option.a
         
-        NCR = { country_event = { id = courier.3 } }
+        emperor = { country_event = { id = courier.3 } }
         
         ai_chance = { factor = 45 }
     }
@@ -121,7 +121,7 @@ country_event = {
     option = {
         name = courier.3.option.a
 
-        hidden_effect = { remove_historical_rival = NCR }
+        hidden_effect = { remove_historical_rival = emperor }
         create_alliance = NVG
         add_opinion = {
             who = NVG
@@ -168,7 +168,7 @@ country_event = {
     trigger = {
         OR = {
             tag = CAE
-            tag = NCR
+            tag = emperor
             tag = NVG
         }
         NOT = { has_country_flag = courier_offer_done }
