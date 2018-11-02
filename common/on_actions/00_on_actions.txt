@@ -322,8 +322,6 @@ on_new_consort = {
 on_monarch_death = { 
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_monarch_death" }
     
-    log = "Monarch died for [Root.GetName] in [GetDate]"
-    
     events = {
         new_vegas.30 # Anarcho Vegas
 		new_vegas.31 # Independent Vegas

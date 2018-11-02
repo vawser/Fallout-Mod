@@ -5,39 +5,92 @@ NDefines.NGame.START_DATE = "2280.1.1"
 NDefines.NGame.END_DATE = "9999.1.1"
 NDefines.NGame.MAX_RANDOM_NEW_WORLD = "9999.1.1"
 NDefines.NGame.GREAT_POWER_FRENZY_START = "9999.1.1"
+NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
 
 --------------------------------
--- Compatibility / Disabled 
+-- Disabled Stuff
 --------------------------------
--- This stuff has been removed to trim down the button creep
--- and to allow for more scriptable methods to replicate functionality when applicable
-NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 9999   -- Removed
-NDefines.NCountry.PS_RAISE_WAR_TAXES = 9999         -- Removed
-NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 0         -- Removed
-NDefines.NCountry.PS_REDUCE_INFLATION = 9999        -- Removed, now a modifier over time in Economy Policy
-NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0
-NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0
-NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5
+NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 9999           -- Removed
+NDefines.NCountry.PS_RAISE_WAR_TAXES = 9999                 -- Removed
+NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 0                 -- Removed
+NDefines.NCountry.PS_REDUCE_INFLATION = 9999                -- Removed, now a modifier over time in Economy Policy
 NDefines.NMilitary.SLACKEN_AP_DROP = 2.0                    -- Removed
 NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 99999   -- Removed
+NDefines.NCountry.MAX_CROWN_COLONIES = 9999                 -- Disable colonial nations
+NDefines.NCountry.CULTURAL_UNION_MIN_DEV = 9999999          -- Disable cultural union (doesn't make sense with current cultures)
+NDefines.NCountry.CULTURAL_UNION_MIN_RANK = -1              -- Force dev check for cultural union
+NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0        -- Disable cost increase for advisors
+NDefines.NCountry.CORE_LOSE = -1                            -- Cores are never lost
+NDefines.NCountry.CORE_LOSE_CULTURE_GROUP = -1              -- Cores are never lost
 
-NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
-NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 5
+--------------------------------
+-- Mechanics
+--------------------------------
 NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 0
-NDefines.NCountry.MONARCH_DEATH = 100 -- 0 may be causing issues, 100 will prevent rulers dying in any reasonable timeframe
-NDefines.NCountry.MONARCH_DEATH_STABILITY_PENALTY = 0 -- Remove this stability hit
 NDefines.NCountry.ALLOW_ZERO_BASE_VALUES = 1
-NDefines.NCountry.SPLENDOR_ABILITY_COST = 600
-
---------------------------------
--- Conversion
---------------------------------
 NDefines.NCountry.CAN_CONVERT_TERRITORY_CULTURE = 1     -- Allow conversion
 NDefines.NCountry.CAN_CONVERT_TERRITORY_RELIGION = 1    -- Allow conversion
+NDefines.NCountry.MONARCH_DEATH = 0
+NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 0
 
 --------------------------------
--- Migration
+-- Country
 --------------------------------
+NDefines.NCountry.POWER_MAX = 1000                      -- Clean
+
+-- Ruler
+NDefines.NCountry.MAX_EXTRA_PERSONALITIES = 3           -- Allow 3 modifiers
+NDefines.NCountry.YEARS_PER_EXTRA_PERSONALITY = 10 
+NDefines.NCountry.ABDICATE_LEGITIMACY_THRESHOLD = 100 -- Allow abdication anytime
+NDefines.NCountry.ABDICATE_AGE_THRESHOLD = 18 -- Allow abdication for any adult ruler
+NDefines.NCountry.ABDICATE_RULING_LENGTH_THRESHOLD = 0 -- Allow abdication anytime
+NDefines.NCountry.ABDICATE_LEGITIMACY_HIT = -90 -- Make abdication much more costly
+NDefines.NCountry.ABDICATE_PRESTIGE_HIT = -90 -- Make abdication much more costly
+
+-- Costs
+NDefines.NCountry.PS_BUY_IDEA = 500
+NDefines.NCountry.PS_ESTABLISH_SIBERIAN_FRONTIER = 100
+NDefines.NCountry.PS_FACTION_BOOST = 25
+NDefines.NCountry.SPLENDOR_ABILITY_COST = 600
+
+-- Ideas
+NDefines.NCountry.FREE_IDEA_GROUP_COST = 1.5  
+NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.5
+
+-- Technology
+NDefines.NCountry.TECH_TIME_COST = 0.3	    -- tech grow with 20% cost over time.
+NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1  -- per year ahead.
+
+-- Exploit
+NDefines.NCountry.EXPLOIT_ADM_INCOME = 120      -- Make exploit development more useful
+NDefines.NCountry.EXPLOIT_DIP_SAILORS = 12      -- Make exploit development more useful
+NDefines.NCountry.EXPLOIT_MIL_MANPOWER = 12     -- Make exploit development more useful
+NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 12  -- Make exploit development more useful
+
+-- Institutions
+NDefines.NCountry.EMBRACE_INSTITUTION_COST = 5 -- Make embracement of institutions twice as expensive
+
+-- States
+NDefines.NCountry.STATE_MAINTENANCE_DEV_FACTOR = 0.01 -- Make states more expensive to maintain
+NDefines.NCountry.STATE_MAINTENANCE_CULTURE_FACTOR = 0.5 -- Make states more expensive to maintain
+
+-- Parliament
+NDefines.NCountry.PARLIAMENT_BACKING_PERCENTAGE = 25
+NDefines.NCountry.PARLIAMENT_PRESTIGE_HIT = 0
+
+-- Siberian Frontier
+NDefines.NCountry.SIBERIAN_FRONTIER_DAILY_BASE = 1
+NDefines.NCountry.SIBERIAN_FRONTIER_DAILY_RANGE = 5
+
+-- Innovativeness
+NDefines.NCountry.INNOVATIVENESS_FIRST_REACHED_TECH_LEVEL = 5.0 -- Make innovativeness easier to gain
+NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 5.0 -- Make innovativeness easier to gain
+NDefines.NCountry.INNOVATIVENESS_BEHIND_IN_TECH_PENALTY = -0.05 -- Make it easier to lose innovativeness
+NDefines.NCountry.INNOVATIVENESS_ENABLE_ANY_BEHIND_IN_TECH_PENALTY = 1 -- Make it easier to lose innovativeness
+NDefines.NCountry.INNOVATIVENESS_ENABLE_PER_TECH_BEHIND_IN_TECH_PENALTY = 1 -- Make it easier to lose innovativeness
+NDefines.NCountry.INNOVATIVENESS_AHEAD_OF_TIME_BONUS = 0.1 -- Make innovativeness easier to gain
+
+-- Migration
 NDefines.NCountry.MIGRATION_BOOST = 25
 NDefines.NCountry.MIGRATION_COOLDOWN = 64
 NDefines.NCountry.MIGRATION_DEPLETION_TIME = 1800
@@ -45,55 +98,9 @@ NDefines.NCountry.MIGRATION_DEPLETION_TIME = 1800
 --------------------------------
 -- Diplomacy
 --------------------------------
-NDefines.NDiplomacy.STUDY_TECHNOLOGY_MIN_TECHS_AHEAD = 0 -- Allow power gain from Study Technology always
+NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 5
 
---------------------------------
--- Country
---------------------------------
-NDefines.NCountry.POWER_MAX = 1000 -- Clean
-NDefines.NCountry.MAX_EXTRA_PERSONALITIES = 3 -- Allow 3 modifiers
-NDefines.NCountry.YEARS_PER_EXTRA_PERSONALITY = 10 
-NDefines.NCountry.MAX_CROWN_COLONIES = 9999 -- Disable colonial nations
-NDefines.NCountry.INNOVATIVENESS_FIRST_REACHED_TECH_LEVEL = 5.0 -- Make innovativeness easier to gain
-NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 5.0 -- Make innovativeness easier to gain
-NDefines.NCountry.INNOVATIVENESS_BEHIND_IN_TECH_PENALTY = -0.05 -- Make it easier to lose innovativeness
-NDefines.NCountry.INNOVATIVENESS_ENABLE_ANY_BEHIND_IN_TECH_PENALTY = 1 -- Make it easier to lose innovativeness
-NDefines.NCountry.INNOVATIVENESS_ENABLE_PER_TECH_BEHIND_IN_TECH_PENALTY = 1 -- Make it easier to lose innovativeness
-NDefines.NCountry.INNOVATIVENESS_AHEAD_OF_TIME_BONUS = 0.1 -- Make innovativeness easier to gain
-NDefines.NCountry.FREE_IDEA_GROUP_COST = 1.5  -- Adapt NI unlocks to ideagroup system
-NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.5
-NDefines.NCountry.TECH_TIME_COST = 0.3	    -- tech grow with 20% cost over time.
-NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1  -- per year ahead.
-NDefines.NCountry.EXPLOIT_ADM_INCOME = 120      -- Make exploit development more useful
-NDefines.NCountry.EXPLOIT_DIP_SAILORS = 12      -- Make exploit development more useful
-NDefines.NCountry.EXPLOIT_MIL_MANPOWER = 12     -- Make exploit development more useful
-NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 12  -- Make exploit development more useful
-NDefines.NCountry.ABDICATE_LEGITIMACY_THRESHOLD = 100 -- Allow abdication anytime
-NDefines.NCountry.ABDICATE_AGE_THRESHOLD = 18 -- Allow abdication for any adult ruler
-NDefines.NCountry.ABDICATE_RULING_LENGTH_THRESHOLD = 0 -- Allow abdication anytime
-NDefines.NCountry.ABDICATE_LEGITIMACY_HIT = -90 -- Make abdication much more costly
-NDefines.NCountry.ABDICATE_PRESTIGE_HIT = -90 -- Make abdication much more costly
-NDefines.NCountry.EMBRACE_INSTITUTION_COST = 5 -- Make embracement of institutions twice as expensive
-NDefines.NCountry.STATE_MAINTENANCE_DEV_FACTOR = 0.01 -- Make states more expensive to maintain
-NDefines.NCountry.STATE_MAINTENANCE_CULTURE_FACTOR = 0.5 -- Make states more expensive to maintain
-NDefines.NCountry.PARLIAMENT_BACKING_PERCENTAGE = 25
-NDefines.NCountry.PARLIAMENT_PRESTIGE_HIT = 0
-NDefines.NCountry.CULTURAL_UNION_MIN_DEV = 9999999 -- Disable cultural union (doesn't make sense with current cultures)
-NDefines.NCountry.CULTURAL_UNION_MIN_RANK = -1 -- Force dev check for cultural union
-NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0 -- Disable cost increase for advisors
-NDefines.NCountry.CORE_LOSE = -1 -- Cores are never lost
-NDefines.NCountry.CORE_LOSE_CULTURE_GROUP = -1 -- Cores are never lost
-
-NDefines.NCountry.SIBERIAN_FRONTIER_DAILY_BASE = 1
-NDefines.NCountry.SIBERIAN_FRONTIER_DAILY_RANGE = 5
-
-NDefines.NCountry.PS_BUY_IDEA = 500
-NDefines.NCountry.PS_ESTABLISH_SIBERIAN_FRONTIER = 100
-NDefines.NCountry.PS_FACTION_BOOST = 25
-
---------------------------------
 -- HRE
---------------------------------
 NDefines.NDiplomacy.DESIRED_NUM_OF_ELECTORS = 5
 NDefines.NDiplomacy.MAX_FREE_CITIES = 8
 NDefines.NDiplomacy.MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 2
@@ -104,6 +111,8 @@ NDefines.NDiplomacy.HRE_HERETIC_PENALTY = 0.0
 NDefines.NDiplomacy.LACK_OF_ELECTORS_HIT = 0
 NDefines.NDiplomacy.IMPERIAL_REFORM_COST = 100
 NDefines.NDiplomacy.EMPEROR_VOTE_DAYS = 30
+
+-- HRE Voting
 NDefines.NDiplomacy.HRE_VOTE_ENEMY = -200
 NDefines.NDiplomacy.HRE_VOTE_LEGUE_ENEMY = -200
 NDefines.NDiplomacy.HRE_VOTE_LEAGUE_LEADER = 100
@@ -120,6 +129,7 @@ NDefines.NDiplomacy.HRE_VOTE_ALLIANCE = 30
 NDefines.NDiplomacy.HRE_VOTE_ROYAL_MARRIAGE = 10
 NDefines.NDiplomacy.HRE_VOTE_CORE_CLAIM = -50
 
+-- HRE Government
 NDefines.NCountry.HRE_RANK = 3
 NDefines.NCountry.HRE_MAX_RANK = 3
 NDefines.NCountry.HRE_MAX_RANK_ELECTOR = 3
@@ -136,6 +146,11 @@ NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 25 -- Make claims better
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 75 -- Make unclaimed conquest worse
 NDefines.NEconomy.AUTONOMY_AT_DIPLO_ANNEX = 25 -- Make diplo annex better
 NDefines.NEconomy.EDICTS_COST_INCREASE = 1.0
+
+-- Autonomy
+NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0
+NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0
+NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5
 
 --------------------------------
 -- AI
@@ -300,11 +315,9 @@ NDefines.NReligion.INITIAL_ISOLATIONISM = 1	-- Level of isolationism for a newly
 --------------------------------
 NDefines.NGraphics.SHOW_MONTHLY_TAX_INCOME = 1
 
-
 --------------------------------
 -- Estates
 --------------------------------
--- Stuff for the Policy system that uses the Estates mechanic
 NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MIN = 0.0   -- no decay
 NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MAX = 0.0   -- no decay
 NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_1 = 1
