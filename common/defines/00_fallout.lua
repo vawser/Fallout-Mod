@@ -24,7 +24,8 @@ NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 99999   -- Removed
 NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 5
 NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 0
-NDefines.NCountry.MONARCH_DEATH = 0
+NDefines.NCountry.MONARCH_DEATH = 100 -- 0 may be causing issues, 100 will prevent rulers dying in any reasonable timeframe
+NDefines.NCountry.MONARCH_DEATH_STABILITY_PENALTY = 0 -- Remove this stability hit
 NDefines.NCountry.ALLOW_ZERO_BASE_VALUES = 1
 NDefines.NCountry.SPLENDOR_ABILITY_COST = 600
 

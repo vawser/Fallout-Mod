@@ -24,7 +24,7 @@ vallejo_area = {
 }
 
 boneyard_outskirts_area = {
-    425 405 408 
+    405 408 1959
 }
 
 shady_sands_area = { 
@@ -32,7 +32,7 @@ shady_sands_area = {
 }
 
 boneyard_area = { 
-	74 407 409 868 
+	74 407 409 868 425
 }
 
 maxson_state_area = { 
@@ -44,19 +44,23 @@ the_flats_area = {
 }
 
 necropolis_area = { 
-    558 559 1123 85
+    558 559 1123 
 }
 
 junktown_area = { 
-	3 1016 1017 86 1307
+	3 1016 1017 86 1921 1922 
 }
     
 arroyo_area = { 
 	1 401 1279 1287 1050 1051
 }
 
+dayglow_area = {
+    410 561 1122 1308 1958
+}
+
 the_great_glow_area = { 
-	410 561 1208 1122 1308
+    1208 1954 1956 1957 1949 1952 1953
 }
 
 mariposa_area = { 
@@ -79,12 +83,12 @@ bitterwater_area = {
     390 392 998
 }
 
-death_valley_area = { 
-	422 45
+mojave_area = { 
+	422 45 85 
 }
 
 divide_area = {
-    1420 1421 1422 1423 1424 377
+    1420 1421 1422 1423 1424 377 1920 84 1430 1429 429
 }
 
 the_den_area = { 
@@ -144,7 +148,7 @@ crescent_city_area = {
 }
 
 one_pine_area = {
-    1018 84 1255 1204 
+    1018 1255 1204 
 }
 
 lassen_area = {
@@ -157,6 +161,34 @@ whitehorn_area = {
 
 granite_peak_area = {
     1059 1060 1061 1058
+}
+
+goffs_area = {
+    1918 1919 1940 1939 
+}
+
+joshua_tree_area = {
+    1951 1950 1947 1946 
+}
+
+borrego_area = {
+    1942 1944 1945 1936 1935
+}
+
+palo_verde_area = {
+    1911 1943 1941 1948
+}
+
+scrapheap_area = {
+    1929 1928 1927
+}
+
+edwards_afb_area = {
+    1933 1934 1931 1932 1930
+}
+
+big_pine_area = {
+    1926 1925 1924 1923
 }
 
 #---------------------------------------
@@ -186,40 +218,36 @@ nixon_area = {
     92 91 98 1067 93
 }
 
-silent_pass_area = {
-    1429 1430
-}
-
 north_vegas_area = { 
 	121 412
 }
 
 goodsprings_area = { 
-	117 118 265 
+	117 118 265 1938
 }
 
 new_vegas_area = { 
-	261 262 263 284 309 1200 
+	261 263 284 1200 
 }
 
-helios_area = { 
-	251 252 1210 1211
+novac_area = { 
+	251 252 1210 
 }
 
-clark_area = { 
-	119 255 256 1201
+cottonwood_cove_area = { 
+	119 255 256 1201 1937
 }
 
 nipton_area = { 
-	127 254 266 1131
+    254 266 1131 
 }
 
 east_vegas_area = { 
-	122 267 273 1209 1212 1426
+	122 1209 1212 1426
 }
 
 boulder_city_area = { 
-	120 257 260 272 
+    257 260 267 273 
 }
 
 black_mountain_area = { 
@@ -227,7 +255,11 @@ black_mountain_area = {
 }
  
 west_vegas_area = { 
-	123 285 557 1213 1428
+	123 1428 309 262
+}
+
+south_vegas_area = {
+    120 272 1211
 }
 
 utah_passage_area = {
@@ -259,7 +291,7 @@ akali_area = {
 }
 
 adaven_area = {
-    1080 1081 1083 1082 429 1084
+    1080 1081 1083 1082 1084
 }
 
 orem_area = {
@@ -280,6 +312,10 @@ gold_hill_area = {
 
 cold_springs_area = {
     1045 90 1065
+}
+
+mt_charleston_area = {
+    285 557 1213
 }
 
 #---------------------------------------
@@ -485,7 +521,7 @@ byford_area = {
 # Arizona
 #---------------------------------------
 flagstaff_area = {  
-	879 1436 1449 1447 493 
+	879 1436 1449 1447 1453
 }
 
 phoenix_area = {  
@@ -497,22 +533,22 @@ grand_canyon_area = {
 }
 
 yuma_area = {
-    88 496 1380 1378 1442
+    88 496 1380 1378 1442 1955
 }
 
 gila_area = {
-    1379 1443 1441 1439 1440
+    1379 1443 1441 1440
 }
 
 hopi_area = {
-    1132 259 258 1296 1377 1453
+    1132 259 258 1296 1377 
 }
 
 bloomfield_area = {
-    877 495 1438 1437
+    877 1439 1438 
 }
 
-havasu_city_area = {
+willow_beach_area = {
     356 494 1444 1445 1446
 }
 
@@ -526,6 +562,18 @@ verde_area = {
 
 amberfall_area = {
     1460 1461 1462 1463 353
+}
+
+havasu_city_area = {
+    1437 1917 1916 1915
+}
+
+yucca_area = {
+    493 1912 1914 1913
+}
+
+bullhead_city_area = {
+    127 1307 495
 }
 
 #---------------------------------------
@@ -1193,7 +1241,7 @@ aburduun_area = {
 # Baja California
 #---------------------------------------
 northern_baja_area = {
-    166 78 79 167 1192
+    166 78 79 167 1192 1910
 }
 
 southern_baja_area = { 
