@@ -159,6 +159,15 @@ can_burn_colony = {
 
 can_colonize_province = {
     condition = {
+		tooltip = "BLOCKED"
+		potential = {
+            has_province_modifier = nuked_province
+		}
+		allow = {
+			always = no
+		}
+	}
+    condition = {
 		tooltip = "CAN_COLONISE_NUCLEAR_BOMB_SITE"
 		potential = {
             has_terrain = irradiated_wasteland
