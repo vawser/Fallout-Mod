@@ -39,7 +39,7 @@ NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 0
 NDefines.NCountry.POWER_MAX = 1000                      -- Clean
 
 -- Ruler
-NDefines.NCountry.MAX_EXTRA_PERSONALITIES = 3           -- Allow 3 modifiers
+NDefines.NCountry.MAX_EXTRA_PERSONALITIES = 2           -- Allow 3 modifiers
 NDefines.NCountry.YEARS_PER_EXTRA_PERSONALITY = 10 
 NDefines.NCountry.ABDICATE_LEGITIMACY_THRESHOLD = 100 -- Allow abdication anytime
 NDefines.NCountry.ABDICATE_AGE_THRESHOLD = 18 -- Allow abdication for any adult ruler
