@@ -1,5 +1,5 @@
 great_war_aftermath = {
-    start = 2260
+    start = 2280
     
     can_start = {
         always = yes
@@ -91,9 +91,7 @@ industrialisation = {
     start = 2300
     
     can_start = {
-        any_country = {
-            adm_tech = 10
-        }
+        is_institution_enabled = vault_tec
     }
 
     religious_conflicts = yes
