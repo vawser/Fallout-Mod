@@ -97,4 +97,4 @@ tags={
     "Gameplay"
 	"Map"
 }
-supported_version="1.27.*.*"
+supported_version="1.28.*.*"
