@@ -610,6 +610,39 @@ religion_group_postwar = {
 	}
 
     #-------------------------------------
+    # American Restorationists
+    #-------------------------------------
+    american_restorationists = {
+		color = { 0.0 0.272 0.316 }
+		icon = 37 #Add new Icon
+
+		country = { 
+            institution_spread_from_true_faith = 0.1	
+            idea_cost = -0.1
+		}
+        country_as_secondary = { 
+            institution_spread_from_true_faith = 0.1	
+		}
+        
+        holy_sites = { 
+            1200 # New Vegas
+            299  # Philly
+            1259 # Chicago
+            1414 # DC Mall
+            965  # Manhattan 
+        }
+		
+		blessings = {
+			americana_relics
+			lincolns_legacy
+			pre_war_banner
+            controled_deathclaws
+            american_dream		
+		}
+        
+        harmonized_modifier = harmonized_american_restorationists
+	}
+    #-------------------------------------
     # Lord of the Pitt
     #-------------------------------------
 	lord_of_the_pitt = {
