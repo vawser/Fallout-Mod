@@ -1094,10 +1094,10 @@ guiTypes = {
 					position = { x = -66 y = 189 }
 				}
 
-				iconType =
+				guiButtonType =
 				{
 					name ="mutually_progress_icon"
-					spriteType = "GFX_mutually_progress_strip"
+					quadTextureSprite = "GFX_mutually_progress_strip"
 					position = { x = -102 y = 170 }
 					scale = 0.8
 				}
@@ -1731,7 +1731,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "label_buildq"
-					position = { x = 15 y = 191 }
+					position = { x = 15 y = 235 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 4 y = 4}
@@ -1743,9 +1743,9 @@ guiTypes = {
 				}
 				listboxType = {
 					name = "buildqueue"
-					position = { x = 0 y = 223 }
+					position = { x = 0 y = 267 }
 					backGround=""
-					size = { x=433 y = 171}
+					size = { x=433 y = 144}
 					horizontal = 0
 					spacing = 0
 					scrollbartype = "standardlistbox_slider"
@@ -1827,7 +1827,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "label_buildq"
-					position = { x = 15 y = 191 }
+					position = { x = 15 y = 235 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 4 y = 4}
@@ -1839,9 +1839,9 @@ guiTypes = {
 				}
 				listboxType = {
 					name = "buildqueue"
-					position = { x = 0 y = 223 }
+					position = { x = 0 y = 267 }
 					backGround=""
-					size = { x=433 y = 171}
+					size = { x=433 y = 144}
 					horizontal = 0
 					spacing = 0
 					scrollbartype = "standardlistbox_slider"
@@ -1918,7 +1918,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "label_buildq"
-					position = { x = 15 y = 191 }
+					position = { x = 15 y = 234 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 4 y = 4}
@@ -1930,9 +1930,9 @@ guiTypes = {
 				}
 				listboxType = {
 					name = "buildqueue"
-					position = { x = 0 y = 223 }
+					position = { x = 0 y = 267 }
 					backGround=""
-					size = { x=433 y = 171}
+					size = { x=433 y = 150 }
 					horizontal = 0
 					spacing = 0
 					scrollbartype = "standardlistbox_slider"
@@ -2679,7 +2679,7 @@ guiTypes = {
 				name = "provinces_listbox"
 				backGround = ""
 				position = { x= 20 y = 250 }
-				size = { x=100 y=250 }
+				size = { x=220 y=250 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				scrollbartype = "standardlistbox_slider"

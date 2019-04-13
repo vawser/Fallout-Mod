@@ -2,26 +2,23 @@
 -- Game
 --------------------------------
 NDefines.NGame.START_DATE = "2280.1.1"
-NDefines.NGame.END_DATE = "9999.1.1"
-NDefines.NGame.MAX_RANDOM_NEW_WORLD = "9999.1.1"
-NDefines.NGame.GREAT_POWER_FRENZY_START = "9999.1.1"
+NDefines.NGame.END_DATE = "3000.1.1"
+NDefines.NGame.MAX_RANDOM_NEW_WORLD = "3000.1.1"
+NDefines.NGame.GREAT_POWER_FRENZY_START = "3000.1.1"
 NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
+NDefines.NEngine.EVENT_PROCESS_OFFSET = 20
 
 --------------------------------
 -- Disabled Stuff
 --------------------------------
-NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 9999           -- Removed
-NDefines.NCountry.PS_RAISE_WAR_TAXES = 9999                 -- Removed
-NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 0                 -- Removed
-NDefines.NCountry.PS_REDUCE_INFLATION = 9999                -- Removed, now a modifier over time in Economy Policy
 NDefines.NMilitary.SLACKEN_AP_DROP = 2.0                    -- Removed
 NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 99999   -- Removed
 NDefines.NCountry.MAX_CROWN_COLONIES = 9999                 -- Disable colonial nations
 NDefines.NCountry.CULTURAL_UNION_MIN_DEV = 9999999          -- Disable cultural union (doesn't make sense with current cultures)
 NDefines.NCountry.CULTURAL_UNION_MIN_RANK = -1              -- Force dev check for cultural union
-NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0        -- Disable cost increase for advisors
 NDefines.NCountry.CORE_LOSE = -1                            -- Cores are never lost
 NDefines.NCountry.CORE_LOSE_CULTURE_GROUP = -1              -- Cores are never lost
+NDefines.NCountry.CORE_LOSE_PRIMARY_CULTURE_TAG = -1
 
 --------------------------------
 -- Mechanics
@@ -36,7 +33,7 @@ NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 0
 --------------------------------
 -- Country
 --------------------------------
-NDefines.NCountry.POWER_MAX = 1000                      -- Clean
+NDefines.NCountry.POWER_MAX = 1000
 
 -- Ruler
 NDefines.NCountry.MAX_EXTRA_PERSONALITIES = 2           -- Allow 3 modifiers
@@ -47,19 +44,17 @@ NDefines.NCountry.ABDICATE_RULING_LENGTH_THRESHOLD = 0 -- Allow abdication anyti
 NDefines.NCountry.ABDICATE_LEGITIMACY_HIT = -90 -- Make abdication much more costly
 NDefines.NCountry.ABDICATE_PRESTIGE_HIT = -90 -- Make abdication much more costly
 
--- Costs
-NDefines.NCountry.PS_BUY_IDEA = 500
-NDefines.NCountry.PS_ESTABLISH_SIBERIAN_FRONTIER = 100
-NDefines.NCountry.PS_FACTION_BOOST = 25
+-- Ages
 NDefines.NCountry.SPLENDOR_ABILITY_COST = 600
 
 -- Ideas
-NDefines.NCountry.FREE_IDEA_GROUP_COST = 1.5  
-NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.5
+NDefines.NCountry.FREE_IDEA_GROUP_COST = 3 
+NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 1.0
+NDefines.NCountry.ABANDON_IDEAGROUP_REFUND = 0.1
 
 -- Technology
-NDefines.NCountry.TECH_TIME_COST = 0.3	    -- tech grow with 20% cost over time.
-NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1  -- per year ahead.
+NDefines.NCountry.TECH_TIME_COST = 0.0	    -- tech grow with 20% cost over time.
+NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.0  -- per year ahead.
 
 -- Exploit
 NDefines.NCountry.EXPLOIT_ADM_INCOME = 120      -- Make exploit development more useful
@@ -93,7 +88,44 @@ NDefines.NCountry.INNOVATIVENESS_AHEAD_OF_TIME_BONUS = 0.1 -- Make innovativenes
 -- Migration
 NDefines.NCountry.MIGRATION_BOOST = 25
 NDefines.NCountry.MIGRATION_COOLDOWN = 64
-NDefines.NCountry.MIGRATION_DEPLETION_TIME = 1800
+NDefines.NCountry.MIGRATION_DEPLETION_TIME = 365
+
+-- Costs
+NDefines.NCountry.PS_BUY_IDEA = 400
+NDefines.NCountry.PS_ADVANCE_TECH = 600
+NDefines.NCountry.PS_BUY_GENERAL = 100
+NDefines.NCountry.PS_BUY_ADMIRAL = 100
+NDefines.NCountry.PS_BUY_CONQUISTADOR = 100
+NDefines.NCountry.PS_BUY_EXPLORER = 100
+NDefines.NCountry.PS_ARTILLERY_BARRAGE = 100
+NDefines.NCountry.PS_NAVAL_BARRAGE = 100
+NDefines.NCountry.PS_FORCE_MARCH = 5
+NDefines.NCountry.PS_REDUCE_INFLATION = 100
+NDefines.NCountry.PS_MOVE_CAPITAL = 100
+NDefines.NCountry.PS_MOVE_CAPITAL_EXTRA = 0
+NDefines.NCountry.PS_MOVE_TRADE_PORT = 100
+NDefines.NCountry.PS_REPLACE_RIVAL = 0
+NDefines.NCountry.PS_SEIZE_COLONY = 100
+NDefines.NCountry.PS_BURN_COLONY = 50
+NDefines.NCountry.PS_ATTACK_NATIVES = 25
+NDefines.NCountry.PS_SCORCH_EARTH = 25
+NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 100
+NDefines.NCountry.PS_FACTION_BOOST = 25
+NDefines.NCountry.PS_RAISE_TARIFFS = 100
+NDefines.NCountry.PS_LOWER_TARIFFS = 50
+NDefines.NCountry.PS_RAISE_WAR_TAXES = 100
+NDefines.NCountry.PS_CREATE_TRADE_POST = 100
+NDefines.NCountry.PS_ESTABLISH_SIBERIAN_FRONTIER = 100
+NDefines.NCountry.PS_IMPROVE_PROVINCE_BASE = 100
+NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 20
+NDefines.NCountry.PS_GARRISON_SORTIES = 10
+
+-- Missionaries
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 0.0				-- How much a missionary costs in itself
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 5.0	-- How much this is ncreased from development
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 0.0		-- How much this is ncreased from local autonomy
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_BASE = 0.0	    -- The local autonomy is added to this base in the formula.
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 100
 
 --------------------------------
 -- Diplomacy
@@ -138,7 +170,7 @@ NDefines.NCountry.HRE_MAX_RANK_ELECTOR = 3
 -- Economy
 --------------------------------
 NDefines.NEconomy.COLONIAL_MAINTENANCE_FACTOR = 2.0 -- Make colonisation cheaper
-NDefines.NEconomy.BASE_INTERESTS = 10.0 -- Loans more risky in the wasteland
+NDefines.NEconomy.BASE_INTERESTS = 5.0 -- Loans more risky in the wasteland
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.05 -- 50% increase after all (20) mil techs taken
 NDefines.NEconomy.COLONY_MIN_AUTONOMY = 75 
 NDefines.NEconomy.OVERSEAS_MIN_AUTONOMY = 50
@@ -146,11 +178,6 @@ NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 25 -- Make claims better
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 75 -- Make unclaimed conquest worse
 NDefines.NEconomy.AUTONOMY_AT_DIPLO_ANNEX = 25 -- Make diplo annex better
 NDefines.NEconomy.EDICTS_COST_INCREASE = 1.0
-
--- Autonomy
-NDefines.NEconomy.DECREASE_AUTONOMY_STEP = 0
-NDefines.NEconomy.INCREASE_AUTONOMY_STEP = 0
-NDefines.NEconomy.AUTONOMY_CHANGE_DURATION = 5
 
 --------------------------------
 -- AI
@@ -165,11 +192,14 @@ NDefines.NAI.PEACE_TIME_MONTHS = 6 -- Reduce AI stubbornness
 NDefines.NAI.PEACE_EXCESSIVE_DEMANDS_THRESHOLD = 5
 NDefines.NAI.PEACE_TIME_MAX_MONTHS = 12
 NDefines.NAI.PEACE_INCONCLUSIVE_THRESHOLD = 0 -- Allow for peace demands at 0
-
+NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.5
 
 --------------------------------
 -- Military 
 --------------------------------
+NDefines.NMilitary.TRADITION_GAIN_LAND = 50
+NDefines.NMilitary.TRADITION_GAIN_NAVAL = 50
+
 NDefines.NMilitary.COSSACKS_SHOCK_DAMAGE_BONUS = 0.1
 NDefines.NMilitary.STRELTSY_FIRE_DAMAGE_BONUS = 0.1
 NDefines.NMilitary.FORTRESS_COST = 0.1 -- Make forts cheaper to maintain.
@@ -179,7 +209,9 @@ NDefines.NMilitary.ARTILLERY_SPEED = 1.0 -- Revert speed nerf Paradox introducte
 NDefines.NMilitary.FORT_PER_DEV_RATIO = 100 -- Make army trad. from forts easier to get.
 NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.05 -- Represents difficulty in supply across wasteland
 NDefines.NMilitary.MONTHLY_REINFORCE = 0.05 -- Represents difficulty in supply across wasteland
+NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_BASE = 10
 NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_FRACTION = 0.05 -- Reduce forcelimit influence on merc limit
+NDefines.NMilitary.WAR_LENGTH_DAMAGE_MODIFIER = 0.02
 
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 100 -- Battles more important than capture in the wasteland
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 100
@@ -189,6 +221,14 @@ NDefines.NMilitary.SUPERIORITY_WARGOAL_WARSCORE_THRESHOLD = 1
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 2
 
 NDefines.NMilitary.FORT_FLIPPING_TIME = 365
+
+NDefines.NMilitary.ARMY_DRILL_YEARLY_DECAY = -1
+NDefines.NMilitary.ARMY_DRILL_YEARLY_GAIN = 25.0
+NDefines.NMilitary.ARMY_DRILL_SKILL_MONTHS = 24
+NDefines.NMilitary.SUPPLY_DEPOT_DURATION_MONTHS = 60
+NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 10
+
+NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 1.0 -- Disable
 
 --------------------------------
 -- GOVERNMENT
@@ -229,6 +269,17 @@ NDefines.NGovernment.TRIBAL_ALLEGIANCE_MAX = 100
 NDefines.NGovernment.TRIBAL_ALLEGIANCE_HUMILIATE = 30.0
 NDefines.NGovernment.TRIBAL_FEDERATION_ABILITY_COST = 50
 NDefines.NGovernment.ENLIST_GENERAL_TRADITION = 50
+
+NDefines.NGovernment.LEGACY_NATIVES_REFORM_REPUBLIC_SPONSOR = "republic_reform"
+NDefines.NGovernment.LEGACY_NATIVES_REFORM_MONARCHY_SPONSOR = "frontier_settlement_reform"
+NDefines.NGovernment.LEGACY_NATIVES_REFORM_THEOCRACY_SPONSOR = "theocracy_reform"
+
+NDefines.NGovernment.GOVERNMENT_REFORM_BASE_COST = 100.0
+NDefines.NGovernment.GOVERNMENT_REFORM_COST_INCREASE = 100.0
+NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_CORRUPTION = 10.0
+NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_MAX_CORRUPTION = 50.0
+NDefines.NGovernment.GOVERNMENT_REFORM_YEARLY_BASE_PROGRESS = 10.0
+NDefines.NGovernment.GOVERNMENT_REFORM_HISTORIC_AUTONOMY = 0.0
 
 --------------------------------
 -- RELIGION
@@ -318,8 +369,48 @@ NDefines.NGraphics.SHOW_MONTHLY_TAX_INCOME = 1
 --------------------------------
 -- Estates
 --------------------------------
-NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MIN = 0.0   -- no decay
-NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MAX = 0.0   -- no decay
-NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_1 = 1
-NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_2 = 1
-NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_3 = 1
+NDefines.NCountry.ALLOW_ESTATE_AND_PARLIAMENT_SEAT_IN_PROVINCE = 1
+NDefines.NCountry.ALLOW_ESTATE_IN_CAPITAL = 1
+
+NDefines.NCountry.ESTATE_ANGRY_THRESHOLD = 40
+NDefines.NCountry.ESTATE_HAPPY_THRESHOLD = 60
+
+NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MIN = 0.5
+NDefines.NCountry.ESTATE_LOYALTY_DECAY_BASE_MAX = 1
+
+NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_1 = 20
+NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_2 = 40
+NDefines.NCountry.ESTATE_INFLUENCE_LEVEL_3 = 60
+
+NDefines.NCountry.ESTATE_PROVINCE_HAPPINESS_INCREASE = 1.0 
+NDefines.NCountry.ESTATE_PROVINCE_HAPPINESS_DECREASE = 1.0 
+NDefines.NCountry.ESTATE_PROVINCE_HAPPINESS_CHANGE_MAX_POS = 25 
+NDefines.NCountry.ESTATE_PROVINCE_HAPPINESS_CHANGE_MAX_NEG = 25 
+
+NDefines.NCountry.ESTATE_PROVINCE_POWER = 1.5
+NDefines.NCountry.ESTATE_PROVINCE_POWER_MAX = 50
+NDefines.NCountry.ESTATE_DANGER_THRESHOLD = 80
+NDefines.NCountry.ESTATE_GRANT_PROVINCE_COOLDOWN = 5
+
+NDefines.NAI.DANGEROUS_ESTATE_INFLUENCE_BUFFER = 5.0
+
+--------------------------------
+-- Exploration
+--------------------------------
+NDefines.NCountry.EXPLORE_COAST_EVENT_CHANCE = 10
+NDefines.NCountry.MIN_TECH_FOR_CIRCUMNAVIGATE = 20
+NDefines.NCountry.CIRCUMNAVIGATION_PROVINCE_1 = 1516
+NDefines.NCountry.CIRCUMNAVIGATION_PROVINCE_2 = 1530
+NDefines.NCountry.CIRCUMNAVIGATION_PROVINCE_3 = 1554
+NDefines.NCountry.CIRCUMNAVIGATION_PROVINCE_4 = 1667
+NDefines.NCountry.CIRCUMNAVIGATION_PROVINCE_5 = 1690
+NDefines.NCountry.CIRCUMNAVIGATION_PROVINCE_6 = 1716
+NDefines.NCountry.MIN_SHIPS_TO_EXPLORE = 3
+
+--------------------------------
+-- Advisors
+--------------------------------
+NDefines.NCountry.MAXIMUM_ADVISOR_SKILL = 10 
+NDefines.NCountry.PROMOTE_COST_MONTHS_ADVISOR_SALARY = 120
+NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0.0 -- Disable yearly increase.
+NDefines.NEconomy.ADVISOR_COST = 1.0

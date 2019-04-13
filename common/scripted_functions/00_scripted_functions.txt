@@ -21,27 +21,11 @@ can_harsh_treatment = {
 }
 
 can_reduce_war_exhaustion = {
-    condition = {
-		tooltip = "BLOCKED"
-		potential = {
-            always = yes
-		}
-		allow = {
-			always = no
-		}
-	}
+    
 }
 
 can_reduce_inflation = {
-    condition = {
-		tooltip = "BLOCKED"
-		potential = {
-            always = yes
-		}
-		allow = {
-			always = no
-		}
-	}
+    
 }
 
 can_declare_bankruptcy = {
@@ -76,15 +60,7 @@ can_change_national_focus = {
 }
 
 can_increase_stability = {
-    condition = {
-		tooltip = "BLOCKED"
-		potential = {
-            always = yes
-		}
-		allow = {
-			always = no
-		}
-	}
+    
 }
 
 # ROOT = province, FROM = country
@@ -197,17 +173,7 @@ can_add_estate = {
 }
 
 can_expel_minority_from = {
-	condition = {
-		potential = {
-			OR = {
-				is_religious_center_province = yes
-				is_reformation_center = yes
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
+	
 }
 
 ### Special functions

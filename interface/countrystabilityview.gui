@@ -55,7 +55,8 @@ guiTypes = {
 	}	
 
 	windowType = {
-		name = "countrystabilityview"	
+		name = "countrystabilityview"
+		#position = { x=0 y=140 }	
 		position = { x=-600 y=140 }	
 		show_position = { x=0 y =140 }
 		hide_position = { x=-600 y =140 }	
@@ -123,7 +124,7 @@ guiTypes = {
 		{
 			name ="stability_negative_progress"
 			spriteType = "GFX_stability_negative_progressbar"
-			position = { x= 41 y = 247 }
+			position = { x= 41 y = 235 }
 			Orientation = "UPPER_LEFT"
 		}	
 		
@@ -131,7 +132,7 @@ guiTypes = {
 		{
 			name ="stability_positive_progress"
 			spriteType = "GFX_stability_positive_progressbar"
-			position = { x= 102 y = 247 }
+			position = { x= 102 y = 235 }
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -139,7 +140,7 @@ guiTypes = {
 		{
 			name ="stability_progress_frame"
 			spriteType = "GFX_stability_bar_frame"
-			position = { x= 29 y = 242 }
+			position = { x= 29 y = 230 }
 			Orientation = "UPPER_LEFT"
 		}		
 		
@@ -147,12 +148,12 @@ guiTypes = {
 		{
 			name ="stability_progress_threshold"
 			spriteType = "GFX_stability_boost_indicator"
-			position = { x = 84 y = 241 }
+			position = { x = 84 y = 229 }
 		}	
 		
 		instantTextBoxType = {
 			name = "stability_value"
-			position = { x = 89 y = 242 }
+			position = { x = 89 y = 230 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
@@ -166,7 +167,7 @@ guiTypes = {
 		{
 			name ="stability_boost"
 			quadTextureSprite= "GFX_standard_button_105"
-			position = { x= 51 y = -9999 }
+			position = { x= 51 y = 255 }
 			Orientation = "UPPER_LEFT"
 			buttonText = "BOOST"
 			buttonFont = "vic_18"
@@ -305,7 +306,7 @@ guiTypes = {
 		{
 			name ="warex_icon"
 			spriteType = "GFX_icon_war_exhaustion"
-			position = { x= 32 y = 110 }
+			position = { x= 28 y = 110 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_warexhaustion"
 		}
@@ -314,7 +315,7 @@ guiTypes = {
 		{
 			name ="warex_progress"
 			spriteType = "GFX_warex_progressbar"
-			position = { x= 42 y = 145 }
+			position = { x= 38 y = 145 }
 			Orientation = "UPPER_LEFT"
 		}	
 
@@ -322,13 +323,13 @@ guiTypes = {
 		{
 			name ="warex_progress_frame"
 			spriteType = "GFX_progress_bar_frame"
-			position = { x= 30 y = 140 }
+			position = { x= 26 y = 140 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		instantTextBoxType = {
 			name = "warex_progress_value"
-			position = { x = 40 y = 141}
+			position = { x = 36 y = 141}
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
@@ -343,7 +344,7 @@ guiTypes = {
 		{
 			name ="reduce_warex"
 			quadTextureSprite= "GFX_standard_button_105"
-			position = { x=29  y = -9999 }
+			position = { x=29  y = 166 }
 			Orientation = "UPPER_LEFT"
 			buttonText = "REDUCE"
 			buttonFont = "vic_18"
@@ -353,7 +354,7 @@ guiTypes = {
 		{
 			name ="warex_development_icon"
 			spriteType = "GFX_inflation_arrows_strip"
-			position = { x= 85 y = 162 }
+			position = { x= 135 y = 165 }
 			Orientation = "UPPER_LEFT"
 		}
 		
