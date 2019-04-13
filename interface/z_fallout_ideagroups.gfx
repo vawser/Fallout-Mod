@@ -1,4 +1,7 @@
 spriteTypes = {	
+    #---------------------------------------------------
+    # Primitives
+    #---------------------------------------------------
     spriteType = {
 		name = "GFX_idea_native_adm_ideas"
 		texturefile = "gfx//interface//ideas//native_adm_ideas.dds"
@@ -20,57 +23,292 @@ spriteTypes = {
 		
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	spriteType = {
-		name = "GFX_idea_none"
-		texturefile = "gfx//interface//ideas//empty.tga"
+    
+    #---------------------------------------------------
+    # ADM
+    #---------------------------------------------------
+    spriteType = {
+		name = "GFX_idea_fallout_dummy_ideas"
+		texturefile = "gfx//interface//ideas//fallout_dummy_ideas.tga"
 		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_idea_empty"
-		texturefile = "gfx//interface//ideas//empty.tga"
-		noOfFrames = 1
-		
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
-	spriteType = {
-		name = "GFX_idea_unknown"
-		texturefile = "gfx//interface//ideas_EU4//unknown.dds"
+    spriteType = {
+		name = "GFX_idea_fallout_innovation_ideas"
+		texturefile = "gfx//interface//ideas//fallout_innovation_ideas.tga"
 		noOfFrames = 1
-		
 		effectFile = "gfx/FX/buttonstate_linear.lua"
-		legacy_lazy_load = no
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_religious_ideas"
+		texturefile = "gfx//interface//ideas//fallout_religious_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_economic_ideas"
+		texturefile = "gfx//interface//ideas//fallout_economic_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_expansion_ideas"
+		texturefile = "gfx//interface//ideas//fallout_expansion_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_administrative_ideas"
+		texturefile = "gfx//interface//ideas//fallout_administrative_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_harmony_ideas"
+		texturefile = "gfx//interface//ideas//fallout_harmony_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_law_ideas"
+		texturefile = "gfx//interface//ideas//fallout_law_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_development_ideas"
+		texturefile = "gfx//interface//ideas//fallout_development_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_absolutism_ideas"
+		texturefile = "gfx//interface//ideas//fallout_absolutism_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_autonomy_ideas"
+		texturefile = "gfx//interface//ideas//fallout_autonomy_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_monarchy_ideas"
+		texturefile = "gfx//interface//ideas//fallout_monarchy_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_republic_ideas"
+		texturefile = "gfx//interface//ideas//fallout_republic_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_theocracy_ideas"
+		texturefile = "gfx//interface//ideas//fallout_theocracy_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_tribal_ideas"
+		texturefile = "gfx//interface//ideas//fallout_tribal_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_settlement_ideas"
+		texturefile = "gfx//interface//ideas//fallout_settlement_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
     
+    #---------------------------------------------------
+    # DIP
+    #---------------------------------------------------
     spriteType = {
-		name = "GFX_ideas_view_pick_bg"
-		texturefile = "gfx//interface//ideas//ideagroup_bg.dds"
-		loadType = "INGAME"
-		transparencecheck = yes
+		name = "GFX_idea_fallout_espionage_ideas"
+		texturefile = "gfx//interface//ideas//fallout_espionage_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
     spriteType = {
-		name = "GFX_ideas_view_selected_bg"
-		texturefile = "gfx//interface//ideas//ideagroup_selected_bg.dds"
-		loadType = "INGAME"
-		transparencecheck = yes
+		name = "GFX_idea_fallout_dynastic_ideas"
+		texturefile = "gfx//interface//ideas//fallout_dynastic_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
     spriteType = {
-		name = "GFX_idea_text_bg"
-		texturefile = "gfx//interface//ideas//idea_text_bg.dds"
+		name = "GFX_idea_fallout_influence_ideas"
+		texturefile = "gfx//interface//ideas//fallout_influence_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
     spriteType = {
-		name = "GFX_idea_text_bg_disabled"
-		texturefile = "gfx//interface//ideas//idea_text_bg_disabled.dds"
+		name = "GFX_idea_fallout_trade_ideas"
+		texturefile = "gfx//interface//ideas//fallout_trade_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_exploration_ideas"
+		texturefile = "gfx//interface//ideas//fallout_exploration_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_maritime_ideas"
+		texturefile = "gfx//interface//ideas//fallout_maritime_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_assimilation_ideas"
+		texturefile = "gfx//interface//ideas//fallout_assimilation_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_society_ideas"
+		texturefile = "gfx//interface//ideas//fallout_society_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_propaganda_ideas"
+		texturefile = "gfx//interface//ideas//fallout_propaganda_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_naval_bombardment_ideas"
+		texturefile = "gfx//interface//ideas//fallout_naval_bombardment_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_naval_skirmish_ideas"
+		texturefile = "gfx//interface//ideas//fallout_naval_skirmish_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_naval_trade_ideas"
+		texturefile = "gfx//interface//ideas//fallout_naval_trade_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_naval_organisation_ideas"
+		texturefile = "gfx//interface//ideas//fallout_naval_organisation_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_naval_leadership_ideas"
+		texturefile = "gfx//interface//ideas//fallout_naval_leadership_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_naval_tactics_ideas"
+		texturefile = "gfx//interface//ideas//fallout_naval_tactics_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
     
+    #---------------------------------------------------
+    # MIL
+    #---------------------------------------------------
     spriteType = {
-		name = "GFX_idea_policy_ideas"
-		texturefile = "gfx//interface//ideas//idea_dip.dds"
+		name = "GFX_idea_fallout_offensive_ideas"
+		texturefile = "gfx//interface//ideas//fallout_offensive_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
-    
     spriteType = {
-		name = "GFX_idea_policy_ideas_2"
-		texturefile = "gfx//interface//ideas//idea_adm.dds"
+		name = "GFX_idea_fallout_defensive_ideas"
+		texturefile = "gfx//interface//ideas//fallout_defensive_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_quality_ideas"
+		texturefile = "gfx//interface//ideas//fallout_quality_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_quantity_ideas"
+		texturefile = "gfx//interface//ideas//fallout_quantity_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_professional_army_ideas"
+		texturefile = "gfx//interface//ideas//fallout_professional_army_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_mercenary_army_ideas"
+		texturefile = "gfx//interface//ideas//fallout_mercenary_army_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_army_organisation_ideas"
+		texturefile = "gfx//interface//ideas//fallout_army_organisation_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_army_leadership_ideas"
+		texturefile = "gfx//interface//ideas//fallout_army_leadership_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_army_tactics_ideas"
+		texturefile = "gfx//interface//ideas//fallout_army_tactics_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_armaments_ideas"
+		texturefile = "gfx//interface//ideas//fallout_armaments_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_fortification_ideas"
+		texturefile = "gfx//interface//ideas//fallout_fortification_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_militarization_ideas"
+		texturefile = "gfx//interface//ideas//fallout_militarization_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_subjugation_ideas"
+		texturefile = "gfx//interface//ideas//fallout_subjugation_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_tyranny_ideas"
+		texturefile = "gfx//interface//ideas//fallout_tyranny_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+    spriteType = {
+		name = "GFX_idea_fallout_imperialism_ideas"
+		texturefile = "gfx//interface//ideas//fallout_imperialism_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
 }

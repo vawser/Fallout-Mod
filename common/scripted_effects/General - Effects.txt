@@ -54,3 +54,17 @@ nuke_province = {
     }
 }
 
+integrate_ncr_territory = {
+    if = {
+        limit = {
+            exists = $TAG$
+            $TAG$ = {
+                is_subject_of_type = ncr_territory
+                is_subject_of = ROOT
+                ai = yes
+                NOT = { liberty_desire = 50 }
+            }
+        }
+        inherit = $TAG$
+    }
+}

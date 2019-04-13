@@ -21,7 +21,10 @@ country_event = {
     option = {
         name = courier.1.option.a
         
-        emperor = { country_event = { id = courier.3 } }
+        every_country = { 
+            limit = { has_reform = ncr_reform }
+            country_event = { id = courier.3 } 
+        }
         
         ai_chance = { factor = 45 }
     }
@@ -121,15 +124,19 @@ country_event = {
     option = {
         name = courier.3.option.a
 
-        hidden_effect = { remove_historical_rival = emperor }
-        create_alliance = NVG
-        add_opinion = {
-            who = NVG
-            modifier = good_relations
-        }
-        reverse_add_opinion = {
-            who = NVG
-            modifier = good_relations
+        hidden_effect = { 
+            NVG = {
+                remove_historical_rival = ROOT
+            }
+            create_alliance = NVG
+            add_opinion = {
+                who = NVG
+                modifier = good_relations
+            }
+            reverse_add_opinion = {
+                who = NVG
+                modifier = good_relations
+            }
         }
 
         ai_chance = {
@@ -168,7 +175,7 @@ country_event = {
     trigger = {
         OR = {
             tag = CAE
-            tag = emperor
+            has_reform = ncr_reform
             tag = NVG
         }
         NOT = { has_country_flag = courier_offer_done }

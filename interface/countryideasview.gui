@@ -1,7 +1,8 @@
 guiTypes = {
 
 	windowType = {
-		name = "countryideasview"	
+		name = "countryideasview"
+		#position = { x=0 y=140 }	
 		position = { x=-600 y=140 }	
 		show_position = { x=0 y =140 }
 		hide_position = { x=-600 y =140 }	
@@ -165,7 +166,7 @@ guiTypes = {
 		listboxType = {
 			name = "ideagroups_listbox_left"
 			backGround = ""
-			position = { x=15 y=250 }
+			position = { x=25 y=243 }
 			size = { x=270 y=420 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
@@ -177,11 +178,11 @@ guiTypes = {
 		listboxType = {
 			name = "ideagroups_listbox_right"
 			backGround = ""
-			position = { x=275 y=250 }
+			position = { x=276 y=243 }
 			size = { x=270 y=420 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
-			spacing = 1
+			spacing = 1.0
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 		}		
@@ -220,7 +221,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "adm_header"
-				position = { x = 20 y = 31 }
+				position = { x = 16 y = 31 }
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 4 y = 4}	
@@ -232,7 +233,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "dip_header"
-				position = { x = 350 y = 31 }
+				position = { x = 366 y = 31 }
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 4 y = 4}	
@@ -244,7 +245,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "mil_header"
-				position = { x = 670 y = 31 }
+				position = { x = 690 y = 31 }
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 4 y = 4}	
@@ -257,33 +258,33 @@ guiTypes = {
 			listboxType = {
 				name = "adm_ideaunlockgroups_listbox"
 				backGround = ""
-				position = { x=50 y=70 }
-				size = { x=260 y=480 }
+				position = { x=20 y=63 }
+				size = { x=320 y=504 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
-				spacing = 1
+				spacing = 1.5
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
 			}			
 			listboxType = {
 				name = "dip_ideaunlockgroups_listbox"
 				backGround = ""
-				position = { x=370 y=70 }
-				size = { x=260 y=480 }
+				position = { x=356 y=63 }
+				size = { x=320 y=504 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
-				spacing = 1
+				spacing = 1.5
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
 			}			
 			listboxType = {
 				name = "mil_ideaunlockgroups_listbox"
 				backGround = ""
-				position = { x=690 y=70 }
-				size = { x=260 y=480 }
+				position = { x=692 y=63 }
+				size = { x=320 y=504 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
-				spacing = 1
+				spacing = 1.5
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
 			}			
@@ -292,12 +293,12 @@ guiTypes = {
 			{
 				name ="close_gold"
 				spriteType = "GFX_close_gold2"
-				position = { x=961 y =6 }
+				position = { x=1000 y =6 }
 			}	
 			
 			guiButtonType = {
 				name = "back_button"
-				position = { x=965 y =9}
+				position = { x=1004 y =9}
 				SpriteType ="GFX_button_close"	
 				tooltip = ""
 				tooltipText =""
@@ -351,14 +352,14 @@ guiTypes = {
 		}		
 	}	
 	
-	#--------------------------------
-    # Picked Ideagroup
-    #--------------------------------
+	################################################################################################
+	### --- Idea group item
+	
 	windowType = {
 		name = "countryideaview_ideagroupitem"
 		backGround =""
 		position = { x=0 y=0 }	
-		size = { x=64 y=37 }
+		size = { x=64 y=80 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -366,25 +367,16 @@ guiTypes = {
 		iconType =
 		{
 			name ="ideas_category_bg"
-			spriteType = "GFX_ideas_view_selected_bg"
+			spriteType = "GFX_ideaView_entry_bg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
 		
-        OverlappingElementsBoxType = {
-            name = "ideas"
-            position = { x= -3 y = 24 }
-            size = { x = 32 y = 32 }
-            Orientation = "UPPER_LEFT"
-            format = left
-            spacing = 2
-		}
-        
 		iconType =
 		{
 			name ="ideas_category"
 			spriteType = "GFX_idea_empty"
-			position = { x= 0 y = -9999 }
+			position = { x= 0 y = 19 }
 			Orientation = "UPPER_LEFT"
 		}	
 		
@@ -393,34 +385,28 @@ guiTypes = {
 		{
 			name ="ideas_cost"
 			spriteType = "GFX_icon_powers_administrative"
-			position = { x= 3 y = -9999 }
+			position = { x= 3 y = 2 }
 			Orientation = "UPPER_LEFT"
 		}				
 				
-        iconType = {
-			name ="idea_text_bg"
-			spriteType = "GFX_idea_text_bg"
-			position = { x = 42 y = 1 }
-			Orientation = "UPPER_LEFT"
-		}
-        
+
 		instantTextBoxType = {
 			name = "ideas_idea_title"
-			position = { x = 50 y = 3 }
+			position = { x = 30 y = 6 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
 			text = "xtz"	
-			maxWidth = 203
+			maxWidth = 185
 			maxHeight = 32
 			format = left
 		}
-
+		
 		iconType =
 		{
 			name ="ideas_bonus_icon"
 			spriteType = "GFX_ideas_bonus_strip"
-			position = { x = 184 y = -9999 }
+			position = { x = 225 y = 3 }
 			Orientation = "UPPER_LEFT"
 
 		}	
@@ -429,16 +415,25 @@ guiTypes = {
 		{
 			name ="abandon_idea_button"
 			quadTextureSprite= "GFX_abandon_idea"
-			position = { x= 235 y = -9999 }
+			position = { x= 203 y = 5 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_ideas"
+		}
+		
+		OverlappingElementsBoxType = {
+				name = "ideas"
+				position = { x = 54 y = 50 }
+				size = { x = 200 y = 80 }
+				Orientation = "UPPER_LEFT"
+				format = left
+				spacing = 2
 		}
 
 		iconType =
 		{
 			name ="idea_progress"
 			spriteType = "GFX_ideaView_progressbar"
-			position = { x= 46 y = -9999 }
+			position = { x= 66 y = 62 }
 			Orientation = "UPPER_LEFT"
 		}	
 
@@ -446,66 +441,10 @@ guiTypes = {
 		{
 			name ="progress_frame_army"
 			spriteType = "GFX_ideaView_progress_frame_long"
-			position = { x = 36 y = -9999 }
+			position = { x = 56 y = 58 }
 		}	
 	}
 	
-    #--------------------------------
-    # Unpicked Ideagroup
-    #--------------------------------
-	windowType = {
-		name = "countryideaview_ideagroupunlockitem"
-		backGround =""
-		position = { x=0 y=0 }	
-		size = { x=255 y=37 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder = ""
-		
-		
-		
-		guiButtonType =
-		{
-			name ="unlock"
-			quadTextureSprite= "GFX_ideas_view_pick_bg"
-			position = { x= 0 y = 0 }
-			Orientation = "UPPER_LEFT"
-#			buttonText = "UNLOCK"
-			buttonFont = "vic_18"
-			clicksound = click
-			hint_tag = "hint_ideagroup"
-		}
-		
-        iconType = {
-			name ="idea_text_bg"
-			spriteType = "GFX_idea_text_bg_disabled"
-			position = { x = 42 y = 1 }
-			Orientation = "UPPER_LEFT"
-		}
-        
-		iconType =
-		{
-			name ="available_idea_glow"
-			spriteType = "GFX_available_idea_glow"
-			position = { x= -2 y = -9999 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-		instantTextBoxType = {
-			name = "txt"
-			position = { x = 15 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = "UNLOCK"	
-			maxWidth = 220
-			maxHeight = 32
-			format = centre
-			allwaystransparent = yes
-		}			
-	}	
-	
-    
 	windowType = {
 		name = "countrynativeview_ideagroupitem"
 		backGround =""
@@ -637,13 +576,61 @@ guiTypes = {
 	}
 	
 	################################################################################################
+	### --- Idea group unlock item
+	
+	windowType = {
+		name = "countryideaview_ideagroupunlockitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=255 y=80 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		
+		
+		guiButtonType =
+		{
+			name ="unlock"
+			quadTextureSprite= "GFX_ideaView_free_slot_button"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+#			buttonText = "UNLOCK"
+			buttonFont = "vic_18"
+			clicksound = click
+			hint_tag = "hint_ideagroup"
+		}
+		
+		iconType =
+		{
+			name ="available_idea_glow"
+			spriteType = "GFX_available_idea_glow"
+			position = { x= -2 y = -3 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "txt"
+			position = { x = 15 y = 19 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "UNLOCK"	
+			maxWidth = 220
+			maxHeight = 32
+			format = centre
+			allwaystransparent = yes
+		}			
+	}	
+	
+	################################################################################################
 	### --- Idea group unlock list item
 	
 	windowType = {
 		name = "countryideaview_ideagroupunlocklistitem"
 		backGround =""
 		position = { x=0 y=0 }	
-		size = { x=300 y=40 }
+		size = { x=300 y=84 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -651,24 +638,17 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="ideagroup_background"
-			quadTextureSprite= "GFX_ideas_view_pick_bg"
+			quadTextureSprite= "GFX_ideas_view_unlockideabg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			clicksound = click
+			clicksound = click #DOESNT WORK
 		}
 		
-        iconType = {
-			name ="idea_text_bg"
-			spriteType = "GFX_idea_text_bg"
-			position = { x = 42 y = 1 }
-			Orientation = "UPPER_LEFT"
-		}
-        
 		iconType =
 		{
 			name ="ideas_category"
 			spriteType = "GFX_idea_empty"
-			position = { x= 9 y =-9999 }
+			position = { x= 9 y = 11 }
 			Orientation = "UPPER_LEFT"
 
 		}		
@@ -677,40 +657,41 @@ guiTypes = {
 		{
 			name ="ideas_cost"
 			spriteType = "GFX_icon_powers_administrative"
-			position = { x= 190 y = -9999 }
+			position = { x= 75 y = 4 }
 			Orientation = "UPPER_LEFT"
 		}				
 
 		instantTextBoxType = {
 			name = "ideas_idea_title"
-			position = { x = 50 y = 3 }
+			position = { x = 45 y = 8 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
-			text = "xtz"	
-			maxWidth = 203
+			text = ""	
+			maxWidth = 280
 			maxHeight = 32
-			format = left
+			format = centre
 		}	
 
 		iconType =
 		{
 			name ="ideas_bonus_icon"
 			spriteType = "GFX_ideas_bonus_strip"
-			position = { x = 152 y = -9999 }
+			position = { x = 278 y = 3 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 		}		
 		
 		OverlappingElementsBoxType = {
-            name = "ideas"
-            position = { x = 38 y = 35 }
-            size = { x = 40 y = 40 }
-            Orientation = "UPPER_LEFT"
-            format = left
-            spacing = 1
+				name = "ideas"
+				position = { x = 114 y = 65 }
+				size = { x = 240 y = 80 }
+				Orientation = "UPPER_LEFT"
+				format = left
+				spacing = 8
 		}		
-        
-        
 	}	
+	
+	################################################################################################
+	
 }

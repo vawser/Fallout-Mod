@@ -1,0 +1,19 @@
+namespace = national_policies
+
+country_event = {
+	id = national_policies.1
+	title = national_policies.1.title
+	desc = national_policies.1.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+    
+	option = {
+		name = law_setup.1.option.a
+    
+	}
+    
+    after = {
+        clr_country_flag = viewing_national_policies
+    }
+}

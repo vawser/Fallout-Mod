@@ -1,0 +1,20 @@
+country_decisions = {
+	view_national_policies = {
+		potential = {
+            NOT = { has_country_flag = viewing_national_policies }
+            ai = no
+		}
+		allow = {
+            always = yes
+		}
+		
+		effect = {
+			hidden_effect = { set_country_flag = viewing_national_policies }
+            country_event = { id = national_policies.1 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

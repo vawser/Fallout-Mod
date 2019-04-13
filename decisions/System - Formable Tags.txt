@@ -118,10 +118,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = X03 }
             NOT = { exists = X12 }
-			OR = {
-				technology_group = tech_ncr
-				is_emperor = yes
-			}
+			technology_group = tech_ncr
             NOT = { is_unswitchable_nation = yes }
 		}
 		

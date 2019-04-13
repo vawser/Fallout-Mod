@@ -8,7 +8,7 @@ country_event = {
     picture = NCR_STATUE_eventPicture
 	
 	trigger = {
-		is_emperor = yes
+		has_reform = ncr_reform
         NOT = { has_global_flag = ncr_focus }
 	}
 	
@@ -52,7 +52,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		is_emperor = yes
+		has_reform = ncr_reform
 		owns_core_province = 266
         266 = { NOT = { has_province_modifier = building_ranger_unification_statue } }
 	}
@@ -99,7 +99,10 @@ country_event = {
 	trigger = {
 		266 = {
             has_province_modifier = building_ranger_unification_statue
-            NOT = { owned_by = emperor }
+            OR = {
+                NOT = { owned_by = NCR }
+                NOT = { owned_by = SHA }
+            }
         }
 	}
     
@@ -137,10 +140,9 @@ country_event = {
     
 	option = {
 		name = ncr.4.option.a
-		trigger = { 		
-		    emperor = {
-				has_parliament = yes
-			}   
+		trigger = { 	
+            has_reform = ncr_reform
+		    has_parliament = yes
 		}
 		add_inflation = 5
 		add_years_of_income = -0.25
@@ -163,9 +165,8 @@ country_event = {
 	option = {
 		name = ncr.4.option.a
 		trigger = { 		
-		    emperor = {
-				has_parliament = no
-			}   
+		    has_reform = ncr_reform
+            has_parliament = no
 		}
 		add_country_modifier = {
             name = bos_ncr_currency_crisis

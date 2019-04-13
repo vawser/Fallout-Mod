@@ -1,0 +1,655 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+# ai_will do is only used to determine which idea group is picked if AI_USES_HISTORICAL_IDEA_GROUPS define is 0, OR start is custom/random
+# ai never picks an idea that resolves to ai_will_do = 0, even if AI_USES_HISTORICAL_IDEA_GROUPS = 1
+# ROOT = country picking the idea
+# groups set to colonial=yes will be higher prioritized by the AI when spending power
+
+# Offensive 
+fallout_offensive_ideas = {
+    category = MIL
+
+    bonus = {
+        land_attrition = -0.2
+    }
+    
+    # Suprise Offensive
+    fallout_offensive_ideas_1 = {
+        leader_land_shock = 1
+    }
+    # Local Conscripts
+    fallout_offensive_ideas_2 = {
+        global_regiment_recruit_speed = -0.2
+    }
+    # Lay of the Land
+    fallout_offensive_ideas_3 = {
+        leader_land_manuever = 1
+    }
+    # Glory of War
+    fallout_offensive_ideas_4 = {
+        prestige_from_land = 1.0
+    }
+    # Energy Weaponry
+    fallout_offensive_ideas_5 = {
+        siege_ability = 0.2
+    }
+    # Grand Army
+    fallout_offensive_ideas_6 = {
+        land_forcelimit_modifier = 0.2
+    }
+    # Wasteland Discipline
+    fallout_offensive_ideas_7 = {
+        discipline = 0.05
+    }
+    
+    ai_will_do = {
+        factor = 1
+        
+        modifier = {
+			factor = 2
+			personality = ai_militarist 
+		}
+    }
+}
+
+# Defensive
+fallout_defensive_ideas = {
+    category = MIL
+
+    bonus = {
+        hostile_attrition = 1
+    }
+    
+    # Battlefield Traditions
+    fallout_defensive_ideas_1 = {
+        army_tradition = 1
+    }
+    # Military Drill
+    fallout_defensive_ideas_2 = {
+        land_morale = 0.1
+		recover_army_morale_speed = 0.05
+    }
+    # Superior Aim
+    fallout_defensive_ideas_3 = {
+        leader_land_fire = 1
+    }
+    # Regimental System
+    fallout_defensive_ideas_4 = {
+        reinforce_speed = 0.33
+    }
+    # Defensive Mentality
+    fallout_defensive_ideas_5 = {
+        shock_damage_received = -0.05
+		defensiveness = 0.1
+    }
+    # Supply Lines
+    fallout_defensive_ideas_6 = {
+        global_supply_limit_modifier = 0.15
+    }
+    # Improved Foraging
+    fallout_defensive_ideas_7 = {
+        land_maintenance_modifier = -0.10
+    }
+    
+    ai_will_do = {
+        factor = 1
+        
+        modifier = {
+			factor = 2
+			personality = ai_militarist 
+		}
+    }
+}
+
+# Quality
+fallout_quality_ideas = {
+    category = MIL
+
+    bonus = {
+        discipline = 0.05
+    }
+    # Improved Ballistics
+    fallout_quality_ideas_1 = {
+        infantry_power = 0.1
+    }
+    # Military Simulations
+    fallout_quality_ideas_2 = {
+        army_tradition_decay = -0.01
+    }
+    # Vehicle Upgrades
+    fallout_quality_ideas_3 = {
+        cavalry_power = 0.1
+    }
+    # Reinforced Hulls
+    fallout_quality_ideas_4 = {
+        ship_durability = 0.1
+    }
+    # Naval Drill
+    fallout_quality_ideas_5 = {
+        naval_morale = 0.1
+    }
+    # Balanced Diet
+    fallout_quality_ideas_6 = {
+        naval_attrition = -0.2
+    }
+    # Massed Ordanance
+    fallout_quality_ideas_7 = {
+        artillery_power = 0.1
+    }
+    
+    ai_will_do = {
+        factor = 1
+        
+        modifier = {
+			factor = 2
+			personality = ai_militarist 
+		}
+    }
+}
+
+# Quantity
+fallout_quantity_ideas = {
+    category = MIL
+
+    bonus = {
+        land_forcelimit_modifier  = 0.5
+    }
+    # Grand Army
+    fallout_quantity_ideas_1 = {
+        global_manpower_modifier = 0.5
+    }
+    # All Can Serve
+    fallout_quantity_ideas_2 = {
+        manpower_recovery_speed = 0.5
+    }
+    # Enforced Service
+    fallout_quantity_ideas_3 = {
+        global_regiment_cost = -0.1
+    }
+    # Regular Meals
+    fallout_quantity_ideas_4 = {
+        land_maintenance_modifier = -0.10
+    }
+    # Mercenary Contracts
+    fallout_quantity_ideas_5 = {
+        possible_mercenaries = 0.25
+    }
+    # Homely Settlements
+    fallout_quantity_ideas_6 = {
+        garrison_size = 0.50
+    }
+    # Improved Supply Lines
+    fallout_quantity_ideas_7 = {
+        land_attrition = -0.1
+    }
+    
+    ai_will_do = {
+        factor = 1
+        
+        modifier = {
+			factor = 2
+			personality = ai_militarist 
+		}
+    }
+}
+
+fallout_professional_army_ideas = {
+    category = MIL
+
+    bonus = {
+        discipline = 0.05
+    }
+    # Professional Soldiers
+    fallout_professional_army_ideas_1 = {
+        army_tradition_decay = -0.02
+    }
+    # Scheduled Drills
+    fallout_professional_army_ideas_2 = {
+        drill_gain_modifier = 0.5
+        army_tradition = 0.5
+    }
+    # Forced Marches
+    fallout_professional_army_ideas_3 = {
+        movement_speed = 0.1
+    }
+    # Rations
+    fallout_professional_army_ideas_4 = {
+        land_attrition = -0.2
+    }
+    # Organised Reserves
+    fallout_professional_army_ideas_5 = {
+        reserves_organisation = 0.5
+    }
+    # Battleready
+    fallout_professional_army_ideas_6 = {
+        recover_army_morale_speed = 0.1
+    }
+    # Daily Drills
+    fallout_professional_army_ideas_7 = {
+        drill_decay_modifier = -0.5
+        army_tradition = 0.5
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Mercenary Army
+fallout_mercenary_army_ideas = {
+    category = MIL
+
+    bonus = {
+        mercenary_discipline = 0.05
+    }
+    # Mercenary Contacts
+    fallout_mercenary_army_ideas_1 = {
+        mercenary_cost = -0.25
+    }
+    # Established Contracts
+    fallout_mercenary_army_ideas_2 = {
+        possible_mercenaries = 1.0
+    }
+    # Terror in the Fields
+    fallout_mercenary_army_ideas_3 = {
+        hostile_attrition = 1
+    }
+    # Gold before Promises
+    fallout_mercenary_army_ideas_4 = {
+        merc_maintenance_modifier = -0.2
+    }
+    # Mercenary Generals
+    fallout_mercenary_army_ideas_5 = {
+        free_leader_pool = 1
+    }
+    # A Little Coin
+    fallout_mercenary_army_ideas_6 = {
+        global_regiment_recruit_speed = -0.33
+    }
+    # Looters
+    fallout_mercenary_army_ideas_7 = {
+        loot_amount = 1.0
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Army Organisation
+fallout_army_organisation_ideas = {
+    category = MIL
+
+    bonus = {
+        land_morale = 0.1
+    }
+    # Established Recruitment
+    fallout_army_organisation_ideas_1 = {
+        global_regiment_cost = -0.15
+    }
+    # Local Recruiters
+    fallout_army_organisation_ideas_2 = {
+        global_regiment_recruit_speed = -0.25
+    }
+    # Orderly Barracks
+    fallout_army_organisation_ideas_3 = {
+        land_maintenance_modifier = -0.15
+    }
+    # Regular Drills
+    fallout_army_organisation_ideas_4 = {
+        army_tradition = 1
+    }
+    # Start Them Young
+    fallout_army_organisation_ideas_5 = {
+        land_forcelimit_modifier = 0.25
+    }
+    # Local Recruitment
+    fallout_army_organisation_ideas_6 = {
+        global_manpower_modifier = 0.2
+    }
+    # Supply Depots
+    fallout_army_organisation_ideas_7 = {
+        global_supply_limit_modifier = 0.25
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Army Leadership
+fallout_army_leadership_ideas = {
+    category = MIL
+
+    bonus = {
+        army_tradition = 1
+    }
+    # Swift Movements
+    fallout_army_leadership_ideas_1 = {
+        leader_land_manuever = 1
+    }
+    # First Strikes
+    fallout_army_leadership_ideas_2 = {
+        leader_land_shock = 1
+    }
+    # Sustained Fire
+    fallout_army_leadership_ideas_3 = {
+        leader_land_fire = 1
+    }
+    # Military Training
+    fallout_army_leadership_ideas_4 = {
+        general_cost = -0.25
+    }
+    # Effective Leadership
+    fallout_army_leadership_ideas_5 = {
+        free_leader_pool = 1
+    }
+    # Veteran Engineers
+    fallout_army_leadership_ideas_6 = {
+        leader_siege = 1
+    }
+    # Staggered Formations
+    fallout_army_leadership_ideas_7 = {
+        backrow_artillery_damage = 0.1
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Army Tactics
+fallout_army_tactics_ideas = {
+    category = MIL
+
+    bonus = {
+        war_exhaustion = -0.05
+    }
+    # Battlefield Techniques
+    fallout_army_tactics_ideas_1 = {
+        infantry_power = 0.2
+    }
+    # Blitz Tactics
+    fallout_army_tactics_ideas_2 = {
+        cavalry_power = 0.2
+    }
+    # Tactical Maneuvers
+    fallout_army_tactics_ideas_3 = {
+        fire_damage_received = -0.1
+    }
+    # Skirmishing Techniques
+    fallout_army_tactics_ideas_4 = {
+        infantry_shock = 1
+    }
+    # Anticapated Strikes
+    fallout_army_tactics_ideas_5 = {
+        shock_damage_received = -0.1
+    }
+    # Continuous Bombardment
+    fallout_army_tactics_ideas_6 = {
+        artillery_fire = 1
+    }
+    # Glory on the Battlefield
+    fallout_army_tactics_ideas_7 = {
+        army_tradition_from_battle = 1
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Armaments
+fallout_armaments_ideas = {
+    category = MIL
+
+    bonus = {
+        siege_ability = 0.1
+    }
+    # Super Sledges
+    fallout_armaments_ideas_1 = {
+        shock_damage = 0.1
+    }
+    # Plasma Weaponry
+    fallout_armaments_ideas_2 = {
+        fire_damage = 0.1
+    }
+    # Prewar Ordanance
+    fallout_armaments_ideas_3 = {
+        artillery_fire = 1
+    }
+    # Armor Piercing Shells
+    fallout_armaments_ideas_4 = {
+        cavalry_shock = 1
+    }
+    # Improved Pistols
+    fallout_armaments_ideas_5 = {
+        infantry_fire = 1
+    }
+    # Improved Carbines
+    fallout_armaments_ideas_6 = {
+        infantry_shock = 1
+    }
+    # Bunker Busters
+    fallout_armaments_ideas_7 = {
+        artillery_bonus_vs_fort = 1
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Fortification
+fallout_fortification_ideas = {
+    category = MIL
+
+    bonus = {
+        hostile_attrition = 2
+    }
+    # Reinforced Barricades
+    fallout_fortification_ideas_1 = {
+        defensiveness = 0.5
+    }
+    # Battlefield Shelters
+    fallout_fortification_ideas_2 = {
+        fire_damage_received = -0.1
+    }
+    # Stocked Garrisons
+    fallout_fortification_ideas_3 = {
+        garrison_size = 0.5
+    }
+    # All Are Welcome
+    fallout_fortification_ideas_4 = {
+        global_garrison_growth = 1.0
+    }
+    # Maintained Bunkers
+    fallout_fortification_ideas_5 = {
+        global_supply_limit_modifier = 0.15
+    }
+    # Strategic Bunkers
+    fallout_fortification_ideas_6 = {
+        manpower_recovery_speed = 0.1
+    }
+    # Farmsteads
+    fallout_fortification_ideas_7 = {
+        global_supply_limit_modifier = 0.1
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Militarization
+fallout_militarization_ideas = {
+    category = MIL
+
+    bonus = {
+        mil_tech_cost_modifier = -0.1
+    }
+    # Regular Enlistment
+    fallout_militarization_ideas_1 = {
+        reinforce_cost_modifier = -0.33
+    }
+    # Wartime Efficiencies
+    fallout_militarization_ideas_2 = {
+        global_tax_modifier = 0.1
+    }
+    # Home Support
+    fallout_militarization_ideas_3 = {
+        state_maintenance_modifier = -0.25
+    }
+    # Combat Readiness
+    fallout_militarization_ideas_4 = {
+        land_forcelimit_modifier = 0.15
+    }
+    # Wartime Construction
+    fallout_militarization_ideas_5 = {
+        build_time = -0.33
+    }
+    # Marshal Law
+    fallout_militarization_ideas_6 = {
+        core_creation = -0.1
+    }
+    # Common Fortitude
+    fallout_militarization_ideas_7 = {
+        war_exhaustion_cost = -0.25
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Subjugation
+fallout_subjugation_ideas = {
+    category = MIL
+
+    bonus = {
+        land_maintenance_modifier = -0.1
+    }
+    # Conquest
+    fallout_subjugation_ideas_1 = {
+        province_warscore_cost = -0.25
+    }
+    # Intimidation
+    fallout_subjugation_ideas_2 = {
+        unjustified_demands = -0.2
+    }
+    # Incorrigible Disputes
+    fallout_subjugation_ideas_3 = {
+        fabricate_claims_cost = -0.25
+    }
+    # Military Envoys
+    fallout_subjugation_ideas_4 = {
+        free_leader_pool = 1
+    }
+    # Military Vassals
+    fallout_subjugation_ideas_5 = {
+        vassal_forcelimit_bonus = 0.5
+    }
+    # Make Haste
+    fallout_subjugation_ideas_6 = {
+        envoy_travel_time = -0.5
+    }
+    # Squeeze Them Dry
+    fallout_subjugation_ideas_7 = {
+        vassal_income = 0.15
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Tyranny
+fallout_tyranny_ideas = {
+    category = MIL
+
+    bonus = {
+        #cb_on_government_enemies = yes
+        global_autonomy = -0.05
+    }
+    # Tyranny of the Weak
+    fallout_tyranny_ideas_1 = {
+        max_absolutism = 20
+    }
+    # Enforced Legitimacy
+    fallout_tyranny_ideas_2 = {
+        legitimacy = 1
+        republican_tradition = 1
+        devotion = 1
+        horde_unity = 1
+        meritocracy = 1
+    }
+    # Military Parades
+    fallout_tyranny_ideas_3 = {
+        prestige = 1
+    }
+    # Labour Camps
+    fallout_tyranny_ideas_4 = {
+        build_time = -0.33
+    }
+    # Military Executions
+    fallout_tyranny_ideas_5 = {
+        yearly_corruption = -0.05
+    }
+    # Hammer the Nail
+    fallout_tyranny_ideas_6 = {
+        years_of_nationalism = -5
+    }
+    # Absolute Rule
+    fallout_tyranny_ideas_7 = {
+        yearly_absolutism = 1
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+# Imperialism
+fallout_imperialism_ideas = {
+    category = MIL
+
+    bonus = {
+        treasure_fleet_income = 1.0
+        colonist_placement_chance = 0.05
+    }
+    # Imperial Frontiers
+    fallout_imperialism_ideas_1 = {
+        may_establish_frontier = yes
+        may_explore = yes
+    }
+    # Loyal Colonists
+    fallout_imperialism_ideas_2 = {
+        colonists = 1
+    }
+    # Enforced Migration
+    fallout_imperialism_ideas_3 = {
+        global_colonial_growth = 20
+    }
+    # Cut and Burn
+    fallout_imperialism_ideas_4 = {
+        native_uprising_chance = -0.25
+    }
+    # Exploit the Natives
+    fallout_imperialism_ideas_5 = {
+        native_assimilation = 1.0
+    }
+    # Protected Shipping Routes
+    fallout_imperialism_ideas_6 = {
+        global_tariffs = 0.2
+    }
+    # Distant Colonies
+    fallout_imperialism_ideas_7 = {
+        range = 0.5
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
