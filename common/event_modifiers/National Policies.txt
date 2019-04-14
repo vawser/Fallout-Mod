@@ -1,81 +1,17 @@
 #-------------------------------
-# Economy
-#-------------------------------
-reduce_inflation = {
-    inflation_reduction = 0.05
-}
-
-#-------------------------------
-# Law
-#-------------------------------
-improve_legitimacy = {
-    legitimacy = 1
-    republican_tradition = 1
-    devotion = 1
-    horde_unity = 1
-    meritocracy = 1
-}
-
-improve_government = {
-    reform_progress_growth = 1
-}
-
-improve_absolutism = {
-    yearly_absolutism = 0.5
-}
-
-#-------------------------------
-# Justice
-#-------------------------------
-imprisoning_undesirables = {
-    global_missionary_strength = 0.03
-    culture_conversion_cost = -0.25
-}
-
-executing_undesirables = {
-    years_of_nationalism = -15
-}
-
-enslaving_undesirables = {
-    land_maintenance_modifier = -0.15
-}
-
-#-------------------------------
-# Innovation
-#-------------------------------
-radiation_adaptation = {
-    land_attrition = -0.1
-}
-
-#-------------------------------
-# Conscription
-#-------------------------------
-improve_army_tradition = {
-    army_tradition = 1
-}
-
-improve_navy_tradition = {
-    navy_tradition = 1
-}
-
-reduce_war_exhaustion = {
-    war_exhaustion = -0.1
-}
-
-#------------------------------- 
 # Slavery
 #-------------------------------
-slave_soldiers = {
-    manpower_recovery_speed = 0.25
-}
 
-whipped_slaves = {
-    recover_army_morale_speed = 0.1
-}
+#-------------------------------
+# Gambling
+#-------------------------------
+casino_night_cooldown = { }
 
 #-------------------------------
 # Prostitution
 #-------------------------------
+visit_brothel_cooldown = { }
+
 radiant_glow = {
     prestige = 1
 }
@@ -89,38 +25,16 @@ mutant_vigor = {
 }
 
 #-------------------------------
-# Firearms
-#-------------------------------
-plasma_weaponry = {
-    shock_damage = 0.1
-}
-
-laser_weaponry = {
-    fire_damage = 0.1
-}
-
-nuclear_weaponry = {
-    siege_ability = 0.1
-}
-
-junk_weaponry = {
-    global_regiment_recruit_speed = -0.5
-    fire_damage = -0.05
-}
-
-#-------------------------------
 # Narcotics
 #-------------------------------
-ruler_xcell = {
-    heir_chance = -0.33
-}
-
-ruler_mentats = {
-    heir_chance = -0.33
-}
-
-ruler_psycho = {
-    heir_chance = -0.33
+ruler_drug_abuse = {
+    heir_chance = -0.5
 }
 
 drug_purge_cooldown = { }
+
+#-------------------------------
+# Scavenging
+#-------------------------------
+scavenging_cooldown = { }
+lost_texts_cooldown = { }

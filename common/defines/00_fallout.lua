@@ -54,7 +54,7 @@ NDefines.NCountry.ABANDON_IDEAGROUP_REFUND = 0.1
 
 -- Technology
 NDefines.NCountry.TECH_TIME_COST = 0.0	    -- tech grow with 20% cost over time.
-NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.0  -- per year ahead.
+NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1
 
 -- Exploit
 NDefines.NCountry.EXPLOIT_ADM_INCOME = 120      -- Make exploit development more useful

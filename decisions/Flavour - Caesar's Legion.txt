@@ -43,10 +43,7 @@ country_decisions = {
         potential = {
             tag = CAE
             NOT = { has_dlc = "The Cossacks" }
-            OR = {
-                has_slavery_allowed = yes
-                has_slavery_licensed = yes
-            }
+            has_slavery_allowed = yes
             NOT = { has_country_modifier = enslavement_cooldown }
 		}
 		allow =  {
@@ -111,10 +108,7 @@ country_decisions = {
         potential = {
             tag = CAE
             NOT = { has_dlc = "The Cossacks" }
-            OR = {
-                has_slavery_allowed = yes
-                has_slavery_licensed = yes
-            }
+            has_slavery_allowed = yes
             NOT = { has_country_modifier = extermination_cooldown }
 		}
 		allow =  {

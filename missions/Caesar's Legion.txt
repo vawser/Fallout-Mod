@@ -221,10 +221,7 @@ CAE_slot_7 = {
 		required_missions = { CAE_alea_iacta_est }
         
 		trigger = {
-            OR = {
-                has_slavery_allowed = yes
-                has_slavery_licensed = yes
-            }
+            has_slavery_allowed = yes
             has_no_active_mission = yes
 		}
 		effect = {

@@ -164,10 +164,7 @@ fbs_casino = {
 	
     trigger = {
         FROM = {
-            OR = {
-                has_gambling_allowed = yes
-                has_gambling_licensed = yes
-            }
+            has_gambling_allowed = yes
         }
     }
     
@@ -193,10 +190,7 @@ fbs_slave_pit = {
 	
     trigger = {
         FROM = {
-            OR = {
-                has_slavery_allowed = yes
-                has_slavery_licensed = yes
-            }
+            has_slavery_allowed = yes
         }
     }
     
@@ -222,10 +216,7 @@ fbs_brothel = {
 	
     trigger = {
         FROM = {
-            OR = {
-                has_prostitution_allowed = yes
-                has_prostitution_licensed = yes
-            }
+            has_prostitution_allowed = yes
         }
     }
     
@@ -248,16 +239,7 @@ fbs_shooting_range = {
 	cost = 5000
 	time = 120
 	one_per_country = yes
-	
-    trigger = {
-        FROM = {
-            OR = {
-                has_firearms_allowed = yes
-                has_firearms_licensed = yes
-            }
-        }
-    }
-    
+
 	modifier = {
         fire_damage = 0.05
 	}
@@ -280,10 +262,7 @@ fbs_chem_lab = {
 	
     trigger = {
         FROM = {
-            OR = {
-                has_narcotics_allowed = yes
-                has_narcotics_licensed = yes
-            }
+            has_narcotics_allowed = yes
         }
     }
     
@@ -310,10 +289,7 @@ fbs_junkyard = {
 	
     trigger = {
         FROM = {
-            OR = {
-                has_scavenging_allowed = yes
-                has_scavenging_licensed = yes
-            }
+            has_scavenging_allowed = yes
         }
     }
     

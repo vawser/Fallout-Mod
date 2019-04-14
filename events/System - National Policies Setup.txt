@@ -1,0 +1,83 @@
+namespace = law_setup
+
+country_event = {
+	id = law_setup.1
+	title = law_setup.1.title
+	desc = law_setup.1.desc
+	picture = BOS_CHAT_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		NOT = { has_country_flag = law_setup_setup }
+	}
+
+	immediate = {
+		set_country_flag = law_setup_setup
+	}
+
+    mean_time_to_happen = { 
+        months = 1
+    }
+    
+	option = {
+		name = law_setup.1.option.a
+
+        # Fallback
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_slavery_allowed = yes
+                        has_slavery_forbidden = yes
+                    }
+                }
+            }
+            set_slavery_forbidden = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_gambling_allowed = yes
+                        has_gambling_forbidden = yes
+                    }
+                }
+            }
+            set_gambling_allowed = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_prostitution_allowed = yes
+                        has_prostitution_forbidden = yes
+                    }
+                }
+            }
+            set_prostitution_forbidden = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_narcotics_allowed = yes
+                        has_narcotics_forbidden = yes
+                    }
+                }
+            }
+            set_narcotics_forbidden = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    OR = {
+                        has_scavenging_allowed = yes
+                        has_scavenging_forbidden = yes
+                    }
+                }
+            }
+            set_scavenging_allowed = yes
+        }
+	}
+}

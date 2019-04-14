@@ -39,10 +39,7 @@ country_decisions = {
 		allow =  {
             has_government_attribute = tribal
 			years_of_income = 1
-			OR = {
-				has_narcotics_allowed = yes
-				has_narcotics_licensed = yes
-			}
+			has_narcotics_allowed = yes
 		}
 	  	effect = {
 			add_years_of_income = -1

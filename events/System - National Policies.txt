@@ -1,5 +1,8 @@
 namespace = national_policies
 
+#---------------------------------------
+# View
+#---------------------------------------
 country_event = {
 	id = national_policies.1
 	title = national_policies.1.title
@@ -8,12 +11,258 @@ country_event = {
 	
 	is_triggered_only = yes
     
+    # Slavery
 	option = {
-		name = law_setup.1.option.a
+		name = national_policies.1.option.a
+        
+        country_event = { id = national_policies.2 }
+	}
+
+    # Gambling
+    option = {
+		name = national_policies.1.option.b
     
+        country_event = { id = national_policies.3 }
 	}
     
-    after = {
-        clr_country_flag = viewing_national_policies
-    }
+    # Prostitution
+    option = {
+		name = national_policies.1.option.c
+    
+        country_event = { id = national_policies.4 }
+	}
+    
+    # Narcotics
+    option = {
+		name = national_policies.1.option.d
+    
+        country_event = { id = national_policies.5 }
+	}
+    
+    # Scavenging
+    option = {
+		name = national_policies.1.option.e
+    
+        country_event = { id = national_policies.6 }
+	}
+    
+    # Exit
+    option = {
+		name = national_policies.1.option.f
+	}
+}
+
+#---------------------------------------
+# Slavery
+#---------------------------------------
+country_event = {
+	id = national_policies.2
+	title = national_policies.2.title
+	desc = national_policies.2.desc
+	picture = LEGION_CAMP_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Allow
+	option = {
+		name = national_policies.2.option.a
+        
+        trigger = {
+            has_slavery_forbidden = yes
+        }
+        
+        add_stability = -3
+        set_slavery_allowed = yes
+	}
+    
+    # Forbid
+    option = {
+		name = national_policies.2.option.b
+        
+        trigger = {
+            has_slavery_allowed = yes
+        }
+        
+        add_stability = -3
+        set_slavery_forbidden = yes
+	}
+
+    # Exit
+    option = {
+		name = national_policies.2.option.c
+        
+        country_event = { id = national_policies.1 }
+	}
+}
+
+#---------------------------------------
+# Gambling
+#---------------------------------------
+country_event = {
+	id = national_policies.3
+	title = national_policies.3.title
+	desc = national_policies.3.desc
+	picture = STRIP_CASINO_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Allow
+	option = {
+		name = national_policies.3.option.a
+        
+        trigger = {
+            has_gambling_forbidden = yes
+        }
+        
+        add_stability = -3
+        set_gambling_allowed = yes
+	}
+    
+    # Forbid
+    option = {
+		name = national_policies.3.option.b
+        
+        trigger = {
+            has_gambling_allowed = yes
+        }
+        
+        add_stability = -3
+        set_gambling_forbidden = yes
+	}
+
+    # Exit
+    option = {
+		name = national_policies.3.option.c
+        
+        country_event = { id = national_policies.1 }
+	}
+}
+
+#---------------------------------------
+# Prostitution
+#---------------------------------------
+country_event = {
+	id = national_policies.4
+	title = national_policies.4.title
+	desc = national_policies.4.desc
+	picture = ATOMIC_WRANGLER_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Allow
+	option = {
+		name = national_policies.4.option.a
+        
+        trigger = {
+            has_prostitution_forbidden = yes
+        }
+        
+        add_stability = -3
+        set_prostitution_allowed = yes
+	}
+    
+    # Forbid
+    option = {
+		name = national_policies.4.option.b
+        
+        trigger = {
+            has_prostitution_allowed = yes
+        }
+        
+        add_stability = -3
+        set_prostitution_forbidden = yes
+	}
+
+    # Exit
+    option = {
+		name = national_policies.4.option.c
+        
+        country_event = { id = national_policies.1 }
+	}
+}
+
+#---------------------------------------
+# Narcotics
+#---------------------------------------
+country_event = {
+	id = national_policies.5
+	title = national_policies.5.title
+	desc = national_policies.5.desc
+	picture = DEAD_JUNKIE_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Allow
+	option = {
+		name = national_policies.5.option.a
+        
+        trigger = {
+            has_narcotics_forbidden = yes
+        }
+        
+        add_stability = -3
+        set_narcotics_allowed = yes
+	}
+    
+    # Forbid
+    option = {
+		name = national_policies.5.option.b
+        
+        trigger = {
+            has_narcotics_allowed = yes
+        }
+        
+        add_stability = -3
+        set_narcotics_forbidden = yes
+	}
+
+    # Exit
+    option = {
+		name = national_policies.5.option.c
+        
+        country_event = { id = national_policies.1 }
+	}
+}
+
+#---------------------------------------
+# Scavenging
+#---------------------------------------
+country_event = {
+	id = national_policies.6
+	title = national_policies.6.title
+	desc = national_policies.6.desc
+	picture = BOOMER_HANGER_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Allow
+	option = {
+		name = national_policies.6.option.a
+        
+        trigger = {
+            has_scavenging_forbidden = yes
+        }
+        
+        add_stability = -3
+        set_scavenging_allowed = yes
+	}
+    
+    # Forbid
+    option = {
+		name = national_policies.6.option.b
+        
+        trigger = {
+            has_scavenging_allowed = yes
+        }
+        
+        add_stability = -3
+        set_scavenging_forbidden = yes
+	}
+
+    # Exit
+    option = {
+		name = national_policies.6.option.c
+        
+        country_event = { id = national_policies.1 }
+	}
 }

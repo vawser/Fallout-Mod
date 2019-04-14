@@ -1,16 +1,284 @@
 country_decisions = {
 	view_national_policies = {
 		potential = {
-            NOT = { has_country_flag = viewing_national_policies }
             ai = no
 		}
 		allow = {
-            always = yes
+            stability = 0
+            is_at_war = no
 		}
 		
 		effect = {
-			hidden_effect = { set_country_flag = viewing_national_policies }
             country_event = { id = national_policies.1 }
+		}
+		
+		ai_will_do = {
+			factor = 0  # AI never changes policies
+		}
+	}
+    
+    # Host Casino Night
+    host_casino_night = {
+		potential = {
+            has_gambling_allowed = yes
+		}
+		allow = {
+            NOT = { has_country_modifier = casino_night_cooldown }
+            years_of_income = 0.25
+		}
+		
+		effect = {
+            add_country_modifier = {
+                name = casino_night_cooldown
+                duration = 3650
+                hidden = yes
+            }
+            
+            add_years_of_income = -0.25
+            
+            country_event = { id = gambling.1 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+    
+    # Visit Brothel
+    visit_brothel = {
+		potential = {
+            uses_heir = yes
+            has_prostitution_allowed = yes
+		}
+		allow = {
+            NOT = { has_country_modifier = visit_brothel_cooldown }
+            years_of_income = 0.25   
+		}
+		
+		effect = {
+            add_country_modifier = {
+                name = visit_brothel_cooldown
+                duration = 3650
+                hidden = yes
+            }
+            
+            add_years_of_income = -0.25
+            
+            country_event = { id = prostitution.1 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                has_heir = yes
+            }
+		}
+	}
+    
+    # Synthesize Drug
+    synthesize_drug = {
+		potential = {
+            has_narcotics_allowed = yes
+		}
+		allow = {
+            NOT = { has_ruler_modifier = ruler_drug_abuse }
+            years_of_income = 2
+		}
+		
+		effect = {
+            add_years_of_income = -2
+            
+            add_ruler_modifier = {
+                name = ruler_drug_abuse
+                duration = 7300
+            }
+            
+            random_list = {
+                33 = { change_adm = 1 }
+                33 = { change_adm = 2 }
+                33 = { change_adm = 3 }
+                33 = { change_dip = 1 }
+                33 = { change_dip = 2 }
+                33 = { change_dip = 3 }
+                33 = { change_mil = 1 }
+                33 = { change_mil = 2 }
+                33 = { change_mil = 3 }
+            }
+		}
+		
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                adm = 6
+            }
+            modifier = {
+                factor = 0
+                dip = 6
+            }
+            modifier = {
+                factor = 0
+                mil = 6
+            }
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 5 }
+            }
+		}
+	}
+    
+    purge_drug_manufacturing = {
+		potential = {
+			OR = {
+				AND = {
+					has_narcotics_forbidden = yes
+					any_owned_province = {
+						trade_goods = drugs
+					}
+				}
+				tag = CAE
+			}
+			NOT = { has_country_modifier = drug_purge_cooldown }
+		}
+		allow =  {
+            years_of_income = 1
+			any_owned_province = {
+				trade_goods = drugs
+            }
+		}
+		effect = {
+            add_years_of_income = -1
+            
+			hidden_effect = {
+				add_country_modifier = { 
+					name = drug_purge_cooldown
+					duration = 3650
+					hidden = yes
+				}
+			}
+			custom_tooltip = DRUG_GOODS_CHANGE
+			hidden_effect = {
+				every_owned_province = {
+					limit = { trade_goods = drugs }
+                    
+					random_list = {
+						20 = { change_trade_goods = meat }
+						20 = { change_trade_goods = steel }
+						20 = { change_trade_goods = food }
+						20 = { change_trade_goods = weaponry }
+						20 = { change_trade_goods = munitions }
+					}
+				}
+			}
+            
+			country_event = { id = fallout_tradegoods.1 }
+		}
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 2 }
+            }
+		}
+    }
+    
+    # Start Scavenger Hunt
+    start_scavenger_hunt = {
+		potential = {
+            always = no # TODO
+            has_scavenging_allowed = yes
+		}
+		allow = {
+            NOT = { has_country_modifier = scavenging_cooldown }
+            years_of_income = 0.5
+		}
+		
+		effect = {
+            add_country_modifier = {
+                name = scavenging_cooldown
+                duration = 3650
+                hidden = yes
+            }
+            
+            add_years_of_income = -0.5
+            
+            country_event = { id = scavenging.1 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+    
+    # Search for Lost Texts
+    search_for_lost_texts = {
+		potential = {
+            has_scavenging_allowed = yes
+		}
+		allow = {
+            NOT = { has_country_modifier = lost_texts_cooldown }
+            years_of_income = 0.5
+		}
+		
+		effect = {
+            add_country_modifier = {
+                name = lost_texts_cooldown
+                duration = 3650
+                hidden = yes
+            }
+            
+            add_years_of_income = -0.5
+            
+            random_list = {
+                # Failure
+                50 = { country_event = { id = lost_religions.2 days = 30 random = 365 } }
+                # religion_tengri
+                2 = { country_event = { id = lost_religions.3 days = 30 random = 365 } }
+                # religion_norse
+                2 = { country_event = { id = lost_religions.4 days = 30 random = 365 } }
+                # religion_catholic
+                6 = { country_event = { id = lost_religions.5 days = 30 random = 365 } }
+                # religion_baptist
+                6 = { country_event = { id = lost_religions.6 days = 30 random = 365 } }
+                # religion_mormon
+                6 = { country_event = { id = lost_religions.7 days = 30 random = 365 } }
+                # religion_orthodox
+                4 = { country_event = { id = lost_religions.8 days = 30 random = 365 } }
+                # religion_coptic
+                2 = { country_event = { id = lost_religions.9 days = 30 random = 365 } }
+                # religion_sunni
+                4 = { country_event = { id = lost_religions.10 days = 30 random = 365 } }
+                # religion_shia
+                4 = { country_event = { id = lost_religions.11 days = 30 random = 365 } }
+                # religion_ibadi 
+                2 = { country_event = { id = lost_religions.12 days = 30 random = 365 } }
+                # religion_theravada
+                2 = { country_event = { id = lost_religions.13 days = 30 random = 365 } }
+                # religion_vajrayana
+                2 = { country_event = { id = lost_religions.14 days = 30 random = 365 } }
+                # religion_mahayana
+                2 = { country_event = { id = lost_religions.15 days = 30 random = 365 } }
+                # religion_taoism
+                2 = { country_event = { id = lost_religions.16 days = 30 random = 365 } }
+                # religion_shinto
+                2 = { country_event = { id = lost_religions.17 days = 30 random = 365 } }
+                # religion_hinduism
+                4 = { country_event = { id = lost_religions.18 days = 30 random = 365 } }
+                # religion_sikhism
+                2 = { country_event = { id = lost_religions.19 days = 30 random = 365 } }
+                # religion_jewish
+                4 = { country_event = { id = lost_religions.20 days = 30 random = 365 } }
+                # religion_zoroastrian
+                2 = { country_event = { id = lost_religions.21 days = 30 random = 365 } }
+            }
 		}
 		
 		ai_will_do = {

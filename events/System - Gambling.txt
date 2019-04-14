@@ -6,17 +6,7 @@ country_event = {
 	desc = gambling.1.desc
 	picture = STRIP_CASINO_eventPicture
 	
-	trigger = {
-		has_country_flag = gambling_1
-	}
-    
-    mean_time_to_happen = {
-        days = 1
-    }
-    
-    immediate = {
-        hidden_effect = { clr_country_flag = gambling_1 }
-    }
+    is_triggered_only = yes
 
 	option = {
 		name = gambling.1.option.a

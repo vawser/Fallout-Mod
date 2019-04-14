@@ -508,10 +508,7 @@ province_event = {
         }
 		trade_goods = slaves
         owner = { 
-            OR = {
-                has_slavery_allowed = yes
-                has_slavery_licensed = yes
-            }
+            has_slavery_allowed = yes
         }
         NOT = { has_province_modifier = state_sponsored_slavery }
 	}

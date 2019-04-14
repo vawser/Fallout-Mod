@@ -6,18 +6,8 @@ country_event = {
 	desc = prostitution.1.desc
 	picture = FREESIDE_eventPicture
 	
-	trigger = {
-		has_country_flag = prostitution_1
-	}
+    is_triggered_only = yes
     
-    mean_time_to_happen = {
-        days = 1
-    }
-    
-    immediate = {
-        hidden_effect = { clr_country_flag = prostitution_1 }
-    }
-
     # Blonde
 	option = {
 		name = prostitution.1.option.a
