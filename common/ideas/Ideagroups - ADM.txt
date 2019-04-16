@@ -122,6 +122,61 @@ fallout_religious_ideas = {
     }
 }
 
+# Tolerance
+fallout_tolerance_ideas = {
+    category = ADM
+
+    bonus = {
+        num_accepted_cultures = 2
+    }
+    # Religious Tolerance
+    fallout_tolerance_ideas_1 = {
+        religious_unity = 0.33
+    }
+    # Tolerate the Heathen
+    fallout_tolerance_ideas_2 = {
+        tolerance_heathen = 2
+    }
+    # United Front
+    fallout_tolerance_ideas_3 = {
+        global_unrest = -2
+    }
+    # Tolerate the Heretic
+    fallout_tolerance_ideas_4 = {
+        tolerance_heretic = 2
+    }
+    # Stability through Faith
+    fallout_tolerance_ideas_5 = {
+        stability_cost_modifier = -0.2
+    }
+    # Cultural Similarities
+    fallout_tolerance_ideas_6 = {
+        promote_culture_cost = -0.5
+    }
+    # Varied Advisors
+    fallout_tolerance_ideas_7 = {
+        same_culture_advisor_cost = -0.2
+    }
+    
+    ai_will_do = {
+        factor = 1
+        
+        modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.7 }
+		}
+    }
+}
+
+
 # Economic
 fallout_economic_ideas = {
     category = ADM
@@ -584,222 +639,231 @@ fallout_settlement_ideas = {
     }
 }
 
-# Monarchy (monarchy)
-fallout_monarchy_ideas = {
+#----------------------------------------------------
+# Religion Specific (no policies)
+#----------------------------------------------------
+# Creatorism
+fallout_creatorism_ideas = {
     category = ADM
 
     trigger = {
-        is_monarchy_government = yes
+        religion = creatorism
     }
     
     bonus = {
-        army_tradition = 1
-    }
-    # Familial Ties
-    fallout_monarchy_ideas_1 = {
-        legitimacy = 1
-    }
-    # Dynastic Stock
-    fallout_monarchy_ideas_2 = {
-        heir_chance = 0.25
-    }
-    # Local Communities
-    fallout_monarchy_ideas_3 = {
-        global_unrest = -1
-    }
-    # Unyielding Rule
-    fallout_monarchy_ideas_4 = {
-        yearly_absolutism = 1
-    }
-    # Unquestioned Authority
-    fallout_monarchy_ideas_5 = {
-        max_absolutism = 10
-    }
-    # Respected Families
-    fallout_monarchy_ideas_6 = {
-        ae_impact = -0.2
-    }
-    # United in Arms
-    fallout_monarchy_ideas_7 = {
-        global_manpower_modifier = 0.1
+        yearly_corruption = -0.05
     }
     
-    ai_will_do = {
-        factor = 1
-        
-        modifier = {
-			factor = 2
-			personality = ai_capitalist 
-		}
-		modifier = {
-			factor = 2
-			personality = ai_militarist 
-		}
+    # The Codex
+    fallout_creatorism_ideas_1 = {
+        technology_cost = -0.1
     }
-}
-
-# Republic (republic)
-fallout_republic_ideas = {
-    category = ADM
-
-    trigger = {
-        is_republic_government = yes
+    # Rites of Engineering
+    fallout_creatorism_ideas_2 = {
+        production_efficiency = 0.1
     }
-    
-    bonus = {
-        manpower_recovery_speed = 0.1
+    # Technological Relics
+    fallout_creatorism_ideas_3 = {
+        embracement_cost = -0.2
     }
-    
-    # Diplomatic Links
-    fallout_republic_ideas_1 = {
-        diplomatic_upkeep = 2
+    # Brotherhood Supremacy
+    fallout_creatorism_ideas_4 = {
+        missionary_maintenance_cost = -0.2
     }
-    # Republican Discipline
-    fallout_republic_ideas_2 = {
-        land_morale = 0.1
+    # Prewar Collections
+    fallout_creatorism_ideas_5 = {
+        free_policy = 1
     }
-    # Trusted Politicians
-    fallout_republic_ideas_3 = {
-        reelection_cost = -0.25
-    }
-    # Melting Pot
-    fallout_republic_ideas_4 = {
-        promote_culture_cost = -1
-    }
-    # Republican Traditions
-    fallout_republic_ideas_5 = {
-		republican_tradition = 1
-    }
-    # Fertile Lands
-    fallout_republic_ideas_6 = {
-        global_trade_goods_size_modifier = 0.1
-    }
-    # Respected Pedigree
-    fallout_republic_ideas_7 = {
-        candidate_random_bonus = 1
-    }
-    
-    ai_will_do = {
-        factor = 1
-        
-        modifier = {
-			factor = 2
-			personality = ai_capitalist 
-		}
-		modifier = {
-			factor = 2
-			personality = ai_militarist 
-		}
-    }
-}
-
-# Theocracy (theocracy)
-fallout_theocracy_ideas = {
-    category = ADM
-
-    trigger = {
-        is_theocracy_government = yes
-    }
-    
-    bonus = {
-        war_exhaustion = -0.05
-    }
-    
-    # Absolute Devotion
-    fallout_theocracy_ideas_1 = {
-        devotion = 1
-    }
-    # Divine Assault
-    fallout_theocracy_ideas_2 = {
-        shock_damage = 0.1
-    }
-    # Religious Supremacy
-    fallout_theocracy_ideas_3 = {
+    # Subjugation of Lessers
+    fallout_creatorism_ideas_6 = {
         missionaries = 1
-		enforce_religion_cost = -0.25
     }
-    # Religious Law
-    fallout_theocracy_ideas_4 = {
-        missionary_maintenance_cost = -0.33
-    }
-    # Enduring Faith
-    fallout_theocracy_ideas_5 = {
-        manpower_recovery_speed = 0.1
-    }
-    # Holy Wars
-    fallout_theocracy_ideas_6 = {
-        warscore_cost_vs_other_religion = -0.2
-    }
-    # Divine Vindication
-    fallout_theocracy_ideas_7 = {
-        unjustified_demands = -0.2
+    # Brotherhood of Steel
+    fallout_creatorism_ideas_7 = {
+        global_missionary_strength = 0.03
     }
     
     ai_will_do = {
         factor = 1
-        
-        modifier = {
-			factor = 2
-			personality = ai_capitalist 
-		}
-		modifier = {
-			factor = 2
-			personality = ai_militarist 
-		}
     }
 }
-
-# Tribal (tribal)
-fallout_tribal_ideas = {
+# Cult of Mars
+fallout_cult_of_mars_ideas = {
     category = ADM
 
     trigger = {
-        is_tribal_government = yes
+        religion = cult_of_mars
     }
     
     bonus = {
         yearly_absolutism = 1
     }
-    # Wasteland Traditions
-    fallout_tribal_ideas_1 = {
+    
+    # Cleanse the Earth
+    fallout_cult_of_mars_ideas_1 = {
+        missionaries = 1
+    }
+    # Slave Indoctrination
+    fallout_cult_of_mars_ideas_2 = {
+        global_manpower_modifier = 0.33
+    }
+    # Ritual Sacrifice
+    fallout_cult_of_mars_ideas_3 = {
+        global_missionary_strength = 0.03
+    }
+    # Strength through Loyalty
+    fallout_cult_of_mars_ideas_4 = {
+        infantry_power = 0.1
+    }
+    # Loyalty through Strength
+    fallout_cult_of_mars_ideas_5 = {
+        culture_conversion_cost = -0.33 
+    }
+    # Purge the Unjust 
+    fallout_cult_of_mars_ideas_6 = {
+        missionary_maintenance_cost = -0.3
+    }
+    # Caesar, Son of Mars
+    fallout_cult_of_mars_ideas_7 = {
         legitimacy = 1
-    }
-    # Settlement Raids
-    fallout_tribal_ideas_2 = {
-        shock_damage = 0.1
-    }
-    # Do or Die
-    fallout_tribal_ideas_3 = {
-        stability_cost_modifier = -0.2
-    }
-    # Makeshift Weaponry
-    fallout_tribal_ideas_4 = {
-        land_maintenance_modifier = -0.2
-    }
-    # Tribal Law
-    fallout_tribal_ideas_5 = {
-        global_unrest = -2
-    }
-    # Primitive Diplomacy
-    fallout_tribal_ideas_6 = {
-        province_warscore_cost = -0.2
-    }
-    # Fury of the Fearless
-    fallout_tribal_ideas_7 = {
-        land_morale = 0.1
     }
     
     ai_will_do = {
         factor = 1
-        
-        modifier = {
-			factor = 2
-			personality = ai_capitalist 
-		}
-		modifier = {
-			factor = 2
-			personality = ai_militarist 
-		}
     }
 }
+# Hubology
+fallout_hubology_ideas = {
+    category = ADM
 
+    trigger = {
+        religion = hubology
+    }
+    
+    bonus = {
+        
+    }
+    
+    # Great Wheel of Life
+    fallout_hubology_ideas_1 = {
+        
+    }
+    # Knowledge of Neurodynes
+    fallout_hubology_ideas_2 = {
+        
+    }
+    # Survivors of the Great Deluge
+    fallout_hubology_ideas_3 = {
+        
+    }
+    # Spokes of the Wheel
+    fallout_hubology_ideas_4 = {
+        
+    }
+    # Alignment
+    fallout_hubology_ideas_5 = {
+        
+    }
+    # The Uplifting
+    fallout_hubology_ideas_6 = {
+        
+    }
+    # Zetan Origins
+    fallout_hubology_ideas_7 = {
+        
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+# American Restorationist
+fallout_american_restorationists_ideas = {
+    category = ADM
+
+    trigger = {
+        religion = american_restorationists
+    }
+    
+    bonus = {
+        
+    }
+    
+    # Manifest Destiny
+    fallout_american_restorationists_ideas_1 = {
+        
+    }
+    # God's Own Country
+    fallout_american_restorationists_ideas_2 = {
+        
+    }
+    # Restore the American Empire
+    fallout_american_restorationists_ideas_3 = {
+        
+    }
+    # America First
+    fallout_american_restorationists_ideas_4 = {
+        
+    }
+    # Purge the Unbelievers
+    fallout_american_restorationists_ideas_5 = {
+        
+    }
+    # Trials of Purity
+    fallout_american_restorationists_ideas_6 = {
+        
+    }
+    # One Nation, Under God
+    fallout_american_restorationists_ideas_7 = {
+        
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}
+# Atomic
+fallout_atomic_worship_ideas = {
+    category = ADM
+
+    trigger = {
+        religion = atomic_worship
+    }
+    
+    bonus = {
+        
+    }
+    
+    # Purge the Blasphemous
+    fallout_atomic_worship_ideas_1 = {
+        
+    }
+    # Bathe in Atom's Glow
+    fallout_atomic_worship_ideas_2 = {
+        
+    }
+    # Transformation through Division
+    fallout_atomic_worship_ideas_3 = {
+        
+    }
+    # Irratiated Shrines
+    fallout_atomic_worship_ideas_4 = {
+        
+    }
+    # Asceticism
+    fallout_atomic_worship_ideas_5 = {
+        
+    }
+    # Absolition of Self
+    fallout_atomic_worship_ideas_6 = {
+        
+    }
+    # Atom the Glorious
+    fallout_atomic_worship_ideas_7 = {
+        
+    }
+    
+    ai_will_do = {
+        factor = 1
+    }
+}

@@ -1,0 +1,282 @@
+estate_proctors = {
+	icon = 1
+	
+	color = { 112 163 157 }
+	
+	keep_on_conquest = no 							
+	always_remove_on_religious_conquest = yes 		
+
+    start_territory_weight = 25
+	min_autonomy = 0
+    
+    # ----- Conditions -----
+	trigger = {
+        has_brotherhood_estates = yes
+        religion = creatorism
+	}
+	
+	province_trigger = {
+		religion = creatorism
+	}
+
+	# ----- Country -----
+	country_modifier_happy = {
+		global_missionary_strength = 0.03
+		missionary_maintenance_cost = -0.2
+        global_unrest = -2
+	}
+	country_modifier_neutral = {
+		global_missionary_strength = 0.015
+		missionary_maintenance_cost = -0.1
+        global_unrest = -1
+	}	
+	country_modifier_angry = {
+		global_missionary_strength = -0.03
+		missionary_maintenance_cost = 0.2
+        global_unrest = 2
+	}	
+	
+	# ----- Province -----
+	province_modifier_happy = {
+		local_development_cost = -0.2
+	}
+	province_modifier_neutral = {
+		local_development_cost = -0.1
+	}	
+	province_modifier_angry = {
+		local_development_cost = 0.2 
+		local_unrest = 5
+	}	
+	
+    ai_grant_province = {
+        factor = 1    
+        modifier = {
+            factor = 0.5
+            development = 20
+        }
+        modifier = {
+            factor = 2
+            NOT = { development = 10 }
+        }                
+        modifier = {
+            factor = 0.75
+            has_owner_culture = yes
+        }
+        modifier = {
+            factor = 0.75
+            province_trade_power = 5
+        }            
+        modifier = {
+            factor = 0.75
+            province_trade_power = 10
+        }
+        modifier = {
+            factor = 4
+            local_autonomy = 25
+        }
+        modifier = {
+            factor = 0.25
+            NOT = { local_autonomy = 25 }
+        }
+    }
+    
+    # ----- Territory -----
+    min_territory = 20
+    min_provinces_to_want_territory = 5
+    
+	# ----- Influence -----
+	base_influence = 30
+	
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+                estate_influence = { estate = estate_elders influence = 100 }
+                estate_influence = { estate = estate_knights influence = 100 }
+                estate_influence = { estate = estate_paladins influence = 100 }
+                estate_influence = { estate = estate_initiates influence = 100 }
+                estate_influence = { estate = estate_scribes influence = 100 }
+                estate_influence = { estate = estate_slavers influence = 100 }
+			}
+		}
+		influence = -40
+	}
+    
+	# ----- Loyalty -----
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+                estate_influence = { estate = estate_elders influence = 100 }
+                estate_influence = { estate = estate_knights influence = 100 }
+                estate_influence = { estate = estate_paladins influence = 100 }
+                estate_influence = { estate = estate_initiates influence = 100 }
+                estate_influence = { estate = estate_scribes influence = 100 }
+                estate_influence = { estate = estate_slavers influence = 100 }
+			}
+		}
+		loyalty = -40
+	}
+	
+	# ----- Interactions -----
+    # Punish the Proctors
+    interaction = {
+        name = "PUNISH_THE_PROCTORS"
+        icon = 1
+        
+        years_between_use = 10
+
+        trigger = {        
+            estate_loyalty = {
+                estate = estate_proctors
+                loyalty = 50
+            }              
+        }
+        
+        effect = {
+            add_estate_loyalty = {
+                estate = estate_proctors
+                loyalty = -20
+            }
+            add_estate_influence_modifier = {
+                estate = estate_proctors
+                desc = EST_VAL_PUNISHED_ESTATE
+                influence = -20
+                duration = 3650
+            }
+        }
+        
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    # Invest in the Proctors
+    interaction = {
+        name = "INVEST_IN_THE_PROCTORS"
+        icon = 1
+        
+        years_between_use = 1
+        
+        effect = {
+            add_years_of_income = -1
+            
+            add_estate_loyalty = {
+                estate = estate_proctors
+                loyalty = 10
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { years_of_income = 1 }                
+            }
+            
+            modifier = {
+                factor = 0
+                
+                estate_loyalty = {
+                    estate = estate_proctors
+                    loyalty = 50
+                }
+            }            
+        }        
+    }
+    
+    # Gain Support of the Proctors
+    interaction = {
+        name = "GAIN_SUPPORT_OF_THE_PROCTORS"
+        icon = 1
+        
+        years_between_use = 10
+        
+        effect = {
+            add_estate_loyalty = {
+                estate = estate_proctors
+                loyalty = 10
+            }
+            add_estate_influence_modifier = {
+                estate = estate_proctors
+                desc = EST_VAL_SUPPORTED_ESTATE
+                influence = 10
+                duration = 3650
+            }
+        }
+    
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_loyalty = {
+                    estate = estate_proctors
+                    loyalty = 50
+                }                        
+            }
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_proctors
+                    influence = 60
+                }                        
+            }            
+        }
+    }
+    
+    # Exploit the Proctors
+    interaction = {
+        name = "EXPLOIT_THE_PROCTORS"
+        icon = 1
+        
+        years_between_use = 10
+        
+        trigger = {
+            estate_loyalty = {
+                estate = estate_proctors
+                loyalty = 50
+            }    
+            estate_influence = {
+                estate = estate_proctors
+                influence = 30
+            }            
+        }
+        
+        effect = {
+            add_scaled_yearly_gold = { 
+                ESTATE = estate_proctors
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_loyalty = {
+                estate = estate_proctors
+                loyalty = -20
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_proctors
+                        loyalty = 50
+                    }
+                }
+            } 
+        }
+    }
+}
+

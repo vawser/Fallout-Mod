@@ -1,0 +1,2027 @@
+# Quick:
+# add_scaled_estate_advisor = { ADVISOR = X ESTATE = X }
+
+# add_scaled_adm_power = { ESTATE = X }
+# add_scaled_dip_power = { ESTATE = X }
+# add_scaled_mil_power = { ESTATE = X }
+# add_scaled_yearly_gold = { ESTATE = X }
+
+# add_scaled_yearly_manpower = { ESTATE = X }
+# add_scaled_yearly_sailors = { ESTATE = X }
+# add_scaled_army_tradition = { ESTATE = X }
+# add_scaled_navy_tradition = { ESTATE = X }
+# add_scaled_army_professionalism = { ESTATE = X }
+# add_scaled_general = { ESTATE = X }
+# add_scaled_admiral = { ESTATE = X }
+# add_scaled_conquistador = { ESTATE = X }
+# add_scaled_explorer = { ESTATE = X }
+
+# add_scaled_absolutism = { ESTATE = X }
+# add_scaled_legitimacy_value = { ESTATE = X }
+# add_scaled_mil_soc = { ESTATE = X }
+# add_scaled_tribal_allegiance = { ESTATE = X }
+# add_russian_government_power = { TYPE = X ESTATE = X }
+# add_feudal_theocracy_government_power = { TYPE = X ESTATE = X }
+# add_tribal_federation_power = { TYPE = X ESTATE = X }
+# add_mamluk_government_power = { TYPE = X ESTATE = X }
+# add_iqta_government_power = { TYPE = X ESTATE = X }
+
+# add_scaled_rr_authority = { ESTATE = X }
+# add_scaled_rr_doom = { ESTATE = X }
+# add_scaled_fervor = { ESTATE = X }
+# add_scaled_karma = { ESTATE = X }
+# add_scaled_church_power = { ESTATE = X }
+# add_scaled_papal_influence = { ESTATE = X }
+# add_scaled_patriarch_authority = { ESTATE = X }
+# add_scaled_harmony = { ESTATE = X }
+# add_scaled_piety = { ESTATE = X }
+
+# add_scaled_prestige = { ESTATE = X }
+# add_scaled_mercantilism = { ESTATE = X }
+# add_scaled_splendor = { ESTATE = X }
+# remove_scaled_corruption = { ESTATE = X }
+# remove_scaled_inflation = { ESTATE = X }
+# remove_scaled_war_exhaustion = { ESTATE = X }
+
+add_scaled_estate_advisor = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_scaled_estate_advisor_internal = { 
+            COST = 0.5
+            ESTATE = $ESTATE$ 
+            ADVISOR = $ADVISOR$ 
+            HIGH = $HIGH$ 
+            MED = $MED$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_scaled_estate_advisor_internal = { 
+            COST = 0.5
+            ESTATE = $ESTATE$ 
+            ADVISOR = $ADVISOR$ 
+            HIGH = $HIGH$ 
+            MED = $MED$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_scaled_estate_advisor_internal = { 
+            COST = 0.5
+            ESTATE = $ESTATE$ 
+            ADVISOR = $ADVISOR$ 
+            HIGH = $HIGH$ 
+            MED = $MED$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_scaled_estate_advisor_internal = { 
+            COST = 0.5
+            ESTATE = $ESTATE$ 
+            ADVISOR = $ADVISOR$ 
+            HIGH = $HIGH$ 
+            MED = $MED$
+        }
+    }   
+}
+
+add_scaled_estate_advisor_internal = {
+    hidden_effect = {
+        random_owned_province = {
+            limit = {
+                has_estate = $ESTATE$
+            }
+            save_event_target_as = estate_target_province
+        }
+    }
+    if = {
+        limit = {
+            monthly_income = $HIGH$
+            has_saved_event_target = estate_target_province
+        }
+        define_advisor = {
+            type = $ADVISOR$
+            skill = 3
+            culture = event_target:estate_target_province
+            religion = event_target:estate_target_province
+            location = event_target:estate_target_province
+            cost_multiplier = $COST$
+        }
+    }
+    else_if = {
+        limit = {
+            monthly_income = $HIGH$
+            NOT = { has_saved_event_target = estate_target_province }
+        }
+        define_advisor = {
+            type = $ADVISOR$
+            skill = 3
+            cost_multiplier = $COST$
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { monthly_income = $HIGH$ }
+            monthly_income = $MED$
+            has_saved_event_target = estate_target_province
+        }
+        define_advisor = {
+            type = $ADVISOR$
+            skill = 2
+            cost_multiplier = $COST$
+            culture = event_target:estate_target_province
+            religion = event_target:estate_target_province
+            location = event_target:estate_target_province
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { monthly_income = $HIGH$ }
+            monthly_income = $MED$
+            NOT = { has_saved_event_target = estate_target_province }
+        }
+        define_advisor = {
+            type = $ADVISOR$
+            skill = 2
+            cost_multiplier = $COST$
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { monthly_income = $MED$ }
+            has_saved_event_target = estate_target_province
+        }
+        define_advisor = {
+            type = $ADVISOR$
+            skill = 1
+            cost_multiplier = $COST$
+            culture = event_target:estate_target_province
+            religion = event_target:estate_target_province
+            location = event_target:estate_target_province
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { monthly_income = $MED$ }
+            NOT = { has_saved_event_target = estate_target_province }
+        }
+        define_advisor = {
+            type = $ADVISOR$
+            skill = 1
+            cost_multiplier = $COST$
+        }
+    }
+}
+
+add_scaled_adm_power = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_adm_power = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_adm_power = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_adm_power = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_adm_power = $MAX$
+    }     
+}
+
+add_scaled_dip_power = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_dip_power = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_dip_power = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_dip_power = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_dip_power = $MAX$
+    }     
+}
+
+add_scaled_mil_power = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_mil_power = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_mil_power = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_mil_power = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_mil_power = $MAX$
+    }     
+}
+
+add_scaled_yearly_gold = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_years_of_income = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_years_of_income = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_years_of_income = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_years_of_income = $MAX$
+    }     
+}
+
+add_scaled_yearly_manpower = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_yearly_manpower = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_yearly_manpower = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_yearly_manpower = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_yearly_manpower = $MAX$
+    }     
+}
+
+add_scaled_yearly_sailors = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_yearly_sailors = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_yearly_sailors = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_yearly_sailors = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_yearly_sailors = $MAX$
+    }     
+}
+
+add_scaled_army_tradition = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_army_tradition = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_army_tradition = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_army_tradition = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_army_tradition = $MAX$
+    }     
+}
+
+add_scaled_navy_tradition = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_navy_tradition = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_navy_tradition = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_navy_tradition = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_navy_tradition = $MAX$
+    }     
+}
+
+add_scaled_army_professionalism = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_army_professionalism = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_army_professionalism = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_army_professionalism = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_army_professionalism = $MAX$
+    }     
+}
+
+add_scaled_absolutism = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_absolutism = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_absolutism = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_absolutism = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_absolutism = $MAX$
+    }     
+}
+
+add_scaled_legitimacy_value = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_legitimacy = $LOW$
+        add_republican_tradition = $LOW$
+        add_devotion = $LOW$
+        add_horde_unity = $LOW$
+        add_meritocracy = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_legitimacy = $MED$
+        add_republican_tradition = $MED$
+        add_devotion = $MED$
+        add_horde_unity = $MED$
+        add_meritocracy = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_legitimacy = $HIGH$
+        add_republican_tradition = $HIGH$
+        add_devotion = $HIGH$
+        add_horde_unity = $HIGH$
+        add_meritocracy = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_legitimacy = $MAX$
+        add_republican_tradition = $MAX$
+        add_devotion = $MAX$
+        add_horde_unity = $MAX$
+        add_meritocracy = $MAX$
+    }     
+}
+
+add_scaled_mil_soc = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_militarised_society = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_militarised_society = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_militarised_society = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_militarised_society = $MAX$
+    }     
+}
+
+add_scaled_tribal_allegiance = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_tribal_allegiance = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_tribal_allegiance = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_tribal_allegiance = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_tribal_allegiance = $MAX$
+    }     
+}
+
+add_scaled_government_power = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_government_power = {
+            government_mechanic = $MECHANIC$
+            which = $TYPE$
+            amount = $LOW$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_government_power = {
+            government_mechanic = $MECHANIC$
+            which = $TYPE$
+            amount = $MED$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_government_power = {
+            government_mechanic = $MECHANIC$
+            which = $TYPE$
+            amount = $HIGH$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_government_power = {
+            government_mechanic = $MECHANIC$
+            which = $TYPE$
+            amount = $MAX$
+        }
+    }     
+}
+
+add_russian_government_power = {
+    add_scaled_government_power = { MECHANIC = russian_mechanic TYPE = $TYPE$ ESTATE = $ESTATE$ LOW = $LOW$ MED = $MED$ HIGH = $HIGH$ MAX = $MAX$ }
+}
+
+add_feudal_theocracy_government_power = {
+    add_scaled_government_power = { MECHANIC = feudal_theocracy_mechanic TYPE = $TYPE$ ESTATE = $ESTATE$ LOW = $LOW$ MED = $MED$ HIGH = $HIGH$ MAX = $MAX$ }
+}
+
+add_tribal_federation_power = {
+    add_scaled_government_power = { MECHANIC = tribal_federation_mechanic TYPE = $TYPE$ ESTATE = $ESTATE$ LOW = $LOW$ MED = $MED$ HIGH = $HIGH$ MAX = $MAX$ }
+}
+
+add_mamluk_government_power = {
+    add_scaled_government_power = { MECHANIC = mamluk_mechanic TYPE = $TYPE$ ESTATE = $ESTATE$ LOW = $LOW$ MED = $MED$ HIGH = $HIGH$ MAX = $MAX$ }
+}
+
+add_iqta_government_power = {
+    add_scaled_government_power = { MECHANIC = iqta_mechanic TYPE = $TYPE$ ESTATE = $ESTATE$ LOW = $LOW$ MED = $MED$ HIGH = $HIGH$ MAX = $MAX$ }
+}
+
+add_scaled_general = { 
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        create_general = {
+            tradition = $LOW$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        create_general = {
+            tradition = $MED$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        create_general = {
+            tradition = $HIGH$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        create_general = {
+            tradition = $MAX$
+        }
+    }
+}
+
+add_scaled_admiral = { 
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        create_admiral = {
+            tradition = $LOW$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        create_admiral = {
+            tradition = $MED$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        create_admiral = {
+            tradition = $HIGH$
+        }
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        create_admiral = {
+            tradition = $MAX$
+        }
+    }
+}
+
+add_scaled_conquistador = { 
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        create_conquistador = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        create_conquistador = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        create_conquistador = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        create_conquistador = $MAX$
+    }
+}
+
+add_scaled_explorer = { 
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        create_explorer = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        create_explorer = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        create_explorer = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        create_explorer = $MAX$
+    }
+}
+
+add_scaled_rr_authority = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_authority = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_authority = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_authority = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_authority = $MAX$
+    }     
+}
+
+add_scaled_rr_doom = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_doom = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_doom = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_doom = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_doom = $MAX$
+    }     
+}
+
+add_scaled_fervor = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_fervor = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_fervor = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_fervor = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_fervor = $MAX$
+    }     
+}
+
+add_scaled_karma = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_karma = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_karma = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_karma = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_karma = $MAX$
+    }     
+}
+
+add_scaled_church_power = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_church_power = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_church_power = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_church_power = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_church_power = $MAX$
+    }     
+}
+
+add_scaled_papal_influence = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_papal_influence = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_papal_influence = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_papal_influence = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_papal_influence = $MAX$
+    }     
+}
+
+add_scaled_patriarch_authority = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_patriarch_authority = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_patriarch_authority = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_patriarch_authority = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_patriarch_authority = $MAX$
+    }     
+}
+
+add_scaled_harmony = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_harmony = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_harmony = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_harmony = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_harmony = $MAX$
+    }     
+}
+
+add_scaled_piety = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_piety = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_piety = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_piety = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_piety = $MAX$
+    }     
+}
+
+add_scaled_prestige = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_prestige = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_prestige = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_prestige = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_prestige = $MAX$
+    }     
+}
+
+add_scaled_mercantilism = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_mercantilism = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_mercantilism = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_mercantilism = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_mercantilism = $MAX$
+    }     
+}
+
+add_scaled_splendor = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_splendor = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_splendor = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_splendor = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_splendor = $MAX$
+    }     
+}
+
+add_scaled_corruption = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_corruption = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_corruption = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_corruption = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_corruption = $MAX$
+    }     
+}
+
+add_scaled_inflation = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_inflation = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_inflation = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_inflation = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_inflation = $MAX$
+    }     
+}
+
+add_scaled_war_exhaustion = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        add_war_exhaustion = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        add_war_exhaustion = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        add_war_exhaustion = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        add_war_exhaustion = $MAX$
+    }     
+}
+

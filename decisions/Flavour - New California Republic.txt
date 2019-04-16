@@ -61,8 +61,42 @@ country_decisions = {
 			}
 		}
 		allow =  {
-            total_development = 500
 		    years_of_income = 1
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SHADY_SANDS
+                1292 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_THE_HUB
+                1207 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_THE_BONEYARD
+                409 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_DAYGLOW
+                1122 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_MAXSON
+                1221 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
 		}
 		
 		effect = {
@@ -72,41 +106,6 @@ country_decisions = {
 				duration = 7300
 			}
 			change_tag = NCR
-            
-            # Done for a nicer tooltip
-            integrate_ncr_territory = { TAG = FOA }
-            integrate_ncr_territory = { TAG = TUB }
-            integrate_ncr_territory = { TAG = JNK }
-            integrate_ncr_territory = { TAG = NRN }
-            integrate_ncr_territory = { TAG = MXS }
-            integrate_ncr_territory = { TAG = BUL }
-            integrate_ncr_territory = { TAG = CAM }
-            integrate_ncr_territory = { TAG = NAV }
-            integrate_ncr_territory = { TAG = SAC }
-            integrate_ncr_territory = { TAG = RED }
-            integrate_ncr_territory = { TAG = ONE }
-            integrate_ncr_territory = { TAG = HAT }
-            integrate_ncr_territory = { TAG = BIT }
-            integrate_ncr_territory = { TAG = MED }
-            integrate_ncr_territory = { TAG = GRP }
-            integrate_ncr_territory = { TAG = ELK }
-            integrate_ncr_territory = { TAG = WHT }
-            integrate_ncr_territory = { TAG = NAI }
-            integrate_ncr_territory = { TAG = LAS }
-            integrate_ncr_territory = { TAG = VIS }
-            integrate_ncr_territory = { TAG = FRS }
-            integrate_ncr_territory = { TAG = MER }
-            integrate_ncr_territory = { TAG = MND }
-            integrate_ncr_territory = { TAG = FLT }
-            integrate_ncr_territory = { TAG = TAH }
-            integrate_ncr_territory = { TAG = VID }
-            integrate_ncr_territory = { TAG = SLB }
-            integrate_ncr_territory = { TAG = BOG }
-            integrate_ncr_territory = { TAG = QUZ }
-            integrate_ncr_territory = { TAG = BIP }
-            integrate_ncr_territory = { TAG = SCH }
-            integrate_ncr_territory = { TAG = DYS }
-            integrate_ncr_territory = { TAG = VLJ }
 		}
 	}
 }

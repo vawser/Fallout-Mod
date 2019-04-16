@@ -401,47 +401,6 @@ fallout_army_tactics_ideas = {
     }
 }
 
-# Armaments
-fallout_armaments_ideas = {
-    category = MIL
-
-    bonus = {
-        siege_ability = 0.1
-    }
-    # Super Sledges
-    fallout_armaments_ideas_1 = {
-        shock_damage = 0.1
-    }
-    # Plasma Weaponry
-    fallout_armaments_ideas_2 = {
-        fire_damage = 0.1
-    }
-    # Prewar Ordanance
-    fallout_armaments_ideas_3 = {
-        artillery_fire = 1
-    }
-    # Armor Piercing Shells
-    fallout_armaments_ideas_4 = {
-        cavalry_shock = 1
-    }
-    # Improved Pistols
-    fallout_armaments_ideas_5 = {
-        infantry_fire = 1
-    }
-    # Improved Carbines
-    fallout_armaments_ideas_6 = {
-        infantry_shock = 1
-    }
-    # Bunker Busters
-    fallout_armaments_ideas_7 = {
-        artillery_bonus_vs_fort = 1
-    }
-    
-    ai_will_do = {
-        factor = 1
-    }
-}
-
 # Fortification
 fallout_fortification_ideas = {
     category = MIL
@@ -476,47 +435,6 @@ fallout_fortification_ideas = {
     # Farmsteads
     fallout_fortification_ideas_7 = {
         global_supply_limit_modifier = 0.1
-    }
-    
-    ai_will_do = {
-        factor = 1
-    }
-}
-
-# Militarization
-fallout_militarization_ideas = {
-    category = MIL
-
-    bonus = {
-        mil_tech_cost_modifier = -0.1
-    }
-    # Regular Enlistment
-    fallout_militarization_ideas_1 = {
-        reinforce_cost_modifier = -0.33
-    }
-    # Wartime Efficiencies
-    fallout_militarization_ideas_2 = {
-        global_tax_modifier = 0.1
-    }
-    # Home Support
-    fallout_militarization_ideas_3 = {
-        state_maintenance_modifier = -0.25
-    }
-    # Combat Readiness
-    fallout_militarization_ideas_4 = {
-        land_forcelimit_modifier = 0.15
-    }
-    # Wartime Construction
-    fallout_militarization_ideas_5 = {
-        build_time = -0.33
-    }
-    # Marshal Law
-    fallout_militarization_ideas_6 = {
-        core_creation = -0.1
-    }
-    # Common Fortitude
-    fallout_militarization_ideas_7 = {
-        war_exhaustion_cost = -0.25
     }
     
     ai_will_do = {
@@ -565,70 +483,23 @@ fallout_subjugation_ideas = {
     }
 }
 
-# Tyranny
-fallout_tyranny_ideas = {
-    category = MIL
-
-    bonus = {
-        #cb_on_government_enemies = yes
-        global_autonomy = -0.05
-    }
-    # Tyranny of the Weak
-    fallout_tyranny_ideas_1 = {
-        max_absolutism = 20
-    }
-    # Enforced Legitimacy
-    fallout_tyranny_ideas_2 = {
-        legitimacy = 1
-        republican_tradition = 1
-        devotion = 1
-        horde_unity = 1
-        meritocracy = 1
-    }
-    # Military Parades
-    fallout_tyranny_ideas_3 = {
-        prestige = 1
-    }
-    # Labour Camps
-    fallout_tyranny_ideas_4 = {
-        build_time = -0.33
-    }
-    # Military Executions
-    fallout_tyranny_ideas_5 = {
-        yearly_corruption = -0.05
-    }
-    # Hammer the Nail
-    fallout_tyranny_ideas_6 = {
-        years_of_nationalism = -5
-    }
-    # Absolute Rule
-    fallout_tyranny_ideas_7 = {
-        yearly_absolutism = 1
-    }
-    
-    ai_will_do = {
-        factor = 1
-    }
-}
-
 # Imperialism
 fallout_imperialism_ideas = {
     category = MIL
 
     bonus = {
-        treasure_fleet_income = 1.0
         colonist_placement_chance = 0.05
     }
-    # Imperial Frontiers
+    # Wasteland Frontiers
     fallout_imperialism_ideas_1 = {
         may_establish_frontier = yes
-        may_explore = yes
+        colonist_placement_chance = 0.05
     }
-    # Loyal Colonists
+    # Loyal Settlers
     fallout_imperialism_ideas_2 = {
         colonists = 1
     }
-    # Enforced Migration
+    # Enforced Settlement
     fallout_imperialism_ideas_3 = {
         global_colonial_growth = 20
     }
@@ -638,13 +509,13 @@ fallout_imperialism_ideas = {
     }
     # Exploit the Natives
     fallout_imperialism_ideas_5 = {
-        native_assimilation = 1.0
+        native_assimilation = 0.5
     }
-    # Protected Shipping Routes
+    # Protected Caravans
     fallout_imperialism_ideas_6 = {
-        global_tariffs = 0.2
+        caravan_power = 0.2
     }
-    # Distant Colonies
+    # Distant Settlements
     fallout_imperialism_ideas_7 = {
         range = 0.5
     }
