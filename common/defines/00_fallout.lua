@@ -29,6 +29,9 @@ NDefines.NCountry.CAN_CONVERT_TERRITORY_CULTURE = 1     -- Allow conversion
 NDefines.NCountry.CAN_CONVERT_TERRITORY_RELIGION = 1    -- Allow conversion
 NDefines.NCountry.MONARCH_DEATH = 0
 NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 0
+NDefines.NCountry.STRENGTHEN_GOVERNMENT_REPUBLICAN_TRADITION = 10
+NDefines.NCountry.LEGITIMACY_DYNASTY_CHANGE = 50
+NDefines.NCountry.RAZE_TECH_POWER_DECREASE = 0.01
 
 --------------------------------
 -- Country
@@ -45,7 +48,7 @@ NDefines.NCountry.ABDICATE_LEGITIMACY_HIT = -90 -- Make abdication much more cos
 NDefines.NCountry.ABDICATE_PRESTIGE_HIT = -90 -- Make abdication much more costly
 
 -- Ages
-NDefines.NCountry.SPLENDOR_ABILITY_COST = 600
+NDefines.NCountry.SPLENDOR_ABILITY_COST = 1000
 
 -- Ideas
 NDefines.NCountry.FREE_IDEA_GROUP_COST = 3 
@@ -63,6 +66,9 @@ NDefines.NCountry.EXPLOIT_MIL_MANPOWER = 12     -- Make exploit development more
 NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 12  -- Make exploit development more useful
 
 -- Institutions
+NDefines.NCountry.INSTITUTION_BONUS_FROM_IMP_DEVELOPMENT = 5
+NDefines.NCountry.INSTITUTION_CAP_IMP_DEVELOPMENT = 10
+NDefines.NCountry.INSTITUTION_BASE_IMP_DEVELOPMENT = 30
 NDefines.NCountry.EMBRACE_INSTITUTION_COST = 5 -- Make embracement of institutions twice as expensive
 
 -- States
@@ -166,32 +172,34 @@ NDefines.NCountry.HRE_RANK = 3
 NDefines.NCountry.HRE_MAX_RANK = 3
 NDefines.NCountry.HRE_MAX_RANK_ELECTOR = 3
 
+NDefines.NDiplomacy.TRUCE_YEARS = 5                         -- Reverse truces to original design
+NDefines.NDiplomacy.SCALED_TRUCE_YEARS = 0                  -- Reverse truces to original design
+
 --------------------------------
 -- Economy
 --------------------------------
-NDefines.NEconomy.COLONIAL_MAINTENANCE_FACTOR = 2.0 -- Make colonisation cheaper
-NDefines.NEconomy.BASE_INTERESTS = 5.0 -- Loans more risky in the wasteland
-NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.05 -- 50% increase after all (20) mil techs taken
-NDefines.NEconomy.COLONY_MIN_AUTONOMY = 75 
-NDefines.NEconomy.OVERSEAS_MIN_AUTONOMY = 50
-NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 25 -- Make claims better
-NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 75 -- Make unclaimed conquest worse
-NDefines.NEconomy.AUTONOMY_AT_DIPLO_ANNEX = 25 -- Make diplo annex better
-NDefines.NEconomy.EDICTS_COST_INCREASE = 1.0
+NDefines.NEconomy.MAX_BUILDING_SLOTS = 12
+NDefines.NEconomy.BASE_INTERESTS = 5.0                  -- Loans more risky in the wasteland
+NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.05   -- 50% increase after all (20) mil techs taken
+NDefines.NEconomy.GOLD_INFLATION = 0.1
+NDefines.NEconomy.INFLATION_FROM_LOAN = 0.1
 
 --------------------------------
 -- AI
 --------------------------------
-NDefines.NAI.AI_USES_HISTORICAL_IDEA_GROUPS = 0
-NDefines.NAI.AI_CONVERT_CULTURES = 1   
-NDefines.NAI.AGGRESSIVENESS = 500 -- Make AI more war-happy
-NDefines.NAI.AGGRESSIVENESS_BONUS_EASY_WAR = 500 -- Make AI more war-happy
-NDefines.NAI.NAVY_BUDGET_FRACTION = 0.2 -- Reduce AI spending on navy
-NDefines.NAI.DEVELOPMENT_CAP_BASE = 30 -- Allow AI to develop more
-NDefines.NAI.PEACE_TIME_MONTHS = 6 -- Reduce AI stubbornness
-NDefines.NAI.PEACE_EXCESSIVE_DEMANDS_THRESHOLD = 5
-NDefines.NAI.PEACE_TIME_MAX_MONTHS = 12
-NDefines.NAI.PEACE_INCONCLUSIVE_THRESHOLD = 0 -- Allow for peace demands at 0
+NDefines.NAI.AGGRESSIVENESS = 2000                  -- Increase AI aggressiveness
+NDefines.NAI.AGGRESSIVENESS_BONUS_EASY_WAR = 1500   -- Increase AI aggressiveness
+NDefines.NAI.AI_USES_HISTORICAL_IDEA_GROUPS = 0  
+NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.2       -- Increase AI desire to enter battles
+NDefines.NAI.DEVELOP_IN_SUBJECTS_PREFERENCE = 0.25  -- Reduce AI desire to develop subject provinces
+NDefines.NAI.MAX_SAVINGS = 120                      -- Increase long-term saving      
+NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 10
+NDefines.NAI.DEVELOPMENT_CAP_BASE = 50      
+NDefines.NAI.DEVELOPMENT_CAP_MULT = 2
+NDefines.NAI.PEACE_INCONCLUSIVE_THRESHOLD = 0       -- Allow peace terms below 10% warscore
+NDefines.NAI.PEACE_DESPERATION_FACTOR = 80          -- Increase effect on occupying homeland provinces
+NDefines.NAI.PEACE_TIME_MONTHS = 24
+NDefines.NAI.PEACE_TIME_MAX_MONTHS = 120
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.5
 
 --------------------------------
@@ -202,18 +210,16 @@ NDefines.NMilitary.TRADITION_GAIN_NAVAL = 50
 
 NDefines.NMilitary.COSSACKS_SHOCK_DAMAGE_BONUS = 0.1
 NDefines.NMilitary.STRELTSY_FIRE_DAMAGE_BONUS = 0.1
-NDefines.NMilitary.FORTRESS_COST = 0.1 -- Make forts cheaper to maintain.
-NDefines.NMilitary.INFANTRY_SPEED = 1.0 -- Revert speed nerf Paradox introducted.
-NDefines.NMilitary.CAVALRY_SPEED = 1.0 -- Revert speed nerf Paradox introducted.
-NDefines.NMilitary.ARTILLERY_SPEED = 1.0 -- Revert speed nerf Paradox introducted.
-NDefines.NMilitary.FORT_PER_DEV_RATIO = 100 -- Make army trad. from forts easier to get.
+
+NDefines.NMilitary.FORTRESS_COST = 0.0 -- Make forts cheaper to maintain.
+NDefines.NMilitary.FORT_PER_DEV_RATIO = 50 -- Make army trad. from forts easier to get.
 NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.05 -- Represents difficulty in supply across wasteland
 NDefines.NMilitary.MONTHLY_REINFORCE = 0.05 -- Represents difficulty in supply across wasteland
 NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_BASE = 10
 NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_FRACTION = 0.05 -- Reduce forcelimit influence on merc limit
 NDefines.NMilitary.WAR_LENGTH_DAMAGE_MODIFIER = 0.02
 
-NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 100 -- Battles more important than capture in the wasteland
+NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 60 -- Battles more important than capture in the wasteland
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 100
 NDefines.NMilitary.DEFAULT_WARGOAL_WARSCORE_BONUS = 20
 NDefines.NMilitary.DEFAULT_WARGOAL_BATTLESCORE_BONUS = 10
@@ -229,6 +235,44 @@ NDefines.NMilitary.SUPPLY_DEPOT_DURATION_MONTHS = 60
 NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 10
 
 NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 1.0 -- Disable
+
+NDefines.NMilitary.LOOTED_DAYS = 365
+NDefines.NMilitary.LOOTED_SCALE = 3
+NDefines.NMilitary.LOOTED_MAX = 25
+NDefines.NMilitary.NOMAD_LOOT_TRADITION = 0.05
+
+NDefines.NMilitary.INFANTRY_SPEED = 1.0 
+NDefines.NMilitary.CAVALRY_SPEED = 1.0 
+NDefines.NMilitary.ARTILLERY_SPEED = 1.0 
+NDefines.NMilitary.INFANTRY_COST = 10.0 
+NDefines.NMilitary.CAVALRY_COST = 25.0 
+NDefines.NMilitary.ARTILLERY_COST = 30.0 
+NDefines.NMilitary.INFANTRY_TIME = 60
+NDefines.NMilitary.CAVALRY_TIME = 90	
+NDefines.NMilitary.ARTILLERY_TIME = 120
+NDefines.NMilitary.INF_REGIMENT_MANPOWER_COST = 1.0
+NDefines.NMilitary.CAV_REGIMENT_MANPOWER_COST = 1.0
+NDefines.NMilitary.ART_REGIMENT_MANPOWER_COST = 1.0
+
+NDefines.NMilitary.HEAVY_SHIP_SPEED = 6.0 
+NDefines.NMilitary.LIGHT_SHIP_SPEED = 10.0 
+NDefines.NMilitary.GALLEY_SPEED = 4.0 
+NDefines.NMilitary.TRANSPORT_SPEED = 6.0 
+NDefines.NMilitary.HEAVY_SHIP_COST = 500.0 
+NDefines.NMilitary.LIGHT_SHIP_COST = 250.0 
+NDefines.NMilitary.GALLEY_COST = 250.0 
+NDefines.NMilitary.TRANSPORT_COST = 100.0 
+NDefines.NMilitary.HEAVY_SHIP_TIME = 365
+NDefines.NMilitary.LIGHT_SHIP_TIME = 180
+NDefines.NMilitary.GALLEY_TIME = 180	
+NDefines.NMilitary.TRANSPORT_TIME = 90	
+NDefines.NMilitary.HEAVY_SHIP_SAILORS_COST = 100
+NDefines.NMilitary.LIGHT_SHIP_SAILORS_COST = 50
+NDefines.NMilitary.GALLEY_SHIP_SAILORS_COST = 75
+NDefines.NMilitary.TRANSPORT_SHIP_SAILORS_COST = 25
+
+NDefines.NMilitary.FLAGSHIP_REQUIRED_NAVY_SIZE_IN_SAILORS = 1000
+NDefines.NMilitary.FLAGSHIP_COST_SAILORS = 250
 
 --------------------------------
 -- GOVERNMENT
@@ -414,3 +458,7 @@ NDefines.NCountry.MAXIMUM_ADVISOR_SKILL = 10
 NDefines.NCountry.PROMOTE_COST_MONTHS_ADVISOR_SALARY = 120
 NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0.0 -- Disable yearly increase.
 NDefines.NEconomy.ADVISOR_COST = 1.0
+
+--------------------------------
+-- Military
+--------------------------------

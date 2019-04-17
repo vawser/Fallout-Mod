@@ -1,100 +1,6 @@
 #--------------------------------------------
 # Monarchy
 #--------------------------------------------
-frontier_settlement_legacy = {
-    icon = "union"
-    
-    monarchy = yes
-    
-    allow_normal_conversion = no
-	legacy_government = yes
-    
-	valid_for_new_country = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    government_abilities = { 
-        iqta_mechanic
-    }
-    
-    modifiers = {
-        global_colonial_growth = 10
-        colonist_placement_chance = 0.05
-        max_states = 3
-    }
-
-	ai = { factor = 1 }
-}
-mercantile_settlement_legacy = {
-    icon = "union"
-    
-    monarchy = yes
-    
-    allow_normal_conversion = no
-	legacy_government = yes
-    
-	valid_for_new_country = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    government_abilities = { 
-        iqta_mechanic
-    }
-    
-    modifiers = {
-        global_own_trade_power = 0.1
-        trade_efficiency = 0.05
-        max_states = 3
-    }
-
-	ai = { factor = 1 }
-}
-militarized_settlement_legacy = {
-    icon = "union"
-    
-    monarchy = yes
-    
-    allow_normal_conversion = no
-	legacy_government = yes
-    
-	valid_for_new_country = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    government_abilities = { 
-        iqta_mechanic
-    }
-    
-    modifiers = {
-        global_manpower_modifier = 0.1
-        global_regiment_cost = -0.1
-        max_states = 3
-    }
-
-	ai = { factor = 1 }
-}
-militia_legacy = {
-    icon = "union"
-    
-    monarchy = yes
-    
-    allow_normal_conversion = no
-	legacy_government = yes
-    
-	valid_for_new_country = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-
-	allow_migration = yes
-
-    modifiers = {
-        global_manpower_modifier = 0.1
-        max_absolutism = 10
-        max_states = 3
-    }
-    
-	ai = { factor = 1 }
-}
 legion_legacy = {
     icon = "union"
     
@@ -106,6 +12,9 @@ legion_legacy = {
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
     
 	claim_states = yes
     
@@ -139,6 +48,7 @@ think_tank_legacy = {
     
 	queen = no
 	heir = no
+    
     royal_marriage = no
     rulers_can_be_generals = no
     
@@ -168,6 +78,7 @@ new_vegas_legacy = {
     
     queen = no
 	heir = no
+    
     royal_marriage = no
     rulers_can_be_generals = no
     
@@ -188,6 +99,9 @@ zetan_legacy = {
     icon = "union"
     
     monarchy = yes
+    
+    heir = yes
+	queen = no
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -235,12 +149,141 @@ shi_legacy = {
     
 	ai = { factor = 1 }
 }
+
+#--------------------------------------------
+# Republic
+#--------------------------------------------
+frontier_settlement_legacy = {
+    icon = "union"
+    
+    republic = yes
+    
+    heir = no
+	queen = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
+    modifiers = {
+        global_colonial_growth = 10
+        colonist_placement_chance = 0.05
+        max_states = 3
+    }
+
+	ai = { factor = 1 }
+}
+mercantile_settlement_legacy = {
+    icon = "union"
+    
+    republic = yes
+    
+    heir = no
+	queen = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
+    modifiers = {
+        global_own_trade_power = 0.1
+        trade_efficiency = 0.05
+        max_states = 3
+    }
+
+	ai = { factor = 1 }
+}
+militarized_settlement_legacy = {
+    icon = "union"
+    
+    republic = yes
+    
+    heir = no
+	queen = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    government_abilities = { 
+        iqta_mechanic
+    }
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        global_regiment_cost = -0.1
+        max_states = 3
+    }
+
+	ai = { factor = 1 }
+}
+militia_legacy = {
+    icon = "union"
+    
+    republic = yes
+    
+    heir = no
+	queen = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+	allow_migration = yes
+
+    modifiers = {
+        global_manpower_modifier = 0.1
+        max_absolutism = 10
+        max_states = 3
+    }
+    
+	ai = { factor = 1 }
+}
 ncr_legacy = {
     icon = "union"
     
     republic = yes
     
-    heir = yes
+    duration = 5
+    has_term_election = yes
+    
+    heir = no
 	queen = no
     
     allow_normal_conversion = no
@@ -271,9 +314,12 @@ ncr_legacy = {
 ncr_state_legacy = {
     icon = "union"
     
-    monarchy = yes
+    republic = yes
     
-    heir = yes
+    duration = 5
+    has_term_election = yes
+    
+    heir = no
 	queen = no
     
     allow_normal_conversion = no
@@ -299,14 +345,9 @@ ncr_state_legacy = {
     
 	ai = { factor = 1 }
 }
-
-#--------------------------------------------
-# Republic
-#--------------------------------------------
 republic_legacy = {
     icon = "union"
     
-    monarchy = yes
     republic = yes
     
     allow_normal_conversion = no
@@ -349,7 +390,9 @@ dictatorship_legacy = {
     republican_name = yes
 	royal_marriage = no
     
-    duration = 0
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
     
     government_abilities = { 
         iqta_mechanic
@@ -367,6 +410,10 @@ institute_legacy = {
     icon = "union"
     
     republic = yes
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -402,6 +449,9 @@ enclave_legacy = {
     icon = "union"
     
     republic = yes
+    
+    duration = 5
+    has_term_election = yes
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -446,7 +496,8 @@ vault_legacy = {
 	royal_marriage = no
     
     duration = 5
-    has_term_election = yes
+    has_term_election = no
+    election_on_death = yes
     
     modifiers = {
         development_cost = -0.1
@@ -465,6 +516,9 @@ theocracy_legacy = {
     icon = "union"
     
     religion = yes
+    
+    heir = yes
+	queen = no
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -488,6 +542,9 @@ brotherhood_legacy = {
     icon = "union"
     
     religion = yes
+    
+    heir = yes
+	queen = no
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -517,6 +574,9 @@ cult_legacy = {
     
     religion = yes
     
+    heir = yes
+	queen = no
+    
     allow_normal_conversion = no
 	legacy_government = yes
     
@@ -543,6 +603,9 @@ tribe_legacy = {
     
     monarchy = yes
     tribal = yes
+    
+    heir = yes
+	queen = no
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -572,6 +635,9 @@ commune_legacy = {
     
     monarchy = yes
     tribal = yes
+    
+    heir = yes
+	queen = no
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -605,6 +671,9 @@ raider_legacy = {
     monarchy = yes
     tribal = yes
     
+    heir = yes
+	queen = no
+    
     allow_normal_conversion = no
 	legacy_government = yes
     
@@ -636,6 +705,9 @@ super_mutant_legacy = {
     monarchy = yes
     tribal = yes
     
+    heir = yes
+	queen = no
+    
     allow_normal_conversion = no
 	legacy_government = yes
     
@@ -666,6 +738,9 @@ swarm_legacy = {
     
     monarchy = yes
     tribal = yes
+    
+    heir = yes
+	queen = no
     
     allow_normal_conversion = no
 	legacy_government = yes
@@ -700,6 +775,9 @@ wolf_pack_legacy = {
     tribal = yes
     nomad = yes
     
+    heir = yes
+	queen = no
+    
     allow_normal_conversion = no
 	legacy_government = yes
     
@@ -730,6 +808,9 @@ great_khan_legacy = {
     monarchy = yes
     tribal = yes
     nomad = yes
+    
+    heir = yes
+	queen = no
     
     allow_normal_conversion = no
 	legacy_government = yes

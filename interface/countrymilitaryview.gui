@@ -210,7 +210,8 @@ guiTypes = {
 	
 	### MILITARY VIEW
 	windowType = {
-		name = "countrymilitaryview"	
+		name = "countrymilitaryview"
+		#position = { x=0 y=140 }	
 		position = { x=-600 y=140 }	
 		show_position = { x=0 y =140 }
 		hide_position = { x=-600 y =140 }	
@@ -245,16 +246,16 @@ guiTypes = {
 			name ="CoCbackground"
 			if_resolution = {
             max_height = 867
-			spriteType = "GFX_country_military_view_bg_ap"
+			spriteType = "GFX_country_military_view_bg"
             }
             if_resolution = {
 			min_height = 868
 			max_height = 1047
-			spriteType = "GFX_country_military_view_bg_ap_large"
+			spriteType = "GFX_country_military_view_bg_large"
             }
             if_resolution = {
 			min_height = 1048
-			spriteType = "GFX_country_military_view_bg_ap_huge"
+			spriteType = "GFX_country_military_view_bg_huge"
 			}
 			position = { x= -7 y = -10 }
 			Orientation = "UPPER_LEFT"
@@ -1658,7 +1659,20 @@ guiTypes = {
 		guiButtonType =	{
 			name = "slacken_button"
 			quadTextureSprite= "GFX_slacken_button"
-            position = { x=157 y =-9999 }
+
+			if_resolution = {
+            max_height = 867
+			position = { x=157 y =-9999 }
+            }
+            if_resolution = {
+			min_height = 868
+			max_height = 1047
+			position = { x=105 y =-9999 }
+            }
+            if_resolution = {
+			min_height = 1048
+			position = { x=105 y =-9999 }
+			}
 			
 		}
 		
@@ -1666,7 +1680,7 @@ guiTypes = {
 			name = "naval_doctrine_button"
 			quadTextureSprite= "GFX_naval_doctrine_icons_small"
 			frame = 1
-			position = { x=27 y =-9999 }
+			position = { x=153 y =-9999 }
 		}
 
 		guiButtonType = {
@@ -1724,8 +1738,8 @@ guiTypes = {
 		windowType = {
 			name = "army_professionalism"
 			backGround =""
-			position = { x=32 y=96 }	
-			size = { x=280 y=16 } # Most of the rest of the military view will move down by the vertical size of this window if Cradle is enabled
+			position = { x=32 y=-9999 }	
+			size = { x=280 y=0 } # Most of the rest of the military view will move down by the vertical size of this window if Cradle is enabled
 			moveable = 0
 			dontRender = ""
 			horizontalBorder = ""
@@ -1985,7 +1999,7 @@ guiTypes = {
 	windowType = {
 		name = "domesticpanel_naval_doctrine_select"
 		backGround=""
-		position = { x=0 y=220 }
+		position = { x=0 y=124 }
 		size = { x=1024 y=75 }
 		moveable = 0
 		dontRender = ""
@@ -2014,33 +2028,30 @@ guiTypes = {
 		listboxType = 
 		{
 			name ="domesticpanel_naval_doctrine_select_list"
-			position = { x=65 y =208}
+			position = { x=30 y =270}
 			backGround=""
-			size = { x=0 y =170}
+			size = { x=400 y =500}
 			Orientation = "UPPER_LEFT"
 			horizontal = 1
-			spacing = 0
 			borderSize = {x = 0 y = 0}
 		}
 		
 		guiButtonType = {
-				name = "back_button"
-				position = { x=20 y =261}
-				quadTextureSprite ="GFX_select_mission_back_button"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				clicksound = back_click
-				shortcut = "ESCAPE"	
-			}
+            name = "back_button"
+            position = { x = 510 y = 215 }
+			quadTextureSprite ="GFX_closebutton2"	
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}
 	}
-	
+    
 	### Naval Doctrine selection entry
 	windowType = {
 		name = "domesticpanel_naval_doctrine_selection_entry"
 		backGround=""
 		position = { x=0 y=0 }	
-		size = { x=85 y= 34 }
+		size = { x=40 y=40 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -2051,7 +2062,7 @@ guiTypes = {
 		{
 			name ="naval_doctrine_selection_button"
 			quadTextureSprite= "GFX_naval_doctrine_icons"
-			position = { x= 30 y = 40 }
+			position = { x= 0 y = 0 }
 			clicksound = preferred_unit
 		}
 	}
