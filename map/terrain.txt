@@ -21,18 +21,11 @@ categories =  {
         sound_type = sea
         color = { 0 0 200 }
     }
-    impassable_mountains = {
-        movement_cost = 8.0
-        defence = 6
-        local_development_cost = 10
-        sound_type = desert
-        color = { 128 128 128 }
-    }
     
     #----------------------------------
     # Common
     #----------------------------------
-    marsh = {
+    fm_marsh = {
         movement_cost = 1.3
         defence = 1
         local_development_cost = 0.25
@@ -48,7 +41,7 @@ categories =  {
             1231 1179 1264
         }
     }
-    desert = {
+    fm_desert = {
         movement_cost = 1.05
         supply_limit = 4
         sound_type = desert
@@ -62,7 +55,7 @@ categories =  {
             867 422 45
         }
     }
-    ruins = {
+    fm_ruins = {
         movement_cost = 1.0
         supply_limit = 10
         allowed_num_of_buildings = 3
@@ -82,9 +75,16 @@ categories =  {
             1213 1215 1216 1220 1221 1226 1228 1229 1230 1232 1245 1246 
             1249 1251 1252 1259 1260 1261 1278 1279 1284 1285 1286 1288 
             1297 1300 1301 1302 1303 1304 1308 1393 1396 1400
+            
+            # Irradiated
+            17 47 194 252 255 256 257 258 259 263 265 272 273 283 309 354 
+            405 424 430 432 433 492 495 540 543 544 545 549 550 551 552 557
+            558 561 562 871 879 887 890 1112 1203 1210 1211 1212 1217 
+            1223 1233 1237 1241 1248 1280 1282 1289 1290 1291 1292 1293 
+            1294 1295 1299 1382 1383 1384 1397 1398 1399
         }
     }
-    grasslands = {
+    fm_plains = {
         movement_cost = 1.0
         supply_limit = 8
         allowed_num_of_buildings = 1
@@ -98,7 +98,7 @@ categories =  {
             
         }
     }
-    forest = {
+    fm_forest = {
         movement_cost = 1.25
         defence = 1
         combat_width = -0.20
@@ -114,7 +114,7 @@ categories =  {
             
         }
     }
-    mountains = {
+    fm_mountains = {
         movement_cost = 1.5
         defence = 2
         local_defensiveness = 0.25
@@ -135,14 +135,11 @@ categories =  {
             1209 1214 1254 1257 1258 1425
         }
     }
-    
-    #----------------------------------
-    # Irradiated
-    #----------------------------------
-    irradiated_wasteland = {
-        movement_cost = 3
+    fm_wasteland = {
+        movement_cost = 1.5
         supply_limit = 1
         local_development_cost = 1
+        combat_width = -0.50
         
         type = plains
         sound_type = plains
@@ -154,123 +151,71 @@ categories =  {
             1402
         }    
     }
-    irradiated_ruins = {
-        movement_cost = 1.0
-        supply_limit = 5
-        allowed_num_of_buildings = 2
-        nation_designer_cost_multiplier = 1
+    fm_glacier = {
+		color = { 235 235 235 }
 
-        sound_type = plains
-        color = { 124 153 152 }
-    
-        terrain_override = {
-            17 47 194 252 255 256 257 258 259 263 265 272 273 283 309 354 
-            405 424 430 432 433 492 495 540 543 544 545 549 550 551 552 557
-            558 561 562 871 879 887 890 1112 1203 1210 1211 1212 1217 
-            1223 1233 1237 1241 1248 1280 1282 1289 1290 1291 1292 1293 
-            1294 1295 1299 1382 1383 1384 1397 1398 1399
-        }    
-    }
-    irradiated_grasslands = {
-        movement_cost = 1.0
-        supply_limit = 4
-        allowed_num_of_buildings = 1
-        nation_designer_cost_multiplier = 1
+		sound_type = desert
 
-        type = plains
-        sound_type = plains
-        color = { 211 201 184 }
-    
-        terrain_override = {
-            
-        }
-    }
-    irradiated_forest = {
-        movement_cost = 1.25
-        combat_width = -0.20
-        supply_limit = 1
-        local_development_cost = 0.2
-        nation_designer_cost_multiplier = 0.9
-        
-        type = forest
-        sound_type = forest
-        color = { 187 232 186 } 
-
-        terrain_override = {
-            
-        }
-    }
-    irradiated_mountains = {
-        movement_cost = 1.5
-        defence = 1
-        local_defensiveness = 0.25
-        local_development_cost = 0.5
+		defence = 1
+		movement_cost = 1.25
         combat_width = -0.50
-        nation_designer_cost_multiplier = 0.75
-        supply_limit = 2
-
-        color = { 66 184 62 }
-    
-        type = mountains
-        sound_type = mountain     
-
-        terrain_override = {
+		supply_limit = 2		
+		local_development_cost = 0.5
+		nation_designer_cost_multiplier = 0.75		
+		
+		terrain_override = {		
             
-        }
-    }
-    
-    #----------------------------------
-    # Unique
-    #----------------------------------
+		}
+	}
 }
     
 #----------------------------------
 # Terrain Association
 #----------------------------------
 terrain = {
-    grasslands               = { type = irradiated_grasslands       color = { 0 } }
-    hills                    = { type = irradiated_mountains        color = { 1 } }
-    desert_mountain          = { type = irradiated_mountains        color = { 2 } }
-    desert                   = { type = desert                      color = { 3 } }
+    grasslands               = { type = fm_plains                   color = { 0 } }
+    hills                    = { type = fm_mountains                color = { 1 } }
+    desert_mountain          = { type = fm_mountains                color = { 2 } }
+    desert                   = { type = fm_desert                   color = { 3 } }
 
-    plains                   = { type = irradiated_grasslands       color = { 4 } }
-    terrain_5                = { type = irradiated_grasslands       color = { 5 } }
-    mountain                 = { type = irradiated_mountains        color = { 6 } }
-    desert_mountain_low      = { type = desert                      color = { 7 } }
+    plains                   = { type = fm_plains                   color = { 4 } }
+    terrain_5                = { type = fm_plains                   color = { 5 } }
+    mountain                 = { type = fm_plains                   color = { 6 } }
+    desert_mountain_low      = { type = fm_desert                   color = { 7 } }
 
-    terrain_8               = { type = irradiated_mountains         color = { 8 } }
-    marsh                   = { type = marsh                        color = { 9 } } 
-    terrain_10              = { type = grasslands                   color = { 10 } }
-    terrain_11              = { type = grasslands                   color = { 11 } }
+    terrain_8               = { type = fm_mountains                 color = { 8 } }
+    marsh                   = { type = fm_marsh                     color = { 9 } } 
+    terrain_10              = { type = fm_plains                    color = { 10 } }
+    terrain_11              = { type = fm_plains                    color = { 11 } }
 
-    forest_12               = { type = irradiated_forest            color = { 12 } }
-    forest_13               = { type = irradiated_forest            color = { 13 } }
-    forest_14               = { type = irradiated_forest            color = { 14 } }
+    forest_12               = { type = fm_forest                    color = { 12 } }
+    forest_13               = { type = fm_forest                    color = { 13 } }
+    forest_14               = { type = fm_forest                    color = { 14 } }
     ocean                   = { type = ocean                        color = { 15 } }
 
-    snow                    = { type = irradiated_mountains         color = { 16 } }
+    snow                    = { type = fm_glacier                   color = { 16 } }
     inland_ocean_17         = { type = inland_ocean                 color = { 17 } }
 
-    coastal_desert_18       = { type = desert                       color = { 19 } }
-    coastline               = { type = grasslands                   color = { 35 } }
+    coastal_desert_18       = { type = fm_desert                    color = { 19 } }
+    coastline               = { type = fm_plains                    color = { 35 } }
     
-    savannah                = { type = irradiated_grasslands        color = { 20 } }
-    drylands                = { type = irradiated_grasslands        color = { 22 } }
-    highlands               = { type = irradiated_mountains         color = { 23 } }
-    dry_highlands           = { type = irradiated_mountains         color = { 24 } }
+    savannah                = { type = fm_plains                    color = { 20 } }
+    drylands                = { type = fm_plains                    color = { 22 } }
+    highlands               = { type = fm_mountains                 color = { 23 } }
+    dry_highlands           = { type = fm_mountains                 color = { 24 } }
     
-    woods                   = { type = irradiated_forest            color = { 255 } }
-    terrain_21              = { type = irradiated_grasslands        color = { 21 } }    
+    woods                   = { type = fm_forest                    color = { 255 } }
+    terrain_21              = { type = fm_plains                    color = { 21 } }    
 }
 
 #----------------------------------
 # Tree Association
 #----------------------------------
 tree = {
-    forest  = { terrain = forest        color = { 3 4 6 7 19 20 } }
-    woods   = { terrain = forest        color = { 2 5 8 18      } }
-    jungle  = { terrain = ocean         color = { 13 14 15      } }
-    palms   = { terrain = desert        color = { 12            } }
-    savana  = { terrain = grasslands    color = { 27 28 29 30   } }
+    forest  = { terrain = fm_forest         color = { 3 4 6 7 19 20 } }
+    woods   = { terrain = fm_forest         color = { 2 5 8 18      } }
+    jungle  = { terrain = ocean             color = { 13 14 15      } }
+    palms   = { terrain = fm_desert         color = { 12            } }
+    savana  = { terrain = fm_plains         color = { 27 28 29 30   } }
 }
 

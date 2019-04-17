@@ -1,3 +1,1371 @@
 namespace = legion_flavour
 
-# For non mission stuff
+#-------------------------------------
+# "Caesar, Son of Mars"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.1
+	title = legion_flavour.1.title
+	desc = legion_flavour.1.desc
+    picture = LEGION_CROSS_eventPicture
+	
+    is_triggered_only = yes
+    
+    trigger = {
+        NOT = { has_country_flag = caesar_son_of_mars }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = caesar_son_of_mars 
+        }
+    }
+    
+	option = {
+		name = legion_flavour.1.option.a
+		
+        add_country_modifier = {
+            name = burn_the_profligates
+            duration = -1
+        }
+	}
+    option = {
+		name = legion_flavour.1.option.b
+		
+        add_country_modifier = {
+            name = divide_and_conquer
+            duration = -1
+        }
+	}
+    option = {
+		name = legion_flavour.1.option.c
+		
+        add_country_modifier = {
+            name = deeds_not_words
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Alea Iacta Est"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.2
+	title = legion_flavour.2.title
+	desc = legion_flavour.2.desc
+    picture = LEGION_CROSS_eventPicture
+	
+    trigger = {
+        NOT = { has_country_flag = alea_iacta_est }
+        
+        # Any claim
+        east_vegas_area = {
+            is_claim = ROOT
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = alea_iacta_est 
+        }
+    }
+    
+    mean_time_to_happen = {
+		months = 12
+	}
+    
+	option = {
+		name = legion_flavour.2.option.a
+		
+        east_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "The Howitzer"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.3
+	title = legion_flavour.3.title
+	desc = legion_flavour.3.desc
+    picture = HOWITIZER_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = the_howitzer }
+        war_with = NCR
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = alea_iacta_est 
+        }
+    }
+ 
+    mean_time_to_happen = {
+		months = 36
+	}
+    
+	option = {
+		name = legion_flavour.3.option.a
+    
+		add_country_modifier = {
+            name = howitizer_firing_pin
+            duration = 3650
+        }
+	}
+}
+
+#-------------------------------------
+# "Born into Slavery"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.4
+	title = legion_flavour.4.title
+	desc = legion_flavour.4.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        NOT = { has_country_flag = born_into_slavery }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = born_into_slavery 
+        }
+    }
+    
+	option = {
+		name = legion_flavour.4.option.a
+        
+        add_ruler_modifier = {
+			name = legion_birth 
+            duration = -1
+		}
+	}
+}
+
+#-------------------------------------
+# "Push into Utah"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.5
+	title = legion_flavour.5.title
+	desc = legion_flavour.5.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = push_into_utah }
+        OR = {
+            claim = DED
+            claim = SOR
+            claim = WLS
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = push_into_utah 
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = legion_flavour.5.option.a
+        
+        if = {
+            limit = {
+                exists = DED
+                NOT = { is_subject_of = ROOT }
+            }
+            add_casus_belli = {
+                target = DED
+                type = cb_vassalize_mission
+                months = 120
+            }
+        }
+        if = {
+            limit = {
+                exists = SOR
+                NOT = { is_subject_of = ROOT }
+            }
+            add_casus_belli = {
+                target = SOR
+                type = cb_vassalize_mission
+                months = 120
+            }
+        }
+        if = {
+            limit = {
+                exists = WLS
+                NOT = { is_subject_of = ROOT }
+            }
+            add_casus_belli = {
+                target = WLS
+                type = cb_vassalize_mission
+                months = 120
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Push into Texas"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.6
+	title = legion_flavour.6.title
+	desc = legion_flavour.6.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = push_into_texas }
+        claim = MAL
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = push_into_texas 
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = legion_flavour.6.option.a
+        
+        if = {
+            limit = {
+                exists = MAL
+                NOT = { is_subject_of = ROOT }
+            }
+            MAL = {
+                every_owned_province = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Finish Colorado"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.7
+	title = legion_flavour.7.title
+	desc = legion_flavour.7.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = finish_colorado }
+        claim = IRR
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = finish_colorado 
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = legion_flavour.7.option.a
+        
+        if = {
+            limit = {
+                exists = IRR
+                NOT = { is_subject_of = ROOT }
+            }
+            IRR = {
+                every_owned_province = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Push into Baja California"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.8
+	title = legion_flavour.8.title
+	desc = legion_flavour.8.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = push_into_baja_california }
+        claim = DRG
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = push_into_baja_california 
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = legion_flavour.8.option.a
+        
+        if = {
+            limit = {
+                exists = DRG
+                NOT = { is_subject_of = ROOT }
+            }
+            DRG = {
+                every_owned_province = {
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Utah"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.9
+	title = legion_flavour.9.title
+	desc = legion_flavour.9.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conquer_utah }
+        # Occur once the Legion has land in Utah
+        calc_true_if = {
+            utah_region = {
+                owned_by = ROOT
+            }
+            amount = 5
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conquer_utah 
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.9.option.a
+        
+        utah_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Texas"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.10
+	title = legion_flavour.10.title
+	desc = legion_flavour.10.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conquer_texas }
+        # Occur once the Legion has land in Texas
+        calc_true_if = {
+            texas_region = {
+                owned_by = ROOT
+            }
+            amount = 5
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conquer_texas
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.10.option.a
+        
+        texas_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Kansas"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.11
+	title = legion_flavour.11.title
+	desc = legion_flavour.11.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conquer_kansas }
+        # Occur once the Legion has land in Kansas
+        calc_true_if = {
+            kansas_region = {
+                owned_by = ROOT
+            }
+            amount = 5
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conquer_kansas
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.11.option.a
+        
+        kansas_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conquer Baja California"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.12
+	title = legion_flavour.12.title
+	desc = legion_flavour.12.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conquer_baja }
+        # Occur once the Legion has land in Baja
+        calc_true_if = {
+            baja_california_region = {
+                owned_by = ROOT
+            }
+            amount = 5
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conquer_baja
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.12.option.a
+        
+        baja_california_region = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Utah"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.13
+	title = legion_flavour.13.title
+	desc = legion_flavour.13.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conqueror_of_utah }
+        utah_region = {
+            owned_by = ROOT
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conqueror_of_utah
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = legion_flavour.13.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_utah
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Texas"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.14
+	title = legion_flavour.14.title
+	desc = legion_flavour.14.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conqueror_of_texas }
+        texas_region = {
+            owned_by = ROOT
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conqueror_of_texas
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = legion_flavour.14.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_texas
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Kansas"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.15
+	title = legion_flavour.15.title
+	desc = legion_flavour.15.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conqueror_of_kansas }
+        kansas_region = {
+            owned_by = ROOT
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conqueror_of_kansas
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = legion_flavour.15.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_kansas
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of Baja California"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.16
+	title = legion_flavour.16.title
+	desc = legion_flavour.16.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conqueror_of_baja_california }
+        baja_california_region = {
+            owned_by = ROOT
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conqueror_of_baja_california
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = legion_flavour.16.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_baja_california
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Jewel of New Vegas"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.17
+	title = legion_flavour.17.title
+	desc = legion_flavour.17.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conquer_new_vegas }
+        # Occur once the Legion has land in New Vegas
+        calc_true_if = {
+            new_vegas_area = {
+                owned_by = ROOT
+            }
+            amount = 1
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conquer_new_vegas
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.17.option.a
+        
+        new_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Subjugate the Locals"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.18
+	title = legion_flavour.18.title
+	desc = legion_flavour.18.desc
+    picture = LEGION_CROSS_eventPicture
+	
+    trigger = {
+        NOT = { has_country_flag = subjugate_new_vegas }
+        # Occur once the Legion has land in New Vegas
+        calc_true_if = {
+            OR = {
+                north_vegas_area = {
+                    owned_by = ROOT
+                }
+                goodsprings_area = {
+                    owned_by = ROOT
+                }
+                cottonwood_cove_area = {
+                    owned_by = ROOT
+                }
+                novac_area = {
+                    owned_by = ROOT
+                }
+                nipton_area = {
+                    owned_by = ROOT
+                }
+                boulder_city_area = {
+                    owned_by = ROOT
+                }
+                black_mountain_area = {
+                    owned_by = ROOT
+                }
+                west_vegas_area = {
+                    owned_by = ROOT
+                }
+            }
+            amount = 5
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = subjugate_new_vegas
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.18.option.a
+        
+        north_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+        goodsprings_area = {
+            add_permanent_claim = ROOT
+        }
+        cottonwood_cove_area = {
+            add_permanent_claim = ROOT
+        }
+        novac_area = {
+            add_permanent_claim = ROOT
+        }
+        nipton_area = {
+            add_permanent_claim = ROOT
+        }
+        boulder_city_area = {
+            add_permanent_claim = ROOT
+        }
+        black_mountain_area = {
+            add_permanent_claim = ROOT
+        }
+        west_vegas_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Control the Securitrons"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.19
+	title = legion_flavour.19.title
+	desc = legion_flavour.19.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = control_the_securitrons }
+        new_vegas_area = {
+            owned_by = ROOT
+            type = all
+        }
+        OR = {
+            NOT = { exists = NVG }
+            NVG = { is_subject_of = ROOT }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = control_the_securitrons
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = legion_flavour.19.option.a
+        
+        custom_tooltip = TOOLTIP_CONQUERED_NEW_VEGAS
+        hidden_effect = { set_country_flag = conquered_new_vegas }
+	}
+}
+
+#-------------------------------------
+# "The Water Mechants"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.20
+	title = legion_flavour.20.title
+	desc = legion_flavour.20.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = the_water_merchants }
+        claim = NCR
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = the_water_merchants
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.20.option.a
+        
+        the_hub_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "The Followers"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.21
+	title = legion_flavour.21.title
+	desc = legion_flavour.21.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = the_followers }
+        claim = NCR
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = the_followers
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.21.option.a
+        
+        boneyard_outskirts_area = {
+            add_permanent_claim = ROOT
+        }
+        boneyard_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Seat of the Council"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.22
+	title = legion_flavour.22.title
+	desc = legion_flavour.22.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = seat_of_the_council }
+        military_strength = {
+            who = NCR
+            value = 1.2
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = seat_of_the_council
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.22.option.a
+        
+        shady_sands_area = {
+            add_permanent_claim = ROOT
+        }
+	}
+}
+
+#-------------------------------------
+# "Conqueror of the NCR"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.23
+	title = legion_flavour.23.title
+	desc = legion_flavour.23.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = conqueror_of_the_ncr }
+        OR = {
+            NCR = { is_subject_of = ROOT }
+            NOT = { exists = NCR }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = conqueror_of_the_ncr
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = legion_flavour.23.option.a
+        
+        add_country_modifier = {
+            name = conqueror_of_california
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Tame the Dog City"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.24
+	title = legion_flavour.24.title
+	desc = legion_flavour.24.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = tame_the_dog_city }
+        denver_area = {
+            owned_by = ROOT
+            type = all
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = tame_the_dog_city
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.24.option.a
+        
+        add_mil_power = -100
+        
+        denver_area = {
+            add_base_tax = 2
+            add_base_production = 2
+            add_base_manpower = 2
+        }
+	}
+    option = {
+		name = legion_flavour.24.option.b
+        
+        add_prestige = -10
+	}
+}
+
+#-------------------------------------
+# "Legion Scavengers"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.25
+	title = legion_flavour.25.title
+	desc = legion_flavour.25.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = legion_savengers }
+        colorado_region = {
+            NOT = { unrest = 0 }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = legion_savengers
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = legion_flavour.25.option.a
+        
+        add_country_modifier = {
+            name = legion_scavengers
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Pax Hominibus"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.26
+	title = legion_flavour.26.title
+	desc = legion_flavour.26.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = pax_hominibus }
+        colorado_region = {
+            owned_by = ROOT
+            NOT = { unrest = 0 }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = pax_hominibus
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.26.option.a
+        
+        add_country_modifier = {
+            name = pax_hominibus
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Tame Two Sun"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.27
+	title = legion_flavour.27.title
+	desc = legion_flavour.27.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = tame_two_sun }
+        phoenix_area = {
+            owned_by = ROOT
+            unrest = 2
+            type = all
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = tame_two_sun
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = legion_flavour.27.option.a
+        
+        add_mil_power = -100
+	}
+    option = {
+		name = legion_flavour.27.option.b
+        
+        phoenix_area = {
+            spawn_rebels = {
+                type = pretender_rebels
+                size = 1
+            }
+        }
+	}
+}
+
+#-------------------------------------
+# "Tribal Ferocity"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.28
+	title = legion_flavour.28.title
+	desc = legion_flavour.28.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_modifier = tribal_ferocity }
+        is_at_war = yes
+    }
+    
+    mean_time_to_happen = {
+		months = 240
+	}
+    
+	option = {
+		name = legion_flavour.28.option.a
+        
+        add_country_modifier = {
+            name = tribal_ferocity
+            duration = 3650
+        }
+	}
+}
+
+#-------------------------------------
+# "Tempus Belli"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.29
+	title = legion_flavour.29.title
+	desc = legion_flavour.29.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_modifier = tempus_belli }
+        is_at_war = no
+    }
+    
+    mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = legion_flavour.29.option.a
+        
+        add_country_modifier = {
+            name = tempus_belli
+            duration = 3650
+        }
+	}
+}
+
+#-------------------------------------
+# "Fortify Flagstaff"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.30
+	title = legion_flavour.30.title
+	desc = legion_flavour.30.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = fortify_flagstaff }
+        flagstaff_area = {
+            owned_by = ROOT
+            type = all
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = fortify_flagstaff
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = legion_flavour.30.option.a
+        
+        add_mil_power = -100
+        
+        flagstaff_area = {
+            add_base_tax = 2
+            add_base_production = 2
+            add_base_manpower = 2
+        }
+	}
+    option = {
+		name = legion_flavour.30.option.a
+        
+        add_adm_power = 20
+	}
+}
+
+#-------------------------------------
+# "Centro Imperium"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.31
+	title = legion_flavour.31.title
+	desc = legion_flavour.31.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = centro_imperium }
+        flagstaff_area = {
+            owned_by = ROOT
+            type = all
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = centro_imperium
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = legion_flavour.31.option.a
+        
+        add_country_modifier = {
+            name = centro_imperium
+            duration = -1
+        }
+	}
+}
+
+#-------------------------------------
+# "Patientia Opportuna"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.32
+	title = legion_flavour.32.title
+	desc = legion_flavour.32.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_modifier = patientia_opportuna }
+        is_at_war = no
+        had_recent_war = 5
+    }
+	
+    mean_time_to_happen = {
+		months = 120
+	}
+    
+	option = {
+		name = legion_flavour.32.option.a
+        
+        add_country_modifier = {
+            name = patientia_opportuna
+            duration = 3650
+        }
+	}
+}
+
+#-------------------------------------
+# "Via Militaris"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.33
+	title = legion_flavour.33.title
+	desc = legion_flavour.33.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = via_militaris }
+        santa_fe_area = {
+            owned_by = ROOT
+            type = all
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = via_militaris
+        }
+    }
+	
+    mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = legion_flavour.33.option.a
+        
+        santa_fe_area = {
+            add_base_tax = 2
+            add_base_production = 2
+            add_base_manpower = 2
+        }
+	}
+}
+
+#-------------------------------------
+# "Celeri Motus"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.34
+	title = legion_flavour.34.title
+	desc = legion_flavour.34.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_modifier = celeri_motus }
+    }
+	
+    mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = legion_flavour.34.option.a
+        
+        add_country_modifier = {
+            name = celeri_motus
+            duration = 3650
+        }
+	}
+}
+
+#-------------------------------------
+# "Loci Praesido"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.35
+	title = legion_flavour.35.title
+	desc = legion_flavour.35.desc
+    picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        NOT = { has_country_modifier = loci_praesido }
+    }
+	
+    mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = legion_flavour.35.option.a
+        
+        add_country_modifier = {
+            name = loci_praesido
+            duration = 3650
+        }
+	}
+}
+
+
+
+
+
+

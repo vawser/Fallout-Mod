@@ -5,13 +5,17 @@ on_startup = {
         startup.2       # Country flags
         processor.1     # Processor assignment for Caravan system		
         discovery.1     # Initial FoW setup
-		law_setup.1     # Fallback law setup
+		law_setup.1     # Fallback national policy setup
         race.1          # Fallback race setup
         cults.100       # Initial cult setup
         immortality.1   # Setup immortal rulers
         caravans.1      # Initial caravan placement
         zion.7          # 
         speciality.1    # Pick Tribalism specialities
+        
+        # Caesar's Legion
+        legion_flavour.1 # Caesar, Son of Mars
+        legion_flavour.4 # Born into Slavery
         
     }
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_startup" }

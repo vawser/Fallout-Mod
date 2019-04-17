@@ -9,6 +9,13 @@ estate_slavers = {
     start_territory_weight = 25
 	min_autonomy = 0
     
+    custom_name = {
+		desc = estate_venalicius
+		trigger = {
+			has_legion_estates = yes
+		}
+	}
+    
     # ----- Conditions -----
 	trigger = {
         has_slavery_allowed = yes

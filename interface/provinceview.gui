@@ -704,7 +704,7 @@ guiTypes = {
 			{
 				name ="religion_icon"
 				spriteType = "GFX_icon_religion_small"
-				position = { x= 266 y = 249 }
+				position = { x= 262 y = 245 }
 				hint_tag = "hint_religion"
 				allwaystransparent = yes
 			}
@@ -5829,13 +5829,13 @@ guiTypes = {
 		}
         
         checkboxType = {
-			name = "build_manufactory"
+			name = "build_fbs_fort_5"
 			position = { x = 216 y = 255 }
 			quadTextureSprite = "GFX_courthouse_muslimgfx"
 		}
 
 		instantTextBoxType={
-			name = "manufactory_cost"
+			name = "fbs_fort_5_cost"
 			position = {x = 216 y = 305 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}	
@@ -5843,7 +5843,38 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000¤"
 		}
+
+        checkboxType = {
+			name = "build_fbs_fort_6"
+			position = { x = 268 y = 255 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "fbs_fort_6_cost"
+			position = {x = 268 y = 305 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
         
+        checkboxType = {
+			name = "build_manufactory"
+			position = { x = 320 y = 255 }
+			quadTextureSprite = "GFX_courthouse_muslimgfx"
+		}
+
+		instantTextBoxType={
+			name = "manufactory_cost"
+			position = {x = 320 y = 305 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 128
+			maxHeight = 18
+			text = "2000¤"
+		}
         
         #---------------------------------------------------------
         # Grand Projects

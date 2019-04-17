@@ -15,8 +15,25 @@
 # AI will consider buildings it does not have the tech for at 20% of scripted AI weight (in case it wants to save slots)
 
 fbs_fort_1 = {
-	cost = 200
+	cost = 250
 	time = 12
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_fort_2 = {
+	cost = 500
+	time = 12
+	make_obsolete = fbs_fort_1
 	
     onmap = yes
     influencing_fort = yes
@@ -26,14 +43,31 @@ fbs_fort_1 = {
 	}
 	
 	ai_will_do = {
+		factor = 1	
+	}
+}
+
+fbs_fort_3 = {
+	cost = 750
+	time = 12
+	make_obsolete = fbs_fort_2
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 3
+	}
+	
+	ai_will_do = {
 		factor = 1
 	}
 }
 
-fbs_fort_2 = {
-	cost = 400
+fbs_fort_4 = {
+	cost = 1000
 	time = 12
-	make_obsolete = fbs_fort_1
+	make_obsolete = fbs_fort_3
 	
     onmap = yes
     influencing_fort = yes
@@ -43,37 +77,37 @@ fbs_fort_2 = {
 	}
 	
 	ai_will_do = {
-		factor = 1	
-	}
+		factor = 1
+    }
 }
 
-fbs_fort_3 = {
-	cost = 600
+fbs_fort_5 = {
+	cost = 1250
 	time = 12
-	make_obsolete = fbs_fort_2
+	make_obsolete = fbs_fort_4
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 5
+	}
+	
+	ai_will_do = {
+		factor = 1
+    }
+}
+
+fbs_fort_6 = {
+	cost = 1500
+	time = 12
+	make_obsolete = fbs_fort_5
 	
     onmap = yes
     influencing_fort = yes
     
 	modifier = {
 		fort_level = 6
-	}
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fbs_fort_4 = {
-	cost = 800
-	time = 12
-	make_obsolete = fbs_fort_3
-	
-    onmap = yes
-    influencing_fort = yes
-    
-	modifier = {
-		fort_level = 8
 	}
 	
 	ai_will_do = {
