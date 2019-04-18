@@ -12,6 +12,7 @@ country_event = {
     is_triggered_only = yes
     
     trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = caesar_son_of_mars }
     }
     
@@ -57,6 +58,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
     trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = alea_iacta_est }
         
         # Any claim
@@ -94,6 +96,7 @@ country_event = {
     picture = HOWITIZER_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = the_howitzer }
         war_with = NCR
     }
@@ -130,6 +133,7 @@ country_event = {
 	is_triggered_only = yes
     
     trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = born_into_slavery }
     }
     
@@ -159,6 +163,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = push_into_utah }
         OR = {
             claim = DED
@@ -226,6 +231,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = push_into_texas }
         claim = MAL
     }
@@ -267,6 +273,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = finish_colorado }
         claim = IRR
     }
@@ -308,6 +315,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = push_into_baja_california }
         claim = DRG
     }
@@ -349,6 +357,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conquer_utah }
         # Occur once the Legion has land in Utah
         calc_true_if = {
@@ -388,6 +397,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conquer_texas }
         # Occur once the Legion has land in Texas
         calc_true_if = {
@@ -427,6 +437,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conquer_kansas }
         # Occur once the Legion has land in Kansas
         calc_true_if = {
@@ -466,6 +477,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conquer_baja }
         # Occur once the Legion has land in Baja
         calc_true_if = {
@@ -505,6 +517,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conqueror_of_utah }
         utah_region = {
             owned_by = ROOT
@@ -541,6 +554,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conqueror_of_texas }
         texas_region = {
             owned_by = ROOT
@@ -577,6 +591,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conqueror_of_kansas }
         kansas_region = {
             owned_by = ROOT
@@ -613,6 +628,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conqueror_of_baja_california }
         baja_california_region = {
             owned_by = ROOT
@@ -649,6 +665,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conquer_new_vegas }
         # Occur once the Legion has land in New Vegas
         calc_true_if = {
@@ -688,6 +705,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
     trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = subjugate_new_vegas }
         # Occur once the Legion has land in New Vegas
         calc_true_if = {
@@ -771,6 +789,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = control_the_securitrons }
         new_vegas_area = {
             owned_by = ROOT
@@ -810,6 +829,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = the_water_merchants }
         claim = NCR
     }
@@ -843,6 +863,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = the_followers }
         claim = NCR
     }
@@ -879,6 +900,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = seat_of_the_council }
         military_strength = {
             who = NCR
@@ -915,6 +937,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = conqueror_of_the_ncr }
         OR = {
             NCR = { is_subject_of = ROOT }
@@ -952,6 +975,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = tame_the_dog_city }
         denver_area = {
             owned_by = ROOT
@@ -997,6 +1021,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = legion_savengers }
         colorado_region = {
             NOT = { unrest = 0 }
@@ -1033,6 +1058,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = pax_hominibus }
         colorado_region = {
             owned_by = ROOT
@@ -1070,6 +1096,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = tame_two_sun }
         phoenix_area = {
             owned_by = ROOT
@@ -1115,6 +1142,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_modifier = tribal_ferocity }
         is_at_war = yes
     }
@@ -1143,6 +1171,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_modifier = tempus_belli }
         is_at_war = no
     }
@@ -1171,6 +1200,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = fortify_flagstaff }
         flagstaff_area = {
             owned_by = ROOT
@@ -1216,6 +1246,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = centro_imperium }
         flagstaff_area = {
             owned_by = ROOT
@@ -1253,6 +1284,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_modifier = patientia_opportuna }
         is_at_war = no
         had_recent_war = 5
@@ -1282,6 +1314,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_flag = via_militaris }
         santa_fe_area = {
             owned_by = ROOT
@@ -1320,6 +1353,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_modifier = celeri_motus }
     }
 	
@@ -1347,6 +1381,7 @@ country_event = {
     picture = LEGION_CROSS_eventPicture
 	
 	trigger = {
+        has_reform = legion_reform
         NOT = { has_country_modifier = loci_praesido }
     }
 	

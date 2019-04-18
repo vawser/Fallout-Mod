@@ -8,12 +8,23 @@
  #-------------------------------------------------------------------
  EST_VAL_PUNISHED_ESTATE: "Punished: §Y$VAL$§!"
  EST_VAL_SUPPORTED_ESTATE: "Supported: §Y$VAL$§!"
+ EST_VAL_MUSTERED_INFANTRY: "Trained Infantry: §Y$VAL$§!"
+ EST_VAL_MUSTERED_CAVALRY: "Built Vehicles: §Y$VAL$§!"
  EST_VAL_MUSTERED_ELITE_INFANTRY: "Trained Elite Infantry: §Y$VAL$§!"
  EST_VAL_MUSTERED_ELITE_CAVALRY: "Built Assault Vehicles: §Y$VAL$§!"
+ EST_VAL_RECRUITED_ADVISOR: "Recruited Advisor: §Y$VAL$§!"
  
  #-------------------------------------------------------------------
  # Territory
  #-------------------------------------------------------------------
+ 
+ #-------------------------------------------------------------------
+ # General 
+ #-------------------------------------------------------------------
+ TRAIN_ELITE_INFANTRY: "Train Elite Infantry"
+ BUILD_ASSAULT_VEHICLES: "Build Assault Vehicles"
+ TRAIN_INFANTRY: "Train Infantry"
+ BUILD_VEHICLES: "Build Vehicles"
  
  #-------------------------------------------------------------------
  # Bureaucrats
@@ -25,8 +36,8 @@
  INVEST_IN_THE_BUREAUCRATS: "Invest in the Bureaucrats"
  GAIN_SUPPORT_OF_THE_BUREAUCRATS: "Gain Support of the Bureaucrats"
  EXPLOIT_THE_BUREAUCRATS: "Exploit the Bureaucrats"
- 
- 
+ RECRUIT_BUREAUCRAT: "Recruit Bureaucrat"
+ RECRUIT_ADMINISTRATOR: "Recruit Administrator"
  
  #-------------------------------------------------------------------
  # Merchants
@@ -38,6 +49,8 @@
  INVEST_IN_THE_MERCHANTS: "Invest in the Merchants"
  GAIN_SUPPORT_OF_THE_MERCHANTS: "Gain Support of the Merchants"
  EXPLOIT_THE_MERCHANTS: "Exploit the Merchants"
+ RECRUIT_MERCHANT: "Recruit Merchant"
+ RECRUIT_CARAVANNER: "Recruit Caravanner"
  
  #-------------------------------------------------------------------
  # Officers
@@ -49,9 +62,8 @@
  INVEST_IN_THE_OFFICERS: "Invest in the Officers"
  GAIN_SUPPORT_OF_THE_OFFICERS: "Gain Support of the Officers"
  EXPLOIT_THE_OFFICERS: "Exploit the Officers"
- 
- TRAIN_ELITE_INFANTRY: "Train Elite Infantry"
- BUILD_ASSAULT_VEHICLES: "Build Assault Vehicles"
+ RECRUIT_ARMY_OFFICER: "Recruit Army Officer"
+ RECRUIT_NAVAL_OFFICER: "Recruit Naval Officer"
  
  TT_OWN_OFFICER_PROVINCE: "At least one owned province belongs to the §YOfficers§! Estate."
  TT_OFFICER_SPAWN_INFANTRY: "Up to §Y10§! §YElite Infantry§! will be recruited dependent on the number of provinces under §YOfficers§! control and current §YOfficers§! influence."
@@ -67,6 +79,8 @@
  INVEST_IN_THE_CITIZENS: "Invest in the Citizens"
  GAIN_SUPPORT_OF_THE_CITIZENS: "Gain Support of the Citizens"
  EXPLOIT_THE_CITIZENS: "Exploit the Citizens"
+ RECRUIT_ARTIST: "Recruit Artist"
+ RECRUIT_COLONIST: "Recruit Colonist"
  
  #-------------------------------------------------------------------
  # Scientists
@@ -78,6 +92,8 @@
  INVEST_IN_THE_SCIENTISTS: "Invest in the Scientists"
  GAIN_SUPPORT_OF_THE_SCIENTISTS: "Gain Support of the Scientists"
  EXPLOIT_THE_SCIENTISTS: "Exploit the Scientists"
+ RECRUIT_RESEARCHER: "Recruit Researcher"
+ RECRUIT_ENGINEER: "Recruit Engineer"
  
  #-------------------------------------------------------------------
  # Clergy
@@ -89,6 +105,8 @@
  INVEST_IN_THE_CLERGY: "Invest in the Clergy"
  GAIN_SUPPORT_OF_THE_CLERGY: "Gain Support of the Clergy"
  EXPLOIT_THE_CLERGY: "Exploit the Clergy"
+ RECRUIT_MISSIONARY: "Recruit Missionary"
+ RECRUIT_ORATOR: "Recruit Orator"
  
  #-------------------------------------------------------------------
  # Slavers
@@ -100,6 +118,8 @@
  INVEST_IN_THE_SLAVERS: "Invest in the Slavers"
  GAIN_SUPPORT_OF_THE_SLAVERS: "Gain Support of the Slavers"
  EXPLOIT_THE_SLAVERS: "Exploit the Slavers"
+ RECRUIT_SLAVE_JOCKEY: "Recruit Slave Jockey"
+ RECRUIT_SLAVE_DRIVER: "Recruit Slave Driver"
  
  TT_OWN_SLAVER_PROVINCE: "At least one owned province belongs to the §YSlavers§! Estate."
  TT_SLAVER_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YSlavers§! control and current §YSlavers§! influence."
@@ -116,9 +136,11 @@
  INVEST_IN_THE_TRIBESMEN: "Invest in the Tribesmen"
  GAIN_SUPPORT_OF_THE_TRIBESMEN: "Gain Support of the Tribesmen"
  EXPLOIT_THE_TRIBESMEN: "Exploit the Tribesmen"
-
+ RECRUIT_TRACKER: "Recruit Tracker"
+ RECRUIT_BRAHMIN_WHISPERER: "Recruit Brahmin Whisperer"
+ 
  TT_OWN_TRIBESMEN_PROVINCE: "At least one owned province belongs to the §YTribesmen§! Estate."
- TT_SLAVER_TRIBESMEN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YTribesmen§! control and current §YTribesmen§! influence."
+ TT_TRIBESMEN_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YTribesmen§! control and current §YTribesmen§! influence."
  
  #-------------------------------------------------------------------
  # Raiders
@@ -130,6 +152,8 @@
  INVEST_IN_THE_RAIDERS: "Invest in the Raiders"
  GAIN_SUPPORT_OF_THE_RAIDERS: "Gain Support of the Raiders"
  EXPLOIT_THE_RAIDERS: "Exploit the Raiders"
+ RECRUIT_PIT_BOSS: "Recruit Pit Boss"
+ RECRUIT_LOOTER: "Recruit Looter"
  
  TT_OWN_RAIDER_PROVINCE: "At least one owned province belongs to the §YRaiders§! Estate."
  TT_RAIDER_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YRaiders§! control and current §YRaiders§! influence."
@@ -144,6 +168,8 @@
  INVEST_IN_THE_KHANS: "Invest in the Khans"
  GAIN_SUPPORT_OF_THE_KHANS: "Gain Support of the Khans"
  EXPLOIT_THE_KHANS: "Exploit the Khans"
+ RECRUIT_DRUG_DEALER: "Recruit Chem Dealer"
+ RECRUIT_HIJACKER: "Recruit Hijacker"
  
  TT_OWN_KHAN_PROVINCE: "At least one owned province belongs to the §YKhans§! Estate."
  TT_KHAN_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YKhans§! control and current §YKhans§! influence."
@@ -158,6 +184,8 @@
  INVEST_IN_THE_MUTANTS: "Invest in the Mutants"
  GAIN_SUPPORT_OF_THE_MUTANTS: "Gain Support of the Mutants"
  EXPLOIT_THE_MUTANTS: "Exploit the Mutants"
+ RECRUIT_SUICIDER: "Recruit Suicider"
+ RECRUIT_BRUTE: "Recruit Brute"
  
  TT_OWN_MUTANT_PROVINCE: "At least one owned province belongs to the §YMutants§! Estate."
  TT_MUTANT_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YMutants§! control and current §YMutants§! influence."
@@ -172,9 +200,8 @@
  INVEST_IN_THE_THINK_TANK: "Invest in the Think Tank"
  GAIN_SUPPORT_OF_THE_THINK_TANK: "Gain Support of the Think Tank"
  EXPLOIT_THE_THINK_TANK: "Exploit the Think Tank"
- 
- TT_OWN_THINK_TANK_PROVINCE: "At least one owned province belongs to the §YThink Tank§! Estate."
- TT_THINK_TANK_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YThink Tank§! control and current §YThink Tank§! influence."
+ RECRUIT_CYBERDOG: "Recruit Cyberdog"
+ RECRUIT_LOBOTOMITE: "Recruit Lobotomite"
  
  #-------------------------------------------------------------------
  # Elders
@@ -210,7 +237,8 @@
  EXPLOIT_THE_PALADINS: "Exploit the Paladins"
  
  TT_OWN_PALADIN_PROVINCE: "At least one owned province belongs to the §YPaladins§! Estate."
- TT_PALADIN_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YPaladins§! control and current §YPaladins§! influence."
+ TT_PALADIN_SPAWN_INFANTRY: "Up to §Y10§! §YElite Infantry§! will be recruited dependent on the number of provinces under §YPaladins§! control and current §YPaladins§! influence."
+ TT_PALADIN_SPAWN_CAVALRY: "Up to §Y10§! §YAssault Vehicles§! will be recruited dependent on the number of provinces under §YPaladins§! control and current §YPaladins§! influence."
  
  #-------------------------------------------------------------------
  # Initiates
@@ -279,7 +307,8 @@
  EXPLOIT_THE_LEGIONARII: "Exploit the Legionarii"
  
  TT_OWN_LEGIONARII_PROVINCE: "At least one owned province belongs to the §YLegionarii§! Estate."
- TT_LEGIONARII_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YLegionarii§! control and current §YLegionarii§! influence."
+ TT_LEGIONARII_SPAWN_INFANTRY: "Up to §Y10§! §YElite Infantry§! will be recruited dependent on the number of provinces under §YLegionarii§! control and current §YLegionarii§! influence."
+ TT_LEGIONARII_SPAWN_CAVALRY: "Up to §Y10§! §YAssault Vehicles§! will be recruited dependent on the number of provinces under §YLegionarii§! control and current §YLegionarii§! influence."
  
  #-------------------------------------------------------------------
  # Plebeians
@@ -324,6 +353,8 @@
  INVEST_IN_THE_FACILITIES: "Invest in Facilities"
  GAIN_SUPPORT_OF_THE_FACILITIES: "Gain Support of Facilities"
  EXPLOIT_THE_FACILITIES: "Exploit Facilities"
+ RECRUIT_MECHANICAL_ENGINEER: "Recruit Mechanical Engineer"
+ RECRUIT_JANITOR: "Recruit Janitor"
  
  #-------------------------------------------------------------------
  # Bioscience
@@ -335,6 +366,8 @@
  INVEST_IN_THE_BIOSCIENCE: "Invest in Bioscience"
  GAIN_SUPPORT_OF_THE_BIOSCIENCE: "Gain Support of Bioscience"
  EXPLOIT_THE_BIOSCIENCE: "Exploit Bioscience"
+ RECRUIT_BOTANIST: "Recruit Botanist"
+ RECRUIT_GENETICIST: "Recruit Geneticist"
  
  #-------------------------------------------------------------------
  # Advanced Systems
@@ -346,6 +379,8 @@
  INVEST_IN_THE_ADVANCED_SYSTEMS: "Invest in Advanced Systems"
  GAIN_SUPPORT_OF_THE_ADVANCED_SYSTEMS: "Gain Support of Advanced Systems"
  EXPLOIT_THE_ADVANCED_SYSTEMS: "Exploit Advanced Systems"
+ RECRUIT_NUCLEAR_ENGINEER: "Recruit Nuclear Engineer"
+ RECRUIT_WEAPONS_ENGINEER: "Recruit Weapons Engineer"
  
  #-------------------------------------------------------------------
  # Synth Retention Bureau
@@ -357,9 +392,12 @@
  INVEST_IN_THE_SRB: "Invest in the SRB"
  GAIN_SUPPORT_OF_THE_SRB: "Gain Support of the SRB"
  EXPLOIT_THE_SRB: "Exploit the SRB"
+ RECRUIT_COURSER: "Recruit Courser"
+ RECRUIT_WATCHER: "Recruit Watcher"
  
  TT_OWN_SRB_PROVINCE: "At least one owned province belongs to the §YSynth Retention Bureau§! Estate."
  TT_SRB_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YSynth Retention Bureau§! control and current §YSynth Retention Bureau§! influence."
+ TT_SRB_SPAWN_CAVALRY: "Up to §Y10§! §YAssault Vehicles§! will be recruited dependent on the number of provinces under §YSynth Retention Bureau§! control and current §YSynth Retention Bureau§! influence."
  
  #-------------------------------------------------------------------
  # Robotics
@@ -371,6 +409,8 @@
  INVEST_IN_THE_ROBOTICS: "Invest in Robotics"
  GAIN_SUPPORT_OF_THE_ROBOTICS: "Gain Support of Robotics"
  EXPLOIT_THE_ROBOTICS: "Exploit Robotics"
+ RECRUIT_ROBOTICS_ENGINEER: "Recruit Robotics Engineer"
+ RECRUIT_SOFTWARE_ENGINEER: "Recruit Software Engineer"
  
  #-------------------------------------------------------------------
  # Event Modifiers

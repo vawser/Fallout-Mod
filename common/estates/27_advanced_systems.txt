@@ -91,7 +91,7 @@ estate_advanced_systems = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_facilities influence = 100 }
-                estate_influence = { estate = estate_bioscience influence = 100 }
+                estate_influence = { estate = estate_advanced_systems influence = 100 }
                 estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_robotics influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
@@ -106,7 +106,7 @@ estate_advanced_systems = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_facilities influence = 100 }
-                estate_influence = { estate = estate_bioscience influence = 100 }
+                estate_influence = { estate = estate_advanced_systems influence = 100 }
                 estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_robotics influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
@@ -270,6 +270,94 @@ estate_advanced_systems = {
                     }
                 }
             } 
+        }
+    }
+    
+    # Recruit Nuclear Engineer (fm_nuclear_engineer)
+    interaction = {
+        name = "RECRUIT_NUCLEAR_ENGINEER"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_advanced_systems
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_advanced_systems 
+                ADVISOR = fm_nuclear_engineer
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_advanced_systems
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_advanced_systems
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Weapons Engineer (fm_weapons_engineer)
+    interaction = {
+        name = "RECRUIT_WEAPONS_ENGINEER"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_advanced_systems
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_advanced_systems 
+                ADVISOR = fm_weapons_engineer
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_advanced_systems
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_advanced_systems
+                    influence = 60
+                }                        
+            }
         }
     }
 }

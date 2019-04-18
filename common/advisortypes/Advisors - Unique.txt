@@ -1,79 +1,336 @@
-# Slavery only
+# These are given through estate actions
+
+#--------------------------
+# Slavery
+#--------------------------
 fm_slave_jockey = {
     monarch_power = MIL
 	
     skill_scaled_modifier = { meritocracy = 0.5 }
     
-	reinforce_cost_modifier = -0.1
+	global_manpower_modifier = 0.15
 
 	chance = {
-		factor = 1
-        
-        modifier = {
-            factor = 0 
-            has_slavery_forbidden = yes
-        }
+		factor = 0
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-
 fm_slave_driver = {
     monarch_power = MIL
 	
     skill_scaled_modifier = { meritocracy = 0.5 }
     
-	reinforce_speed = 0.1
+	recover_army_morale_speed = 0.1
 
 	chance = {
-		factor = 1
-        
-        modifier = {
-            factor = 0 
-            has_slavery_forbidden = yes
-        }
+		factor = 0
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
-
-# Tribal only
+#--------------------------
+# Tribal
+#--------------------------
 fm_tracker = {
     monarch_power = MIL
 	
     skill_scaled_modifier = { meritocracy = 0.5 }
     
-	movement_speed = 0.1
+	movement_speed = 0.15
 
 	chance = {
+		factor = 0
+	}
+	ai_will_do = {
 		factor = 1
+	}
+}
+fm_brahmin_whisperer = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	war_exhaustion = -0.05
 
-        modifier = {
-            factor = 0 
-            NOT = { technology_group = tech_tribal }
-        }
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+#--------------------------
+# Raider
+#--------------------------
+fm_pit_boss = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	global_manpower_modifier = 0.15
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_looter = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	loot_amount = 0.25
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+#--------------------------
+# Khan
+#--------------------------
+fm_drug_dealer = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	global_trade_goods_size_modifier = 0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_hijacker = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	movement_speed = 0.15
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+#--------------------------
+# Super Mutant
+#--------------------------
+fm_suicider = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	shock_damage = 0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_brute = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	fire_damage_received = -0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+#--------------------------
+# Think Tank
+#--------------------------
+fm_cyberdog = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	shock_damage = 0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_lobotomite = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	land_morale = 0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+#--------------------------
+# Institute
+#--------------------------
+# Facilities
+fm_mechanical_engineer = {
+    monarch_power = ADM
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	build_cost = -0.15
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_janitor = {
+    monarch_power = ADM
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	global_unrest = -2
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+# Bioscience
+fm_botanist = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	global_trade_goods_size_modifier = 0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_geneticist = {
+    monarch_power = ADM
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	yearly_corruption = -0.05
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+# Advanced Systems
+fm_nuclear_engineer = {
+    monarch_power = ADM
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	development_cost = -0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_weapons_engineer = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	infantry_power = 0.1
+
+	chance = {
+		factor = 0
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-fm_brahmin_whisperer = {
-    monarch_power = DIP
+# Synth Retention Bureau
+fm_courser = {
+    monarch_power = MIL
 	
     skill_scaled_modifier = { meritocracy = 0.5 }
     
-	war_exhaustion = -0.03
+	discipline = 0.05
 
 	chance = {
+		factor = 0
+	}
+	ai_will_do = {
 		factor = 1
+	}
+}
+fm_watcher = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	hostile_attrition = 1
 
-        modifier = {
-            factor = 0 
-            NOT = { technology_group = tech_tribal }
-        }
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Robotics
+fm_robotics_engineer = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	siege_ability = 0.1
+
+	chance = {
+		factor = 0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+fm_software_engineer = {
+    monarch_power = ADM
+	
+    skill_scaled_modifier = { meritocracy = 0.5 }
+    
+	global_institution_spread = 0.25
+
+	chance = {
+		factor = 0
 	}
 	ai_will_do = {
 		factor = 1

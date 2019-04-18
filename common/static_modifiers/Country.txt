@@ -51,8 +51,8 @@ ai_nation = {
 
 all_nations = {
 	global_tax_income = 12
-	land_forcelimit	= 6
-	naval_forcelimit = 12
+	land_forcelimit	= 20
+	naval_forcelimit = 20
 }
 
 primitive_nation = {
@@ -310,27 +310,27 @@ innovativeness = {
 # Territories
 #----------------------------------------
 territory_very_easy_difficulty = { 
-    yearly_corruption = 0.02
+    yearly_corruption = 0.01
 }
 
 territory_easy_difficulty = { 
-    yearly_corruption = 0.02
+    yearly_corruption = 0.01
 }
 
 territory_normal_difficulty = { 
-    yearly_corruption = 0.02
+    yearly_corruption = 0.01
 }
 
 territory_hard_difficulty = { 
-    yearly_corruption = 0.02
+    yearly_corruption = 0.01
 }
 
 territory_very_hard_difficulty = { 
-    yearly_corruption = 0.02
+    yearly_corruption = 0.01
 }
 
 territory_ai_difficulty = { 
-    yearly_corruption = 0.02
+    yearly_corruption = 0.01
 }
 
 #----------------------------------------
@@ -511,8 +511,6 @@ liberty_desire = {
 
 subject_nation = {
 	global_tax_income = -6
-	land_forcelimit	= -3
-	naval_forcelimit = -6
 }
 
 vassal_nation = {
@@ -522,16 +520,14 @@ vassal_nation = {
 large_colonial_nation = {
 	merchants = 1
 	global_trade_power = 0.05
-	naval_forcelimit = 10
-	land_forcelimit = 5
 }
 
 march_subject = {
-	land_forcelimit = 2
+	land_forcelimit = 5
 }
 
 vassal_subject = {
-	land_forcelimit = 1
+    
 }
 
 daimyo_subject = {

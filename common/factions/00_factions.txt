@@ -95,61 +95,6 @@ the_van_graffs = {
 	}
 }
 
-# The Institute
-facilities = {
-	monarch_power = ADM
-    always = yes
-	modifier = 
-	{
-        core_creation = -0.15
-        state_maintenance_modifier = -0.2
-        global_unrest = -2
-	}
-}
-
-bioscience = {
-	monarch_power = DIP
-    always = yes
-	modifier = 
-	{
-        land_forcelimit_modifier = 0.25
-        land_maintenance_modifier = -0.25
-        global_manpower_modifier = 0.25
-	}
-}
-
-advanced_systems  = {
-	monarch_power = MIL
-    always = yes
-	modifier = 
-	{
-		discipline = 0.1
-		land_morale = 0.1
-        siege_ability = 0.1
-	}
-}
-
-synth_retention_bureau = {
-	monarch_power = MIL
-    always = yes
-	modifier = 
-	{
-		years_of_nationalism = -10
-		yearly_corruption = -0.05
-	}
-}
-
-robotics = {
-	monarch_power = DIP
-    always = yes
-	modifier = 
-	{
-		global_regiment_cost = -0.25
-        global_regiment_recruit_speed = -0.25
-        reinforce_cost_modifier = -0.25
-	}
-}
-
 # Shi Factions
 chemistry_and_mechanics_researchers = {
 	monarch_power = ADM

@@ -1,5 +1,5 @@
 estate_robotics = {
-	icon = 7
+	icon = 11
 	
 	color = { 163 61 44 }
 	
@@ -93,7 +93,7 @@ estate_robotics = {
                 estate_influence = { estate = estate_facilities influence = 100 }
                 estate_influence = { estate = estate_bioscience influence = 100 }
                 estate_influence = { estate = estate_advanced_systems influence = 100 }
-                estate_influence = { estate = estate_srb influence = 100 }
+                estate_influence = { estate = estate_robotics influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -108,7 +108,7 @@ estate_robotics = {
                 estate_influence = { estate = estate_facilities influence = 100 }
                 estate_influence = { estate = estate_bioscience influence = 100 }
                 estate_influence = { estate = estate_advanced_systems influence = 100 }
-                estate_influence = { estate = estate_srb influence = 100 }
+                estate_influence = { estate = estate_robotics influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -272,5 +272,94 @@ estate_robotics = {
             } 
         }
     }
+    
+    # Recruit Robotics Engineer (fm_robotics_engineer)
+    interaction = {
+        name = "RECRUIT_ROBOTICS_ENGINEER"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_robotics
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_robotics 
+                ADVISOR = fm_robotics_engineer
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_robotics
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_robotics
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Software Engineer (fm_software_engineer)
+    interaction = {
+        name = "RECRUIT_SOFTWARE_ENGINEER"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_robotics
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_robotics 
+                ADVISOR = fm_software_engineer
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_robotics
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_robotics
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
 }
 

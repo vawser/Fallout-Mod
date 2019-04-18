@@ -278,5 +278,93 @@ estate_proctors = {
             } 
         }
     }
+    
+    # Recruit Missionary (fm_missionary)
+    interaction = {
+        name = "RECRUIT_MISSIONARY"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_proctors
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_proctors 
+                ADVISOR = fm_missionary
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_proctors
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_proctors
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Orator (fm_orator)
+    interaction = {
+        name = "RECRUIT_ORATOR"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_proctors
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_proctors 
+                ADVISOR = fm_orator
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_proctors
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_proctors
+                    influence = 60
+                }                        
+            }
+        }
+    }
 }
 

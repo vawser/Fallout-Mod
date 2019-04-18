@@ -91,7 +91,7 @@ estate_citizens = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
-                estate_influence = { estate = estate_merchants influence = 100 }
+                estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_clergy influence = 100 }
@@ -107,7 +107,7 @@ estate_citizens = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
-                estate_influence = { estate = estate_merchants influence = 100 }
+                estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_clergy influence = 100 }
@@ -269,6 +269,94 @@ estate_citizens = {
                     }
                 }
             } 
+        }
+    }
+    
+    # Recruit Artist (fm_artist)
+    interaction = {
+        name = "RECRUIT_ARTIST"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_citizens
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_citizens 
+                ADVISOR = fm_artist
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_citizens
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_citizens
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Colonist (fm_colonist)
+    interaction = {
+        name = "RECRUIT_COLONIST"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_citizens
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_citizens 
+                ADVISOR = fm_colonist
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_citizens
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_citizens
+                    influence = 60
+                }                        
+            }
         }
     }
 }

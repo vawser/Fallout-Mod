@@ -271,5 +271,93 @@ estate_plebeians = {
             } 
         }
     }
+    
+    # Recruit Artist (fm_artist)
+    interaction = {
+        name = "RECRUIT_ARTIST"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_plebeians
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_plebeians 
+                ADVISOR = fm_artist
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_plebeians
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_plebeians
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Colonist (fm_colonist)
+    interaction = {
+        name = "RECRUIT_COLONIST"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_plebeians
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_plebeians 
+                ADVISOR = fm_colonist
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_plebeians
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_plebeians
+                    influence = 60
+                }                        
+            }
+        }
+    }
 }
 

@@ -283,5 +283,93 @@ estate_think_tank = {
             } 
         }
     }
+    
+    # Recruit Cyberdog (fm_cyberdog)
+    interaction = {
+        name = "RECRUIT_CYBERDOG"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_think_tank
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_think_tank 
+                ADVISOR = fm_cyberdog
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_think_tank
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_think_tank
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Lobotomite (fm_lobotomite)
+    interaction = {
+        name = "RECRUIT_LOBOTOMITE"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_think_tank
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_think_tank 
+                ADVISOR = fm_lobotomite
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_think_tank
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_think_tank
+                    influence = 60
+                }                        
+            }
+        }
+    }
 }
 

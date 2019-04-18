@@ -92,7 +92,7 @@ estate_srb = {
 			OR = {
                 estate_influence = { estate = estate_facilities influence = 100 }
                 estate_influence = { estate = estate_bioscience influence = 100 }
-                estate_influence = { estate = estate_advanced_systems influence = 100 }
+                estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_robotics influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
@@ -107,7 +107,7 @@ estate_srb = {
 			OR = {
                 estate_influence = { estate = estate_facilities influence = 100 }
                 estate_influence = { estate = estate_bioscience influence = 100 }
-                estate_influence = { estate = estate_advanced_systems influence = 100 }
+                estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_robotics influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
@@ -272,5 +272,190 @@ estate_srb = {
             } 
         }
     }
+    
+    # Train Elite Infantry
+    interaction = {
+		name = "TRAIN_ELITE_INFANTRY"
+		icon = 1
+		
+		years_between_use = 10
+		
+        potential = { 
+            has_dlc = "Dharma"
+        }
+        
+		trigger = {
+            has_dlc = "Dharma"
+            estate_loyalty = {
+                estate = estate_srb
+                loyalty = 30
+            }
+            estate_influence = {
+                estate = estate_srb
+                influence = 40
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = TT_OWN_SRB_PROVINCE
+				any_owned_province = {
+					has_estate = estate_srb
+				}
+			}
+        }
+		
+		effect = {
+            custom_tooltip = TT_SRB_SPAWN_INFANTRY
+            spawn_elite_infantry = { ESTATE = estate_srb }
+		}
+		
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {   
+                factor = 0
+                estate_influence = {
+                    estate = estate_srb
+                    influence = 60
+                }	
+            }
+		}
+	}
+    
+    # Build Assault Vehicles
+    interaction = {
+		name = "BUILD_ASSAULT_VEHICLES"
+		icon = 1
+		
+		years_between_use = 10
+		
+        potential = { 
+            has_dlc = "Third Rome"
+        }
+        
+		trigger = {
+            has_dlc = "Third Rome"
+            estate_loyalty = {
+                estate = estate_srb
+                loyalty = 30
+            }
+            estate_influence = {
+                estate = estate_srb
+                influence = 40
+            }
+            
+            custom_trigger_tooltip = {
+				tooltip = TT_OWN_SRB_PROVINCE
+				any_owned_province = {
+					has_estate = estate_srb
+				}
+			}
+        }
+		
+		effect = {
+            custom_tooltip = TT_SRB_SPAWN_CAVALRY
+            spawn_elite_cavalry = { ESTATE = estate_srb }
+		}
+		
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {   
+                factor = 0
+                estate_influence = {
+                    estate = estate_srb
+                    influence = 60
+                }	
+            }
+		}
+	}
+    
+    # Recruit Courser (fm_courser)
+    interaction = {
+        name = "RECRUIT_COURSER"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_srb
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_srb 
+                ADVISOR = fm_courser
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_srb
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_srb
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Watcher (fm_watcher)
+    interaction = {
+        name = "RECRUIT_WATCHER"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_srb
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_srb 
+                ADVISOR = fm_watcher
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_srb
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_srb
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
 }
 

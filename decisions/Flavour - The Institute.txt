@@ -1,51 +1,23 @@
 country_decisions = {
-    # Activate Fusion Reactor
-	activate_fusion_reactor = {
+    # Utilise Fusion Reactor
+	utilise_fusion_reactor = {
 		potential = {
 			tag = INS
             NOT = { has_country_modifier = fusion_reactor }
 		}
 		allow =  {
-            years_of_income = 2
+            years_of_income = 1
             full_idea_group = institute_ideas
 		}
 	  	effect = {
-			add_years_of_income = -2
+			add_years_of_income = -1
+            
+            add_adm_power = 50
+            add_dip_power = 50
+            add_mil_power = 50
             
             add_country_modifier = {
                 name = "fusion_reactor"
-                duration = -1
-            }
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-    
-    # Engage Defence System
-    engage_defence_system = {
-		potential = {
-			tag = INS
-            NOT = { has_country_modifier = defence_system_cooldown }
-		}
-		allow =  {
-			capital_scope = {
-                has_siege = yes 
-            }
-            years_of_income = 1
-		}
-	  	effect = {
-            add_years_of_income = -1
-            
-            capital_scope = {
-                kill_units = {
-                    who = enemy
-                    amount = 10
-                }
-            }
-            
-            add_country_modifier = {
-                name = "defence_system_cooldown"
                 duration = 3650
             }
 		}

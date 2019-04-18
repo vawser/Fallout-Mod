@@ -1,0 +1,552 @@
+spawn_elite_infantry = {
+    hidden_effect = {
+        capital_scope = {
+            rajput_infantry = ROOT
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 2
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 3
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 4
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 5
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 6
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 7
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 8
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 9
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 10
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                rajput_infantry = ROOT
+            }
+        }
+    }
+            
+    add_estate_loyalty = {
+        estate = $ESTATE$
+        loyalty = -20
+    }  
+    add_estate_influence_modifier = {
+        estate = $ESTATE$
+        desc = EST_VAL_MUSTERED_ELITE_INFANTRY
+        influence = 20
+        duration = 3650
+    }
+}
+
+spawn_elite_cavalry = {
+    hidden_effect = {
+        capital_scope = {
+            cossack_cavalry = ROOT
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 2
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 3
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 4
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 5
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 6
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 7
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 8
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 9
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 10
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cossack_cavalry = ROOT
+            }
+        }
+    }
+            
+    add_estate_loyalty = {
+        estate = $ESTATE$
+        loyalty = -20
+    }  
+    add_estate_influence_modifier = {
+        estate = $ESTATE$
+        desc = EST_VAL_MUSTERED_ELITE_CAVALRY
+        influence = 20
+        duration = 3650
+    }
+}
+
+spawn_infantry = {
+    hidden_effect = {
+        capital_scope = {
+            infantry = ROOT
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 2
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 3
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 4
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 5
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 6
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 7
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 8
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 9
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 10
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                infantry = ROOT
+            }
+        }
+    }
+            
+    add_estate_loyalty = {
+        estate = $ESTATE$
+        loyalty = -20
+    }  
+    add_estate_influence_modifier = {
+        estate = $ESTATE$
+        desc = EST_VAL_MUSTERED_INFANTRY
+        influence = 20
+        duration = 3650
+    }
+}
+
+spawn_cavalry = {
+    hidden_effect = {
+        capital_scope = {
+            cavalry = ROOT
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 2
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 3
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 4
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 5
+                            has_estate = $ESTATE$
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 6
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 7
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 8
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 9
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+            if = {
+                limit = {
+                    owner = {
+                        num_of_owned_provinces_with = {
+                            value = 10
+                            has_estate = $ESTATE$
+                        }
+                        estate_influence = {
+                            estate = $ESTATE$
+                            influence = 60
+                        }
+                    }
+                }
+                cavalry = ROOT
+            }
+        }
+    }
+            
+    add_estate_loyalty = {
+        estate = $ESTATE$
+        loyalty = -20
+    }  
+    add_estate_influence_modifier = {
+        estate = $ESTATE$
+        desc = EST_VAL_MUSTERED_CAVALRY
+        influence = 20
+        duration = 3650
+    }
+}
+

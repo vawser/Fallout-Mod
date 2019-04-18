@@ -277,5 +277,93 @@ estate_knights = {
             } 
         }
     }
+    
+    # Recruit Merchant (fm_merchant)
+    interaction = {
+        name = "RECRUIT_MERCHANT"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_knights
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_knights 
+                ADVISOR = fm_merchant
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_knights
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_knights
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Recruit Caravanner (fm_caravanner)
+    interaction = {
+        name = "RECRUIT_CARAVANNER"
+        icon = 1
+        
+        years_between_use = 30
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_knights
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_estate_advisor = { 
+                ESTATE = estate_knights 
+                ADVISOR = fm_caravanner
+                HIGH = 20
+                MED = 10
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_knights
+                desc = EST_VAL_RECRUITED_ADVISOR
+                influence = 15
+                duration = 10950
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                estate_influence = {
+                    estate = estate_knights
+                    influence = 60
+                }                        
+            }
+        }
+    }
 }
 
