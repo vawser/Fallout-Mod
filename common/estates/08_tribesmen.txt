@@ -89,7 +89,7 @@ estate_tribesmen = {
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
-			estate_influence = { estate = estate_tribesmen influence = 100 }
+			estate_influence = { estate = estate_slavers influence = 100 }
 		}
 		influence = -40
 	}
@@ -98,7 +98,7 @@ estate_tribesmen = {
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
-			estate_influence = { estate = estate_tribesmen influence = 100 }
+			estate_influence = { estate = estate_slavers influence = 100 }
 		}
 		loyalty = -40
 	}
@@ -351,5 +351,186 @@ estate_tribesmen = {
             }
 		}
 	}
+    
+    # Rally Tribals
+    interaction = {
+        name = "RALLY_TRIBALS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_tribesmen
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_yearly_manpower = { 
+                ESTATE = estate_tribesmen 
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_tribesmen
+                desc = EST_VAL_RALLIED_TRIBALS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_tribesmen
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Host Fighting Pits
+    interaction = {
+        name = "HOST_FIGHTING_PITS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_tribesmen
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_army_tradition = { 
+                ESTATE = estate_tribesmen 
+                LOW = 10
+                MED = 20
+                HIGH = 30
+                MAX = 40
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_tribesmen
+                desc = EST_VAL_FIGHTING_PITS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_tribesmen
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Read Tribal Omens
+    interaction = {
+        name = "READ_TRIBAL_OMENS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_tribesmen
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = tribal_omens
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_tribesmen
+                desc = EST_VAL_TRIBAL_OMENS
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_tribesmen
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Promote Tribal Leader
+    interaction = {
+        name = "PROMOTE_TRIBAL_LEADER"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_tribesmen
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_general = { 
+                ESTATE = estate_tribesmen
+                LOW = 25
+                MED = 50
+                HIGH = 75
+                MAX = 100
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_tribesmen
+                desc = EST_VAL_RECRUITED_LEADER
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_tribesmen
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 

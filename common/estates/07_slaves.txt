@@ -12,7 +12,7 @@ estate_slavers = {
     custom_name = {
 		desc = estate_venalicius
 		trigger = {
-			has_legion_estates = yes
+			has_reform = legion_reform
 		}
 	}
     
@@ -99,27 +99,15 @@ estate_slavers = {
 			OR = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
                 estate_influence = { estate = estate_merchants influence = 100 }
-                estate_influence = { estate = estate_slavers influence = 100 }
+                estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_slavers influence = 100 }
-                estate_influence = { estate = estate_slavers influence = 100 }
+                estate_influence = { estate = estate_clergy influence = 100 }
+                estate_influence = { estate = estate_tribesmen influence = 100 }
                 estate_influence = { estate = estate_raiders influence = 100 }
                 estate_influence = { estate = estate_khans influence = 100 }
                 estate_influence = { estate = estate_mutants influence = 100 }
                 estate_influence = { estate = estate_think_tank influence = 100 }
-                estate_influence = { estate = estate_elders influence = 100 }
-                estate_influence = { estate = estate_knights influence = 100 }
-                estate_influence = { estate = estate_paladins influence = 100 }
-                estate_influence = { estate = estate_initiates influence = 100 }
-                estate_influence = { estate = estate_scribes influence = 100 }
-                estate_influence = { estate = estate_proctors influence = 100 }
-                estate_influence = { estate = estate_patricians influence = 100 }
-                estate_influence = { estate = estate_mercatores influence = 100 }
-                estate_influence = { estate = estate_legionarii influence = 100 }
-                estate_influence = { estate = estate_plebeians influence = 100 }
-                estate_influence = { estate = estate_quaesitores influence = 100 }
-                estate_influence = { estate = estate_adoratores influence = 100 }
                 estate_influence = { estate = estate_facilities influence = 100 }
                 estate_influence = { estate = estate_bioscience influence = 100 }
                 estate_influence = { estate = estate_advanced_systems influence = 100 }
@@ -137,27 +125,15 @@ estate_slavers = {
 			OR = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
                 estate_influence = { estate = estate_merchants influence = 100 }
-                estate_influence = { estate = estate_slavers influence = 100 }
+                estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_slavers influence = 100 }
-                estate_influence = { estate = estate_slavers influence = 100 }
+                estate_influence = { estate = estate_clergy influence = 100 }
+                estate_influence = { estate = estate_tribesmen influence = 100 }
                 estate_influence = { estate = estate_raiders influence = 100 }
                 estate_influence = { estate = estate_khans influence = 100 }
                 estate_influence = { estate = estate_mutants influence = 100 }
                 estate_influence = { estate = estate_think_tank influence = 100 }
-                estate_influence = { estate = estate_elders influence = 100 }
-                estate_influence = { estate = estate_knights influence = 100 }
-                estate_influence = { estate = estate_paladins influence = 100 }
-                estate_influence = { estate = estate_initiates influence = 100 }
-                estate_influence = { estate = estate_scribes influence = 100 }
-                estate_influence = { estate = estate_proctors influence = 100 }
-                estate_influence = { estate = estate_patricians influence = 100 }
-                estate_influence = { estate = estate_mercatores influence = 100 }
-                estate_influence = { estate = estate_legionarii influence = 100 }
-                estate_influence = { estate = estate_plebeians influence = 100 }
-                estate_influence = { estate = estate_quaesitores influence = 100 }
-                estate_influence = { estate = estate_adoratores influence = 100 }
                 estate_influence = { estate = estate_facilities influence = 100 }
                 estate_influence = { estate = estate_bioscience influence = 100 }
                 estate_influence = { estate = estate_advanced_systems influence = 100 }
@@ -416,5 +392,145 @@ estate_slavers = {
             }
 		}
 	}
+    
+    # Conscript Slaves
+    interaction = {
+        name = "CONSCRIPT_SLAVES"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_slavers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_yearly_manpower = { 
+                ESTATE = estate_slavers 
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_slavers
+                desc = EST_VAL_CONSCRIPTED_SLAVES
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_slavers
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Press Slaves
+    interaction = {
+        name = "PRESS_SLAVES"
+        icon = 1
+        
+        years_between_use = 20
+        
+        potential = {
+            num_of_ports = 1
+        }
+        
+        trigger = {
+            num_of_ports = 1
+            estate_influence = {
+                estate = estate_slavers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_yearly_sailors = { 
+                ESTATE = estate_slavers 
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_slavers
+                desc = EST_VAL_PRESSED_SLAVES
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_slavers
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Subjugate Primitives
+    interaction = {
+        name = "SUBJUGATE_PRIMITIVES"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_slavers
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = subjugated_primitives
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_slavers
+                desc = EST_VAL_SUBJUGATED_PRIMITIVES
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_slavers
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 

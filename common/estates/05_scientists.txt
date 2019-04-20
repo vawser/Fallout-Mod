@@ -9,6 +9,20 @@ estate_scientists = {
     start_territory_weight = 25
 	min_autonomy = 0
     
+    custom_name = {
+		desc = estate_scribes
+		trigger = {
+			has_reform = brotherhood_reform
+		}
+	}
+    
+    custom_name = {
+		desc = estate_quaesitores
+		trigger = {
+			has_reform = legion_reform
+		}
+	}
+    
     # ----- Conditions -----
 	trigger = {
         has_generic_estates = yes
@@ -93,8 +107,8 @@ estate_scientists = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
                 estate_influence = { estate = estate_merchants influence = 100 }
                 estate_influence = { estate = estate_officers influence = 100 }
-                estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_scientists influence = 100 }
+                estate_influence = { estate = estate_citizens influence = 100 }
+                estate_influence = { estate = estate_clergy influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -109,8 +123,8 @@ estate_scientists = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
                 estate_influence = { estate = estate_merchants influence = 100 }
                 estate_influence = { estate = estate_officers influence = 100 }
-                estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_scientists influence = 100 }
+                estate_influence = { estate = estate_citizens influence = 100 }
+                estate_influence = { estate = estate_clergy influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -333,6 +347,186 @@ estate_scientists = {
                     estate = estate_scientists
                     influence = 60
                 }                        
+            }
+        }
+    }
+    
+    # Fund Innovation
+    interaction = {
+        name = "FUND_INNOVATION"
+        icon = 1
+        
+        years_between_use = 20
+        
+        potential = {
+            has_dlc = "Rule Britannia"
+        }
+        
+        trigger = {
+            has_dlc = "Rule Britannia"
+            estate_influence = {
+                estate = estate_scientists
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_innovativeness = { 
+                ESTATE = estate_scientists 
+                LOW = 2
+                MED = 4
+                HIGH = 6
+                MAX = 8
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_scientists
+                desc = EST_VAL_FUNDED_INNOVATION
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_scientists
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Research Administrative Technology
+    interaction = {
+        name = "RESEARCH_ADMINISTRATIVE_TECHNOLOGY"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_scientists
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = administrative_innovation
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_scientists
+                desc = EST_VAL_ADM_INNOVATION
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_scientists
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Research Diplomatic Technology
+    interaction = {
+        name = "RESEARCH_DIPLOMATIC_TECHNOLOGY"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_scientists
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = diplomatic_innovation
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_scientists
+                desc = EST_VAL_DIP_INNOVATION
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_scientists
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Research Military Technology
+    interaction = {
+        name = "RESEARCH_MILITARY_TECHNOLOGY"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_scientists
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = military_innovation
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_scientists
+                desc = EST_VAL_MIL_INNOVATION
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_scientists
+                    influence = 60
+                }
             }
         }
     }

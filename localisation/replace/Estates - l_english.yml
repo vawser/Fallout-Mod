@@ -13,6 +13,33 @@
  EST_VAL_MUSTERED_ELITE_INFANTRY: "Trained Elite Infantry: §Y$VAL$§!"
  EST_VAL_MUSTERED_ELITE_CAVALRY: "Built Assault Vehicles: §Y$VAL$§!"
  EST_VAL_RECRUITED_ADVISOR: "Recruited Advisor: §Y$VAL$§!"
+ EST_VAL_PASSED_REFORMS: "Passed Reforms: §Y$VAL$§!"
+ EST_VAL_TACKLED_INFLATION: "Tackled Inflation: §Y$VAL$§!"
+ EST_VAL_INCREASED_TAXATION: "Increased Taxation: §Y$VAL$§!"
+ EST_VAL_SUPPORTED_LOCAL_CARAVANNERS: "Supported Local Caravanners: §Y$VAL$§!"
+ EST_VAL_PROTECTED_CARAVANS: "Protected Caravans: §Y$VAL$§!"
+ EST_VAL_OPTIMISED_MARKETS: "Optimised Markets: §Y$VAL$§!"
+ EST_VAL_DISPLAYED_MILITARY_MIGHT: "Displayed Military Might: §Y$VAL$§!"
+ EST_VAL_INCENTIVISED_ENROLLMENT: "Incentivised Enrollment: §Y$VAL$§!"
+ EST_VAL_WAR_PROPAGANDA: "War Propaganda: §Y$VAL$§!"
+ EST_VAL_GARNERED_LEGITIMACY: "Garnered Legitimacy: §Y$VAL$§!"
+ EST_VAL_FUNDED_INNOVATION: "Funded Innovation: §Y$VAL$§!"
+ EST_VAL_ADM_INNOVATION: "Adminstrative Innovation: §Y$VAL$§!"
+ EST_VAL_DIP_INNOVATION: "Diplomatic Innovation: §Y$VAL$§!"
+ EST_VAL_MIL_INNOVATION: "Military Innovation: §Y$VAL$§!"
+ EST_VAL_ENFORCED_CONVERSION: "Enforced Conversion: §Y$VAL$§!"
+ EST_VAL_SUPPORTED_MISSIONARIES: "Supported Missionaries: §Y$VAL$§!"
+ EST_VAL_INCITED_FERVOR: "Incited Fervor: §Y$VAL$§!"
+ EST_VAL_CONSTRUCTED_SHRINE: "Constructed Shrine: §Y$VAL$§!"
+ EST_VAL_CONSCRIPTED_SLAVES: "Conscripted Slaves: §Y$VAL$§!"
+ EST_VAL_PRESSED_SLAVES: "Pressed Slaves: §Y$VAL$§!"
+ EST_VAL_SUBJUGATED_PRIMITIVES: "Subjugated Primitives: §Y$VAL$§!"
+ EST_VAL_RALLIED_TRIBALS: "Rallied Tribals: §Y$VAL$§!"
+ EST_VAL_FIGHTING_PITS: "Fighting Pits: §Y$VAL$§!"
+ EST_VAL_TRIBAL_OMENS: "Tribal Omens: §Y$VAL$§!"
+ EST_VAL_RECRUITED_LEADER: "Recruited Leader: §Y$VAL$§!"
+ EST_VAL_GATHERED_RAIDERS: "Gathered Raiders: §Y$VAL$§!"
+ EST_VAL_BRUTALITY: "Brutality: §Y$VAL$§!"
  
  #-------------------------------------------------------------------
  # Territory
@@ -45,6 +72,27 @@
  RECRUIT_CHEMIST: "Recruit Chemist"
  
  #-------------------------------------------------------------------
+ # BOS Custom Names
+ #-------------------------------------------------------------------
+ estate_elders: "Elders"
+ estate_knights: "Knights"
+ estate_paladins: "Paladins"
+ estate_initiates: "Initiates"
+ estate_scribes: "Scribes"
+ estate_proctors: "Proctors"
+ 
+ #-------------------------------------------------------------------
+ # Legion Custom Names
+ #-------------------------------------------------------------------
+ estate_patricians: "Patricians"
+ estate_mercatores: "Mercatores"
+ estate_legionarii: "Legionarii"
+ estate_plebeians: "Plebeians"
+ estate_quaesitores: "Quaesitores"
+ estate_adoratores: "Adoratores"
+ estate_venalicius: "Venalicius"
+ 
+ #-------------------------------------------------------------------
  # Bureaucrats
  #-------------------------------------------------------------------
  estate_bureaucrats: "Bureaucrats"
@@ -55,9 +103,12 @@
  GAIN_SUPPORT_OF_THE_BUREAUCRATS: "Gain Support of the Bureaucrats"
  EXPLOIT_THE_BUREAUCRATS: "Exploit the Bureaucrats"
  
- CONDUCT_REFORMS: "Conduct Reforms" # Dharma, change_government_reform_progress
- TACKLE_INFLATION: "Tackle Inflation" # add_inflation
- INCREASE_TAX_COLLECTION: "Increase Tax Collection" # global_tax_modifier
+ PASS_REFORMS: "Pass Reforms"
+ TACKLE_INFLATION: "Tackle Inflation"
+ INCREASE_TAXATION: "Increase Taxation"
+ 
+ increased_taxation: "Increased Taxation"
+ increased_taxation_desc: "We have increased our level of taxation temporarily."
  
  #-------------------------------------------------------------------
  # Merchants
@@ -70,9 +121,14 @@
  GAIN_SUPPORT_OF_THE_MERCHANTS: "Gain Support of the Merchants"
  EXPLOIT_THE_MERCHANTS: "Exploit the Merchants"
  
- SUPPORT_LOCAL_TRADERS: "Support Local Traders" # add_mercantilism
- PROTECT_CARAVANS: "Protect Caravans" # caravan_power
- CONDUCT_GOODS_AUDIT: "Conduct Goods Audit" # trade_efficiency
+ SUPPORT_LOCAL_CARAVANNERS: "Support Local Caravanners"
+ PROTECT_CARAVANS: "Protect Caravans" 
+ OPTIMISE_MARKETS: "Optimise Markets"
+ 
+ protected_caravans: "Protected Caravans"
+ protected_caravans_desc: "Our caravans are protected whilst travelling along trading routes."
+ optimised_markets: "Optimised Markets"
+ optimised_markets_desc: "We have optimised our markets, increasing our trading efficiency."
  
  #-------------------------------------------------------------------
  # Officers
@@ -85,9 +141,12 @@
  GAIN_SUPPORT_OF_THE_OFFICERS: "Gain Support of the Officers"
  EXPLOIT_THE_OFFICERS: "Exploit the Officers"
  
- PURGE_CORRUPT_OFFICIALS: "Purge Corrupt Officials" # add_corruption
- DISPLAY_MILITARY_MIGHT: "Display Military Might" # add_prestige
- INCENTIVISE_ENROLLMENT: "Incentivise Enrollment" # leader_cost
+ PURGE_CORRUPT_OFFICIALS: "Purge Corrupt Officials"
+ DISPLAY_MILITARY_MIGHT: "Display Military Might" 
+ INCENTIVISE_ENROLLMENT: "Incentivise Enrollment"
+ 
+ incentivised_enrollment: "Incentivised Enrollment"
+ incentivised_enrollment_desc: "We are incentivising enrollment into officer roles, reducing the cost of hiring new leaders."
  
  TT_OWN_OFFICER_PROVINCE: "At least one owned province belongs to the §YOfficers§! Estate."
  TT_OFFICER_SPAWN_INFANTRY: "Up to §Y10§! §YElite Infantry§! will be recruited dependent on the number of provinces under §YOfficers§! control and current §YOfficers§! influence."
@@ -104,10 +163,12 @@
  GAIN_SUPPORT_OF_THE_CITIZENS: "Gain Support of the Citizens"
  EXPLOIT_THE_CITIZENS: "Exploit the Citizens"
  
- SPREAD_WAR_PROPAGANDA: "Spread War Propaganda" # at war, add_war_exhaustion
- RAISE_WAR_TAXES: "Raise War Taxes" # at war, raise_war_taxes
- GARNER_LEGITIMACY: "Garner Legitimacy" # add_legitimacy
- ACCEPT_MINORITIES: "Accept Minorities" # years_of_nationalism
+ SPREAD_WAR_PROPAGANDA: "Spread War Propaganda" 
+ GARNER_LEGITIMACY: "Garner Legitimacy" 
+ ACCEPT_MINORITIES: "Accept Minorities" 
+ 
+ accepted_minorities: "Accepted Minorities"
+ accepted_minorities_desc: "We are accepting our cultural minorities, reducing their anger at our occupation of their land."
  
  #-------------------------------------------------------------------
  # Scientists
@@ -120,10 +181,17 @@
  GAIN_SUPPORT_OF_THE_SCIENTISTS: "Gain Support of the Scientists"
  EXPLOIT_THE_SCIENTISTS: "Exploit the Scientists"
  
- FUND_INNOVATION: "Fund Innovation" # Rule Britannia, change_innovativeness
- RESEARCH_ADMINISTRATIVE_TECHNOLOGY: "Research Administrative Technology" # adm_tech_cost_modifier
- RESEARCH_DIPLOMATIC_TECHNOLOGY: "Research Diplomatic Technology" # dip_tech_cost_modifier
- RESEARCH_MILITARY_TECHNOLOGY: "Research Military Technology" # mil_tech_cost_modifier
+ FUND_INNOVATION: "Fund Innovation" 
+ RESEARCH_ADMINISTRATIVE_TECHNOLOGY: "Administrative Innovation"
+ RESEARCH_DIPLOMATIC_TECHNOLOGY: "Diplomatic Innovation"
+ RESEARCH_MILITARY_TECHNOLOGY: "Military Innovation"
+ 
+ administrative_innovation: "Administrative Innovation"
+ administrative_innovation_desc: "Our scientists have led breakthroughs in technology relevant to administration."
+ diplomatic_innovation: "Diplomatic Innovation"
+ diplomatic_innovation_desc: "Our scientists have led breakthroughs in technology relevant to diplomacy."
+ military_innovation: "Military Innovation"
+ military_innovation_desc: "Our scientists have led breakthroughs in technology relevant to the military."
  
  #-------------------------------------------------------------------
  # Clergy
@@ -136,18 +204,19 @@
  GAIN_SUPPORT_OF_THE_CLERGY: "Gain Support of the Clergy"
  EXPLOIT_THE_CLERGY: "Exploit the Clergy"
  
- OUST_HERETICS: "Oust Heretics" # global_missionary_strength
- SUPPORT_MISSIONARIES: "Support Missionaries" # missionary_maintenance_cost
+ ENFORCE_CONVERSION: "Enforce Conversion" 
+ SUPPORT_MISSIONARIES: "Support Missionaries"
+ INCITE_FERVOR: "Incite Fervor"
+ CONSTRUCT_SHRINE: "Construct Shrine"
  
- GARNER_STATE_INFLUENCE: "Garner State Influence"
- # secular - papal_influence
  DRIVE_WARLUST: "Drive Warlust"
  SUBDUE_WARLUST: "Subdue Warlust"
  # cult_of_mars - piety
- INCITE_FERVOR: "Incite Fervor"
- # hubology, catholic, baptist, protestant, mormon - fervor
- BASK_IN_ATOMS_GLOW: "Bask in Atom's Glow"
- # atomic_worship - church_power
+ 
+ enforced_conversion: "Enforced Conversion"
+ enforced_conversion_desc: "We are currently forcefully converting our population."
+ supporting_missionaries: "Supporting Missionaries"
+ supporting_missionaries_desc: "We are currently support our missionaries, allowing them to convert populations more efficiently."
  
  #-------------------------------------------------------------------
  # Slavers
@@ -160,14 +229,15 @@
  GAIN_SUPPORT_OF_THE_SLAVERS: "Gain Support of the Slavers"
  EXPLOIT_THE_SLAVERS: "Exploit the Slavers"
  
- CONSCRIPT_SLAVES: "Conscript Slaves" # add_yearly_manpower
- PRESS_SLAVES: "Press Slaves" # add_yearly_sailors
- CRUSH_LOCAL_SUPPORT: "Crush Local Support" # harsh_treatment_cost
+ CONSCRIPT_SLAVES: "Conscript Slaves" 
+ PRESS_SLAVES: "Press Slaves" 
+ SUBJUGATE_PRIMITIVES: "Subjugate Primitives" 
+ 
+ subjugated_primitives: "Subjugated Primitives"
+ subjugated_primitives_desc: "We have subjugated local primitive people, this will dissuade others not to resist our actions."
  
  TT_OWN_SLAVER_PROVINCE: "At least one owned province belongs to the §YSlavers§! Estate."
  TT_SLAVER_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YSlavers§! control and current §YSlavers§! influence."
- 
- estate_venalicius: "Venalicius"
  
  #-------------------------------------------------------------------
  # Tribesmen
@@ -180,10 +250,13 @@
  GAIN_SUPPORT_OF_THE_TRIBESMEN: "Gain Support of the Tribals"
  EXPLOIT_THE_TRIBESMEN: "Exploit the Tribals"
  
- RALLY_TRIBALS: "Rally Tribals" # add_scaled_yearly_manpower
- HOST_COMBAT_CHALLENGES: "Host Combat Challenges" # add_army_tradition
- READ_TRIBAL_OMENS: "Read Tribal Omens" # global_unrest
- PROMOTE_TRIBAL_LEADER: "Promote Tribal Leader" # create_general
+ RALLY_TRIBALS: "Rally Tribals"
+ HOST_FIGHTING_PITS: "Host Fighting Pits" 
+ READ_TRIBAL_OMENS: "Read Tribal Omens" 
+ PROMOTE_TRIBAL_LEADER: "Promote Tribal Leader" 
+ 
+ tribal_omens: "Tribal Omens"
+ tribal_omens_desc: "We have read our tribal omens for insight, let us hope these omens prove true."
  
  TT_OWN_TRIBESMEN_PROVINCE: "At least one owned province belongs to the §YTribals§! Estate."
  TT_TRIBESMEN_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YTribals§! control and current §YTribals§! influence."
@@ -199,10 +272,13 @@
  GAIN_SUPPORT_OF_THE_RAIDERS: "Gain Support of the Raiders"
  EXPLOIT_THE_RAIDERS: "Exploit the Raiders"
  
- GATHER_RAIDERS: "Gather Raiders" # add_scaled_yearly_manpower
- ENFORCE_RULE: "Enforce Rule" # add_absolutism
- ENGAGE_IN_BRUTALITY: "Engage in Brutality" # shock_damage
- PROMOTE_PIT_BOSS: "Promote Pit Boss" # create_general
+ GATHER_RAIDERS: "Gather Raiders" 
+ ENFORCE_RULE: "Enforce Rule" 
+ ENGAGE_IN_BRUTALITY: "Engage in Brutality" 
+ PROMOTE_PIT_BOSS: "Promote Pit Boss" 
+ 
+ brutal_fighting: "Brutal Fighting"
+ brutal_fighting_desc: "Our men fight with unparallelled brutality."
  
  TT_OWN_RAIDER_PROVINCE: "At least one owned province belongs to the §YRaiders§! Estate."
  TT_RAIDER_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YRaiders§! control and current §YRaiders§! influence."
@@ -223,6 +299,9 @@
  INCITE_FIREFIGHTS: "Incite Firefights" # fire_damage
  PROMOTE_LIEUTENANT: "Promote Lieutenant" # create_general
  
+ gangbangers: "Gangbangers"
+ gangbangers_desc: "Our soldiers often engage in firefights as a matter of course, hardening them and improving their effectivity in battle."
+ 
  TT_OWN_KHAN_PROVINCE: "At least one owned province belongs to the §YKhans§! Estate."
  TT_KHAN_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YKhans§! control and current §YKhans§! influence."
  
@@ -241,6 +320,9 @@
  CRUSH_PRETENDERS: "Crush Pretenders" # add_scaled_legitimacy_value
  USE_SCAVENGED_WEAPONRY: "Use Scavenged Weaponry" # infantry_power
  PROMOTE_MASTER: "Promote Master" # create_general
+ 
+ scavenged_weaponry: "Scavenged Weaponry"
+ scavenged_weaponry_desc: "Our super mutants make use of powerful weaponry, scavenged from the ruins across the wasteland."
  
  TT_OWN_MUTANT_PROVINCE: "At least one owned province belongs to the §YMutants§! Estate."
  TT_MUTANT_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YMutants§! control and current §YMutants§! influence."
@@ -261,149 +343,8 @@
  RUN_MILITARY_SIMULATIONS: "Run Military Simulations" # add_scaled_army_tradition
  CONFORM_BRAIN_INTERFACES: "Conform Brain Interfaces" # discipline
  
- #-------------------------------------------------------------------
- # Elders
- #-------------------------------------------------------------------
- estate_elders: "Elders"
- estate_elders_desc: ""
- 
- PUNISH_THE_ELDERS: "Punish the Elders"
- INVEST_IN_THE_ELDERS: "Invest in the Elders"
- GAIN_SUPPORT_OF_THE_ELDERS: "Gain Support of the Elders"
- EXPLOIT_THE_ELDERS: "Exploit the Elders"
- 
- ENFORCE_CODEX_ADHERENCE: "Enforce Codex Adherence" # add_scaled_absolutism
- OPTIMISE_TAXATION: "Optimise Taxation" # add_scaled_yearly_gold
- # TACKLE_INFLATION
- 
- #-------------------------------------------------------------------
- # Knights
- #-------------------------------------------------------------------
- estate_knights: "Knights"
- estate_knights_desc: ""
- 
- PUNISH_THE_KNIGHTS: "Punish the Knights"
- INVEST_IN_THE_KNIGHTS: "Invest in the Knights"
- GAIN_SUPPORT_OF_THE_KNIGHTS: "Gain Support of the Knights"
- EXPLOIT_THE_KNIGHTS: "Exploit the Knights"
- 
- #-------------------------------------------------------------------
- # Paladins
- #-------------------------------------------------------------------
- estate_paladins: "Paladins"
- estate_paladins_desc: ""
- 
- PUNISH_THE_PALADINS: "Punish the Paladins"
- INVEST_IN_THE_PALADINS: "Invest in the Paladins"
- GAIN_SUPPORT_OF_THE_PALADINS: "Gain Support of the Paladins"
- EXPLOIT_THE_PALADINS: "Exploit the Paladins"
- 
- TT_OWN_PALADIN_PROVINCE: "At least one owned province belongs to the §YPaladins§! Estate."
- TT_PALADIN_SPAWN_INFANTRY: "Up to §Y10§! §YElite Infantry§! will be recruited dependent on the number of provinces under §YPaladins§! control and current §YPaladins§! influence."
- TT_PALADIN_SPAWN_CAVALRY: "Up to §Y10§! §YAssault Vehicles§! will be recruited dependent on the number of provinces under §YPaladins§! control and current §YPaladins§! influence."
- 
- #-------------------------------------------------------------------
- # Initiates
- #-------------------------------------------------------------------
- estate_initiates: "Initiates"
- estate_initiates_desc: ""
- 
- PUNISH_THE_INITIATES: "Punish the Initiates"
- INVEST_IN_THE_INITIATES: "Invest in the Initiates"
- GAIN_SUPPORT_OF_THE_INITIATES: "Gain Support of the Initiates"
- EXPLOIT_THE_INITIATES: "Exploit the Initiates"
- 
- #-------------------------------------------------------------------
- # Scribes
- #-------------------------------------------------------------------
- estate_scribes: "Scribes"
- estate_scribes_desc: ""
- 
- PUNISH_THE_SCRIBES: "Punish the Scribes"
- INVEST_IN_THE_SCRIBES: "Invest in the Scribes"
- GAIN_SUPPORT_OF_THE_SCRIBES: "Gain Support of the Scribes"
- EXPLOIT_THE_SCRIBES: "Exploit the Scribes"
- 
- #-------------------------------------------------------------------
- # Proctors
- #-------------------------------------------------------------------
- estate_proctors: "Proctors"
- estate_proctors_desc: ""
- 
- PUNISH_THE_PROCTORS: "Punish the Proctors"
- INVEST_IN_THE_PROCTORS: "Invest in the Proctors"
- GAIN_SUPPORT_OF_THE_PROCTORS: "Gain Support of the Proctors"
- EXPLOIT_THE_PROCTORS: "Exploit the Proctors"
- 
- #-------------------------------------------------------------------
- # Patricians
- #-------------------------------------------------------------------
- estate_patricians: "Patricians"
- estate_patricians_desc: ""
- 
- PUNISH_THE_PATRICIANS: "Punish the Patricians"
- INVEST_IN_THE_PATRICIANS: "Invest in the Patricians"
- GAIN_SUPPORT_OF_THE_PATRICIANS: "Gain Support of the Patricians"
- EXPLOIT_THE_PATRICIANS: "Exploit the Patricians"
- 
- #-------------------------------------------------------------------
- # Mercatores
- #-------------------------------------------------------------------
- estate_mercatores: "Mercatores"
- estate_mercatores_desc: ""
- 
- PUNISH_THE_MERCATORES: "Punish the Mercatores"
- INVEST_IN_THE_MERCATORES: "Invest in the Mercatores"
- GAIN_SUPPORT_OF_THE_MERCATORES: "Gain Support of the Mercatores"
- EXPLOIT_THE_MERCATORES: "Exploit the Mercatores"
- 
- #-------------------------------------------------------------------
- # Legionarii
- #-------------------------------------------------------------------
- estate_legionarii: "Legionarii"
- estate_legionarii_desc: ""
- 
- PUNISH_THE_LEGIONARII: "Punish the Legionarii"
- INVEST_IN_THE_LEGIONARII: "Invest in the Legionarii"
- GAIN_SUPPORT_OF_THE_LEGIONARII: "Gain Support of the Legionarii"
- EXPLOIT_THE_LEGIONARII: "Exploit the Legionarii"
- 
- TT_OWN_LEGIONARII_PROVINCE: "At least one owned province belongs to the §YLegionarii§! Estate."
- TT_LEGIONARII_SPAWN_INFANTRY: "Up to §Y10§! §YElite Infantry§! will be recruited dependent on the number of provinces under §YLegionarii§! control and current §YLegionarii§! influence."
- TT_LEGIONARII_SPAWN_CAVALRY: "Up to §Y10§! §YAssault Vehicles§! will be recruited dependent on the number of provinces under §YLegionarii§! control and current §YLegionarii§! influence."
- 
- #-------------------------------------------------------------------
- # Plebeians
- #-------------------------------------------------------------------
- estate_plebeians: "Plebeians"
- estate_plebeians_desc: ""
- 
- PUNISH_THE_PLEBEIANS: "Punish the Plebeians"
- INVEST_IN_THE_PLEBEIANS: "Invest in the Plebeians"
- GAIN_SUPPORT_OF_THE_PLEBEIANS: "Gain Support of the Plebeians"
- EXPLOIT_THE_PLEBEIANS: "Exploit the Plebeians"
- 
- #-------------------------------------------------------------------
- # Quaesitores
- #-------------------------------------------------------------------
- estate_quaesitores: "Quaesitores"
- estate_quaesitores_desc: ""
- 
- PUNISH_THE_QUAESITORES: "Punish the Quaesitores"
- INVEST_IN_THE_QUAESITORES: "Invest in the Quaesitores"
- GAIN_SUPPORT_OF_THE_QUAESITORES: "Gain Support of the Quaesitores"
- EXPLOIT_THE_QUAESITORES: "Exploit the Quaesitores"
- 
- #-------------------------------------------------------------------
- # Adoratores
- #-------------------------------------------------------------------
- estate_adoratores: "Adoratores"
- estate_adoratores_desc: ""
- 
- PUNISH_THE_ADORATORES: "Punish the Adoratores"
- INVEST_IN_THE_ADORATORES: "Invest in the Adoratores"
- GAIN_SUPPORT_OF_THE_ADORATORES: "Gain Support of the Adoratores"
- EXPLOIT_THE_ADORATORES: "Exploit the Adoratores"
+ brain_interfaces: "Brain Interfaces"
+ brain_interfaces_desc: "Utilising brain interfaces allows for total discipline whilst in battle."
  
  #-------------------------------------------------------------------
  # Facilities

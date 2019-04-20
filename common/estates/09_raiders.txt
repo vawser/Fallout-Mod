@@ -351,5 +351,186 @@ estate_raiders = {
             }
 		}
 	}
+    
+    # Gather Raiders
+    interaction = {
+        name = "GATHER_RAIDERS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_raiders
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_yearly_manpower = { 
+                ESTATE = estate_raiders 
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_raiders
+                desc = EST_VAL_GATHERED_RAIDERS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_raiders
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Enforce Rule
+    interaction = {
+        name = "ENFORCE_RULE"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_raiders
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_absolutism = { 
+                ESTATE = estate_raiders 
+                LOW = 2
+                MED = 4
+                HIGH = 6
+                MAX = 8
+            }
+            
+            add_estate_loyalty = {
+                estate = estate_raiders
+                loyalty = -20
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_raiders
+                        loyalty = 60
+                    }
+                }
+            }
+        }
+    }
+    
+    # Engage in Brutality
+    interaction = {
+        name = "ENGAGE_IN_BRUTALITY"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_raiders
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = brutal_fighting
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_raiders
+                desc = EST_VAL_BRUTALITY
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_raiders
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Promote Pit Boss
+    interaction = {
+        name = "PROMOTE_PIT_BOSS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_raiders
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_general = { 
+                ESTATE = estate_raiders
+                LOW = 25
+                MED = 50
+                HIGH = 75
+                MAX = 100
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_raiders
+                desc = EST_VAL_RECRUITED_LEADER
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_raiders
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 

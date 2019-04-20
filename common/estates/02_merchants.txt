@@ -9,6 +9,20 @@ estate_merchants = {
     start_territory_weight = 25
 	min_autonomy = 0
     
+    custom_name = {
+		desc = estate_knights
+		trigger = {
+			has_reform = brotherhood_reform
+		}
+	}
+    
+    custom_name = {
+		desc = estate_mercatores
+		trigger = {
+			has_reform = legion_reform
+		}
+	}
+    
     # ----- Conditions -----
 	trigger = {
         has_generic_estates = yes
@@ -90,8 +104,8 @@ estate_merchants = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
 			OR = {
-                estate_influence = { estate = estate_merchants influence = 100 }
-                estate_influence = { estate = estate_merchants influence = 100 }
+                estate_influence = { estate = estate_bureaucrats influence = 100 }
+                estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_clergy influence = 100 }
@@ -106,8 +120,8 @@ estate_merchants = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
 			OR = {
-                estate_influence = { estate = estate_merchants influence = 100 }
-                estate_influence = { estate = estate_merchants influence = 100 }
+                estate_influence = { estate = estate_bureaucrats influence = 100 }
+                estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_clergy influence = 100 }
@@ -315,6 +329,138 @@ estate_merchants = {
 
             modifier = {
                 factor = 0
+                estate_influence = {
+                    estate = estate_merchants
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Support Local Caravanners
+    interaction = {
+        name = "SUPPORT_LOCAL_CARAVANNERS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_merchants
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_mercantilism = { 
+                ESTATE = estate_merchants 
+                LOW = 2
+                MED = 4
+                HIGH = 6
+                MAX = 8
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_merchants
+                desc = EST_VAL_SUPPORTED_LOCAL_CARAVANNERS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+        
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_merchants
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Protect Caravans
+    interaction = {
+        name = "PROTECT_CARAVANS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_merchants
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = protected_caravans
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_merchants
+                desc = EST_VAL_PROTECTED_CARAVANS
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+        
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_merchants
+                    influence = 60
+                }                        
+            }
+        }
+    }
+    
+    # Optimise Markets
+    interaction = {
+        name = "OPTIMISE_MARKETS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_merchants
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = optimised_markets
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_merchants
+                desc = EST_VAL_OPTIMISED_MARKETS
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+        
+            modifier = {
+                factor = 0
+                
                 estate_influence = {
                     estate = estate_merchants
                     influence = 60

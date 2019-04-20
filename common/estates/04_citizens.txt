@@ -9,6 +9,20 @@ estate_citizens = {
     start_territory_weight = 25
 	min_autonomy = 0
     
+    custom_name = {
+		desc = estate_initiates
+		trigger = {
+			has_reform = brotherhood_reform
+		}
+	}
+    
+    custom_name = {
+		desc = estate_plebeians
+		trigger = {
+			has_reform = legion_reform
+		}
+	}
+    
     # ----- Conditions -----
 	trigger = {
         has_generic_estates = yes
@@ -91,9 +105,9 @@ estate_citizens = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
-                estate_influence = { estate = estate_citizens influence = 100 }
-                estate_influence = { estate = estate_citizens influence = 100 }
-                estate_influence = { estate = estate_citizens influence = 100 }
+                estate_influence = { estate = estate_merchants influence = 100 }
+                estate_influence = { estate = estate_officers influence = 100 }
+                estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_clergy influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
@@ -107,9 +121,9 @@ estate_citizens = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_bureaucrats influence = 100 }
-                estate_influence = { estate = estate_citizens influence = 100 }
-                estate_influence = { estate = estate_citizens influence = 100 }
-                estate_influence = { estate = estate_citizens influence = 100 }
+                estate_influence = { estate = estate_merchants influence = 100 }
+                estate_influence = { estate = estate_officers influence = 100 }
+                estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_clergy influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
@@ -313,6 +327,148 @@ estate_citizens = {
                     estate = estate_citizens
                     influence = 60
                 }                        
+            }
+        }
+    }
+    
+    # Spread War Propaganda
+    interaction = {
+        name = "SPREAD_WAR_PROPAGANDA"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            war_exhaustion = 0.01
+            estate_influence = {
+                estate = estate_citizens
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_war_exhaustion = { 
+                ESTATE = estate_citizens 
+                LOW = -2
+                MED = -4
+                HIGH = -6
+                MAX = -8
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_citizens
+                desc = EST_VAL_WAR_PROPAGANDA
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+        
+            modifier = {
+                factor = 0
+             
+                NOT = { war_exhaustion = 10 }
+            }
+        
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_citizens
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Garner Legitimacy
+    interaction = {
+        name = "GARNER_LEGITIMACY"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_citizens
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_legitimacy_value = { 
+                ESTATE = estate_citizens 
+                LOW = 10
+                MED = 20
+                HIGH = 30
+                MAX = 40
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_citizens
+                desc = EST_VAL_GARNERED_LEGITIMACY
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_citizens
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Accept Minorities
+    interaction = {
+        name = "ACCEPT_MINORITIES"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_citizens
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = accepted_minorities
+                duration = 3650
+            }
+            
+            add_estate_loyalty = {
+                estate = estate_citizens
+                loyalty = -20
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_citizens
+                        loyalty = 60
+                    }
+                }
             }
         }
     }

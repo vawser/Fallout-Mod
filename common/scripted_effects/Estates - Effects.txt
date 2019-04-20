@@ -2025,3 +2025,108 @@ add_scaled_war_exhaustion = {
     }     
 }
 
+add_scaled_reform_progress = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        change_government_reform_progress = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        change_government_reform_progress = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        change_government_reform_progress = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        change_government_reform_progress = $MAX$
+    }     
+}
+
+add_scaled_innovativeness = {
+    if = {
+        limit = {
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 50
+                }    
+            }
+        }
+        change_innovativeness = $LOW$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 50
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 75
+                }    
+            }
+        }
+        change_innovativeness = $MED$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 75
+            }
+            NOT = {
+                estate_influence = {
+                    estate = $ESTATE$
+                    influence = 100
+                }    
+            }
+        }
+        change_innovativeness = $HIGH$
+    }
+    if = {
+        limit = {
+            estate_influence = {
+                estate = $ESTATE$
+                influence = 100
+            }
+        }
+        change_innovativeness = $MAX$
+    }     
+}
