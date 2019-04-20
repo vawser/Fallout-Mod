@@ -1,149 +1,280 @@
-fm_politician = {
+fm_spymaster = {
     monarch_power = DIP
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	diplomatic_reputation = 1
-
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_diplomat = {
-    monarch_power = DIP
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	improve_relation_modifier = 0.15
-
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_civil_servant = {
-    monarch_power = DIP
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	ae_impact = -0.1
-
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_orator = {
-    monarch_power = DIP
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	province_warscore_cost = -0.15
-
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_police_officer = {
-    monarch_power = DIP
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	global_unrest = -2
-
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_enforcer = {
-    monarch_power = DIP
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	years_of_nationalism = -5
-
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_spy = {
-    monarch_power = DIP
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
 	spy_offence = 0.25
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_colonist = {
+fm_trader = {
     monarch_power = DIP
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	global_colonial_growth = 10
+	global_trade_power = 0.15
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_merchant = {
+fm_diplomat = {
     monarch_power = DIP
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	trade_range_modifier = 0.25
+	diplomatic_reputation = 2
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_caravanner = {
+fm_proclaimer = {
     monarch_power = DIP
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	caravan_power = 0.15
+	culture_conversion_cost = -0.2
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_naval_officer = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	navy_tradition = 1
+
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_cartographer = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+    colonist_placement_chance = 0.05
+
+	chance = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { num_of_colonists = 1 }
+        }
+    }
+	ai_will_do = { factor = 1 }
+}
+fm_interpreter = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	stability_cost_modifier = -0.2
+    
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_settler = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	global_colonial_growth = 10 
+    
+	chance = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { num_of_colonists = 1 }
+        }
+    }
+	ai_will_do = { factor = 1 }
+}
+fm_navigator = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	range = 0.2 
+    
+	chance = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { num_of_colonists = 1 }
+        }
+    }
+	ai_will_do = { factor = 1 }
+}
+fm_mariner = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	global_sailors_modifier = 0.15
+    
+	chance = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { num_of_ports = 1 }
+        }
+    }
+	ai_will_do = { factor = 1 }
+}
+fm_governor = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	native_assimilation = 0.25 
+    
+	chance = { 
+        factor = 1 
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { num_of_colonists = 1 }
+        }
+    }
+	ai_will_do = { factor = 1 }
+}
+fm_broker = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	global_trade_goods_size_modifier = 0.1
+    
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_trafficker = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	trade_steering = 0.15
+    
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_marshal = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	yearly_corruption = -0.05 
+    
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_envoy = {
+    monarch_power = DIP
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	improve_relation_modifier = 0.2
+    
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }

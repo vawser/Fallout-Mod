@@ -1,296 +1,248 @@
 fm_army_officer = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
 	army_tradition = 1
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_naval_officer = {
+fm_recruitmaster = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	navy_tradition = 1
+	global_regiment_cost = -0.2
 
-	chance = {
-		factor = 1
-        
-        modifier = {
-            factor = 0
-            
-            NOT = {
-                any_owned_province = {
-                    has_port = yes
-                }
-            }
-        }
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_drill_sergeant = {
+fm_disciplinarian = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	drill_gain_modifier = 0.25
+	yearly_absolutism = 1
 
-	chance = {
-		factor = 1
-        
-        modifier = {
-            factor = 0
-            NOT = {
-                has_dlc = "Cradle of Civilization"
-            }
-        }
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
 fm_commandant = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
 	discipline = 0.05
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_war_drummer = {
+fm_logistician = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	land_morale = 0.1
+	global_supply_limit_modifier = 0.2
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_keel_hauler = {
+fm_mechanic = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	naval_morale = 0.1
+	 land_maintenance_modifier = -0.1
 
-	chance = {
-		factor = 1
-        
-        modifier = {
-            factor = 0
-            
-            NOT = {
-                any_owned_province = {
-                    has_port = yes
-                }
-            }
-        }
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_sapper = {
+fm_comms_officer = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	siege_ability = 0.05
+	movement_speed = 0.2
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_sharpshooter = {
+fm_crewman = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	fire_damage = 0.1
+	cavalry_power = 0.1 
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_spec_ops = {
+fm_mechanical_engineer = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	shock_damage = 0.1
+	backrow_artillery_damage = 0.1 
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_forager = {
+fm_surveyor = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
 	land_attrition = -0.15
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_recruiter = {
+fm_fabricator = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	global_regiment_cost = -0.15
+    reinforce_speed = 0.2
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_army_captain = {
+fm_armourer = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	land_maintenance_modifier = -0.1
+	fire_damage_received = -0.1 
 
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
 }
-
-fm_naval_captain = {
+fm_corps_officer = {
     monarch_power = MIL
 	
-    skill_scaled_modifier = { meritocracy = 0.5 }
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
     
-	naval_maintenance_modifier = -0.1
+	infantry_power = 0.1 
 
-	chance = {
-		factor = 1
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_platoon_officer = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	land_morale = 0.1
+
+	chance = { factor = 1 }
+	ai_will_do = { factor = 1 }
+}
+fm_slaver = {
+    monarch_power = MIL
+	
+    skill_scaled_modifier = { 
+        legitimacy = 0.2
+        republican_tradition = 0.2
+        devotion = 0.2
+        horde_unity = 0.2
+        meritocracy = 0.2
+    }
+    
+	global_manpower_modifier = 0.15 
+
+	chance = { 
+        factor = 1 
         
         modifier = {
             factor = 0
             
-            NOT = {
-                any_owned_province = {
-                    has_port = yes
-                }
-            }
+            has_slavery_forbidden = yes
         }
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_mercenary = {
-    monarch_power = MIL
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	merc_maintenance_modifier = -0.1
-
-	chance = {
-		factor = 1
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_shipwright = {
-    monarch_power = MIL
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	ship_durability = 0.1
-
-	chance = {
-		factor = 1
-        
-        modifier = {
-            factor = 0
-            
-            NOT = {
-                any_owned_province = {
-                    has_port = yes
-                }
-            }
-        }
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fm_press_ganger = {
-    monarch_power = MIL
-	
-    skill_scaled_modifier = { meritocracy = 0.5 }
-    
-	global_sailors_modifier = 0.2
-
-	chance = {
-		factor = 1
-        
-        modifier = {
-            factor = 0
-            
-            NOT = {
-                any_owned_province = {
-                    has_port = yes
-                }
-            }
-        }
-	}
-	ai_will_do = {
-		factor = 1
-	}
+    }
+	ai_will_do = { factor = 1 }
 }

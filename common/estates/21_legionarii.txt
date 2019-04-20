@@ -92,7 +92,7 @@ estate_legionarii = {
 			OR = {
                 estate_influence = { estate = estate_patricians influence = 100 }
                 estate_influence = { estate = estate_mercatores influence = 100 }
-                estate_influence = { estate = estate_plebeians influence = 100 }
+                estate_influence = { estate = estate_legionarii influence = 100 }
                 estate_influence = { estate = estate_quaesitores influence = 100 }
                 estate_influence = { estate = estate_adoratores influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
@@ -108,7 +108,7 @@ estate_legionarii = {
 			OR = {
                 estate_influence = { estate = estate_patricians influence = 100 }
                 estate_influence = { estate = estate_mercatores influence = 100 }
-                estate_influence = { estate = estate_plebeians influence = 100 }
+                estate_influence = { estate = estate_legionarii influence = 100 }
                 estate_influence = { estate = estate_quaesitores influence = 100 }
                 estate_influence = { estate = estate_adoratores influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
@@ -278,7 +278,7 @@ estate_legionarii = {
         }
     }
     
-    # Recruit Army Officer (fm_army_officer)
+    # Recruit Army Officer
     interaction = {
         name = "RECRUIT_ARMY_OFFICER"
         icon = 1
@@ -298,50 +298,7 @@ estate_legionarii = {
                 ADVISOR = fm_army_officer
                 HIGH = 20
                 MED = 10
-            }
-            
-            add_estate_influence_modifier = {
-                estate = estate_legionarii
-                desc = EST_VAL_RECRUITED_ADVISOR
-                influence = 15
-                duration = 10950
-            }
-        }
-        
-        
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                estate_influence = {
-                    estate = estate_legionarii
-                    influence = 60
-                }                        
-            }
-        }
-    }
-    
-    # Recruit Naval Officer (fm_naval_officer)
-    interaction = {
-        name = "RECRUIT_NAVAL_OFFICER"
-        icon = 1
-        
-        years_between_use = 30
-        
-        trigger = {
-            estate_influence = {
-                estate = estate_legionarii
-                influence = 40
-            }
-        }
-        
-        effect = {
-            add_scaled_estate_advisor = { 
-                ESTATE = estate_legionarii 
-                ADVISOR = fm_naval_officer
-                HIGH = 20
-                MED = 10
+                COST = 0.5
             }
             
             add_estate_influence_modifier = {
@@ -461,8 +418,5 @@ estate_legionarii = {
             }
 		}
 	}
-    
-    # Recruit Army Officer (fm_army_officer)
-    # Recruit Naval Officer (fm_naval_officer)
 }
 

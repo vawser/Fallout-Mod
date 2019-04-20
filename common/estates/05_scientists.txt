@@ -94,7 +94,7 @@ estate_scientists = {
                 estate_influence = { estate = estate_merchants influence = 100 }
                 estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_clergy influence = 100 }
+                estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -110,7 +110,7 @@ estate_scientists = {
                 estate_influence = { estate = estate_merchants influence = 100 }
                 estate_influence = { estate = estate_officers influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_clergy influence = 100 }
+                estate_influence = { estate = estate_scientists influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -248,12 +248,26 @@ estate_scientists = {
         }
         
         effect = {
-            add_scaled_legitimacy_value = { 
+            add_scaled_adm_power = { 
                 ESTATE = estate_scientists
-                LOW = 10
-                MED = 20
-                HIGH = 30
-                MAX = 40
+                LOW = 20
+                MED = 40
+                HIGH = 60
+                MAX = 80
+            }
+            add_scaled_dip_power = { 
+                ESTATE = estate_scientists
+                LOW = 20
+                MED = 40
+                HIGH = 60
+                MAX = 80
+            }
+            add_scaled_mil_power = { 
+                ESTATE = estate_scientists
+                LOW = 20
+                MED = 40
+                HIGH = 60
+                MAX = 80
             }
             
             add_estate_loyalty = {
@@ -278,7 +292,7 @@ estate_scientists = {
         }
     }
     
-    # Recruit Researcher (fm_researcher)
+    # Recruit Researcher
     interaction = {
         name = "RECRUIT_RESEARCHER"
         icon = 1
@@ -298,50 +312,7 @@ estate_scientists = {
                 ADVISOR = fm_researcher
                 HIGH = 20
                 MED = 10
-            }
-            
-            add_estate_influence_modifier = {
-                estate = estate_scientists
-                desc = EST_VAL_RECRUITED_ADVISOR
-                influence = 15
-                duration = 10950
-            }
-        }
-        
-        
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                estate_influence = {
-                    estate = estate_scientists
-                    influence = 60
-                }                        
-            }
-        }
-    }
-    
-    # Recruit Engineer (fm_engineer)
-    interaction = {
-        name = "RECRUIT_ENGINEER"
-        icon = 1
-        
-        years_between_use = 30
-        
-        trigger = {
-            estate_influence = {
-                estate = estate_scientists
-                influence = 40
-            }
-        }
-        
-        effect = {
-            add_scaled_estate_advisor = { 
-                ESTATE = estate_scientists 
-                ADVISOR = fm_engineer
-                HIGH = 20
-                MED = 10
+                COST = 0.5
             }
             
             add_estate_influence_modifier = {

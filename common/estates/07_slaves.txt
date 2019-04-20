@@ -102,7 +102,7 @@ estate_slavers = {
                 estate_influence = { estate = estate_slavers influence = 100 }
                 estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_clergy influence = 100 }
+                estate_influence = { estate = estate_slavers influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
                 estate_influence = { estate = estate_raiders influence = 100 }
                 estate_influence = { estate = estate_khans influence = 100 }
@@ -140,7 +140,7 @@ estate_slavers = {
                 estate_influence = { estate = estate_slavers influence = 100 }
                 estate_influence = { estate = estate_citizens influence = 100 }
                 estate_influence = { estate = estate_scientists influence = 100 }
-                estate_influence = { estate = estate_clergy influence = 100 }
+                estate_influence = { estate = estate_slavers influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
                 estate_influence = { estate = estate_raiders influence = 100 }
                 estate_influence = { estate = estate_khans influence = 100 }
@@ -329,9 +329,9 @@ estate_slavers = {
         }
     }
     
-    # Recruit Slave Jockey (fm_slave_jockey)
+    # Recruit Slaver
     interaction = {
-        name = "RECRUIT_SLAVE_JOCKEY"
+        name = "RECRUIT_SLAVER"
         icon = 1
         
         years_between_use = 30
@@ -346,53 +346,10 @@ estate_slavers = {
         effect = {
             add_scaled_estate_advisor = { 
                 ESTATE = estate_slavers 
-                ADVISOR = fm_slave_jockey
+                ADVISOR = fm_slaver
                 HIGH = 20
                 MED = 10
-            }
-            
-            add_estate_influence_modifier = {
-                estate = estate_slavers
-                desc = EST_VAL_RECRUITED_ADVISOR
-                influence = 15
-                duration = 10950
-            }
-        }
-        
-        
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                estate_influence = {
-                    estate = estate_slavers
-                    influence = 60
-                }                        
-            }
-        }
-    }
-    
-    # Recruit Slave Driver (fm_slave_driver)
-    interaction = {
-        name = "RECRUIT_SLAVE_DRIVER"
-        icon = 1
-        
-        years_between_use = 30
-        
-        trigger = {
-            estate_influence = {
-                estate = estate_slavers
-                influence = 40
-            }
-        }
-        
-        effect = {
-            add_scaled_estate_advisor = { 
-                ESTATE = estate_slavers 
-                ADVISOR = fm_slave_driver
-                HIGH = 20
-                MED = 10
+                COST = 0.5
             }
             
             add_estate_influence_modifier = {

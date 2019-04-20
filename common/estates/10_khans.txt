@@ -264,9 +264,9 @@ estate_khans = {
         }
     }
     
-    # Recruit Drug Dealer (fm_drug_dealer)
+    # Recruit Trafficker
     interaction = {
-        name = "RECRUIT_DRUG_DEALER"
+        name = "RECRUIT_TRAFFICKER"
         icon = 1
         
         years_between_use = 30
@@ -281,53 +281,10 @@ estate_khans = {
         effect = {
             add_scaled_estate_advisor = { 
                 ESTATE = estate_khans 
-                ADVISOR = fm_drug_dealer
+                ADVISOR = fm_trafficker
                 HIGH = 20
                 MED = 10
-            }
-            
-            add_estate_influence_modifier = {
-                estate = estate_khans
-                desc = EST_VAL_RECRUITED_ADVISOR
-                influence = 15
-                duration = 10950
-            }
-        }
-        
-        
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                estate_influence = {
-                    estate = estate_khans
-                    influence = 60
-                }                        
-            }
-        }
-    }
-    
-    # Recruit Hijacker (fm_hijacker)
-    interaction = {
-        name = "RECRUIT_HIJACKER"
-        icon = 1
-        
-        years_between_use = 30
-        
-        trigger = {
-            estate_influence = {
-                estate = estate_khans
-                influence = 40
-            }
-        }
-        
-        effect = {
-            add_scaled_estate_advisor = { 
-                ESTATE = estate_khans 
-                ADVISOR = fm_hijacker
-                HIGH = 20
-                MED = 10
+                COST = 0.5
             }
             
             add_estate_influence_modifier = {

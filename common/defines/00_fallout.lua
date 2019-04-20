@@ -7,6 +7,7 @@ NDefines.NGame.MAX_RANDOM_NEW_WORLD = "3000.1.1"
 NDefines.NGame.GREAT_POWER_FRENZY_START = "3000.1.1"
 NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
 NDefines.NEngine.EVENT_PROCESS_OFFSET = 20
+NDefines.NCountry.STARTING_ARMY_SIZE = 0.25
 
 --------------------------------
 -- Disabled Stuff

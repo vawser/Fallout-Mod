@@ -90,7 +90,7 @@ estate_patricians = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
 			OR = {
-                estate_influence = { estate = estate_mercatores influence = 100 }
+                estate_influence = { estate = estate_patricians influence = 100 }
                 estate_influence = { estate = estate_legionarii influence = 100 }
                 estate_influence = { estate = estate_plebeians influence = 100 }
                 estate_influence = { estate = estate_quaesitores influence = 100 }
@@ -106,7 +106,7 @@ estate_patricians = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
 			OR = {
-                estate_influence = { estate = estate_mercatores influence = 100 }
+                estate_influence = { estate = estate_patricians influence = 100 }
                 estate_influence = { estate = estate_legionarii influence = 100 }
                 estate_influence = { estate = estate_plebeians influence = 100 }
                 estate_influence = { estate = estate_quaesitores influence = 100 }
@@ -278,7 +278,7 @@ estate_patricians = {
         }
     }
     
-    # Recruit Bureaucrat (fm_bureaucrat)
+    # Recruit Bureaucrat
     interaction = {
         name = "RECRUIT_BUREAUCRAT"
         icon = 1
@@ -298,50 +298,7 @@ estate_patricians = {
                 ADVISOR = fm_bureaucrat
                 HIGH = 20
                 MED = 10
-            }
-            
-            add_estate_influence_modifier = {
-                estate = estate_patricians
-                desc = EST_VAL_RECRUITED_ADVISOR
-                influence = 15
-                duration = 10950
-            }
-        }
-        
-        
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                estate_influence = {
-                    estate = estate_patricians
-                    influence = 60
-                }                        
-            }
-        }
-    }
-    
-    # Recruit Administrator (fm_administrator)
-    interaction = {
-        name = "RECRUIT_ADMINISTRATOR"
-        icon = 1
-        
-        years_between_use = 30
-        
-        trigger = {
-            estate_influence = {
-                estate = estate_patricians
-                influence = 40
-            }
-        }
-        
-        effect = {
-            add_scaled_estate_advisor = { 
-                ESTATE = estate_patricians 
-                ADVISOR = fm_administrator
-                HIGH = 20
-                MED = 10
+                COST = 0.5
             }
             
             add_estate_influence_modifier = {

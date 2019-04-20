@@ -93,8 +93,8 @@ estate_initiates = {
                 estate_influence = { estate = estate_elders influence = 100 }
                 estate_influence = { estate = estate_knights influence = 100 }
                 estate_influence = { estate = estate_paladins influence = 100 }
-                estate_influence = { estate = estate_scribes influence = 100 }
-                estate_influence = { estate = estate_proctors influence = 100 }
+                estate_influence = { estate = estate_initiates influence = 100 }
+                estate_influence = { estate = estate_initiates influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -109,8 +109,8 @@ estate_initiates = {
                 estate_influence = { estate = estate_elders influence = 100 }
                 estate_influence = { estate = estate_knights influence = 100 }
                 estate_influence = { estate = estate_paladins influence = 100 }
-                estate_influence = { estate = estate_scribes influence = 100 }
-                estate_influence = { estate = estate_proctors influence = 100 }
+                estate_influence = { estate = estate_initiates influence = 100 }
+                estate_influence = { estate = estate_initiates influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
 			}
 		}
@@ -272,9 +272,9 @@ estate_initiates = {
         }
     }
     
-    # Recruit Artist (fm_artist)
+    # Recruit Mayor
     interaction = {
-        name = "RECRUIT_ARTIST"
+        name = "RECRUIT_MAYOR"
         icon = 1
         
         years_between_use = 30
@@ -289,53 +289,10 @@ estate_initiates = {
         effect = {
             add_scaled_estate_advisor = { 
                 ESTATE = estate_initiates 
-                ADVISOR = fm_artist
+                ADVISOR = fm_mayor
                 HIGH = 20
                 MED = 10
-            }
-            
-            add_estate_influence_modifier = {
-                estate = estate_initiates
-                desc = EST_VAL_RECRUITED_ADVISOR
-                influence = 15
-                duration = 10950
-            }
-        }
-        
-        
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                estate_influence = {
-                    estate = estate_initiates
-                    influence = 60
-                }                        
-            }
-        }
-    }
-    
-    # Recruit Colonist (fm_colonist)
-    interaction = {
-        name = "RECRUIT_COLONIST"
-        icon = 1
-        
-        years_between_use = 30
-        
-        trigger = {
-            estate_influence = {
-                estate = estate_initiates
-                influence = 40
-            }
-        }
-        
-        effect = {
-            add_scaled_estate_advisor = { 
-                ESTATE = estate_initiates 
-                ADVISOR = fm_colonist
-                HIGH = 20
-                MED = 10
+                COST = 0.5
             }
             
             add_estate_influence_modifier = {

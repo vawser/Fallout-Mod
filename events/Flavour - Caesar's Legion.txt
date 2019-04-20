@@ -9,8 +9,6 @@ country_event = {
 	desc = legion_flavour.1.desc
     picture = LEGION_CROSS_eventPicture
 	
-    is_triggered_only = yes
-    
     trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = caesar_son_of_mars }
@@ -21,6 +19,10 @@ country_event = {
             set_country_flag = caesar_son_of_mars 
         }
     }
+    
+    mean_time_to_happen = {
+		months = 1
+	}
     
 	option = {
 		name = legion_flavour.1.option.a
@@ -1230,7 +1232,7 @@ country_event = {
         }
 	}
     option = {
-		name = legion_flavour.30.option.a
+		name = legion_flavour.30.option.b
         
         add_adm_power = 20
 	}
