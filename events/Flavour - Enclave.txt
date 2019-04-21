@@ -88,6 +88,9 @@ country_event = {
 			duration = -1
 		}		
 		# Add either a center of reformation OR a direct province conversions
+		ai_chance = {
+			factor = 10
+		}  
 	}
 	
 	option = { # They can provide reconnaissance 
@@ -97,6 +100,9 @@ country_event = {
 			duration = -1
 		}		
 		add_manpower = 3
+		ai_chance = {
+			factor = 10
+		}  
 	}
 	
 	option = { # Send them to loyal settlements 
@@ -110,6 +116,9 @@ country_event = {
 			}
 			country_event = { id = enclave.4 days = 5 }
 		}
+		ai_chance = {
+			factor = 80
+		}   
 	}
 }
 
