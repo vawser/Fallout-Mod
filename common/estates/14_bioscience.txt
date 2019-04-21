@@ -317,5 +317,137 @@ estate_bioscience = {
             }
         }
     }
+    
+    # Attend Medicials Needs
+    interaction = {
+        name = "ATTEND_MEDICAL_NEEDS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_bioscience
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_legitimacy_value = { 
+                ESTATE = estate_bioscience
+                LOW = 10
+                MED = 20
+                HIGH = 30
+                MAX = 40
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_bioscience
+                desc = EST_VAL_MEDICAL_NEEDS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_bioscience
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Engineer Crops
+    interaction = {
+        name = "ENGINEER_CROPS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_bioscience
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = engineered_crops
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_bioscience
+                desc = EST_VAL_ENGINEERED_CROPS
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_bioscience
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Manufacture Biopharmaceuticals
+    interaction = {
+        name = "MANUFACURE_BIOPHARMACEUTICALS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_bioscience
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = biopharmaceuticals
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_bioscience
+                desc = EST_VAL_BIOPHARMACEUTICALS
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_bioscience
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 

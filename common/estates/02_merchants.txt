@@ -131,6 +131,14 @@ estate_merchants = {
 		loyalty = -40
 	}
 	
+    loyalty_modifier = {
+		desc = EST_VAL_TRADE_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_trade_ideas
+		}
+		loyalty = 10
+	}
+    
 	# ----- Interactions -----
     # Punish the Merchants
     interaction = {

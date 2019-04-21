@@ -131,6 +131,14 @@ estate_scientists = {
 		loyalty = -40
 	}
 	
+    loyalty_modifier = {
+		desc = EST_VAL_INNOVATION_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_innovation_ideas
+		}
+		loyalty = 10
+	}
+    
 	# ----- Interactions -----
     # Punish the Scientists
     interaction = {

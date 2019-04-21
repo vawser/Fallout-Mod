@@ -134,6 +134,14 @@ estate_clergy = {
 		loyalty = -40
 	}
 	
+    loyalty_modifier = {
+		desc = EST_VAL_RELIGIOUS_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_religious_ideas
+		}
+		loyalty = 10
+	}
+    
 	# ----- Interactions -----
     # Punish the Clergy
     interaction = {

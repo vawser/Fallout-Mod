@@ -99,7 +99,7 @@ estate_bureaucrats = {
     
 	# ----- Influence -----
 	base_influence = 30
-	
+    
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
@@ -131,6 +131,21 @@ estate_bureaucrats = {
 		loyalty = -40
 	}
 	
+    loyalty_modifier = {
+		desc = EST_VAL_ADMINISTRATIVE_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_administrative_ideas
+		}
+		loyalty = 10
+	}
+    loyalty_modifier = {
+		desc = EST_VAL_ECONOMIC_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_economic_ideas
+		}
+		loyalty = 10
+	}
+    
 	# ----- Interactions -----
     # Punish the Bureaucrats
     interaction = {

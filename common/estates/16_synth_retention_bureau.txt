@@ -91,7 +91,7 @@ estate_srb = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_facilities influence = 100 }
-                estate_influence = { estate = estate_bioscience influence = 100 }
+                estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
@@ -106,7 +106,7 @@ estate_srb = {
 		trigger = {
 			OR = {
                 estate_influence = { estate = estate_facilities influence = 100 }
-                estate_influence = { estate = estate_bioscience influence = 100 }
+                estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_srb influence = 100 }
                 estate_influence = { estate = estate_slavers influence = 100 }
@@ -413,5 +413,180 @@ estate_srb = {
             }
 		}
 	}
+    
+    # Enforce Director's Will
+    interaction = {
+        name = "ENFORCE_DIRECTORS_WILL"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_srb
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_absolutism = { 
+                ESTATE = estate_srb
+                LOW = 2
+                MED = 4
+                HIGH = 6
+                MAX = 8
+            }
+            
+            add_estate_loyalty = {
+                estate = estate_robotics
+                loyalty = -5
+            }
+            add_estate_loyalty = {
+                estate = estate_srb
+                loyalty = -5
+            }
+            add_estate_loyalty = {
+                estate = estate_srb
+                loyalty = -5
+            }
+            add_estate_loyalty = {
+                estate = estate_facilities
+                loyalty = -5
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_srb
+                        loyalty = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_srb
+                        loyalty = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_srb
+                        loyalty = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_facilities
+                        loyalty = 50
+                    }
+                }
+            }
+        }
+    }
+    
+    # Retrieve Escaped Synths
+    interaction = {
+        name = "RETRIEVE_ESCAPED_SYNTHS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_srb
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_yearly_gold = { 
+                ESTATE = estate_srb
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_srb
+                desc = EST_VAL_RETRIEVED_SYNTHS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_srb
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Optimise Courser Training
+    interaction = {
+        name = "OPTIMISE_COURSER_TRAINING"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_srb
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = optimised_courser_training
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_srb
+                desc = EST_VAL_OPTIMISED_COURSER_TRAINING
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_srb
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 

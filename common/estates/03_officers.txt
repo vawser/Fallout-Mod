@@ -131,6 +131,21 @@ estate_officers = {
 		loyalty = -40
 	}
 	
+    loyalty_modifier = {
+		desc = EST_VAL_INFLUENCE_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_influence_ideas
+		}
+		loyalty = 10
+	}
+    loyalty_modifier = {
+		desc = EST_VAL_ARMY_LEADERSHIP_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_army_leadership_ideas
+		}
+		loyalty = 10
+	}
+    
 	# ----- Interactions -----
     # Punish the Officers
     interaction = {

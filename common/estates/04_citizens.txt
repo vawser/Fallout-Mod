@@ -131,6 +131,28 @@ estate_citizens = {
 		loyalty = -40
 	}
 	
+    loyalty_modifier = {
+		desc = EST_VAL_DEVELOPMENT_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_development_ideas
+		}
+		loyalty = 10
+	}
+    loyalty_modifier = {
+		desc = EST_VAL_COMMUNITY_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_community_ideas
+		}
+		loyalty = 10
+	}
+    loyalty_modifier = {
+		desc = EST_VAL_SOCIETY_IDEAGROUP
+		trigger = {
+			full_idea_group = fallout_society_ideas
+		}
+		loyalty = 10
+	}
+    
 	# ----- Interactions -----
     # Punish the Citizens
     interaction = {

@@ -95,20 +95,73 @@ brain_interfaces = {
 }
 
 #-------------------------------------
-# Institute
+# Facilities
 #-------------------------------------
 estate_facilities_exploited = {
     core_creation = -0.1
 }
+
+developing_the_institute = {
+    development_cost = -0.1
+}
+
+optimised_power_distribution = {
+    state_maintenance_modifier = -0.2
+}
+
+#-------------------------------------
+# Bioscience
+#-------------------------------------
 estate_bioscience_exploited = {
     development_cost = -0.1
 }
+
+engineered_crops = {
+    production_efficiency = 0.2
+}
+
+biopharmaceuticals = {
+    all_power_cost = -0.1
+}
+
+#-------------------------------------
+# Advanced Systems
+#-------------------------------------
 estate_advanced_systems_exploited = {
     technology_cost = -0.05
 }
+
+improved_synth_armor = {
+    fire_damage_received = -0.1
+}
+
+optimised_laser_weaponry = {
+    fire_damage = 0.1
+}
+
+extended_teleportation_matrix = {
+    movement_speed = 0.2
+}
+
+#-------------------------------------
+# SRB
+#-------------------------------------
 estate_srb_exploited = {
     discipline = 0.05
 }
+
+optimised_courser_training = {
+    discipline = 0.05
+}
+
+#-------------------------------------
+# Robotics
+#-------------------------------------
 estate_robotics_exploited = {
     fire_damage = 0.1
 }
+
+biomechanical_research = {
+    technology_cost = -0.1
+}
+

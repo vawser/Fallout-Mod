@@ -6,6 +6,7 @@
  #-------------------------------------------------------------------
  # Influence
  #-------------------------------------------------------------------
+ # Actions
  EST_VAL_PUNISHED_ESTATE: "Punished: §Y$VAL$§!"
  EST_VAL_SUPPORTED_ESTATE: "Supported: §Y$VAL$§!"
  EST_VAL_MUSTERED_INFANTRY: "Trained Infantry: §Y$VAL$§!"
@@ -49,6 +50,32 @@
  EST_VAL_LOBOTOMITE_PATROLS: "Lobotomite Patrols: §Y$VAL$§!"
  EST_VAL_BATTLE_SIMULATIONS: "Battle Simulations: §Y$VAL$§!"
  EST_VAL_BRAIN_INTERFACES: "Brain Interfaces: §Y$VAL$§!"
+ EST_VAL_PACIFIED_INSTITUTE: "Pacified the Institute: §Y$VAL$§!"
+ EST_VAL_DEVELOPED_FACILITIES: "Developed Facilities: §Y$VAL$§!"
+ EST_VAL_OPTIMISED_POWER_DISTRIBUTION: "Optimised Power Distribution: §Y$VAL$§!"
+ EST_VAL_MEDICAL_NEEDS: "Medical Needs: §Y$VAL$§!"
+ EST_VAL_ENGINEERED_CROPS: "Engineered Crops: §Y$VAL$§!"
+ EST_VAL_BIOPHARMACEUTICALS: "Biopharmaceuticals: §Y$VAL$§!"
+ EST_VAL_IMPROVED_SYNTH_ARMOR: "Improved Synth Armor: §Y$VAL$§!"
+ EST_VAL_OPTIMISED_LASER_WEAPONRY: "Optimised Laser Weaponry: §Y$VAL$§!"
+ EST_VAL_EXTENDED_TELEPORTATION_MATRIX: "Extended Teleportation Matrix: §Y$VAL$§!"
+ EST_VAL_RETRIEVED_SYNTHS: "Retrieved Synths: §Y$VAL$§!"
+ EST_VAL_OPTIMISED_COURSER_TRAINING: "Optimised Courser Training: §Y$VAL$§!"
+ EST_VAL_SYNTH_MANUFACTURING: "Synth Manufacturing: §Y$VAL$§!"
+ EST_VAL_SYNTH_TECHNOLOGY: "Synth Technology: §Y$VAL$§!"
+ EST_VAL_BIOMECHANICAL_RESEARCH: "Biomechanical Research: §Y$VAL$§!"
+ 
+ # Ideagroups
+ EST_VAL_ADMINISTRATIVE_IDEAGROUP: "Administrative Ideas: §Y$VAL$§!"
+ EST_VAL_ECONOMIC_IDEAGROUP: "Economic Ideas: §Y$VAL$§!"
+ EST_VAL_TRADE_IDEAGROUP: "Trade Ideas: §Y$VAL$§!"
+ EST_VAL_INFLUENCE_IDEAGROUP: "Influence Ideas: §Y$VAL$§!"
+ EST_VAL_ARMY_LEADERSHIP_IDEAGROUP: "Army Leadership Ideas: §Y$VAL$§!"
+ EST_VAL_DEVELOPMENT_IDEAGROUP: "Development Ideas: §Y$VAL$§!"
+ EST_VAL_COMMUNITY_IDEAGROUP: "Community Ideas: §Y$VAL$§!"
+ EST_VAL_SOCIETY_IDEAGROUP: "Society Ideas: §Y$VAL$§!"
+ EST_VAL_INNOVATION_IDEAGROUP: "Innovation Ideas: §Y$VAL$§!"
+ EST_VAL_RELIGIOUS_IDEAGROUP: "Religious Ideas: §Y$VAL$§!"
  
  #-------------------------------------------------------------------
  # Territory
@@ -367,8 +394,14 @@
  EXPLOIT_THE_FACILITIES: "Exploit Facilities"
  
  PACIFY_THE_INSTITUTE: "Pacify the Institute" # add_stability
- MAINTAIN_FACILITIES: "Maintain Facilities" # development_cost
- LEVERAGE_CANTEEN_ACCESS: "Leverage Canteen Access" # state_maintenance_modifier
+ DEVELOP_FACILITIES: "Develop Facilities" # development_cost
+ OPTIMISE_POWER_DISTRIBUTION: "Optimise Power Distribution" # state_maintenance_modifier
+ 
+ developing_the_institute: "Developing the Institute"
+ developing_the_institute_desc: "We are developing the Institute, extending its capacity and its output."
+ 
+ optimised_power_distribution: "Optimised Power Distribution"
+ optimised_power_distribution_desc: "We have optimised power distribution to our outposts, saving money."
  
  #-------------------------------------------------------------------
  # Bioscience
@@ -381,8 +414,15 @@
  GAIN_SUPPORT_OF_THE_BIOSCIENCE: "Gain Support of Bioscience"
  EXPLOIT_THE_BIOSCIENCE: "Exploit Bioscience"
  
- ENGINEER_CROPS: "Engineer Crops" #
- MANUFACURE_BIOPHARMACEUTICALS: "Manufacture Biopharmaceuticals" # 
+ ATTEND_MEDICAL_NEEDS: "Attend Medical Needs" # add_scaled_legitimacy_value
+ ENGINEER_CROPS: "Engineer Crops" # production_efficiency
+ MANUFACURE_BIOPHARMACEUTICALS: "Manufacture Biopharmaceuticals" # all_power_cost
+ 
+ engineered_crops: "Engineered Crops"
+ engineered_crops_desc: "We have engineered our crops for greater yields."
+ 
+ biopharmaceuticals: "Biopharmaceuticals"
+ biopharmaceuticals_desc: "Officials in the Institute take various biopharamceuticals to improve performance."
  
  #-------------------------------------------------------------------
  # Advanced Systems
@@ -395,6 +435,17 @@
  GAIN_SUPPORT_OF_THE_ADVANCED_SYSTEMS: "Gain Support of Advanced Systems"
  EXPLOIT_THE_ADVANCED_SYSTEMS: "Exploit Advanced Systems"
  
+ IMPROVE_SYNTH_ARMOR: "Improve Synth Armor" # fire_damage_received
+ OPTIMISE_LASER_WEAPONRY: "Optimise Laser Weaponry" # fire_damage
+ EXTEND_TELEPORTATION_MATRIX: "Extend Teleportation Matrix" # movement_speed
+ 
+ improved_synth_armor: "Improved Synth Armor"
+ improved_synth_armor_desc: "We have iterated on our synth armor designs and implemented various improvements."
+ optimised_laser_weaponry: "Optimised Laser Weaponry"
+ optimised_laser_weaponry_desc: "We have optimised our laser weaponry to reduce deficits in performance."
+ extended_teleportation_matrix: "Extended Teleportation Matrix"
+ extended_teleportation_matrix_desc: "We have extended our teleportation matrix, increasing the speed our troops can move at."
+ 
  #-------------------------------------------------------------------
  # Synth Retention Bureau
  #-------------------------------------------------------------------
@@ -406,9 +457,16 @@
  GAIN_SUPPORT_OF_THE_SRB: "Gain Support of the SRB"
  EXPLOIT_THE_SRB: "Exploit the SRB"
  
+ ENFORCE_DIRECTORS_WILL: "Enforce Director's Will" # add_scaled_absolutism
+ RETRIEVE_ESCAPED_SYNTHS: "Retrieve Escaped Synths" # add_scaled_yearly_gold
+ OPTIMISE_COURSER_TRAINING: "Optimise Courser Training" # discipline
+ 
  TT_OWN_SRB_PROVINCE: "At least one owned province belongs to the §YSynth Retention Bureau§! Estate."
  TT_SRB_SPAWN_INFANTRY: "Up to §Y10§! §YInfantry§! will be recruited dependent on the number of provinces under §YSynth Retention Bureau§! control and current §YSynth Retention Bureau§! influence."
  TT_SRB_SPAWN_CAVALRY: "Up to §Y10§! §YAssault Vehicles§! will be recruited dependent on the number of provinces under §YSynth Retention Bureau§! control and current §YSynth Retention Bureau§! influence."
+ 
+ optimised_courser_training: "Optimised Courser Training"
+ optimised_courser_training_desc: "We have optimised courser training to increase discipline."
  
  #-------------------------------------------------------------------
  # Robotics
@@ -420,6 +478,13 @@
  INVEST_IN_THE_ROBOTICS: "Invest in Robotics"
  GAIN_SUPPORT_OF_THE_ROBOTICS: "Gain Support of Robotics"
  EXPLOIT_THE_ROBOTICS: "Exploit Robotics"
+ 
+ MANUFACTURE_SYNTHS: "Manufacture Synths" # add_scaled_yearly_manpower
+ RESEARCH_BIOMECHANICALS: "Research Biomechanicals" # technology_cost
+ DEMONSTRATE_SYNTH_TECHNOLOGY: "Demonstrate Synth Technology" # add_scaled_prestige
+ 
+ biomechanical_research: "Biomechanical Research"
+ biomechanical_research_desc: "We have studied various biomechanical specimens from Bioscience."
  
  #-------------------------------------------------------------------
  # Event Modifiers

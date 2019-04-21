@@ -317,5 +317,134 @@ estate_advanced_systems = {
             }
         }
     }
+    
+    # Improve Synth Armor
+    interaction = {
+        name = "IMPROVE_SYNTH_ARMOR"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_advanced_systems
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = improved_synth_armor
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_advanced_systems
+                desc = EST_VAL_IMPROVED_SYNTH_ARMOR
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_advanced_systems
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Optimise Laser Weaponry
+    interaction = {
+        name = "OPTIMISE_LASER_WEAPONRY"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_advanced_systems
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = optimised_laser_weaponry
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_advanced_systems
+                desc = EST_VAL_OPTIMISED_LASER_WEAPONRY
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_advanced_systems
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Extend Teleportation Matrix
+    interaction = {
+        name = "EXTEND_TELEPORTATION_MATRIX"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_advanced_systems
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = extended_teleportation_matrix
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_advanced_systems
+                desc = EST_VAL_EXTENDED_TELEPORTATION_MATRIX
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_advanced_systems
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 
