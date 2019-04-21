@@ -50,7 +50,7 @@ country_event = {
 	option = { # More men to fight for our cause
 		name = enclave.1.option.c
 		add_yearly_manpower = 0.5 
-		create_general = 50 
+		create_general = { tradition = 50 }
 		the_capital_wasteland_region = {
 			discover_country = ENC
 		}
