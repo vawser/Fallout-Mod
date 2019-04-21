@@ -31,9 +31,16 @@ country_event = {
 			add_base_production = 1
 			add_base_manpower = 1 
 		}
+        
 		the_capital_wasteland_region = {
 			discover_country = ENC
-		}		
+		}
+        moshannon_area = {
+            discover_country = ENC
+        }
+        altoona_area = {
+            discover_country = ENC
+        }
 	}
 	
 	option = { # Allow them to resettle in the outskirts
@@ -45,15 +52,28 @@ country_event = {
 		the_capital_wasteland_region = {
 			discover_country = ENC
 		}
+        moshannon_area = {
+            discover_country = ENC
+        }
+        altoona_area = {
+            discover_country = ENC
+        }
 	}
 	
 	option = { # More men to fight for our cause
 		name = enclave.1.option.c
 		add_yearly_manpower = 0.5 
 		create_general = { tradition = 50 }
+        
 		the_capital_wasteland_region = {
 			discover_country = ENC
 		}
+        moshannon_area = {
+            discover_country = ENC
+        }
+        altoona_area = {
+            discover_country = ENC
+        }
 	}
 }
 
@@ -87,7 +107,9 @@ country_event = {
 			name = "enclave_prop_eyebots"
 			duration = -1
 		}		
-		# Add either a center of reformation OR a direct province conversions
+        
+        hidden_effect = { set_country_flag = allow_propagate_religion }
+        
 		ai_chance = {
 			factor = 10
 		}  

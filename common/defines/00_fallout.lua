@@ -9,6 +9,8 @@ NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "west_coast_superregion"
 NDefines.NEngine.EVENT_PROCESS_OFFSET = 20
 NDefines.NCountry.STARTING_ARMY_SIZE = 0.25
 
+NDefines.NReligion.MAX_CHRISTIAN_RELIGIOUS_CENTERS = 10
+
 --------------------------------
 -- Disabled Stuff
 --------------------------------
