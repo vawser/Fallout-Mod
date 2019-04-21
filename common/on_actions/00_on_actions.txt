@@ -826,6 +826,16 @@ on_conquistador_native = {
 
 on_buy_religious_reform = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_buy_religious_reform" }
+    
+    add_authority = -100 
+    add_stability = -2
+    
+    capital_scope = {
+        spawn_rebels = {
+            type = pretender_rebels
+            size = 1
+        }
+    }
 }
 
 on_circumnavigation = {

@@ -221,5 +221,21 @@ pretender_rebels = {
 			rebel = yes
 		}
 		add_prestige = -25
+        
+        if = {
+            limit = {
+                OR = {
+                    religion = tribalism
+                    religion = ghoul_tribalism
+                    religion = mutant_tribalism
+                    religion = swamp_tribalism
+                    religion = zion_tribal
+                    religion = animism
+                    religion = fetishism
+                    religion = totemism
+                }
+            }
+            remove_religious_reforms = 1
+        }
 	}
 }

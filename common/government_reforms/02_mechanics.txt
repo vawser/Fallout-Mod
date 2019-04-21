@@ -423,6 +423,13 @@ tribe_mechanic = {
     
     conditional = {
         allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
             has_dlc = "Cradle of Civilization"
         }
         government_abilities = {
@@ -441,13 +448,20 @@ commune_mechanic = {
     
 	valid_for_nation_designer = no
     
-    native_mechanic = no
+    native_mechanic = yes
 	allow_migration = yes
     
     republican_name = yes
 	royal_marriage = no
     
     min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
     
     conditional = {
         allow = {
@@ -469,10 +483,17 @@ raider_mechanic = {
     
 	valid_for_nation_designer = no
     
-    native_mechanic = no
+    native_mechanic = yes
 	allow_migration = yes
     
     min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
     
     conditional = {
         allow = {
@@ -494,10 +515,17 @@ super_mutant_mechanic = {
     
 	valid_for_nation_designer = no
     
-    native_mechanic = no
+    native_mechanic = yes
 	allow_migration = yes
     
     min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
     
     conditional = {
         allow = {
@@ -519,12 +547,19 @@ swarm_mechanic = {
     
 	valid_for_nation_designer = no
     
-    native_mechanic = no
+    native_mechanic = yes
 	allow_migration = yes
     
     royal_marriage = no
     
     min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
     
     conditional = {
         allow = {
@@ -549,10 +584,14 @@ wolf_pack_mechanic = {
     
 	valid_for_nation_designer = no
     
-    native_mechanic = no
-	allow_migration = yes
-    
     min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
     
     conditional = {
         allow = {
@@ -574,10 +613,17 @@ great_khan_mechanic = {
     
 	valid_for_nation_designer = no
     
-    native_mechanic = no
+    native_mechanic = yes
 	allow_migration = yes
     
     min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
     
     conditional = {
         allow = {
