@@ -1,0 +1,219 @@
+namespace = enclave
+
+# Enclave Remnants From The East
+country_event = {
+	id = enclave.1
+	title = enclave.1.title
+	desc = enclave.1.desc
+    picture = BOS_WORKSHOP_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENC
+		owns = 1259
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - enclave.1" }
+        }
+    }
+    
+	option = { # Settle them in Chicago 
+		name = enclave.1.option.a
+		1259 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1 
+		}
+		the_capital_wasteland_region = {
+			discover_country = ENC
+		}		
+	}
+	
+	option = { # Allow them to resettle in the outskirts
+		name = enclave.1.option.b
+		add_country_modifier = {
+			name = "enclave_eastern_settlers"
+			duration = 1000
+		}
+		the_capital_wasteland_region = {
+			discover_country = ENC
+		}
+	}
+	
+	option = { # More men to fight for our cause
+		name = enclave.1.option.c
+		add_yearly_manpower = 0.5 
+		create_general = 50 
+		the_capital_wasteland_region = {
+			discover_country = ENC
+		}
+	}
+}
+
+# A New Series Of Eyebots
+country_event = {
+	id = enclave.2
+	title = enclave.2.title
+	desc = enclave.2.desc
+    picture = FEMALE_SHOPKEEPER_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENC
+		religion = american_restorationists 
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - enclave.2" }
+        }
+    }
+    
+	option = { # Have them spread our prewar rhetoric 
+		name = enclave.2.option.a
+		add_country_modifier = {
+			name = "enclave_prop_eyebots"
+			duration = -1
+		}		
+		# Add either a center of reformation OR a direct province conversions
+	}
+	
+	option = { # They can provide reconnaissance 
+		name = enclave.2.option.b
+		add_country_modifier = {
+			name = "enclave_reconnaissance_eyebots"
+			duration = -1
+		}		
+		add_manpower = 3
+	}
+	
+	option = { # Send them to loyal settlements 
+		name = enclave.2.option.c
+		every_country = {
+			limit = {
+				religion = american_restorationists
+				NOT = {
+					tag = ENC
+				}
+			}
+			country_event = { id = enclave.4 days = 5 }
+		}
+	}
+}
+
+# The Chicago Ruins 
+country_event = {
+	id = enclave.3
+	title = enclave.3.title
+	desc = enclave.3.desc
+    picture = WALL_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENC
+		owns = 1259
+	}
+	
+	mean_time_to_happen = {
+		months = 7
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - enclave.3" }
+        }
+    }
+    
+	option = { # Restore The cityscape
+		name = enclave.3.option.a
+		1259 = {
+			add_province_modifier = {
+				name = enclave_chicago_works
+				duration = -1
+			}
+		}
+		add_years_of_income = -0.35		
+	}
+	
+	option = { # Plunder the ruins 
+		name = enclave.3.option.b
+		1259 = {
+			add_devastation = 15 
+		}
+		add_years_of_income = 0.35	
+		add_mil_power = 100 	
+	}
+}
+
+# Memories Of America's Past 
+country_event = {
+	id = enclave.4
+	title = enclave.4.title
+	desc = enclave.4.desc
+    picture = USA_FLAG_eventPicture
+
+	is_triggered_only = yes
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - enclave.4" }
+        }
+    }
+    
+	option = { # Ominous... 
+		name = enclave.4.option.a
+		add_dip_power = 25
+		add_stability = 1	
+	}
+}
+
+# Chicago Restored
+country_event = {
+	id = enclave.5
+	title = enclave.5.title
+	desc = enclave.5.desc
+    picture = SCIENCE_TOWER_CLEAR_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENC
+		owns = 1259
+		1259 = {
+			has_province_modifier = enclave_chicago_works
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 66
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - enclave.5" }
+        }
+    }
+    
+	option = { # Restore The cityscape
+		name = enclave.5.option.a
+		1259 = {
+			remove_province_modifier = enclave_chicago_works
+			add_base_tax = 6
+			add_base_production = 6
+			add_base_manpower = 4
+		}	
+	}
+}
