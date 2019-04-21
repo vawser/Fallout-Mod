@@ -351,5 +351,185 @@ estate_khans = {
             }
 		}
 	}
+    
+    # Gather Khans
+    interaction = {
+        name = "GATHER_KHANS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_khans
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_yearly_manpower = { 
+                ESTATE = estate_khans 
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_khans
+                desc = EST_VAL_GATHERED_KHANS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_khans
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Sell Illegal Chems
+    interaction = {
+        name = "SELL_ILLEGAL_CHEMS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_khans
+                influence = 40
+            }            
+        }
+        
+        effect = {
+            add_scaled_yearly_gold = { 
+                ESTATE = estate_khans
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_khans
+                desc = EST_VAL_CHEM_DEALERS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_khans
+                    influence = 60
+                }
+            } 
+        }
+    }
+    
+    # Practice Shooting
+    interaction = {
+        name = "PRACTICE_SHOOTING"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_khans
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = shooting_practice
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_khans
+                desc = EST_VAL_SHOOTING_PRACTICE
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_khans
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Promote Lieutenant
+    interaction = {
+        name = "PROMOTE_LIEUTENANT"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_khans
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_general = { 
+                ESTATE = estate_khans
+                LOW = 25
+                MED = 50
+                HIGH = 75
+                MAX = 100
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_khans
+                desc = EST_VAL_RECRUITED_LEADER
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_khans
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 

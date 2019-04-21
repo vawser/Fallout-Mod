@@ -328,5 +328,188 @@ estate_think_tank = {
             }
         }
     }
+    
+    # Manufacture Robots
+    interaction = {
+        name = "MANUFACTURE_ROBOTS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_think_tank
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_scaled_yearly_manpower = { 
+                ESTATE = estate_think_tank 
+                LOW = 0.25
+                MED = 0.5
+                HIGH = 0.75
+                MAX = 1.0
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_think_tank
+                desc = EST_VAL_MANUFACTURED_ROBOTS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_think_tank
+                    influence = 60
+                }
+            }
+        }
+    }
+    
+    # Activate Lobotomite Patrols
+    interaction = {
+        name = "ACTIVATE_LOBOTOMITE_PATROLS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_think_tank
+                influence = 40
+            }            
+        }
+        
+        effect = {
+            add_scaled_absolutism = { 
+                ESTATE = estate_think_tank
+                LOW = 2
+                MED = 4
+                HIGH = 6
+                MAX = 8
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_think_tank
+                desc = EST_VAL_LOBOTOMITE_PATROLS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_think_tank
+                        loyalty = 60
+                    }
+                }
+            } 
+        }
+    }
+    
+    # Run Battle Simulations
+    interaction = {
+        name = "RUN_BATTLE_SIMULATIONS"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_think_tank
+                influence = 40
+            }            
+        }
+        
+        effect = {
+            add_scaled_army_tradition = { 
+                ESTATE = estate_think_tank
+                LOW = 10
+                MED = 20
+                HIGH = 30
+                MAX = 40
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_think_tank
+                desc = EST_VAL_BATTLE_SIMULATIONS
+                influence = 15
+                duration = 7300
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    estate_loyalty = {
+                        estate = estate_think_tank
+                        loyalty = 60
+                    }
+                }
+            } 
+        }
+    }
+    
+    # Implemented Brain Interfaces
+    interaction = {
+        name = "IMPLEMENT_BRAIN_INTERFACES"
+        icon = 1
+        
+        years_between_use = 20
+        
+        trigger = {
+            estate_influence = {
+                estate = estate_think_tank
+                influence = 40
+            }
+        }
+        
+        effect = {
+            add_country_modifier = {
+                name = brain_interfaces
+                duration = 3650
+            }
+            
+            add_estate_influence_modifier = {
+                estate = estate_think_tank
+                desc = EST_VAL_BRAIN_INTERFACES
+                influence = 20
+                duration = 7300
+            }
+        }
+        
+        
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                estate_influence = {
+                    estate = estate_think_tank
+                    influence = 60
+                }
+            }
+        }
+    }
 }
 
