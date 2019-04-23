@@ -11,12 +11,7 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Rights of Man"
-        OR = {
-		religion = fetishism
-		religion = animism
-		religion = totemism
-		religion = swamp_tribalism
-	}
+        uses_cults = yes
         # Hasn't unlocked any cults
         NOT = {
             has_unlocked_cult = tribal_ancestor_worship

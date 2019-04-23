@@ -224,16 +224,7 @@ pretender_rebels = {
         
         if = {
             limit = {
-                OR = {
-                    religion = tribalism
-                    religion = ghoul_tribalism
-                    religion = mutant_tribalism
-                    religion = swamp_tribalism
-                    religion = zion_tribal
-                    religion = animism
-                    religion = fetishism
-                    religion = totemism
-                }
+                religion_group = religion_group_pagan
             }
             remove_religious_reforms = 1
         }
