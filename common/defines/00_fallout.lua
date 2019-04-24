@@ -222,7 +222,6 @@ NDefines.NMilitary.MIN_MONTHLY_MANPOWER = 0.05 -- Represents difficulty in suppl
 NDefines.NMilitary.MONTHLY_REINFORCE = 0.05 -- Represents difficulty in supply across wasteland
 NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_BASE = 10
 NDefines.NMilitary.MERCENARY_SUPPORT_LIMIT_FRACTION = 0.05 -- Reduce forcelimit influence on merc limit
-NDefines.NMilitary.WAR_LENGTH_DAMAGE_MODIFIER = 0.02
 
 NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 60 -- Battles more important than capture in the wasteland
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 100

@@ -10,6 +10,7 @@ establish_cult = {
 	require_acceptance = no
 	
 	is_visible = {
+        has_idea = fallout_propaganda_ideas_7
 		FROM = {
             NOT = { religion = ROOT }
             any_owned_province = {
@@ -84,6 +85,7 @@ spread_propaganda_action = {
 	require_acceptance = no
 	
 	is_visible = {
+        has_idea = fallout_propaganda_ideas_1
 		FROM = {
             NOT = { primary_culture = ROOT }
             any_owned_province = {
@@ -162,6 +164,7 @@ assassinate_leader = {
 	require_acceptance = no
 	
 	is_visible = {
+        has_idea = fallout_espionage_ideas_5
 		is_neighbor_of = FROM
         FROM = { has_regency = no }
         NOT = { has_country_flag = sent_assassin }
