@@ -13,6 +13,25 @@ weaponry = {
     }
 	chance = {
 		factor = 8.75
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 1.5
+			area = divide_area 
+		}
 	}
 }
 
@@ -27,6 +46,21 @@ munitions = {
     }
 	chance = {
 		factor = 8.75
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
 	}
 }
 
@@ -41,10 +75,20 @@ food = {
     }
 	chance = {
 		factor = 8.5
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 0.5
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
 		}
 	}
 }
@@ -60,6 +104,18 @@ drugs = {
     }
 	chance = {
 		factor = 9
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 1.5
+			region = mexico_region  			
+		}
 	}
 }
 
@@ -74,10 +130,40 @@ prewar_technology = {
     }
 	chance = {
 		factor = 4
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 2
+			area = divide_area 
+		}
+		modifier = {
+			factor = 10
+			area = big_mt_area 
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
+		}
+        modifier = {
+            factor = 2.5
+ 			area = cambridge_area  	           
 		}
 	}
 }
@@ -87,6 +173,18 @@ rare_metals = {
 	color = { 0.98 0.422 0.377 }
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 2
+			region = nevada_region 
+		}
 	}
 }
 
@@ -101,6 +199,14 @@ slaves = {
     }
 	chance = {
 		factor = 8
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
 	}
 }
 
@@ -115,10 +221,35 @@ steel = {
     }
 	chance = {
 		factor = 7
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.5
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
 		}
 	}
 }
@@ -134,10 +265,24 @@ oil = {
     }
 	chance = {
 		factor = 6
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			region = mexico_region  			
 		}
 	}
 }
@@ -153,10 +298,32 @@ medical_supplies = {
     }
 	chance = {
 		factor = 7
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
+		}
+        modifier = {
+            factor = 1
+ 			area = cambridge_area  	           
 		}
 	}
 }
@@ -172,6 +339,18 @@ clean_water = {
     }
 	chance = {
 		factor = 8
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 1.5
+			region = the_capital_wasteland_region 			
+		}
 	}
 }
 
@@ -186,6 +365,14 @@ irradiated_water = {
     }
 	chance = {
 		factor = 9.75
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
 	}
 }
 
@@ -200,10 +387,24 @@ prewar_books = {
     }
 	chance = {
 		factor = 8
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+        modifier = {
+            factor = 2.5
+ 			area = cambridge_area  	           
 		}
 	}
 }
@@ -219,6 +420,14 @@ strange_meat = {
     }
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
 	}
 }
 
@@ -233,10 +442,27 @@ tools = {
     }
 	chance = {
 		factor = 6
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
 		}
 	}
 }
@@ -248,6 +474,14 @@ radioactive_waste = {
     }
 	chance = {
 		factor = 9.9
+		modifier = {
+			factor = 6
+			province_id = 1272
+		}
+		modifier = {
+			factor = 2
+			area = divide_area 
+		}
 	}
 }
 
@@ -279,6 +513,14 @@ meat = {
     }
 	chance = {
 		factor = 8.5
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
 	}
 }
 
@@ -292,6 +534,14 @@ brew = {
     }
 	chance = {
 		factor = 8.5
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1417
+				province_id = 1285
+			}
+		}
 	}
 }
 
@@ -305,10 +555,20 @@ fungus = {
     }
 	chance = {
 		factor = 3
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 0.1
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
 		}
 	}
 }
@@ -323,10 +583,20 @@ fish = {
 	}
 	chance = {
 		factor = 20
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 0.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
 		}
         
 		modifier = {
@@ -346,11 +616,15 @@ punga = {
     }
 	chance = {
 		factor = 100
-        
 		modifier = {
 			factor = 0
-			NOT = { province_id = 123 }
-		}
+			NOT = { 
+				OR = {
+					province_id = 1231
+					province_id = 1285
+				}
+			}
+		}        
 	}
 }
 
@@ -364,10 +638,31 @@ cola = {
     }
 	chance = {
 		factor = 8.75
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+			}
+		}        
 		modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = pf_factory			
+		}
+		modifier = {
+			factor = 3.5
+			area = nuka_world_area 			
+		}
+		modifier = {
+			factor = 10
+			province_id = 1417 			
 		}
 	}
 }
@@ -400,10 +695,28 @@ prewar_food = {
     }
 	chance = {
 		factor = 6
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = pf_factory			
+		}
+		modifier = {
+			factor = 10
+			province_id = 17		
 		}
 	}
 }
@@ -418,10 +731,28 @@ power_armour = {
     }
 	chance = {
 		factor = 4
-        
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
         modifier = {
             factor = 1.2
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
 		}
 	}
 }
@@ -435,24 +766,29 @@ gecko_pelt = {
         local_unrest = -1
     }
 	chance = {
-		factor = 0
+		factor = 10
         
         modifier = {
             factor = 0.1
-            has_terrain = fm_ruins
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
 		}
         
         modifier = {
-            factor = 10
-            OR = {
-                region = california_region 
-                region = arizona_region
-                region = nevada_region
-                region = utah_region
-                region = oregon_region
-                region = baja_california_region
-                region = mexico_region
-            }
+            factor = 0
+			NOT = {
+				OR = {
+					region = california_region 
+					region = arizona_region
+					region = nevada_region
+					region = utah_region
+					region = oregon_region
+					region = baja_california_region
+					region = mexico_region
+				}
+			}
         }
     }
 }
