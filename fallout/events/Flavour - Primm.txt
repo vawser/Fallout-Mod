@@ -1,0 +1,92 @@
+namespace = primm
+
+# A New Sheriff
+country_event = {
+	id = primm.1
+	title = primm.1.title
+	desc = primm.1.desc
+    picture = LUCKY_BISON_CASINO_eventPicture
+	
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - primm.1" }
+        }
+    }
+    
+	option = {
+		name = primm.1.option.a
+	
+		add_country_modifier = {
+			name = joe_eagle
+			duration = 18250
+		}
+		
+		clr_country_flag = new_sheriff
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = primm.1.option.b
+	
+		add_country_modifier = {
+			name = sammy_tuck
+			duration = 18250
+		}
+		
+		clr_country_flag = new_sheriff
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = primm.1.option.c
+	
+		add_country_modifier = {
+			name = lil_bot
+			duration = 18250
+		}
+		
+		clr_country_flag = new_sheriff
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = primm.1.option.d
+	
+		add_country_modifier = {
+			name = randy
+			duration = 18250
+		}
+		
+		clr_country_flag = new_sheriff
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = primm.1.option.e
+	
+		add_country_modifier = {
+			name = old_james
+			duration = 18250
+		}
+		
+		clr_country_flag = new_sheriff
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+}

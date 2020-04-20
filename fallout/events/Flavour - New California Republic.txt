@@ -1,0 +1,238 @@
+namespace = ncr
+
+# "Future of the NCR"
+country_event = {
+	id = ncr.1
+	title = ncr.1.title
+	desc = ncr.1.desc
+    picture = NCR_STATUE_eventPicture
+	
+	trigger = {
+		has_reform = ncr_reform
+        NOT = { has_global_flag = ncr_focus }
+	}
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+    
+    immediate = {
+        set_global_flag = ncr_focus
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - ncr.1" }
+        }
+    }
+    
+	option = {
+		name = ncr.1.option.a
+		
+		add_country_modifier = {
+			name = mojave_focus
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = ncr.1.option.b
+	
+		add_country_modifier = {
+			name = west_coast_focus
+			duration = 9125
+		}
+	}
+}
+
+# "The Ranger Unification Treaty" 
+country_event = {
+	id = ncr.2
+	title = ncr.2.title
+	desc = ncr.2.desc
+    picture = NCR_STATUE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		has_reform = ncr_reform
+		owns_core_province = 266
+        266 = { NOT = { has_province_modifier = building_ranger_unification_statue } }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - ncr.2" }
+        }
+    }
+    
+	option = {
+		name = ncr.2.option.a
+        
+        add_years_of_income = -2
+        
+		266 = {
+            add_permanent_province_modifier = {
+                name = building_ranger_unification_statue
+                duration = -1
+            }
+        }
+	}
+	
+	option = {
+		name = ncr.2.option.b
+
+        add_prestige = -10
+	}
+}
+
+# "Collapse of the Ranger Unification Treaty"
+country_event = {
+	id = ncr.3
+	title = ncr.3.title
+	desc = ncr.3.desc
+    picture = NCR_STATUE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		266 = {
+            has_province_modifier = building_ranger_unification_statue
+            OR = {
+                NOT = { owned_by = NCR }
+                NOT = { owned_by = SHA }
+            }
+        }
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - ncr.3" }
+        }
+    }
+    
+	option = {
+		name = ncr.3.option.a
+        
+		266 = { remove_province_modifier = building_ranger_unification_statue }
+	}
+}
+
+# "Second NCR-Brotherhood War - Ecconomic Sabotage"
+country_event = {
+	id = ncr.4
+	title = ncr.4.title
+	desc = ncr.4.desc
+    picture = WASTELAND_HILLS_eventPicture
+	
+	fire_only_once = yes
+
+    is_triggered_only = yes
+    
+	major = yes
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - ncr.4" }
+        }
+    }
+    
+	option = {
+		name = ncr.4.option.a
+		trigger = { 	
+            has_reform = ncr_reform
+		    has_parliament = yes
+		}
+		add_inflation = 5
+		add_years_of_income = -0.25
+		add_country_modifier = {
+            name = bos_ncr_currency_crisis
+            duration = 2250
+        }
+		if = {
+		    limit = {
+			    owns = 1403 
+			}
+			set_country_flag = bos_war_sab_great_wan
+			1403 = {
+			    add_base_production = -5
+				change_trade_goods = radioactive_waste 
+			}
+		}
+	}
+	
+	option = {
+		name = ncr.4.option.a
+		trigger = { 		
+		    has_reform = ncr_reform
+            has_parliament = no
+		}
+		add_country_modifier = {
+            name = bos_ncr_currency_crisis
+            duration = 2250
+        }
+		add_inflation = 5
+		add_years_of_income = -0.25
+		if = {
+		    limit = {
+			    owns = 1403
+			}
+			set_country_flag = bos_war_sab_great_wan
+			1403 = {
+			    add_base_production = -5
+				change_trade_goods = radioactive_waste 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ncr.5
+	title = ncr.5.title
+	desc = ncr.5.desc
+    picture = NCR_STATUE_eventPicture
+
+    is_triggered_only = yes
+    
+    trigger = {
+        owns_core_province = 1403
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - ncr.5" }
+        }
+    }
+    
+	option = {
+		name = ncr.5.option.a
+		1403 = {
+			add_base_production = 5
+			change_trade_goods = rare_metals
+		}
+	}
+}
+
+# Individual Prosperity
+# Many mourn the loss of collective survival thanks to the growth of the NCR's economic base.
+
+# Unemployment Wanes
+
+# High Unemployment
+
+# Fortune on the Frontier
+
+# Demands of the Brahmin Barons
+
+# Brahmin Barons restrict supply
+
+# Governor from the Hub
+
+# Senator from Shady
+
+# Senator from Los Angeles
+
+# Senator from Maxson
+
+# Senator from Dayglow

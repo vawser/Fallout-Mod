@@ -1,0 +1,1624 @@
+country_decisions = {
+    form_washington = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+            NOT = { is_unique_nation = yes }
+			NOT = { exists = X10 }
+			capital_scope = {
+                region = washington_region
+            }
+		}
+		allow =  {
+            washington_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X10
+			#swap_free_idea_group = yes
+		}
+	}
+    form_oregon = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+            
+			NOT = { exists = X11 }
+			capital_scope = {
+                region = oregon_region
+            }
+		}
+		allow =  {
+            oregon_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X11
+			#swap_free_idea_group = yes
+		}
+	}
+    form_california = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X12 }
+			capital_scope = {
+                region = california_region
+            }
+		}
+		allow =  {
+            california_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X12
+			#swap_free_idea_group = yes
+		}
+	}
+    form_nevada = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X13 }
+			capital_scope = {
+                region = nevada_region
+            }
+		}
+		allow =  {
+            nevada_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X13
+			#swap_free_idea_group = yes
+		}
+	}
+    form_utah = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X14 }
+			capital_scope = {
+                region = utah_region
+            }
+		}
+		allow =  {
+            utah_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X14
+			#swap_free_idea_group = yes
+		}
+	}
+    form_idaho = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X15 }
+			capital_scope = {
+                region = idaho_region
+            }
+		}
+		allow =  {
+            idaho_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X15
+			#swap_free_idea_group = yes
+		}
+	}
+    form_montana = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X16 }
+			capital_scope = {
+                region = montana_region
+            }
+		}
+		allow =  {
+            montana_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X16
+			#swap_free_idea_group = yes
+		}
+	}
+    form_wyoming = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X17 }
+			capital_scope = {
+                region = wyoming_region
+            }
+		}
+		allow =  {
+            wyoming_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X17
+			#swap_free_idea_group = yes
+		}
+	}
+    form_baja_california = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X18 }
+			capital_scope = {
+                region = baja_california_region
+            }
+		}
+		allow =  {
+            baja_california_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X18
+			#swap_free_idea_group = yes
+		}
+	}
+    form_arizona = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X19 }
+            NOT = { exists = CAE }
+			capital_scope = {
+                region = arizona_region
+            }
+		}
+		allow =  {
+            arizona_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X19
+			#swap_free_idea_group = yes
+		}
+	}
+    form_new_mexico = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X20 }
+			capital_scope = {
+                region = new_mexico_region
+            }
+		}
+		allow =  {
+            new_mexico_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X20
+			#swap_free_idea_group = yes
+		}
+	}
+    form_colorado = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X21 }
+			capital_scope = {
+                region = colorado_region
+            }
+		}
+		allow =  {
+            colorado_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X21
+			#swap_free_idea_group = yes
+		}
+	}
+    form_north_dakota = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X22 }
+			capital_scope = {
+                region = north_dakota_region
+            }
+		}
+		allow =  {
+            north_dakota_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X22
+			#swap_free_idea_group = yes
+		}
+	}
+    form_south_dakota = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X23 }
+			capital_scope = {
+                region = south_dakota_region
+            }
+		}
+		allow =  {
+            south_dakota_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X23
+			#swap_free_idea_group = yes
+		}
+	}
+    form_nebraska = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X24 }
+			capital_scope = {
+                region = nebraska_region
+            }
+		}
+		allow =  {
+            nebraska_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X24
+			#swap_free_idea_group = yes
+		}
+	}
+    form_kansas = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X25 }
+			capital_scope = {
+                region = kansas_region
+            }
+		}
+		allow =  {
+            kansas_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X25
+			#swap_free_idea_group = yes
+		}
+	}
+    form_missouri = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X26 }
+			capital_scope = {
+                region = missouri_region
+            }
+		}
+		allow =  {
+            missouri_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X26
+			#swap_free_idea_group = yes
+		}
+	}
+    form_iowa = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X27 }
+			capital_scope = {
+                region = iowa_region
+            }
+		}
+		allow =  {
+            iowa_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X27
+			#swap_free_idea_group = yes
+		}
+	}
+    form_kentucky = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X28 }
+			capital_scope = {
+                region = kentucky_region
+            }
+		}
+		allow =  {
+            kentucky_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X28
+			#swap_free_idea_group = yes
+		}
+	}
+    form_west_virginia = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X29 }
+			capital_scope = {
+                region = west_virginia_region
+            }
+		}
+		allow =  {
+            west_virginia_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X29
+			#swap_free_idea_group = yes
+		}
+	}
+    form_ohio = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X30 }
+			capital_scope = {
+                region = ohio_region
+            }
+		}
+		allow =  {
+            ohio_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X30
+			#swap_free_idea_group = yes
+		}
+	}
+    form_indiana = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X31 }
+			capital_scope = {
+                region = indiana_region
+            }
+		}
+		allow =  {
+            indiana_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X31
+			#swap_free_idea_group = yes
+		}
+	}
+    form_michigan = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X32 }
+			capital_scope = {
+                region = michigan_region
+            }
+		}
+		allow =  {
+            michigan_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X32
+			#swap_free_idea_group = yes
+		}
+	}
+    form_minnesota = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X33 }
+			capital_scope = {
+                region = minnesota_region
+            }
+		}
+		allow =  {
+            minnesota_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X33
+			#swap_free_idea_group = yes
+		}
+	}
+    form_wisconsin = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X34 }
+			capital_scope = {
+                region = wisconsin_region
+            }
+		}
+		allow =  {
+            wisconsin_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X34
+			#swap_free_idea_group = yes
+		}
+	}
+    form_illinois = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X35 }
+			capital_scope = {
+                region = illinois_region
+            }
+		}
+		allow =  {
+            illinois_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X35
+			#swap_free_idea_group = yes
+		}
+	}
+    form_oklahoma = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X36 }
+			capital_scope = {
+                region = oklahoma_region
+            }
+		}
+		allow =  {
+            oklahoma_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X36
+			#swap_free_idea_group = yes
+		}
+	}
+    form_arkansas = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X37 }
+			capital_scope = {
+                region = arkansas_region
+            }
+		}
+		allow =  {
+            arkansas_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X37
+			#swap_free_idea_group = yes
+		}
+	}
+    form_texas = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X38 }
+			capital_scope = {
+                region = texas_region
+            }
+		}
+		allow =  {
+            texas_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X38
+			#swap_free_idea_group = yes
+		}
+	}
+    form_louisiana = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X39 }
+			capital_scope = {
+                region = louisiana_region
+            }
+		}
+		allow =  {
+            louisiana_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X39
+			#swap_free_idea_group = yes
+		}
+	}
+    form_mississippi = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X40 }
+			capital_scope = {
+                region = mississippi_fm_region
+            }
+		}
+		allow =  {
+            mississippi_fm_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X40
+			#swap_free_idea_group = yes
+		}
+	}
+    form_alabama = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X41 }
+			capital_scope = {
+                region = alabama_region
+            }
+		}
+		allow =  {
+            alabama_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X41
+			#swap_free_idea_group = yes
+		}
+	}
+    form_tennessee = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X42 }
+			capital_scope = {
+                region = tennessee_region
+            }
+		}
+		allow =  {
+            tennessee_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X42
+			#swap_free_idea_group = yes
+		}
+	}
+    form_florida = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X43 }
+			capital_scope = {
+                region = florida_region
+            }
+		}
+		allow =  {
+            florida_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X43
+			#swap_free_idea_group = yes
+		}
+	}
+    form_georgia = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X44 }
+			capital_scope = {
+                region = georgia_region
+            }
+		}
+		allow =  {
+            georgia_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X44
+			#swap_free_idea_group = yes
+		}
+	}
+    form_south_carolina = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X45 }
+			capital_scope = {
+                region = south_carolina_region
+            }
+		}
+		allow =  {
+            south_carolina_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X45
+			#swap_free_idea_group = yes
+		}
+	}
+    form_north_carolina = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X46 }
+			capital_scope = {
+                region = north_carolina_region
+            }
+		}
+		allow =  {
+            north_carolina_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X46
+			#swap_free_idea_group = yes
+		}
+	}
+    form_virginia = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X47 }
+			capital_scope = {
+                region = virginia_region
+            }
+		}
+		allow =  {
+            virginia_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X47
+			#swap_free_idea_group = yes
+		}
+	}
+    form_new_york = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X48 }
+			capital_scope = {
+                region = new_york_region
+            }
+		}
+		allow =  {
+            new_york_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X48
+			#swap_free_idea_group = yes
+		}
+	}
+    form_new_jersey = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X49 }
+			capital_scope = {
+                region = new_jersey_region
+            }
+		}
+		allow =  {
+            new_jersey_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X49
+			#swap_free_idea_group = yes
+		}
+	}
+    form_pennsylvania = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X50 }
+			capital_scope = {
+                region = pennsylvania_region
+            }
+		}
+		allow =  {
+            pennsylvania_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X50
+			#swap_free_idea_group = yes
+		}
+	}
+    form_the_capital_wasteland = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X51 }
+			capital_scope = {
+                region = the_capital_wasteland_region
+            }
+		}
+		allow =  {
+            the_capital_wasteland_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X51
+			#swap_free_idea_group = yes
+		}
+        
+        ai_will_do = {
+            factor = 0
+        }
+	}
+    form_the_commonwealth = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X52 }
+			capital_scope = {
+                region = the_commonwealth_region
+            }
+		}
+		allow =  {
+            the_commonwealth_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X52
+			#swap_free_idea_group = yes
+		}
+        
+        ai_will_do = {
+            factor = 0
+        }
+	}
+    form_british_columbia = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X53 }
+			capital_scope = {
+                region = british_columbia_region
+            }
+		}
+		allow =  {
+            british_columbia_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X53
+			#swap_free_idea_group = yes
+		}
+	}
+    form_alberta = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X54 }
+			capital_scope = {
+                region = alberta_region
+            }
+		}
+		allow =  {
+            alberta_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X54
+			#swap_free_idea_group = yes
+		}
+	}
+    form_saskatchewan = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X55 }
+			capital_scope = {
+                region = saskatchewan_region
+            }
+		}
+		allow =  {
+            saskatchewan_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X55
+			#swap_free_idea_group = yes
+		}
+	}
+    form_manitoba = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X56 }
+			capital_scope = {
+                region = manitoba_region
+            }
+		}
+		allow =  {
+            manitoba_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X56
+			#swap_free_idea_group = yes
+		}
+	}
+    form_ontario = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X57 }
+			capital_scope = {
+                region = ontario_region
+            }
+		}
+		allow =  {
+            ontario_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X57
+			#swap_free_idea_group = yes
+		}
+	}
+    form_quebec = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X58 }
+			capital_scope = {
+                region = quebec_region
+            }
+		}
+		allow =  {
+            quebec_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X58
+			#swap_free_idea_group = yes
+		}
+	}
+    form_newfoundland_and_labrador = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X59 }
+			capital_scope = {
+                region = newfoundland_and_labrador_region
+            }
+		}
+		allow =  {
+            newfoundland_and_labrador_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X59
+			#swap_free_idea_group = yes
+		}
+	}
+    form_new_brunswick = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X60 }
+			capital_scope = {
+                region = new_brunswick_region
+            }
+		}
+		allow =  {
+            new_brunswick_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X60
+			#swap_free_idea_group = yes
+		}
+	}
+    form_nova_scotia = {
+		major = yes
+
+		potential = {
+            NOT = { is_unswitchable_nation = yes }
+			NOT = { is_unique_nation = yes }
+			NOT = { exists = X61 }
+			capital_scope = {
+                region = nova_scotia_region
+            }
+		}
+		allow =  {
+            nova_scotia_region = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+            }
+            years_of_income = 1
+		}
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X61
+			#swap_free_idea_group = yes
+		}
+	}
+}

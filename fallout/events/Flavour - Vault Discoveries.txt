@@ -1,0 +1,498 @@
+namespace = wasteland_discoveries
+
+# "Medics"
+province_event = {
+	id =  wasteland_discoveries.1
+	title = "wasteland_discoveries.1.title"
+	desc = "wasteland_discoveries.1.desc"
+	picture = BOOMER_ANDERSON_SHELTER_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.1" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.1.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_medics
+            duration = -1
+		}
+	}
+}
+
+# "Farmers"
+province_event = {
+	id =  wasteland_discoveries.2
+	title = "wasteland_discoveries.2.title"
+	desc = "wasteland_discoveries.2.desc"
+	picture = FARMSTEAD_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.2" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.2.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_farmers
+            duration = -1
+		}
+	}
+}
+
+# "Mechanics"
+province_event = {
+	id =  wasteland_discoveries.3
+	title = "wasteland_discoveries.3.title"
+	desc = "wasteland_discoveries.3.desc"
+	picture = CRASHED_SATELLITE_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.3" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.3.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_mechanics
+            duration = -1
+		}
+	}
+}
+
+# "Demolitionists"
+province_event = {
+	id =  wasteland_discoveries.4
+	title = "wasteland_discoveries.4.title"
+	desc = "wasteland_discoveries.4.desc"
+	picture = COLLAPSED_HIGHWAY_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.4" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.4.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_demolitionists
+            duration = -1
+		}
+	}
+}
+
+# "Utility Robots"
+province_event = {
+	id =  wasteland_discoveries.5
+	title = "wasteland_discoveries.5.title"
+	desc = "wasteland_discoveries.5.desc"
+	picture = VICTOR_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.5" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.5.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_utility_robots
+            duration = -1
+		}
+	}
+}
+
+# "Survivalists"
+province_event = {
+	id =  wasteland_discoveries.6
+	title = "wasteland_discoveries.6.title"
+	desc = "wasteland_discoveries.6.desc"
+	picture = ZION_THREE_MARYS_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.6" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.6.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_survivalists
+            duration = -1
+		}
+	}
+}
+
+# "Builders"
+province_event = {
+	id =  wasteland_discoveries.7
+	title = "wasteland_discoveries.7.title"
+	desc = "wasteland_discoveries.7.desc"
+	picture = GOODSPRINGS_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.7" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.7.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_builders
+            duration = -1
+		}
+	}
+}
+
+# "Scavengers"
+province_event = {
+	id =  wasteland_discoveries.8
+	title = "wasteland_discoveries.8.title"
+	desc = "wasteland_discoveries.8.desc"
+	picture = GAS_STATION_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.8" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.8.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_scavengers
+            duration = -1
+		}
+	}
+}
+
+# "Engineers"
+province_event = {
+	id =  wasteland_discoveries.9
+	title = "wasteland_discoveries.9.title"
+	desc = "wasteland_discoveries.9.desc"
+	picture = POWER_SUBSTATION_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.9" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.9.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_engineers
+            duration = -1
+		}
+	}
+}
+
+#---------------------------
+
+# "Fungal Infestation"
+province_event = {
+	id =  wasteland_discoveries.10
+	title = "wasteland_discoveries.10.title"
+	desc = "wasteland_discoveries.10.desc"
+	picture = VAULT_ENTRANCE_RADSTORM_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.10" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.10.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_fungal_infestation
+            duration = -1
+		}
+	}
+}
+
+# "Feral Ghoul Infestation"
+province_event = {
+	id =  wasteland_discoveries.11
+	title = "wasteland_discoveries.11.title"
+	desc = "wasteland_discoveries.11.desc"
+	picture = GHOUL_ATTACK_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.11" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.11.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_ghoul_infestation
+            duration = -1
+		}
+	}
+}
+
+# "Mole Rat Infestation"
+province_event = {
+	id =  wasteland_discoveries.12
+	title = "wasteland_discoveries.12.title"
+	desc = "wasteland_discoveries.12.desc"
+	picture = NIPTON_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.12" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.12.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_mole_rat_infestation
+            duration = -1
+		}
+	}
+}
+
+# "Low-level Radiation"
+province_event = {
+	id =  wasteland_discoveries.13
+	title = "wasteland_discoveries.13.title"
+	desc = "wasteland_discoveries.13.desc"
+	picture = ZION_REST_TABLE_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.13" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.13.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_low_level_radiation
+            duration = -1
+		}
+	}
+}
+
+# "Quicksand"
+province_event = {
+	id =  wasteland_discoveries.14
+	title = "wasteland_discoveries.14.title"
+	desc = "wasteland_discoveries.14.desc"
+	picture = TOXIC_POOLS_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.14" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.14.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_poor_groundsoil
+            duration = -1
+		}
+	}
+}
+
+# "Poor Access"
+province_event = {
+	id =  wasteland_discoveries.15
+	title = "wasteland_discoveries.15.title"
+	desc = "wasteland_discoveries.15.desc"
+	picture = ROAD_SIGNS_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+		has_no_previous_discoveries = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - wasteland_discoveries.15" }
+        }
+    }
+    
+	option = {
+		name = "wasteland_discoveries.15.option.a"
+		
+        add_permanent_province_modifier = {
+            name = discovery_poor_access
+            duration = -1
+		}
+	}
+}

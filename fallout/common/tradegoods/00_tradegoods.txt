@@ -1,0 +1,794 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new resources, make sure they are uniquely named.
+# Please add price definitions to prices.txt as well.
+
+# Weaponry
+weaponry = {
+	color = { 0.417 0.552 0.287 }
+	modifier = {
+		infantry_power = 0.05
+	}
+    province = {
+        local_defensiveness = 0.1
+    }
+	chance = {
+		factor = 8.75
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 1.5
+			area = divide_area 
+		}
+	}
+}
+
+# Munitions
+munitions = {
+	color = { 0.483 0.954 0.971 }
+	modifier = {
+		cavalry_power = 0.05
+	}
+    province = {
+        local_regiment_cost = -0.1
+    }
+	chance = {
+		factor = 8.75
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+	}
+}
+
+# Food
+food = {
+	color = { 0.559 0.716 0.607 }
+	modifier = {
+		global_unrest = -1
+	}
+    province = {
+        local_tax_modifier = 0.1
+    }
+	chance = {
+		factor = 8.5
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+	}
+}
+
+# Drugs
+drugs = {
+	color = { 0.612 0.989 0.558 }
+	modifier = {
+		hostile_attrition = 1
+	}
+    province = {
+        local_unrest = -1
+    }
+	chance = {
+		factor = 9
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 1.5
+			region = mexico_region  			
+		}
+	}
+}
+
+# Pre-war Technology
+prewar_technology = {
+	color = { 0.392 0.277 0.217 }
+	modifier = {
+		idea_cost = -0.05
+	}
+    province = {
+        allowed_num_of_buildings = 1
+    }
+	chance = {
+		factor = 4
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 2
+			area = divide_area 
+		}
+		modifier = {
+			factor = 10
+			area = big_mt_area 
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
+		}
+        modifier = {
+            factor = 2.5
+ 			area = cambridge_area  	           
+		}
+	}
+}
+
+# Gold
+rare_metals = {
+	color = { 0.98 0.422 0.377 }
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 2
+			region = nevada_region 
+		}
+	}
+}
+
+# Slaves
+slaves = {
+	color = { 0.571 0.467 0.637 }
+	modifier = {
+		global_manpower_modifier = 0.1
+	}
+    province = {
+        local_manpower_modifier = 0.1
+    }
+	chance = {
+		factor = 8
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+	}
+}
+
+# Steel
+steel = {
+	color = { 0.277 0.82 0.193 }
+	modifier = {
+		build_cost = -0.1
+	}
+    province = {
+        local_build_cost = -0.1
+    }
+	chance = {
+		factor = 7
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
+		}
+	}
+}
+
+# Oil
+oil = {
+	color = { 0.893 0.777 0.682 }
+	modifier = {
+		production_efficiency = 0.1
+	}
+    province = {
+        local_production_efficiency = 0.1
+    }
+	chance = {
+		factor = 6
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			region = mexico_region  			
+		}
+	}
+}
+
+# Medical Supplies
+medical_supplies = {
+	color = { 0.788 0.751 0.752 }
+	modifier = {
+		manpower_recovery_speed = 0.1
+	}
+    province = {
+        supply_limit_modifier = 0.1
+    }
+	chance = {
+		factor = 7
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
+		}
+        modifier = {
+            factor = 1
+ 			area = cambridge_area  	           
+		}
+	}
+}
+
+# Clean Water
+clean_water = {
+	color = { 0.0677 0.339 0.557 }
+	modifier = {
+		global_unrest = -1
+	}
+    province = {
+        supply_limit_modifier = 0.1
+    }
+	chance = {
+		factor = 8
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+		modifier = {
+			factor = 1.5
+			region = the_capital_wasteland_region 			
+		}
+	}
+}
+
+# Irradiated Water
+irradiated_water = {
+	color = { 0.727 0.999 0.895 }
+	modifier = {
+		global_unrest = -1
+	}
+    province = {
+        local_hostile_attrition = 1
+    }
+	chance = {
+		factor = 9.75
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+	}
+}
+
+# Pre-war Books
+prewar_books = {
+	color = { 0.667 0.186 0.234 }
+	modifier = {
+		advisor_cost = -0.1
+	}
+    province = {
+        local_core_creation = -0.1
+    }
+	chance = {
+		factor = 8
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+        modifier = {
+            factor = 2.5
+ 			area = cambridge_area  	           
+		}
+	}
+}
+
+# Strange Meat
+strange_meat = {
+	color = { 0.46 0.814 0.214 }
+	modifier = {
+		global_spy_defence = 0.15
+	}
+    province = {
+        local_unrest = -1
+    }
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+	}
+}
+
+# Tools
+tools = {
+	color = { 0.133 0.637 0.451 }
+	modifier = {
+		fort_maintenance_modifier = -0.1
+	}
+    province = {
+        regiment_recruit_speed = -0.1
+    }
+	chance = {
+		factor = 6
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = pf_industrial_site
+				has_province_modifier = pf_factory			
+			}
+		}
+	}
+}
+
+radioactive_waste = {
+	color = { 0.25 0.25 0.25 }
+    province = {
+        max_attrition = 10
+    }
+	chance = {
+		factor = 9.9
+		modifier = {
+			factor = 6
+			province_id = 1272
+		}
+		modifier = {
+			factor = 2
+			area = divide_area 
+		}
+	}
+}
+
+
+unknown = {
+	color = { 0.25 0.25 0.25 }
+}
+
+gambling = {
+	color = { 0.22 0.602 0.422 }
+	modifier = {
+		global_foreign_trade_power = 0.05
+	}
+    province = {
+        province_trade_power_modifier = 0.1
+    }
+	chance = {
+		factor = 0
+	}
+}
+
+meat = {
+	color = { 0.252 0.65 0.522 }
+	modifier = {
+		global_unrest = -1
+	}
+    province = {
+        local_tax_modifier = 0.15
+    }
+	chance = {
+		factor = 8.5
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}
+	}
+}
+
+brew = {
+	color = { 0.232 0.11 0.542 }
+	modifier = {
+	    prestige_decay = -0.01
+	}
+    province = {
+        local_unrest = -1
+    }
+	chance = {
+		factor = 8.5
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1417
+				province_id = 1285
+			}
+		}
+	}
+}
+
+fungus = {
+	color = { 0.452 0.654 0.222 }
+	modifier = {
+	    state_maintenance_modifier = -0.1
+	}
+    province = {
+        local_unrest = -1
+    }
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 0.1
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+	}
+}
+
+fish = {
+	color = { 0.4 0.644 0.3 }
+	modifier = {
+		culture_conversion_cost = -0.1
+	}
+	province = {
+		local_sailors_modifier = 0.1
+	}
+	chance = {
+		factor = 20
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 0.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+        
+		modifier = {
+			factor = 0
+			has_port = no 
+		}
+	}
+}
+
+punga = {
+	color = { 0.1 0.2 0.35 }
+	modifier = {
+	    yearly_corruption = -0.03
+	}
+    province = {
+        local_unrest = -1
+    }
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					province_id = 1231
+					province_id = 1285
+				}
+			}
+		}        
+	}
+}
+
+cola = {
+	color = { 0.45 0.8 0.7 }
+	modifier = {
+	    global_tax_modifier = 0.1
+	}
+    province = {
+        local_tax_modifier = 0.1
+    }
+	chance = {
+		factor = 8.75
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+			}
+		}        
+		modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = pf_factory			
+		}
+		modifier = {
+			factor = 3.5
+			area = nuka_world_area 			
+		}
+		modifier = {
+			factor = 10
+			province_id = 1417 			
+		}
+	}
+}
+	
+vaulttec_supplies = {
+	color = { 0.55 0.85 0.57 }
+	modifier = {
+	    global_colonial_growth = 5
+	}
+    province = {
+        local_development_cost = -0.1
+    }
+	chance = {
+		factor = 100
+        
+		modifier = {
+            factor = 0
+            NOT = { has_province_modifier = pf_vault }
+		}
+	}
+}
+
+prewar_food = {
+	color = { 0.25 0.55 0.33 }
+	modifier = {
+		global_unrest = -1
+	}
+    province = {
+        local_tax_modifier = 0.1
+    }
+	chance = {
+		factor = 6
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = pf_factory			
+		}
+		modifier = {
+			factor = 10
+			province_id = 17		
+		}
+	}
+}
+
+power_armour = {
+	color = { 0.417 0.552 0.287 }
+	modifier = {
+		shock_damage_received = -0.05
+	}
+    province = {
+        local_defensiveness = 0.1
+    }
+	chance = {
+		factor = 4
+		modifier = {
+			factor = 0
+			OR = {
+				province_id = 1231
+				province_id = 1285
+				province_id = 1417
+			}
+		}        
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+		modifier = {
+			factor = 1.1
+			development = 10
+		}
+		modifier = {
+			factor = 1.1
+			development = 15
+		}
+	}
+}
+
+gecko_pelt = {
+	color = { 0.417 0.552 0.287 }
+	modifier = {
+		fire_damage_received = -0.05
+	}
+    province = {
+        local_unrest = -1
+    }
+	chance = {
+		factor = 10
+        
+        modifier = {
+            factor = 0.1
+            OR = {
+                has_terrain = irradiated_ruins
+                has_terrain = ruins
+            }
+		}
+        
+        modifier = {
+            factor = 0
+			NOT = {
+				OR = {
+					region = california_region 
+					region = arizona_region
+					region = nevada_region
+					region = utah_region
+					region = oregon_region
+					region = baja_california_region
+					region = mexico_region
+				}
+			}
+        }
+    }
+}

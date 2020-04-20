@@ -1,0 +1,420 @@
+#--------------------------------------------
+# Monarchy
+#--------------------------------------------
+frontier_settlement_reform = {
+    icon = "peace"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = frontier_settlement_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_colonial_growth = 10
+        colonist_placement_chance = 0.05
+        max_states = 3
+    }
+}
+mercantile_settlement_reform = {
+    icon = "diamond_city"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = mercantile_settlement_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_own_trade_power = 0.1
+        trade_efficiency = 0.05
+        max_states = 3
+    }
+}
+militarized_settlement_reform = {
+    icon = "military"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = militarized_settlement_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        global_regiment_cost = -0.1
+        max_states = 3
+    }
+}
+militia_reform = {
+    icon = "military"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = militia_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        max_absolutism = 10
+        max_states = 3
+    }
+}
+legion_reform = {
+    icon = "cross"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = legion_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        army_tradition = 1
+        max_absolutism = 20
+        global_autonomy = -0.05
+        max_states = 5
+    }
+}
+new_vegas_reform = {
+    icon = "gambling"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = new_vegas_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        all_power_cost = -0.05
+        max_absolutism = 10
+        global_autonomy = -0.05
+        max_states = 3
+    }
+}
+think_tank_reform = {
+    icon = "satellite"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = think_tank_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    modifiers = {
+        technology_cost = -0.2
+        max_absolutism = 20
+        global_autonomy = -0.05
+        max_states = 3
+    }
+}
+zetan_reform = {
+    icon = "satellite"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = zetan_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    modifiers = {
+        discipline = 0.1
+        max_absolutism = 50
+        global_autonomy = -0.1
+        max_states = 10
+    }
+}
+shi_reform = {
+    icon = "vault_computer"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = shi_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    modifiers = {
+        idea_cost = -0.05
+        global_autonomy = -0.05
+        max_states = 3
+    }
+}
+ncr_reform = {
+    icon = "artillery"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = ncr_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_tax_modifier = 0.15
+        max_absolutism = -10
+        global_autonomy = -0.05
+        max_states = 5
+    }
+}
+ncr_state_reform = {
+    icon = "artillery"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = ncr_state_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_tax_modifier = 0.1
+        max_absolutism = -10
+        global_autonomy = -0.05
+        max_states = 5
+    }
+}
+
+#--------------------------------------------
+# Republic
+#--------------------------------------------
+republic_reform = {
+    icon = "person"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = republic_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        diplomatic_reputation = 1
+        max_absolutism = -20
+        max_states = 3
+    }
+}
+dictatorship_reform = {
+    icon = "burned_man"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = dictatorship_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        production_efficiency = 0.1
+        max_absolutism = -10
+        max_states = 3
+    }
+}
+institute_reform = {
+    icon = "console"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = institute_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        technology_cost = -0.1
+        idea_cost = -0.1
+        max_absolutism = 10
+        global_autonomy = -0.05
+        max_states = 5
+    }
+}
+enclave_reform = {
+    icon = "usa_flag"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = enclave_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    duration = 5
+
+    modifiers = {
+        land_morale = 0.1
+        max_absolutism = 20
+        global_autonomy = -0.05
+        max_states = 5
+    }
+}
+vault_reform = {
+    icon = "overseer"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = vault_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    modifiers = {
+        development_cost = -0.1
+        max_absolutism = -10
+        global_autonomy = -0.05
+        max_states = 3
+    }
+}
+
+#--------------------------------------------
+# Theocracy
+#--------------------------------------------
+theocracy_reform = {
+    icon = "burned_man"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = theocracy_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    modifiers = {
+        tolerance_own = 1
+        max_absolutism = -10
+        global_autonomy = -0.05
+        max_states = 3
+    }
+}
+brotherhood_reform = {
+    icon = "power_armor"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = brotherhood_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        fire_damage = 0.1
+        free_mil_policy = 1
+        max_absolutism = 10
+        global_autonomy = -0.05
+        max_states = 5
+    }
+}
+cult_reform = {
+    icon = "charismatic_person"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = cult_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    modifiers = {
+        global_missionary_strength = 0.03
+        global_autonomy = -0.05
+        max_states = 2
+    }
+}
+
+#--------------------------------------------
+# Tribal
+#--------------------------------------------
+tribe_reform = {
+    icon = "brahmin"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = tribe_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_unrest = -2
+        max_states = 1
+    }
+}
+commune_reform = {
+    icon = "person"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = commune_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_unrest = -2
+        max_states = 1
+    }
+}
+raider_reform = {
+    icon = "raider"
+
+    allow_normal_conversion = yes
+    legacy_equivalent = raider_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        mercenary_discipline = 0.05
+        merc_maintenance_modifier = -0.1
+        max_absolutism = 20
+        max_states = 2
+    }
+}
+super_mutant_reform = {
+    icon = "union"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = super_mutant_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        shock_damage_received = -0.1
+        fire_damage_received = -0.1
+        max_absolutism = 20
+        max_states = 1
+    }
+}
+swarm_reform = {
+    icon = "factory"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = swarm_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        global_regiment_recruit_speed = -0.25
+        max_absolutism = 20
+        max_states = 1
+    }
+}
+wolf_pack_reform = {
+    icon = "military"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = wolf_pack_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        infantry_power = 0.1
+        max_absolutism = 20
+        max_states = 2
+    }
+}
+great_khan_reform = {
+    icon = "cross"
+    
+    allow_normal_conversion = yes
+    legacy_equivalent = great_khan_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        loot_amount = 1.0
+        max_absolutism = 20
+        max_states = 2
+    }
+}

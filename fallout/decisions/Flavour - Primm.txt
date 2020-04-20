@@ -1,0 +1,27 @@
+country_decisions = {
+    decide_on_a_sheriff = {
+		potential = {
+			tag = PRI
+			AND = {
+				NOT = { has_country_modifier = joe_eagle }
+				NOT = { has_country_modifier = sammy_tuck }
+				NOT = { has_country_modifier = lil_bot }
+				NOT = { has_country_modifier = randy }
+				NOT = { has_country_modifier = old_james }
+			}
+		}
+		allow =  {
+			NOT = { has_country_flag = new_sheriff }
+            years_of_income = 0.25
+		}
+	  	effect = {
+			hidden_effect = { set_country_flag = new_sheriff }
+            add_years_of_income = -0.25
+            
+			country_event = { id = primm.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

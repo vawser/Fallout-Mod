@@ -1,0 +1,841 @@
+# A province can belong to several regions.
+random_new_world_region = {
+
+}
+
+#---------------------------------------
+# Region List
+#---------------------------------------
+# West Coast
+# washington_region
+# oregon_region
+# california_region
+# nevada_region
+# utah_region
+# idaho_region
+# montana_region
+# wyoming_region
+# baja_california_region
+# arizona_region
+# new_mexico_region
+# colorado_region
+
+# Central
+# north_dakota_region
+# south_dakota_region
+# nebraska_region
+# kansas_region
+# missouri_region
+# iowa_region
+# kentucky_region
+# west_virginia_region
+# ohio_region
+# indiana_region
+# michigan_region
+# minnesota_region
+# wisconsin_region
+# illinois_region
+
+# Gulf
+# oklahoma_region
+# arkansas_region
+# texas_region
+# louisiana_region
+# mississippi_region
+# alabama_region
+# tennessee_region
+# florida_region
+# georgia_region
+# south_carolina_region
+# north_carolina_region
+
+# East Coast
+# virginia_region
+# new_york_region
+# new_jersey_region
+# pennsylvania_region
+# the_capital_wasteland_region
+# the_commonwealth_region
+
+# Canada
+# british_columbia_region
+# alberta_region
+# saskatchewan_region
+# manitoba_region
+# ontario_region
+# quebec_region
+# newfoundland_and_labrador_region
+# new_brunswick_region
+# nova_scotia_region
+
+# Other
+# big_mt_region
+# mexico_region
+# bermuda_region
+# caribbean_region
+
+# Sea
+# labrador_sea_region
+# gulf_of_st_lawrence_sea_region
+# massachusetts_sea_region
+# bermuda_sea_region
+# antilles_sea_region
+# bahama_sea_region
+# yucatan_sea_region
+# gulf_of_mexico_sea_region
+# gulf_of_california_sea_region
+# san_francisco_bay_sea_region
+# vancouver_sea_region
+# pacific_sea_region
+
+#---------------------------------------
+# West Coast
+#---------------------------------------
+washington_region = {
+    areas = {
+        umatilla_area
+        seeni_area
+        fulshen_area
+        palus_area
+        olympia_area
+        seattle_area
+        juma_area
+    }
+}
+
+oregon_region = {
+    areas = {
+        eugene_area
+        portland_area
+        guntoo_area
+        great_basin_area
+        klamath_area
+        glamsey_area
+    }
+}
+
+california_region = {
+    areas = {
+        sierra_madre_area
+        shady_sands_area
+        boneyard_area
+        maxson_state_area
+        necropolis_area
+        junktown_area
+        arroyo_area
+        the_great_glow_area
+        mariposa_area
+        the_hub_area
+        redding_area
+        narvarro_area
+        bitterwater_area
+        mojave_area
+        the_flats_area
+        boneyard_outskirts_area
+        vallejo_area
+        sac_town_area
+        san_jose_area
+        shi_town_area
+        bakersfield_area
+        mendota_area
+        fresno_area
+        merced_area
+        visalia_area
+        tahoe_area
+        redwood_area
+        jackson_california_area
+        mendocino_area
+        the_den_area
+        modoc_national_forest_area
+        shista_area
+        rustcliff_area
+        crescent_city_area
+        one_pine_area
+        lassen_area
+        whitehorn_area
+        granite_peak_area
+        dayglow_area
+        goffs_area
+        joshua_tree_area
+        borrego_area
+        palo_verde_area
+        edwards_afb_area
+        scrapheap_area
+        big_pine_area
+        bloomfield_area
+        california_islands_area
+        santa_maria_area
+    }
+}
+
+nevada_region = {
+    areas = {
+        new_reno_area
+        new_reno_outskirts_area
+        broken_hills_area
+        gecko_area
+        vault_city_area
+        north_vegas_area
+        goodsprings_area
+        new_vegas_area
+        novac_area
+        cottonwood_cove_area
+        nipton_area
+        east_vegas_area
+        boulder_city_area
+        black_mountain_area
+        west_vegas_area
+        utah_passage_area
+        nixon_area
+        cold_springs_area
+        battle_mountain_area
+        elko_area
+        nail_area
+        trout_area
+        tonopah_area
+        akali_area
+        adaven_area
+        orem_area
+        jericho_area
+        erda_area
+        gold_hill_area
+        south_vegas_area
+        mt_charleston_area
+        divide_area
+    }
+}
+
+utah_region = {
+    areas = {
+        caliente_area
+        zion_area
+        new_canaan_area
+        charleston_area
+        provo_area
+        hill_airforce_base_area
+        glenwood_area
+        cache_wasteland_area
+        sumota_area
+        untyia_area
+        wilbur_area
+    }
+}
+
+idaho_region = {
+    areas = {
+        skeet_area
+        burning_bush_area
+        ammanet_area
+        mountain_city_area
+        balafield_area
+        woldington_area
+        maryford_area
+        latko_area
+        kalus_area
+    }
+}
+
+montana_region = {
+    areas = {
+        arclit_area
+        helena_area
+        chequa_area
+        kalico_area
+        plentywood_area
+        missolula_area
+        great_falls_area
+    }
+}
+
+wyoming_region = {
+    areas = {
+        noba_area
+        goshute_area
+        slimekar_area
+        copperfell_area
+    }
+}
+
+baja_california_region = {
+    areas = {
+        northern_baja_area
+        southern_baja_area
+        baja_islands_area
+    }
+}
+
+arizona_region = {
+    areas = {
+        flagstaff_area
+        phoenix_area
+        grand_canyon_area
+        yuma_area
+        gila_area
+        hopi_area
+        willow_beach_area
+        oddess_area
+        verde_area
+        amberfall_area
+        havasu_city_area
+        yucca_area
+        bullhead_city_area
+    }
+}
+
+new_mexico_region = {
+    areas = {
+        santa_fe_area
+        roswell_area
+        silver_city_area
+        las_cruces_area
+        caballo_area
+        burstcut_area
+        candlesticks_area
+    }
+}
+
+colorado_region = {
+    areas = {
+        del_norte_area
+        navajo_area
+        grand_junction_area
+        denver_area
+        grand_staircase_area
+        fort_collins_area
+        salida_area
+        canyon_city_area
+        kimball_area
+        san_isabel_area
+        farmington_area
+        mesa_verde_area
+        axfold_area
+        footori_area
+    }
+}
+
+#---------------------------------------
+# Central
+#---------------------------------------
+north_dakota_region = {
+    areas = {
+        jawsi_area
+        bismarck_area
+        grafton_area
+        bark_area
+    }
+}
+
+south_dakota_region = {
+    areas = {
+        yuto_area
+        toagi_area
+    }
+}
+
+nebraska_region = {
+    areas = {
+        broken_bow_area
+        huroh_area
+        skiri_area
+        aburduun_area
+    }
+}
+
+kansas_region = {
+    areas = {
+        hay_area
+        junction_city_area
+        uylsses_area
+        great_bend_area
+        gravestone_area
+    }
+}
+
+missouri_region = {
+    areas = {
+        twain_area
+        st_louis_area
+        springfield_area
+        joplin_area
+        jefferson_city_area
+        hannibal_area
+        kansas_city_area
+    }
+}
+
+iowa_region = {
+    areas = {
+        des_moines_area
+        iowa_city_area
+        jamik_area
+    }
+}
+
+kentucky_region = {
+    areas = {
+        mayfield_area
+        bowling_green_area
+        lexington_kentucky_area
+        frankfort_area
+    }
+}
+
+west_virginia_region = {
+    areas = {
+        monongahela_area
+        morgantown_area
+        charleston_vw_area
+        oak_hill_area
+       
+    }
+}
+
+ohio_region = {
+    areas = {
+        cleveland_area
+        columbus_area
+        cincinnati_area
+    }
+}
+
+indiana_region = {
+    areas = {
+        south_bend_area
+        wea_area
+        indianapolis_area
+        greenwood_area
+        bloomington_area
+    }
+}
+
+michigan_region = {
+    areas = {
+        hiawatha_area
+        michigan_fm_area
+    }
+}
+
+minnesota_region = {
+    areas = {
+        minneapolis_area
+        warfad_area
+    }
+}
+
+wisconsin_region = {
+    areas = {
+        milwaukee_area
+        madison_area
+        westa_area
+    }
+}
+
+illinois_region = {
+    areas = {
+        chicago_area
+        rockford_area
+        aurora_area
+        joleit_area
+        macomb_area
+        peoria_area
+        galeslock_area
+        clank_area
+        centralia_area
+    }
+}
+
+#---------------------------------------
+# Gulf
+#---------------------------------------
+oklahoma_region = {
+    areas = {
+        broken_arrow_area 
+        broken_bow_ok_area
+        boise_city_area
+        ashmana_area
+        lawton_area
+        oklahoma_city_area
+    }
+}
+
+arkansas_region = {
+    areas = {
+        pine_bluff_area
+        texarkana_area
+        little_rock_area
+        searcy_area
+    }
+}
+
+texas_region = {
+    areas = {
+        brownsville_area
+        corpus_christi_area
+        laredo_area
+        san_antonia_area
+        del_rio_area
+        odessa_area
+        el_paso_area
+        houston_area
+        bay_city_area
+        austin_area
+        fairfield_area
+        tyler_area
+        mt_pleasant_area
+        dallas_area
+        eden_area
+        san_angelo_area
+        abilene_area
+        vernon_area
+        midland_area
+        lubbock_area
+        matador_area
+        morton_area
+        waka_area
+        vega_area
+    }
+}
+
+louisiana_region = {
+    areas = {
+        new_orleans_area
+        baton_rouge_area
+        jennings_area
+        alexandria_area
+        natchitoches_area
+    }
+}
+
+mississippi_fm_region = {
+    areas = {
+        gulfport_area
+        natches_area
+        jackson_area
+        meridian_area
+        tupelo_area
+        southaven_area
+    }
+}
+
+alabama_region = {
+    areas = {
+        mobile_area
+        chatom_area
+        tuscaloosa_area
+        montgomery_area
+        atmore_area
+    }
+}
+
+tennessee_region = {
+    areas = {
+        knoxville_area
+        nashville_area
+        sparta_area
+        memphis_area
+        pulaski_area
+    }
+}
+
+florida_region = {
+    areas = {
+        everglades_area
+        orlando_area
+        apalachee_area
+    }
+}
+
+georgia_region = {
+    areas = {
+        savannah_area
+        macon_area
+        atlanta_area
+        augusta_area
+
+    }
+}
+
+south_carolina_region = {
+    areas = {
+        columbia_area
+        florence_area
+    }
+}
+
+north_carolina_region = {
+    areas = {
+        charlotte_area
+        raleigh_area
+        plymouth_area
+    }
+}
+
+#---------------------------------------
+# East Coast
+#---------------------------------------
+virginia_region = {
+    areas = {
+        richmond_area
+        lynchburg_area
+        frederickburg_area
+        oakland_area
+        big_stone_gap_area
+    }
+}
+
+new_york_region = {
+    areas = {
+        manhattan_area
+        woodbury_area
+        roscoe_area
+        albany_area
+        watertown_area
+        syracuse_area
+        rochester_area
+        buffalo_area
+    }
+}
+
+new_jersey_region = {
+    areas = {
+        philadelphia_area
+        great_lanta_area
+    }
+}
+
+pennsylvania_region = {
+    areas = {
+        monroeville_area
+        erie_stretch_area
+        altoona_area
+        towson_area
+        lenape_area
+        the_pitt_area
+        franklin_area
+        moshannon_area
+        allegheny_area
+        susquehannok_area
+        allentown_area
+    }
+}
+
+the_capital_wasteland_region = {
+    areas = {
+        salisbury_area
+        point_lookout_area
+        canterbury_commons_area
+        raven_rock_area
+        dc_area
+        clarksburg_area
+        megaton_area
+        tenpenny_area
+        paradise_falls_area
+        lamplight_area
+        potomac_area
+    }
+}
+
+the_commonwealth_region = {
+    areas = {
+        central_boston_area
+        cambridge_area
+        boston_outskirts_area
+        quincy_area
+        the_glowing_sea_area
+        concord_area
+        lexington_area
+        fort_hagen_area
+        salem_area
+        maine_fm_area
+        nuka_world_area
+        rhode_island_area
+        new_haven_area
+        norwalk_area
+        montpelier_area
+        amherst_area
+        pennacook_area
+        nimpuc_area
+        merrimack_area
+    }
+}
+
+#---------------------------------------
+# Other
+#---------------------------------------
+british_columbia_region = {
+    areas = {
+        vancouver_area
+        kamloops_area
+        gibson_area
+        graham_island_area
+        stonepass_area
+        kitmat_area
+        kelowna_area
+    }
+}
+
+alberta_region = {
+    areas = {
+        calgary_area
+        red_deer_area
+        edmonton_area
+        jasper_area
+    }
+}
+
+saskatchewan_region = {
+    areas = {
+        moose_jaw_area
+        regina_area
+        yorkton_area
+        saskatoon_area
+        malanosa_area
+    }
+}
+
+manitoba_region = {
+    areas = {
+        winnipeg_area
+        poplar_area
+        riding_area
+        grand_rapids_area
+    }
+}
+
+ontario_region = {
+    areas = {
+        ronto_area
+        ottawa_area
+        thunder_bay_area
+        ojibwa_area
+        north_bay_area
+        ogoki_area
+        winisk_area
+        opasquia_area
+        pikangikum_area
+    }
+}
+
+quebec_region = {
+    areas = {
+        quebec_area
+        rimouski_area
+        glacial_wastes_area
+        anticosti_island_area
+        saqueney_area
+        kipawa_area
+    }
+}
+
+newfoundland_and_labrador_region = {
+    areas = {
+        newfoundland_and_labrador_area
+    }
+}
+
+new_brunswick_region = {
+    areas = {
+        new_brunswick_area
+    }
+}
+
+nova_scotia_region = {
+    areas = {
+        nova_scotia_area
+    }
+}
+
+big_mt_region = {
+    areas = {
+        big_mt_area
+    }
+}
+
+mexico_region = {
+	areas = {
+		mexico_city_area
+        tuel_area
+        cos_area
+        fresnillo_area
+        tepic_area
+        mante_area
+        ahome_area
+        mazatlan_area
+        el_medio_area
+        caborca_area
+        temo_area
+        santiago_area
+        navojoa_area
+        durango_fm_area
+        reynosa_area
+        zaragoza_area
+        piedras_negras_area
+        sayulita_area
+        mexico_islands_area
+	}
+}
+
+bermuda_region = {
+	areas = {
+		bermuda_area
+	}
+}
+
+caribbean_region = {
+	areas = {
+		caribbean_islands_area
+        moron_area
+        havana_area
+        cancun_area
+	}
+}
+
+#-------------------------------
+# Sea
+#-------------------------------
+west_seaboard_region = {
+	areas = {
+        gulf_of_california_area
+        mexico_west_coast_area
+        baja_california_coast_area
+        california_coast_area
+        washington_coast_area
+        west_canada_coast_area
+	}
+}
+
+pacific_ocean_region = {
+    areas = {
+        north_pacific_area
+        central_pacific_area
+    }
+}
+
+gulf_of_mexico_region = {
+    areas = {
+        mexico_east_coast_area
+        south_coast_area
+    }
+}
+
+caribbean_seaboard_region = {
+    areas = {
+        caribbean_sea_area
+    }
+}
+
+east_seaboard_region = {
+    areas = {
+        lower_east_coast_area
+        upper_east_coast_area
+        east_canada_coast_area
+    }
+}
+
+atlantic_ocean_region = {
+    areas = {
+        north_atlantic_area
+        central_atlantic_area
+    }
+}
+

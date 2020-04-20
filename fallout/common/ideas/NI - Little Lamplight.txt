@@ -1,0 +1,49 @@
+lamplight_ideas = {
+    start = {
+        leader_land_manuever = 1
+        envoy_travel_time -0.6
+    }
+    
+    bonus = {
+        unjustified_demands = -0.15
+    }
+
+    trigger = {
+        OR = {
+            tag = LLL
+            technology_group = tech_children
+            primary_culture = lamplight
+        }
+    }
+    free = yes
+    
+    lamplight_one = {
+        global_spy_defence = 0.8 
+    }
+    lamplight_two = {
+        discovered_relations_impact = -0.5
+        fire_damage_received = -0.5
+        improve_relation_modifier = 0.33
+        shock_damage_received = 0.2
+        discipline = -0.05
+    }
+    lamplight_three = {
+        loot_amount = 0.2
+    }
+    lamplight_four = {
+        global_trade_goods_size_modifier = 0.05
+        production_efficiency = 0.05
+    }
+    lamplight_five = {
+        movement_speed = 0.15
+    }
+    lamplight_six = {
+        trade_range_modifier = 0.25
+        global_foreign_trade_power = 0.1
+    }
+    lamplight_seven = {
+        global_own_trade_power = 0.05
+    }
+}
+
+

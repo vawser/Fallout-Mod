@@ -1,0 +1,482 @@
+guiTypes = {
+
+	windowType = {
+		name = "hre_window"
+		position = { x=-600 y= -400 }	
+		size = { x=1024 y=576 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		upsound = hre
+		downsound = ""
+	
+		iconType =
+		{
+			name ="hre_bg_extended"
+			spriteType = "GFX_hre_bg_extended"
+			position = { x= 0 y = -9999 }
+		}
+		
+		iconType =
+		{
+			name ="hre_bg"
+			spriteType = "GFX_state_regulations_bg"
+			position = { x= 66 y = 18 }
+		}		
+		
+        #-------------------
+        # Leagues
+        #-------------------
+		guiButtonType = {
+			name = "join_league_button"
+			position = { x= 35 y = -9999 }
+			quadTextureSprite ="GFX_join_league_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			clicksound = close_window
+			shortcut = "ESCAPE"
+			frame = 1
+		}		
+		
+		guiButtonType = {
+			name = "join_heretic_league_button"
+			position = { x= 644 y = -9999 }
+			quadTextureSprite ="GFX_join_heretic_league_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			clicksound = close_window
+			shortcut = "ESCAPE"
+			frame = 1			
+		}	
+		
+		iconType =
+		{
+			name ="hre_religion_icon"
+			spriteType = "GFX_province_view_religion"
+			position = { x= 55 y = -9999 }
+			hint_tag = "hint_religion"
+			allwaystransparent = yes
+		}	
+
+		iconType =
+		{
+			name ="hre_heretic_religion_icon"
+			spriteType = "GFX_province_view_religion"
+			position = { x= 665 y = -9999 }
+			hint_tag = "hint_religion"
+			allwaystransparent = yes			
+		}			
+
+		iconType =
+		{
+			name ="hre_official_religion_icon"
+			spriteType = "GFX_join_league_button"
+			position = { x= 339 y = -9999 }
+			hint_tag = "hint_religion"
+			frame = 3
+		}
+
+		iconType =
+		{
+			name ="hre_war_peace_icon"
+			spriteType = "GFX_hre_war_peace_strip"
+			position = { x= 346 y = -9999 }
+			hint_tag = "hint_religion"
+			frame = 1
+		}	
+		
+		iconType =
+		{
+			name ="hre_religion_icon_2"
+			spriteType = "GFX_province_view_religion"
+			position = { x= 359 y = -9999 }
+			hint_tag = "hint_religion"
+			allwaystransparent = yes
+		}		
+		
+        #-------------------
+        # HRE
+        #-------------------
+		instantTextBoxType = {
+			name = "hre_label"
+			position = { x = 370 y = 40 }
+			format = centre
+			textureFile = ""
+			font = "monofonto_outline_18"
+			borderSize = {x = 4 y = 4}
+			text = "HRE_HRE"	
+			maxWidth = 400
+			maxHeight = 32	
+		}
+		
+        iconType = {
+            name = "label_bg_1"
+            spriteType = "GFX_main_lobby_button"
+            position = { x= -80 y = -190 }
+            Orientation = "CENTER"
+        }
+        
+		instantTextBoxType = {
+			name = "emperor_label"
+			position = { x = 200 y = -9999 }
+			textureFile = ""
+			font = "monofonto_outline_18"
+			borderSize = {x = 4 y = 4}
+			text = "HRE_EMPEROR"	
+			maxWidth = 295
+			maxHeight = 32	
+			format = centre
+		}
+
+        iconType = {
+            name = "label_bg_2"
+            spriteType = "GFX_main_lobby_button"
+            position = { x= -400 y = -40 }
+            Orientation = "CENTER"
+        }
+        
+		instantTextBoxType = {
+			name = "electors_label"
+			position = { x = 125 y = 252 }
+			textureFile = ""
+			font = "monofonto_outline_16"
+			borderSize = {x = 4 y = 4}
+			text = "HRE_ELECTORS"	
+			maxWidth = 140
+			maxHeight = 32	
+			format = left
+		}
+
+        iconType = {
+            name = "label_bg_3"
+            spriteType = "GFX_main_lobby_button"
+            position = { x= 30 y = -40 }
+            Orientation = "CENTER"
+        }
+        
+		instantTextBoxType = {
+			name = "members_label"
+			position = { x = 555 y = 252 }
+			textureFile = ""
+			font = "monofonto_outline_16"
+			borderSize = {x = 4 y = 4}
+			text = "HRE_MEMBER_STAT"	
+			maxWidth = 500
+			maxHeight = 32	
+			format = left
+		}
+		
+		#### AUTHORITY
+		instantTextBoxType = {
+			name = "influence_label"
+			position = { x = 420 y = 105 }
+			textureFile = ""
+			font = "monofonto_outline_16"
+			borderSize = {x = 4 y = 0}
+			text = "HRE_INFLUENCE"	
+			maxWidth = 300
+			maxHeight = 32	
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "influence_value"
+			position = { x = 470 y = 140 }
+			textureFile = ""
+			font = "monofonto_outline_18"
+			borderSize = {x = 4 y = 4}
+			text = ""	
+			maxWidth = 128
+			maxHeight = 32	
+			format = centre
+			hint_tag = "hint_imperialauthority"
+		}
+		
+		instantTextBoxType = {
+			name = "influence_growth"
+			position = { x = 550 y = 140 }
+			textureFile = ""
+			font = "monofonto_outline_18"
+			borderSize = {x = 4 y = 4}
+			text = "+0.20"	
+			maxWidth = 128
+			maxHeight = 32	
+			format = centre
+			hint_tag = "hint_imperialauthority"
+		}
+		
+		guiButtonType = 
+		{
+			name ="emperor_shield"
+			quadTextureSprite = "GFX_shield_thin"
+			position = { x= 136 y = 100 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18_black"
+			hint_tag = "hint_emperor"
+		}
+			
+		iconType =
+		{
+			name ="benefits_icon"
+			spriteType = "GFX_hre_emp_benefits_icon"
+			position = { x= 220 y = 130 }
+			Orientation = "UPPER_LEFT"
+		}	
+			
+		iconType =
+		{
+			name ="diplomatic_actions_icon"
+			spriteType = "GFX_more_dip_actions_icon"
+			position = { x= 95 y = 130 }
+			Orientation = "UPPER_LEFT"
+		}	
+			
+		#### REFORM DECISIONS
+        iconType = {
+            name = "label_bg_4"
+            spriteType = "GFX_main_lobby_button"
+            position = { x= -400 y = 125 }
+            Orientation = "CENTER"
+        }
+        
+		instantTextBoxType = {
+			name = "decisions_label"
+			position = { x = 125 y = 417 }
+			textureFile = ""
+			font = "monofonto_outline_16"
+			borderSize = {x = 4 y = 4}
+			text = "Presidential Orders"	
+			maxWidth = 300
+			maxHeight = 32	
+			format = left
+		}
+			
+		listboxType =  {
+			name ="decisions_listbox"
+			position = { x = 110 y = 450 }
+			backGround=""
+			size = { x = 300 y = 80 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 1
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 20 y = 20}
+		}
+			
+		guiButtonType = {
+			name = "close_button"
+			position = { x=905 y =45}
+			quadTextureSprite ="GFX_papacy_close_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "HRE_CLOSE"
+			buttonFont = "monofonto_outline_16"
+			clicksound = close_window
+			shortcut = "ESCAPE"
+		}
+
+		guiButtonType = {
+			name = "vote_button"
+			position = { x=270 y =125}
+			quadTextureSprite ="GFX_papacy_close_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "HRE_VOTE"
+			buttonFont = "monofonto_outline_16"
+		}
+	
+		
+		guiButtonType = {
+			name = "dismantel_button"
+			position = { x= 905 y = 145}
+			quadTextureSprite ="GFX_papacy_close_button"	
+			buttonText = "Dismantle"
+			buttonFont = "monofonto_outline_16"
+		}
+		
+		guiButtonType = {
+			name = "leave_button"
+			position = { x= 905 y = 100}
+			quadTextureSprite ="GFX_papacy_close_button"	
+			buttonText = "Leave"
+			buttonFont = "monofonto_outline_16"
+		}
+	}
+
+
+
+
+	guiButtonType = 
+	{
+		name ="elector_shield"
+		quadTextureSprite = "GFX_shield_thin"
+		position = { x= -78 y = -84 }
+		tooltip = ""
+		tooltipText =""
+		delayedTooltipText = ""
+		buttonFont = "vic_18_black"
+		hint_tag = "hint_elector"
+	}
+	
+	guiButtonType = 
+	{
+		name ="elector_vote_shield"
+		quadTextureSprite = "GFX_shield_small"
+		position = { x= 22 y = -32 }
+		tooltip = ""
+		tooltipText =""
+		delayedTooltipText = ""
+		buttonFont = "vic_18_black"
+	}
+	
+	iconType = {
+		name = "free_city_outliner"
+		spriteType ="GFX_outliner_free_city"	
+		position = { x= 6 y = -16 }
+	}
+	
+	iconType = {
+		name = "elector_outliner"
+		spriteType ="GFX_outliner_elector"	
+		position = { x= 6 y = -16 }
+	}	
+	
+	guiButtonType =
+	{
+		name ="member_shield"
+		quadTextureSprite = "GFX_shield_small"
+		position = { x= 6 y = -16 }
+		tooltip = ""
+		tooltipText =""
+		delayedTooltipText = ""
+		buttonFont = "vic_18_black"
+	}
+
+	positionType = {
+		name = "elector_shield_position"
+		position = { x = 270 y = 290 }
+	}
+
+	positionType = {
+		name = "elector_vote_position"
+		position = { x = 274 y = 370 }
+	}
+
+	positionType = {
+		name = "member_shield_position"
+		position = { x = 780 y = 292 }
+	}
+	
+	positionType = {
+		name = "league_shield_position"
+		position = { x = 55 y = 155 }
+	}
+
+	positionType = {
+		name = "heretic_league_shield_position"
+		position = { x = 665 y = 155 }
+	}		
+	
+	# Space between elector shields
+	positionType = {
+		name = "elector_shield_offset"
+		position = { x = 80 y = 0 }
+	}
+
+	positionType = {
+		name = "member_shield_offset"
+		position = { x = 34 y = 0 }
+	}
+	
+	positionType = {
+		name = "league_shield_offset"
+		position = { x = 30 y = 0 }
+	}	
+	
+	positionType = {
+		name = "heretic_league_shield_offset"
+		position = { x = 30 y = 0 }
+	}		
+	
+	positionType = {
+		name = "elector_relation_position"
+		position = { x = 38 y = 374 }
+	}
+	
+	instantTextBoxType = {
+		name = "relation"
+		position = { x = 0 y = 0 }
+		textureFile = ""
+		font = "monofonto_outline_12"
+		borderSize = {x = 4 y = 4}
+		text = "HRE_MEMBER_STATES"	
+		maxWidth = 48
+		maxHeight = 32	
+		format = left
+	}
+		
+
+	### REFORMS ENTRY	
+	windowType = {
+		name = "hre_reform_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=300 y= 21 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name = "enacted_reform"
+			spriteType ="GFX_enacted_reform_icon"	
+			position = { x= -30 y = -9 }
+		}
+		
+
+		
+		instantTextBoxType= {
+			position = { x= -5 y = -10}
+			name = "title"
+			font = "monofonto_outline_14"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 300
+			maxHeight = 20
+			text = ""	
+			format = left
+		}
+		guiButtonType = {
+			name = "reform_checkbox"
+			position = { x=200 y =-9999}
+			quadTextureSprite ="GFX_checkbox_gold_32"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			scale = 0.5
+		}			
+		guiButtonType = {
+			name = "select_button"
+			position = { x=230 y =-18}
+			quadTextureSprite ="GFX_execute_decision"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = ""
+		}
+	}
+
+}

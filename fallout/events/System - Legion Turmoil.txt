@@ -1,0 +1,113 @@
+namespace = legion_turmoil
+
+#-------------------------------------
+# "Legion Turmoil"
+#-------------------------------------
+country_event = {
+	id = legion_turmoil.1
+	title = legion_turmoil.1.title
+	desc = legion_turmoil.1.desc
+	picture = LEGION_CROSS_eventPicture
+	
+	trigger = {
+        tag = CAE
+        NOT = { legitimacy = 50 }
+    }
+    
+    is_triggered_only = yes
+    
+	option = {
+		name = legion_turmoil.1.option.a
+		
+        trigger = {
+            legitimacy = 40
+        }
+        
+        random_list = {
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = BKF } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = TWH } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = FRE } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = HAN } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = HID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = KAI } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = RID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 1 UNREST = 1 TAG = SUN } } }
+        }
+	}
+    option = {
+		name = legion_turmoil.1.option.a
+		
+        trigger = {
+            legitimacy = 30
+            NOT = { legitimacy = 40 }
+        }
+        
+        random_list = {
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = BKF } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = TWH } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = FRE } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = HAN } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = HID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = KAI } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = RID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 2 UNREST = 3 TAG = SUN } } }
+        }
+	}
+    option = {
+		name = legion_turmoil.1.option.a
+		
+        trigger = {
+            legitimacy = 20
+            NOT = { legitimacy = 30 }
+        }
+        
+        random_list = {
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = BKF } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = TWH } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = FRE } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = HAN } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = HID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = KAI } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = RID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 3 UNREST = 5 TAG = SUN } } }
+        }
+	}
+    option = {
+		name = legion_turmoil.1.option.a
+		
+        trigger = {
+            legitimacy = 10
+            NOT = { legitimacy = 20 }
+        }
+        
+        random_list = {
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = BKF } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = TWH } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = FRE } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = HAN } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = HID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = KAI } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = RID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 4 UNREST = 8 TAG = SUN } } }
+        }
+	}
+    option = {
+		name = legion_turmoil.1.option.a
+		
+        trigger = {
+            NOT = { legitimacy = 10 }
+        }
+        
+        random_list = {
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = BKF } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = TWH } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = FRE } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = HAN } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = HID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = KAI } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = RID } } }
+            20 = { random_owned_province = { spawn_pretender_rebels = { SIZE = 5 UNREST = 10 TAG = SUN } } }
+        }
+	}
+}
+

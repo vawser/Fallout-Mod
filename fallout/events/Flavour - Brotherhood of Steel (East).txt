@@ -1,0 +1,90 @@
+namespace = brotherhood_of_steel_east
+
+# Arthur Maxson
+country_event = {
+	id = brotherhood_of_steel_east.1
+	title = brotherhood_of_steel_east.1.title
+	desc = brotherhood_of_steel_east.1.desc
+    picture = BOS_CHAT_eventPicture
+	
+    fire_only_once = yes
+    
+	trigger = {
+        tag = BEC
+        is_year = 2283
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel_east.1" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel_east.1.option.a
+
+        define_ruler = {
+            name = "Arthur"
+            dynasty = "Maxson"
+            age = 16
+            adm = 5
+            dip = 4
+            mil = 6
+        }
+        
+        ai_chance = {
+            factor = 100
+        }
+	}
+    
+    option = {
+		name = brotherhood_of_steel_east.1.option.b
+
+        ai_chance = {
+            factor = 0
+        }
+	}
+}
+
+# "Return to the Brotherhood"
+country_event = {
+	id = brotherhood_of_steel_east.2
+	title = brotherhood_of_steel_east.2.title
+	desc = brotherhood_of_steel_east.2.desc
+    picture = BOS_CHAT_eventPicture
+	
+    fire_only_once = yes
+    
+	trigger = {
+        tag = BRO
+        is_year = 2283
+        BEC = {
+            has_ruler = "Arthur"
+            dynasty = "Maxson"
+        }
+        ai = yes
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - brotherhood_of_steel_east.1" }
+        }
+    }
+    
+	option = {
+		name = brotherhood_of_steel_east.2.option.a
+
+        BEC = {
+            inherit = ROOT
+        }
+	}
+}
+

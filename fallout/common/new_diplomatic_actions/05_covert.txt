@@ -1,0 +1,327 @@
+#---------------------------------------
+# Establish Cult
+#---------------------------------------
+establish_cult = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = establish_cult_alert_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+        has_idea = fallout_propaganda_ideas_7
+		FROM = {
+            NOT = { religion = ROOT }
+            any_owned_province = {
+                religion = PREV
+                is_capital = no
+            }
+		}
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
+	}
+    
+	is_allowed = {
+        is_neighbor_of = FROM
+        has_spy_network_in = {
+            who = FROM
+            value = 100
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
+	}
+	on_accept = {
+        log = "Establish Cult used by [Root.GetName]"
+        add_spy_network_in = { who = FROM value = -100 }
+		FROM = {
+            random_owned_province = {
+                change_religion = ROOT
+            }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
+            }
+        }
+	}
+	on_decline =
+	{
+        add_spy_network_in = { who = FROM value = -100 }
+        FROM = {
+            random_owned_province = {
+                change_religion = ROOT
+            }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
+            }
+        }
+	}
+	
+	ai_acceptance = {
+        add_entry = {
+			name = BASE
+			set_variable = { which = ai_value value = 1000 }
+		}
+	}
+	ai_will_do = {
+		always = yes
+	}
+}
+
+#---------------------------------------
+# Spread Propaganda
+#---------------------------------------
+spread_propaganda_action = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = spread_propaganda_action_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+        has_idea = fallout_propaganda_ideas_1
+		FROM = {
+            NOT = { primary_culture = ROOT }
+            any_owned_province = {
+                culture = PREV
+                is_capital = no
+            }
+		}
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
+	}
+    
+	is_allowed = {
+        is_neighbor_of = FROM
+        has_spy_network_in = {
+            who = FROM
+            value = 50
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
+	}
+	on_accept = {
+        log = "Spread Propaganda used by [Root.GetName]"
+        add_spy_network_in = { who = FROM value = -50 }
+		FROM = {
+            random_owned_province = {
+                change_culture = ROOT
+            }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
+            }
+        }
+	}
+	on_decline =
+	{
+        add_spy_network_in = { who = FROM value = -50 }
+        FROM = {
+            random_owned_province = {
+                change_culture = ROOT
+            }
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 1800
+            }
+        }
+	}
+	
+	ai_acceptance = {
+        add_entry = {
+			name = BASE
+			set_variable = { which = ai_value value = 1000 }
+		}
+	}
+	ai_will_do = {
+		FROM = {
+            ai = yes
+        }
+	}
+}
+
+# random, and random_list don't use a properly random seed in this file, so the results never change. 
+# The country flags mean an event will fire with a properly random seed, which is then used for the randomisation.
+#---------------------------------------
+# Assassinate Leader
+#---------------------------------------
+assassinate_leader = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = assassinate_leader_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+        has_idea = fallout_espionage_ideas_5
+		is_neighbor_of = FROM
+        FROM = { has_regency = no }
+        NOT = { has_country_flag = sent_assassin }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
+	}
+    
+	is_allowed = {
+        is_neighbor_of = FROM
+        has_spy_network_in = {
+            who = FROM
+            value = 100
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ESPIONAGE
+            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+        }
+	}
+	on_accept = {
+        log = "Assassinate Leader used by [Root.GetName]"
+        add_spy_network_in = { who = FROM value = -100 }
+        
+        set_country_flag = sent_assassin
+        
+        FROM = { 
+            set_country_flag = being_assassinated
+            
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 3650
+            }
+        }
+	}
+	on_decline =
+	{
+        add_spy_network_in = { who = FROM value = -100 }
+        
+        set_country_flag = sent_assassin
+        
+        FROM = { 
+            set_country_flag = being_assassinated
+            
+            add_country_modifier = { 
+                name = target_of_espionage
+                duration = 3650
+            }
+        }
+	}
+	
+	ai_acceptance = {
+        add_entry = {
+			name = BASE
+			set_variable = { which = ai_value value = 1000 }
+		}
+	}
+	ai_will_do = {
+		always = yes
+	}
+}
+
+#---------------------------------------
+# Conduct Slave Raid
+#---------------------------------------
+conduct_slave_raid = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = conduct_slave_raid_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+		is_neighbor_of = FROM
+        has_slavery_allowed = yes
+        FROM = {
+            any_owned_province = {
+                NOT = { has_province_modifier = slave_raid }
+            }
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_SLAVE_RAID
+            FROM = { NOT = { has_country_modifier = target_of_slave_raid } }
+        }
+	}
+    
+	is_allowed = {
+        is_neighbor_of = FROM
+        has_spy_network_in = {
+            who = FROM
+            value = 50
+        }
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_SLAVE_RAID
+            FROM = { NOT = { has_country_modifier = target_of_slave_raid } }
+        }
+	}
+	on_accept = {
+        log = "Conduct Slave Raid used by [Root.GetName]"
+        add_spy_network_in = { who = FROM value = -50 }
+        
+        # Prevent overlay if different countries use the action at the same time.
+        every_country = {
+            clr_country_flag = sent_slave_raid
+            clr_country_flag = got_slave_raid
+        }
+        
+        # Allow the event to be triggered
+        set_country_flag = sent_slave_raid
+        FROM = { set_country_flag = got_slave_raid }
+        
+        FROM = {
+            add_country_modifier = { 
+                name = target_of_slave_raid
+                duration = 3650
+            }
+        }
+	}
+	on_decline =
+	{
+        add_spy_network_in = { who = FROM value = -50 }
+        
+        # Prevent overlay if different countries use the action at the same time.
+        every_country = {
+            clr_country_flag = sent_slave_raid
+            clr_country_flag = got_slave_raid
+        }
+        
+        # Allow the event to be triggered
+        set_country_flag = sent_slave_raid
+        FROM = { set_country_flag = got_slave_raid }
+        
+        FROM = {
+            add_country_modifier = { 
+                name = target_of_slave_raid
+                duration = 3650
+            }
+        }
+	}
+	
+	ai_acceptance = {
+        add_entry = {
+			name = BASE
+			set_variable = { which = ai_value value = 1000 }
+		}
+	}
+	ai_will_do = {
+		always = yes
+	}
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+# Map
+is_west_coast_wasteland = {
+    province_id = 6
+}
+
+is_northern_wasteland = {
+    province_id = 7
+}
+
+is_mexican_wasteland = {
+    province_id = 8
+}
+
+is_east_coast_wasteland = {
+    province_id = 9
+}
+
+has_no_previous_discoveries = {
+    NOT = {
+        has_province_modifier = discovery_medics
+        has_province_modifier = discovery_farmers
+        has_province_modifier = discovery_mechanics
+        has_province_modifier = discovery_demolitionists
+        has_province_modifier = discovery_utility_robots
+        has_province_modifier = discovery_survivalists
+        has_province_modifier = discovery_builders
+        has_province_modifier = discovery_scavengers
+        has_province_modifier = discovery_engineers
+        has_province_modifier = discovery_fungal_infestation
+        has_province_modifier = discovery_ghoul_infestation
+        has_province_modifier = discovery_mole_rat_infestation
+        has_province_modifier = discovery_low_level_radiation
+        has_province_modifier = discovery_poor_groundsoil
+        has_province_modifier = discovery_poor_access
+    }
+}
+
+
+

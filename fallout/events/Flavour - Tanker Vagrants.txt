@@ -1,0 +1,54 @@
+namespace = tanger_vagrants
+
+# Tanker Vagrants 
+country_event = {
+	id = tanger_vagrants.1
+	title = tanger_vagrants.1.title
+	desc = tanger_vagrants.1.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	trigger = {
+        NOT = { has_country_flag = vagrants_expelled }
+		NOT = {   
+			any_province = { 
+			    has_province_modifier = vagrants 
+			} 
+		}
+        capital_scope = {
+            region = california_region 
+		}
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - tanger_vagrants.1" }
+        }
+    }
+    
+	mean_time_to_happen = { 
+        months = 24 
+    }
+	
+	option = {
+		name = tanger_vagrants.1.option.a    
+
+		random_owned_province = {
+			limit = {
+				has_port = yes
+            }
+            
+		    add_province_modifier = {
+                name = "vagrants"
+                duration = 1000
+		    }
+    	}
+	}
+
+	option = {
+		name = tanger_vagrants.1.option.b
+        
+		custom_tooltip = vagrants_ttp
+        
+		set_country_flag = vagrants_expelled
+    }
+}

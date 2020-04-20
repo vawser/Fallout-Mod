@@ -1,0 +1,51 @@
+namespace = the_den
+
+# "Decline of the West Coast Slavers"
+country_event = {
+	id = the_den.1
+	title = the_den.1.title
+	desc = the_den.1.desc
+	picture = BARN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DEN
+        NOT = { has_country_flag = decline_of_wcs }
+	}
+	
+    mean_time_to_happen = {
+		months = 12
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - the_den.1" }
+            set_country_flag = decline_of_wcs
+        }
+    }
+    
+	option = {
+		name = the_den.1.option.a
+        
+		add_legitimacy = -25
+		add_prestige = -25
+	}
+
+	option = {
+		name = the_den.1.option.b
+		add_prestige = -100
+        add_legitimacy = -50
+        
+        capital_scope = {
+            change_trade_goods = food
+        }
+	}
+	
+	option = {
+		name = the_den.1.option.c
+        
+		add_prestige = 25
+		add_stability = -1
+	}
+}

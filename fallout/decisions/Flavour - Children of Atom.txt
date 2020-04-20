@@ -1,0 +1,44 @@
+country_decisions = {
+	enact_anti_savage_edict = {
+		potential = {
+			religion = atomic_worship 
+            NOT = { has_country_modifier = anti_savage_edict }
+		}
+		allow =  {
+			years_of_income = 1
+		}
+	  	effect = {
+            add_years_of_income = -1
+            
+			add_country_modifier = {
+				name = anti_savage_edict
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	support_roaming_preachers = {
+		potential = {
+			religion = atomic_worship 
+			NOT = { has_country_modifier = roaming_preachers }
+		}
+		allow =  { 
+			adm_tech = 5
+            years_of_income = 1
+		}
+	  	effect = {
+            add_years_of_income = -1
+            
+			add_country_modifier = {
+				name = roaming_preachers
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

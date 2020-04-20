@@ -1,0 +1,27 @@
+namespace = caliente
+
+# "Surrounded without a Sheriff"
+country_event = {
+	id = caliente.1
+	title = caliente.1.title
+	desc = caliente.1.desc
+	picture = ENCAMPMENT_eventPicture
+
+	trigger = {
+        tag = CLI
+	}
+
+	fire_only_once = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - caliente.1" }
+        }
+    }
+    
+	option = {
+		name = caliente.1.option.a
+        
+		add_prestige = -35
+	}
+}

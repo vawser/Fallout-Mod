@@ -1,0 +1,53 @@
+namespace = nukes
+
+# Set flag to fire a properly random-seeded event
+country_event = {
+	id = nukes.1
+	title = nukes.2.title
+	desc = nukes.2.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    hidden = yes
+
+	option = {
+		name = nukes.2.option.a
+
+        set_country_flag = nuked
+	}
+}
+
+# Actual Nuke event for victim
+country_event = {
+	id = nukes.2
+	title = nukes.2.title
+	desc = nukes.2.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+    major = yes
+    
+	trigger = {
+		has_country_flag = nuked
+	}
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = nuked }
+    }
+
+	option = {
+		name = nukes.2.option.a
+
+        random_owned_province = {
+            nuke_province = yes  
+            random_neighbor_province = { nuke_province = yes }
+            random_neighbor_province = { nuke_province = yes }
+            random_neighbor_province = { nuke_province = yes }
+            random_neighbor_province = { nuke_province = yes }
+            random_neighbor_province = { nuke_province = yes }
+        }
+	}
+}

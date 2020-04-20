@@ -1,0 +1,392 @@
+#-------------------------------------
+# History
+#-------------------------------------
+pf_metropolis = {
+    local_defensiveness = 1
+    allowed_num_of_buildings = 3
+}
+
+pf_city = {
+    local_defensiveness = 0.5
+    allowed_num_of_buildings = 2
+}
+
+pf_town = {
+    local_defensiveness = 0.25
+    allowed_num_of_buildings = 1
+}
+
+# Features
+pf_bunker = {   
+    local_defensiveness = 0.33
+    local_regiment_cost = -0.15
+    local_manpower_modifier = 0.15
+}
+
+pf_armory = {
+    local_regiment_cost = -0.15
+    regiment_recruit_speed = -0.15
+}
+
+pf_industrial_site = {
+    local_production_efficiency = 0.15
+    allowed_num_of_buildings = 1
+}
+
+pf_canyon = {
+    local_defensiveness = 0.25
+}
+
+pf_relay_station = {
+    local_hostile_movement_speed = 0.25
+}
+
+pf_factory = {
+    local_production_efficiency = 0.25
+    allowed_num_of_buildings = 1
+}
+
+pf_science_facility = {
+    local_institution_spread = 0.25
+    allowed_num_of_buildings = 1
+}
+
+pf_cave = {
+    local_defensiveness = 0.5
+    local_development_cost = 0.25
+    local_hostile_movement_speed = 0.25
+}
+
+pf_airport = {
+    local_defensiveness = 0.1
+    regiment_recruit_speed = -0.1  
+}
+
+pf_railyard = {
+    local_defensiveness = 0.1
+    regiment_recruit_speed = -0.1  
+}
+
+pf_vault = {
+    local_defensiveness = 1.0
+    local_development_cost = -0.5
+}
+
+pf_fev_spillage = {
+    local_hostile_attrition = 10
+    max_attrition = 10
+}
+
+impassable_desert = {
+    max_attrition = 15
+	attrition = 15
+	local_hostile_movement_speed = -0.5
+    local_colonial_growth = -50
+}
+
+caravan_post = {
+	local_institution_spread = 0.10
+	province_trade_power_value = 10
+	picture = "province_trade_power_value"
+}
+
+trade_post = {
+	local_institution_spread = 0.10
+	province_trade_power_value = 15
+	local_development_cost = -0.05
+	picture = "province_trade_power_value"
+}
+
+uni_the_hub = {
+	trade_goods_size_modifier = 0.25
+	merchants = 1
+}
+
+uni_vault_city = {
+	global_unrest = -2
+	local_development_cost = -0.25
+	local_tax_modifier = 0.1
+}
+
+uni_gecko = {
+	local_hostile_attrition = 1
+	local_defensiveness = 0.25
+}
+
+uni_rivet_city = {
+	local_defensiveness = 0.33
+	local_manpower_modifier = 0.1
+}
+
+uni_the_den = {
+	local_regiment_cost = -0.25
+	regiment_recruit_speed = -0.25
+}
+
+uni_chicago = {
+	local_development_cost = -0.25
+}
+
+uni_shady_sands = {
+	local_development_cost = -0.1
+	local_tax_modifier = 0.1
+}
+
+uni_manhatten = {
+	trade_goods_size_modifier = 0.1
+}
+
+uni_baltimore = {
+	trade_goods_size_modifier = 0.1
+}
+
+uni_liberty_bell = {
+	republican_tradition = 0.25
+	legitimacy = 0.25
+	horde_unity = 0.25
+	devotion = 0.25
+}
+
+the_glowing_sea = {
+    max_attrition = 15
+    attrition = 15
+	local_hostile_movement_speed = -0.5
+    local_colonial_growth = -50
+}
+
+home_of_the_railroad = {
+    local_hostile_attrition = 1
+}
+
+radioactive_wasteland = {
+    max_attrition = 15
+	attrition = 15
+	local_hostile_movement_speed = -0.5
+    local_colonial_growth = -50
+}
+
+swealting_heat = {
+	local_hostile_movement_speed = -0.99
+}
+ 
+lost_hills_bunker = {
+	local_defensiveness = 0.15 
+	garrison_growth = 0.05
+}
+
+angels_boneyard_medical_university = {
+	local_institution_spread = 0.15
+	development_cost = -0.05
+}
+
+water_merchants = {
+	trade_goods_size = 1.25
+	local_tax_modifier = -0.33
+	local_manpower_modifier = -0.33
+}
+
+vault_city_council  = {
+	local_institution_spread = 0.05 
+	tax_income = 0.5  
+}
+
+opened_the_bison_steve_casino = {
+	local_tax_modifier = 0.1
+	local_development_cost = -0.25
+}
+
+goodsprings_source = {
+	local_production_efficiency = 0.1
+	garrison_growth = 0.25
+} 
+
+hoover_dam = {
+	local_defensiveness = 0.1
+	development_cost = -0.05
+}
+
+jefferson_memorial = {
+	trade_goods_size = 0.25
+	trade_value_modifier = 0.25
+}
+
+black_mountain = {
+	unjustified_demands = -0.05
+}
+
+protectron_manufactory = {
+	regiment_recruit_speed = -0.2
+}
+
+ruins_of_john_henry_eden = {
+	local_defensiveness = 1
+	envoy_travel_time = -0.20
+}
+
+vss_armory = {
+	mil_tech_cost_modifier = -0.025
+}
+
+unidentified_mutagens = {
+	supply_limit = -0.3
+	local_production_efficiency = 0.1
+}
+
+deathclaw_brood = {
+	supply_limit = -0.5
+	max_attrition = 10
+	attrition = 5
+	local_development_cost = 0.2
+}
+
+# Boston - 968
+home_of_the_institute = {
+    local_defensiveness = 1
+    local_hostile_attrition = 5
+}
+
+# Jamaica Plain - 3028
+treasures_of_jamaica_plain = {
+	prestige = 0.5
+}
+
+sunset_sarsaparilla_factory = {
+	trade_goods_size_modifier = 0.1
+}
+
+dog_city = {
+	local_manpower_modifier = 0.45
+	local_development_cost = 0.20
+	local_production_efficiency = -0.33
+	local_tax_modifier = -0.33
+}
+
+zion_canyon = {
+	local_development_cost = -0.25
+}
+
+uni_new_vegas = {
+	local_tax_modifier = 0.5
+	province_trade_power_modifier = 0.15
+}
+
+hv_dervish = {
+	local_defensiveness = 1
+	local_hostile_attrition = 2
+	local_defensiveness = 0.10 
+}
+
+restored_helios = {
+	trade_goods_size = 1.5 
+	local_production_efficiency = 0.15 
+}
+
+megaton_bomb = {
+	local_missionary_strength = -0.05 
+}
+
+joshua_zion  = {
+	global_missionary_strength = 0.02
+    missionaries = 1
+    hostile_attrition = 1
+    horde_unity = 0.5
+}
+
+project_purity = {
+    local_manpower_modifier = 0.15
+    trade_goods_size_modifier = 1.0
+    trade_value = 10
+}
+
+the_pentagon = {
+    local_defensiveness = 1
+}
+
+state_capital = {
+    allowed_num_of_buildings = 1
+    local_colonial_growth = 10
+    local_colonist_placement_chance = 0.05
+}
+
+fmarket_shi = {
+    trade_goods_size_modifier = 1.5
+}
+
+monica_church = {
+	local_missionary_strength = -0.05 
+}
+
+capitol_building = {
+	local_tax_modifier = 0.15
+	local_development_cost = -0.05
+}
+
+national_archives = {
+	local_development_cost = -0.25
+} 
+
+crm_com_bunk = {
+	local_defensiveness = 1
+}
+
+boston_the_castle = {
+	local_defensiveness = 0.5
+}
+
+boston_fenway_stadium = {
+	local_defensiveness = 0.5
+}
+
+boulder_city_ruins = {
+    allowed_num_of_buildings = -1
+	local_development_cost = 0.35
+	supply_limit = -0.2
+	local_build_time = 0.30
+}
+
+toxic_caves = {
+    allowed_num_of_buildings = -2
+	local_development_cost = 1.0
+	supply_limit = -0.5
+	local_build_time = 1.0
+}
+
+the_cloud = {
+	local_hostile_movement_speed = -0.5
+    local_development_cost = 0.50 
+	attrition = 5
+}
+
+riches_of_the_sierra_madre = {
+	tax_income = 32
+}
+
+bootleg_gang = {
+	local_unrest = 3
+	trade_goods_size = 0.025 
+}
+
+museum_of_tech = {
+	local_institution_spread = 0.20
+	local_development_cost = -0.05
+}
+
+aqua_cura = {
+    local_unrest = -1
+    province_trade_power_modifier = 0.20
+    local_tax_modifier = -0.05
+}
+
+sunnyvale_ruins = {
+    local_colonial_growth = -15
+    attrition = 5
+}
+
+nuka_shine_distil = {
+	trade_goods_size_modifier = 0.25
+}
+
+vegas_pumphouse = {
+	trade_goods_size_modifier = 0.25
+	local_development_cost = -0.05
+}

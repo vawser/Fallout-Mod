@@ -1,0 +1,30 @@
+vertibird_fleet_chicago = {
+    potential = {
+		owns_core_province = 1259
+        has_institution = bottlecaps # Tribals wouldn't be able to use them
+	}
+	trigger = {
+		owns_core_province = 1259
+	}
+	
+    movement_speed = 0.1
+    cavalry_power = 0.05
+}
+
+controls_washington = {
+    potential = {
+		owns_core_province = 1229
+	}
+	trigger = {
+		owns_core_province = 1229
+	}
+
+	prestige = 1
+    core_creation = -0.1
+    state_maintenance_modifier = -0.1
+    
+    legitimacy = 1
+    republican_tradition = 0.01
+    devotion = 1
+    horde_unity = 1
+}

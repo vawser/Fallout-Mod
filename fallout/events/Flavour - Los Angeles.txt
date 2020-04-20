@@ -1,0 +1,45 @@
+namespace = los_angeles
+
+country_event = {
+	id = los_angeles.1
+	title = los_angeles.1.title
+	desc = los_angeles.1.desc
+    picture = GOV_RUINS_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owns = 409
+        NOT = { tag = CAE }
+		NOT = { is_at_war = yes }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - los_angeles.13" }
+        }
+    }
+    
+	option = {
+		name = los_angeles.1.option.a
+		
+		add_country_modifier = {
+			name = boneyard_library
+			duration = -1
+		}
+
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = los_angeles.1.option.b
+		
+		add_years_of_income = 1
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+}

@@ -1,0 +1,32 @@
+own_header = {
+    custom_trigger_tooltip = {
+		tooltip = OWN_HEADER
+		always = yes
+    }
+}
+
+is_valid_caravan_province = {
+    is_sea = no
+    NOT = { province_id = 6 }
+    NOT = { province_id = 7 }
+    NOT = { province_id = 8 }
+    NOT = { province_id = 9 }
+}
+
+has_caravan_marker = {
+    OR = {
+        has_province_modifier = crimson_caravans_marker
+        has_province_modifier = griffin_wares_marker
+        has_province_modifier = durable_dunns_marker
+        has_province_modifier = cassidy_caravans_marker
+        has_province_modifier = happy_trails_caravan_company_marker
+        has_province_modifier = als_travelling_wares_marker
+        has_province_modifier = eybo_wares_marker
+        has_province_modifier = grayson_caravans_marker
+        has_province_modifier = putts_wares_marker
+        has_province_modifier = kalicos_caravan_company_marker
+        has_province_modifier = irons_munition_company_marker
+        has_province_modifier = gleeson_caravans_marker
+    }
+}
+

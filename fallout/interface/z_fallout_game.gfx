@@ -1,0 +1,666 @@
+spriteTypes = {	
+    # For dynamic assets
+
+    #-------------------------
+	# Religion
+	#-------------------------
+	spriteType = {
+		name = "GFX_icon_religion"
+		texturefile = "gfx//interface//gameplay//icon_religion.tga"             # 64px
+		noOfFrames = 40
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_icon_religion_small"
+		texturefile = "gfx//interface//gameplay//icon_religion_small.tga"       # 32px
+		noOfFrames = 40
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_religion_icon_strip"
+		texturefile = "gfx//interface//gameplay//icon_religion_small.dds"       # 32px
+		transparencecheck = yes
+		noOfFrames = 40
+	}
+	spriteType = {
+		name = "GFX_province_view_religion"
+		texturefile = "gfx//interface//gameplay//province_view_religion.tga"    # 44px
+		noOfFrames = 40
+		loadType = "INGAME"
+		allwaystransparent = yes
+	}
+    spriteType = {
+		name = "GFX_country_icon_religion"
+		texturefile = "gfx//interface//gameplay//country_icon_religion.dds"   # 56px
+		noOfFrames = 40
+	}
+    
+    spriteType = {
+		name = "GFX_piety_icon_high"
+		texturefile = "gfx/interface/piety_icon_high.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_piety_icon_low"
+		texturefile = "gfx/interface/piety_icon_low.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_hindu_deities_strip"
+		texturefile = "gfx//interface//banner_green_194.dds"
+		noOfFrames = 1
+	}
+    
+    spriteType = {
+		name = "GFX_fetishists_strip"
+		texturefile = "gfx//interface//fetishists_strip.dds"
+		noOfFrames = 17
+	}
+    
+    spriteType = {
+		name = "GFX_low_harmony"
+		texturefile = "gfx/interface/low_harmony.dds"
+	}
+    spriteType = {
+		name = "GFX_high_harmony"
+		texturefile = "gfx/interface/high_harmony.dds"
+	}	
+    
+    spriteType = {
+		name = "GFX_low_karma"
+		texturefile = "gfx/interface/low_karma.dds"
+	}
+
+	spriteType = {
+		name = "GFX_high_karma"
+		texturefile = "gfx/interface/high_karma.dds"
+	}
+    spriteType = {
+		name = "GFX_russian_icons_strip"
+		texturefile = "gfx//interface//orthodox_icon_strip.dds"
+		noOfFrames = 20
+	}	
+	spriteType = {
+		name = "GFX_patriarchy_slot"
+		texturefile = "gfx//interface//gameplay//patriarchy_slot.dds"
+	}	
+	spriteType = {
+		name = "GFX_patriarch_icon"
+		texturefile = "gfx//interface//gameplay//patriarch_icon.dds"
+		noOfFrames = 2
+	}
+    
+    # Schools
+    spriteType = {
+		name = "GFX_icon_speciality_chems"
+		texturefile = "gfx/interface/religion/speciality_chems.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_speciality_slaves"
+		texturefile = "gfx/interface/religion/speciality_slaves.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_speciality_technology"
+		texturefile = "gfx/interface/religion/speciality_technology.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_speciality_caps"
+		texturefile = "gfx/interface/religion/speciality_caps.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_speciality_weaponry"
+		texturefile = "gfx/interface/religion/speciality_weaponry.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_speciality_water"
+		texturefile = "gfx/interface/religion/speciality_water.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_speciality_explosives"
+		texturefile = "gfx/interface/religion/speciality_explosives.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_speciality_alcohol"
+		texturefile = "gfx/interface/religion/speciality_alcohol.dds"
+	}
+    
+    #-------------------------
+    # Tradegoods
+    #-------------------------
+    spriteType = {
+		name = "GFX_resource_icon"
+		texturefile = "gfx//interface//gameplay//resources.tga"               # 64px
+		noOfFrames = 28
+		loadType = "INGAME"
+		
+	}
+	spriteType = {
+		name = "GFX_resource_icon_transparent"
+		texturefile = "gfx//interface//gameplay//resources.tga"               # 64px
+		noOfFrames = 28
+		loadType = "INGAME"
+		
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_resource_icon_small"
+		texturefile = "gfx//interface//gameplay//resources_small.dds"         # 32px
+		noOfFrames = 28
+		loadType = "INGAME"
+	}	
+    
+    #-------------------------
+    # Government
+    #-------------------------
+    
+    # Russian
+    textSpriteType = {
+		name = "GFX_russian_ability_ADM"
+		texturefile = "gfx//interface//russian_adm_button.dds"
+        loadType = "INGAME"
+		#transparencecheck = yes	
+	}
+    
+    textSpriteType = {
+		name = "GFX_russian_ability_DIP"
+		texturefile = "gfx//interface//russian_dip_button.dds"
+        loadType = "INGAME"
+		#transparencecheck = yes	
+	}
+    
+    textSpriteType = {
+		name = "GFX_russian_ability_MIL"
+		texturefile = "gfx//interface//russian_mil_button.dds"
+        loadType = "INGAME"
+		#transparencecheck = yes	
+	}
+    
+    # Iqta
+    spriteType = {
+		name = "GFX_iqta_bg"
+		texturefile = "gfx/interface/iqta_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_efficient_tax_farming_button"
+		texturefile = "gfx//interface//efficient_tax_farming_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_land_acquisition_button"
+		texturefile = "gfx//interface//land_acquisition_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_lenient_taxation_button"
+		texturefile = "gfx//interface//lenient_taxation_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+    
+    # Tribal Allegiance
+    spriteType = {
+		name = "GFX_tribal_federation_bg"
+		texturefile = "gfx/interface/tribal_federation_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_enlist_general_button"
+		texturefile = "gfx//interface//enlist_general_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_train_horsemanship_button"
+		texturefile = "gfx//interface//train_horsemanship_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_conscript_from_tribes_button"
+		texturefile = "gfx//interface//conscript_from_tribes_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}		
+    
+    # Mamluk
+    spriteType = {
+		name = "GFX_mamluk_mechanic_bg"
+		texturefile = "gfx/interface/mamluk_mechanic_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_promote_culture_in_government_button"
+		texturefile = "gfx//interface//promote_culture_in_government_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_sell_off_culture_slaves_button"
+		texturefile = "gfx//interface//sell_off_culture_slaves_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_recruit_from_culture_lands_button"
+		texturefile = "gfx//interface//recruit_from_culture_lands_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+    
+    # Theocracy
+    spriteType = {
+		name = "GFX_feudal_theocracy_bg"
+		texturefile = "gfx/interface/feudal_theocracy_bg.dds"
+	}
+    
+    spriteType = {
+		name = "GFX_seize_clerical_holdings_button"
+		texturefile = "gfx//interface//seize_clerical_holdings_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_invite_minorities_button"
+		texturefile = "gfx//interface//invite_minorities_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+	spriteType = {
+		name = "GFX_sanction_holy_war_button"
+		texturefile = "gfx//interface//sanction_holy_war_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}	
+    
+    #-------------------------
+	# Technology Groups
+	#-------------------------
+    spriteType = {
+		name = "GFX_tech_group_strip"
+		texturefile = "gfx//interface//gameplay//tech_group_strip_alt.dds"
+		transparencecheck = yes	
+		noOfFrames = 24
+	}
+    
+    #-------------------------
+    # Disasters
+    #-------------------------
+    # spriteType = {
+		# name = "GFX_disaster_estate_bureaucrats_disaster"
+		# texturefile = "gfx//interface//disasters//estate_bureaucrats_disaster.dds"
+		# noOfFrames = 3
+		# loadType = "INGAME"
+	# }
+
+    #-------------------------
+    # Natives
+    #-------------------------
+    spriteType = {
+		name = "GFX_natives"
+		texturefile = "gfx//interface//gameplay//natives.dds"
+		noOfFrames = 30
+		loadType = "INGAME"
+	}
+    
+    #-------------------------
+    # Unit Types
+    #-------------------------
+    spriteType = {	
+		name = "GFX_unit_types_strip_mil_view"
+		texturefile = "gfx//interface//ui//icons//unit_types_strip.tga"
+		noOfFrames = 9
+		loadType = "INGAME"
+		effectFile = "gfx/FX/buttonstate.lua"
+		transparencecheck = no
+	}
+	
+	spriteType = {	
+		name = "GFX_unit_types_strip_mil_center_view"
+		texturefile = "gfx//interface//ui//icons//unit_types_center_strip.tga"
+		noOfFrames = 8
+		loadType = "INGAME"
+		effectFile = "gfx/FX/buttonstate.lua"
+		transparencecheck = no
+	}
+
+    spriteType = {	
+		name = "GFX_unit_types_strip"
+		texturefile = "gfx//interface//ui//icons//unit_types_strip.tga"
+		noOfFrames = 9
+		loadType = "INGAME"
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
+	}
+
+	spriteType = {	
+		name = "GFX_unit_types_strip_nontransp"
+		texturefile = "gfx//interface//ui//icons//unit_types_strip.tga"
+		noOfFrames = 9
+		loadType = "INGAME"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+    
+    spriteType = {	
+		name = "GFX_unit_types_strip_bg"
+		texturefile = "gfx//interface//ui//icons//unit_types_strip_bg.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+		transparencecheck = no
+	}
+    
+    #-------------------------
+    # Nation Designer
+    #-------------------------
+    # Files:
+    #   gfx//interface//client_state_symbols_large.dds
+    #   gfx//interface//client_state_symbols_medium.dds
+    #   gfx//interface//client_state_symbols_small.dds
+    #   gfx//interface//client_state_symbols_mini.dds
+    #   gfx//interface//client_state_symbols_flag_smallest.dds
+    #   gfx//interface//client_state_symbols_trade_flags.dds
+    
+    maskedShieldType = {
+		name = "thinshield"
+		textureFile1 = "gfx//interface//shield_frame.tga"
+		textureFile2 = "gfx//interface//shield_mask.tga"
+		effectFile = "gfx//FX//maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_medium.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+    
+    spriteType = {
+		name = "GFX_client_font_flag_overlay"
+		texturefile = "gfx/interface/nation_designer//client_state_symbols_trade_flags.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+    
+    maskedShieldType = {
+		name = "GFX_minishield_vassal"
+		textureFile1 = "gfx//interface//minishield.tga"
+		textureFile2 = "gfx//interface//minimask.tga"
+		effectFile = "gfx//FX//maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_minishield_union"
+		textureFile1 = "gfx//interface//minishield.tga"
+		textureFile2 = "gfx//interface//minimask.tga"
+		effectFile = "gfx//FX//maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_minishield_colony"
+		textureFile1 = "gfx//interface//minishield.tga"
+		textureFile2 = "gfx//interface//minimask.tga"
+		effectFile = "gfx//FX//maskedflag.lua"
+		textureFile3 = "gfx//interface//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+    
+    maskedShieldType = {
+		name = "GFX_flag_trade"
+		textureFile1 = "gfx\\interface\\small_trade_flags.dds"
+		textureFile2 = "gfx\\interface\\small_trade_flags_mask.dds"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_trade_flags.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_flag_small"
+		textureFile1 = "gfx\\interface\\flag_small_overlay.dds"
+		textureFile2 = "gfx\\interface\\flag_small_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_flag_smallest.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+
+	maskedShieldType = {
+		name = "GFX_flag_smallest"
+		textureFile1 = "gfx\\interface\\flag_smallest_overlay.dds"
+		textureFile2 = "gfx\\interface\\flag_smallest_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_flag_smallest.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}	
+	
+	maskedShieldType = {
+		name = "GFX_shield_small"
+		textureFile1 = "gfx/interface/small_shield_overlay.dds"
+		textureFile2 = "gfx/interface/small_shield_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_Navy_shield_small"
+		textureFile1 = "gfx/interface/small_navy_flag_overlay.dds"
+		textureFile2 = "gfx/interface/small_navy_flag_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+
+	maskedShieldType = {
+		name = "GFX_Navy_shield_small_flip"
+		textureFile1 = "gfx/interface/small_navy_flag_overlay_flip.tga"
+		textureFile2 = "gfx/interface/small_navy_flag_mask_flip.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_shield_small_claim"
+		textureFile1 = "gfx/interface/small_shield_overlay_claim.dds"
+		textureFile2 = "gfx/interface/small_shield_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_shield_small_permanent_claim"
+		textureFile1 = "gfx/interface/small_shield_overlay_permanent_claim.dds"
+		textureFile2 = "gfx/interface/small_shield_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}	
+	
+	maskedShieldType = {
+		name = "GFX_shield_small_territorial_core"
+		textureFile1 = "gfx/interface/small_shield_overlay_territorial_cores.dds"
+		textureFile2 = "gfx/interface/small_shield_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_mini.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}	
+	
+	maskedShieldType = {
+		name = "GFX_shield_fancy"
+		textureFile1 = "gfx/interface/shield_fancy_overlay.dds"
+		textureFile2 = "gfx/interface/shield_fancy_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		transparencecheck = yes
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_large.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+    
+    maskedShieldType = {
+		name = "GFX_shield_medium"
+		textureFile1 = "gfx/interface/shield_medium_overlay.dds"
+		textureFile2 = "gfx/interface/shield_medium_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_small.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_shield_thin"
+		textureFile1 = "gfx/interface/shield_frame.dds"
+		textureFile2 = "gfx/interface/shield_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_medium.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+    
+    maskedShieldType = {
+		name = "GFX_mega_flag"
+		textureFile1 = "gfx/interface/mega_flag_overlay.dds"
+		textureFile2 = "gfx/interface/mega_flag_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		transparencecheck = yes
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_large.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+	
+	maskedShieldType = {
+		name = "GFX_rev_target"
+		textureFile1 = "gfx/interface/rev_target_overlay.dds"
+		textureFile2 = "gfx/interface/rev_target_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		transparencecheck = yes
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_small.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+    
+    maskedShieldType = {
+		name = "GFX_crusade_target_shield"
+		textureFile1 = "gfx/interface/crusade_target_shield.dds"
+		textureFile2 = "gfx/interface/shield_medium_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//nation_designer//client_state_symbols_medium.dds"
+		noOfFrames = 120
+		overlay_frames_per_row = 32
+		overlay_rows = 4
+	}
+    
+    #-------------------------
+    # Centers of Trade
+    #-------------------------
+    spriteType = {
+		name = "GFX_center_of_trade_inland_1"
+		texturefile = "gfx//interface//cot_icons//cot_settlement.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_center_of_trade_inland_2"
+		texturefile = "gfx//interface//cot_icons//cot_town.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_center_of_trade_inland_3"
+		texturefile = "gfx//interface//cot_icons//cot_metropolis.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_center_of_trade_coastal_1"
+		texturefile = "gfx//interface//cot_icons//cot_settlement.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_center_of_trade_coastal_2"
+		texturefile = "gfx//interface//cot_icons//cot_town.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_center_of_trade_coastal_3"
+		texturefile = "gfx//interface//cot_icons//cot_metropolis.dds"
+		loadType = "INGAME"
+	}
+    
+    #-------------------------
+    # Trading Policy
+    #-------------------------
+    spriteType = {
+		name = "GFX_TP_encampment"
+		texturefile = "gfx/interface/trading_policies/encampment.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TP_motel"
+		texturefile = "gfx/interface/trading_policies/motel.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TP_nuke"
+		texturefile = "gfx/interface/trading_policies/nuke.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TP_outpost"
+		texturefile = "gfx/interface/trading_policies/outpost.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TP_power_armor"
+		texturefile = "gfx/interface/trading_policies/power_armor.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+    spriteType = {
+		name = "GFX_TP_sea"
+		texturefile = "gfx/interface/trading_policies/sea.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+}
+

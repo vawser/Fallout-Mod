@@ -1,0 +1,418 @@
+namespace = big_mountain
+ 
+ # "A Shift in Focus" (Klein)
+country_event = {
+	id = big_mountain.1
+	title = big_mountain.1.title
+	desc = big_mountain.1.desc
+	picture = HEXCRETE_ARCHIPELAGO_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TNK 
+			AND = {
+				has_reform = think_tank_reform
+				NOT = { tag = FBZ }
+			}
+		}
+		NOT = { has_country_modifier = loboto_bmt }
+		NOT = { has_country_modifier = cyberdog_bmt }
+		NOT = { has_country_modifier = hvy_construction_bmt }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.1" }
+        }
+    }
+    
+	option = {	
+		name = big_mountain.1.option.a		
+		add_country_modifier = {
+    		name =  loboto_bmt
+    		duration = -1
+		}
+		
+		ai_chance = {
+		    factor = 70
+		}
+	}
+	
+	option = {	
+		name = big_mountain.1.option.b	  	
+		add_country_modifier = {
+    		name =  cyberdog_bmt
+    		duration = -1
+		}
+		
+		ai_chance = {
+		    factor = 20
+		}
+		
+	}
+	
+	option = {	
+		name = big_mountain.1.option.c		
+		add_country_modifier = {
+    		name =  hvy_construction_bmt
+    		duration = -1
+		}
+		
+		ai_chance = {
+		    factor = 10
+		}
+	}
+}
+
+# "A Dogbowl of Psycho"
+country_event = {
+	id = big_mountain.2
+	title = big_mountain.2.title
+	desc = big_mountain.2.desc
+	picture = HEXCRETE_ARCHIPELAGO_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = cyberdog_bmt 
+		any_owned_province = { trade_goods = drugs }
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.2" }
+        }
+    }
+    
+	option = {	
+		name = big_mountain.2.option.a	
+		add_country_modifier = {
+    		name =  cyberdog_psy
+    		duration = 600 
+		}
+	}
+}
+
+# "X-8 research facility"
+country_event = {
+	id = big_mountain.3
+	title = big_mountain.3.title
+	desc = big_mountain.3.desc
+	picture = HEXCRETE_ARCHIPELAGO_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = cyberdog_bmt 
+		owns_core_province = 1388
+		NOT = { 
+		    1388 = { 
+			    has_province_modifier = cyberdog_facility
+			}
+		}
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.3" }
+        }
+    }
+    
+	option = {	
+		name = big_mountain.3.option.a	
+
+		1388 = {
+		    add_base_manpower = 3 
+			add_permanent_province_modifier = {
+    			name =  cyberdog_facility
+    			duration = -1  
+			}
+		}
+	}
+}
+
+# "Irregulaties amongst Lobotomites"
+country_event = {
+	id = big_mountain.4
+	title = big_mountain.4.title
+	desc = big_mountain.4.desc
+	picture = HEXCRETE_ARCHIPELAGO_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = loboto_bmt
+		owns_core_province = 1389
+		has_dlc = "Rights of Man"
+		NOT = { 
+		    1389 = { 
+			    has_province_modifier = cuckoo_nest 
+			}
+		}
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.4" }
+        }
+    }
+    
+	option = {	
+		name = big_mountain.4.option.a	
+		add_stability = -1 
+		
+		ai_chance = {
+		    factor = 50
+		}
+	}	
+	
+	option = {	
+		name = big_mountain.4.option.b	
+		1389 = {
+		    add_base_manpower = 3 
+			add_base_production = 1
+			add_base_tax = 1
+			change_religion = fetishism
+			add_permanent_province_modifier = {
+    		    name = cuckoo_nest 
+    		    duration = -1  
+		    }
+		}
+		ai_chance = {
+		    factor = 50
+		}
+	}
+
+	option = {	
+		name = big_mountain.4.option.c
+		1389 = {
+		    add_base_manpower = 3 
+			add_base_production = 3
+			add_base_tax = 3
+			change_religion = fetishism
+			add_permanent_province_modifier = {
+    		    name =  cuckoo_nest 
+    		    duration = -1  
+		    }
+		}
+		1389 = {
+		    add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+			change_religion = fetishism
+		}		
+        change_religion = fetishism
+		unlock_cult = tribal_toaster_worship
+		
+		ai_chance = {
+		    factor = 0
+		}
+	}
+}
+
+# "Toaster Primacy"
+country_event = {
+	id = big_mountain.5
+	title = big_mountain.5.title
+	desc = big_mountain.5.desc
+	picture = HEXCRETE_ARCHIPELAGO_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TNK 
+		has_country_modifier = loboto_bmt
+		has_dlc = "Rights of Man"
+		has_unlocked_cult = tribal_toaster_worship
+		religion = fetishism
+	}
+
+	mean_time_to_happen = {
+		months = 20 
+	}	
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.5" }
+        }
+    }
+    
+	option = {	
+		name = big_mountain.5.option.a	
+		
+		define_ruler = {
+			name = "Toaster"
+			dynasty = ""
+		    adm = 3
+		    dip = 2
+		    mil = 6			
+		}
+        add_ruler_personality = immortal_personality
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = yes
+		}
+		
+		ai_chance = {
+		    factor = 0
+		}
+	}
+	
+	option = {	
+		name = big_mountain.5.option.b	
+		add_stability = -1 
+		
+		ai_chance = {
+		    factor = 10
+		}
+	}
+}
+
+# "Hexcrete Constructions"
+country_event = {
+	id = big_mountain.6
+	title = big_mountain.6.title
+	desc = big_mountain.6.desc
+	picture = HEXCRETE_ARCHIPELAGO_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = hvy_construction_bmt
+		owns_core_province = 1387
+		NOT = { has_global_flag = hvy_hex_bld }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.6" }
+        }
+    }
+    
+	option = {	
+		name = big_mountain.6.option.a	
+		1387 = {
+		    add_permanent_province_modifier = {
+    		    name =  exper_dev_one
+    		    duration = -1  
+		    }
+		}
+		
+		ai_chance = {
+		    factor = 80
+		}
+	}	
+	
+	option = {	
+		name = big_mountain.6.option.b	
+		1387 = {
+		    add_base_manpower = 1 
+			add_base_production = 1
+			add_base_tax = 1
+		}
+		
+		ai_chance = {
+		    factor = 20
+		}
+	}
+}
+
+# "Success in the Hexcrete Archipelago"
+country_event = {
+	id = big_mountain.7
+	title = big_mountain.7.title
+	desc = big_mountain.7.desc
+	picture = HEXCRETE_ARCHIPELAGO_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = hvy_construction_bmt
+		owns_core_province = 1387
+		1387 = {
+		    has_province_modifier = exper_dev_one
+		}
+	}
+
+    immediate = { 
+	    1387 = {
+	        remove_province_modifier = exper_dev_one 
+		}
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.7" }
+        }
+    }
+	
+	mean_time_to_happen = {
+		months = 85
+	}	
+	
+	option = {	
+		name = big_mountain.7.option.a	
+		1387 = {
+		    add_permanent_province_modifier = {
+    		    name =  hex_result
+    		    duration = -1  
+		    }
+		    add_base_manpower = 3
+			add_base_production = 3
+			add_base_tax = 3			
+		}
+	}
+}
+
+# "A Shift in Focus" (Mobius)
+country_event = {
+	id = big_mountain.8
+	title = big_mountain.8.title
+	desc = big_mountain.8.desc
+	picture = BIG_MT_THE_SINK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FBZ 
+		NOT = { has_country_modifier = robo_scorp_bmt }
+		NOT = { has_country_modifier = esp_bmt }
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - big_mountain.8" }
+        }
+    }
+    
+	option = {	
+		name = big_mountain.8.option.a		
+		add_country_modifier = {
+    		name =  robo_scorp_bmt
+    		duration = -1
+		}
+		change_primary_culture = robo_scorpion
+		add_accepted_culture = robot
+		
+		ai_chance = {
+		    factor = 80
+		}
+	}
+	
+	option = {	
+		name = big_mountain.8.option.b	  	
+		add_country_modifier = {
+    		name =  esp_bmt
+    		duration = -1
+		}
+		
+		ai_chance = {
+		    factor = 20
+		}
+	}
+}

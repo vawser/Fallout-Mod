@@ -1,0 +1,26 @@
+country_decisions = {
+    # Add 'buy' menus for each caravan that a nation can open whilst they reside in their land
+    # Options will cost a massive amount of gold for permanant benefits
+
+	check_caravan_inventory = {
+		potential = {
+            NOT = { has_country_flag = in_buy_menu }
+		}
+		allow = {
+            capital_scope = {
+                any_province = {
+                    region = PREV
+                    has_caravan_marker = yes
+                }
+            }
+		}
+		
+		effect = {
+			country_event = { id = caravans.20 }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

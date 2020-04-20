@@ -1,0 +1,53 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = settlement_government
+add_government_reform = militarized_settlement_reform
+technology_group = tech_wastelander
+religion = secular
+primary_culture = railroad
+capital = 1278
+
+set_wastelander_race = yes
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+
+
+
+
+
+
+set_slavery_forbidden = yes
+set_gambling_allowed = yes
+set_prostitution_allowed = yes
+
+set_narcotics_allowed = yes
+set_scavenging_allowed = yes
+
+#--------------------------------
+# Relationships
+#--------------------------------
+historical_rival = INS
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Desdemona"
+        dynasty = "Evangelion"
+		adm = 6
+		dip = 4
+		mil = 5
+        birth_date = 2257.1.1
+	}
+    
+    hidden_effect = {
+        add_opinion = {
+            who = INS
+            modifier = ideological_enemies
+        }
+    }
+}

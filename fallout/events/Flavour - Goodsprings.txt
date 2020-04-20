@@ -1,0 +1,61 @@
+namespace = goodsprings
+
+# "Ain't That a Kick in the Head"
+country_event = {
+	id = goodsprings.0
+	title = goodsprings.0.title
+	desc = goodsprings.0.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+    
+	trigger = {
+		tag = GDS
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - goodsprings.1" }
+        }
+    }
+    
+	option = {	# Offer the Courier assistance 
+		name = goodsprings.0.option.a	
+			# Back in the Saddle 
+			country_event = { 
+				id = goodsprings.5
+				days = 34
+			}
+			add_treasury = -20	
+	}	
+	
+	option = {	# They Went That-a-Way
+		name = goodsprings.0.option.b	
+
+	}
+}
+
+# Mission events TBA 
+
+# "Back in the Saddle"
+country_event = {
+	id = goodsprings.5
+	title = goodsprings.5.title
+	desc = goodsprings.5.desc
+	picture = GOODSPRINGS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - goodsprings.5" }
+        }
+    }
+    
+	option = {	# They Went That-a-Way 
+		name = goodsprings.5.option.a	
+		add_army_tradition = 10		
+		add_yearly_manpower = 0.75
+		add_mil_power = 100	
+	}	
+}

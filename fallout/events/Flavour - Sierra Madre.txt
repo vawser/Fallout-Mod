@@ -1,0 +1,39 @@
+namespace = wasteland_hazards
+
+# "The Cloud"
+country_event = {
+    id = wasteland_hazards.1
+    title = wasteland_hazards.1.title
+    desc = wasteland_hazards.1.desc
+    picture = TOXIC_POOLS_eventPicture
+
+    is_triggered_only = yes
+    
+    trigger = {
+        any_owned_province = {
+            area = sierra_madre_area
+            units_in_province = 1
+        }
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - wasteland_hazards.1" }
+        }
+    }
+    
+    option = {
+        name = wasteland_hazards.1.option.a
+        
+        sierra_madre_area = {
+            kill_units = {
+                who = ROOT
+            }
+        }
+    }
+}
+

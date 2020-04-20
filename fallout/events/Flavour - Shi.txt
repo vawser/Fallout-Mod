@@ -1,0 +1,968 @@
+namespace = shi
+
+# "Chosing the next Head Advisor"
+country_event = {
+	id = shi.1
+	title = shi.1.title
+	desc = shi.1.desc
+    picture = GOV_RUINS_POLLUTED_eventPicture
+
+    is_triggered_only = yes
+	
+	trigger = {	
+		NOT = { has_country_flag = in_shi_heir_selection }
+		tag = SHI 
+    }
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.1" }
+			set_country_flag = in_shi_heir_selection
+        }
+    }
+    
+	option = {
+		name = shi.1.option.a
+		trigger = {
+		    faction_in_power = chemistry_and_mechanics_researchers
+		}
+		define_ruler = {
+			age = 30
+		    claim = 100
+		}
+		if = {
+		    limit = {
+				NOT = { stability = 1 }
+			}
+		    add_legitimacy = -25
+		}
+		add_ruler_modifier = { name = chemistry_and_mechanics_researchers_head_advisor } 
+		clr_country_flag = in_shi_heir_selection
+		custom_tooltip = shi_fac1_select
+		ai_chance = {
+			factor = 33
+		}        
+	}
+	
+	option = {
+		name = shi.1.option.b
+		trigger = {
+		    faction_in_power = xeno_and_botany_researchers
+		}
+		define_ruler = {
+			age = 30
+		    claim = 100
+		}
+		if = {
+		    limit = {
+				NOT = { stability = 1 }
+			}
+		    add_legitimacy = -25
+		}
+		add_ruler_modifier = { name = xeno_and_botany_researchers_head_advisor }
+		clr_country_flag = in_shi_heir_selection
+		custom_tooltip = shi_fac2_select
+		ai_chance = {
+			factor = 33
+		}        
+	}
+	
+	option = {
+		name = shi.1.option.c
+		trigger = {
+		    faction_in_power = medical_and_fev_researchers
+		}
+		define_ruler = {
+			age = 30
+		    claim = 100
+		}
+		if = {
+		    limit = {
+				NOT = { stability = 1 }
+			}
+		    add_legitimacy = -25
+		}
+		add_ruler_modifier = { name = medical_and_fev_researchers_head_advisor } 	
+		clr_country_flag = in_shi_heir_selection
+		custom_tooltip = shi_fac3_select
+		ai_chance = {
+			factor = 33
+		}        
+	}
+}
+
+# "The Emperor Predicts End of Isolationism" 
+country_event = {
+	id = shi.3
+	title = shi.3.title
+	desc = shi.3.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 3
+	}	
+	
+	trigger = {
+		tag = SHI
+		NOT = { owns = 384 }
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.3" }
+        }
+    }
+    
+	option = {
+		name = shi.3.option.a
+		add_claim = 384
+		set_country_flag = remove_brotherhood_from_shitown
+		    hidden_effect = {
+			    every_country = {
+                    limit = { has_reform = ncr_reform }
+                    country_event = {
+                        id = ncr.6
+                        days = 35
+                    }				
+				}
+            }				
+		ai_chance = {
+			factor = 100
+		}        
+	}
+	
+	option = {
+		name = shi.3.option.b
+		add_stability = 1
+		ai_chance = {
+			factor = 0
+		}        
+	}
+}
+
+# "Shi Town Harbour" 
+country_event = {
+	id = shi.4
+	title = shi.4.title
+	desc = shi.4.desc
+    picture = WASTE_BY_WATER_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 14
+	}	
+	
+	trigger = {
+		tag = SHI
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.4" }
+        }
+    }
+    
+	option = {
+		name = shi.4.option.a
+		383 = {
+			add_permanent_province_modifier = {
+    			name = shi_fish_market
+    			duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}        
+	}
+	
+	option = {
+		name = shi.4.option.b
+		383 = {
+			add_permanent_province_modifier = {
+    			name = shi_fish_market
+    			duration = -1
+			}
+			add_base_production = 2
+		}			
+		add_treasury = -65
+		ai_chance = {
+			factor = 0
+		}        
+	}
+}
+
+#"Final Fight of The Dragon and Lo Pan" 
+country_event = {
+	id = shi.5
+	title = shi.5.title
+	desc = shi.5.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 34
+	}	
+	
+	trigger = {
+		tag = SHI
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.5" }
+        }
+    }
+    
+	option = {
+		name = shi.5.option.a
+		hidden_effect = {
+			random_list = {
+	        	50 = {
+                	country_event = {
+                    	id = shi.6
+                    	days = 5
+                	}			
+	        	}
+	        	50 = {
+                	country_event = {
+                    	id = shi.7
+                    	days = 5
+                	}			
+	        	}
+			}
+			set_country_flag = betting_on_dragon
+		}
+		add_years_of_income = -0.40
+		custom_tooltip = shi_supports_dragon
+		ai_chance = {
+			factor = 33
+		}        
+	}
+	
+	option = {
+		name = shi.5.option.b
+		hidden_effect = {
+			random_list = {
+	        	50 = {
+                	country_event = {
+                    	id = shi.6
+                    	days = 5
+                	}			
+	        	}
+	        	50 = {
+                	country_event = {
+                    	id = shi.7
+                    	days = 5
+                	}			
+	        	}
+			}
+			set_country_flag = betting_on_lopan		
+		}
+		add_years_of_income = -0.40
+		custom_tooltip = shi_supports_lopan
+		ai_chance = {
+			factor = 33
+		}        
+	}
+	
+	option = {
+		name = shi.5.option.c
+		ai_chance = {
+			factor = 33
+		}        
+	}
+}
+
+#"The Dragon is Victorious!" 
+country_event = {
+	id = shi.6
+	title = shi.6.title
+	desc = shi.6.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.6" }
+        }
+    }
+    
+	option = {
+		name = shi.6.option.a
+		trigger = {
+		    has_country_flag = betting_on_dragon
+		}
+		add_years_of_income = 0.80
+		add_stability = 1
+		clr_country_flag = betting_on_dragon
+		ai_chance = {
+			factor = 100
+		}        
+	}
+	
+	option = {
+		name = shi.6.option.b
+		trigger = {
+		    has_country_flag = betting_on_lopan
+		}
+		clr_country_flag = betting_on_lopan
+		set_country_flag = angsty_dragon
+		ai_chance = {
+			factor = 100
+		}        
+	}
+}
+
+#"Lo Pan is Victorious!" 
+country_event = {
+	id = shi.7
+	title = shi.7.title
+	desc = shi.7.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.7" }
+        }
+    }
+    
+	option = {
+		name = shi.7.option.a
+		trigger = {
+		    has_country_flag = betting_on_lopan
+		}
+		add_years_of_income = 0.80
+		add_devotion = 15
+		clr_country_flag = betting_on_lopan
+		ai_chance = {
+			factor = 100
+		}        
+	}
+
+	option = {
+		name = shi.7.option.b
+		trigger = {
+		    has_country_flag = betting_on_dragon
+		}
+		clr_country_flag = betting_on_dragon
+		set_country_flag = angsty_lopan
+		ai_chance = {
+			factor = 100
+		}        
+	}
+}
+
+
+#"Chemistry and Mechanics Reaserch Options" 
+# Temp removal of effects while waiting for new provinces 
+country_event = {
+	id = shi.8
+	title = shi.8.title
+	desc = shi.8.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.8" }
+        }
+		set_country_flag = using_menu_shi_decision_1
+    }
+    
+	option = {
+		name = shi.8.option.a
+
+		ai_chance = {
+			factor = 50
+		}        
+	}
+
+	option = {
+		name = shi.8.option.b
+
+		ai_chance = {
+			factor = 50
+		}        
+	}
+}
+
+#"Botany and Xeno Reaserch Options" 
+# Temp removal of effects while waiting for new provinces 
+country_event = {
+	id = shi.9
+	title = shi.9.title
+	desc = shi.9.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.9" }
+        }
+		set_country_flag = using_menu_shi_decision_1
+    }
+    
+	option = {
+		name = shi.9.option.a
+
+		ai_chance = {
+			factor = 50
+		}        
+	}
+
+	option = {
+		name = shi.9.option.b
+
+		ai_chance = {
+			factor = 50
+		}        
+	}
+}
+
+#"Medical and FEV Reaserch Options" 
+# Temp removal of effects while waiting for new provinces 
+country_event = {
+	id = shi.10
+	title = shi.10.title
+	desc = shi.10.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.10" }
+        }
+		set_country_flag = using_menu_shi_decision_1
+    }
+    
+	option = {
+		name = shi.10.option.a
+
+		ai_chance = {
+			factor = 50
+		}        
+	}
+
+	option = {
+		name = shi.10.option.b
+
+		ai_chance = {
+			factor = 50
+		}        
+	}
+}
+
+# "Developing The Outskirts" 
+# Rework after new provinces added 
+country_event = {
+	id = shi.11
+	title = shi.11.title
+	desc = shi.11.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 50
+	}	
+	
+	trigger = {
+		tag = SHI
+		owns = 383
+		always = no
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.11" }
+        }
+    }
+    
+	option = {
+		name = shi.11.option.a
+        383 = {
+			add_base_production = 2
+			add_base_manpower = 2
+			add_base_tax = 2
+		}
+		add_years_of_income = -0.50				
+		ai_chance = {
+			factor = 50
+		}        
+	}
+	
+	option = {
+		name = shi.11.option.b
+		ai_chance = {
+			factor = 50
+		}        
+	}
+}
+
+# "Lo Pan's Gang On The Lose!" 
+# Rework after new provinces added 
+country_event = {
+	id = shi.12
+	title = shi.12.title
+	desc = shi.12.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 30
+	}	
+	
+	trigger = {
+		tag = SHI
+        has_country_flag = angsty_lopan
+		owns = 383 
+		always = no
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.12" }
+        }
+    }
+    
+	option = {
+		name = shi.12.option.a
+		if = {
+		    limit { 
+			    owns = 383 
+			}
+            383 = {
+			    add_core = LPN
+				cede_province = LPN
+			}
+			add_truce_with = LPN
+		}
+		if = {
+		    limit { 
+			    owns = 383 
+			}
+            383 = {
+				add_base_manpower = -2
+			}
+		}
+		clr_country_flag = angsty_lopan
+		add_devotion = -20
+		ai_chance = {
+			factor = 50
+		}        
+	}
+	
+	option = {
+		name = shi.12.option.b
+		add_devotion = -20
+		add_stability = -2
+		if = {
+		    limit { 
+			    owns = 383 
+			}
+            383 = {
+				add_base_production = -2
+				add_base_manpower = -2
+				add_base_tax = -2
+			}
+		}
+		clr_country_flag = angsty_lopan
+		ai_chance = {
+			factor = 50
+		}        
+	}
+}
+
+# "The Dragon Condems $MONARCH$!" 
+country_event = {
+	id = shi.13
+	title = shi.13.title
+	desc = shi.13.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 30
+	}	
+	
+	trigger = {
+		tag = SHI
+        has_country_flag = angsty_dragon
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.13" }
+        }
+    }
+    
+	option = {
+		name = shi.13.option.a
+		clr_country_flag = angsty_dragon
+		add_devotion = -20
+		add_stability = -2
+		add_ruler_modifier = {
+    		name = dragon_opposition_ruler
+    		duration = -1
+		}
+	}
+}
+
+# "State Of The Shi Guard" 
+country_event = {
+	id = shi.14
+	title = shi.14.title
+	desc = shi.14.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 65
+	}	
+	
+	trigger = {
+		tag = SHI
+		has_dlc = "Cradle of Civilization"
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.14" }
+        }
+    }
+    
+	option = {
+		name = shi.14.option.a
+		add_army_professionalism = 0.05
+		add_years_of_income = -0.50
+		ai_chance = {
+			factor = 25
+		} 
+	}
+	
+	option = {
+		name = shi.14.option.b
+		add_army_professionalism = -0.10
+		ai_chance = {
+			factor = 25
+		} 
+	}
+	
+	option = {
+		name = shi.14.option.c
+		trigger = { 
+            any_country = {
+                has_reform = ncr_reform
+                has_opinion = { who = ROOT value = 25 }
+            }
+        }
+		hidden_effect = {
+		    every_country = {
+                limit = { has_reform = ncr_reform }
+                country_event = {
+                    id = ncr.7
+                    days = 20
+                }
+            }				
+        }
+		custom_tooltip = shi_ask_ncr_millitary_support
+		ai_chance = {
+			factor = 50
+		} 
+	}
+}
+
+#"NCR Offers Millitary Guidance" 
+country_event = {
+	id = shi.15
+	title = shi.15.title
+	desc = shi.15.desc
+    picture = WASTELAND_HILLS_eventPicture
+
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.15" }
+        }
+    }
+    
+	option = {
+		name = shi.15.option.a
+		add_army_professionalism = 0.15
+		add_country_modifier = {
+    		name = ncr_training
+    		duration = 1200
+		}
+		set_country_flag = ncr_training
+	}
+}
+
+# "Extermination of the Hubologists" 
+#country_event = {
+#	id = shi.16
+#	title = shi.16.title
+#	desc = shi.16.desc
+#    picture = WASTELAND_HILLS_eventPicture
+#
+#	fire_only_once = yes	
+#	
+#	trigger = {
+#		tag = SHI
+#		owns = 384
+#		HUB = { exists = no }
+#	}
+#    
+#    immediate = {
+#        hidden_effect = {
+#            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.16" }
+#        }
+#    }
+#	
+#	option = {
+#		name = shi.16.option.a
+#		hidden_effect = {
+#		    SHI = {
+#                country_event = {
+#                    id = shi.17
+#                    days = 120
+#                }
+#            }				
+#        }
+#		add_years_of_income = -0.50
+#		custom_tooltip = shi_begin_extraction_process_quetzel
+#		ai_chance = {
+#			factor = 50
+#		} 
+#	}
+#	
+#	option = {
+#		name = shi.16.option.b
+#		
+#		ai_chance = {
+#			factor = 50
+#		} 
+#	}
+#}
+    
+#"Dismantling the ESS Quetzel" 
+#country_event = {
+#	id = shi.17
+#	title = shi.17.title
+#	desc = shi.17.desc
+#    picture = WASTELAND_HILLS_eventPicture
+#
+#    is_triggered_only = yes
+#
+#
+#    immediate = {
+#        hidden_effect = {
+#            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.17" }
+#        }
+#    }
+#    
+#	option = {
+#		name = shi.17.option.a
+#		add_adm_power = 50
+#		add_dip_power = 50
+#		add_mil_power = 50
+#		384 = {
+#		    remove_province_modifier = ess_quetzel
+#		}      
+#	}
+#}
+
+#"C&M Breakthrough" 
+country_event = {
+	id = shi.18
+	title = shi.18.title
+	desc = shi.18.desc
+    picture = INS_LAB_eventPicture
+
+    is_triggered_only = yes
+
+	trigger = {
+		tag = SHI 
+		NOT = { faction_in_power = chemistry_and_mechanics_researchers }
+		has_factions = yes
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.18" }
+        }
+    }
+    
+	option = {
+		name = shi.18.option.a
+        add_faction_influence = { faction = chemistry_and_mechanics_researchers influence = 5 }		
+	}
+}
+
+#"X&B Breakthrough" 
+country_event = {
+	id = shi.19
+	title = shi.19.title
+	desc = shi.19.desc
+    picture = INS_LAB_eventPicture
+
+    is_triggered_only = yes
+
+	trigger = {
+		tag = SHI 
+		NOT = { faction_in_power = xeno_and_botany_researchers }
+		has_factions = yes
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.19" }
+        }
+    }
+    
+	option = {
+		name = shi.19.option.a     
+        add_faction_influence = { faction = xeno_and_botany_researchers influence = 5 }	
+	}
+}
+
+#"M&F Breakthrough" 
+country_event = {
+	id = shi.20
+	title = shi.20.title
+	desc = shi.20.desc
+    picture = INS_LAB_eventPicture
+
+    is_triggered_only = yes
+
+	trigger = {
+		tag = SHI 
+		NOT = { faction_in_power = medical_and_fev_researchers }
+		has_factions = yes
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.20" }
+        }
+    }
+    
+	option = {
+		name = shi.20.option.a   
+        add_faction_influence = { faction = medical_and_fev_researchers influence = 5 }			
+	}
+}
+
+#"Hubologist Resistance"
+#province_event = { 
+#	id = shi.21
+#	title = shi.21.title
+#	desc = shi.21.desc
+#    picture = WASTELAND_HILLS_eventPicture
+#
+#	fire_only_once = yes		
+#	
+#	trigger = {
+#		tag = SHI 
+#		has_missionary = yes
+#		previous_owner = HUB
+#		religion = hubology
+#	}
+#	
+#
+#	mean_time_to_happen = {
+#		years = 1	
+#	}
+#	
+#    immediate = {
+#        hidden_effect = {
+#            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.21" }
+#        }
+#    }
+#    
+#	option = {
+#		name = shi.21.option.a     
+#        spawn_rebels = {
+#			type = hubology_rebels
+#			size = 4
+#			win = yes
+#			unrest = 15
+#		}
+#	}
+#}
+
+#"Reaserch Funding" 
+country_event = {
+	id = shi.22
+	title = shi.22.title
+	desc = shi.22.desc
+    picture = INS_LAB_eventPicture
+
+    is_triggered_only = yes
+
+	trigger = {
+		tag = SHI 
+		NOT = { faction_in_power = chemistry_and_mechanics_researchers }
+		has_factions = yes
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.22" }
+        }
+    }
+    
+	option = {
+		name = shi.22.option.a
+        add_faction_influence = { faction = chemistry_and_mechanics_researchers influence = 5 }		
+		add_treasury = -15
+	}
+	
+	option = {
+		name = shi.22.option.b
+        add_faction_influence = { faction = medical_and_fev_researchers influence = 5 }		
+		add_treasury = -15		
+	}
+	
+	option = {
+		name = shi.22.option.c
+        add_faction_influence = { faction = xeno_and_botany_researchers influence = 5 }		
+		add_treasury = -15		
+	}
+	
+	option = {
+		name = shi.22.option.d
+        if = {
+			limit = {	
+                faction_in_power = chemistry_and_mechanics_researchers
+			}
+			add_faction_influence = { faction = chemistry_and_mechanics_researchers influence = -5 }		
+		}
+		else_if = {
+			limit = {	
+                faction_in_power = medical_and_fev_researchers
+			}
+			add_faction_influence = { faction = medical_and_fev_researchers influence = -5 }		
+		} 	
+		else_if = {
+			limit = {	
+                faction_in_power = xeno_and_botany_researchers
+			}
+			add_faction_influence = { faction = xeno_and_botany_researchers influence = -5 }	
+		} 			
+		add_treasury = 15		
+	}
+}

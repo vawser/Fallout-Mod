@@ -1,0 +1,227 @@
+#-----------------------------------------
+# Variants
+#-----------------------------------------
+gov_catholic_theocracy = {
+	rank = {
+		1 = FM_BISHOPRIC
+		2 = FM_ARCHBISHOPRIC
+		3 = FM_PATRIARCHATE
+	}
+	
+	ruler_male = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_PATRIARCH
+	}
+	
+	ruler_female = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_MATRIARCH
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+		religion = catholic
+	}
+}
+gov_orthodox_theocracy = {
+	rank = {
+		1 = FM_METROPOLIS
+		2 = FM_METROPOLIS
+		3 = FM_PATRIARCHATE
+	}
+	
+	ruler_male = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_PATRIARCH
+	}
+	
+	ruler_female = {
+		1 = FM_BISHOP
+		2 = FM_ARCHBISHOP
+		3 = FM_MATRIARCH
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+		OR = {
+			religion = orthodox
+			religion = coptic
+		}
+	}
+}
+gov_protestant_theocracy = {
+	rank = {
+		1 = FM_THEOCRACY
+		2 = FM_THEOCRACY
+		3 = FM_THEOCRACY
+	}
+	
+	ruler_male = {
+		1 = FM_REVEREND
+		2 = FM_REVEREND
+		3 = FM_REVEREND
+	}
+	
+	ruler_female = {
+		1 = FM_REVEREND
+		2 = FM_REVEREND
+		3 = FM_REVEREND
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+        OR = {
+            religion = protestant
+            religion = baptist
+        }
+	}
+}
+gov_bright_brotherhood = {
+	rank = {
+		1 = FM_BRIGHT_BROTHERHOOD
+		2 = FM_BRIGHT_BROTHERHOOD
+		3 = FM_BRIGHT_BROTHERHOOD
+	}	
+	
+	ruler_male = {
+		1 = FM_BROTHER
+		2 = FM_BROTHER
+		3 = FM_BROTHER
+	}
+	
+	ruler_female = {
+		1 = FM_SISTER
+		2 = FM_SISTER
+		3 = FM_SISTER
+	}
+	
+	trigger = {
+		has_reform = cult_reform
+        tag = BBR
+	}
+}
+gov_children_of_the_atom = {
+	rank = {
+		1 = FM_CHILDREN_OF_THE_ATOM
+		2 = FM_CHILDREN_OF_THE_ATOM
+		3 = FM_CHILDREN_OF_THE_ATOM
+	}	
+	
+	ruler_male = {
+		1 = FM_FATHER
+		2 = FM_FATHER
+		3 = FM_FATHER
+	}
+	
+	ruler_female = {
+		1 = FM_MOTHER
+		2 = FM_MOTHER
+		3 = FM_MOTHER
+	}
+	
+	trigger = {
+		has_reform = cult_reform
+        religion = atomic_worship
+	}
+}
+gov_renewal_cult = {
+	rank = {
+		1 = FM_RENEWAL_CULT
+		2 = FM_RENEWAL_CULT
+		3 = FM_RENEWAL_CULT
+	}	
+	
+	ruler_male = {
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
+	}
+	
+	ruler_female = {
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
+	}
+	
+	trigger = {
+		has_reform = cult_reform
+        religion = renewal
+	}
+}
+
+#-----------------------------------------
+# Base
+#-----------------------------------------
+gov_theocracy = {
+	rank = {
+		1 = FM_THEOCRACY
+		2 = FM_THEOCRACY
+		3 = FM_THEOCRACY
+	}	
+	
+	ruler_male = {
+		1 = FM_FATHER
+		2 = FM_FATHER
+		3 = FM_FATHER
+	}
+	
+	ruler_female = {
+		1 = FM_MOTHER
+		2 = FM_MOTHER
+		3 = FM_MOTHER
+	}
+	
+	trigger = {
+		has_reform = theocracy_reform
+	}
+}
+
+gov_brotherhood = {
+	rank = {
+		1 = FM_BROTHERHOOD
+		2 = FM_BROTHERHOOD
+		3 = FM_BROTHERHOOD
+	}			
+	
+	ruler_male = {
+		1 = FM_HIGH_ELDER
+		2 = FM_HIGH_ELDER
+		3 = FM_HIGH_ELDER
+	}
+	
+	ruler_female = {
+		1 = FM_HIGH_ELDER
+		2 = FM_HIGH_ELDER
+		3 = FM_HIGH_ELDER
+	}
+	
+	trigger = {
+		has_reform = brotherhood_reform
+	}
+}
+gov_cult = {
+	rank = {
+		1 = FM_CULT
+		2 = FM_CULT
+		3 = FM_CULT
+	}	
+	
+	ruler_male = {
+		1 = FM_OVERSEER
+		2 = FM_OVERSEER
+		3 = FM_OVERSEER
+	}
+	
+	ruler_female = {
+		1 = FM_OVERSEER
+		2 = FM_OVERSEER
+		3 = FM_OVERSEER
+	}
+	
+	trigger = {
+		has_reform = cult_reform
+	}
+}

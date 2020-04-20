@@ -1,0 +1,275 @@
+#-----------------------------------------
+# Variants
+#-----------------------------------------
+gov_gunner_militia = {
+	rank = {
+		1 = FM_PLATOON
+		2 = FM_PLATOON
+		3 = FM_PLATOON
+	}	
+	
+	ruler_male = {
+		1 = FM_CAPTAIN
+		2 = FM_CAPTAIN
+		3 = FM_CAPTAIN
+	}
+	
+	ruler_female = {
+		1 = FM_CAPTAIN
+		2 = FM_CAPTAIN
+		3 = FM_CAPTAIN
+	}
+	
+	trigger = {
+		has_reform = militia_reform
+		tag = GUN
+	}
+}
+
+#-----------------------------------------
+# Base
+#-----------------------------------------
+gov_shi = {
+	rank = {
+		1 = FM_SHI 
+		2 = FM_SHI 
+		3 = FM_SHI 
+	}	
+	
+	ruler_male = {
+		1 = FM_HEAD_ADVISOR
+		2 = FM_HEAD_ADVISOR
+		3 = FM_HEAD_ADVISOR
+	}
+	
+	ruler_female = {
+		1 = FM_HEAD_ADVISOR
+		2 = FM_HEAD_ADVISOR
+		3 = FM_HEAD_ADVISOR
+	}
+	
+	trigger = {
+		has_reform = shi_reform
+	}
+}
+gov_mothership = {
+	rank = {
+		1 = FM_MOTHERSHIP
+		2 = FM_MOTHERSHIP
+		3 = FM_MOTHERSHIP
+	}	
+	
+	ruler_male = {
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
+	}
+	
+	ruler_female = {
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
+	}
+	
+	trigger = {
+		has_reform = zetan_reform
+	}
+}
+gov_new_vegas = {
+	rank = {
+		1 = FM_NEW_VEGAS
+		2 = FM_NEW_VEGAS 
+		3 = FM_NEW_VEGAS
+	}	
+	
+	ruler_male = {
+		1 = FM_EMPTY
+		2 = FM_EMPTY
+		3 = FM_EMPTY
+	}
+	
+	ruler_female = {
+		1 = FM_EMPTY
+		2 = FM_EMPTY
+		3 = FM_EMPTY
+	}
+	
+	trigger = {
+		has_reform = new_vegas_reform
+	}
+}
+gov_think_tank = {
+	rank = {
+		1 = FM_THINK_TANK
+		2 = FM_THINK_TANK
+		3 = FM_THINK_TANK
+	}	
+	
+	ruler_male = {
+		1 = FM_DOCTOR
+		2 = FM_DOCTOR
+		3 = FM_DOCTOR
+	}
+    
+	ruler_female = {
+		1 = FM_DOCTOR
+		2 = FM_DOCTOR
+		3 = FM_DOCTOR
+	}
+	
+	trigger = {
+		has_reform = think_tank_reform
+	}
+}
+gov_legion = {
+	rank = {
+		1 = FM_LEGION
+		2 = FM_LEGION
+		3 = FM_LEGION
+	}	
+	
+	ruler_male = {
+		1 = FM_CAESAR
+		2 = FM_CAESAR
+		3 = FM_CAESAR
+	}
+	
+	ruler_female = {
+		1 = FM_CAESARIS
+		2 = FM_CAESARIS
+		3 = FM_CAESARIS
+	}
+
+	heir_male = {
+		1 = FM_CO_AUGUSTUS
+		2 = FM_CO_AUGUSTUS
+		3 = FM_CO_AUGUSTUS
+	}
+
+	heir_female = {
+		1 = FM_CO_AUGUSTUS
+		2 = FM_CO_AUGUSTUS
+		3 = FM_CO_AUGUSTUS
+	}
+	
+	trigger = {
+		has_reform = legion_reform
+	}
+}
+gov_miltia = {
+	rank = {
+		1 = FM_MILITIA
+		2 = FM_MILITIA
+		3 = FM_MILITIA
+	}	
+	
+	ruler_male = {
+		1 = FM_GENERAL
+		2 = FM_GENERAL
+		3 = FM_GENERAL
+	}
+	
+	ruler_female = {
+		1 = FM_GENERAL
+		2 = FM_GENERAL
+		3 = FM_GENERAL
+	}
+	
+	trigger = {
+        has_reform = militia_reform
+	}
+}
+gov_settlement = {
+	rank = {
+		1 = FM_SETTLEMENT
+		2 = FM_SETTLEMENT
+		3 = FM_SETTLEMENT
+	}	
+	
+	ruler_male = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+	
+	ruler_female = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+	
+	trigger = {
+		is_settlement_government = yes
+	}
+}
+gov_ncr_republic = {
+	rank = {
+		1 = FM_NCR
+		2 = FM_NCR
+		3 = FM_NCR
+	}			
+	
+	ruler_male = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+    heir_male = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+	
+	heir_female = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+    
+	trigger = {
+		has_reform = ncr_reform
+	}
+}
+gov_ncr_state_republic = {
+	rank = {
+		1 = FM_NCR_STATE
+		2 = FM_NCR_STATE
+		3 = FM_NCR_STATE
+	}			
+	
+	ruler_male = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+	
+	ruler_female = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+    
+    heir_male = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+	
+	heir_female = {
+		1 = FM_CANDIDATE
+		2 = FM_CANDIDATE
+		3 = FM_CANDIDATE
+	}
+	
+	trigger = {
+		has_reform = ncr_state_reform
+	}
+}
+

@@ -1,0 +1,104 @@
+# Fallback defaults
+# Will pick the first valid one it finds in list
+
+default_monarchy = {
+	rank = {
+		1 = FM_SETTLEMENT
+		2 = FM_SETTLEMENT
+		3 = FM_SETTLEMENT
+	}	
+	
+	ruler_male = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+	
+	ruler_female = {
+		1 = FM_GOVERNOR
+		2 = FM_GOVERNOR
+		3 = FM_GOVERNOR
+	}
+	
+	trigger = {
+		has_government_attribute = monarchy
+	}
+}
+default_republic = {
+	rank = {
+		1 = FM_REPUBLIC
+		2 = FM_REPUBLIC
+		3 = FM_REPUBLIC
+	}		
+	
+	ruler_male = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	trigger = {
+        OR = {
+            has_government_attribute = dictatorship
+            has_government_attribute = republic
+        }
+	}
+}
+default_theocracy = {
+	rank = {
+		1 = FM_THEOCRACY
+		2 = FM_THEOCRACY
+		3 = FM_THEOCRACY
+	}	
+	
+	ruler_male = {
+		1 = FM_FATHER
+		2 = FM_FATHER
+		3 = FM_FATHER
+	}
+	
+	ruler_female = {
+		1 = FM_MOTHER
+		2 = FM_MOTHER
+		3 = FM_MOTHER
+	}
+	
+	trigger = {
+        OR = {
+            has_government_attribute = papacy
+            has_government_attribute = religion
+        }
+	}
+}
+default_tribal = {
+	rank = {
+		1 = FM_TRIBE
+		2 = FM_TRIBE
+		3 = FM_TRIBE
+	}	
+	
+	ruler_male = {
+		1 = FM_CHIEF
+		2 = FM_CHIEF
+		3 = FM_CHIEF
+	}
+	
+	ruler_female = {
+		1 = FM_CHIEFESS
+		2 = FM_CHIEFESS
+		3 = FM_CHIEFESS
+	}
+	
+	trigger = {
+        OR = {
+            has_government_attribute = nomad
+            has_government_attribute = tribal
+        }
+	}
+}

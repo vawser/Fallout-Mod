@@ -1,0 +1,233 @@
+namespace = colonial_pulse
+
+# "Settlement Founded"
+province_event = {
+	id =  colonial_pulse.1
+	title = colonial_pulse.1.title
+	desc = colonial_pulse.1.desc
+    picture = GOODSPRINGS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_empty_adjacent_province = yes
+		owner = { NOT = { num_of_colonies = 2 } }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - colonial_pulse.1" }
+        }
+    }
+    
+	option = {
+		name = colonial_pulse.1.option.a
+		random_empty_neighbor_province = {
+			create_colony = 200
+		}
+	}
+}
+
+# "Ghouls flock to $PROVINCENAME$"
+province_event = {
+	id =  colonial_pulse.2
+	title = colonial_pulse.2.title
+	desc = colonial_pulse.2.desc
+    picture = FARMSTEAD_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_colony = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - colonial_pulse.2" }
+        }
+    }
+    
+	option = {
+		name = colonial_pulse.2.option.a
+
+        add_colonysize = 100
+	}
+    option = {
+		name = colonial_pulse.2.option.b
+
+        owner = { add_prestige = 10 }
+	}
+}
+
+# "Super Mutants!"
+province_event = {
+	id =  colonial_pulse.3
+	title = colonial_pulse.3.title
+	desc = colonial_pulse.3.desc
+    picture = DEAD_JUNKIE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_colony = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - colonial_pulse.3" }
+        }
+    }
+    
+	option = {
+		name = colonial_pulse.3.option.a
+		
+		add_colonysize = -100
+	}
+    option = {
+		name = colonial_pulse.3.option.b
+		
+		owner = { add_years_of_income = -1 }
+	}
+}
+
+# "Raiders!
+province_event = {
+	id =  colonial_pulse.4
+	title = colonial_pulse.4.title
+	desc = colonial_pulse.4.desc
+    picture = DEAD_JUNKIE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_colony = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - colonial_pulse.4" }
+        }
+    }
+    
+	option = {
+		name = colonial_pulse.4.option.a
+		
+		add_colonysize = -50
+	}
+    option = {
+		name = colonial_pulse.4.option.b
+		
+		owner = { add_years_of_income = -1 }
+	}
+}
+
+# "Colonial Migration"
+province_event = {
+	id = colonial_pulse.5
+	title = colonial_pulse.5.title
+	desc = colonial_pulse.5.desc
+    picture = COLLAPSED_HIGHWAY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		colonysize = 300
+		NOT = { colonysize = 500 }
+		owner = {
+			any_owned_province = {
+				is_colony = yes
+				colonysize = 500
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - colonial_pulse.5" }
+        }
+    }
+    
+	option = {
+		name = colonial_pulse.5.option.a
+		add_colonysize = -200
+		owner = {
+			random_owned_province = {
+				limit = { is_colony = yes colonysize = 500 }
+				add_colonysize = 200
+			}
+		}	
+	}
+}
+
+# "Colonial Expansion"
+province_event = {
+	id = colonial_pulse.6
+	title = colonial_pulse.6.title
+	desc = colonial_pulse.6.desc
+    picture = GOODSPRINGS_RANCH_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_empty_adjacent_province = yes
+		any_empty_neighbor_province = {
+			has_discovered = ROOT
+		}
+		owner = { NOT = { num_of_colonies = 3 } }
+
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - colonial_pulse.6" }
+        }
+    }
+    
+	option = {
+		name = colonial_pulse.6.option.a
+		random_empty_neighbor_province = {
+			limit = {
+				has_discovered = ROOT
+			}
+			create_colony = 200
+		}
+	}
+	option = {
+		name = colonial_pulse.6.option.b
+		trigger = {
+			owner = { num_of_colonies = 1 }
+		}
+		owner = {
+			random_owned_province = {
+				limit = {
+					is_colony = yes
+				}
+				add_colonysize = 50
+			}
+		}
+	}
+}

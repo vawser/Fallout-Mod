@@ -1,0 +1,152 @@
+country_decisions = {
+    form_the_brotherhood = {
+		major = yes
+		
+		potential = {
+            NOT = { exists = X05 }
+			has_reform = brotherhood_reform
+            NOT = { is_unswitchable_nation = yes }
+		}
+		allow =  {
+            custom_trigger_tooltip = {
+                tooltip = TOOLTIP_FORM_BROTHERHOOD
+            
+                if = {
+                    limit = {
+                        exists = BOS
+                        BOS = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = BOS
+                }
+                if = {
+                    limit = {
+                        exists = MCT
+                        MCT = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = MCT
+                }
+                if = {
+                    limit = {
+                        exists = VBO
+                        VBO = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = VBO
+                }
+                if = {
+                    limit = {
+                        exists = VB1
+                        VB1 = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = VB1
+                }
+                if = {
+                    limit = {
+                        exists = BMW
+                        BMW = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = BMW
+                }
+                if = {
+                    limit = {
+                        exists = BEC
+                        BOS = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = BMW
+                }
+                if = {
+                    limit = {
+                        exists = BOC
+                        BOC = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = BOC
+                }
+                if = {
+                    limit = {
+                        exists = BTX
+                        BTX = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = BTX
+                }
+                if = {
+                    limit = {
+                        exists = BMO
+                        BMO = { NOT = { tag = ROOT } }
+                    }
+                    overlord_of = BMO
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X05
+			set_government_rank = 3
+            every_subject_country = {
+                limit = {
+                    has_reform = brotherhood_reform
+                }
+                ROOT = {
+                    inherit = PREV
+                }
+            }
+		}
+	}
+    
+	follow_the_original_directive = {
+		potential = {
+			has_reform = brotherhood_reform
+			NOT = { has_country_modifier = original_directive }
+			NOT = { has_country_modifier = brotherhood_fascist_directive }
+		}
+		allow =  {
+			has_reform = brotherhood_reform
+            years_of_income = 1
+		}
+	  	effect = {
+            add_years_of_income = -1
+			add_country_modifier = { 
+				name = original_directive
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				NOT = { tag = BRO }
+			}
+		}
+	}
+	
+	adopt_a_more_fascist_directive = {
+		potential = {	
+			has_reform = brotherhood_reform
+			NOT = { has_country_modifier = original_directive }
+			NOT = { has_country_modifier = brotherhood_fascist_directive }
+		}
+		allow =  {
+			has_reform = brotherhood_reform
+            years_of_income = 1
+		}
+	  	effect = {
+            add_years_of_income = -1
+			add_country_modifier = { 
+				name = brotherhood_fascist_directive
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = BRO
+			}
+		}
+	}
+}

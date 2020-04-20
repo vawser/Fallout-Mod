@@ -1,0 +1,102 @@
+namespace = warlust
+
+# Ache for War
+# Our people ache for war, and demand we satiate their warlust soon. If we do indeed plan to attempt an war soon, then it would be advantageous to stir their frenzy further, stoking the fires of fury within.
+# Stir the pot
+# Dampen the flames
+country_event = {
+	id = warlust.1
+	title = warlust.1.title
+	desc = warlust.1.desc
+    picture = LEGION_CAMP_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_piety = yes
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - warlust.1" }
+        }
+    }
+    
+	option = {
+		name = warlust.1.option.a
+
+        add_piety = 0.25
+        
+        ai_chance = {
+            factor = 50
+        }
+	}
+    
+    option = {
+		name = warlust.1.option.b
+
+        add_piety = -0.25
+        
+        ai_chance = {
+            factor = 50
+        }   
+	}
+}
+
+# Flames Falter
+# The soldiers of the state have become war weary, and tire of the endless fighting they seem to engage in. This will surely dampen their warlust and reduce their frenzied attitudes on the battlefield.
+# Oh, woe is me
+country_event = {
+	id = warlust.2
+	title = warlust.2.title
+	desc = warlust.2.desc
+    picture = LEGION_CAMP_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_piety = yes
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - warlust.2" }
+        }
+    }
+    
+	option = {
+		name = warlust.2.option.a
+
+        add_piety = -0.1
+	}
+}
+
+# Fan the Flames
+# Years of relative peace has worn on the soldiers of the syaye, and they have become listless as a result. It is imperitive we grant them the conflict they so much desire before their fury turns inwards.
+# Ah yes, soon they will once again grace the battlefield
+country_event = {
+	id = warlust.3
+	title = warlust.3.title
+	desc = warlust.3.desc
+    picture = LEGION_CROSS_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        uses_piety = yes
+	}
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - warlust.3" }
+        }
+    }
+    
+	option = {
+		name = warlust.3.option.a
+
+        add_piety = 0.1
+	}
+}
+
+

@@ -1,0 +1,147 @@
+#-----------------------------------------
+# Variants
+#-----------------------------------------
+gov_vault_first_citizen = {
+	rank = {
+		1 = FM_VAULT
+		2 = FM_VAULT
+		3 = FM_VAULT
+	}		
+	
+	ruler_male = {
+		1 = FM_FIRST_CITIZEN
+		2 = FM_FIRST_CITIZEN
+		3 = FM_FIRST_CITIZEN
+	}
+	
+	ruler_female = {
+		1 = FM_FIRST_CITIZEN
+		2 = FM_FIRST_CITIZEN
+		3 = FM_FIRST_CITIZEN
+	}
+	
+	trigger = {
+		has_reform = vault_reform
+        has_reform = vault_central_council_reform
+	}
+}
+
+#-----------------------------------------
+# Base
+#-----------------------------------------
+gov_republic = {
+	rank = {
+		1 = FM_REPUBLIC
+		2 = FM_REPUBLIC
+		3 = FM_REPUBLIC
+	}			
+	
+	ruler_male = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	trigger = {
+		has_reform = republic_reform
+	}
+}
+gov_dictatorship = {
+	rank = {
+		1 = FM_DICTATORSHIP
+		2 = FM_DICTATORSHIP
+		3 = FM_DICTATORSHIP
+	}		
+	
+	ruler_male = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	trigger = {
+		has_reform = dictatorship_reform
+	}
+}
+gov_institute = {
+	rank = {
+		1 = FM_SCIENCE_DIRECTORATE
+		2 = FM_SCIENCE_DIRECTORATE
+		3 = FM_SCIENCE_DIRECTORATE
+	}		
+	
+	ruler_male = {
+		1 = FM_DIRECTOR
+		2 = FM_DIRECTOR
+		3 = FM_DIRECTOR
+	}
+	
+	ruler_female = {
+		1 = FM_DIRECTOR
+		2 = FM_DIRECTOR
+		3 = FM_DIRECTOR
+	}
+	
+	trigger = {
+		has_reform = institute_reform
+	}
+}
+gov_enclave = {
+	rank = {
+		1 = FM_ENCLAVE
+		2 = FM_ENCLAVE
+		3 = FM_ENCLAVE
+	}	
+	
+	ruler_male = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = FM_PRESIDENT
+		2 = FM_PRESIDENT
+		3 = FM_PRESIDENT
+	}
+	
+	trigger = {
+		has_reform = enclave_reform
+	}
+}
+gov_vault = {
+	rank = {
+		1 = FM_VAULT
+		2 = FM_VAULT
+		3 = FM_VAULT
+	}		
+	
+	ruler_male = {
+		1 = FM_OVERSEER
+		2 = FM_OVERSEER
+		3 = FM_OVERSEER
+	}
+	
+	ruler_female = {
+		1 = FM_OVERSEER
+		2 = FM_OVERSEER
+		3 = FM_OVERSEER
+	}
+	
+	trigger = {
+		has_reform = vault_reform
+	}
+}
+

@@ -1,0 +1,165 @@
+#AVIALABLE CUSTOM LOCALISATION KEYS
+#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
+# To not display anything, you can use 'localisation_key = ""'
+# Please add one example sentence for each key.
+
+#As this list grow organize with categories.
+#Current loc keys in this file:
+#GetFalloutRegion
+
+# <Region>
+#Ex: "West Coast"
+
+defined_text = {
+    name = EventBuffer
+    
+    text = {
+        localisation_key = string_buffer
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSirOrMadam
+    
+    text = {
+        localisation_key = madam
+        trigger = {
+			is_female = yes
+        }
+    }
+    
+    text = {
+        localisation_key = sir
+        trigger = {
+			NOT = { is_female = yes }
+        }
+    }
+}
+
+defined_text = {
+    name = GetFalloutRegion
+
+    text = {
+        localisation_key = string_big_mountain
+        trigger = {
+			capital_scope = {
+				region = big_mt_region
+			}
+        }
+    }
+    
+    text = {
+        localisation_key = string_north_america_west
+        trigger = {
+			capital_scope = {
+				OR = {
+                    region = washington_region
+                    region = oregon_region
+                    region = california_region
+                    region = nevada_region
+                    region = utah_region
+                    region = idaho_region
+                    region = montana_region
+                    region = wyoming_region
+                    region = baja_california_region
+                    region = arizona_region
+                    region = new_mexico_region
+                    region = colorado_region
+                }
+			}
+        }
+    }
+    text = {
+        localisation_key = string_north_america_midwest
+        trigger = {
+			capital_scope = {
+				OR = {
+                    region = north_dakota_region
+                    region = south_dakota_region
+                    region = nebraska_region
+                    region = kansas_region
+                    region = missouri_region
+                    region = iowa_region
+                    region = kentucky_region
+                    region = west_virginia_region
+                    region = ohio_region
+                    region = indiana_region
+                    region = michigan_region
+                    region = minnesota_region
+                    region = wisconsin_region
+                    region = illinois_region
+                }
+			}
+        }
+    }
+	text = {
+        localisation_key = string_north_america_south
+        trigger = {
+			capital_scope = {
+				OR = {
+                    region = oklahoma_region
+                    region = arkansas_region
+                    region = texas_region
+                    region = louisiana_region
+                    region = mississippi_fm_region
+                    region = alabama_region
+                    region = tennessee_region
+                    region = florida_region
+                    region = georgia_region
+                    region = south_carolina_region
+                    region = north_carolina_region
+                }
+			}
+        }
+	}
+	text = {
+        localisation_key = string_north_america_north_east
+        trigger = {
+			capital_scope = {
+				OR = {
+                    region = virginia_region
+                    region = new_york_region
+                    region = new_jersey_region
+                    region = pennsylvania_region
+                    region = the_capital_wasteland_region
+                    region = the_commonwealth_region
+                }
+			}
+        }
+	}
+    text = {
+        localisation_key = string_canada
+        trigger = {
+			capital_scope = {
+				superregion = canada_superregion
+			}
+        }
+	}
+    text = {
+        localisation_key = string_mexico
+        trigger = {
+			capital_scope = {
+				superregion = mexico_superregion
+			}
+        }
+	}
+    text = {
+        localisation_key = string_caribbean
+        trigger = {
+			capital_scope = {
+				region = caribbean_region
+			}
+        }
+	}
+    text = {
+        localisation_key = string_bermuda
+        trigger = {
+			capital_scope = {
+				region = bermuda_region
+			}
+        }
+	}
+}

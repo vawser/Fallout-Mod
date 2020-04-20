@@ -1,0 +1,41 @@
+namespace = justice
+
+country_event = {
+	id = justice.1
+	title = justice.1.title
+	desc = justice.1.desc
+	picture = FREESIDE_eventPicture
+	
+	trigger = {
+		has_country_flag = enforce_stability
+	}
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = { clr_country_flag = enforce_stability }
+    }
+
+    # Come on...
+	option = {
+		name = justice.1.option.a
+
+        random_list = {
+            5 = {
+                add_stability = 2
+            }
+            45 = {
+                add_stability = 1
+            }
+            50 = {
+                
+            }
+        }
+        
+        ai_chance = {
+            factor = 10
+        }
+	}
+}

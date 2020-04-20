@@ -1,0 +1,324 @@
+#-----------------------------------------
+# Variants
+#-----------------------------------------
+gov_marked_legion = {
+	rank = {
+		1 = FM_MARKED_LEGION
+		2 = FM_MARKED_LEGION
+		3 = FM_MARKED_LEGION
+	}
+
+	ruler_male = {
+		1 = FM_COMES
+		2 = FM_COMES
+		3 = FM_COMES
+	}
+
+	ruler_female = {
+		1 = FM_CONSUL
+		2 = FM_CONSUL
+		3 = FM_CONSUL
+	}
+
+	trigger = {
+		has_reform = raider_reform
+		tag = GD2
+	}
+}
+gov_marked_ncr = {
+	rank = {
+		1 = FM_MARKED_NCR
+		2 = FM_MARKED_NCR
+		3 = FM_MARKED_NCR
+	}
+
+	ruler_male = {
+		1 = FM_FORSAKEN_CHAIR
+		2 = FM_FORSAKEN_CHAIR
+		3 = FM_PRESIDENT
+	}
+
+	ruler_female = {
+		1 = FM_FORSAKEN_CHAIR
+		2 = FM_FORSAKEN_CHAIR
+		3 = FM_PRESIDENT
+	}
+
+	trigger = { 
+        has_reform = raider_reform
+		tag = GD1
+	}
+}
+gov_super_mutant_jacobstown = {
+	rank = {
+		1 = FM_JACOBSTOWN
+		2 = FM_JACOBSTOWN
+		3 = FM_JACOBSTOWN
+	}	
+	
+	ruler_male = {
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
+	}
+	
+	ruler_female = {
+		1 = FM_LEADER
+		2 = FM_LEADER
+		3 = FM_LEADER
+	}
+	
+	trigger = {
+		has_reform = super_mutant_reform
+        tag = JAC
+	}
+}
+gov_kingdom_of_hate = {
+	rank = {
+		1 = FM_KINGDOM_OF_HATE
+		2 = FM_KINGDOM_OF_HATE
+		3 = FM_KINGDOM_OF_HATE
+	}	
+	
+	ruler_male = {
+		1 = FM_BLOOD_KING
+		2 = FM_BLOOD_KING
+		3 = FM_BLOOD_KING
+	}
+	
+	ruler_female = {
+		1 = FM_BLOOD_QUEEN
+		2 = FM_BLOOD_QUEEN
+		3 = FM_BLOOD_QUEEN
+	}
+
+ 	consort_male = {
+		1 = FM_BLOOD_CONSORT
+		2 = FM_BLOOD_CONSORT
+		3 = FM_BLOOD_CONSORT
+	}
+
+	consort_female = {
+		1 = FM_BLOOD_CONSORT
+		2 = FM_BLOOD_CONSORT
+		3 = FM_BLOOD_CONSORT
+	}
+	
+	heir_male = {
+		1 = FM_BLOOD_PRINCE
+		2 = FM_BLOOD_PRINCE
+		3 = FM_BLOOD_PRINCE
+	}
+
+	heir_female = {
+		1 = FM_BLOOD_PRINCESS
+		2 = FM_BLOOD_PRINCESS
+		3 = FM_BLOOD_PRINCESS
+	}
+	
+	trigger = {
+        has_reform = raider_reform
+		tag = GHH
+	}
+}
+
+#-----------------------------------------
+# Base
+#-----------------------------------------
+gov_tribe = {
+	rank = {
+		1 = FM_TRIBE
+		2 = FM_TRIBE
+		3 = FM_TRIBE
+	}		
+	
+	ruler_male = {
+		1 = FM_CHIEF
+		2 = FM_CHIEF
+		3 = FM_CHIEF
+	}
+	
+	ruler_female = {
+		1 = FM_CHIEFESS
+		2 = FM_CHIEFESS
+		3 = FM_CHIEFESS
+	}
+	
+	trigger = {
+		has_reform = tribe_reform
+	}
+}
+gov_commune = {
+	rank = {
+		1 = FM_COMMUNE
+		2 = FM_COMMUNE
+		3 = FM_COMMUNE
+	}	
+	
+	ruler_male = {
+		1 = FM_COMRADE
+		2 = FM_COMRADE
+		3 = FM_COMRADE
+	}
+	
+	ruler_female = {
+		1 = FM_COMRADE
+		2 = FM_COMRADE
+		3 = FM_COMRADE
+	}
+	
+	trigger = {
+		has_reform = commune_reform
+	}
+}
+gov_raider = {
+	rank = {
+		1 = FM_RAIDER_GANG
+		2 = FM_RAIDER_GANG
+		3 = FM_RAIDER_GANG
+	}	
+	
+	ruler_male = {
+		1 = FM_OVERBOSS
+		2 = FM_OVERBOSS
+		3 = FM_OVERBOSS
+	}
+	
+	ruler_female = {
+		1 = FM_OVERBOSS
+		2 = FM_OVERBOSS
+		3 = FM_OVERBOSS
+	}
+	
+	trigger = {
+		has_reform = raider_reform
+	}
+}
+gov_super_mutant = {
+	rank = {
+		1 = FM_SUPER_MUTANT
+		2 = FM_SUPER_MUTANT
+		3 = FM_SUPER_MUTANT
+	}	
+	
+	ruler_male = {
+		1 = FM_OVERBOSS
+		2 = FM_OVERBOSS
+		3 = FM_OVERBOSS
+	}
+	
+	ruler_female = {
+		1 = FM_OVERBOSS
+		2 = FM_OVERBOSS
+		3 = FM_OVERBOSS
+	}
+	
+	trigger = {
+		has_reform = super_mutant_reform
+	}
+}
+gov_swarm = {
+	rank = {
+		1 = FM_SWARM
+		2 = FM_SWARM
+		3 = FM_SWARM
+	}		
+	
+	ruler_male = {
+		1 = FM_OVERLORD
+		2 = FM_OVERLORD
+		3 = FM_OVERLORD
+	}
+	
+	ruler_female = {
+		1 = FM_OVERLORD
+		2 = FM_OVERLORD
+		3 = FM_OVERLORD
+	}
+	
+	trigger = {
+		has_reform = swarm_reform
+	}
+}
+gov_wolf_pack = {
+	rank = {
+		1 = FM_WOLF_PACK
+		2 = FM_WOLF_PACK
+		3 = FM_WOLF_PACK
+	}
+
+	ruler_male = {
+		1 = FM_ALPHA
+		2 = FM_ALPHA
+		3 = FM_ALPHA
+	}
+
+	ruler_female = {
+		1 = FM_ALPHA
+		2 = FM_ALPHA
+		3 = FM_ALPHA
+	}
+
+	consort_male = {
+		1 = FM_BETA
+		2 = FM_BETA
+		3 = FM_BETA
+	}
+
+	consort_female = {
+		1 = FM_BETA
+		2 = FM_BETA
+		3 = FM_BETA
+	}
+
+	trigger = {
+		has_reform = wolf_pack_reform
+	}
+}
+gov_great_khans = {
+	rank = {
+		1 = FM_KLAN
+		2 = FM_KLAN
+		3 = FM_KLAN
+	}
+	
+	ruler_male = {
+		1 = FM_KHAN
+		2 = FM_KHAN
+		3 = FM_KHAN
+	}
+	
+	ruler_female = {
+		1 = FM_KHANUM
+		2 = FM_KHANUM
+		3 = FM_KHANUM
+	}
+	
+	consort_male = {
+		1 = FM_KHAN
+		2 = FM_KHAN
+		3 = FM_KHAN
+	}
+
+	consort_female = {
+		1 = FM_KHANUM
+		2 = FM_KHANUM
+		3 = FM_KHANUM
+	}
+	
+	heir_male = {
+		1 = FM_KHANZADEH
+		2 = FM_KHANZADEH
+		3 = FM_KHANZADEH
+	}
+
+	heir_female = {
+		1 = FM_KHANUM
+		2 = FM_KHANUM
+		3 = FM_KHANUM
+	}
+	
+	trigger = {
+		has_reform = great_khan_reform
+	}
+}

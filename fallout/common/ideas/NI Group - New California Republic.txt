@@ -1,0 +1,49 @@
+# New Californian Republic
+NCR_ideas = {
+    start = {
+        global_trade_power = 0.1        
+        global_tax_modifier = 0.1
+    }
+    
+    bonus = {
+         diplomatic_reputation = 1
+    }
+    
+    trigger = {
+        OR = {
+            tag = NCR
+            tag = SHA
+        }
+    }
+    free = yes
+    
+    # For the Republic!
+    ncr_idea_1 = {
+        years_of_nationalism = -5
+    }
+    # Safe Infrastructure
+    ncr_idea_2 = {
+        global_tax_modifier = 0.1
+    }
+    # Efficient Bureaucracy
+    ncr_idea_3 = {
+        core_creation = -0.1
+    }
+    # Large Numbers
+    ncr_idea_4 = {
+        global_manpower_modifier = 0.15    
+    }
+    # Religious Freedom
+    ncr_idea_5 = {
+        tolerance_heathen = 1
+    }
+    # NCR Companies
+    ncr_idea_6 = {
+        trade_efficiency = 0.1
+    }
+    # Diplomatic Relations
+    ncr_idea_7 = {
+        diplomatic_annexation_cost = -0.1
+        diplomatic_upkeep = 1
+    }
+}

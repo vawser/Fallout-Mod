@@ -1,0 +1,641 @@
+namespace = fallout_institutions
+
+# Bottlecaps
+country_event = {
+	id = fallout_institutions.1
+	title = fallout_institutions.1.title
+	desc = fallout_institutions.1.desc
+    picture = FEMALE_SHOPKEEPER_eventPicture
+
+	is_triggered_only = yes
+
+    trigger = {
+        capital_scope = {
+            NOT = { bottlecaps = 100 }
+        }
+        stability = 0
+    }
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_institutions.1" }
+        }
+    }
+    
+	option = {
+		name = fallout_institutions.1.option.a
+		
+        capital_scope = {
+            add_institution_embracement = {
+                which = bottlecaps
+                value = 25
+            }
+        }
+	}
+}
+
+# RobCo
+country_event = {
+	id = fallout_institutions.2
+	title = fallout_institutions.2.title
+	desc = fallout_institutions.2.desc
+    picture = SCIENCE_TOWER_CLEAR_eventPicture
+
+	is_triggered_only = yes
+
+    trigger = {
+        has_institution = bottlecaps
+        capital_scope = {
+            NOT = { robco = 100 }
+        }
+        stability = 0
+    }
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_institutions.2" }
+        }
+    }
+    
+	option = {
+		name = fallout_institutions.2.option.a
+		
+        capital_scope = {
+            add_institution_embracement = {
+                which = robco
+                value = 25
+            }
+        }
+	}
+}
+
+# REPCONN
+country_event = {   
+	id = fallout_institutions.3
+	title = fallout_institutions.3.title
+	desc = fallout_institutions.3.desc
+    picture = REPCONN_SITE_eventPicture
+
+	is_triggered_only = yes
+
+    trigger = {
+        has_institution = bottlecaps
+        capital_scope = {
+            NOT = { repconn = 100 }
+        }
+        stability = 0
+    }
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_institutions.3" }
+        }
+    }
+    
+	option = {
+		name = fallout_institutions.3.option.a
+		
+        capital_scope = {
+            add_institution_embracement = {
+                which = repconn
+                value = 25
+            }
+        }
+	}
+}
+
+# Rads
+country_event = {
+	id = fallout_institutions.4
+	title = fallout_institutions.4.title
+	desc = fallout_institutions.4.desc
+    picture = GRAVEYARD_RADSTORM_eventPicture
+
+	is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            has_institution = robco
+            has_institution = repconn
+        }
+        capital_scope = {
+            NOT = { rads = 100 }
+        }
+        stability = 0
+        is_year = 2350
+    }
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_institutions.4" }
+        }
+    }
+    
+	option = {
+		name = fallout_institutions.4.option.a
+		
+        capital_scope = {
+            add_institution_embracement = {
+                which = rads
+                value = 25
+            }
+        }
+	}
+}
+
+# Power Armor
+country_event = {
+	id = fallout_institutions.5
+	title = fallout_institutions.5.title
+	desc = fallout_institutions.5.desc
+    picture = BOS_BUNKER_ENTRANCE_eventPicture
+
+	is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            has_institution = robco
+            has_institution = repconn
+        }
+        capital_scope = {
+            NOT = { power_armor = 100 }
+        }
+        stability = 0
+        is_year = 2350
+    }
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_institutions.5" }
+        }
+    }
+    
+	option = {
+		name = fallout_institutions.5.option.a
+		
+        capital_scope = {
+            add_institution_embracement = {
+                which = power_armor
+                value = 25
+            }
+        }
+	}
+}
+
+# Vault-Tec
+country_event = {
+	id = fallout_institutions.6
+	title = fallout_institutions.6.title
+	desc = fallout_institutions.6.desc
+    picture = VAULT_ENTRANCE_CLEAR_eventPicture
+
+	is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            has_institution = power_armor
+            has_institution = rads
+        }
+        capital_scope = {
+            NOT = { vault_tec = 100 }
+        }
+        stability = 0
+        is_year = 2400
+    }
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_institutions.6" }
+        }
+    }
+    
+	option = {
+		name = fallout_institutions.6.option.a
+		
+        capital_scope = {
+            add_institution_embracement = {
+                which = vault_tec
+                value = 25
+            }
+        }
+	}
+}
+
+# GECK
+country_event = {
+	id = fallout_institutions.7
+	title = fallout_institutions.7.title
+	desc = fallout_institutions.7.desc
+    picture = VAULT_DOOR_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    trigger = {
+        has_institution = vault_tec
+        capital_scope = {
+            NOT = { geck = 100 }
+        }
+        stability = 0
+        is_year = 2400
+    }
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_institutions.7" }
+        }
+    }
+    
+	option = {
+		name = fallout_institutions.7.option.a
+		
+        capital_scope = {
+            add_institution_embracement = {
+                which = geck
+                value = 25
+            }
+        }
+	}
+}
+
+#------------------------------------------------------------------------------------
+# Robco
+country_event = {
+	id = fallout_institutions.10
+	title = fallout_institutions.10.title
+	desc = fallout_institutions.10.desc
+	picture = SCIENCE_TOWER_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.10.option.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+        
+		custom_tooltip = robco_penalty
+        
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = fallout_institutions.16 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fallout_institutions.16
+	title = fallout_institutions.10.title
+	desc = fallout_institutions.10.desc
+	picture = SCIENCE_TOWER_CLEAR_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.10.option.a
+		
+        custom_tooltip = robco_penalty
+	}
+}
+
+# REPCONN Aerospace
+country_event = {
+	id = fallout_institutions.11
+	title = fallout_institutions.11.title
+	desc = fallout_institutions.11.desc
+	picture = REPCONN_SITE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.11.option.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+        
+		custom_tooltip = repconn_penalty
+        
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = fallout_institutions.17 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fallout_institutions.17
+	title = fallout_institutions.11.title
+	desc = fallout_institutions.11.desc
+	picture = REPCONN_SITE_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.11.option.a
+		
+        custom_tooltip = repconn_penalty
+	}
+}
+
+
+# Rads
+country_event = {
+	id = fallout_institutions.12
+	title = fallout_institutions.12.title
+	desc = fallout_institutions.12.desc
+	picture = GRAVEYARD_RADSTORM_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.12.option.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+        
+		custom_tooltip = rads_penalty
+        
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = fallout_institutions.18 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fallout_institutions.18
+	title = fallout_institutions.12.title
+	desc = fallout_institutions.12.desc
+	picture = GRAVEYARD_RADSTORM_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.12.option.a
+		
+        custom_tooltip = rads_penalty
+	}
+}
+
+
+# Power Armor
+country_event = {
+	id = fallout_institutions.13
+	title = fallout_institutions.13.title
+	desc = fallout_institutions.13.desc
+	picture = BOS_BUNKER_ENTRANCE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.13.option.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+        
+		custom_tooltip = power_armor_penalty
+        
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = fallout_institutions.19 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fallout_institutions.19
+	title = fallout_institutions.13.title
+	desc = fallout_institutions.13.desc
+	picture = BOS_BUNKER_ENTRANCE_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.13.option.a
+		
+        custom_tooltip = power_armor_penalty
+	}
+}
+
+
+# Vault-Tec
+country_event = {
+	id = fallout_institutions.14
+	title = fallout_institutions.14.title
+	desc = fallout_institutions.14.desc
+	picture = VAULT_ENTRANCE_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.14.option.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+        
+		custom_tooltip = vault_tec_penalty
+        
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = fallout_institutions.20 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fallout_institutions.20
+	title = fallout_institutions.14.title
+	desc = fallout_institutions.14.desc
+	picture = VAULT_ENTRANCE_CLEAR_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.14.option.a
+		
+        custom_tooltip = vault_tec_penalty
+	}
+}
+
+
+# GECK
+country_event = {
+	id = fallout_institutions.15
+	title = fallout_institutions.15.title
+	desc = fallout_institutions.15.desc
+	picture = VAULT_DOOR_INSIDE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.15.option.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 20
+        
+		custom_tooltip = geck_penalty
+        
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+				}
+				country_event = { id = fallout_institutions.21 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fallout_institutions.21
+	title = fallout_institutions.15.title
+	desc = fallout_institutions.15.desc
+	picture = VAULT_DOOR_INSIDE_eventPicture
+
+	is_triggered_only = yes
+	
+
+	trigger = {
+		always = yes			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = fallout_institutions.15.option.a
+		
+        custom_tooltip = geck_penalty
+	}
+}

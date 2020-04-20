@@ -1,0 +1,145 @@
+﻿l_english:
+ #------------------------------------------------------
+ # Native Policies
+ #------------------------------------------------------
+ native_policy_coexist: "Friendly"
+ native_policy_trade: "Neutral"
+ native_policy_hostile: "Ruthless"
+ native_policy_coexist_desc: "We are adopting a 'live and let live' attitude towards wastelanders which will increase the chances of assimilating them into our state."
+ native_policy_trade_desc: "We will trade with the wastelanders and profit from it."
+ native_policy_hostile_desc: "We will treat the wastelanders ruthlessly from now on. This will increase the frequency of their attacks, but also allow our settlements to grow faster."
+ 
+ CONFIRM_NATIVE_POLICY: "Confirm new Settlement Approach"
+ CHANGE_NATIVE_POLICY: "Change Settlement Approach to §Y$NAME$§!"
+ CURRENT_NATIVE_POLICY: "Current Settlement Approach: §Y$NAME$§!"
+ NATIVE_POLICY_STAB_TOO_LOW: "§RYour state is too disorganized to change your Settlement Approach. You need to increase Stability first.§!"
+ NATIVE_POLICY_NO_COLONISTS: "§RYou need at least one Settler before you can choose a Settlement Approach.§!"
+ NATIVE_POLICY_NO_COLONISTS: "§RYou need at least one Settler before you can choose a Settlement Approach.§!"
+ 
+ alert_no_native_policy_delayed: "Before we can send settlers we need to choose our Settlement Approach."
+ alert_no_native_policy_instant: "§YYou need to choose a Settlement Approach!§!"
+ 
+ #------------------------------------------------------
+ # Siberian Frontier
+ #------------------------------------------------------
+ SIBERIAN_FRONTIER_LACKS_IDEA: "Without a national idea, its impossible to establish a wasteland frontier."
+ CONFIRSIBERIANFRONTIER: "Confirm Establish Frontier"
+ CONFIRSIBERIANFRONTIER_TEXT: "$EFFECT$\nAre you sure?"
+ NOT_SIB_TO_BE_SEI: "Wasteland Frontiers can not be seized like normal colonies."
+ SIB_FRONTIER_TOOLTIP: "This colony gains between $MIN|Y$ and $MAX|Y$ settlers each month."
+ SIB_FRONT_TXT: "Wasteland Frontier"
+ NOSF_NO_POINTS: "You need §Y$COST$§!£dip to establish a wasteland frontier, and you only have §Y$VAL$§!."
+ NOSF_HAS_OWNER: "You can't establish a new wasteland frontier in a province which is currently being colonized."
+ NOSF_ALREADY_COLONISED: "It is impossible to establish a wasteland frontier in a province where there is a colonisation of some sort in process."
+ NOSF_NO_TRACE_HOME: "A frontier can only be established next to a city we own that can trace a route back to our capital."
+ ESTABLISH_SIBFRO_IRO: "Establishing a Wasteland Frontier will cost of §Y$COST$§!£dip . This will create a colony that will slowly grow, without the need for a colonist, nor any colonial maintenance."
+ IDEA_MAY_SIBERIAN_FRONTIER: "May Establish Wasteland Frontiers"
+ 
+ #------------------------------------------------------
+ # Colonist
+ #------------------------------------------------------
+ SETTLER_IRO: "You have §Y$CURRENT$§W available Settler(s) out of §Y$TOTAL$§W total"
+ ENVOY_COLONIST: "Settler"
+ MODIFIER_COLONIST_TIME: "Settler Travel Time"
+ COLONIST_PROGRESS: "$NAME$ from $COUNTRY|Y$ will arrive at $PROVINCE$ in $DAYS$ days ($DATE$). On arrival he will start building a settlement and will have a chance of $CHANCE$ to increase the population of Settlers each month."
+ COLONIST_TRAVELING: "The Settler $NAME$ from $COUNTRY|Y$ is on his way to $PROVINCE$."
+ CANCEL_COLONIST: "Recall Settler"
+ CANCEL_COLONIST_DESC: "Recalling your settler before the province is properly integrated into your state will not cancel your settlement, although it might trigger a uprising."
+ COLONIST_ARRIVAL_DATE: "Settler will arrive in §Y$DAYS$§W days."
+ COLONIST_WORKING: "Building Settlement."
+ COLONYCHANCE: "Each month your Settler has a $CHANCE$% chance of increasing the Settler population."
+ COLONYCOST: "Sending a Settler will cost you $COST$."
+ COLONIST_PROGRESS_WORKING: "§Y$NAME$§! from $COUNTRY|Y$ is building a settlement in §Y$PROVINCE$§!. Each month there is a §Y$CHANCE$§! chance to increase the population by §Y$NUM$§!, growing the settlement by an average of §Y$VAL$§W people per year."
+ COLONIST_WORKINGNAME: "The settler $NAME$ from $COUNTRY$ is working in $PROVINCE$."
+ PW_GROWTH_CHANCE_TIP: "The Settler working here has a §Y$VAL$§!% chance of attracting extra Settlers each month."
+ PW_GROWTH_NO_COLONIST: "No Settler present to attract new Settlers."
+ YEARLY_COLONISTS: "Settlers"
+ NO_SETTLER_IRO: "You need to unlock Settlers through Ideas."
+ HINT_ENVOYS_TEXT: "Envoys are a form of resource used to perform certain actions. Envoys are never consumed, but will instead perform a certain action for some time and will return when they have finished the task. Merchants, Settlers, Diplomats and Missionaries are all envoys."
+ HINT_COLONIST_TITLE: "Settlers"
+ HINT_COLONIST_TEXT: "Settlers are used to found new colonies in unsettled land."
+ HINT_MORECOLONIST_TITLE: "Gaining Settlers"
+ HINT_MORECOLONIST_TEXT: "More Settlers can be unlocked by selecting the Exploration or Expansion Idea Groups."
+ HINT_COLONY_TEXT: "When you send a Settler to found a settlement it will first take some time to get there. Once the Settler arrives to the location, a settlement will be founded in the province. When the settlement's population of Settlers reaches 1000, the province turns into a city and can construct buildings and will generate more income."
+ HINT_COLONISTTIME_TITLE: "Settler Travel Time"
+ HINT_COLONISTTIME_TEXT: "Settler Travel Time is the time it takes for your Settler to arrive to the unsettled land.. Once the Settler arrives, the province will turn into a settlement."
+ COLSUCCESS_4: "By sending more settlers there, it may eventually grow to a city."
+ COLONYBURNEDOTHER_4: "$RECIPIENT$ no longer have Settlers in $PROVINCE$!"
+ COLONYTAKENUS_4: "Their inability to defend the Settlers in $PROVINCE$ forced us to offer them our protection."
+ COLONYDAMAGED_5: "Several Settlers were killed and a number of buildings burned."
+ COLONISTS: "$DIRECTION$ $VALUE$ settlers.\n"
+ COLONIST_COST: "Settler Cost"
+ COLONIST_PLACEMENT_CHANCE: "Settler Chance"
+ LOCAL_COLONIST_COST: "Local Settlement Cost"
+ LOCAL_COLONIST_PLACEMENT_CHANCE: "Local Settler Chance"
+ NOCOLONISTS: "You have no settlers to send."
+ SENDCOLONIST: "Send settler to attempt to increase the size of your settlement."
+ COLONYTIME: "It will take $TIME$ days to send a Settler here."
+ COL_CONST_TIP: "A Settler will arrive here on §Y$DATE$§W. The chance of success is §Y$CHANCE$ %§W."
+ COLONISTS_ENROUTE: "Colonists"
+ OL_COLONISTS_DESC: "Our Settler has §Y$CHANCE$§W% chance of success. The settlement currently has §Y$NUM$§W Settlers and §Y$NATIVES$§W wastelanders living there."
+ NOMAD_COLONIST_PEACE: "You cannot send a settler here while at peace with the owner"
+ OL_SETTLERS_DESC: "Our Settler has §Y$CHANCE$§W% chance of success. The Settlement currently has §Y$NUM$§W Settlers."
+ COL_ORIG: "The settler is traveling from $COUNTRY$."
+ COL_CONST_TIP_FROM_SHIP: "This settler will reach $LOCATION$ at $DATE$."
+ FE_COLONISTS: "Settlers"
+ FE_SIZE_OF_COLONISTS: "Size of settlers"
+ LEDGER_COST: "Sett;er Cost"
+ IS_IN_COLONIAL_RANGE: "$NAME$ is reachable by §Y$ADJ$§! settlers."
+ IS_NOT_IN_COLONIAL_RANGE: "$NAME$ is not reachable by §Y$ADJ$§! settlers."
+ NUMBER_OF_COLONISTS: "Settlers"
+ HAS_COLONIST: "has an active Settler"
+ HAS_NOT_COLONIST: "does not have an active Settler"
+ COL_MAPMODE_COLONIST: "$COLONIST$ is currently working to found a settlement here."
+
+ #------------------------------------------------------
+ # Colonial Range
+ #------------------------------------------------------
+ MAPMODE_COLONIAL_DESC: "Colors the provinces according to settlement range and settlement availability. Green indicates provinces that can be settled, red indicates provinces which are too far away to settle, blue indicates provinces being settled and the darker the blue, the more progress has been made. Grey indicates already settled provinces or cities."
+ COLONIAL_RANGE: "Our settlement range: $RANGE|Y0$"
+ HINT_COLONIALRANGE_TITLE: "Settlement Range"
+ HINT_COLONIALRANGE_TEXT: "Settlement Range determines how close unsettled land has to be in order for you to be able to send a Settler there. Settlement Range can be increased by the Exploration Ideas or by Technology Level."
+ TRADE_WIND_DESC: "The movement cost to adjacent sea provinces will decrease or increase depending on if you're sailing with or into the wind. This affects both trade range and settlement range."
+ LEDGER_COLONIAL_RANGE: "Max. Settlement Range"
+ MODIFIER_COLONIAL_RANGE: "Settlement Range"
+ COL_MAPMODE_CAN_COLONIZE: "This province is within our Settlement Range and can be settled."
+ 
+ #------------------------------------------------------
+ # Seven Cities
+ #------------------------------------------------------
+ ENABLE_LAND_EXPLORE: "Explore the Wasteland"
+ DISABLE_LAND_EXPLORE: "Finish exploring the Wasteland"
+ NO_LAND_EXPLORE_EXILE: "§RYou cannot explore the Wasteland while exiled.§!"
+ NO_LAND_EXPLORE_PRIMITIVE: "§RPrimitives cannot explore the Wasteland.§!"
+ NO_LAND_EXPLORE_NOT_COLONIAL: "§RYou can only explore the Wasteland in colonial regions!§!"
+ NO_LAND_EXPLORE_CAPITAL_COLONIAL: "§RYou cannot explore the Wasteland if your capital is located in a colonial region.§!"
+ LAND_EXPLORE_DESC: "Armies under orders to explore the Wasteland will automatically chart nearby unexplored provinces in search of valuables and friendly occupants."
+
+ #------------------------------------------------------
+ # Conquistador
+ #------------------------------------------------------
+ CONFIRM_LEADER_DESC_CONQ: "Are you sure you wish to recruit a Adventurer?\n\n This will cost §Y$COST$§! Military Power."
+ CONQUISTADOR_DESC: " A man of glory, who will lead bands off into the unknown, the Adventurer will lead armies where few dare to venture."
+ HINT_EXPCONQ_TITLE: "Explorers & Adventurers"
+ HINT_EXPCONQ_TEXT: "Explorers are Admirals that can be sent into unexplored sea provinces to discover them. Adventurers are Generals and can be put in command of armies to allow them to move into unexplored territory. Explorers and Conquistadors require the Explore the Wasteland Idea in the Exploration Idea Group."
+ HINT_EXPLORATION_TEXT: "Uncharted lands are hidden by Terra Incognita. You will need an Explorer or an Adventurer in order to move into Terra Incognita. Explorers lead fleets while Adventurers lead armies."
+ HINT_TERRAINCOGNITA_TEXT: "Terra Incognita is territory that you have not explored yet. Unless your unit is being led by an Explorer or an Adventurer, it will be impossible to move your units there."
+ HINT_TERRAINCOGNITA_ED_TEXT: "Terra Incognita is territory that you have not explored yet. You must give a unit led by an Explorer or Adventurer a mission to explore here, and until the mission is carried out it will be impossible to move your units here."
+ CONQUISTADOR: "Adventurer"
+ MAY_EXPLORE: "- Allows recruitment of explorers & adventurers.\n"
+ RECRUIT_CONQUISTADOR_IRO: "Recruiting a adventurer will cost you §Y$COST$§W military power."
+ RECRUIT_NO_IDEA: "You need the '§YExplore the Wasteland§!' national idea to recruit explorers and adventurers."
+ RECRUIT_CONQUISTADOR_DRO: "Land units are usually restricted to land provinces that have already been explored. Recruiting an adventurer will allow you to explore more land areas and maybe add them to your empire."
+ RECRUIT_CONQUISTADOR: "Recruit Adventurer"
+ TI_DESC: "This area can only be entered by an Explorer (Sea Province) or an Adventurer (Land Province)."
+ CREATE_CONQUISTADOR_EFFECT: "Gain adventurer with §Y$POWER$§W tradition.\n"
+ DEFINE_CONQUISTADOR_EFFECT: "Adventurer §Y$NAME$§W becomes available for duty.\n"
+ HAVE_LESS_CONQUISTADORS_THAN: "Have less adventurers than "
+ HAVE_MORE_CONQUISTADORS_THAN: "Number of adventurers at least "
+ 
+ #------------------------------------------------------
+ # Exploration
+ #------------------------------------------------------
+ EXPLORE_MISSON_SEA: "Explore $WHERE$ waters."
+ EXPLORE_MISSON_COAST: "Explore $WHERE$ coast."
+ 

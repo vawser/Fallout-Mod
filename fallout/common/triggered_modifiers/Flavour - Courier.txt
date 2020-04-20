@@ -1,0 +1,13 @@
+courier_disruption = {
+    potential = {
+		has_global_flag = courier_helped_himself
+	}
+	trigger = {
+        has_global_flag = courier_helped_himself
+        capital_scope = {
+            superregion = west_coast_superregion
+        }
+	}
+	
+    global_unrest = 5
+}

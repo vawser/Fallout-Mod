@@ -1,0 +1,48 @@
+# Caesar's Legion
+CAE_ideas = {
+    start = {
+        infantry_power = 0.1
+        core_creation = -0.1
+    }
+    
+    bonus = {
+        war_exhaustion = -0.03
+    }
+    
+    trigger = {
+        tag = CAE
+    }
+    free = yes
+    
+    # "Legionary Discipline"
+    cae_idea_1 = {
+        discipline = 0.05
+    }
+    # "Roman Legions"
+    cae_idea_2 = {
+        army_tradition = 1
+    }
+    # "Immortal Legions"
+    cae_idea_3 = {
+        manpower_recovery_speed = 0.1
+    }
+    # "Leading Men"
+    cae_idea_4 = {
+        advisor_pool = 1
+    }
+    # "Slave Soldiers"
+    cae_idea_5 = {
+        global_regiment_cost = -0.2
+        global_regiment_recruit_speed = -0.1
+    }
+    # "Trained Leaders"
+    cae_idea_6 = {
+        leader_land_fire = 1
+        leader_land_shock = 1
+    }
+    # "Ave, True to Caesar!"
+    cae_idea_7 = {
+        prestige = 1
+    }
+}
+

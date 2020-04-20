@@ -1,0 +1,27 @@
+# set_variable = { which = province_id value = 928  }
+
+owner = TAR
+controller = TAR
+add_core = TAR
+is_city = yes
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+culture = tar_walker
+religion = animism
+
+hre = no
+center_of_trade = 1
+trade_goods = fungus
+
+2000.1.1 = {
+	add_permanent_province_modifier = {
+		name = trade_post
+		duration = -1 
+	}
+}
+
+
+

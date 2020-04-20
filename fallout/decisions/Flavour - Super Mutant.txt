@@ -1,0 +1,23 @@
+country_decisions = {
+	establish_super_mutant_base = {
+		potential = {
+			technology_group = tech_super_mutant
+			NOT = { has_country_modifier = super_mutant_base }
+		}
+		allow =  {
+			total_development = 100
+            years_of_income = 1
+		}
+	  	effect = {
+            add_years_of_income = -1
+            
+			add_country_modifier = { 
+				name = super_mutant_base
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

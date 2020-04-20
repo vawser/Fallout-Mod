@@ -1,0 +1,157 @@
+namespace = megaton
+
+# "The Power of Atom"
+country_event = {
+	id = megaton.1
+	title = megaton.1.title
+	desc = megaton.1.desc
+    picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    major = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - megaton.1" }
+        }
+    }
+    
+	option = {
+		name = megaton.1.option.a
+	
+        hidden_effect = {
+            country_event = { id = megaton.3 days = 7 }
+            country_event = { id = megaton.4 days = 90 }
+            
+            1260 = {
+                remove_province_modifier = megaton_bomb 
+                remove_core = owner
+                cede_province = ---   # Broken at the moment
+                add_base_tax = -100
+                add_base_production = -100
+                add_base_manpower = -100
+                
+                every_neighbor_province = {
+                    limit = {
+                        NOT = { is_empty = yes }
+                    }
+                    random = {
+                        chance = 50
+                            
+                        remove_core = owner
+                        cede_province = ---
+                        add_base_tax = -1
+                        add_base_production = -1
+                        add_base_manpower = -1
+                    }
+                }
+            }
+        }
+	}
+}
+
+# "Megaton Refugees"
+country_event = {
+	id = megaton.2
+	title = megaton.2.title
+	desc = megaton.2.desc
+    picture = COLLAPSED_HIGHWAY_eventPicture
+	
+	trigger = {
+        NOT = { exists = MEG }
+        1260 = { NOT = { has_province_modifier = megaton_bomb } }
+        NOT = { has_country_flag = received_refugees }
+		capital_scope = {
+			region = the_capital_wasteland_region
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		set_country_flag = received_refugees
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - megaton.2" }
+        }
+	}
+	
+	option = {
+		name = megaton.2.option.a
+		
+		random_owned_province = { 
+            add_base_manpower = 1
+            add_base_production = 1
+            add_base_tax = 1 
+            add_province_modifier = {
+                name = "meg_ref_mod"
+                duration = 600
+            }
+		}
+        
+		add_prestige = -5
+		
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = megaton.2.option.b
+        
+		add_prestige = 5
+		
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = megaton.3
+	title = megaton.3.title
+	desc = megaton.3.desc
+    picture = BIG_MT_CINEMATIC_eventPicture
+
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - megaton.1" }
+        }
+    }
+    
+	option = {
+		name = megaton.3.option.a
+ 
+        show_ambient_object = Megaton_Nuke
+        #show_ambient_object = ShadySands_Nuke
+        #show_ambient_object = Flagstaff_Nuke
+	}
+}
+
+country_event = {
+	id = megaton.4
+	title = megaton.4.title
+	desc = megaton.4.desc
+    picture = BIG_MT_CINEMATIC_eventPicture
+
+    is_triggered_only = yes
+    hidden = yes
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - megaton.2" }
+        }
+    }
+    
+	option = {
+		name = megaton.4.option.a
+ 
+        hide_ambient_object = Megaton_Nuke
+        #hide_ambient_object = ShadySands_Nuke
+        #hide_ambient_object = Flagstaff_Nuke
+	}
+}

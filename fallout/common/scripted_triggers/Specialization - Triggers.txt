@@ -1,0 +1,40 @@
+#Country Scope
+hidden_progressive_opinion_for_specialization_trigger = {
+	hidden_trigger = {
+		reverse_has_opinion = { who = FROM value = -50 }
+		reverse_has_opinion = { who = FROM value = -25 }
+		reverse_has_opinion = { who = FROM value = 0 }
+		reverse_has_opinion = { who = FROM value = 25 }
+		reverse_has_opinion = { who = FROM value = 50 }
+		reverse_has_opinion = { who = FROM value = 75 }
+		reverse_has_opinion = { who = FROM value = 100 }
+		reverse_has_opinion = { who = FROM value = 125 }
+	}
+}
+
+knows_of_specialization_country_capital_trigger = {
+	FROM = {
+		exists = yes
+		capital_scope = {
+			ROOT = {
+				has_discovered = PREV
+			}
+		}
+	}
+}
+
+has_specialization_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_specialization_trigger_tooltip
+		OR = {
+            has_country_modifier = speciality_chems_modifier
+            has_country_modifier = speciality_slaves_modifier
+            has_country_modifier = speciality_technology_modifier
+            has_country_modifier = speciality_caps_modifier
+            has_country_modifier = speciality_weaponry_modifier
+            has_country_modifier = speciality_water_modifier
+            has_country_modifier = speciality_explosives_modifier
+            has_country_modifier = speciality_alcohol_modifier
+		}
+	}
+}

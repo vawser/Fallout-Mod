@@ -1,0 +1,49 @@
+country_decisions = {
+    destroy_the_fence = {
+		potential = {
+            OR = {
+				capital_scope = { area = big_mt_area }
+				capital_scope = { region = big_mt_region }
+				has_country_flag = the_new_think_tank
+			}
+            has_discovered = 1390
+            has_discovered = 568
+            has_discovered = 569
+            NOT = { has_country_flag = destroying_fence }
+        }
+        
+		allow =  {
+            OR = {
+                adm_tech = 5
+                dip_tech = 5
+                mil_tech = 5
+            }
+			1390 = { has_province_modifier = bmt_block }
+            568 = { has_province_modifier = bmt_block }
+            569 = { has_province_modifier = bmt_block }
+			years_of_income = 1
+		}
+	  	effect = {
+            set_country_flag = destroying_fence
+			add_years_of_income = -1
+            
+            add_country_modifier = {
+                name = bypassed_the_fence
+                duration = -1
+            }
+            
+            hidden_effect = {
+                west_coast_superregion = {
+                    discover_country = ROOT
+                }
+            }
+            
+            1390 = { remove_province_modifier = bmt_block }
+            568 = { remove_province_modifier = bmt_block }
+            569 = { remove_province_modifier = bmt_block }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

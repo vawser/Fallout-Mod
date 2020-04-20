@@ -1,0 +1,124 @@
+# First policy below is the default if no other selected
+
+#-----------------------------
+# Maximize Profit
+#-----------------------------
+maximize_profit = {
+	can_select = {
+		FROM = {
+			has_trader = ROOT
+		}
+	}
+
+	trade_power = {
+		duration = -1
+		power_modifier = 0.1
+		key = maximize_profits
+	}
+	
+	center_of_reformation = no
+	button_gfx = GFX_TP_motel
+}
+
+#-----------------------------
+# Hostile Trading
+#-----------------------------
+hostile_trading = {
+	can_select = {
+		FROM = {
+			has_trader = ROOT
+		}
+	}
+
+	# Also applied versus countries with the node as their home node
+	countries_with_merchant_modifier = {
+		spy_offence = 0.5
+	}
+	
+	button_gfx = GFX_TP_nuke
+}
+
+#-----------------------------
+# Improve Inland Routes
+#-----------------------------
+improve_inland_routes = {
+	can_select = {
+		FROM = {
+			has_trader = ROOT
+			trade_share = {
+				country = ROOT
+				share = 50
+			}
+		}
+	}
+
+	can_maintain = {
+		FROM = {
+			has_trader = ROOT
+			trade_share = {
+				country = ROOT
+				share = 40
+			}
+		}
+	}
+	
+	node_province_modifier = {
+		siege_ability = 0.2
+		artillery_bonus_vs_fort = 2
+	}	
+	button_gfx = GFX_TP_outpost
+}
+
+#-----------------------------
+# Establish Communities
+#-----------------------------
+establish_communities = {
+	can_select = {
+		FROM = {
+			has_trader = ROOT
+		}
+	}
+	countries_with_merchant_modifier = {
+		improve_relation_modifier = 0.25
+	}
+	
+	button_gfx = GFX_TP_encampment
+}
+
+#-----------------------------
+# Propagate Religion
+#-----------------------------
+propagate_religion = {
+	unique = yes # Only one country can select this in a certain node.
+
+	can_select = {		
+		custom_trigger_tooltip = {
+            tooltip = ALLOW_PROPAGATE_RELIGON
+            
+            has_country_flag = allow_propagate_religion
+        }
+		dominant_religion = ROOT
+		FROM = {
+			has_trader = ROOT
+			trade_share = {
+				country = ROOT
+				share = 50
+			}
+		}
+	}
+
+	can_maintain = {
+		dominant_religion = ROOT
+		FROM = {
+			has_trader = ROOT
+			trade_share = {
+				country = ROOT
+				share = 40
+			}
+		}
+	}
+
+	show_alert = yes
+	center_of_reformation = yes
+	button_gfx = GFX_TP_sea
+}

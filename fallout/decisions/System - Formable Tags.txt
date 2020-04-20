@@ -1,0 +1,811 @@
+country_decisions = {
+
+	form_empire_of_the_legion = {
+		major = yes
+		potential = {
+			NOT = { exists = X01 }
+			OR = {
+				tag = CAE
+				tag = GD2
+				has_reform = legion_reform
+			}
+            NOT = { is_unswitchable_nation = yes }
+		}
+		
+		allow = {
+            own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_PHOENIX
+                130 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SANTA_FE
+                335 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SHADY_SANDS
+                1202 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HOOVER_DAM
+                267 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			west_coast_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			change_tag = X01
+			set_government_rank = 3
+		}
+	}
+	
+	form_shi_empire = {
+		major = yes
+		
+		potential = {
+			NOT = { exists = X02 }
+			OR = {
+				technology_group = tech_shi
+				tag = SHI
+			}
+            NOT = { is_unswitchable_nation = yes }
+		}
+		
+		allow = { 
+			own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SHADY_SANDS
+                1202 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SAN_FRANCISCO
+                1120 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			west_coast_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			change_tag = X02
+			set_government_rank = 3
+		}
+	}
+	
+	form_the_new_californian_empire = {
+		major = yes
+		
+		potential = {
+			NOT = { exists = X03 }
+            NOT = { exists = X12 }
+			technology_group = tech_ncr
+            NOT = { is_unswitchable_nation = yes }
+		}
+		
+		allow = {
+			own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SHADY_SANDS
+                1202 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SAN_FRANCISCO
+                1120 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_MODOC
+                1226 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_THE_DEN
+                1215 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_ARROYO
+                1 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_THE_STRIP
+                1200 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_NEW_RENO
+                1223 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_VAULT_CITY
+                1227 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_PHOENIX
+                130 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SANTA_FE
+                335 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+        }
+
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			west_coast_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			change_tag = X03
+			set_government_rank = 3
+            
+            if = {
+                limit = {
+                    NOT = { has_reform = ncr_reform }
+                }
+                change_government_effect = {
+                    TYPE = ncr_government
+                    REFORM = ncr_reform
+                    LEGACY = ncr_legacy
+                }
+            }
+		}
+	}
+	
+	form_the_united_states = {
+		major = yes
+		
+		potential = {
+			OR = {
+				capital_scope = {
+					OR = {
+						superregion = west_coast_superregion
+						superregion = midwest_superregion
+						superregion = gulf_superregion
+						superregion = east_coast_superregion
+					}
+				}
+				tag = ENC
+			}
+			NOT = { exists = X04 }
+            NOT = { is_unswitchable_nation = yes }
+		}
+		
+		allow = { 
+            own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SACREMENTO
+                2 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_NEW_RENO
+                1223 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SALEM
+                1329 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_OLIMPIA
+                1434 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_BOISE
+                1347 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_NEW_CANAAN
+                1252 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_PHOENIX
+                130 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SANTA_FE
+                335 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_DENVER
+                1251 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_CHEYENNE
+                1250 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HELENA
+                245 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_BISMARCK
+                477 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_PIERRE
+                471 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_LINCOLN
+                898 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_TOPEKA
+                446 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_OKLAHOMA_CITY
+                143 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_AUSTIN
+                328 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_MINNEAPOLIS
+                1142 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_MADISON
+                913 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_DES_MOINES
+                449 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_CHICAGO
+                1259 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_JEFFERSON_CITY
+                1244 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_LANSING
+                1151 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_INDIANAPOLIS
+                943 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_COLUMBUS
+                946 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_LITTLE_ROCK
+                895 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_BATON_ROGUE
+                921 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_JACKSON
+                1158 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_MONTGOMERY
+                589 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_ATLANTA
+                580 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_TALLAHASSEE
+                928 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_COLUMBIA
+                573 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_RALEIGH
+                598 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_NASHVILLE
+                934 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_FRANKFORT
+                1155 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_RICHMOND
+                608 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_CHARLESTON
+                948 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_WASHINGTON
+                1229 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_ANNAPOLIS
+                5 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_DOVER
+                158 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HARRISBURG
+                291 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_TRENTON
+                1194 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_ALBANY
+                964 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HARTFORD
+                1114 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_PROVIDENCE
+                1268 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_DIAMOND_CITY
+                539 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_MONTPELIER
+                1187 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_CONCORD
+                970 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_AUGUSTA
+                1116 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 100
+			set_government_rank = 3
+			change_tag = X04
+		}
+	}
+
+	form_new_canann = {
+		major = yes
+		
+		potential = {
+			NOT = { exists = X06 }
+			OR = {
+				tag = DED
+				tag = SOR
+				religion = mormon
+			}
+		}
+		allow =  {
+			OR = {
+				tag = DED
+				tag = SOR
+				religion = mormon
+			}
+			custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_NEW_CANAAN
+                1252 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			change_tag = X06
+			change_religion = mormon
+			swap_free_idea_group = yes
+            if = {
+                limit = {
+                    NOT = { has_reform = theocracy_reform }
+                }
+                change_government_effect = {
+                    TYPE = theocracy_government
+                    REFORM = theocracy_reform
+                    LEGACY = theocracy_legacy
+                }
+            }
+		}
+	}
+    
+    form_mexico = {
+		major = yes
+		
+		potential = {
+			NOT = { exists = X07 }
+			capital_scope = {
+                superregion = mexico_superregion
+            }
+            NOT = { is_unswitchable_nation = yes }
+		}
+		allow =  {
+            own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_LA_PAZ
+                83 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+			custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SONORA
+                21 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_URUPAN
+                206     = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_MEXICO_CITY
+                203 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_FUERTE
+                518 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X07
+			swap_free_idea_group = yes
+			set_government_rank = 3
+		}
+	}
+    
+    form_canada = {
+		major = yes
+		
+		potential = {
+			NOT = { exists = X08 }
+			capital_scope = {
+                superregion = canada_superregion
+            }
+            NOT = { is_unswitchable_nation = yes }
+		}
+		allow =  {
+            own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_VANCOUVER
+                231 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_EDMONTON
+                611 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_REGINA
+                612 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_WINNIPEG
+                613 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_FREDERICTON
+                176  = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_TORONTO
+                1197 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_QUEBEC_CITY
+                175 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_NEWFOUNDLAND
+                615 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HALIFAX
+                171 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = X08
+			swap_free_idea_group = yes
+			set_government_rank = 3
+		}
+	}
+}

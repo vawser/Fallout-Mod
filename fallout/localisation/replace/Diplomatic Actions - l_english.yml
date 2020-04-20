@@ -1,0 +1,105 @@
+﻿l_english:
+ integrate_sphere: "Integrate Sphere"
+ integrate_sphere_title: "Integrate Sphere"
+ integrate_sphere_desc: "Integrate [From.GetName] into our nation." 
+ integrate_sphere_tooltip: "Integrate [From.GetName] into our nation."
+ integrate_sphere_alert_tooltip: "Integrate Sphere"
+ 
+ establish_cult: "Establish Cult"
+ establish_cult_title: "Establish Cult"
+ establish_cult_desc: "Establish a cult in §Y[From.GetName]§!, changing one of their provinces to §Y[Root.Religion.GetName]§!." 
+ establish_cult_tooltip: "Establish a cult in §Y[From.GetName]§!, changing one of their provinces to §Y[Root.Religion.GetName]§!." 
+ establish_cult_alert_tooltip: "Establish Cult"
+ 
+ spread_propaganda_action: "Spread Propaganda"
+ spread_propaganda_action_title: "Spread Propaganda"
+ spread_propaganda_action_desc: "Spread propaganda in §Y[From.GetName]§!, changing one of their provinces to §Y[Root.Culture.GetName]§!." 
+ spread_propaganda_action_tooltip: "Spread propaganda in §Y[From.GetName]§!, changing one of their provinces to §Y[Root.Culture.GetName]§!." 
+ spread_propaganda_action_alert_tooltip: "Spread Propaganda"
+ 
+ assassination: "Assassination"
+ 
+ assassinate_leader: "Assassinate Leader"
+ assassinate_leader_title: "Assassinate Leader"
+ assassinate_leader_desc: "Attempt to assassinate [From.Monarch.GetName], the [From.Monarch.GetTitle] of §Y[From.GetName]§!.\n\nIf discovered, [From.GetName] will gain the §YAssassination§! opinion modifier against you." 
+ assassinate_leader_tooltip: "Attempt to assassinate [From.Monarch.GetName], the [From.Monarch.GetTitle] of §Y[From.GetName]§!.\n\nIf discovered, [From.GetName] will gain the §YAssassination§! opinion modifier against you." 
+ assassinate_leader_alert_tooltip: "Assassinate Leader"
+ 
+ conduct_slave_raid: "Conduct Slave Raid"
+ conduct_slave_raid_title: "Conduct Slave Raid"
+ conduct_slave_raid_desc: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves. [From.GetName] will gain the §YSlaver§! opinion modifier against you if they discover you conducted the raid." 
+ conduct_slave_raid_tooltip: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves. [From.GetName] will gain the §YSlaver§! opinion modifier against you if they discover you conducted the raid." 
+ conduct_slave_raid_alert_tooltip: "Conduct Slave Raid"
+ 
+ slaver: "Slaver"
+ 
+ establish_diplomatic_ties: "Establish Diplomatic Ties"
+ establish_diplomatic_ties_title: "Establish Diplomatic Ties"
+ establish_diplomatic_ties_desc: "Let us establish diplomatic ties with [From.GetName] to draw our nations closer together."
+ establish_diplomatic_ties_tooltip: "Let us establish diplomatic ties with [From.GetName] to draw our nations closer together."
+ establish_diplomatic_ties_alert_tooltip: "Establish Diplomatic Ties"
+ 
+ diplomatic_ties: "Diplomatic Ties"
+ 
+ establish_diplomatic_ties_dialog: "Let us establish diplomatic ties with you."
+ 
+ NOT_TARGET_OF_ESPIONAGE: "[From.GetName] not been recently targeted by an Espionage action."
+ NOT_TARGET_OF_SLAVE_RAID: "[From.GetName] not been recently targeted by an Slave Raid action."
+ 
+ target_of_espionage: "Target of Espionage"
+ desc_target_of_espionage: "We were recently targeted by another nation for an espionage operation. We are vigilant of such operations now."
+ 
+ target_of_slave_raid: "Target of Slave Raid"
+ desc_target_of_slave_raid: "We were recently targeted by another nation for a slave raid. We are "
+ 
+ slave_raid: "Slave Raid"
+ desc_slave_raid: "This province was raided for slaves."
+ 
+ #----------------------------------------------------------------------
+ # Diplomatic Actions
+ #----------------------------------------------------------------------
+ diplomatic_actions.1.title: "Assassination"
+ diplomatic_actions.1.desc: "Assassination"
+ diplomatic_actions.1.option.a: "Assassination"
+ 
+ diplomatic_actions.2.title: "[Root.Monarch.GetTitle] [Root.Monarch.GetName] dies!"
+ diplomatic_actions.2.desc: "A mysterious affliction has caused [Root.Monarch.GetName] to die rather rapidily. One would suspect foul play, but there is no evidence to support such accusations."
+ diplomatic_actions.2.option.a: "Oh dear"
+ 
+ diplomatic_actions.3.title: "[Root.Monarch.GetTitle] [Root.Monarch.GetName] assassinated!"
+ diplomatic_actions.3.desc: "An assassin from [ass_killer.GetName] has killed our beloved [Root.Monarch.GetTitle] [Root.Monarch.GetName]. They will rue the day they ever thought we could be subjugated!"
+ diplomatic_actions.3.option.a: "Grr..."
+ 
+ diplomatic_actions.4.title: "Successful Assassination"
+ diplomatic_actions.4.desc: "Our assassin has successfully killed [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]."
+ diplomatic_actions.4.option.a: "Hurrah!"
+ 
+ diplomatic_actions.5.title: "Successful Assassination Exposed"
+ diplomatic_actions.5.desc: "Our assassin has successfully killed [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]. Unfortunately the assassin was caught, and the officials of [ass_target.GetName] are aware of our involvement."
+ diplomatic_actions.5.option.a: "Oh well"
+ 
+ diplomatic_actions.6.title: "Assassination Failed"
+ diplomatic_actions.6.desc: "Our assassin has failed to kill [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]."
+ diplomatic_actions.6.option.a: "Idiot!"
+ 
+ diplomatic_actions.7.title: "Failed Assassination Exposed"
+ diplomatic_actions.7.desc: "Our assassin has failed to kill [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]. Additionaly, the assassin was caught and the officials of [ass_target.GetName] are aware of our involvement."
+ diplomatic_actions.7.option.a: "Curses!"
+ 
+ diplomatic_actions.8.title: "Attempted Assassination of [Root.Monarch.GetTitle] [Root.Monarch.GetName]"
+ diplomatic_actions.8.desc: "An assassin from [ass_killer.GetName] has attempted to kill our beloved [Root.Monarch.GetTitle] [Root.Monarch.GetName]. The assassin failed, and through torture we elicited the whereabots of who ordered the assassination."
+ diplomatic_actions.8.option.a: "They will pay!"
+ 
+ diplomatic_actions.9.title: "Slave Raid"
+ diplomatic_actions.9.desc: "Slave Raid"
+ diplomatic_actions.9.option.a: "Slave Raid"
+ 
+ diplomatic_actions.10.title: "Slave Raid by [slave_raider.GetName]"
+ diplomatic_actions.10.desc: "Our poor citizens have been raided by dispicable slavers from [slave_raider.GetName]. They will not be forgotten."
+ diplomatic_actions.10.option.a: "[slave_raider.GetName] will pay!"
+ 
+ diplomatic_actions.11.title: "Slave Haul"
+ diplomatic_actions.11.desc: "The slavers have successfully captured slaves from [slaver_target.GetName]. Let's see how big their haul was."
+ diplomatic_actions.11.option.a: "Wonderful..."
+ 
+ 

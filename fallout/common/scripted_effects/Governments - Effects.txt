@@ -1,0 +1,20 @@
+# Example:
+
+# change_government_effect = {
+    # TYPE = raider
+    # REFORM = raider_reform
+    # LEGACY = raider_legacy
+# }
+            
+change_government_effect = {
+    if = {
+        limit = {
+            has_dlc = "Dharma"
+        }
+        change_government = $TYPE$
+        add_government_reform = $REFORM$
+    }
+    else = {
+        set_legacy_government = $LEGACY$
+    }
+}

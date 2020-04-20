@@ -1,0 +1,63 @@
+namespace = processor
+
+country_event = {
+	id = processor.1
+	title = processor.1.title
+	desc = processor.1.desc
+	picture = ASSASSINATION_eventPicture
+	
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_global_flag = completed_processor_processor }
+    }
+
+    immediate = {
+        set_global_flag = completed_processor_processor
+    }
+
+    option = {
+        name = processor.1.option.a
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - Processor assigned" }
+
+        random_country = {
+            limit = { ai = yes }
+            set_country_flag = processor
+        }
+    }  
+}
+
+# If processor dies, designate another
+country_event = {
+	id = processor.2
+	title = processor.2.title
+	desc = processor.2.desc
+	picture = ASSASSINATION_eventPicture
+	
+    hidden = yes
+
+    trigger = {
+        NOT = {
+            any_country = {
+                has_country_flag = processor
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+    
+    option = {
+        name = processor.2.option.a
+
+        if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - Processor reassigned" }
+
+        random_country = {
+            limit = { ai = yes }
+            set_country_flag = processor
+        }
+    }  
+}

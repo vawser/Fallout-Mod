@@ -1,0 +1,30 @@
+# set_variable = { which = province_id value = 2  }
+
+owner = SAC
+controller = SAC
+add_core = SAC
+is_city = yes
+
+base_tax = 4
+base_production = 4
+base_manpower = 4
+
+culture = sac_town
+religion = secular
+
+trade_goods = gambling
+hre = no
+center_of_trade = 1
+
+2000.1.1 = {
+    add_permanent_province_modifier = {
+        name = caravan_post
+        duration = -1 
+    }
+}
+
+2282.1.1 = {
+    owner = NCR
+    controller = NCR
+    add_core = NCR
+}

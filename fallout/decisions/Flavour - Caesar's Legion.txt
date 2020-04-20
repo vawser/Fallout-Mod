@@ -1,0 +1,228 @@
+country_decisions = {
+	the_glory_of_rome = {
+		potential = {
+			OR = {
+				tag = CAE
+				tag = X01
+				has_reform = legion_reform
+			}
+			NOT = { has_country_modifier = the_glory_of_rome }
+		}
+		allow =  {
+			own_header = yes
+			custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_SHADY_SANDS
+                1202 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_PROVINCE_HOOVER_DAM
+                267 = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+	  	effect = {
+            add_years_of_income = -1
+            
+			add_country_modifier = {
+				name = the_glory_of_rome
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    
+    conduct_enslavement_sweep = {
+        potential = {
+            tag = CAE
+            NOT = { has_dlc = "The Cossacks" }
+            has_slavery_allowed = yes
+            NOT = { has_country_modifier = enslavement_cooldown }
+		}
+		allow =  {
+			any_owned_province = {
+                NOT = { has_province_modifier = enslavement }
+                OR = {
+                    NOT = { culture = ROOT }
+                    NOT = { religion = ROOT }
+                }
+            }
+            years_of_income = 1
+		}
+	  	effect = {
+			add_years_of_income = -1
+            
+            hidden_effect = {
+                add_country_modifier = {
+                    name = enslavement_cooldown
+                    duration = 1800
+                    hidden = yes
+                }
+            }
+            
+            custom_tooltip = ENSLAVEMENT_EFFECT
+            hidden_effect = {
+                set_variable = { which = counter value = 0 }
+                
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            NOT = { culture = ROOT }
+                            NOT = { religion = ROOT }
+                        }
+                    }
+                    add_province_modifier = {
+                        name = enslavement
+                        duration = 3650
+                    }
+                    ROOT = { change_variable = { which = counter value = 1 } }
+                }
+
+                #log = "DEBUG: Counter - [Root.counter.GetValue]"
+                
+                if = {
+                    limit = { check_variable = { which = counter value = 5 } }
+                    
+                    country_event = { id = legion_actions.1 days = 30 }
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 1
+                NOT = { religious_unity = 0.75 }
+            }
+		}
+    }
+    
+    conduct_extermination_sweep = {
+        potential = {
+            tag = CAE
+            NOT = { has_dlc = "The Cossacks" }
+            has_slavery_allowed = yes
+            NOT = { has_country_modifier = extermination_cooldown }
+		}
+		allow =  {
+			any_owned_province = {
+                OR = {
+                    NOT = { culture = ROOT }
+                    NOT = { religion = ROOT }
+                }
+            }
+            years_of_income = 1
+		}
+	  	effect = {
+            hidden_effect = {
+                add_country_modifier = {
+                    name = extermination_cooldown
+                    duration = 1800
+                    hidden = yes
+                }
+            }
+			add_years_of_income = -1
+            
+            custom_tooltip = EXTERMINATION_EFFECT
+            hidden_effect = {
+                set_variable = { which = counter value = 0 }
+                
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            NOT = { culture = ROOT }
+                            NOT = { religion = ROOT }
+                        }
+                    }
+                    change_culture = ROOT
+                    change_religion = ROOT
+                    
+                    if = {
+                        limit = {
+                            NOT = { is_core = ROOT }
+                        }
+                        add_core = ROOT
+                    }
+                    
+                    while = {
+                        limit = { base_tax = 2 }
+                        add_base_tax = -1
+                    }
+                    
+                    while = {
+                        limit = { base_production = 2 }
+                        add_base_production = -1
+                    }
+                    
+                    while = {
+                        limit = { base_manpower = 2 }
+                        add_base_manpower = -1
+                    }
+
+                    ROOT = { change_variable = { which = counter value = 1 } }
+                }
+                
+                #log = "DEBUG: Counter - [Root.counter.GetValue]"
+
+                if = {
+                    limit = { check_variable = { which = counter value = 5 } }
+                    
+                    country_event = { id = legion_actions.2 days = 30 }
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+            
+            modifier = {
+                factor = 1
+                NOT = { religious_unity = 0.5 }
+            }
+		}
+    }
+    
+    indoctrinated_by_mars = {
+		major = yes
+        potential = {
+            OR = {
+				religion = cult_of_mars
+				tag = CAE
+			}
+            NOT = { has_country_modifier = indoctrinated_by_mars }
+		}
+
+		allow =  {
+			years_of_income = 1
+            
+            NOT = { has_country_modifier = indoctrinated_by_mars }
+		}
+	  	effect = {
+			add_years_of_income = -1
+            
+            add_country_modifier = {
+                name = indoctrinated_by_mars
+                duration = 1800
+            }
+		}
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {
+                factor = 10
+                NOT = { religious_unity = 0.5 }
+            }
+            
+            modifier = {
+                factor = 0
+                religious_unity = 1
+            }
+		}
+    }
+}

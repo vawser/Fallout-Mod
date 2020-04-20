@@ -1,0 +1,48 @@
+#Regulators
+regulators_ideas = {
+    start = {
+        global_tax_modifier = 0.05					
+        war_exhaustion = -0.1		
+    }
+    
+    bonus = {
+        land_maintenance_modifier = -0.1				
+    }
+    
+    trigger = {
+        tag = REG
+    }
+	
+    free = yes
+    
+    # Vigilante Justice 
+    regulators_1 = {
+		infantry_shock = 1	
+    }
+    # Bounty Hunting
+    regulators_2 = {
+        merc_maintenance_modifier = -0.1		
+    }
+    # Incorruptible 
+    regulators_3 = {
+		yearly_corruption = -0.1	
+    }
+    # Secrecy 
+    regulators_4 = {
+        global_spy_defence = 0.1	
+    }
+    # Lawbringers  
+    regulators_5 = {
+        discipline = 0.05
+    }
+    # Moral Bulkwark 
+    regulators_6 = {
+        discovered_relations_impact = -0.1	
+		diplomatic_reputation = 2	
+    }
+    # Foreign Agents
+    regulators_7 = {
+		reinforce_cost_modifier = -0.1	
+    }
+}
+

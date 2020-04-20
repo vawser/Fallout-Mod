@@ -1,0 +1,52 @@
+city_ideas = {
+	start = {
+		development_cost = -0.1
+		build_cost = -0.1
+	}
+	bonus = {
+		global_tax_modifier = 0.1
+	}
+	
+	trigger = {
+		is_settlement_government = yes
+        capital_scope = {
+            development = 20
+        }
+	}
+	free = yes
+	
+	# Ruined Majesty
+	city_1 = {
+		prestige = 1
+	}
+	
+	# Buried Technology
+	city_2 = {
+		technology_cost = -0.05
+	}
+	
+	# Military Installations
+	city_3 = {
+		defensiveness = 0.33
+	}
+	
+	# Recruitment Broadcasts
+	city_4 = {
+		global_manpower_modifier = 0.15
+	}
+	
+	# Urban Defence
+	city_5 = {
+		fire_damage_received = -0.1
+	}
+	
+	# Salvaged Power
+	city_6 = {
+		state_maintenance_modifier = -0.15
+	}
+	
+	# Advanced Weaponry
+	city_7 = {
+		fire_damage = 0.05
+	}
+}

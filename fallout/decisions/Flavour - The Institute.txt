@@ -1,0 +1,28 @@
+country_decisions = {
+    # Utilise Fusion Reactor
+	utilise_fusion_reactor = {
+		potential = {
+			tag = INS
+            NOT = { has_country_modifier = fusion_reactor }
+		}
+		allow =  {
+            years_of_income = 1
+            full_idea_group = institute_ideas
+		}
+	  	effect = {
+			add_years_of_income = -1
+            
+            add_adm_power = 50
+            add_dip_power = 50
+            add_mil_power = 50
+            
+            add_country_modifier = {
+                name = "fusion_reactor"
+                duration = 3650
+            }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
