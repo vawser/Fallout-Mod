@@ -1,15 +1,4 @@
 guiTypes = {
-	positionType = {
-		name = "cardinal_shield_position"
-		position = { x = -230 y = -70 }
-	}
-
-	positionType = {
-		name = "cardinal_shield_offset"
-		position = { x = 0 y = 32 }
-	}
-
-    # Papacy Window
 	windowType = {
 		name = "papacy_window"
 		backGround="papacy_bg"
@@ -205,14 +194,6 @@ guiTypes = {
 			allwaystransparent=yes
 		}			
 		
-        iconType =
-        {
-            name = "papal_influence_icon"
-            spriteType = "GFX_main_lobby_button"
-            position = { x= -155 y = -160 }
-            Orientation = "CENTER"
-        }
-
 		instantTextBoxType = {
 			name = "influence_label"
 			position = { x = 400 y = 132 }
@@ -258,26 +239,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_papalactions"
 		}			
-
-        iconType =
-		{
-			name ="crusade_banner"
-			spriteType = "GFX_more_dip_actions_icon"
-			position = { x= 90 y = -9999 }
-			Orientation = "UPPER_LEFT"
-		}
-
-        instantTextBoxType={
-			name = "crusade_title"
-			position = {x = 144 y = -9999 }
-			font = "vic_22"
-			borderSize = {x = 0 y = 0}	
-			maxWidth = 130
-			maxHeight = 32	
-			text = "Crusade Target"	
-            pdx_tooltip = "CURRENT_BURNING_CRUSADE_TOOLTIP"
-		}
-        
+			
 		guiButtonType = 
 		{
 			name ="crusade_target_shield"
@@ -290,17 +252,29 @@ guiTypes = {
 		}
 		
 		guiButtonType = {
-            name = "close_button"
-            position = { x=430   y =526}
-            quadTextureSprite ="GFX_papacy_close_button"	
-            tooltip = ""
-            tooltipText =""
-            delayedTooltipText = ""
-            buttonText = "PAPACY_CLOSE"
-            buttonFont = "monofonto_outline_18"
-            clicksound = close_window
-            shortcut = "ESCAPE"
-        }
+				name = "close_button"
+				position = { x=345 y =646}
+				quadTextureSprite ="button_type_1"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "PAPACY_CLOSE"
+				buttonFont = "vic_18"
+
+				clicksound = close_window
+				shortcut = "ESCAPE"
+			}
+
+		
+	}
+	positionType = {
+		name = "cardinal_shield_position"
+		position = { x = -230 y = -70 }
+	}
+
+	positionType = {
+		name = "cardinal_shield_offset"
+		position = { x = 0 y = 32 }
 	}
     
     # Cardinal Window
@@ -327,29 +301,29 @@ guiTypes = {
 		}
 		
 		instantTextBoxType = {
-            name = "number_of_cardinals"
-            position = { x = 88 y = 4 }
-            textureFile = ""
-            font = "vic_18"
-            borderSize = {x = 4 y = 2}
-            text = "PAPACY_MEMBER_STATES"
-            maxWidth =80
-            maxHeight = 32	
-            format = center
-            fixedsize = yes
-        }
+				name = "number_of_cardinals"
+				position = { x = 88 y = 4 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 4 y = 2}
+				text = "PAPACY_MEMBER_STATES"
+				maxWidth =80
+				maxHeight = 32	
+				format = center
+				fixedsize = yes
+			}
 			
 		instantTextBoxType = {
-            name = "current_papal_influence"
-            position = { x = 169 y = 4 }
-            textureFile = ""
-            font = "vic_18"
-            borderSize = {x = 4 y = 2}
-            text = "PAPACY_MEMBER_STATES"	
-            maxWidth =80
-            maxHeight = 100	
-            format = center
-        }
+				name = "current_papal_influence"
+				position = { x = 169 y = 4 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 4 y = 2}
+				text = "PAPACY_MEMBER_STATES"	
+				maxWidth =80
+				maxHeight = 100	
+				format = center
+			}
 			
 		instantTextBoxType = {
 			name = "invested_papal_influence"
@@ -373,6 +347,9 @@ guiTypes = {
 			maxHeight = 100	
 			format = center
 		}
+		
+		
+		
 	}	
 	
     # Cardinal Type

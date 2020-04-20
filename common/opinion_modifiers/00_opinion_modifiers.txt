@@ -885,7 +885,7 @@ bav_jesuits_rejected = {
 	yearly_decay = 1
 }
 
-oman_agressive_trade = {
+oman_aggressive_trade = {
 	opinion = -20
 	years = 40
 	yearly_decay = 0.5
@@ -1557,6 +1557,12 @@ opinion_religious_independence = {
 }
 
 opinion_declined_legatus_natus = {
+	opinion = -50
+	years = 10
+	yearly_decay = 2
+}
+
+opinion_declined_primas_germaniae = {
 	opinion = -50
 	years = 10
 	yearly_decay = 2
@@ -3933,4 +3939,9 @@ opinion_defected_privateer = {
 opinion_sublimis_deus = {
 	opinion = 50
 	yearly_decay = 0.5
+}
+
+opinion_KOR_supported_war_for_north = {
+	opinion = 60
+	yearly_decay = 1.5
 }
