@@ -2,6 +2,7 @@ country_decisions = {
 	view_national_policies = {
 		potential = {
             ai = no
+            is_human_race = yes
 		}
 		allow = {
             is_at_war = no
@@ -20,6 +21,7 @@ country_decisions = {
     host_casino_night = {
 		potential = {
             has_gambling_allowed = yes
+            is_human_race = yes
 		}
 		allow = {
             NOT = { has_country_modifier = casino_night_cooldown }
@@ -48,6 +50,7 @@ country_decisions = {
 		potential = {
             uses_heir = yes
             has_prostitution_allowed = yes
+            is_human_race = yes
 		}
 		allow = {
             NOT = { has_country_modifier = visit_brothel_cooldown }
@@ -81,6 +84,7 @@ country_decisions = {
     synthesize_drug = {
 		potential = {
             has_narcotics_allowed = yes
+            is_human_race = yes
 		}
 		allow = {
             NOT = { has_ruler_modifier = ruler_drug_abuse }
@@ -134,6 +138,7 @@ country_decisions = {
     
     purge_drug_manufacturing = {
 		potential = {
+            is_human_race = yes
 			OR = {
 				AND = {
 					has_narcotics_forbidden = yes
@@ -192,6 +197,7 @@ country_decisions = {
     # Start Scavenger Hunt
     start_scavenger_hunt = {
 		potential = {
+            is_human_race = yes
             always = no # TODO
             has_scavenging_allowed = yes
 		}
@@ -220,6 +226,7 @@ country_decisions = {
     # Search for Lost Texts
     search_for_lost_texts = {
 		potential = {
+            is_human_race = yes
             has_scavenging_allowed = yes
 		}
 		allow = {

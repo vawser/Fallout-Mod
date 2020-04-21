@@ -65,8 +65,11 @@ country_event = {
         # East Coast
         if = {
             limit = {
-                capital_scope = {
-                    superregion = east_coast_superregion
+                OR = {
+                    capital_scope = {
+                        superregion = east_coast_superregion
+                    }
+                    tag = DTC
                 }
             }
             
@@ -105,8 +108,11 @@ country_event = {
         # Midwest
         if = {
             limit = {
-                capital_scope = {
-                    superregion = midwest_superregion
+                OR = {
+                    capital_scope = {
+                        superregion = midwest_superregion
+                    }
+                    tag = DTC
                 }
             }
             
@@ -145,8 +151,11 @@ country_event = {
         # Gulf
         if = {
             limit = {
-                capital_scope = {
-                    superregion = gulf_superregion
+                OR = {
+                    capital_scope = {
+                        superregion = gulf_superregion
+                    }
+                    tag = DTC
                 }
             }
             midwest_superregion = {
