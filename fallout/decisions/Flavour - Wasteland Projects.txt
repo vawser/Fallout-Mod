@@ -1,6 +1,7 @@
 country_decisions = {
 	open_the_lucky_38 = {
 		potential = {
+            is_humanlike_race = yes
             tag = NVG
 			owns_core_province = 1200
 			1200 = { NOT = { has_province_modifier = building_lucky38 } }
@@ -28,6 +29,7 @@ country_decisions = {
 	
 	reopen_the_bison_steve_casino = {
 		potential = {
+            is_humanlike_race = yes
 			owns_core_province = 118
             118 = { NOT = { has_province_modifier = building_the_bison_steve_casino } }
 		}
@@ -52,6 +54,7 @@ country_decisions = {
 	
 	restore_lincoln_memorial = {
 		potential = {
+            is_humanlike_race = yes
             owns_core_province = 1414 
 			1414 = { NOT = { has_province_modifier = building_lincoln_memorial } }
 		}
@@ -77,6 +80,7 @@ country_decisions = {
     
     freeside_clean = {
 		potential = {
+            is_humanlike_race = yes
             NOT = { has_global_flag = cleaned_freeside }
             owns_core_province = 284
 			284  = {

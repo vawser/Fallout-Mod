@@ -23,6 +23,18 @@ is_human_race = {
 	}
 }
 
+is_humanlike_race = {
+    OR = {
+		is_wastelander = yes
+		is_raider = yes
+		is_tribal_race = yes
+		is_dwarf = yes
+        is_super_mutant = yes
+        is_ghoul = yes
+        is_beastlord = yes
+	}
+}
+
 # FROM is target
 is_same_race = {
     custom_trigger_tooltip = {

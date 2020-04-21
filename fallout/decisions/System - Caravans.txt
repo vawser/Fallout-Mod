@@ -4,6 +4,7 @@ country_decisions = {
 
 	check_caravan_inventory = {
 		potential = {
+            is_humanlike_race = yes
             NOT = { has_country_flag = in_buy_menu }
 		}
 		allow = {

@@ -156,6 +156,7 @@ country_event = {
                         superregion = gulf_superregion
                     }
                     tag = DTC
+                    tag = MAW
                 }
             }
             midwest_superregion = {
@@ -195,8 +196,11 @@ country_event = {
         # Mexico
         if = {
             limit = {
-                capital_scope = {
-                    superregion = mexico_superregion
+                OR = {
+                    capital_scope = {
+                        superregion = mexico_superregion
+                    }
+                   tag = MAW
                 }
             }
             mexico_superregion = {
@@ -237,8 +241,11 @@ country_event = {
         # Caribbean
         if = {
             limit = {
-                capital_scope = {
-                    region = caribbean_region
+                OR = {
+                    capital_scope = {
+                        region = caribbean_region
+                    }
+                    tag = MAW
                 }
             }
             mexico_superregion = {
@@ -248,6 +255,12 @@ country_event = {
                 discover_country = ROOT
             }
             gulf_of_mexico_region = {
+                discover_country = ROOT
+            }
+            caribbean_region = {
+                discover_country = ROOT
+            }
+            caribbean_seaboard_region = {
                 discover_country = ROOT
             }
             8 = {

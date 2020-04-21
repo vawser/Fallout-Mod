@@ -1,6 +1,7 @@
 country_decisions = {
 	establish_settlement = {
 		potential = {
+            is_humanlike_race = yes
 			has_government_attribute = tribal
 		}
 		allow =  {
@@ -30,6 +31,7 @@ country_decisions = {
     
     establish_republic = {
 		potential = {
+            is_humanlike_race = yes
 			has_government_attribute = tribal
 		}
 		allow =  {
@@ -59,6 +61,7 @@ country_decisions = {
     
     claim_vault = {
 		potential = {
+            is_humanlike_race = yes
 			has_government_attribute = tribal
             NOT = { num_of_cities = 5 } # Four cities or less, roughly the same size in terms of land as Vault City
 		}
