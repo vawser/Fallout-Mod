@@ -3,10 +3,15 @@ exacting_recruitment_standards = {
 		technology_group = tech_bos
 	}
 	trigger = {
-		NOT = { total_development = 150 }
+		NOT = { has_country_modifier = lifted_recruitment_restrictions }
 	}
 
-	global_regiment_recruit_speed = 0.25
-	manpower_recovery_speed = -0.1
+    global_manpower_modifier = -0.75
+    land_forcelimit_modifier = -0.75
+    
+    global_regiment_cost = 1.0
+    global_regiment_recruit_speed = 1.0
+    
+    discipline = 0.05
 }
 

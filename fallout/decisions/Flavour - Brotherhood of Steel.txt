@@ -149,4 +149,38 @@ country_decisions = {
 			}
 		}
 	}
+    
+    lift_recruitment_restrictions = {
+		potential = {	
+			has_reform = brotherhood_reform
+			NOT = { has_country_modifier = lifted_recruitment_restrictions }
+		}
+		allow =  {
+			has_reform = brotherhood_reform
+            stability = 1
+		}
+	  	effect = {
+            add_stability = -5
+			add_country_modifier = { 
+				name = lifted_recruitment_restrictions
+				duration = -1
+			}
+            add_country_modifier = { 
+				name = brotherhood_unrest
+				duration = 3650
+			}
+            capital_scope = {
+                noble_rebels = 3
+            }
+		}
+		ai_will_do = {
+			factor = 1
+            
+			modifier = {
+				factor = 0
+				
+                NOT = { total_development = 300 }
+			}
+		}
+	}
 }
