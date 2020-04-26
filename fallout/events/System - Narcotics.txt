@@ -1,0 +1,139 @@
+namespace = narcotics
+
+country_event = {
+	id = narcotics.1
+	title = narcotics.1.title
+	desc = narcotics.1.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+    trigger = {
+        has_country_flag = trigger_narcotics_event
+    }
+    
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = trigger_narcotics_event
+        }
+    }
+
+    mean_time_to_happen = {
+		months = 1 
+	}
+    
+	option = {
+		name = narcotics.1.option.a
+
+        add_ruler_modifier = {
+            name = ruler_drug_abuse
+            duration = 7300
+        }
+        
+        random_list = {
+            25 = { country_event = { id = narcotics.2 } }
+            75 = { country_event = { id = narcotics.3 } }
+        }
+	}
+}
+
+# Retardation
+country_event = {
+	id = narcotics.2
+	title = narcotics.2.title
+	desc = narcotics.2.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = narcotics.2.option.a
+
+        random_list = {
+            33 = { change_adm = -1 }
+            33 = { change_adm = -2 }
+            33 = { change_adm = -3 }
+            33 = { change_dip = -1 }
+            33 = { change_dip = -2 }
+            33 = { change_dip = -3 }
+            33 = { change_mil = -1 }
+            33 = { change_mil = -2 }
+            33 = { change_mil = -3 }
+        }
+	}
+}
+
+# Acceleration
+country_event = {
+	id = narcotics.3
+	title = narcotics.3.title
+	desc = narcotics.3.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = narcotics.3.option.a
+
+        random_list = {
+            33 = { change_adm = 1 }
+            33 = { change_adm = 2 }
+            33 = { change_adm = 3 }
+            33 = { change_dip = 1 }
+            33 = { change_dip = 2 }
+            33 = { change_dip = 3 }
+            33 = { change_mil = 1 }
+            33 = { change_mil = 2 }
+            33 = { change_mil = 3 }
+        }
+	}
+}
+
+# Purge Drug Manufacturing
+country_event = {
+	id = narcotics.10
+	title = narcotics.10.title
+	desc = narcotics.10.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	trigger = {
+        has_country_flag = trigger_purge_drug_manufacturing_event
+    }
+    
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = trigger_purge_drug_manufacturing_event
+        }
+    }
+
+    mean_time_to_happen = {
+		months = 1 
+	}
+
+	option = {
+		name = narcotics.10.option.a
+
+        hidden_effect = {
+            add_country_modifier = { 
+                name = drug_purge_cooldown
+                duration = 3650
+                hidden = yes
+            }
+        }
+            
+        custom_tooltip = DRUG_GOODS_CHANGE
+        hidden_effect = {
+            every_owned_province = {
+                limit = { trade_goods = drugs }
+                
+                random_list = {
+                    20 = { change_trade_goods = meat }
+                    20 = { change_trade_goods = steel }
+                    20 = { change_trade_goods = food }
+                    20 = { change_trade_goods = weaponry }
+                    20 = { change_trade_goods = munitions }
+                }
+            }
+        }
+        
+        country_event = { id = fallout_tradegoods.1 }
+	}
+}

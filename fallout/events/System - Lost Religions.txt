@@ -1,5 +1,100 @@
 namespace = lost_religions
 
+# Religious Findings
+country_event = {
+	id = lost_religions.1
+	title = lost_religions.1.title
+	desc = lost_religions.1.desc
+	picture = CHURCH_MISTY_INSIDE_eventPicture
+	
+    trigger = {
+        has_country_flag = trigger_lost_religions_event
+    }
+    
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = trigger_lost_religions_event
+        }
+        add_country_modifier = {
+            name = lost_texts_cooldown
+            duration = 3650
+            hidden = yes
+        }
+    }
+
+    mean_time_to_happen = {
+		months = 1 
+	}
+    
+    # Christian
+	option = {
+		name = lost_religions.1.option.a
+
+        random_list = {
+            25 = { country_event = { id = lost_religions.2 } } # Failure
+            20 = { country_event = { id = lost_religions.5 } } # Catholic
+            50 = { country_event = { id = lost_religions.6 } } # Baptist
+            20 = { country_event = { id = lost_religions.7 } } # Mormon
+            10 = { country_event = { id = lost_religions.8 } } # Orthodox
+            10 = { country_event = { id = lost_religions.9 } } # Coptic
+        }
+	}
+    # Muslim
+	option = {
+		name = lost_religions.2.option.a
+
+        random_list = {
+            25 = { country_event = { id = lost_religions.2 } } # Failure
+            30 = { country_event = { id = lost_religions.10 } } # Sunni
+            30 = { country_event = { id = lost_religions.11 } } # Shia
+            10 = { country_event = { id = lost_religions.12 } } # Ibadi
+        }
+	}
+    # Dharmic
+	option = {
+		name = lost_religions.3.option.a
+
+        random_list = {
+            25 = { country_event = { id = lost_religions.2 } } # Failure
+            20 = { country_event = { id = lost_religions.13 } } # Theravada
+            20 = { country_event = { id = lost_religions.14 } } # Vajrayana
+            20 = { country_event = { id = lost_religions.15 } } # Mahayana
+            30 = { country_event = { id = lost_religions.18 } } # Hinduism
+            10 = { country_event = { id = lost_religions.19 } } # Sikhism
+        }
+	}
+    # Eastern
+	option = {
+		name = lost_religions.4.option.a
+
+        random_list = {
+            25 = { country_event = { id = lost_religions.2 } } # Failure
+            30 = { country_event = { id = lost_religions.16 } } # Taoism
+            10 = { country_event = { id = lost_religions.17 } } # Shinto
+        }
+	}
+    # Jewish
+	option = {
+		name = lost_religions.5.option.a
+
+        random_list = {
+            25 = { country_event = { id = lost_religions.2 } } # Failure
+            50 = { country_event = { id = lost_religions.20 } } # Jewish
+        }
+	}
+    # Forgotten
+	option = {
+		name = lost_religions.5.option.a
+
+        random_list = {
+            25 = { country_event = { id = lost_religions.2 } } # Failure
+            20 = { country_event = { id = lost_religions.3 } } # Tengri
+            20 = { country_event = { id = lost_religions.4 } } # Norse
+            20 = { country_event = { id = lost_religions.21 } } # Zoroastrian
+        }
+	}
+}
+
 # Failure
 country_event = {
 	id = lost_religions.2
@@ -43,6 +138,15 @@ country_event = {
             change_religion = tengri
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = tengri
+        }
+        change_religion = tengri
+	}
 }
 
 # Norse
@@ -66,6 +170,15 @@ country_event = {
         random_owned_province = {
             change_religion = norse
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = norse
+        }
+        change_religion = norse
 	}
 }
 
@@ -91,6 +204,15 @@ country_event = {
             change_religion = catholic
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = catholic
+        }
+        change_religion = catholic
+	}
 }
 
 # Baptist
@@ -114,6 +236,15 @@ country_event = {
         random_owned_province = {
             change_religion = baptist
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = baptist
+        }
+        change_religion = baptist
 	}
 }
 
@@ -139,6 +270,15 @@ country_event = {
             change_religion = mormon
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = mormon
+        }
+        change_religion = mormon
+	}
 }
 
 # Orthodoxy
@@ -162,6 +302,15 @@ country_event = {
         random_owned_province = {
             change_religion = orthodox
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = orthodox
+        }
+        change_religion = orthodox
 	}
 }
 
@@ -187,6 +336,15 @@ country_event = {
             change_religion = coptic
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = coptic
+        }
+        change_religion = coptic
+	}
 }
 
 # Sunni
@@ -210,6 +368,15 @@ country_event = {
         random_owned_province = {
             change_religion = sunni
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = sunni
+        }
+        change_religion = sunni
 	}
 }
 
@@ -235,6 +402,15 @@ country_event = {
             change_religion = shia
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = shia
+        }
+        change_religion = shia
+	}
 }
 
 # Ibadi
@@ -258,6 +434,15 @@ country_event = {
         random_owned_province = {
             change_religion = ibadi
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = ibadi
+        }
+        change_religion = ibadi
 	}
 }
 
@@ -283,6 +468,15 @@ country_event = {
             change_religion = theravada
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = theravada
+        }
+        change_religion = theravada
+	}
 }
 
 # Vajrayana
@@ -306,6 +500,15 @@ country_event = {
         random_owned_province = {
             change_religion = vajrayana
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = vajrayana
+        }
+        change_religion = vajrayana
 	}
 }
 
@@ -331,6 +534,15 @@ country_event = {
             change_religion = mahayana
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = mahayana
+        }
+        change_religion = mahayana
+	}
 }
 
 # Taoism
@@ -354,6 +566,15 @@ country_event = {
         random_owned_province = {
             change_religion = taoism
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = taoism
+        }
+        change_religion = taoism
 	}
 }
 
@@ -379,6 +600,15 @@ country_event = {
             change_religion = shinto
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = shinto
+        }
+        change_religion = shinto
+	}
 }
 
 # Hinduism
@@ -402,6 +632,15 @@ country_event = {
         random_owned_province = {
             change_religion = hinduism
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = hinduism
+        }
+        change_religion = hinduism
 	}
 }
 
@@ -427,6 +666,15 @@ country_event = {
             change_religion = sikhism
         }
 	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = sikhism
+        }
+        change_religion = sikhism
+	}
 }
 
 # Jewish
@@ -450,6 +698,15 @@ country_event = {
         random_owned_province = {
             change_religion = jewish
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = jewish
+        }
+        change_religion = jewish
 	}
 }
 
@@ -475,6 +732,15 @@ country_event = {
         random_owned_province = {
             change_religion = zoroastrian
         }
+	}
+    option = {
+		name = lost_religions.option.convert
+	
+        add_stability = -2
+        capital_scope = {
+            change_religion = zoroastrian
+        }
+        change_religion = zoroastrian
 	}
 }
 

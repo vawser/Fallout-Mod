@@ -5,6 +5,8 @@
 - Fixed issue with the font used for event options not working.
 - Increased the penalty to manpower/forcelimits to -75% for the "Exacting Recruitment Standands" modifier for BOS nations, but added +5% discipline as a bonus.
 - Added "Lift Recruitment Restrictions" decisions that allows you to remove the "Exacting Recruitment Standands" modifiers, but forces short term unrest.
+- Fixed the decisions with random effects not actually being random.
+- Changed the Lost Religions decision to allow you to pick the religion group to search for.
 
 #-----------------------------
 # TODO
@@ -24,40 +26,4 @@
 - Add more nations to Gulf
 - Add more nations to East Coast
 - Add more nations to Wyoming/Colorado
-
-cuba_ideas = {
-    start = {
-        
-    }
-    bonus = {
-        
-    }
-    
-    trigger = {
-        tag = CUB
-    }
-    free = yes
-    
-    cuba_ideas_1 = {
-        
-    }
-    cuba_ideas_2 = {
-        
-    }
-    cuba_ideas_3 = {
-        
-    }
-    cuba_ideas_4 = {
-        
-    }
-    cuba_ideas_5 = {
-        
-    }
-    cuba_ideas_6 = {
-       
-    }
-    cuba_ideas_7 = {
-        
-    }
-}
 

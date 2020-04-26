@@ -6,8 +6,20 @@ country_event = {
 	desc = scavenging.1.desc
 	picture = BOOMER_ANDERSON_SHELTER_eventPicture
 	
-	is_triggered_only = yes
+	trigger = {
+        has_country_flag = trigger_scavenging_event
+    }
+    
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = trigger_scavenging_event
+        }
+    }
 
+    mean_time_to_happen = {
+		months = 1 
+	}
+    
 	option = {
 		name = scavenging.1.option.a
 
