@@ -128,9 +128,9 @@ NDiplomacy = {
 	HRE_VOTE_LEGUE_ENEMY = -200,
 	HRE_VOTE_LEAGUE_LEADER = 100,
 	HRE_VOTE_LEAGUE_LEADER_FRIEND = 200,
-	HRE_VOTE_HERETIC = -50,
+	HRE_VOTE_HERETIC = -10,
 	HRE_VOTE_OVERLORD = 50,
-	HRE_VOTE_VASSAL_ELECTOR = -50,
+	HRE_VOTE_VASSAL_ELECTOR = -10,
 	HRE_VOTE_TOO_SMALL = -25,
 	HRE_VOTE_BIG_COUNTRY = 25,
 	HRE_VOTE_VERY_BIG_COUNTRY = 50,
@@ -474,7 +474,7 @@ NCountry = {
 	PRIMARY_NATION_BLOCK_CONVERT_CULTURE = 0,	-- Does primary nation of a tag existing block converting culture?
 
 	MIN_DEV_FOR_FREE_CITY = 10,					-- Capital must have at least this much development to be a free city
-	MAX_PROVINCES_FOR_FREE_CITY = 1,			-- A free city cannot have more provinces than this
+	MAX_PROVINCES_FOR_FREE_CITY = 5,			-- A free city cannot have more provinces than this
 
 	HRE_RANK = 3,								-- Emperor of the HRE is displayed as this rank (for ruler title only)
 	HRE_MAX_RANK = 3,							-- for members

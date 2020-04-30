@@ -1,8 +1,8 @@
 #--------------------------------
 # Nation
 #--------------------------------
-government = ncr_government
-add_government_reform = ncr_reform
+government = ncr_state_government
+add_government_reform = ncr_state_reform
 technology_group = tech_ncr
 religion = secular
 primary_culture = new_california
@@ -48,6 +48,17 @@ historical_rival = GRK
         birth_date = 2235.1.1
 	}
     
+    heir = {
+        name = "James"
+        monarch_name = "James"
+		dynasty = "Hsu"
+		adm = 3
+		dip = 3
+		mil = 6
+        birth_date = 2245.1.1
+        death_date = 2300.1.1
+    }
+
     clear_scripted_personalities = yes
     add_ruler_personality = expansionist_personality
     add_ruler_personality = benevolent_personality

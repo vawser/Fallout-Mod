@@ -60,7 +60,7 @@ centralize_administration = {
 	on_effect = {
 		emperor = {
 			country_event = { 
-                id = ncr_government.10 
+                id = ncr_government.1
                 tooltip = TOOLTIP_CENTRALIZE_ADMINISTRATION
             }
 		}
@@ -72,18 +72,18 @@ centralize_administration = {
 					num_of_cities = 1
 					NOT = { vassal_of = ROOT }
 				}
-				country_event = { id = ncr_government.11 }
+				country_event = { id = ncr_government.2 }
 			}
 		}
 	}	
 }
 
-unify_the_republic = {
+unite_the_republic = {
 	empire = hre
     
 	on_effect = {
 		emperor = {
-			country_event = { id = ncr_government.12 tooltip = TOOLTIP_UNIFY_THE_REPUBLIC }
+			country_event = { id = ncr_government.3 tooltip = TOOLTIP_UNIFY_THE_REPUBLIC }
 		}
 	}
 }

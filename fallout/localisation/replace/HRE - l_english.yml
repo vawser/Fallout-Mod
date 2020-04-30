@@ -50,7 +50,7 @@
  HRE_MEMBER: "§Y$NAME$§W is a member of the New California Republic"
  
  HRE_INFLUENCE_DESC: "Presidential Authority represents the amount of control the President exerts over the people of the New California Republic. Authority is needed to enact executive orders within the New California Republic."
- HRE_INFLUENCE_GAIN: "Gained by:\n - Having a large amount of member states\n - The member states being at peace\n - Provinces joining the New California Republic\n - Successive Presidents from the same country"
+ HRE_INFLUENCE_GAIN: "Gained by:\n - Having a large amount of member states\n - The member states being at peace\n - Provinces joining the New California Republic\n - Former Presidents leaving the Republic with high Legitimacy"
  HRE_INFLUENCE_LOSS: "Lost by:\n - Dishonoring the Calls of members\n - Provinces leaving the New California Republic\n - New California Republic territory under the control of foreign states\n - New California Republic territory under the control of heathens and heretics"
  
  IA_CHANGE_TOTAL: "Presidential Authority changes by $VAL$ every month."
@@ -301,3 +301,57 @@
  DISMANTLE_HRE_PRESTIGE_DESC:0 "§G$VAL$§! prestige will be gained from dismantling the Republic."
  
  HRE_OTHER_VOTE_SELF:0 "The Elector of §Y$ELECTOR$§W is backing themselves for the Presidency."
+ 
+ UNLAWFUL_TERRITORY_WARN:0 "§RUnlawful territory, the President may demand you to return it!§!"
+ UNLAWFUL_TERRITORY_WARN_DELAY:0 "Since this province is part of the New California Republic and not your core, it will be considered unlawful territory if you take it."
+ 
+ DIPLO_PART_OF_EMPIRE:0 "$PART$ is part of the New California Republic and $EMPEROR$ is the President: "
+ 
+ HAS_NO_PROV_IN_EMPIRE_OR_LIBERATED:0 "Has no non-core province that is a part of the New California Republic and that has not been liberated from a foreign country."
+ 
+ ICON_GRANT_FREECITY:0 "Grant Free City Status"
+ GRANTFREECITYTITLE:0 "Grant Free City Status"
+ GRANTFREECITYDESC:0 "Granting them Free City status will strengthen their economy and increase their contribution to the President, but we will be required to protect them from attack."
+ REMOVE_FREECITY_TITLE:0 "Revoke Free City Status"
+ REMOVE_FREECITY_DESC:0 "Revoking their Free City status will weaken their economy and reduce their contribution to the President, but we will no longer be required to protect them."
+ 
+ GRANTFREECITYREQDESC:0 "$ACTOR$ offers us Free City status in the New California Republic. If we accept, our government will change to a Free City and the President will defend us from all aggressors. If we acquire more provinces or leave the New California Republic we will lose our Free City status."
+ GRANTFREECITYREQDESC_REFORM:0 "\n§RIf we accept, our currently enacted Tier 1 Government Reform $CURRENT|Y$ will be abolished.§!"
+ 
+ grant_freecity:0 "Granted Free City status"
+ removed_our_freecity:0 "Revoked our Free City status"
+ 
+ EMPEROR_TITLE:0 "New President"
+ EMPEROR_SETUP:0 "When a new president has been elected."
+ EMPEROR_HEADER:0 "New President elected"
+ EMPEROR_1:0 "New California Republic"
+ EMPEROR_2:0 "The electors have elected "
+ EMPEROR_3:0 "$KING$ of $COUNTRY$"
+ EMPEROR_4:0 "as the new President. The new lawful president of the New California Republic has promised to protect the rights of the states"
+ EMPEROR_5:0 "as President."
+ EMPEROR_LOG:0 "The New California Republic has elected $KING$ of $COUNTRY$ as president."
+ EMPEROR_BTN1:0 "OK"
+ EMPEROR_BTN2:0 "OK"
+ EMPEROR_BTN3:0 "Go to"
+ 
+ #------------------------------------------------
+ # Custom
+ #------------------------------------------------
+ opinion_left_ncr_republic: "Left the Republic"
+ opinion_united_ncr_republic: "Unified with the Republic"
+ 
+ pass_the_thaler_act_title: "Pass the Thaler Act"
+ pass_the_thaler_act_desc: ""
+ usurp_the_brahmin_barons_title: "Usurp the Brahmin Barons"
+ usurp_the_brahmin_barons_desc: ""
+ restore_the_gold_standard_title: "Restore the Gold Standard"
+ restore_the_gold_standard_desc: ""
+ indefinite_terms_title: "Indefinite Terms"
+ indefinite_terms_desc: ""
+ centralize_administration_title: "Centralize Administration"
+ centralize_administration_desc: ""
+ unite_the_republic_title: "Unify the Republic"
+ unite_the_republic_desc: ""
+ 
+ TOOLTIP_CENTRALIZE_ADMINISTRATION: "All members of the New California Republic will either become vassals of the current President, or leave the Republic."
+ TOOLTIP_UNIFY_THE_REPUBLIC: "All members of the New California Republic will be annexed by the current President, forming the New California Republic as a single nation."

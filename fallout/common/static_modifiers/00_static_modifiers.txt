@@ -722,7 +722,6 @@ mercantilism = {
 }
 
 army_tradition = {
-    discipline = 0.1
     land_morale = 0.1
     siege_ability = 0.1
 	recover_army_morale_speed = 0.1
@@ -763,6 +762,7 @@ defender_of_faith = {
 	missionaries = 1
 }
 
+# Bonus to Emperor
 emperor = {
     diplomatic_reputation = 2
 	advisor_pool = 2
@@ -771,23 +771,27 @@ emperor = {
 	prestige = 1
 }
 
-states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
+# Bonus to Emperor for each state
+states_in_hre = {
     global_tax_income = 2
 	land_forcelimit = 0.5
 	global_manpower = 0.5
 }
 
-free_cities_in_hre = {							#bonuses for each free city in the HRE.. as emperor
+# Bonus to Emperor for each Free City
+free_cities_in_hre = {	
 	global_tax_income = 2				
 	land_forcelimit = 0.5
 	global_manpower = 0.5
 }
 
+# Bonus to Free City
 free_city_in_hre = {
 	global_tax_income = 3
 	diplomatic_reputation = 1
 }
 
+# Bonus to Member
 member_in_hre = {
 	diplomatic_reputation = 1
 }
@@ -1083,7 +1087,12 @@ low_army_professionalism = {
 }
 
 high_army_professionalism = {
-	
+	general_cost = -0.5
+    infantry_power = 0.2
+    cavalry_power = 0.2
+    artillery_power = 0.2
+    discipline = 0.1
+    reserves_organisation = 0.5
 }
 
 streltsy_modifier = {

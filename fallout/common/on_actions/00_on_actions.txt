@@ -425,6 +425,10 @@ on_heir_needed_theocracy = {
 # Emperor from same dynasty
 on_successive_emperor = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_successive_emperor" }
+    
+    events = {
+        ncr_government.10
+    }
 }
 
 # HRE Prince released by the emperor
@@ -445,11 +449,19 @@ on_hre_member_true_religion = {
 # Emperor wins HRE defensive war
 on_hre_wins_defensive_war = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_wins_defensive_war" }
+    
+    events = {
+        ncr_government.11
+    }
 }
 
 # HRE member annexed by non-HRE country
 on_hre_member_annexed = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_member_annexed" }
+    
+    events = {
+        ncr_government.12
+    }
 }
 
 # HRE member released from non-HRE vassalage
@@ -460,11 +472,19 @@ on_hre_released_vassal = {
 # Emperor coming to the defense of a HRE member
 on_hre_defense = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_defense" }
+    
+    events = {
+        ncr_government.13
+    }
 }
 
 # Emperor NOT coming to the defense of a HRE member
 on_hre_non_defense = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_non_defense" }
+    
+    events = {
+        ncr_government.14
+    }
 }
 
 # HRE Member takes a HRE province from an outside country in a peace (province scope)
