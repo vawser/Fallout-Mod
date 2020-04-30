@@ -11,7 +11,7 @@ town_coastal = {
     type = coastal
     
     province_modifiers = {
-        local_unrest = -2
+        province_trade_power_value = 10
         local_development_cost = -0.05
         local_institution_spread = 0.1
     }
@@ -22,16 +22,16 @@ metropolis_coastal = {
     type = coastal
     
     province_modifiers = {
-        local_unrest = -4
-        local_development_cost = -0.1
-        local_institution_spread = 0.5
+        province_trade_power_value = 15
+        local_institution_spread = 0.3
     }
     state_modifiers = {
         local_development_cost = -0.1
-        local_institution_spread = 0.1
+        local_development_cost = -0.1
+        allowed_num_of_buildings = 1
     }
     global_modifiers = {
-        all_power_cost = -0.01
+        all_power_cost = -0.02
     }
 }
 
@@ -49,7 +49,7 @@ town_inland = {
     type = inland
     
     province_modifiers = {
-        local_unrest = -2
+        province_trade_power_value = 10
         local_development_cost = -0.05
         local_institution_spread = 0.1
     }
@@ -61,15 +61,15 @@ metropolis_inland = {
     type = inland
     
     province_modifiers = {
-        local_unrest = -4
-        local_development_cost = -0.1
-        local_institution_spread = 0.5
+        province_trade_power_value = 15
+        local_institution_spread = 0.3
     }
     state_modifiers = {
         local_development_cost = -0.1
-        local_institution_spread = 0.1
+        local_development_cost = -0.1
+        allowed_num_of_buildings = 1
     }
     global_modifiers = {
-        all_power_cost = -0.01
+        all_power_cost = -0.02
     }
 }
