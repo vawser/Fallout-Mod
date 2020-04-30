@@ -114,25 +114,18 @@ open_immigration_reform = {
 #--------------------------------------------
 # Ambitions
 #--------------------------------------------
-disciplined_army_reform = {
-    icon = "military"
+masterful_administration_reform = {
+    icon = "office"
     
     modifiers = {
-        discipline = 0.05
+        core_creation = -0.1
     }
 }
-peerless_navy_reform = {
-    icon = "ship"
+charismatic_diplomacy_reform = {
+    icon = "charismatic_person"
     
     modifiers = {
-        ship_durability = 0.1
-    }
-}
-fearless_troops_reform = {
-    icon = "artillery"
-    
-    modifiers = {
-        land_morale = 0.05
+        diplomatic_reputation = 2
     }
 }
 excellent_education_reform = {
@@ -142,46 +135,245 @@ excellent_education_reform = {
         leader_cost = -0.25
     }
 }
-masterful_administration_reform = {
-    icon = "office"
+
+#--------------------------------------------
+# Conversion Reforms
+#--------------------------------------------
+# Simple
+convert_to_settlement_reform = {
+	icon = "peace"
     
-    modifiers = {
-        core_creation = -0.05
-    }
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 3
+		change_government = settlement_government
+	}
+	ai = {
+		factor = 0
+	}
 }
-charismatic_diplomacy_reform = {
-    icon = "charismatic_person"
+convert_to_militia_reform = {
+	icon = "military"
     
-    modifiers = {
-        ae_impact = -0.1
-    }
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 3
+		change_government = militia_government
+	}
+	ai = {
+		factor = 0
+	}
 }
-inquisitive_minds_reform = {
-    icon = "satellite"
+convert_to_cult_reform = {
+	icon = "charismatic_person"
     
-    modifiers = {
-        idea_cost = -0.05
-    }
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 3
+		change_government = cult_government
+	}
+	ai = {
+		factor = 0
+	}
 }
-fury_of_the_gods_reform = {
-    icon = "cross"
+convert_to_republic_reform = {
+	icon = "person"
     
-    potential = {
-        NOT = { religion = secular }
-    }
+	allow_normal_conversion = yes
     
-    modifiers = {
-        global_missionary_strength = 0.03
-    }
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 3
+		change_government = republic_government
+	}
+	ai = {
+		factor = 0
+	}
 }
-religious_freedom_reform = {
-    icon = "peace"
+convert_to_theocracy_reform = {
+	icon = "burned_man"
     
-    potential = {
-        religion = secular
-    }
+	allow_normal_conversion = yes
     
-    modifiers = {
-        religious_unity = 0.25
-    }
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 3
+		change_government = theocracy_government
+	}
+	ai = {
+		factor = 0
+	}
 }
+convert_to_dictatorship_reform = {
+	icon = "union"
+    
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 3
+		change_government = dictatorship_government
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+# Advanced
+convert_to_legion_reform = {
+	icon = "cross"
+    
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+        any_country = {
+            has_reform = legion_reform
+            has_opinion = {
+                who = ROOT
+                value = 150
+            }
+        }
+	}
+	effect = {
+		lose_reforms = 6
+		change_government = legion_government
+	}
+	ai = {
+		factor = 0
+	}
+}
+convert_to_vault_reform = {
+	icon = "overseer"
+    
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+        any_country = {
+            has_reform = vault_reform
+            has_opinion = {
+                who = ROOT
+                value = 150
+            }
+        }
+	}
+	effect = {
+		lose_reforms = 6
+		change_government = vault_government
+	}
+	ai = {
+		factor = 0
+	}
+}
+convert_to_enclave_reform = {
+	icon = "usa_flag"
+    
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+        any_country = {
+            has_reform = enclave_reform
+            has_opinion = {
+                who = ROOT
+                value = 150
+            }
+        }
+	}
+	effect = {
+		lose_reforms = 6
+		change_government = enclave_government
+	}
+	ai = {
+		factor = 0
+	}
+}
+convert_to_brotherhood_reform = {
+	icon = "power_armor"
+    
+	allow_normal_conversion = yes
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+        any_country = {
+            has_reform = brotherhood_reform
+            has_opinion = {
+                who = ROOT
+                value = 150
+            }
+        }
+	}
+	effect = {
+		lose_reforms = 6
+		change_government = bos_government
+	}
+	ai = {
+		factor = 0
+	}
+}
+convert_to_ncr_state_reform = {
+	icon = "artillery"
+    
+	allow_normal_conversion = yes
+    
+	trigger = {
+        hre_size = 1 # At least 1 province remains in the republic
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+        any_country = {
+            has_reform = ncr_state_reform
+            has_opinion = {
+                who = ROOT
+                value = 150
+            }
+        }
+	}
+	effect = {
+		lose_reforms = 6
+		change_government = ncr_state_government
+	}
+	ai = {
+		factor = 0
+	}
+}
+
