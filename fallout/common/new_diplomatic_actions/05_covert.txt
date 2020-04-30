@@ -1,4 +1,54 @@
 #---------------------------------------
+# Launch Nuclear Warhead
+#---------------------------------------
+nuke = {
+	category = covert
+	alert_index = 40
+	alert_tooltip = nuke_alert_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+        check_variable = {
+            which = nuke_stockpile
+            value = 1
+        }
+	}
+    
+	is_allowed = {
+        check_variable = {
+            which = nuke_stockpile
+            value = 1
+        }
+	}
+	on_accept = {
+        subtract_variable = {
+            which = nuke_stockpile
+            value = 1
+        }
+        FROM = { country_event = { id = nukes.1 } }
+	}
+	on_decline = {
+        subtract_variable = {
+            which = nuke_stockpile
+            value = 1
+        }
+        FROM = { country_event = { id = nukes.1 } }
+	}
+	
+	ai_acceptance = {
+        add_entry = {
+			name = BASE
+			set_variable = { which = ai_value value = 1000 }
+		}
+	}
+	ai_will_do = {
+        always = yes
+	}
+}
+
+
+#---------------------------------------
 # Establish Cult
 #---------------------------------------
 establish_cult = {

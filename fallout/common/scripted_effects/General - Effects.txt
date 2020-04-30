@@ -44,16 +44,6 @@ damage_legitimacy_rebels = {
     if = { limit = { has_government_attribute = has_devotion } add_devotion = -50 }
 }
 
-nuke_province = {
-    cede_province = ---
-    remove_core = ROOT
-    add_devastation = 100
-    add_province_modifier = {
-        name = nuked_province
-        duration = 36500
-    }
-}
-
 integrate_ncr_territory = {
     if = {
         limit = {

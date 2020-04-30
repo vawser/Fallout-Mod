@@ -146,6 +146,9 @@ convert_to_settlement_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = frontier_settlement_reform }
+        NOT = { has_reform = mercantile_settlement_reform }
+        NOT = { has_reform = militarized_settlement_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -164,6 +167,7 @@ convert_to_militia_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = militia_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -182,6 +186,7 @@ convert_to_cult_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = cult_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -200,6 +205,7 @@ convert_to_republic_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = republic_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -218,6 +224,7 @@ convert_to_theocracy_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = theocracy_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -236,6 +243,7 @@ convert_to_dictatorship_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = dictatorship_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -256,6 +264,7 @@ convert_to_legion_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = legion_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -281,6 +290,7 @@ convert_to_vault_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = vault_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -306,6 +316,7 @@ convert_to_enclave_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = enclave_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -331,6 +342,7 @@ convert_to_brotherhood_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
+        NOT = { has_reform = brotherhood_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }
@@ -356,7 +368,7 @@ convert_to_ncr_state_reform = {
 	allow_normal_conversion = yes
     
 	trigger = {
-        hre_size = 1 # At least 1 province remains in the republic
+        NOT = { has_reform = ncr_state_reform }
 		NOT = { has_government_attribute_short_desc = locked_government_type }
 		is_emperor = no
 		NOT = { is_lesser_in_union = yes }

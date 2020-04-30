@@ -704,6 +704,16 @@ on_thri_yearly_pulse = {
 
 on_thri_yearly_pulse_2 = {
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse_2" }
+    
+    random_events = {
+        100 = nukes.10 # Protests against Nuclear Armament
+        100 = nukes.11 # Nuclear Accident
+        100 = nukes.12 # More Investment is Needed
+        100 = nukes.13 # Lack of Scientists
+        100 = nukes.14 # Warhead Failure
+        100 = nukes.20 # Nuclear Warhead
+        300 = 0
+    }
 }
 
 on_thri_yearly_pulse_3 = {

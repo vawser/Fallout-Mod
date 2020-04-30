@@ -1,33 +1,46 @@
 country_decisions = {
-    # Endgame only
-	construct_nuke = {
-		potential = {
+    start_nuclear_weapons_programme = {
+        potential = {
             is_humanlike_race = yes
-            adm_tech = 20
-            dip_tech = 20
             mil_tech = 20
+            NOT = { has_country_modifier = nuclear_weapons_programme }
 		}
 		allow = {
-            adm_power = 1000
-            dip_power = 1000
-            mil_power = 1000
-            years_of_income = 1
+            mil_power = 100
+            years_of_income = 3
 		}
 		
 		effect = {
-            add_years_of_income = -1
-            add_adm_power = -1000
-            add_dip_power = -1000
-            add_mil_power = -1000
+            add_years_of_income = -3
+            add_mil_power = -100
 			
-            change_variable = {
-                which = nuke_stockpile
-                value = 1
+            add_country_modifier = {
+                name = nuclear_weapons_programme
+                duration = -1
             }
 		}
 		
 		ai_will_do = {
 			factor = 0
 		}
-	}
+    }
+
+    end_nuclear_weapons_programme = {
+        potential = {
+            has_country_modifier = nuclear_weapons_programme
+		}
+		allow = {
+            mil_power = 100
+		}
+		
+		effect = {
+            add_mil_power = -100
+			
+            remove_country_modifier = nuclear_weapons_programme
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }
 }

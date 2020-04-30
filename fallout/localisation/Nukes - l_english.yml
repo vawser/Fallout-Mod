@@ -3,7 +3,13 @@
  # Modifiers
  #-------------------------------------
  nuked_province: "Nuked!"
- desc_nuked_province: "This province has been nuked and is uninhabitable for 100 years."
+ desc_nuked_province: "This province has been nuked and is virtually uninhabitable."
+ 
+ nuclear_weapons_programme: "Nuclear Weapons Programme"
+ desc_nuclear_weapons_programme: "Knowledge of our nuclear weapons programme upsets other nations, and they will treat us harshly for building up our stockpile."
+ 
+ angry_elites: "Angry Elites"
+ desc_angry_elites: "We have angered our elites."
  
  #-------------------------------------
  # Events
@@ -11,6 +17,35 @@
  nukes.2.title: "Nuked!"
  nukes.2.desc: "We've been nuked by one of our enemies, those bastards! This will set us back decades..."
  nukes.2.option.a: "..."
+ 
+ nukes.10.title: "Protests against Nuclear Armament"
+ nukes.10.desc: "Our citizens are upset that we are investing time and effort into nuclear weapons. They cite the danger in their creation and the risk to all if we succeed."
+ nukes.10.option.a: "Ignore their concerns"
+ nukes.10.option.b: "Pay off key actors to quell protests"
+ 
+ nukes.11.title: "Nuclear Accident"
+ nukes.11.desc: "Our scientists have experienced failure during the process of creation of a warhead, resulting in numerous exposures to high intensity radiation. Few will die, but without action this accident will reflect very badly on [Root.Monarch.GetTitle] [Root.Monarch.GetName]."
+ nukes.11.option.a: "Ignore the accident"
+ nukes.11.option.b: "Compensate those affected and their families"
+ 
+ nukes.12.title: "More Investment is Needed"
+ nukes.12.desc: "Our scientists have requested more investment, otherwise their efforts cannot continue. Whether or not this is true, we cannot be seen as overly bias towards them, otherwise other factions will grow angry."
+ nukes.12.option.a: "Force the scientists to continue"
+ nukes.12.option.b: "Provide more funding"
+ 
+ nukes.13.title: "Lack of Scientists"
+ nukes.13.desc: "Our research lab is requesting more scientists to meet the demand required for the completion of a nuclear warhead."
+ nukes.13.option.a: "Search within our own population"
+ nukes.13.option.b: "Hire foreign scientists"
+ 
+ nukes.14.title: "Warhead Failure"
+ nukes.14.desc: "During the final stages of testing, a warhead experienced catastrophic failure, killing all nearby. News of this accident threatens to expose our inability if leaked. We must surpress it."
+ nukes.14.option.a: "Let the news leak"
+ nukes.14.option.b: "Pay off those that would leak the news"
+ 
+ nukes.20.title: "Nuclear Warhead"
+ nukes.20.desc: "Our scientists have succeeded in producing a nuclear warhead. This is excellent news for us, and dreadful news for our enemies."
+ nukes.20.option.a: "Hurrah!"
  
  #-------------------------------------
  # Tooltips
@@ -20,8 +55,11 @@
  #-------------------------------------
  # Decisions
  #-------------------------------------
- construct_nuke_title: "Construct Nuclear Warhead"
- construct_nuke_desc: "We are siphoning from our scientific elite, pouring their efforts into a project that aims to construct a nuclear warhead."
+ start_nuclear_weapons_programme_title: "Start Nuclear Weapons Programme"
+ start_nuclear_weapons_programme_desc: "Let us start investing into a Nuclear Weapons programme. In time we will be able to produce nuclear warheads."
+ 
+ end_nuclear_weapons_programme_title: "End Nuclear Weapons Programme"
+ end_nuclear_weapons_programme_desc: "Let us end our Nuclear Weapons programme, we have wasted too much time and effort to continue with it."
  
  #-------------------------------------
  # Strings
@@ -31,8 +69,8 @@
  #-------------------------------------
  # Diplomatic Actions
  #-------------------------------------
- nuke: "Nuke"
- nuke_title: "Nuke"
- nuke_desc: "We will launch a nuke into the territory of [From.GetName], destroying one of their states for 100 years."
+ nuke: "Launch Nuclear Warhead"
+ nuke_title: "Launch Nuclear Warhead"
+ nuke_desc: "We will launch a nuclear warhead into the territory of [From.GetName], destroying one of their provinces."
  nuke_tooltip: "Nuke [From.GetName]"
  nuke_alert_tooltip: "Nuke [From.GetName]"
