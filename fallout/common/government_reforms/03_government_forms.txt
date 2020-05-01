@@ -1,62 +1,20 @@
 #--------------------------------------------
 # Monarchy
 #--------------------------------------------
-frontier_settlement_reform = {
-    icon = "peace"
-
-    allow_normal_conversion = yes
-    legacy_equivalent = frontier_settlement_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    modifiers = {
-        global_colonial_growth = 10
-        colonist_placement_chance = 0.05
-        max_states = 3
-    }
-}
-mercantile_settlement_reform = {
-    icon = "diamond_city"
-
-    allow_normal_conversion = yes
-    legacy_equivalent = mercantile_settlement_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    modifiers = {
-        global_own_trade_power = 0.1
-        trade_efficiency = 0.05
-        max_states = 3
-    }
-}
-militarized_settlement_reform = {
-    icon = "bunker"
-
-    allow_normal_conversion = yes
-    legacy_equivalent = militarized_settlement_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    modifiers = {
-        global_manpower_modifier = 0.1
-        global_regiment_cost = -0.1
-        max_states = 3
-    }
-}
-militia_reform = {
+autocracy_reform = {
     icon = "military"
     
-    allow_normal_conversion = yes
-    legacy_equivalent = militia_legacy
+    allow_normal_conversion = no
+    legacy_equivalent = autocracy_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
+    heir = yes
+	queen = no
+    
     modifiers = {
-        global_manpower_modifier = 0.1
+        land_morale = 0.05
         max_absolutism = 10
         max_states = 3
     }
@@ -64,11 +22,42 @@ militia_reform = {
 legion_reform = {
     icon = "cross"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = legion_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = legion_reform
+            any_country = {
+                has_reform = legion_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = yes
+	queen = no
+
+	different_religion_acceptance = -25
+	different_religion_group_acceptance = -25
+    
+    conditional = {
+        allow = {
+            has_dlc = "Third Rome"
+        }
+        government_abilities = {
+            russian_mechanic
+        }
+        claim_states = yes
+    }
     
     modifiers = {
         army_tradition = 1
@@ -80,11 +69,38 @@ legion_reform = {
 new_vegas_reform = {
     icon = "gambling"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = new_vegas_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        have_had_reform = new_vegas_reform
+    }
+    
+    heir = no
+	queen = no
+
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            mamluk_mechanic
+        }
+    }
+    
+    factions = {
+        the_omertas 
+        the_chairmen
+        the_white_glove_society
+    }
     
     modifiers = {
         all_power_cost = -0.05
@@ -96,12 +112,30 @@ new_vegas_reform = {
 think_tank_reform = {
     icon = "satellite"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = think_tank_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = think_tank_reform
+            primary_culture = think_tank
+        }
+    }
+    
+    heir = no
+	queen = no
+
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+	different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
     modifiers = {
         technology_cost = -0.2
         max_absolutism = 20
@@ -110,14 +144,31 @@ think_tank_reform = {
     }
 }
 zetan_reform = {
-    icon = "satellite"
+    icon = "sim_centre"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = zetan_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = zetan_reform
+            primary_culture = zetan
+        }
+    }
+    
+    heir = no
+	queen = no
+
+    royal_marriage = no
+    
+    different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
     modifiers = {
         discipline = 0.1
         max_absolutism = 50
@@ -128,42 +179,80 @@ zetan_reform = {
 shi_reform = {
     icon = "vault_computer"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = shi_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = shi_reform
+            primary_culture = shi
+        }
+    }
+    
+    heir = no
+	queen = no
+
+    conditional = {
+        allow = {
+            has_dlc = "Mandate of Heaven"
+        }
+        has_meritocracy = yes
+    }
+    
     modifiers = {
         idea_cost = -0.05
         global_autonomy = -0.05
         max_states = 3
     }
 }
-ncr_reform = {
-    icon = "artillery"
-
-    allow_normal_conversion = yes
-    legacy_equivalent = ncr_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    modifiers = {
-        global_tax_modifier = 0.15
-        max_absolutism = -10
-        global_autonomy = -0.05
-        max_states = 5
-    }
-}
 ncr_state_reform = {
     icon = "artillery"
 
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = ncr_state_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = ncr_state_reform
+            any_country = {
+                OR = {
+                    has_reform = ncr_state_reform
+                    has_reform = ncr_reform
+                }
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    different_religion_acceptance = 25
+	different_religion_group_acceptance = 25
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
     
     modifiers = {
         global_tax_modifier = 0.1
@@ -176,14 +265,91 @@ ncr_state_reform = {
 #--------------------------------------------
 # Republic
 #--------------------------------------------
+settlement_reform = {
+    icon = "peace"
+
+    allow_normal_conversion = no
+    legacy_equivalent = settlement_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
+    
+    modifiers = {
+        global_colonial_growth = 10
+        colonist_placement_chance = 0.05
+        max_states = 3
+    }
+}
+militia_reform = {
+    icon = "military"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = militia_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+    allow_migration = yes
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        max_absolutism = 10
+        max_states = 3
+    }
+}
 republic_reform = {
     icon = "person"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = republic_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = yes
+    
+    republican_name = yes
+	royal_marriage = yes
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
     
     modifiers = {
         diplomatic_reputation = 1
@@ -194,11 +360,32 @@ republic_reform = {
 dictatorship_reform = {
     icon = "burned_man"
 
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = dictatorship_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    republican_name = yes
+	royal_marriage = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
     
     modifiers = {
         production_efficiency = 0.1
@@ -209,11 +396,33 @@ dictatorship_reform = {
 institute_reform = {
     icon = "console"
 
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = institute_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        have_had_reform = institute_reform
+    }
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+   
+    royal_marriage = no
+    
+    election_on_death = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
     
     modifiers = {
         technology_cost = -0.1
@@ -226,14 +435,48 @@ institute_reform = {
 enclave_reform = {
     icon = "usa_flag"
 
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = enclave_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
     
-    duration = 5
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = enclave_reform
+            any_country = {
+                has_reform = enclave_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
 
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = yes
+    
+    republican_name = yes
+    royal_marriage = no
+
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+    conditional = {
+        allow = { 
+            has_dlc = "Rights of Man"
+        }
+        militarised_society  = yes
+    }
+    
     modifiers = {
         land_morale = 0.1
         max_absolutism = 20
@@ -244,17 +487,94 @@ enclave_reform = {
 vault_reform = {
     icon = "overseer"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = vault_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
+    trigger = {
+        OR = {
+            have_had_reform = vault_reform
+            any_country = {
+                has_reform = vault_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    republican_name = no
+	royal_marriage = no
+    
     modifiers = {
         development_cost = -0.1
         max_absolutism = -10
         global_autonomy = -0.05
         max_states = 3
+    }
+}
+ncr_reform = {
+    icon = "artillery"
+
+    allow_normal_conversion = no
+    legacy_equivalent = ncr_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        OR = {
+            have_had_reform = ncr_reform
+            is_emperor = yes
+        }
+    }
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    different_religion_acceptance = 25
+	different_religion_group_acceptance = 25
+    
+    duration = 5
+    has_term_election = yes
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_parliament = yes
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = { 
+            iqta_mechanic
+        }
+    }
+    
+    modifiers = {
+        global_tax_modifier = 0.15
+        max_absolutism = -10
+        global_autonomy = -0.05
+        max_states = 5
     }
 }
 
@@ -264,12 +584,32 @@ vault_reform = {
 theocracy_reform = {
     icon = "burned_man"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = theocracy_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
+    has_devotion = yes
+
+    rulers_can_be_generals = no
+	royal_marriage = no
+    
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
     modifiers = {
         tolerance_own = 1
         max_absolutism = -10
@@ -280,11 +620,54 @@ theocracy_reform = {
 brotherhood_reform = {
     icon = "power_armor"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = brotherhood_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = brotherhood_reform
+            any_country = {
+                has_reform = brotherhood_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+	has_devotion = yes
+
+	royal_marriage = no
+    
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            feudal_theocracy_mechanic
+        }
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
     
     modifiers = {
         fire_damage = 0.1
@@ -297,12 +680,31 @@ brotherhood_reform = {
 cult_reform = {
     icon = "charismatic_person"
 
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = cult_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
 
+    has_devotion = yes
+
+	royal_marriage = no
+    
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
     modifiers = {
         global_missionary_strength = 0.03
         global_autonomy = -0.05
@@ -316,11 +718,37 @@ cult_reform = {
 tribe_reform = {
     icon = "brahmin"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = tribe_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
     
     modifiers = {
         global_unrest = -2
@@ -330,11 +758,40 @@ tribe_reform = {
 commune_reform = {
     icon = "person"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = commune_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    republican_name = yes
+	royal_marriage = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            iqta_mechanic
+        }
+    }
     
     modifiers = {
         global_unrest = -2
@@ -344,11 +801,37 @@ commune_reform = {
 raider_reform = {
     icon = "raider"
 
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = raider_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
     
     modifiers = {
         mercenary_discipline = 0.05
@@ -360,11 +843,43 @@ raider_reform = {
 super_mutant_reform = {
     icon = "union"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = super_mutant_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        have_had_reform = super_mutant_reform
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
     
     modifiers = {
         shock_damage_received = -0.1
@@ -376,11 +891,45 @@ super_mutant_reform = {
 swarm_reform = {
     icon = "factory"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = swarm_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        have_had_reform = swarm_reform
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    royal_marriage = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
     
     modifiers = {
         global_regiment_recruit_speed = -0.25
@@ -391,11 +940,43 @@ swarm_reform = {
 wolf_pack_reform = {
     icon = "military"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = wolf_pack_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        have_had_reform = wolf_pack_reform
+    }
+    
+    heir = yes
+	queen = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
     
     modifiers = {
         infantry_power = 0.1
@@ -406,11 +987,46 @@ wolf_pack_reform = {
 great_khan_reform = {
     icon = "cross"
     
-    allow_normal_conversion = yes
+    allow_normal_conversion = no
     legacy_equivalent = great_khan_legacy
     
     valid_for_nation_designer = yes
 	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = great_khan_reform
+            primary_culture = khan
+        }
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        government_abilities = {
+            tribal_federation_mechanic
+        }
+    }
     
     modifiers = {
         loot_amount = 1.0

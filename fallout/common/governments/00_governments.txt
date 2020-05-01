@@ -1,527 +1,164 @@
 #------------------------------------------
 # Monarchy
 #------------------------------------------
-settlement_government = {
+monarchy_government = {
     color = { 232 203 16 }
     
-    basic_reform = settlement_mechanic
+    basic_reform = monarchy_mechanic
     
     reform_levels = {
-        government_form_settlement = {
+        monarchy_power_structure = {
 			reforms = {
-                frontier_settlement_reform
-                mercantile_settlement_reform
-                militarized_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_settlement = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_settlement = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_settlement = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_settlement = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        settlement_legacy
-    }
-}
-militia_government = {
-    color = { 167 232 16 }
-    
-    basic_reform = militia_mechanic
-    
-    reform_levels = {
-        government_form_militia = {
-			reforms = {
-                militia_reform
-                convert_to_settlement_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_militia = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_militia = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_militia = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_militia = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        militia_legacy
-    }
-}
-legion_government = {
-    color = { 232 41 16 }
-    
-    basic_reform = legion_mechanic
-    
-    reform_levels = {
-        government_form_legion = {
-			reforms = {
+                autocracy_reform
                 legion_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
+                legion_splinter_reform
+                new_vegas_reform
+                think_tank_reform
+                zetan_reform
+                shi_reform
+                ncr_state_reform
 			}
 		}
-        outlook_legion = {
+        # Civic Virtues
+        monarchy_tier_1 = {
             reforms = {
+                # Generic
                 administrative_outlook_reform
                 diplomatic_outlook_reform
                 naval_outlook_reform
                 army_outlook_reform
+                
+                # Legion
+
+                # New Vegas
+                liberal_autocracy_reform
+                independent_vegas_reform
+                anarchic_vegas_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
             }
         }
-        rule_of_law_legion = {
+        # Regionalism
+        monarchy_tier_2 = {
             reforms = {
+                # Generic
                 central_authority_reform
                 regional_authority_reform
                 local_authority_reform
-            }
-        }
-        diversity_legion = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_legion = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        legion_legacy
-    }
-}
-new_vegas_government = {
-    color = { 82 170 132 }
-    
-    basic_reform = new_vegas_mechanic
-    
-    reform_levels = {
-        government_form_new_vegas = {
-			reforms = {
-                new_vegas_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-           leadership_new_vegas = {
-            reforms = {
-                liberal_autocracy_reform
-                anarchic_vegas_reform
-				independent_vegas_reform
-            }
-        }
-        strip_management_new_vegas = {
-            reforms = {
+                
+                # Legion
+                
+                # New Vegas
                 robco_industries_reform
                 resorts_reform
                 lighting_up_the_wasteland_reform
-				franchising_reform
+                franchising_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
             }
         }
-        securing_the_strip_new_vegas = {
+        # Bureaucracy
+        monarchy_tier_3 = {
             reforms = {
+                # Generic
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+                
+                # Legion
+                
+                # New Vegas
                 society_in_a_snowglobe_reform
                 reactivate_missile_defence_grid_reform
                 fortified_vegas_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
             }
         }
-        rights_of_the_families_new_vegas = {
+        # Guiding Principles
+        monarchy_tier_4 = {
             reforms = {
-				not_at_home_reform
-				family_council_reform
-				infringe_on_family_rights_reform
+                # Generic
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                excellent_education_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Legion
+                
+                # New Vegas
+                not_at_home_reform
+                family_council_reform
+                infringe_on_family_rights_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
             }
         }
-        high_technology_sectors_new_vegas = {
+        # Consolidation of Power
+        monarchy_tier_5 = {
             reforms = {
-				space_program_reform
-				securatron_ai_reform
-				desert_agriculture_reform
-				atomic_sector_reform
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                clear_monarchy_reform
+                convert_to_republic_reform
+                convert_to_theocracy_reform
+                convert_to_tribe_reform
+                
+                # Legion
+                
+                # New Vegas
+                space_program_reform
+                securatron_ai_reform
+                desert_agriculture_reform
+                atomic_sector_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
             }
         }
     }
     
     legacy_government = {
+        autocracy_legacy
+        legion_legacy
         new_vegas_legacy
-    }
-}
-think_tank_government = {
-    color = { 43 86 173 }
-    
-    basic_reform = think_tank_mechanic
-    
-    reform_levels = {
-        government_form_think_tank = {
-			reforms = {
-                think_tank_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_think_tank = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_think_tank = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_think_tank = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_think_tank = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         think_tank_legacy
-    }
-}
-mothership_government = {
-    color = { 104 109 107 }
-    
-    basic_reform = mothership_mechanic
-    
-    reform_levels = {
-        government_form_mothership = {
-			reforms = {
-                zetan_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_mothership = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_mothership = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_mothership = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_mothership = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        mothership_legacy
-    }
-}
-shi_government = {
-    color = { 144 150 60 }
-    
-    basic_reform = shi_mechanic
-    
-    reform_levels = {
-        government_form_shi = {
-			reforms = {
-                shi_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_shi = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_shi = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_shi = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_shi = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
+        zetan_legacy
         shi_legacy
-    }
-}
-ncr_government = {
-    color = { 196 170 117 }
-    
-    basic_reform = ncr_mechanic
-    
-    reform_levels = {
-        government_form_ncr = {
-			reforms = {
-                ncr_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_ncr = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_ncr = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_ncr = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_ncr = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        ncr_legacy
-    }
-}
-ncr_state_government = {
-    color = { 196 170 117 }
-    
-    basic_reform = ncr_state_mechanic
-    
-    reform_levels = {
-        government_form_ncr_state = {
-			reforms = {
-                ncr_state_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-			}
-		}
-        outlook_ncr_state = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_ncr_state = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_ncr_state = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_ncr_state = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         ncr_state_legacy
     }
 }
-
 #------------------------------------------
 # Republic
 #------------------------------------------
@@ -531,277 +168,151 @@ republic_government = {
     basic_reform = republic_mechanic
     
     reform_levels = {
-        government_form_republic = {
+        republic_power_structure = {
 			reforms = {
+                settlement_reform
                 republic_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_republic = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_republic = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_republic = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_republic = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        republic_legacy
-    }
-}
-dictatorship_government = {
-    color = { 117 196 170 }
-    
-    basic_reform = dictatorship_mechanic
-    
-    reform_levels = {
-        government_form_dictatorship = {
-			reforms = {
                 dictatorship_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_dictatorship = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_dictatorship = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_dictatorship = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_dictatorship = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        dictatorship_legacy
-    }
-}
-institute_government = {
-    color = { 100 105 145 }
-    
-    basic_reform = institute_mechanic
-    
-    reform_levels = {
-        government_form_institute = {
-			reforms = {
+                militia_reform
                 institute_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_institute = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_institute = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_institute = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_institute = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        institute_legacy
-    }
-}
-enclave_government = {
-    color = {  136 145 100 }
-    
-    basic_reform = enclave_mechanic
-    
-    reform_levels = {
-        government_form_enclave = {
-			reforms = {
                 enclave_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
+                vault_reform
+                ncr_reform
 			}
 		}
-        outlook_enclave = {
+        # Civic Virtues
+        republic_tier_1 = {
             reforms = {
+                # Generic
                 administrative_outlook_reform
                 diplomatic_outlook_reform
                 naval_outlook_reform
                 army_outlook_reform
-            }
-        }
-        rule_of_law_enclave = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_enclave = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_enclave = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        enclave_legacy
-    }
-}
-vault_government = {
-    color = { 106 195 201 }
-    
-    basic_reform = vault_mechanic
-    
-    reform_levels = {
-        government_form_vault = {
-			reforms = {
-                vault_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        overseer_vault = {
-            reforms = {
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
                 vault_serve_for_life_reform
                 vault_elections_reform
                 vault_central_council_reform
+                
+                # NCR
             }
         }
-        vault_tec_directive_vault = {
+        # Regionalism
+        republic_tier_2 = {
             reforms = {
+                # Generic
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
                 vault_reclamation_reform
                 vault_experimental_reform
                 vault_abandoned_reform
+                
+                # NCR
             }
         }
-        outsiders_vault = {
+        # Bureaucracy
+        republic_tier_3 = {
             reforms = {
+                # Generic
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
                 vault_customs_office_reform
                 vault_free_trade_reform
                 vault_isolationism_reform
+                
+                # NCR
             }
         }
-        security_vault = {
+        # Guiding Principles
+        republic_tier_4 = {
             reforms = {
+                # Generic
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                excellent_education_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
                 vault_police_force_reform
                 vault_military_force_reform
+                
+                # NCR
+            }
+        }
+        # Consolidation of Power
+        republic_tier_5 = {
+            reforms = {
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                convert_to_monarchy_reform
+                clear_republic_reform
+                convert_to_theocracy_reform
+                convert_to_tribe_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
+                
+                # NCR
             }
         }
     }
     
     legacy_government = {
+        settlement_legacy
+        militia_legacy
+        republic_legacy
+        dictatorship_legacy
+        institute_legacy
+        enclave_legacy
         vault_legacy
+        ncr_legacy
     }
 }
 
@@ -814,108 +325,104 @@ theocracy_government = {
     basic_reform = theocracy_mechanic
     
     reform_levels = {
-        government_form_theocracy = {
+        theocracy_power_structure = {
 			reforms = {
                 theocracy_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
+                brotherhood_reform
+                cult_reform
 			}
 		}
-        outlook_theocracy = {
+        # Civic Virtues
+        theocracy_tier_1 = {
             reforms = {
+                # Generic
                 administrative_outlook_reform
                 diplomatic_outlook_reform
                 naval_outlook_reform
                 army_outlook_reform
-            }
-        }
-        rule_of_law_theocracy = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_theocracy = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_theocracy = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
-        theocracy_legacy
-    }
-}
-bos_government = {
-    color = { 93 109 216 }
-    
-    basic_reform = brotherhood_mechanic
-    
-    reform_levels = {
-        government_form_brotherhood = {
-			reforms = {
-                brotherhood_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        adherence_to_the_directive = {
-            reforms = {
+                
+                # Cult
+                
+                # BOS
                 brotherhood_complete_adherence_reform
                 brotherhood_loose_adherence_reform
                 brotherhood_no_adherence_reform
             }
         }
-        scribe_factionalism = {
+        # Regionalism
+        theocracy_tier_2 = {
             reforms = {
+                # Generic
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+                
+                # Cult
+                
+                # BOS
                 brotherhood_order_of_the_sword_reform
                 brotherhood_order_of_the_shield_reform
                 brotherhood_order_of_the_quill_reform
             }
         }
-        recruitment_pool = {
+        # Bureaucracy
+        theocracy_tier_3 = {
             reforms = {
+                # Generic
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+                
+                # Cult
+                
+                # BOS
                 brotherhood_only_reform
                 brotherhood_integrate_outsiders_reform
                 brotherhood_compromise_for_talent_reform
             }
         }
-        evolving_cause = {
+        # Guiding Principles
+        theocracy_tier_4 = {
             reforms = {
+                # Generic
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                excellent_education_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Cult
+                
+                # BOS
                 brotherhood_codex_reform
                 brotherhood_new_technology_reform
                 brotherhood_confiscated_technology_reform
             }
         }
-        hierarchy = {
+        # Consolidation of Power
+        theocracy_tier_5 = {
             reforms = {
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                convert_to_monarchy_reform
+                convert_to_republic_reform
+                clear_theocracy_reform
+                convert_to_tribe_reform
+                
+                # Cult
+                
+                # BOS
                 brotherhood_chains_that_bind_reform
                 brotherhood_flexible_leadership_reform
             }
@@ -923,62 +430,8 @@ bos_government = {
     }
     
     legacy_government = {
+        theocracy_legacy
         brotherhood_legacy
-    }
-}
-cult_government = {
-    color = { 82 37 155 }
-    
-    basic_reform = cult_mechanic
-    
-    reform_levels = {
-        government_form_cult = {
-			reforms = {
-                cult_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-			}
-		}
-        outlook_cult = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_cult = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_cult = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_cult = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         cult_legacy
     }
 }
@@ -992,396 +445,137 @@ tribe_government = {
     basic_reform = tribe_mechanic
     
     reform_levels = {
-        government_form_tribe = {
+        tribe_power_structure = {
 			reforms = {
                 tribe_reform
+                commune_reform
+                raider_reform
+                super_mutant_reform
+                swarm_reform
+                wolf_pack_reform
+                great_khan_reform
 			}
 		}
-        outlook_tribe = {
+        # Civic Virtues
+        tribe_tier_1 = {
             reforms = {
+                # Generic
                 administrative_outlook_reform
                 diplomatic_outlook_reform
                 naval_outlook_reform
                 army_outlook_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
             }
         }
-        rule_of_law_tribe = {
+        # Regionalism
+        tribe_tier_2 = {
             reforms = {
+                # Generic
                 central_authority_reform
                 regional_authority_reform
                 local_authority_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
             }
         }
-        diversity_tribe = {
+        # Bureaucracy
+        tribe_tier_3 = {
             reforms = {
+                # Generic
                 ethnostate_reform
                 measured_immigration_reform
                 open_immigration_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
             }
         }
-        ambitions_tribe = {
+        # Guiding Principles
+        tribe_tier_4 = {
             reforms = {
+                # Generic
                 masterful_administration_reform
                 charismatic_diplomacy_reform
                 excellent_education_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
+            }
+        }
+        # Consolidation of Power
+        tribe_tier_5 = {
+            reforms = {
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                convert_to_monarchy_reform
                 convert_to_republic_reform
                 convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
+                clear_tribe_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
             }
         }
     }
     
     legacy_government = {
         tribe_legacy
-    }
-}
-commune_government = {
-    color = { 177 186 100 }
-    
-    basic_reform = commune_mechanic
-    
-    reform_levels = {
-        government_form_commune = {
-			reforms = {
-                commune_reform
-			}
-		}
-        outlook_commune = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_commune = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_commune = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_commune = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         commune_legacy
-    }
-}
-raider_government = {
-    color = { 109 42 17 }
-    
-    basic_reform = raider_mechanic
-    
-    reform_levels = {
-        government_form_raider = {
-			reforms = {
-                raider_reform
-			}
-		}
-        outlook_raider = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_raider = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_raider = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_raider = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         raider_legacy
-    }
-}
-super_mutant_government = {
-    color = { 41 155 43 }
-    
-    basic_reform = super_mutant_mechanic
-    
-    reform_levels = {
-        government_form_super_mutant = {
-			reforms = {
-                super_mutant_reform
-			}
-		}
-        outlook_super_mutant = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_super_mutant = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_super_mutant = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_super_mutant = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         super_mutant_legacy
-    }
-}
-swarm_government = {
-    color = { 165 120 84 }
-    
-    basic_reform = swarm_mechanic
-    
-    reform_levels = {
-        government_form_swarm = {
-			reforms = {
-                swarm_reform
-			}
-		}
-        outlook_swarm = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_swarm = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_swarm = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_swarm = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         swarm_legacy
-    }
-}
-wolf_pack_government = {
-    color = { 96 150 97 }
-    
-    basic_reform = wolf_pack_mechanic
-    
-    reform_levels = {
-        government_form_wolf_pack = {
-			reforms = {
-                wolf_pack_reform
-			}
-		}
-        outlook_wolf_pack = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_wolf_pack = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_wolf_pack = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_wolf_pack = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         wolf_pack_legacy
-    }
-}
-great_khan_government = {
-    color = { 186 196 96 }
-    
-    basic_reform = great_khan_mechanic
-    
-    reform_levels = {
-        government_form_great_khan = {
-			reforms = {
-                great_khan_reform
-			}
-		}
-        outlook_great_khan = {
-            reforms = {
-                administrative_outlook_reform
-                diplomatic_outlook_reform
-                naval_outlook_reform
-                army_outlook_reform
-            }
-        }
-        rule_of_law_great_khan = {
-            reforms = {
-                central_authority_reform
-                regional_authority_reform
-                local_authority_reform
-            }
-        }
-        diversity_great_khan = {
-            reforms = {
-                ethnostate_reform
-                measured_immigration_reform
-                open_immigration_reform
-            }
-        }
-        ambitions_great_khan = {
-            reforms = {
-                masterful_administration_reform
-                charismatic_diplomacy_reform
-                excellent_education_reform
-                convert_to_settlement_reform
-                convert_to_militia_reform
-                convert_to_cult_reform
-                convert_to_republic_reform
-                convert_to_theocracy_reform
-                convert_to_dictatorship_reform
-                convert_to_legion_reform
-                convert_to_vault_reform
-                convert_to_enclave_reform
-                convert_to_brotherhood_reform
-                convert_to_ncr_state_reform
-            }
-        }
-    }
-    
-    legacy_government = {
         great_khan_legacy
     }
 }

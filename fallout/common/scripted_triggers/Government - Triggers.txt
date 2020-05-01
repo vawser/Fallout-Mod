@@ -1,7 +1,7 @@
 # General
 is_monarchy_government = {
     OR = {
-        is_settlement_government = yes
+        has_reform = settlement_reform
         has_reform = militia_reform
         has_reform = legion_reform
         has_reform = think_tank_reform
@@ -43,24 +43,20 @@ is_tribal_government = {
 }
 
 is_settlement_government = {
-    OR = {
-        has_reform = frontier_settlement_reform
-        has_reform = mercantile_settlement_reform
-        has_reform = militarized_settlement_reform
-    }
+    has_reform = settlement_reform
 }
 
 uses_heir = {
     OR = {
-        has_reform = settlement_mechanic
-        has_reform = militia_mechanic
-        has_reform = legion_mechanic
-        has_reform = theocracy_mechanic
-        has_reform = brotherhood_mechanic
-        has_reform = cult_mechanic
-        has_reform = tribe_mechanic
-        has_reform = raider_mechanic
-        has_reform = great_khan_mechanic
+        has_reform = settlement_reform
+        has_reform = militia_reform
+        has_reform = legion_reform
+        has_reform = theocracy_reform
+        has_reform = brotherhood_reform
+        has_reform = cult_reform
+        has_reform = tribe_reform
+        has_reform = raider_reform
+        has_reform = great_reform
     }
 }
 

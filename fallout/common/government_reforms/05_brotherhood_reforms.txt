@@ -4,6 +4,10 @@
 brotherhood_complete_adherence_reform = {
     icon = "power_armor"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         max_absolutism = 10
         ae_impact = 0.1
@@ -12,6 +16,10 @@ brotherhood_complete_adherence_reform = {
 brotherhood_loose_adherence_reform = {
     icon = "bos_talking"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         max_absolutism = 5
         ae_impact = 0.05
@@ -20,6 +28,10 @@ brotherhood_loose_adherence_reform = {
 brotherhood_no_adherence_reform = {
     icon = "bos_engineer"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         diplomatic_reputation = 1
     }
@@ -31,6 +43,10 @@ brotherhood_no_adherence_reform = {
 brotherhood_order_of_the_sword_reform = {
     icon = "military"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         mil_tech_cost_modifier = -0.05
     }
@@ -38,6 +54,10 @@ brotherhood_order_of_the_sword_reform = {
 brotherhood_order_of_the_shield_reform = {
     icon = "comms"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         leader_land_fire = 1
     }
@@ -45,6 +65,10 @@ brotherhood_order_of_the_shield_reform = {
 brotherhood_order_of_the_quill_reform = {
     icon = "satellite"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         idea_cost = -0.05
     }
@@ -56,6 +80,10 @@ brotherhood_order_of_the_quill_reform = {
 brotherhood_only_reform = {
     icon = "bos_talking"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         discipline = 0.05
     }
@@ -63,6 +91,10 @@ brotherhood_only_reform = {
 brotherhood_integrate_outsiders_reform = {
     icon = "person"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         global_manpower_modifier = 0.33
     }
@@ -70,6 +102,10 @@ brotherhood_integrate_outsiders_reform = {
 brotherhood_compromise_for_talent_reform = {
     icon = "military"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         technology_cost = -0.1
     }
@@ -81,6 +117,10 @@ brotherhood_compromise_for_talent_reform = {
 brotherhood_codex_reform = {
     icon = "console"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         tolerance_own = 2
     }
@@ -88,6 +128,10 @@ brotherhood_codex_reform = {
 brotherhood_new_technology_reform = {
     icon = "power_armor"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     # Add research event
     custom_attributes = {
 		enables_bos_research_event = yes
@@ -100,6 +144,10 @@ brotherhood_new_technology_reform = {
 brotherhood_confiscated_technology_reform = {
     icon = "bunker"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         loot_amount = 0.25
         unjustified_demands = -0.1
@@ -112,6 +160,10 @@ brotherhood_confiscated_technology_reform = {
 brotherhood_chains_that_bind_reform = {
     icon = "power_armor"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         leader_cost = -0.25
         drill_decay_modifier = -0.1
@@ -120,6 +172,10 @@ brotherhood_chains_that_bind_reform = {
 brotherhood_flexible_leadership_reform = {
     icon = "bos_talking"
 
+    potential = {
+        has_reform = brotherhood_reform
+    }
+    
     modifiers = {
         free_leader_pool = 1
         army_tradition = 1

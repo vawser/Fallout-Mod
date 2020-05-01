@@ -82,7 +82,7 @@ country_event = {
         
 		change_tag = NCR
         change_government_effect = {
-            TYPE = ncr_government
+            TYPE = republic_government
             REFORM = ncr_reform
             LEGACY = ncr_legacy
         }
@@ -261,7 +261,7 @@ country_event = {
 		name = ncr_government.20.option.a
         
         define_heir = {
-            min_age = 30
+            age = 30
             claim = 100
             adm = 3
             hide_skills = yes
@@ -272,7 +272,7 @@ country_event = {
 		name = ncr_government.20.option.b
         
         define_heir = {
-            min_age = 30
+            age = 30
             claim = 100
             dip = 3
             hide_skills = yes
@@ -283,7 +283,7 @@ country_event = {
 		name = ncr_government.20.option.c
         
         define_heir = {
-            min_age = 30
+            age = 30
             claim = 100
             mil = 3
             hide_skills = yes

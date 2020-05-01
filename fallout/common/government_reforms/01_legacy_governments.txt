@@ -1,6 +1,29 @@
 #--------------------------------------------
 # Monarchy
 #--------------------------------------------
+autocracy_legacy = {
+    icon = "military"
+    
+    monarchy = yes
+    
+    heir = yes
+	queen = no
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    modifiers = {
+        land_morale = 0.05
+        max_absolutism = 10
+        max_states = 3
+    }
+    
+	ai = { factor = 1 }
+}
 legion_legacy = {
     icon = "union"
     
@@ -153,7 +176,7 @@ shi_legacy = {
 #--------------------------------------------
 # Republic
 #--------------------------------------------
-frontier_settlement_legacy = {
+settlement_legacy = {
     icon = "union"
     
     republic = yes
@@ -179,68 +202,6 @@ frontier_settlement_legacy = {
     modifiers = {
         global_colonial_growth = 10
         colonist_placement_chance = 0.05
-        max_states = 3
-    }
-
-	ai = { factor = 1 }
-}
-mercantile_settlement_legacy = {
-    icon = "union"
-    
-    republic = yes
-    
-    heir = no
-	queen = no
-    
-    duration = 5
-    has_term_election = no
-    election_on_death = yes
-    
-    allow_normal_conversion = no
-	legacy_government = yes
-    
-	valid_for_new_country = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    government_abilities = { 
-        iqta_mechanic
-    }
-    
-    modifiers = {
-        global_own_trade_power = 0.1
-        trade_efficiency = 0.05
-        max_states = 3
-    }
-
-	ai = { factor = 1 }
-}
-militarized_settlement_legacy = {
-    icon = "union"
-    
-    republic = yes
-    
-    heir = no
-	queen = no
-    
-    duration = 5
-    has_term_election = no
-    election_on_death = yes
-    
-    allow_normal_conversion = no
-	legacy_government = yes
-    
-	valid_for_new_country = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    government_abilities = { 
-        iqta_mechanic
-    }
-    
-    modifiers = {
-        global_manpower_modifier = 0.1
-        global_regiment_cost = -0.1
         max_states = 3
     }
 

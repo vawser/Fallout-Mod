@@ -5,6 +5,7 @@ liberal_autocracy_reform = {
     icon = "mr_house"
 	
 	potential = {
+        has_reform = new_vegas_reform
 		NOT = { 
 			OR = {
 				has_reform = anarchic_vegas_reform
@@ -22,6 +23,10 @@ liberal_autocracy_reform = {
 independent_vegas_reform = {
     icon = "person"
 	
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
 	effect = {
         if = {
             limit = {
@@ -39,6 +44,10 @@ independent_vegas_reform = {
 anarchic_vegas_reform = {
     icon = "cross"
 	
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     effect = {
         if = {
             limit = { 
@@ -61,6 +70,10 @@ anarchic_vegas_reform = {
 robco_industries_reform = {
     icon = "victor"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         regiment_recruit_speed = -0.20
 		production_efficiency = 0.05	
@@ -69,6 +82,10 @@ robco_industries_reform = {
 resorts_reform = {
     icon = "state_house"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         global_unrest = -0.5
 		native_assimilation = 0.25	
@@ -77,6 +94,10 @@ resorts_reform = {
 lighting_up_the_wasteland_reform = {
     icon = "strip_light"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         max_states = 2
 		monthly_splendor = 1	
@@ -85,6 +106,10 @@ lighting_up_the_wasteland_reform = {
 franchising_reform = {
     icon = "charismatic_person"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         global_tax_modifier = 0.10	
 		yearly_corruption = -0.05
@@ -96,6 +121,10 @@ franchising_reform = {
 society_in_a_snowglobe_reform = {
     icon = "snowglobe"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         global_unrest = -2	
     }
@@ -103,6 +132,10 @@ society_in_a_snowglobe_reform = {
 reactivate_missile_defence_grid_reform = {
     icon = "artillery"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         backrow_artillery_damage = 0.1	
     }
@@ -110,6 +143,10 @@ reactivate_missile_defence_grid_reform = {
 fortified_vegas_reform = {
     icon = "barbed_wall"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         defensiveness = 0.20
     }
@@ -121,6 +158,10 @@ fortified_vegas_reform = {
 not_at_home_reform = {
     icon = "gambling"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
 		advisor_cost = -0.15
 		years_of_nationalism = -3	
@@ -128,6 +169,10 @@ not_at_home_reform = {
 }
 family_council_reform = {
     icon = "peace"
+    
+    potential = {
+        has_reform = new_vegas_reform
+    }
     
     modifiers = {
         global_autonomy = 0.05	
@@ -137,6 +182,10 @@ family_council_reform = {
 infringe_on_family_rights_reform = {
     icon = "military"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
 		global_autonomy = -0.05	
         global_tax_modifier = 0.10	
@@ -149,6 +198,10 @@ infringe_on_family_rights_reform = {
 space_program_reform = {
     icon = "rocket_btm"  #Consider Replacing with img from Mothership Zeta
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         technology_cost = -0.1	
     }
@@ -156,6 +209,10 @@ space_program_reform = {
 securatron_ai_reform = {
     icon = "console"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         shock_damage = 0.1	
     }
@@ -163,6 +220,10 @@ securatron_ai_reform = {
 desert_agriculture_reform = {
     icon = "ranch"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
         development_cost = -0.1	
     }
@@ -171,6 +232,10 @@ desert_agriculture_reform = {
 atomic_sector_reform = {
     icon = "nuke"
 
+    potential = {
+        has_reform = new_vegas_reform
+    }
+    
     modifiers = {
 		state_maintenance_modifier = -0.20	
     }
