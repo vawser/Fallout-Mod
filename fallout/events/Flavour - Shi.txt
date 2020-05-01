@@ -121,7 +121,7 @@ country_event = {
 		set_country_flag = remove_brotherhood_from_shitown
 		    hidden_effect = {
 			    every_country = {
-                    limit = { has_reform = ncr_reform }
+                    limit = { is_emperor = yes }
                     country_event = {
                         id = ncr.6
                         days = 35
@@ -665,13 +665,13 @@ country_event = {
 		name = shi.14.option.c
 		trigger = { 
             any_country = {
-                has_reform = ncr_reform
+                is_emperor = yes
                 has_opinion = { who = ROOT value = 25 }
             }
         }
 		hidden_effect = {
 		    every_country = {
-                limit = { has_reform = ncr_reform }
+                limit = { is_emperor = yes }
                 country_event = {
                     id = ncr.7
                     days = 20

@@ -22,7 +22,7 @@ country_event = {
         name = courier.1.option.a
         
         every_country = { 
-            limit = { has_reform = ncr_reform }
+            limit = { is_emperor = yes }
             country_event = { id = courier.3 } 
         }
         
@@ -175,7 +175,7 @@ country_event = {
     trigger = {
         OR = {
             tag = CAE
-            has_reform = ncr_reform
+            is_emperor = yes
             tag = NVG
         }
         NOT = { has_country_flag = courier_offer_done }

@@ -1,16 +1,9 @@
 #-----------------------------
 # Changelog
 #-----------------------------
-# 1.06
-- Replaced all use of monofonto with the default EU4 font in menus. This will fix whatever issue was causing the text not to appear. This can still happen with the map font, but you can just restart to fix that.
-- Reworked Nukes. You now start a Nuclear Weapons programme at MIL tech 20 and experience random events that will simulate the process of creating a warhead. You will get occassional negative events whilst this is active, although eventually you will get a nuke. You can end the programme if you have enough nukes and/or you don't want to experience the negative events anymore.
-- Changed the effect of Nukes. Now empties the province (unless it is a capital) and adds the Nuked! modifiers to itself and 3 neighbor provinces. Adds 100 local autonomy and devastation, and changes the trade good to Radioactive Waste.
-- Changed the internal government types back to the four vanilla uses. This is to allow for more sensible switching.
-- Changed the base reforms to allow for early switching of the basic forms with a government type in Tier 1 (i.e. Settlement to Militia for Republic types).
-- Adjusted the government reforms so there are 5 tiers. Locked a few reforms behind new requirements.
-- Added government reforms that let you change the overall government type (at Tier 5).
-- Added a government reform that clears special government types, letting those with them change to a new government (at Tier 5).
-- Added decisions that let you switch technology group and unit type to those that match your current government form (useful if you've switched to a unique form via reforms and still have your old generic unit type).
+# 1.07
+- Shady Sands has been given more provinces at game start to make it an equal of Caesar's Legion by itself.
+- Fixed all the NCR events that pointed to the unified government reform rather than the new emperor position.
 
 #-----------------------------
 # TODO

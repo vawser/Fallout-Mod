@@ -16,7 +16,7 @@ country_event = {
 	trigger = {
         tag = BOS 	
 		any_country = {
-            has_reform = ncr_reform
+            is_emperor = yes
             war_with = BOS
         }
 	}
@@ -31,7 +31,7 @@ country_event = {
 		name = brotherhood_of_steel_west.1.option.a
         hidden_effect = {
 		    every_country = {
-                limit = { has_reform = ncr_reform }
+                limit = { is_emperor = yes }
                 country_event = { id = ncr.4 days = 5 }
 			}
 		}
