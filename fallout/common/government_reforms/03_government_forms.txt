@@ -77,8 +77,17 @@ new_vegas_reform = {
     
     lock_level_when_selected = yes
     
-    potential = {
-        have_had_reform = new_vegas_reform
+    trigger = {
+        OR = {
+            have_had_reform = new_vegas_reform
+            any_country = {
+                has_reform = new_vegas_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
     }
     
     heir = no
@@ -123,7 +132,13 @@ think_tank_reform = {
     trigger = {
         OR = {
             have_had_reform = think_tank_reform
-            primary_culture = think_tank
+            any_country = {
+                has_reform = think_tank_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
         }
     }
     
@@ -157,7 +172,13 @@ zetan_reform = {
     trigger = {
         OR = {
             have_had_reform = zetan_reform
-            primary_culture = zetan
+            any_country = {
+                has_reform = zetan_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
         }
     }
     
@@ -186,11 +207,17 @@ shi_reform = {
 	nation_designer_cost = 0
 
     lock_level_when_selected = yes
-    
+
     trigger = {
         OR = {
             have_had_reform = shi_reform
-            primary_culture = shi
+            any_country = {
+                has_reform = shi_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
         }
     }
     
@@ -404,8 +431,17 @@ institute_reform = {
     
     lock_level_when_selected = yes
     
-    potential = {
-        have_had_reform = institute_reform
+    trigger = {
+        OR = {
+            have_had_reform = institute_reform
+            any_country = {
+                has_reform = institute_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
     }
     
     heir = no
@@ -948,8 +984,17 @@ wolf_pack_reform = {
     
     lock_level_when_selected = yes
     
-    potential = {
-        have_had_reform = wolf_pack_reform
+    trigger = {
+        OR = {
+            have_had_reform = wolf_pack_reform
+            any_country = {
+                has_reform = wolf_pack_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
     }
     
     heir = yes
@@ -998,7 +1043,13 @@ great_khan_reform = {
     trigger = {
         OR = {
             have_had_reform = great_khan_reform
-            primary_culture = khan
+            any_country = {
+                has_reform = great_khan_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
         }
     }
     

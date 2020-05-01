@@ -1,0 +1,284 @@
+country_decisions = {
+	adopt_bos_tech = {
+		potential = {
+            has_reform = brotherhood_reform
+            NOT = { technology_group = tech_bos }
+		}
+		allow = {
+			has_reform = brotherhood_reform
+            NOT = { technology_group = tech_bos }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_bos
+            change_unit_type = tech_bos
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_institute_tech = {
+		potential = {
+            has_reform = institute_reform
+            NOT = { technology_group = tech_commonwealth }
+		}
+		allow = {
+			has_reform = institute_reform
+            NOT = { technology_group = tech_commonwealth }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_commonwealth
+            change_unit_type = tech_commonwealth
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_new_vegas_tech = {
+		potential = {
+            has_reform = new_vegas_reform
+            NOT = { technology_group = tech_new_vegas }
+		}
+		allow = {
+			has_reform = new_vegas_reform
+            NOT = { technology_group = tech_new_vegas }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_new_vegas
+            change_unit_type = tech_new_vegas
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_ncr_tech = {
+		potential = {
+            OR = {
+                has_reform = ncr_reform
+                has_reform = ncr_state_reform
+            }
+            NOT = { technology_group = tech_ncr }
+		}
+		allow = {
+			OR = {
+                has_reform = ncr_reform
+                has_reform = ncr_state_reform
+            }
+            NOT = { technology_group = tech_ncr }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_ncr
+            change_unit_type = tech_ncr
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_legion_tech = {
+		potential = {
+            has_reform = legion_reform
+            NOT = { technology_group = tech_caesars_legion }
+		}
+		allow = {
+			has_reform = legion_reform
+            NOT = { technology_group = tech_caesars_legion }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_caesars_legion
+            change_unit_type = tech_caesars_legion
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_enclave_tech = {
+		potential = {
+            has_reform = enclave_reform
+            NOT = { technology_group = tech_enclave }
+		}
+		allow = {
+			has_reform = enclave_reform
+            NOT = { technology_group = tech_enclave }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_enclave
+            change_unit_type = tech_enclave
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_shi_tech = {
+		potential = {
+            has_reform = shi_reform
+            NOT = { technology_group = tech_shi }
+		}
+		allow = {
+			has_reform = shi_reform
+            NOT = { technology_group = tech_shi }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_shi
+            change_unit_type = tech_shi
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_alien_tech = {
+		potential = {
+            has_reform = zetan_reform
+            NOT = { technology_group = tech_alien }
+		}
+		allow = {
+			has_reform = zetan_reform
+            NOT = { technology_group = tech_alien }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_alien
+            change_unit_type = tech_alien
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_great_khan_tech = {
+		potential = {
+            has_reform = great_khan_reform
+            NOT = { technology_group = tech_great_khan }
+		}
+		allow = {
+			has_reform = great_khan_reform
+            NOT = { technology_group = tech_great_khan }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_great_khan
+            change_unit_type = tech_great_khan
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_vault_tech = {
+		potential = {
+            has_reform = vault_reform
+            NOT = { technology_group = tech_vault_dweller }
+		}
+		allow = {
+			has_reform = vault_reform
+            NOT = { technology_group = tech_vault_dweller }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_vault_dweller
+            change_unit_type = tech_vault_dweller
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_atomic_tech = {
+		potential = {
+            has_reform = cult_reform
+            religion = atomic_worship
+            NOT = { technology_group = tech_children_of_the_atom }
+		}
+		allow = {
+			has_reform = cult_reform
+            religion = atomic_worship
+            NOT = { technology_group = tech_children_of_the_atom }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_children_of_the_atom
+            change_unit_type = tech_children_of_the_atom
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_hubologist_tech = {
+		potential = {
+            has_reform = cult_reform
+            religion = hubology
+            NOT = { technology_group = tech_hubologist }
+		}
+		allow = {
+			has_reform = cult_reform
+            religion = hubology
+            NOT = { technology_group = tech_hubologist }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_hubologist
+            change_unit_type = tech_hubologist
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_robot_tech = {
+		potential = {
+            has_reform = think_tank_reform
+            NOT = { technology_group = tech_robot }
+		}
+		allow = {
+			has_reform = think_tank_reform
+            NOT = { technology_group = tech_robot }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_robot
+            change_unit_type = tech_robot
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    adopt_raider_tech = {
+		potential = {
+            OR = {
+                has_reform = raider_reform
+                has_reform = wolf_pack_reform
+            }
+            NOT = { technology_group = tech_raider }
+		}
+		allow = {
+			OR = {
+                has_reform = raider_reform
+                has_reform = wolf_pack_reform
+            }
+            NOT = { technology_group = tech_raider }
+            stability = 1
+		}
+		effect = {
+			add_stability = -3
+            change_technology_group = tech_raider
+            change_unit_type = tech_raider
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

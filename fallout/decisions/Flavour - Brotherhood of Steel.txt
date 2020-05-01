@@ -183,23 +183,4 @@ country_decisions = {
 			}
 		}
 	}
-    
-    adopt_brotherhood_military_traditions = {
-		potential = {	
-			has_reform = brotherhood_reform
-			NOT = { technology_group = tech_bos }
-		}
-		allow =  {
-			has_reform = brotherhood_reform
-            mil_power = 250
-		}
-	  	effect = {
-            add_mil_power = 250
-			change_technology_group = tech_bos
-            change_unit_type = tech_bos
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 }
