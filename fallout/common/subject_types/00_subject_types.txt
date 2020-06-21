@@ -85,6 +85,7 @@ default = {
 	can_set_mil_focus = yes
 	can_send_missionary_to_subject = yes				# Requires Cradle of Civilization
 	can_union_break = no								# Only works together with has_overlords_ruler
+	overlord_can_fabricate_for = yes
 	
 	max_government_rank = 0								# 0 means no limit
 	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
@@ -94,8 +95,10 @@ default = {
 	liberty_desire_negative_prestige = 0.0
 	liberty_desire_development_ratio = 0.0
 	liberty_desire_same_dynasty = 0.0
+	liberty_desire_revolution = 30.0					# Liberty desire at 100% revolution spread in country
 	pays_overlord = 0.0									# 1.0 represents the amount payed by vassals
 	forcelimit_bonus = 0.0								# 1.0 represents bonus from having a vassal
+	forcelimit_to_overlord = 0.0						# Percent of subject FL to use as base for modifiers
 	military_focus = 1.0								# How much the AI subject should spend etc. on army and forts. 0 should make them spend nothing. Very high values will probably not make a big difference since there will be sanity checks.
 
 	relative_power_class = 1 							# See description above
@@ -147,6 +150,8 @@ default = {
 	return_land = no
 	conscript_general = no
 	knowledge_sharing = yes
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
 	# (special)
 	sword_hunt = no
 	sankin_kotai = no
@@ -183,6 +188,7 @@ vassal = {
 	liberty_desire_same_dynasty = -5.0
 	pays_overlord = 1.0
 	forcelimit_bonus = 1.0
+	forcelimit_to_overlord = 0.1
 
 	relative_power_class = 2
 	
@@ -218,22 +224,15 @@ march = {
 
 	# Properties:
 	pays_overlord = 0.0
-	military_focus = 2.0
-	forcelimit_bonus = 1.1
+	military_focus = 1.5
 	base_liberty_desire = -15.0
 	can_be_annexed = no
-	liberty_desire_same_dynasty = -5.0
+	forcelimit_to_overlord = 0.2
 
 	# Subject Interactions:
 	scutage = no
 	subsidize_armies = yes
 	fortify_march = yes
- 	place_relative_on_throne = yes
-	enforce_religion = yes
-	conscript_general = yes
-	send_additional_troops = yes
-	customize_subject = no
-	seize_territory = no
 	
 	send_officers = yes
 
@@ -350,7 +349,7 @@ personal_union = {
 	transfer_subjects_when_made = yes
 
 	liberty_desire_negative_prestige = 1.0
-	military_focus = 0.6
+	military_focus = 0.66
 
 	relative_power_class = 1
 
@@ -383,6 +382,7 @@ client_vassal = {
 	created_by_overlord = yes
 
 	base_liberty_desire = -25.0
+	liberty_desire_revolution = 0
 
 	# Subject Interactions:
 	customize_subject = yes
@@ -400,6 +400,7 @@ client_march = {
 	created_by_overlord = yes
 
 	base_liberty_desire = -40.0
+	liberty_desire_revolution = 0
 
 	# Subject Interactions:
 	customize_subject = yes
@@ -510,6 +511,7 @@ tributary_state = {
 	can_transfer_in_peace = no
 	can_set_mil_focus = no
 	can_send_missionary_to_subject = no
+	overlord_can_fabricate_for = no
 	
 	liberty_desire_development_ratio = 0.175
 	trust_on_start = 0
