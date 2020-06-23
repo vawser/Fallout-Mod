@@ -1,0 +1,137 @@
+estate_bureaucrats = {
+	icon = 4
+    color = { 140 140 140 }
+    
+	influence_from_dev_modifier = 1.0
+    
+    # ----- Names -----
+    custom_name = {
+		desc = estate_elders
+		trigger = {
+			has_reform = brotherhood_reform
+		}
+	}
+    custom_name = {
+		desc = estate_patricians
+		trigger = {
+			has_reform = legion_reform
+		}
+	}
+    
+	# ----- Conditions -----
+	trigger = {
+        NOT = { has_reform = think_tank_reform }
+        NOT = { has_reform = tribe_reform }
+        NOT = { has_reform = commune_reform }
+        NOT = { has_reform = raider_reform }
+        NOT = { has_reform = super_mutant_reform }
+        NOT = { has_reform = swarm_reform }
+        NOT = { has_reform = wolf_pack_reform }
+        NOT = { has_reform = great_khan_reform }
+	}
+
+	# ----- Country -----
+	country_modifier_happy = {
+		governing_capacity_modifier = 0.15
+        core_creation = -0.1
+		global_tax_modifier = 0.2
+	}
+	country_modifier_neutral = {
+		governing_capacity_modifier = 0.05
+		global_tax_modifier = 0.1
+	}	
+	country_modifier_angry = {
+        governing_capacity_modifier = -0.15
+        core_creation = 0.1
+		global_tax_modifier = -0.2
+	}
+
+	land_ownership_modifier = {
+		bureaucrats_loyalty_modifier = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.67
+			NOT = { is_state_core = owner }
+		}
+		modifier = {
+			factor = 1.2
+			base_tax = 10
+		}
+	}
+
+	# ----- Influence -----
+	base_influence = 30
+	
+    influence_modifier = {
+		desc = EST_VAL_ECONOMIC_IDEAS
+		trigger = {
+			has_idea_group = fallout_economic_ideas
+		}
+		influence = 5
+	}
+    
+    influence_modifier = {
+		desc = EST_VAL_ADMINISTRATIVE_IDEAS
+		trigger = {
+			has_idea_group = fallout_administrative_ideas
+		}
+		influence = 5
+	}
+
+	# ----- Loyalty -----
+	loyalty_modifier = {
+		desc = EST_VAL_HIGH_TAX_INCOME_PEOPLE
+		trigger = {
+			tax_income_percentage = 0.6
+		}
+		loyalty = 10
+	}
+    loyalty_modifier = {
+		desc = EST_VAL_LOW_TAX_INCOME_PEOPLE
+		trigger = {
+			NOT = { tax_income_percentage = 0.3 }
+		}
+		loyalty = -10
+	}
+    
+    # ----- Privileges -----
+	privileges = {
+		estate_bureaucrats_land_rights
+		estate_bureaucrats_unified_state
+		estate_bureaucrats_independent_advisors
+		estate_bureaucrats_wasteland_outposts
+		estate_bureaucrats_expanded_bureaucracy
+		estate_bureaucrats_administrative_oversight
+		estate_bureaucrats_internal_development
+		estate_bureaucrats_enforced_one_faith
+		estate_bureaucrats_liberation_of_our_own
+		estate_bureaucrats_statutory_rights
+        estate_bureaucrats_monopoly_of_technology
+        estate_bureaucrats_monopoly_of_gambling
+	}
+
+    # ----- Agenda -----
+	agendas = {
+		estate_bureaucrats_develop_x
+		estate_bureaucrats_build_lab_in_y
+		estate_bureaucrats_build_bank_in_y
+        estate_bureaucrats_build_office_in_y
+		estate_bureaucrats_build_manufactory_in_y
+		estate_bureaucrats_convert_province_x
+		estate_bureaucrats_reduce_war_exhaustion
+		estate_bureaucrats_recover_stability
+		estate_bureaucrats_increase_stability
+		estate_bureaucrats_reduce_overextension
+		estate_bureaucrats_restore_devotion
+		estate_bureaucrats_root_out_heresy
+		estate_bureaucrats_crush_religious_revolts
+		estate_bureaucrats_protect_brethren
+		estate_bureaucrats_propagate_religion
+		estate_bureaucrats_relations_with_dotf
+		estate_bureaucrats_hire_advisor
+		estate_bureaucrats_fire_advisor
+	}
+}

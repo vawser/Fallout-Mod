@@ -1,0 +1,24 @@
+#province scope; checks it is highest or joint highest supply limit in the area owned by you (useful for spawning rebels)
+highest_supply_limit_in_area = {
+	NOT = {
+		area_for_scope_province = { 
+			NOT = { province_id = prev }
+			owned_by = root
+			supply_limit = prev 
+			NOT = { prev = { supply_limit = prev } }
+		}
+	}
+}
+
+has_no_manufactory_trigger = { #Province Scope
+	NOT = { has_building = fbs_labour_camp }
+	NOT = { has_building = fbs_military_factory }
+	NOT = { has_building = fbs_industrial_factory }
+	NOT = { has_building = fbs_commercial_factory }
+	NOT = { has_building = fbs_electronics_factory }
+}
+
+root_can_build_manufactory_here_trigger = {
+    has_no_manufactory_trigger = yes
+    num_free_building_slots = 1
+}

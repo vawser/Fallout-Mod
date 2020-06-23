@@ -1,0 +1,70 @@
+add_mutual_opinion_modifier_effect = {
+	add_opinion = {
+		who = $scope_country$
+		modifier = $opinion_modifier$
+	}
+	reverse_add_opinion = {
+		who = $scope_country$
+		modifier = $opinion_modifier$
+	}
+}
+
+add_or_extend_province_modifier_effect = {
+	if = {
+		limit = {
+			has_province_modifier = $MODIFIER$
+		}
+		extend_province_modifier = { name = $MODIFIER$ duration = $DURATION$ }
+	}
+	else = {
+		add_province_modifier = { name = $MODIFIER$ duration = $DURATION$ }
+	}
+}
+
+grant_immortality = {
+    add_ruler_modifier = {
+        name = immortality
+        duration = -1
+    }
+}
+
+damage_legitimacy_rebels = {
+    if = { 
+        limit = { 
+            OR = {
+                has_government_attribute = monarchy
+                has_government_attribute = tribal
+            }
+            NOT = { has_government_attribute = nomad }
+        }
+        add_legitimacy = -50 
+    }
+    if = { limit = { has_government_attribute = republic } add_republican_tradition = -50 }
+    if = { limit = { has_government_attribute = nomad } add_horde_unity = -50 }
+    if = { limit = { has_government_attribute = has_devotion } add_devotion = -50 }
+}
+
+#province scope, chooses which random monarch point bonus to give for agendas
+choose_random_development_bonus_effect = {
+	random_list = {
+		1 = { set_province_flag = add_base_tax_flag }
+		1 = { set_province_flag = add_base_production_flag }
+		1 = { set_province_flag = add_base_manpower_flag }
+	}
+}
+
+apply_random_development_bonus_bonus_effect = {
+	trigger_switch = {
+		on_trigger = has_province_flag
+		add_base_tax_flag = { add_base_tax = 1 }
+		add_base_production_flag = { add_base_production = 1 }
+		add_base_manpower_flag = { add_base_manpower = 1 }
+	}
+	clear_random_development_bonus_flags_effect = yes
+}
+
+clear_random_development_bonus_flags_effect = {
+	clr_province_flag = add_base_tax_flag
+	clr_province_flag = add_base_production_flag
+	clr_province_flag = add_base_manpower_flag
+}

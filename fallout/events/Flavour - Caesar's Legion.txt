@@ -100,7 +100,7 @@ country_event = {
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = the_howitzer }
-        emperor = {
+        NCR = {
             war_with = ROOT
         }
     }
@@ -835,7 +835,7 @@ country_event = {
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = the_water_merchants }
-        emperor = {
+        NCR = {
             ROOT = {
                 claim = PREV
             }
@@ -911,7 +911,7 @@ country_event = {
         has_reform = legion_reform
         NOT = { has_country_flag = seat_of_the_council }
         military_strength = {
-            who = emperor
+            who = NCR
             value = 1.2
         }
     }

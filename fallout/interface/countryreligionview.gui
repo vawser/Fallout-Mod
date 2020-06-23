@@ -1476,6 +1476,29 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				format = centre
 			}
+		
+			
+					
+			iconType =
+			{
+				name = "reform_resistance_icon"
+				spriteType = "GFX_icon_catholic_religious_resistance"
+				position = { x = 198 y = -9999 }
+				scale = 0.75
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "reform_resistance_value"
+				position = { x = 245 y = -9999 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "3,1"
+				maxWidth = 55
+				maxHeight = 25
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
 			
 			
 			iconType =
@@ -1909,11 +1932,19 @@ guiTypes = {
 		
 		
 		###Defender of the Faith
-		guiButtonType = 
+
+        iconType = {
+			name ="defender_of_the_faith_tier"
+			spriteType = "GFX_defender_of_the_faith_tier"
+			position = { x=355 y=260 }
+			Orientation = "UPPER_LEFT"
+        }
+
+        guiButtonType = 
 		{
 			name ="become_Defender_of_the_Faith"
 			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
-			position = { x = 99393 y = -9999 }
+			position = { x = 99393 y = 260 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -1922,9 +1953,22 @@ guiTypes = {
 		
 		guiButtonType = 
 		{
+			name ="defender_of_the_faith_emperor_button"
+			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
+			position = { x = 408 y = 265 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			scale = 0.6
+		}
+
+		guiButtonType = 
+		{
 			name ="defender_of_the_faith_button"
-			quadTextureSprite = "button_defender_of_faith"
-			position = { x = 414 y = -9999 }
+			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
+			position = { x = 398 y = 265 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -1935,7 +1979,7 @@ guiTypes = {
 		{
 			name ="defender_of_the_faith_shield"
 			quadTextureSprite = "GFX_shield_thin"
-			position = { x = 401 y = -9999 }
+			position = { x = 393 y = 260 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -1943,11 +1987,23 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 	#		scale = 0.75
 		}
-	
+		guiButtonType = 
+		{
+			name ="defender_of_the_faith_emperor_shield"
+			quadTextureSprite = "GFX_shield_medium"
+			position = { x = 403 y = 260 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+	#		scale = 0.75
+		}
+
 # Needs txt linking	
 		instantTextBoxType = {
 				name = "defender_title"
-				position = { x = 360 y = -9999 }
+				position = { x = 360 y = 235 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}	

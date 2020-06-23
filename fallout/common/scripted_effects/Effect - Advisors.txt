@@ -1,0 +1,1365 @@
+#All are Country Scope unless otherwise stated.
+
+#Sets flags to use when generating advisors, must be used in immediate = { } and be followed by erase_advisor_flags_effect in after = {}
+check_if_non_state_advisor_effect = {
+	#Needs these arguments:
+	#chance_of_primary = State religion
+	#chance_of_secondary = 
+	#chance_of_tertiary = Remaining Heathen Religions
+	#Note: These are not actual chances, they are just weights, the script then uses them differently depending on what region you are in. There is a higher or lower chance of variety depending on where minorities where big historically.
+	
+	hidden_effect = {
+        set_country_flag = state_religion_advisor
+	}
+}
+
+erase_advisor_flags_effect = { #Goes into the after = {} effect after check_if_non_state_advisor_effect
+	trigger_switch = {
+		on_trigger = has_country_flag
+		state_religion_advisor = { clr_country_flag = state_religion_advisor }
+	}
+}
+
+internal_advisor_generation_effect = { #Only used within generate_advisor_of_type_and_semi_random_religion_effect
+#Requires check_if_non_state_advisor_effect in immediate as that gives the arguments to generate_advisor_of_type_and_semi_random_religion_effect that then passes it on to this.
+#$advisor_type$ = Advisor type if state religion.
+#$advisor_type_if_not_state$ = Advisor type if non-state religion.
+#$skill$ = Skill Level
+#$discount$ = yes/no for discount
+	trigger_switch = {
+		on_trigger = has_country_flag #Flags set by check_if_non_state_advisor_effect
+		state_religion_advisor = {
+			define_advisor = {
+				type = $advisor_type$
+				skill = $skill$
+				discount = $discount$
+			}
+		}
+	}
+}
+
+generate_advisor_of_type_and_semi_random_religion_effect = {
+#Actual work is done by internal_advisor_generation_effect above but it goes through this first.
+#Requires check_if_non_state_advisor_effect in immediate.
+#$advisor_type$ = Advisor type if state religion.
+#$advisor_type_if_not_state$ = Advisor type if non-state religion.
+#$scaled_skill$ = yes/no
+#$skill$ = Skill Level
+#$discount$ = yes/no for discount
+	set_country_flag = $scaled_skill$_scaled_skill_flag #Must be cleared in this effect, or we won't find it again.
+	
+	if = { #If scaled skill is yes we continue after checking what level is apropriate
+		limit = { has_country_flag = yes_scaled_skill_flag }
+		if = {
+			limit = {
+				NOT = { monthly_income = 15 }
+			}
+			internal_advisor_generation_effect = {
+				advisor_type = $advisor_type$
+				advisor_type_if_not_state = $advisor_type_if_not_state$
+				skill = 1
+				discount = $discount$
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { monthly_income = 25 }
+			}
+			internal_advisor_generation_effect = {
+				advisor_type = $advisor_type$
+				advisor_type_if_not_state = $advisor_type_if_not_state$
+				skill = 2
+				discount = $discount$
+			}
+		}
+		else = {
+			internal_advisor_generation_effect = {
+				advisor_type = $advisor_type$
+				advisor_type_if_not_state = $advisor_type_if_not_state$
+				skill = 3
+				discount = $discount$
+			}
+		}
+	}
+	else = { #If we didn't set scaled skill to yes then we just take the skill you specified.
+		internal_advisor_generation_effect = {
+			advisor_type = $advisor_type$
+			advisor_type_if_not_state = $advisor_type_if_not_state$
+			skill = $skill$
+			discount = $discount$
+		}
+	}
+	
+	clr_country_flag = $scaled_skill$_scaled_skill_flag #Important, unless cleared like this you will be unable to find it again.
+}
+
+#Use this one if you just want a scaled advisor
+generate_scaled_advisor_of_type_and_religion_effect = {
+	#$type$ = Advisor type
+	#$religion$ = Advisor religion
+	#$discount$ = yes/no for discount
+		
+	if = {
+		limit = {
+			NOT = { monthly_income = 15 }
+		}
+		define_advisor = {
+			type = $type$
+			religion = $religion$
+			skill = 1
+			discount = $discount$
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { monthly_income = 25 }
+		}
+		define_advisor = {
+			type = $type$
+			religion = $religion$
+			skill = 2
+			discount = $discount$
+		}
+	}
+	else = {
+		define_advisor = {
+			type = $type$
+			religion = $religion$
+			skill = 3
+			discount = $discount$
+		}
+	}
+}
+
+generate_traitor_advisor_effect = {
+	if = {
+		limit = {
+			from = {
+				has_country_flag = advisor_events_adm
+			}
+		}
+		random_list = {
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_administrator
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_treasurer
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_researcher
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_inquisitor
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_orator
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_bureaucrat
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_architect
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_artist
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_farmer
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_evangelist
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_theologian
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_mayor
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_chemist
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_physicist
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_biologist
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			from = {
+				has_country_flag = advisor_events_dip
+			}
+		}
+		random_list = {
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_spymaster
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_trader
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_diplomat
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_proclaimer
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_naval_officer
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_cartographer
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_interpreter
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_settler
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_navigator
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_mariner
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_governor
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_broker
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_trafficker
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_marshal
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_envoy
+				}
+			}
+		}
+	}
+	else = {
+		random_list = {
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_army_officer
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_recruitmaster
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_disciplinarian
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_commandant
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_logistician
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_mechanic
+				}
+			}
+			1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_comms_officer
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_crewman
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_mechanical_engineer
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_surveyor
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_fabricator
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_armourer
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_corps_officer
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_platoon_officer
+				}
+			}
+            1 = {
+				define_advisor = {
+					name = advisor_traitor
+					skill = $skill_level$
+					culture = ROOT
+					type = fm_slaver
+				}
+			}
+		}
+	}
+}
+
+generate_exile_advisor_effect = {
+	if = {
+		limit = {
+			NOT = { monthly_income = 15 }
+		}
+		define_advisor = {
+			type = $advisor_type$
+			name = fleeing_advisor
+			skill = 1
+			culture = event_target:exile_country
+			religion = event_target:exile_country
+			discount = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { monthly_income = 25 }
+		}
+		define_advisor = {
+			type = $advisor_type$
+			name = fleeing_advisor
+			skill = 2
+			culture = event_target:exile_country
+			religion = event_target:exile_country
+			discount = yes
+		}
+	}
+	else = {
+		define_advisor = {
+			type = $advisor_type$
+			name = fleeing_advisor
+			skill = 3
+			culture = event_target:exile_country
+			religion = event_target:exile_country
+			discount = yes
+		}
+	}
+}
+
+#------------------------------------------
+# Advisor Removal
+#------------------------------------------
+#Specify ADM/DIP/MIL = yes
+kill_advisor_by_category_effect = {
+	[[ADM]
+		trigger_switch = {
+			on_trigger = advisor
+			fm_administrator = { kill_advisor = fm_administrator }
+			fm_treasurer = { kill_advisor = fm_treasurer }
+			fm_researcher = { kill_advisor = fm_researcher }
+			fm_inquisitor = { kill_advisor = fm_inquisitor }
+			fm_orator = { kill_advisor = fm_orator }
+			fm_bureaucrat = { kill_advisor = fm_bureaucrat }
+			fm_architect = { kill_advisor = fm_architect }
+            fm_artist = { kill_advisor = fm_artist }
+            fm_farmer = { kill_advisor = fm_farmer }
+            fm_evangelist = { kill_advisor = fm_evangelist }
+            fm_theologian = { kill_advisor = fm_theologian }
+            fm_mayor = { kill_advisor = fm_mayor }
+            fm_chemist = { kill_advisor = fm_chemist }
+            fm_physicist = { kill_advisor = fm_physicist }
+            fm_biologist = { kill_advisor = fm_biologist }
+            
+		}
+	]
+	[[DIP]
+		trigger_switch = {
+			on_trigger = advisor
+			fm_spymaster = { kill_advisor = fm_spymaster }
+			fm_trader = { kill_advisor = fm_trader }
+			fm_diplomat = { kill_advisor = fm_diplomat }
+			fm_proclaimer = { kill_advisor = fm_proclaimer }
+			fm_naval_officer = { kill_advisor = fm_naval_officer }
+			fm_cartographer = { kill_advisor = fm_cartographer }
+			fm_interpreter = { kill_advisor = fm_interpreter }
+            fm_settler = { kill_advisor = fm_settler }
+            fm_navigator = { kill_advisor = fm_navigator }
+            fm_mariner = { kill_advisor = fm_mariner }
+            fm_governor = { kill_advisor = fm_governor }
+            fm_broker = { kill_advisor = fm_broker }
+            fm_trafficker = { kill_advisor = fm_trafficker }
+            fm_marshal = { kill_advisor = fm_marshal }
+            fm_envoy = { kill_advisor = fm_envoy }
+		}
+	]
+	[[MIL]
+		trigger_switch = {
+			on_trigger = advisor
+			fm_army_officer = { kill_advisor = fm_army_officer }
+			fm_recruitmaster = { kill_advisor = fm_recruitmaster }
+			fm_disciplinarian = { kill_advisor = fm_disciplinarian }
+			fm_commandant = { kill_advisor = fm_commandant }
+			fm_logistician = { kill_advisor = fm_logistician }
+			fm_mechanic = { kill_advisor = fm_mechanic }
+			fm_comms_officer = { kill_advisor = fm_comms_officer }
+            fm_crewman = { kill_advisor = fm_crewman }
+            fm_mechanical_engineer = { kill_advisor = fm_mechanical_engineer }
+            fm_surveyor = { kill_advisor = fm_surveyor }
+            fm_fabricator = { kill_advisor = fm_fabricator }
+            fm_armourer = { kill_advisor = fm_armourer }
+            fm_corps_officer = { kill_advisor = fm_corps_officer }
+            fm_platoon_officer = { kill_advisor = fm_platoon_officer }
+            fm_slaver = { kill_advisor = fm_slaver }
+            
+		}
+	]
+}
+
+remove_advisor_adm_effect = {
+	if = {
+		limit = {
+			advisor = fm_administrator
+		}
+		remove_advisor = fm_administrator
+	}
+	if = {
+		limit = {
+			advisor = fm_treasurer
+		}
+		remove_advisor = fm_treasurer
+	}
+	if = {
+		limit = {
+			advisor = fm_researcher
+		}
+		remove_advisor = fm_researcher
+	}
+	if = {
+		limit = {
+			advisor = fm_inquisitor
+		}
+		remove_advisor = fm_inquisitor
+	}
+	if = { 
+		limit = {
+			advisor = fm_orator
+		}
+		remove_advisor = fm_orator
+	}
+	if = {
+		limit = {
+			advisor = fm_bureaucrat
+		}
+		remove_advisor = fm_bureaucrat
+	}
+	if = {
+		limit = { 
+			advisor = fm_architect
+		}
+		remove_advisor = fm_architect
+	}
+    if = {
+		limit = { 
+			advisor = fm_artist
+		}
+		remove_advisor = fm_artist
+	}
+    if = {
+		limit = { 
+			advisor = fm_farmer
+		}
+		remove_advisor = fm_farmer
+	}
+    if = {
+		limit = { 
+			advisor = fm_evangelist
+		}
+		remove_advisor = fm_evangelist
+	}
+    if = {
+		limit = { 
+			advisor = fm_theologian
+		}
+		remove_advisor = fm_theologian
+	}
+    if = {
+		limit = { 
+			advisor = fm_mayor
+		}
+		remove_advisor = fm_mayor
+	}
+    if = {
+		limit = { 
+			advisor = fm_chemist
+		}
+		remove_advisor = fm_chemist
+	}
+    if = {
+		limit = { 
+			advisor = fm_physicist
+		}
+		remove_advisor = fm_physicist
+	}
+    if = {
+		limit = { 
+			advisor = fm_biologist
+		}
+		remove_advisor = fm_biologist
+	}
+}
+
+remove_advisor_dip_effect = {
+	if = {
+		limit = {
+			advisor = fm_spymaster
+		}
+		remove_advisor = fm_spymaster
+	}
+	if = {
+		limit = {
+			advisor = fm_trader
+		}
+		remove_advisor = fm_trader
+	}
+	if = {
+		limit = {
+			advisor = fm_diplomat
+		}
+		remove_advisor = fm_diplomat
+	}
+	if = {
+		limit = {
+			advisor = fm_proclaimer
+		}
+		remove_advisor = fm_proclaimer
+	}
+	if = { 
+		limit = {
+			advisor = fm_naval_officer
+		}
+		remove_advisor = fm_naval_officer
+	}
+	if = {
+		limit = {
+			advisor = fm_cartographer
+		}
+		remove_advisor = fm_cartographer
+	}
+	if = {
+		limit = { 
+			advisor = fm_interpreter
+		}
+		remove_advisor = fm_interpreter
+	}
+    if = {
+		limit = { 
+			advisor = fm_settler
+		}
+		remove_advisor = fm_settler
+	}
+    if = {
+		limit = { 
+			advisor = fm_navigator
+		}
+		remove_advisor = fm_navigator
+	}
+    if = {
+		limit = { 
+			advisor = fm_mariner
+		}
+		remove_advisor = fm_mariner
+	}
+    if = {
+		limit = { 
+			advisor = fm_governor
+		}
+		remove_advisor = fm_governor
+	}
+    if = {
+		limit = { 
+			advisor = fm_broker
+		}
+		remove_advisor = fm_broker
+	}
+    if = {
+		limit = { 
+			advisor = fm_trafficker
+		}
+		remove_advisor = fm_trafficker
+	}
+    if = {
+		limit = { 
+			advisor = fm_marshal
+		}
+		remove_advisor = fm_marshal
+	}
+    if = {
+		limit = { 
+			advisor = fm_envoy
+		}
+		remove_advisor = fm_envoy
+	}
+}
+
+remove_advisor_mil_effect = {
+	if = {
+		limit = {
+			advisor = fm_army_officer
+		}
+		remove_advisor = fm_army_officer
+	}
+	if = {
+		limit = {
+			advisor = fm_recruitmaster
+		}
+		remove_advisor = fm_recruitmaster
+	}
+	if = {
+		limit = {
+			advisor = fm_disciplinarian
+		}
+		remove_advisor = fm_disciplinarian
+	}
+	if = {
+		limit = {
+			advisor = fm_commandant
+		}
+		remove_advisor = fm_commandant
+	}
+	if = { 
+		limit = {
+			advisor = fm_logistician
+		}
+		remove_advisor = fm_logistician
+	}
+	if = {
+		limit = {
+			advisor = fm_mechanic
+		}
+		remove_advisor = fm_mechanic
+	}
+	if = {
+		limit = { 
+			advisor = fm_comms_officer
+		}
+		remove_advisor = fm_comms_officer
+	}
+    if = {
+		limit = { 
+			advisor = fm_crewman
+		}
+		remove_advisor = fm_crewman
+	}
+    if = {
+		limit = { 
+			advisor = fm_mechanical_engineer
+		}
+		remove_advisor = fm_mechanical_engineer
+	}
+    if = {
+		limit = { 
+			advisor = fm_surveyor
+		}
+		remove_advisor = fm_surveyor
+	}
+    if = {
+		limit = { 
+			advisor = fm_fabricator
+		}
+		remove_advisor = fm_fabricator
+	}
+    if = {
+		limit = { 
+			advisor = fm_armourer
+		}
+		remove_advisor = fm_armourer
+	}
+    if = {
+		limit = { 
+			advisor = fm_corps_officer
+		}
+		remove_advisor = fm_corps_officer
+	}
+    if = {
+		limit = { 
+			advisor = fm_platoon_officer
+		}
+		remove_advisor = fm_platoon_officer
+	}
+    if = {
+		limit = { 
+			advisor = fm_slaver
+		}
+		remove_advisor = fm_slaver
+	}
+}
+
+#------------------------------------------
+# Administrative Advisors
+#------------------------------------------
+pick_type_of_administrative_advisor = {
+	random_list = {
+		1 = { set_country_flag = generate_fm_administrator }
+		1 = { set_country_flag = generate_fm_treasurer }
+		1 = { set_country_flag = generate_fm_researcher }
+		1 = { set_country_flag = generate_fm_inquisitor }
+		1 = { set_country_flag = generate_fm_orator }
+		1 = { set_country_flag = generate_fm_bureaucrat }
+		1 = { set_country_flag = generate_fm_architect }
+        1 = { set_country_flag = generate_fm_artist }
+        1 = { set_country_flag = generate_fm_farmer }
+        1 = { set_country_flag = generate_fm_evangelist }
+        1 = { set_country_flag = generate_fm_theologian }
+        1 = { set_country_flag = generate_fm_mayor }
+        1 = { set_country_flag = generate_fm_chemist }
+        1 = { set_country_flag = generate_fm_physicist }
+        1 = { set_country_flag = generate_fm_biologist }
+	}
+}
+
+clear_random_administrative_advisor_generation_flags = {
+	clr_country_flag = generate_fm_spymaster
+	clr_country_flag = generate_fm_treasurer
+	clr_country_flag = generate_fm_researcher
+	clr_country_flag = generate_fm_inquisitor
+	clr_country_flag = generate_fm_orator
+	clr_country_flag = generate_fm_bureaucrat
+	clr_country_flag = generate_fm_architect
+    clr_country_flag = generate_fm_artist
+    clr_country_flag = generate_fm_farmer
+    clr_country_flag = generate_fm_evangelist
+    clr_country_flag = generate_fm_theologian
+    clr_country_flag = generate_fm_mayor
+    clr_country_flag = generate_fm_chemist
+    clr_country_flag = generate_fm_physicist
+    clr_country_flag = generate_fm_biologist
+}
+
+generate_scaled_administrative_advisor_of_religion_effect = {
+	trigger_switch = {
+		on_trigger = has_country_flag
+		generate_fm_administrator = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_administrator
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_treasurer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_treasurer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_researcher = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_researcher
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_inquisitor = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_inquisitor
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_orator = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_orator
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_bureaucrat = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_bureaucrat
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_architect = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_architect
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_artist = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_artist
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_farmer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_farmer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_evangelist = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_evangelist
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_theologian = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_theologian
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_mayor = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_mayor
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_chemist = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_chemist
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_physicist = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_physicist
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_biologist = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_biologist
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+	}
+}
+
+#------------------------------------------
+# Diplomatic Advisors
+#------------------------------------------
+pick_type_of_diplomatic_advisor = {
+	random_list = {
+		1 = { set_country_flag = generate_fm_spymaster }
+		1 = { set_country_flag = generate_fm_trader }
+		1 = { set_country_flag = generate_fm_diplomat }
+		1 = { set_country_flag = generate_fm_proclaimer }
+		1 = { set_country_flag = generate_fm_naval_officer }
+		1 = { set_country_flag = generate_fm_cartographer }
+		1 = { set_country_flag = generate_fm_interpreter }
+        1 = { set_country_flag = generate_fm_settler }
+        1 = { set_country_flag = generate_fm_navigator }
+        1 = { set_country_flag = generate_fm_mariner }
+        1 = { set_country_flag = generate_fm_governor }
+        1 = { set_country_flag = generate_fm_broker }
+        1 = { set_country_flag = generate_fm_trafficker }
+        1 = { set_country_flag = generate_fm_marshal }
+        1 = { set_country_flag = generate_fm_envoy }
+	}
+}
+
+clear_random_diplomatic_advisor_generation_flags = {
+	clr_country_flag = generate_fm_spymaster
+	clr_country_flag = generate_fm_trader
+	clr_country_flag = generate_fm_diplomat
+	clr_country_flag = generate_fm_proclaimer
+	clr_country_flag = generate_fm_naval_officer
+	clr_country_flag = generate_fm_cartographer
+	clr_country_flag = generate_fm_interpreter
+    clr_country_flag = generate_fm_settler
+    clr_country_flag = generate_fm_navigator
+    clr_country_flag = generate_fm_mariner
+    clr_country_flag = generate_fm_governor
+    clr_country_flag = generate_fm_broker
+    clr_country_flag = generate_fm_trafficker
+    clr_country_flag = generate_fm_marshal
+    clr_country_flag = generate_fm_envoy
+}
+
+generate_scaled_diplomatic_advisor_of_religion_effect = {
+	trigger_switch = {
+		on_trigger = has_country_flag
+		generate_fm_spymaster = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_spymaster
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_trader = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_trader
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_diplomat = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_diplomat
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_proclaimer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_proclaimer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_naval_officer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_naval_officer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_cartographer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_cartographer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_interpreter = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_interpreter
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_settler = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_settler
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_navigator = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_navigator
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_mariner = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_mariner
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_governor = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_governor
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_broker = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_broker
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_trafficker = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_trafficker
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_marshal = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_marshal
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_envoy = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_envoy
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+	}
+}
+
+#------------------------------------------
+# Military Advisors
+#------------------------------------------
+pick_type_of_military_advisor = {
+	random_list = {
+		1 = { set_country_flag = generate_fm_army_officer }
+		1 = { set_country_flag = generate_fm_recruitmaster }
+		1 = { set_country_flag = generate_fm_disciplinarian }
+		1 = { set_country_flag = generate_fm_commandant }
+		1 = { set_country_flag = generate_fm_logistician }
+		1 = { set_country_flag = generate_fm_mechanic }
+		1 = { set_country_flag = generate_fm_comms_officer }
+        1 = { set_country_flag = generate_fm_crewman }
+        1 = { set_country_flag = generate_fm_mechanical_engineer }
+        1 = { set_country_flag = generate_fm_surveyor }
+        1 = { set_country_flag = generate_fm_fabricator }
+        1 = { set_country_flag = generate_fm_armourer }
+        1 = { set_country_flag = generate_fm_corps_officer }
+        1 = { set_country_flag = generate_fm_platoon_officer }
+        1 = { set_country_flag = generate_fm_slaver }
+        
+	}
+}
+
+clear_random_military_advisor_generation_flags = {
+	clr_country_flag = generate_fm_army_officer
+	clr_country_flag = generate_fm_recruitmaster
+	clr_country_flag = generate_fm_disciplinarian
+	clr_country_flag = generate_fm_commandant
+	clr_country_flag = generate_fm_logistician
+	clr_country_flag = generate_fm_mechanic
+	clr_country_flag = generate_fm_comms_officer
+    clr_country_flag = generate_fm_crewman
+    clr_country_flag = generate_fm_mechanical_engineer
+    clr_country_flag = generate_fm_surveyor
+    clr_country_flag = generate_fm_fabricator
+    clr_country_flag = generate_fm_armourer
+    clr_country_flag = generate_fm_corps_officer
+    clr_country_flag = generate_fm_platoon_officer
+    clr_country_flag = generate_fm_slaver
+    
+}
+
+#Needs you to have executed pick_type_of_military_advisor
+generate_scaled_military_advisor_of_religion_effect = {
+	trigger_switch = {
+		on_trigger = has_country_flag
+		generate_fm_army_officer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_army_officer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_recruitmaster = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_recruitmaster
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_disciplinarian = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_disciplinarian
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_commandant = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_commandant
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_logistician = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_logistician
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_mechanic = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_mechanic
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+		generate_fm_comms_officer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_comms_officer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_crewman = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_crewman
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_mechanical_engineer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_mechanical_engineer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_surveyor = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_surveyor
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_fabricator = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_fabricator
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_armourer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_armourer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_corps_officer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_corps_officer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_platoon_officer = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_platoon_officer
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+        generate_fm_slaver = {
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = fm_slaver
+				religion = $religion$
+				discount = $discount$
+			}
+		}
+	}
+}
+
+

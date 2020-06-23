@@ -1,0 +1,145 @@
+defined_text = {
+	name = GetBureaucratsName
+    
+	random = no
+	
+	text = {
+		localisation_key = estate_elders
+		trigger = {
+            has_reform = brotherhood_reform
+		}
+	}
+    
+	text = {
+		localisation_key = estate_patricians
+		trigger = {
+            has_reform = legion_reform
+		}
+	}
+    
+    text = {
+		localisation_key = estate_bureaucrats
+		trigger = {
+			has_estate = estate_bureaucrats
+		}
+	}
+}
+
+defined_text = {
+	name = GetTradersName
+    
+	random = no
+	
+	text = {
+		localisation_key = estate_scribes
+		trigger = {
+            has_reform = brotherhood_reform
+		}
+	}
+    
+	text = {
+		localisation_key = estate_mercatores
+		trigger = {
+            has_reform = legion_reform
+		}
+	}
+    
+    text = {
+		localisation_key = estate_traders
+		trigger = {
+			has_estate = estate_traders
+		}
+	}
+}
+
+defined_text = {
+	name = GetOfficersName
+    
+	random = no
+	
+	text = {
+		localisation_key = estate_knights
+		trigger = {
+            has_reform = brotherhood_reform
+		}
+	}
+    
+	text = {
+		localisation_key = estate_legionarii
+		trigger = {
+            has_reform = legion_reform
+		}
+	}
+    
+    text = {
+		localisation_key = estate_officers
+		trigger = {
+			has_estate = estate_officers
+		}
+	}
+}
+
+defined_text = {
+	name = GetCitizensName
+    
+	random = no
+	
+	text = {
+		localisation_key = estate_initiates
+		trigger = {
+            has_reform = brotherhood_reform
+		}
+	}
+    
+	text = {
+		localisation_key = estate_plebeians
+		trigger = {
+            has_reform = legion_reform
+		}
+	}
+    
+    text = {
+		localisation_key = estate_citizens
+		trigger = {
+			has_estate = estate_citizens
+		}
+	}
+}
+
+defined_text = {
+	name = GetTribalsName
+    
+	random = no
+	
+	text = {
+		localisation_key = estate_raiders
+		trigger = {
+            OR = {
+                has_reform = wolf_pack_reform
+                has_reform = raider_reform
+            }
+		}
+	}
+    
+	text = {
+		localisation_key = estate_mutants
+		trigger = {
+            has_reform = super_mutant_reform
+		}
+	}
+    
+    text = {
+		localisation_key = estate_khans
+		trigger = {
+            has_reform = great_khan_reform
+		}
+	}
+    
+    text = {
+		localisation_key = estate_tribals
+		trigger = {
+			has_estate = estate_tribals
+		}
+	}
+}
+

@@ -78,6 +78,12 @@ newer_idea_adm_modifiers = {
 		level_cost_3 = 9
 		level_cost_4 = 18
 	}
+	custom_governing_capacity_modifier = {
+		governing_capacity_modifier = 0.1
+		level_cost_2 = 5
+		level_cost_3 = 15		
+		level_cost_4 = 30
+	}
 	custom_church_power_modifier = {
 		church_power_modifier = 0.1
 		level_cost_2 = 3
@@ -294,7 +300,7 @@ newer_idea_mil_modifiers = {
 		level_cost_4 = 18
 	}
 	custom_mercenary_cost = {
-		mercenary_cost = -0.05
+		mercenary_cost = -0.025
 		level_cost_2 = 3
 		level_cost_3 = 9
 		level_cost_4 = 18
@@ -320,10 +326,10 @@ newer_idea_dip_modifiers = {
 		}
 	}
 	custom_war_taxes_cost_modifier = {
-		war_taxes_cost_modifier = -0.1
-		level_cost_2 = 3
-		level_cost_3 = 9
-		level_cost_4 = 18
+		war_taxes_cost_modifier = -0.5
+		max_level = 2
+		level_cost_1 = 10
+		level_cost_2 = 20
 	}
 	custom_monarch_diplomatic_power = {
 		monarch_diplomatic_power = 1

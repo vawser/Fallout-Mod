@@ -1,0 +1,581 @@
+estate_tribals_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			num_of_territories = 5
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 10
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 15
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_tribals
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_tribals_land_rights }
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_territories = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_tribals_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_tribals_land_rights }
+		}
+	}
+}
+
+estate_tribals_share_of_the_spoils = {
+	icon = privilege_supply_arms
+	max_absolutism = -5
+	loyalty = 0.05
+	penalties = {
+		available_province_loot = -0.1
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_tribals_chieftains_autonomy = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_tribals_guaranteed_leadgership_in_host = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -5
+	influence = 0.05
+	can_select = {
+		army_tradition = 30
+	}
+	on_granted = {
+		add_army_tradition = -15
+	}
+	penalties = {
+	}
+	benefits = {
+		general_cost = -0.25
+		army_tradition_decay = -0.005
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_tribals_tribal_host = {
+	icon = privilege_raise_host
+	max_absolutism = -5
+	loyalty = -0.05
+	influence = 0.1
+	benefits = {
+		global_manpower_modifier = 0.2
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_tribals_tribal_primacy = {
+	icon = privilege_military_power
+	land_share = 10
+	max_absolutism = -5
+	loyalty = -0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		country_military_power = 1
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_tribals
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_tribals_tribal_primacy }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_tribals_tribal_primacy }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { mil = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			mil = 5
+		}
+	}
+}
+
+estate_tribals_monopoly_of_armaments = {
+	icon = privilege_make_generous_donation
+    
+	max_absolutism = -5
+	loyalty = 0.1
+    
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			OR = {
+                trade_goods = weaponry
+                trade_goods = munitions
+            }
+		}
+	}
+	can_select = {
+        
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+                    trade_goods = weaponry
+                    trade_goods = munitions
+                }
+			}
+			custom_tooltip = MONOPOLY_INCOME_ARMAMENTS_DESC
+		}
+		custom_tooltip = NO_INCOME_ARMAMENTS_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+                        trade_goods = weaponry
+                        trade_goods = munitions
+                    }
+				}
+				add_province_modifier = {
+					name = estate_tribals_monopoly_of_armaments_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = RESTORE_INCOME_ARMAMENTS_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_armaments_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_armaments_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = RESTORE_INCOME_ARMAMENTS_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_armaments_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_armaments_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_tribals_monopoly_of_armaments
+	}
+	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
+		factor = 0
+	}
+}
+
+estate_tribals_monopoly_of_edible_food = {
+	icon = privilege_make_generous_donation
+    
+	max_absolutism = -5
+	loyalty = 0.1
+    
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			OR = {
+                trade_goods = food
+                trade_goods = meat
+                trade_goods = fungus
+                trade_goods = fish
+                trade_goods = punga
+                trade_goods = prewar_food
+                trade_goods = strange_meat
+            }
+		}
+	}
+	can_select = {
+        
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+                    trade_goods = food
+                    trade_goods = meat
+                    trade_goods = fungus
+                    trade_goods = fish
+                    trade_goods = punga
+                    trade_goods = prewar_food
+                    trade_goods = strange_meat
+                }
+			}
+			custom_tooltip = MONOPOLY_INCOME_EDIBLE_FOOD_DESC
+		}
+		custom_tooltip = NO_INCOME_EDIBLE_FOOD_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+                        trade_goods = food
+                        trade_goods = meat
+                        trade_goods = fungus
+                        trade_goods = fish
+                        trade_goods = punga
+                        trade_goods = prewar_food
+                        trade_goods = strange_meat
+                    }
+				}
+				add_province_modifier = {
+					name = estate_tribals_monopoly_of_edible_food_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = RESTORE_INCOME_EDIBLE_FOOD_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_edible_food_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_edible_food_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = RESTORE_INCOME_EDIBLE_FOOD_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_edible_food_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_edible_food_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_tribals_monopoly_of_edible_food
+	}
+	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
+		factor = 0
+	}
+}
+
+estate_tribals_monopoly_of_edible_drink = {
+	icon = privilege_make_generous_donation
+    
+	max_absolutism = -5
+	loyalty = 0.1
+    
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			OR = {
+                trade_goods = brew
+                trade_goods = cola
+                trade_goods = clean_water
+            }
+		}
+	}
+	can_select = {
+        
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+                    trade_goods = brew
+                    trade_goods = cola
+                    trade_goods = clean_water
+                }
+			}
+			custom_tooltip = MONOPOLY_INCOME_EDIBLE_DRINK_DESC
+		}
+		custom_tooltip = NO_INCOME_EDIBLE_DRINK_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+                        trade_goods = brew
+                        trade_goods = cola
+                        trade_goods = clean_water
+                    }
+				}
+				add_province_modifier = {
+					name = estate_tribals_monopoly_of_edible_drink_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = RESTORE_INCOME_EDIBLE_DRINK_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_edible_drink_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_edible_drink_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = RESTORE_INCOME_EDIBLE_DRINK_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_edible_drink_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_edible_drink_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_tribals_monopoly_of_edible_drink
+	}
+	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
+		factor = 0
+	}
+}
+
+estate_tribals_monopoly_of_drugs = {
+	icon = privilege_make_generous_donation
+    
+	max_absolutism = -5
+	loyalty = 0.1
+    
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = drugs
+		}
+	}
+	can_select = {
+        
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = drugs
+			}
+			custom_tooltip = MONOPOLY_INCOME_DRUGS_DESC
+		}
+		custom_tooltip = NO_INCOME_DRUGS_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = drugs
+				}
+				add_province_modifier = {
+					name = estate_tribals_monopoly_of_drugs_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = RESTORE_INCOME_DRUGS_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_drugs_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_drugs_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = RESTORE_INCOME_SLAVES_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_drugs_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_drugs_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_tribals_monopoly_of_drugs
+	}
+	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
+		factor = 0
+	}
+}
+
+estate_tribals_monopoly_of_slaves = {
+	icon = privilege_make_generous_donation
+    
+	max_absolutism = -5
+	loyalty = 0.1
+    
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = slaves
+		}
+	}
+	can_select = {
+        
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = slaves
+			}
+			custom_tooltip = MONOPOLY_INCOME_SLAVES_DESC
+		}
+		custom_tooltip = NO_INCOME_SLAVES_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = slaves
+				}
+				add_province_modifier = {
+					name = estate_tribals_monopoly_of_slaves_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = RESTORE_INCOME_SLAVES_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_slaves_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_slaves_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = RESTORE_INCOME_SLAVES_TT
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_tribals_monopoly_of_slaves_mod
+				}
+				remove_province_modifier = estate_tribals_monopoly_of_slaves_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_tribals_monopoly_of_slaves
+	}
+	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
+		factor = 0
+	}
+}

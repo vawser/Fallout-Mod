@@ -1279,7 +1279,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "gov_rank_label"
-				position = { x = 11 y = 235 }
+				position = { x = 11 y = 203 }
 				font = "vic_18"
 				text = "GOV_RANK"
 				maxWidth = 150
@@ -1288,10 +1288,9 @@ guiTypes = {
 				fixedsize = yes
 			}		
 
-
 			instantTextBoxType = {
 				name = "gov_rank"
-				position = { x = 193 y = 230 }
+				position = { x = 193 y = 200 }
 				font = "vic_22"
 				text = "0"
 				maxWidth = 180
@@ -1302,13 +1301,13 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "gov_rank_down"
-				position = { x = 165 y = 230 }
+				position = { x = 165 y = 200 }
 				quadTextureSprite ="GFX_arrow_left_big"	
 			}
 
 			guiButtonType = {
 				name = "gov_rank_up"
-				position = { x = 380 y = 230  }
+				position = { x = 380 y = 200  }
 				quadTextureSprite ="GFX_arrow_right_big"	
 			}
 
@@ -1367,30 +1366,6 @@ guiTypes = {
 			
 			###
 			instantTextBoxType = {
-				name = "gfx_culture_label"
-				position = { x = 35 y = 173 }
-				font = "vic_18"
-				text = "ND_GRAPHICAL_CULTURE"	
-				maxWidth = 130
-				maxHeight = 20	
-				format = left
-				fixedsize = yes
-			}
-
-			guiButtonType = {
-				name = "gfx_culture_listbox_button"
-				position = { x = 155 y = 165 }
-				buttonFont = "vic_18"
-				quadTextureSprite ="GFX_button_straight_255_32"	
-			}
-			iconType = {
-				name ="gfx_culture_listbox_button_glow"
-				spriteType = "GFX_button_straight_255_32_glow"
-				position = { x= 153 y = 163 }
-			}
-			
-			###
-			instantTextBoxType = {
 				name = "tech_group_label"
 				position = { x = 35 y = 143 }
 				font = "vic_18"
@@ -1421,7 +1396,7 @@ guiTypes = {
 			###
 			instantTextBoxType = {
 				name = "government_label"
-				position = { x = 35 y = 203 }
+				position = { x = 35 y = 173 }
 				font = "vic_18"
 				text = "CATEGORY_GOVERNMENT"
 				maxWidth = 130
@@ -1432,7 +1407,7 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "government_listbox_button"
-				position = { x = 155 y = 195 }
+				position = { x = 155 y = 166 }
 				buttonFont = "vic_18"
 				quadTextureSprite ="GFX_button_straight_255_32"	
 			}
@@ -1445,7 +1420,133 @@ guiTypes = {
 				name ="incompatible_gov_warning_icon"
 				spriteType = "GFX_incompatible_warning_icon"
 				position = { x= 390 y = 199 }
-			}			
+			}
+
+			guiButtonType = {
+				name = "gfx_spritepack_listbox_button"
+				position = { x = 258 y = 315 }
+				buttonFont = "vic_18"
+				quadTextureSprite ="GFX_button_straight_152_32"	
+				text = "ND_SPRITE_PACK"
+			}
+
+			iconType = {
+				name ="gfx_spritepack_listbox_button_glow"
+				spriteType = "GFX_button_straight_152_32_glow"
+				position = { x= 255 y = 313 }
+			}
+
+			instantTextBoxType = {
+				name = "sprite_type_label"
+				position = { x = 260 y = 385 }
+				font = "vic_22"
+				text = "SPRTE_TYPE_LABEL"
+				maxWidth = 120
+				maxHeight = 20	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "sprite_type"
+				position = { x = 287 y = 410 }
+				font = "vic_22"
+				text = "0"
+				maxWidth = 100
+				maxHeight = 20	
+				format = centre
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "sprite_type_down"
+				position = { x = 260 y = 410 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "sprite_type_up"
+				position = { x = 390 y = 410  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			instantTextBoxType = {
+				name = "sprite_tier_label"
+				position = { x = 260 y = 455 }
+				font = "vic_22"
+				text = "SPRITE_TIER_LABEL"
+				maxWidth = 122
+				maxHeight = 20	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "sprite_tier"
+				position = { x = 287 y = 480 }
+				font = "vic_22"
+				text = "0"
+				maxWidth = 100
+				maxHeight = 20	
+				format = centre
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "sprite_tier_down"
+				position = { x = 260 y = 480 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "sprite_tier_up"
+				position = { x = 390 y = 480  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			iconType = {
+				name ="sprite_banner"
+				spriteType = "GFX_province_banner_foreign"
+				position = { x= 15 y = 250 }
+				scale = 0.75
+			}	
+
+			instantTextBoxType = {
+				name = "sprites_label"
+				position = { x = 148 y = 260 }
+				textureFile = ""
+				font = "vic_22"
+				text = "SPRITES_TITLE"	
+				maxWidth = 149
+				maxHeight = 24	
+				format = centre
+			}
+
+			windowType = {
+				name = "unit_viewer_window"
+				backGround=""
+				position = { x= 50 y=300 }	
+				size = { x = 170 y = 18 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType = {		
+					name ="3d_view_left_bg"
+					spriteType = "GFX_3d_unit_bg"
+					position = { x= -24 y = 10 }
+					scale = 1.0
+				}
+				
+				guiButtonType = {
+					name ="unit_viewer"
+					quadTextureSprite = "GFX_dummy_3d_combat_result_view"
+					position = { x= -18 y = 10 }
+					scale = 1.0
+				}
+			}
 			
 			### SELECT CULTURE ETC WINDOW
 			windowType = {
@@ -1949,154 +2050,6 @@ guiTypes = {
 			maxHeight = 32
 			format = left
 		}
-        
-        # Crash fix
-        iconType =
-		{
-			name ="icon_gov_desc_4"
-			spriteType = "GFX_idea_empty"
-			position = { x= 179 y = -9999 }
-			scale = 0.5
-			
-		}
-		
-		instantTextBoxType = {
-			name = "gov_desc_4"
-			position = { x = 205 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
-        
-        iconType =
-		{
-			name ="icon_gov_desc_5"
-			spriteType = "GFX_idea_empty"
-			position = { x= 179 y = -9999 }
-			scale = 0.5
-			
-		}
-		
-		instantTextBoxType = {
-			name = "gov_desc_5"
-			position = { x = 205 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
-        
-        iconType =
-		{
-			name ="icon_gov_desc_6"
-			spriteType = "GFX_idea_empty"
-			position = { x= 179 y = -9999 }
-			scale = 0.5
-			
-		}
-		
-		instantTextBoxType = {
-			name = "gov_desc_6"
-			position = { x = 205 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
-        
-        iconType =
-		{
-			name ="icon_gov_desc_7"
-			spriteType = "GFX_idea_empty"
-			position = { x= 179 y = -9999 }
-			scale = 0.5
-			
-		}
-		
-		instantTextBoxType = {
-			name = "gov_desc_7"
-			position = { x = 205 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
-        
-        iconType =
-		{
-			name ="icon_gov_desc_8"
-			spriteType = "GFX_idea_empty"
-			position = { x= 179 y = -9999 }
-			scale = 0.5
-			
-		}
-		
-		instantTextBoxType = {
-			name = "gov_desc_8"
-			position = { x = 205 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
-        
-        iconType =
-		{
-			name ="icon_gov_desc_9"
-			spriteType = "GFX_idea_empty"
-			position = { x= 179 y = -9999 }
-			scale = 0.5
-			
-		}
-		
-		instantTextBoxType = {
-			name = "gov_desc_9"
-			position = { x = 205 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
-        
-        iconType =
-		{
-			name ="icon_gov_desc_10"
-			spriteType = "GFX_idea_empty"
-			position = { x= 179 y = -9999 }
-			scale = 0.5
-			
-		}
-		
-		instantTextBoxType = {
-			name = "gov_desc_10"
-			position = { x = 205 y = -9999 }
-			textureFile = ""
-			font = "vic_18"
-			borderSize = {x = 4 y = 4}	
-			text = ""	
-			maxWidth = 64
-			maxHeight = 32
-			format = left
-		}
 
 		instantTextBoxType = {
 			name = "list_item_pts_label"
@@ -2220,6 +2173,30 @@ guiTypes = {
 
 		iconType = {
 			name = "invalid_personality_icon"
+			spriteType = "GFX_incompatible_warning_icon"
+			position = { x=200 y=1 }
+			allwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "dropdown_listitem_spritepack"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=268 y= 28 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+	
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_nation_designer_list_button"
+			buttonFont = "vic_18"
+		}
+
+		iconType = {
+			name = "picked_spritepack"
 			spriteType = "GFX_incompatible_warning_icon"
 			position = { x=200 y=1 }
 			allwaystransparent = yes

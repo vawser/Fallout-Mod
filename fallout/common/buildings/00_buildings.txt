@@ -1,0 +1,741 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new buildings, make sure they are uniquely named.
+
+# cost = x #==> cost in $ to build (subject to other modifiers)
+# time = x #==> number of months to build.
+# modifier = m # a modifier on the province that the building gives
+# trigger = t # an and trigger that needs to be fullfilled to build and keep the building
+# one_per_country = yes/no # if yes, only one of these can exist in a country
+# manufactory = { trade_good trade_good } # list of trade goods that get a production bonus
+# onmap = yes/no # show as a sprite on the map
+
+# FROM = owner
+# ROOT = province
+
+# AI will consider buildings it does not have the tech for at 20% of scripted AI weight (in case it wants to save slots)
+
+#--------------------------------------------------
+# Civic
+#--------------------------------------------------
+fbs_research_lab = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		institution_growth = 1
+	}
+
+	ai_will_do = {
+		factor = 1	
+        
+        modifier = {
+			factor = 210
+			is_state = yes
+		}
+        
+        modifier = {
+            factor = 500
+            NOT = { current_institution = 1 }
+        }
+        
+        modifier = {
+            factor = 0
+            is_territory = yes
+        }
+	}
+}
+
+fbs_bank = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+        local_state_maintenance_modifier = -0.25
+		local_development_cost = -0.25
+	}
+    
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 210
+			is_state = yes
+            development = 10
+		}
+        
+        modifier = {
+            factor = 0
+            is_territory = yes
+        }
+	}
+}
+
+fbs_office = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		local_tax_modifier = 1.0
+	}
+    
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_factory = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		local_production_efficiency = 1.0
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_marketplace = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		province_trade_power_modifier = 1.0
+	}
+	
+	ai_will_do = {
+		factor = 1.5
+	}
+}
+
+fbs_police_station = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		local_unrest = -5
+	}
+    
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 210
+            
+            unrest = 20
+		}
+	}
+}
+
+fbs_religious_centre = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		local_missionary_strength = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 210
+            FROM = { NOT = { religious_unity = 0.9 } }
+		}
+	}
+}
+
+#--------------------------------------------------
+# Military
+#--------------------------------------------------
+fbs_military_camp = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		local_manpower_modifier = 1.0
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_barracks = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		land_forcelimit = 2
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 105 # Little above build cost
+			FROM = { army_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_armory = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		local_regiment_cost = -0.5
+        regiment_recruit_speed = -0.5
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 205 # Little above build cost
+			FROM = { army_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_dock = {
+    cost = 100
+	time = 12
+	
+    build_trigger = { has_port = yes }
+    
+	modifier = {
+		local_sailors_modifier = 0.5
+        ship_recruit_speed = -0.5
+	}
+
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 105 # Little above build cost
+			FROM = { navy_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_shipyard = {
+	cost = 100
+	time = 12
+	
+    build_trigger = { has_port = yes }
+    
+	modifier = {
+		local_ship_repair = 0.5
+        local_ship_cost = -0.5
+	}
+    
+	ai_will_do = {
+		factor = 1
+        
+		modifier = {
+			factor = 105 # Little above build cost
+			FROM = { navy_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+fbs_arsenal = {
+	cost = 100
+    time = 12
+    
+    build_trigger = { has_port = yes }
+    
+	modifier = {
+		naval_forcelimit = 2
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+			factor = 105 # Little above build cost
+			FROM = { navy_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+
+
+fbs_highway = {
+	cost = 100
+    time = 12
+    
+	modifier = {
+		local_friendly_movement_speed = 1.0
+	}
+
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+            factor = 1000
+            owner = { treasury = 1000 }
+        }
+	}
+}
+
+fbs_outpost = {
+    cost = 100
+	time = 12
+	
+	modifier = {
+		supply_limit_modifier = 1.0
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#--------------------------------------------------
+# Manufactories
+#--------------------------------------------------
+manufactory = {
+	cost = 1000
+	time = 60
+	modifier = {
+		trade_goods_size = 1.0
+	}
+}
+
+fbs_labour_camp = {
+	manufactory = {
+		slaves
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_military_factory = {
+	manufactory = {
+		weaponry
+		munitions
+		tools
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_industrial_factory = {
+	manufactory = {
+		steel
+		oil
+		clean_water
+		irradiated_water
+		vaulttec_supplies
+		drugs
+		medical_supplies
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_commercial_factory = {
+	manufactory = {
+		food
+		prewar_books
+		strange_meat
+		gambling
+		meat
+		brew
+		fungus
+		fish
+		punga
+		cola
+		prewar_food
+		gecko_pelt
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_electronics_factory = {
+	manufactory = {
+		prewar_technology
+		munitions
+		radioactive_waste
+		power_armour
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+#--------------------------------------------------
+# Fortification
+#--------------------------------------------------
+fbs_fort_1 = {
+	cost = 250
+	time = 12
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_fort_2 = {
+	cost = 500
+	time = 12
+	make_obsolete = fbs_fort_1
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 2
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}
+}
+
+fbs_fort_3 = {
+	cost = 750
+	time = 12
+	make_obsolete = fbs_fort_2
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 3
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+fbs_fort_4 = {
+	cost = 1000
+	time = 12
+	make_obsolete = fbs_fort_3
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 4
+	}
+	
+	ai_will_do = {
+		factor = 1
+    }
+}
+
+fbs_fort_5 = {
+	cost = 1250
+	time = 12
+	make_obsolete = fbs_fort_4
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 5
+	}
+	
+	ai_will_do = {
+		factor = 1
+    }
+}
+
+fbs_fort_6 = {
+	cost = 1500
+	time = 12
+	make_obsolete = fbs_fort_5
+	
+    onmap = yes
+    influencing_fort = yes
+    
+	modifier = {
+		fort_level = 6
+	}
+	
+	ai_will_do = {
+		factor = 1
+    }
+}
+
+#--------------------------------------------------
+# Unique
+#--------------------------------------------------
+fbs_army_command = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        army_tradition = 1
+		free_leader_pool = 1
+	}
+	
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_navy_command = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        navy_tradition = 1
+		free_leader_pool = 1
+	}
+	
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_planning_command = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        land_attrition = -0.1
+	}
+
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_infantry_recruitment_centre = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        land_forcelimit_modifier = 0.25
+	}
+
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_sailor_recruitment_centre = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        naval_forcelimit_modifier = 0.25
+	}
+
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_propaganda_centre = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        ae_impact = -0.1
+	}
+	
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_centre_of_harmony = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+	modifier = {
+        yearly_absolutism = 1
+        max_absolutism = 20
+	}
+
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_casino = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+    build_trigger = {
+        FROM = {
+            has_gambling_allowed = yes
+        }
+    }
+    
+	modifier = {
+        global_tax_income = 120
+	}
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_slave_pit = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+    build_trigger = {
+        FROM = {
+            has_slavery_allowed = yes
+        }
+    }
+    
+	modifier = {
+        land_maintenance_modifier = -0.2
+	}
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_brothel = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+    build_trigger = {
+        FROM = {
+            has_prostitution_allowed = yes
+        }
+    }
+    
+	modifier = {
+        global_institution_spread = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_shooting_range = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+
+	modifier = {
+        fire_damage = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_chem_lab = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+    build_trigger = {
+        FROM = {
+            has_narcotics_allowed = yes
+        }
+    }
+    
+	modifier = {
+        shock_damage_received = -0.05
+        fire_damage_received = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_junkyard = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+	
+    build_trigger = {
+        FROM = {
+            has_scavenging_allowed = yes
+        }
+    }
+    
+	modifier = {
+        development_cost = -0.2
+	}
+	
+	ai_will_do = {
+		factor = 10000
+	}
+}
+
+fbs_science_centre = {
+	cost = 5000
+	time = 120
+	one_per_country = yes
+    
+	modifier = {
+        technology_cost = -0.05
+	}
+    
+	ai_will_do = {
+		factor = 10000
+	}
+}
+

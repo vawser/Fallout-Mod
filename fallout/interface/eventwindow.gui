@@ -65,6 +65,14 @@ guiTypes = {
 			maxHeight = 32
 			format = centre
 		}
+		guiButtonType = {
+			name = "event_goto_province"
+			position = { x = 0 y = 14 }
+			quadTextureSprite ="GFX_event_goto_province"
+			buttonFont = "Main_14_black"
+			shortcut = "f"
+			clicksound = click
+		}
 		
 		instantTextBoxType = {
 			name = "Description"
@@ -104,6 +112,16 @@ guiTypes = {
             position = { x = 70 y = 0 }
 			quadTextureSprite = "GFX_event_button_600"
 			buttonFont = "vic_18"
+		}
+		guiButtonType = {
+			name = "event_option_goto_button"
+			position = { x = -60 y = 0 }
+			quadTextureSprite ="GFX_event_option_goto_province"
+			buttonFont = "Main_14_black"
+			clicksound = click
+			tooltipText = "GOTO"
+
+			orientation = "UPPER_RIGHT"
 		}
 	}
 	

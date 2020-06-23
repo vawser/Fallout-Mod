@@ -8,13 +8,9 @@ nothingness_modifier = {
 	trigger = {
 		always = yes
 	}
-
-    may_return_manpower_on_disband = yes
-    may_refill_garrison = yes
-    may_build_supply_depot = yes
 }
 
-army_professionalism_modifier_1 = {
+supply_depot_modifier = {
 	army_professionalism = 0.2
 	
 	marker_sprite = GFX_pa_rank_1
@@ -24,10 +20,10 @@ army_professionalism_modifier_1 = {
 		always = yes
 	}
 
-    drill_gain_modifier = 0.2
+	may_build_supply_depot = yes
 }
 
-army_professionalism_modifier_2 = {
+refill_garrison_modifier = {
 	army_professionalism = 0.4
 	
 	marker_sprite = GFX_pa_rank_2
@@ -37,10 +33,10 @@ army_professionalism_modifier_2 = {
 		always = yes
 	}
 	
-    drill_gain_modifier = 0.2
+	may_refill_garrison = yes
 }
 
-army_professionalism_modifier_3 = {
+return_manpower_modifier = {
 	army_professionalism = 0.6
 	
 	marker_sprite = GFX_pa_rank_3
@@ -51,10 +47,10 @@ army_professionalism_modifier_3 = {
 		always = yes
 	}
 
-	drill_gain_modifier = 0.2
+	may_return_manpower_on_disband = yes
 }
 
-army_professionalism_modifier_4 = {
+general_cost_modifier = {
 	army_professionalism = 0.8
 	
 	marker_sprite = GFX_pa_rank_4
@@ -65,10 +61,10 @@ army_professionalism_modifier_4 = {
 		always = yes
 	}
 
-    drill_gain_modifier = 0.2
+	reserves_organisation = 0.5
 }
 
-army_professionalism_modifier_5 = {
+reserves_organisation_modifier = {
 	army_professionalism = 1.0
 	
 	marker_sprite = GFX_pa_rank_5
@@ -79,5 +75,6 @@ army_professionalism_modifier_5 = {
 		always = yes
 	}
 
-	drill_gain_modifier = 0.2
+	general_cost = -0.5
+	drill_gain_modifier = 1
 }

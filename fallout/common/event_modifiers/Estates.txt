@@ -1,167 +1,170 @@
-#-------------------------------------
-# Bureaucrats
-#-------------------------------------
-increased_taxation = {
-    global_tax_modifier = 0.2
+# --------- Privileges ---------
+estate_traders_exclusive_trade_rights_mod = {
+	min_local_autonomy = 20
+	local_development_cost = -0.15
 }
 
-#-------------------------------------
-# Merchants
-#-------------------------------------
-protected_caravans = {
-    caravan_power = 0.2
-}
-optimised_markets = {
-    trade_efficiency = 0.2
+estate_citizens_increased_taxation_mod = {
+	local_tax_modifier = 0.15
 }
 
-#-------------------------------------
-# Officers
-#-------------------------------------
-incentivised_enrollment = {
-    leader_cost = -0.5
+estate_citizens_guaranteed_autonomy_mod = {
+	local_religious_unity_contribution = -1
+	local_missionary_strength = -1
 }
 
-#-------------------------------------
-# Citizens
-#-------------------------------------
-accepted_minorities = {
-    years_of_nationalism = -10
+estate_citizens_manpower_mod = {
+	local_manpower_modifier = 0.3
 }
 
-#-------------------------------------
-# Scientists
-#-------------------------------------
-administrative_innovation = {
-    adm_tech_cost_modifier = -0.1
-}
-diplomatic_innovation = {
-    dip_tech_cost_modifier = -0.1
-}
-military_innovation = {
-    mil_tech_cost_modifier = -0.1
+# --------- Agendas ---------
+estate_prospering_production = {
+	trade_goods_size_modifier = 0.25
 }
 
-#-------------------------------------
-# Clergy
-#-------------------------------------
-enforced_conversion = {
-    global_missionary_strength = 0.03
-}
-supporting_missionaries = {
-    missionary_maintenance_cost = -0.3
+estate_agenda_conversion_zeal = {
+	local_missionary_maintenance_cost = -0.2
 }
 
-#-------------------------------------
-# Slavers
-#-------------------------------------
-subjugated_primitives = {
-    harsh_treatment_cost = -0.5
+estate_national_recovery = {
+	manpower_recovery_speed = 0.1
+	global_unrest = -1
 }
 
-#-------------------------------------
-# Tribals
-#-------------------------------------
-tribal_omens = {
-    global_unrest = -3
+estate_missionary_zeal = {
+	global_missionary_strength = 0.01
 }
 
-#-------------------------------------
-# Raiders
-#-------------------------------------
-brutal_fighting = {
-    shock_damage = 0.1
+estate_agenda_republicanism_restored = {
+	republican_tradition = 0.5
 }
 
-#-------------------------------------
-# Khans
-#-------------------------------------
-shooting_practice = {
-    fire_damage = 0.1
+estate_boom_economy = {
+	trade_efficiency = 0.15
+	prestige = 0.5
+	global_autonomy = -0.05
 }
 
-#-------------------------------------
-# Mutants
-#-------------------------------------
-scavenged_weaponry = {
-    infantry_power = 0.1
+estate_thriving_ship_building_sector = {
+	naval_maintenance_modifier = -0.15
+	global_ship_recruit_speed = -0.15
 }
 
-#-------------------------------------
-# Think Tank
-#-------------------------------------
-brain_interfaces = {
-    discipline = 0.05
+estate_naval_enthusiasm = {
+	naval_morale = 0.1
+	navy_tradition = 1
+	global_sailors_modifier = 0.20
 }
 
-#-------------------------------------
-# Facilities
-#-------------------------------------
-estate_facilities_exploited = {
-    core_creation = -0.1
+estate_colonial_enthusiasm = {
+	colonist_placement_chance = 0.05
+	global_colonial_growth = 25
 }
 
-developing_the_institute = {
-    development_cost = -0.1
+estate_agenda_colonial_administration = {
+	global_tariffs = 0.15
+	global_colonial_growth = 15
 }
 
-optimised_power_distribution = {
-    state_maintenance_modifier = -0.2
+estate_growing_technology_trade = {
+	global_tax_income = 25
 }
 
-#-------------------------------------
-# Bioscience
-#-------------------------------------
-estate_bioscience_exploited = {
-    development_cost = -0.1
+estate_growing_oil_trade = {
+	global_tax_income = 25
 }
 
-engineered_crops = {
-    production_efficiency = 0.2
+estate_growing_drug_trade = {
+	global_tax_income = 25
 }
 
-biopharmaceuticals = {
-    all_power_cost = -0.1
+estate_freedom_from_corruption = {
+	interest = -0.25
+	trade_efficiency = 0.1
 }
 
-#-------------------------------------
-# Advanced Systems
-#-------------------------------------
-estate_advanced_systems_exploited = {
-    technology_cost = -0.05
+estate_foreign_contacts = {
+    diplomatic_reputation = 1
 }
 
-improved_synth_armor = {
-    fire_damage_received = -0.1
+estate_legitimacy_defended = {
+	diplomatic_reputation = 1
+	legitimacy = 0.5
 }
 
-optimised_laser_weaponry = {
-    fire_damage = 0.1
+estate_military_victory = {
+	prestige = 1
+	manpower_recovery_speed = 0.1
 }
 
-extended_teleportation_matrix = {
-    movement_speed = 0.2
+estate_agenda_cultural_conversion_help = {
+	local_culture_conversion_cost = -0.1
 }
 
-#-------------------------------------
-# SRB
-#-------------------------------------
-estate_srb_exploited = {
-    discipline = 0.05
+estate_thriving_arms_industry = {
+	land_morale = 0.05
+	land_maintenance_modifier = -0.05
 }
 
-optimised_courser_training = {
-    discipline = 0.05
+estate_agenda_looting_zeal = {
+	available_province_loot = 0.15
+	loot_amount = 0.15
 }
 
-#-------------------------------------
-# Robotics
-#-------------------------------------
-estate_robotics_exploited = {
-    fire_damage = 0.1
+estate_horde_unity_defended = {
+	horde_unity = 0.5
+	#tribes_loyalty_modifier = 0.05
 }
 
-biomechanical_research = {
-    technology_cost = -0.1
+# --------- Monopolies ---------
+estate_bureaucrats_monopoly_of_technology_mod = {
+	local_production_efficiency = -10
 }
 
+estate_bureaucrats_monopoly_of_gambling_mod = {
+	local_production_efficiency = -10
+}
+
+estate_traders_monopoly_of_industrial_goods_mod = {
+	local_production_efficiency = -10
+}
+
+estate_traders_monopoly_of_slaves_mod = {
+	local_production_efficiency = -10
+}
+
+estate_officers_monopoly_of_armaments_mod = {
+	local_production_efficiency = -10
+}
+
+estate_citizens_monopoly_of_edible_food_mod = {
+	local_production_efficiency = -10
+}
+
+estate_citizens_monopoly_of_edible_drink_mod = {
+	local_production_efficiency = -10
+}
+
+estate_citizens_monopoly_of_drugs_mod = {
+	local_production_efficiency = -10
+}
+
+estate_tribals_monopoly_of_armaments_mod = {
+	local_production_efficiency = -10
+}
+
+estate_tribals_monopoly_of_edible_food_mod = {
+	local_production_efficiency = -10
+}
+
+estate_tribals_monopoly_of_edible_drink_mod = {
+	local_production_efficiency = -10
+}
+
+estate_tribals_monopoly_of_drugs_mod = {
+	local_production_efficiency = -10
+}
+
+estate_tribals_monopoly_of_slaves_mod = {
+	local_production_efficiency = -10
+}

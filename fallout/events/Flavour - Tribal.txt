@@ -68,7 +68,7 @@ country_event = {
 		name = "tribal_flavour.2.option.a"
 		
         trigger = { 
-            NOT = { has_idea_group = espionage_ideas }
+            NOT = { has_idea_group = fallout_espionage_ideas }
         }
         
 		add_war_exhaustion = -2.5
@@ -80,7 +80,7 @@ country_event = {
 		name = "tribal_flavour.2.option.b"
         
 		trigger = { 
-            has_idea_group = espionage_ideas 
+            has_idea_group = fallout_espionage_ideas 
         }		
 		
 		add_war_exhaustion = -5
@@ -124,7 +124,7 @@ country_event = {
 	option = {
 		name = "tribal_flavour.3.option.b"
         
-		trigger = { has_idea_group = army_organisation_ideas }		
+		trigger = { has_idea_group = fallout_army_organisation_ideas }		
 		
 		add_army_tradition = 15
 		add_prestige = 5
