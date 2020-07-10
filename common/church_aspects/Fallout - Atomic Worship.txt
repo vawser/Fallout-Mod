@@ -1,0 +1,114 @@
+atom_unnatural_endurance = {
+	cost = 100
+	modifier = {
+		land_morale = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+
+		modifier = {
+			factor = 5
+			is_at_war = yes
+		}
+	}
+}
+
+atom_rad_glow = {
+	cost = 100
+	modifier = {
+		infantry_power = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+
+		modifier = {
+			factor = 5
+			is_at_war = yes
+		}
+		
+		modifier = {
+			factor = 5
+			infantry_fraction = 0.75
+		}
+	}
+}
+
+atom_pliable_brains = {
+	cost = 100
+	modifier = {
+		horde_unity = 1
+		legitimacy = 1
+		republican_tradition = 1
+		devotion = 1
+	}
+	ai_will_do = {
+		factor = 10
+
+		modifier = {
+			factor = 5
+			OR = {
+				NOT = { horde_unity = 50 }
+				NOT = { legitimacy = 50 }
+				NOT = { republican_tradition = 50 }
+				NOT = { devotion = 50 }
+			}
+		}
+	}
+}
+
+atom_enhanced_obedience = {
+	cost = 100
+	modifier = {
+		core_creation = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+
+		modifier = {
+			factor = 5
+			
+			overextension_percentage = 0.25
+		}
+	}
+}
+
+atom_rapid_speech = {
+	cost = 100
+	modifier = {
+		diplomatic_reputation = 2
+	}
+	ai_will_do = {
+		factor = 10
+
+		modifier = {
+			factor = 5
+			
+			OR = {
+				vassal = 1
+                march = 1
+                daimyo_vassal = 1
+                personal_union = 1
+                client_vassal = 1
+                client_march = 1
+                tributary_state = 1
+			}
+		}
+	}
+}
+
+atom_atomic_will = {
+	cost = 100
+	modifier = {
+		war_exhaustion = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+
+		modifier = {
+			factor = 5
+			
+			is_at_war = yes
+		}
+	}
+}
+

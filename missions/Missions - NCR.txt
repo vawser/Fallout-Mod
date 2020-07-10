@@ -1,0 +1,27 @@
+#These are Generic missions, available to all tags that don't have an override.
+#Below are mission series, within them are the actual missions.
+
+#---------------------------------------------------
+# NCR
+#---------------------------------------------------
+ncr_missions_1 = {
+	slot = 4
+    
+	ai = yes
+    has_country_shield = yes
+    
+	potential = {
+        tag = NCR
+	}
+	fallout_test = {
+		icon = mission_slot_machine
+		required_missions = {  }
+        
+		trigger = { 
+            treasury = 10000
+        }
+		effect = {
+			
+		}
+	}
+}

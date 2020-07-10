@@ -1,0 +1,51 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = monarchy
+add_government_reform = think_tank_reform
+technology_group = tech_robot
+religion = robotics
+primary_culture = think_tank
+capital = 1391
+
+add_accepted_culture = robot
+add_accepted_culture = lobotomite
+
+set_robot_race = yes
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+
+
+
+
+
+
+set_slavery_allowed = yes
+set_gambling_allowed = yes
+set_prostitution_allowed = yes
+
+set_narcotics_allowed = yes
+set_scavenging_allowed = yes
+
+#--------------------------------
+# Relationships
+#--------------------------------
+historical_rival = TNK
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Mobius"
+        dynasty = "the Big Mountain Boardman"
+		adm = 3
+		dip = 3
+		mil = 6
+	}
+    clear_scripted_personalities = yes
+    add_ruler_personality = immortal_personality
+    set_ruler_flag = is_a_think_tank
+}

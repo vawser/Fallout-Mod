@@ -1,0 +1,68 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = republic
+add_government_reform = institute_reform
+technology_group = tech_commonwealth
+religion = secular
+primary_culture = institute
+capital = 545
+fixed_capital = 545
+
+set_wastelander_race = yes
+
+add_army_tradition = 40
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+
+
+
+
+
+
+set_slavery_forbidden = yes
+set_gambling_allowed = yes
+set_prostitution_forbidden = yes
+
+set_narcotics_forbidden = yes
+set_scavenging_allowed = yes
+
+#--------------------------------
+# Relationships
+#--------------------------------
+historical_rival = V81
+historical_rival = DIC
+historical_rival = GUN
+historical_rival = ATC
+historical_rival = MTM
+historical_rival = GNB
+historical_rival = RRD
+historical_rival = BKH
+historical_rival = BOC
+historical_rival = COA
+historical_rival = FRG
+historical_rival = COV
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Shaun"
+		dynasty = "Young"
+		birth_date = 2230.1.1
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+    
+    hidden_effect = {
+        add_opinion = {
+            who = RRD
+            modifier = ideological_enemies
+        }
+    }
+}
+

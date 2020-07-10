@@ -1,0 +1,591 @@
+#------------------------------------------
+# Monarchy
+#------------------------------------------
+monarchy = {
+    color = { 232 203 16 }
+    
+    basic_reform = monarchy_mechanic
+    
+    reform_levels = {
+        monarchy_power_structure = {
+			reforms = {
+                autocracy_reform
+                legion_reform
+                new_vegas_reform
+                think_tank_reform
+                zetan_reform
+                shi_reform
+                ncr_state_reform
+			}
+		}
+        # Civic Virtues
+        monarchy_tier_1 = {
+            reforms = {
+                # Generic
+                administrative_outlook_reform
+                diplomatic_outlook_reform
+                naval_outlook_reform
+                army_outlook_reform
+                
+                # Legion
+
+                # New Vegas
+                liberal_autocracy_reform
+                independent_vegas_reform
+                anarchic_vegas_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
+            }
+        }
+        # Regionalism
+        monarchy_tier_2 = {
+            reforms = {
+                # Generic
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+                
+                # Legion
+                
+                # New Vegas
+                robco_industries_reform
+                resorts_reform
+                lighting_up_the_wasteland_reform
+                franchising_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
+            }
+        }
+        # Bureaucracy
+        monarchy_tier_3 = {
+            reforms = {
+                # Generic
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+                
+                # Legion
+                
+                # New Vegas
+                society_in_a_snowglobe_reform
+                reactivate_missile_defence_grid_reform
+                fortified_vegas_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
+            }
+        }
+        # Guiding Principles
+        monarchy_tier_4 = {
+            reforms = {
+                # Generic
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                excellent_education_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Legion
+                
+                # New Vegas
+                not_at_home_reform
+                family_council_reform
+                infringe_on_family_rights_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
+            }
+        }
+        # Consolidation of Power
+        monarchy_tier_5 = {
+            reforms = {
+                # Legion
+                
+                # New Vegas
+                space_program_reform
+                securatron_ai_reform
+                desert_agriculture_reform
+                atomic_sector_reform
+                
+                # Think Tank
+                
+                # Zeta
+                
+                # Shi
+                
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                clear_monarchy_reform
+                convert_to_republic_reform
+                convert_to_theocracy_reform
+                convert_to_tribe_reform
+            }
+        }
+    }
+    
+    legacy_government = {
+        autocracy_legacy
+        legion_legacy
+        new_vegas_legacy
+        think_tank_legacy
+        zetan_legacy
+        shi_legacy
+        ncr_state_legacy
+    }
+}
+#------------------------------------------
+# Republic
+#------------------------------------------
+republic = {
+    color = { 180 125 25 }
+    
+    basic_reform = republic_mechanic
+    
+    reform_levels = {
+        republic_power_structure = {
+			reforms = {
+                settlement_reform
+                republic_reform
+                dictatorship_reform
+                militia_reform
+                institute_reform
+                enclave_reform
+                vault_reform
+                ncr_reform
+			}
+		}
+        # Civic Virtues
+        republic_tier_1 = {
+            reforms = {
+                # Generic
+                administrative_outlook_reform
+                diplomatic_outlook_reform
+                naval_outlook_reform
+                army_outlook_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
+                vault_serve_for_life_reform
+                vault_elections_reform
+                vault_central_council_reform
+                
+                # NCR
+            }
+        }
+        # Regionalism
+        republic_tier_2 = {
+            reforms = {
+                # Generic
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
+                vault_reclamation_reform
+                vault_experimental_reform
+                vault_abandoned_reform
+                
+                # NCR
+            }
+        }
+        # Bureaucracy
+        republic_tier_3 = {
+            reforms = {
+                # Generic
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
+                vault_customs_office_reform
+                vault_free_trade_reform
+                vault_isolationism_reform
+                
+                # NCR
+            }
+        }
+        # Guiding Principles
+        republic_tier_4 = {
+            reforms = {
+                # Generic
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                excellent_education_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
+                vault_police_force_reform
+                vault_military_force_reform
+                
+                # NCR
+            }
+        }
+        # Consolidation of Power
+        republic_tier_5 = {
+            reforms = {
+                # Militia
+                
+                # Institute
+                
+                # Enclave
+                
+                # Vault
+                
+                # NCR
+                
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                convert_to_monarchy_reform
+                clear_republic_reform
+                convert_to_theocracy_reform
+                convert_to_tribe_reform
+            }
+        }
+    }
+    
+    legacy_government = {
+        settlement_legacy
+        militia_legacy
+        republic_legacy
+        dictatorship_legacy
+        institute_legacy
+        enclave_legacy
+        vault_legacy
+        ncr_legacy
+    }
+}
+
+#------------------------------------------
+# Theocracy
+#------------------------------------------
+theocracy = {
+    color = { 210 210 210 }
+    
+    basic_reform = theocracy_mechanic
+    
+    reform_levels = {
+        theocracy_power_structure = {
+			reforms = {
+                theocracy_reform
+                brotherhood_reform
+                cult_reform
+			}
+		}
+        # Civic Virtues
+        theocracy_tier_1 = {
+            reforms = {
+                # Generic
+                administrative_outlook_reform
+                diplomatic_outlook_reform
+                naval_outlook_reform
+                army_outlook_reform
+                
+                # Cult
+                
+                # BOS
+                brotherhood_complete_adherence_reform
+                brotherhood_loose_adherence_reform
+                brotherhood_no_adherence_reform
+            }
+        }
+        # Regionalism
+        theocracy_tier_2 = {
+            reforms = {
+                # Generic
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+                
+                # Cult
+                
+                # BOS
+                brotherhood_order_of_the_sword_reform
+                brotherhood_order_of_the_shield_reform
+                brotherhood_order_of_the_quill_reform
+            }
+        }
+        # Bureaucracy
+        theocracy_tier_3 = {
+            reforms = {
+                # Generic
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+                
+                # Cult
+                
+                # BOS
+                brotherhood_only_reform
+                brotherhood_integrate_outsiders_reform
+                brotherhood_compromise_for_talent_reform
+            }
+        }
+        # Guiding Principles
+        theocracy_tier_4 = {
+            reforms = {
+                # Generic
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                excellent_education_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Cult
+                
+                # BOS
+                brotherhood_codex_reform
+                brotherhood_new_technology_reform
+                brotherhood_confiscated_technology_reform
+            }
+        }
+        # Consolidation of Power
+        theocracy_tier_5 = {
+            reforms = {
+                
+                # Cult
+                
+                # BOS
+                brotherhood_chains_that_bind_reform
+                brotherhood_flexible_leadership_reform
+                
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                convert_to_monarchy_reform
+                convert_to_republic_reform
+                clear_theocracy_reform
+                convert_to_tribe_reform
+            }
+        }
+    }
+    
+    legacy_government = {
+        theocracy_legacy
+        brotherhood_legacy
+        cult_legacy
+    }
+}
+
+#------------------------------------------
+# Tribal
+#------------------------------------------
+tribal = {
+    color = { 155 43 37 }
+    
+    basic_reform = tribe_mechanic
+    
+    reform_levels = {
+        tribe_power_structure = {
+			reforms = {
+                tribe_reform
+                commune_reform
+                raider_reform
+                super_mutant_reform
+                swarm_reform
+                wolf_pack_reform
+                great_khan_reform
+			}
+		}
+        # Civic Virtues
+        tribe_tier_1 = {
+            reforms = {
+                # Generic
+                administrative_outlook_reform
+                diplomatic_outlook_reform
+                naval_outlook_reform
+                army_outlook_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
+            }
+        }
+        # Regionalism
+        tribe_tier_2 = {
+            reforms = {
+                # Generic
+                central_authority_reform
+                regional_authority_reform
+                local_authority_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
+            }
+        }
+        # Bureaucracy
+        tribe_tier_3 = {
+            reforms = {
+                # Generic
+                ethnostate_reform
+                measured_immigration_reform
+                open_immigration_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
+            }
+        }
+        # Guiding Principles
+        tribe_tier_4 = {
+            reforms = {
+                # Generic
+                masterful_administration_reform
+                charismatic_diplomacy_reform
+                excellent_education_reform
+                inquisitive_minds_reform
+                fury_of_the_gods_reform
+                religious_freedom_reform
+                industrial_revolution_reform
+                frontier_settlement_reform
+                expert_substantiation_reform
+                calm_debate_reform
+                balance_of_justice_reform
+                regional_development_reform
+                centralization_of_power_reform
+                decentralization_of_power_reform
+                wasteland_absorption_reform
+                
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
+            }
+        }
+        # Consolidation of Power
+        tribe_tier_5 = {
+            reforms = {
+                # Raider
+                
+                # Super Mutant
+                
+                # Swarm
+                
+                # Wolf Pack
+                
+                # Great Khan
+                
+                # Generic
+                absolute_rule_reform
+                regional_representation_reform
+                convert_to_monarchy_reform
+                convert_to_republic_reform
+                convert_to_theocracy_reform
+                clear_tribe_reform
+            }
+        }
+    }
+    
+    legacy_government = {
+        tribe_legacy
+        commune_legacy
+        raider_legacy
+        super_mutant_legacy
+        swarm_legacy
+        wolf_pack_legacy
+        great_khan_legacy
+    }
+}
+
+native = {
+	basic_reform = native_mechanic
+
+	legacy_government = {
+		native_council_legacy
+	}
+	color = { 194 127 209 }
+}
+

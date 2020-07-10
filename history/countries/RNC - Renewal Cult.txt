@@ -1,0 +1,66 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = theocracy
+add_government_reform = cult_reform
+technology_group = tech_ghoul
+religion = renewal
+primary_culture = renewal
+capital = 556
+
+add_accepted_culture = mole_rat
+add_accepted_culture = ghoul
+
+set_ghoul_race = yes
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+
+
+
+
+
+
+set_slavery_forbidden = yes
+set_gambling_allowed = yes
+set_prostitution_forbidden = yes
+
+set_narcotics_forbidden = yes
+set_scavenging_allowed = yes
+
+#--------------------------------
+# Relationships
+#--------------------------------
+historical_friend = VAU
+historical_friend = GEC  # In canon, they want peace with Gecko, but Gecko wants them out, which is why Gecko has the RNC as a 
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Brain"
+		dynasty = "Ra'at"
+		adm = 5
+		dip = 4
+		mil = 5
+		culture = mole_rat
+		religion = renewal
+	}
+	heir = {
+		name = "Zomak"
+		dynasty = "Ra'at"
+		adm = 5
+		dip = 4
+		mil = 5
+		culture = mole_rat
+		religion = renewal
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = kind_hearted_personality
+	add_ruler_personality = conqueror_personality
+	add_ruler_personality = tolerant_personality
+	add_heir_personality = immortal_personality
+}

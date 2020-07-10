@@ -8,6 +8,7 @@ replace_path="customizable_localization"
 replace_path="decisions"
 replace_path="events"
 replace_path="missions"
+replace_path="gfx/sprite_packs"
 
 replace_path="common/bookmarks"
 replace_path="common/church_aspects"

@@ -1,0 +1,633 @@
+#--------------------------------------------
+# Civic Virtues
+#--------------------------------------------
+administrative_outlook_reform = {
+    icon = "office"
+
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        state_maintenance_modifier = -0.15
+    }
+}
+diplomatic_outlook_reform = {
+    icon = "doc"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        diplomatic_reputation = 1
+    }
+}
+naval_outlook_reform = {
+    icon = "ship"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+        any_owned_province = {
+            has_port = yes
+        }
+    }
+    
+    modifiers = {
+        global_ship_cost = -0.15
+    }
+}
+army_outlook_reform = {
+    icon = "bunker"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        global_regiment_cost = -0.15
+    }
+}
+#--------------------------------------------
+# Regionalism
+#--------------------------------------------
+central_authority_reform = {
+    icon = "state_house"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        global_autonomy = -0.1
+        global_unrest = 2
+    }
+}
+regional_authority_reform = {
+    icon = "comms"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        global_autonomy = -0.05
+    }
+}
+local_authority_reform = {
+    icon = "ranch"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        global_autonomy = 0.05
+        global_unrest = -2
+    }
+}
+
+#--------------------------------------------
+# Bureaucracy
+#--------------------------------------------
+ethnostate_reform = {
+    icon = "barbed_wall"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        culture_conversion_cost = -0.25
+        same_culture_advisor_cost = -0.25
+    }
+}
+measured_immigration_reform = {
+    icon = "usa_flag"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+        # Check for humanoid races. Other races don't allow immigration.
+        OR = {
+            is_variable_equal = { which = race_id value = 1 }
+            is_variable_equal = { which = race_id value = 2 }
+            is_variable_equal = { which = race_id value = 3 }
+            is_variable_equal = { which = race_id value = 14 }
+        }
+    }
+    
+    modifiers = {
+        global_tax_modifier = 0.1
+        improve_relation_modifier = 0.1
+    }
+}
+open_immigration_reform = {
+    icon = "person"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+        # Check for humanoid races. Other races don't allow immigration.
+        OR = {
+            is_variable_equal = { which = race_id value = 1 }
+            is_variable_equal = { which = race_id value = 2 }
+            is_variable_equal = { which = race_id value = 3 }
+            is_variable_equal = { which = race_id value = 14 }
+        }
+    }
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        development_cost = -0.1
+        global_unrest = 2
+    }
+}
+
+#--------------------------------------------
+# Guiding Principles
+#--------------------------------------------
+masterful_administration_reform = {
+    icon = "office"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        global_tax_modifier = 0.25
+    }
+}
+charismatic_diplomacy_reform = {
+    icon = "charismatic_person"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        diplomatic_reputation = 2
+    }
+}
+excellent_education_reform = {
+    icon = "classroom"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    
+    modifiers = {
+        leader_cost = -0.25
+    }
+}
+inquisitive_minds_reform = {
+    icon = "satellite"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_innovation_ideas
+    }
+    
+    modifiers = {
+        idea_cost = -0.05
+    }
+}
+fury_of_the_gods_reform = {
+    icon = "burned_man"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_religious_ideas
+    }
+    
+    modifiers = {
+        global_missionary_strength = 0.03
+    }
+}
+religious_freedom_reform = {
+    icon = "bridge"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_tolerance_ideas
+    }
+    
+    modifiers = {
+        religious_unity = 0.25
+    }
+}
+industrial_revolution_reform = {
+    icon = "steelworks"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_economic_ideas
+    }
+    
+    modifiers = {
+        production_efficiency = 0.15
+    }
+}
+frontier_settlement_reform = {
+    icon = "camp"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_expansion_ideas
+    }
+    
+    modifiers = {
+        colonists = 1
+    }
+}
+expert_substantiation_reform = {
+    icon = "embassy"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_administrative_ideas
+    }
+    
+    modifiers = {
+        core_creation = -0.1
+    }
+}
+calm_debate_reform = {
+    icon = "wastelander"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_harmony_ideas
+    }
+    
+    modifiers = {
+        global_unrest = -2
+    }
+}
+balance_of_justice_reform = {
+    icon = "state_house"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_law_ideas
+    }
+    
+    modifiers = {
+        years_of_nationalism = -5
+    }
+}
+regional_development_reform = {
+    icon = "school"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_development_ideas
+    }
+    
+    modifiers = {
+        development_cost = -0.15
+    }
+}
+centralization_of_power_reform = {
+    icon = "depot"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_development_ideas
+    }
+    
+    modifiers = {
+        max_absolutism = 10
+    }
+}
+decentralization_of_power_reform = {
+    icon = "road"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_development_ideas
+    }
+    
+    modifiers = {
+        legitimacy = 1
+        republican_tradition = 1
+        devotion = 1
+        horde_unity = 1
+        meritocracy = 1
+    }
+}
+wasteland_absorption_reform = {
+    icon = "comms"
+    
+    potential = {
+        NOT = { has_reform = brotherhood_reform }
+        NOT = { has_reform = vault_reform }
+        NOT = { has_reform = new_vegas_reform }
+    }
+    trigger = {
+        full_idea_group = fallout_settlement_ideas
+    }
+    
+    modifiers = {
+        global_colonial_growth = 20
+    }
+}
+
+#--------------------------------------------
+# Consolidation of Power
+#--------------------------------------------
+absolute_rule_reform = {
+    icon = "artillery"
+    
+    potential = {
+        NOT = { has_reform = new_vegas_reform }
+        NOT = { has_reform = brotherhood_reform }
+    }
+    
+    modifiers = {
+        max_absolutism = 5
+        yearly_absolutism = 1
+    }
+}
+regional_representation_reform = {
+    icon = "union"
+    
+    potential = {
+        NOT = { has_reform = new_vegas_reform }
+        NOT = { has_reform = brotherhood_reform }
+    }
+    
+    modifiers = {
+        min_autonomy_in_territories = -0.25
+    }
+}
+
+#--------------------------------------------
+# Convert Reforms
+#--------------------------------------------
+convert_to_monarchy_reform = {
+	icon = "usa_flag"
+    
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 1
+		change_government = monarchy
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+convert_to_republic_reform = {
+	icon = "government"
+    
+	trigger = {
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 1
+		change_government = republic
+	}
+	ai = {
+		factor = 0
+	}
+}
+convert_to_theocracy_reform = {
+	icon = "church"
+    
+	trigger = {
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 1
+		change_government = theocracy
+	}
+	ai = {
+		factor = 0
+	}
+}
+convert_to_tribe_reform = {
+	icon = "yao_guai"
+    
+	trigger = {
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+		lose_reforms = 1
+		change_government = tribal
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+clear_monarchy_reform = {
+	icon = "usa_flag"
+    
+    potential = {
+        OR = {
+            has_reform = legion_reform
+            #has_reform = legion_splinter_reform
+            has_reform = new_vegas_reform
+            has_reform = think_tank_reform
+            has_reform = zetan_reform
+            has_reform = shi_reform
+            has_reform = ncr_state_reform
+        }
+    }
+    
+	trigger = {
+        OR = {
+            has_reform = legion_reform
+            #has_reform = legion_splinter_reform
+            has_reform = new_vegas_reform
+            has_reform = think_tank_reform
+            has_reform = zetan_reform
+            has_reform = shi_reform
+            has_reform = ncr_state_reform
+        }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+        lose_reforms = 1
+        remove_government_reform = legion_reform
+        #remove_government_reform = legion_splinter_reform
+        remove_government_reform = new_vegas_reform
+        remove_government_reform = think_tank_reform
+        remove_government_reform = zetan_reform
+        remove_government_reform = shi_reform
+        remove_government_reform = ncr_state_reform
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+clear_republic_reform = {
+	icon = "government"
+    
+    potential = {
+        OR = {
+            has_reform = institute_reform
+            has_reform = enclave_reform
+            has_reform = vault_reform
+            has_reform = ncr_reform
+        }
+    }
+    
+	trigger = {
+        OR = {
+            has_reform = institute_reform
+            has_reform = enclave_reform
+            has_reform = vault_reform
+            has_reform = ncr_reform
+        }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+        lose_reforms = 1
+        remove_government_reform = institute_reform
+        remove_government_reform = enclave_reform
+        remove_government_reform = vault_reform
+        remove_government_reform = ncr_reform
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+clear_theocracy_reform = {
+	icon = "church"
+    
+    potential = {
+        OR = {
+            has_reform = brotherhood_reform
+        }
+    }
+    
+	trigger = {
+        OR = {
+            has_reform = brotherhood_reform
+        }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+        lose_reforms = 1
+        remove_government_reform = brotherhood_reform
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+clear_tribe_reform = {
+	icon = "yao_guai"
+    
+    potential = {
+        OR = {
+            has_reform = super_mutant_reform
+            has_reform = swarm_reform
+            has_reform = wolf_pack_reform
+            has_reform = great_khan_reform
+        }
+    }
+    
+	trigger = {
+        OR = {
+            has_reform = super_mutant_reform
+            has_reform = swarm_reform
+            has_reform = wolf_pack_reform
+            has_reform = great_khan_reform
+        }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+	}
+	effect = {
+        lose_reforms = 1
+        remove_government_reform = super_mutant_reform
+        remove_government_reform = swarm_reform
+        remove_government_reform = wolf_pack_reform
+        remove_government_reform = great_khan_reform
+	}
+	ai = {
+		factor = 0
+	}
+}
