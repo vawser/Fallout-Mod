@@ -1,0 +1,190 @@
+#--------------------------------------
+# National Policies
+#--------------------------------------
+# Bureaucrats
+policy_forbid_gambling = {
+	icon = privilege_dice
+    
+	loyalty = 0.1
+	influence = 0.05
+    
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {   
+        global_tax_modifier = -0.05
+	}
+	benefits = {
+        global_unrest = -2
+        stability_cost_modifier = -0.25
+	}
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { monthly_income = 1 }
+        }
+        modifier = {
+            factor = 2
+            tax_income_percentage = 0.5
+        }
+        modifier = {
+            factor = 2
+            tax_income_percentage = 0.75
+        }
+	}
+}
+
+# Traders
+policy_forbid_scavenging = {
+	icon = privilege_weaponry
+    
+	loyalty = 0.1
+	influence = 0.05
+    
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+        global_colonial_growth = -10
+	}
+	benefits = {
+		global_own_trade_power = 0.1
+        trade_efficiency = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            num_of_colonies = 3
+        }
+        modifier = {
+            factor = 2
+            trade_income_percentage = 0.5
+        }
+        modifier = {
+            factor = 2
+            trade_income_percentage = 0.75
+        }
+	}
+}
+
+# Officers
+policy_forbid_slavery = {
+	icon = privilege_chain
+    
+	loyalty = 0.1
+	influence = 0.05
+    
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+        global_manpower_modifier = -0.1
+	}
+	benefits = {
+		discipline = 0.05
+        land_morale = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { max_manpower = 20 }
+        }
+        modifier = {
+            factor = 2
+            max_manpower = 50
+        }
+        modifier = {
+            factor = 2
+            max_manpower = 100
+        }
+	}
+}
+
+# Citizens
+policy_forbid_narcotics = {
+	icon = privilege_jet
+    
+	loyalty = 0.1
+	influence = 0.05
+    
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+        global_unrest = 1
+	}
+	benefits = {
+		global_colonial_growth = 10
+        prestige = 0.5
+	}
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            average_unrest = 1
+        }
+        modifier = {
+            factor = 2
+            
+            num_of_colonies = 2
+        }
+        modifier = {
+            factor = 2
+            
+            num_of_colonies = 4
+        }
+	}
+}
+
+policy_forbid_prostitution = {
+	icon = privilege_kiss
+    
+	loyalty = 0.1
+	influence = 0.05
+    
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+        advisor_cost = 0.1
+	}
+	benefits = {
+		monthly_splendor = 1
+        yearly_corruption = -0.05
+	}
+	ai_will_do = {
+		factor = 1
+        
+        modifier = {
+            factor = 0
+            
+            NOT = { corruption = 0.1 }
+        }
+        modifier = {
+            factor = 2
+            
+            corruption = 5
+        }
+        modifier = {
+            factor = 2
+            
+            corruption = 10
+        }
+	}
+}

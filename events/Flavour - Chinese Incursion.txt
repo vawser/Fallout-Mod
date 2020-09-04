@@ -1,28 +1,34 @@
-namespace = zetan
+namespace = chinese_incursion
 
 # Aliens!
-# Optional challenge the player can opt into.
 country_event = {
-	id = zetan.1
-	title = zetan.1.title
-	desc = zetan.1.desc
-	picture = NIGHT_SKY_eventPicture
+	id = chinese_incursion.1
+	title = chinese_incursion.1.title
+	desc = chinese_incursion.1.desc
+	picture = CITY_BRIDGE_CLEAR_eventPicture
 
-    fire_only_once = yes
+    major = yes
     
-	trigger = {
-        ai = no
-		NOT = { exists = ZET }
+	trigger = { 
+        NOT = { has_global_flag = setup_chinese_incursion }
+        current_age = chinese_incursion
+		NOT = { exists = CHI }
 	}
 	
     mean_time_to_happen = { 
-        months = 1200
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_global_flag = setup_chinese_incursion
+        }
     }
     
 	option = {
-		name = zetan.1.option.a
+		name = chinese_incursion.1.option.a
 		
-        custom_tooltip = ALIENS_APPEAR
+        custom_tooltip = CHINA_APPEAR
         
         hidden_effect = {
             random_province = {
@@ -34,51 +40,46 @@ country_event = {
                     has_empty_adjacent_province = yes
                     continent = america
                 }
-                cede_province = ZET
-                add_core = ZET
+                cede_province = CHI
+                add_core = CHI
                 change_religion = secular
-                change_culture = zetan
+                change_culture = chinese
             }
 
             america = {
-                discover_country = ZET
+                discover_country = CHI
             }
             west_seaboard_region = {
-                discover_country = ZET
+                discover_country = CHI
             }
             gulf_of_mexico_region = {
-                discover_country = ZET
+                discover_country = CHI
             }
             caribbean_seaboard_region = {
-                discover_country = ZET
+                discover_country = CHI
             }
             east_seaboard_region = {
-                discover_country = ZET
+                discover_country = CHI
             }
             
-            ZET = {
-                country_event = { id = zetan.2 days = 30 }
+            CHI = {
+                country_event = { id = chinese_incursion.2 days = 30 }
             }
         }
-	}
-	option = {
-		name = zetan.1.option.b
-		
-        custom_tooltip = NO_ALIENS
 	}
 }
 
 country_event = {
-	id = zetan.2
-	title = zetan.2.title
-	desc = zetan.2.desc
+	id = chinese_incursion.2
+	title = chinese_incursion.2.title
+	desc = chinese_incursion.2.desc
 	picture = NIGHT_SKY_eventPicture
     
     hidden = yes
     is_triggered_only = yes
     
     option = {
-        name = zetan.2.option.a
+        name = chinese_incursion.2.option.a
    
         add_years_of_income = 5
         add_yearly_manpower = 5
@@ -87,59 +88,59 @@ country_event = {
         add_stability = 6
                 
         define_ruler = {
-            name = "Overlord"
-            dynasty = "Izzat"
-            adm = 6
-            dip = 6
-            mil = 6
+            name = "Jiang"
+            dynasty = "Qing"
+            adm = 5
+            dip = 3
+            mil = 5
+            female = yes
         }
-        add_ruler_personality = immortal_personality
 
         capital_scope = {
             random_empty_neighbor_province = {
                 limit = {
                     is_wasteland = no
                 }
-                cede_province = ZET
-                add_core = ZET
+                cede_province = CHI
+                add_core = CHI
                 change_religion = secular
-                change_culture = zetan
+                change_culture = chinese
             }
             random_empty_neighbor_province = {
                 limit = {
                     is_wasteland = no
                 }
-                cede_province = ZET
-                add_core = ZET
+                cede_province = CHI
+                add_core = CHI
                 change_religion = secular
-                change_culture = zetan
+                change_culture = chinese
             }
             random_empty_neighbor_province = {
                 limit = {
                     is_wasteland = no
                 }
-                cede_province = ZET
-                add_core = ZET
+                cede_province = CHI
+                add_core = CHI
                 change_religion = secular
-                change_culture = zetan
+                change_culture = chinese
             }
             random_empty_neighbor_province = {
                 limit = {
                     is_wasteland = no
                 }
-                cede_province = ZET
-                add_core = ZET
+                cede_province = CHI
+                add_core = CHI
                 change_religion = secular
-                change_culture = zetan
+                change_culture = chinese
             }
             random_empty_neighbor_province = {
                 limit = {
                     is_wasteland = no
                 }
-                cede_province = ZET
-                add_core = ZET
+                cede_province = CHI
+                add_core = CHI
                 change_religion = secular
-                change_culture = zetan
+                change_culture = chinese
             }
         }
         

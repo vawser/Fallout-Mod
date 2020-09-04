@@ -1,88 +1,28 @@
 ﻿l_english: 
- #------------------------------------------
- # Nationa Policies View
- #------------------------------------------
- view_national_policies_title: "View National Policies"
- view_national_policies_desc: "View our national policies."
- 
- national_policies.1.title: "National Policies"
- national_policies.1.desc: "Change your national policies here."
- national_policies.1.option.a: "Slavery"
- national_policies.1.option.b: "Gambling"
- national_policies.1.option.c: "Prostitution"
- national_policies.1.option.d: "Narcotics"
- national_policies.1.option.e: "Scavenging"
- national_policies.1.option.f: "Exit"
- 
- national_policies.2.title: "Slavery Policy"
- national_policies.2.desc: "Decide on whether to change your Slavery Policy here."
- national_policies.2.option.a: "Allow Slavery"
- national_policies.2.option.b: "Forbid Slavery"
- national_policies.2.option.c: "Exit"
- 
- national_policies.3.title: "Gambling Policy"
- national_policies.3.desc: "Decide on whether to change your Gambling Policy here."
- national_policies.3.option.a: "Allow Gambling"
- national_policies.3.option.b: "Forbid Gambling"
- national_policies.3.option.c: "Exit"
- 
- national_policies.4.title: "Prostitution Policy"
- national_policies.4.desc: "Decide on whether to change your Prostitution Policy here."
- national_policies.4.option.a: "Allow Prostitution"
- national_policies.4.option.b: "Forbid Prostitution"
- national_policies.4.option.c: "Exit"
- 
- national_policies.5.title: "Narcotics Policy"
- national_policies.5.desc: "Decide on whether to change your Narcotics Policy here."
- national_policies.5.option.a: "Allow Narcotics"
- national_policies.5.option.b: "Forbid Narcotics"
- national_policies.5.option.c: "Exit"
- 
- national_policies.6.title: "Scavenging Policy"
- national_policies.6.desc: "Decide on whether to change your Scavenging Policy here."
- national_policies.6.option.a: "Allow Scavenging"
- national_policies.6.option.b: "Forbid Scavenging"
- national_policies.6.option.c: "Exit"
- 
- #------------------------------------------
- # Slavery
- #------------------------------------------
- SET_SLAVERY_ALLOWED: "Set §YSlavery Policy§! to §YAllowed§!."
- SET_SLAVERY_FORBIDDEN: "Set §YSlavery Policy§! to §YForbidden§!."
- 
- SLAVERY_ALLOWED: "Slavery is allowed."
- SLAVERY_FORBIDDEN: "Slavery is forbidden."
- 
- SLAVERY_ALLOWED_TT: "§YSlavery Policy§! set to §YAllowed§!."
- SLAVERY_FORBIDDEN_TT: "§YSlavery Policy§! set to §YForbidden§!."
- 
- country_slavery_allowed: "Slavery Allowed"
- desc_country_slavery_allowed: "We allow slavery in our country."
- 
- country_slavery_forbidden: "Slavery Forbidden"
- desc_country_slavery_forbidden: "We forbid slavery in our country."
- 
- #------------------------------------------
- # Gambling
- #------------------------------------------
- SET_GAMBLING_ALLOWED: "Set §YGambling Policy§! to §YAllowed§!."
- SET_GAMBLING_FORBIDDEN: "Set §YGambling Policy§! to §YForbidden§!."
- 
- GAMBLING_ALLOWED: "Gambling is allowed."
- GAMBLING_FORBIDDEN: "Gambling is forbidden."
- 
- GAMBLING_ALLOWED_TT: "§YGambling Policy§! set to §YAllowed§!."
- GAMBLING_FORBIDDEN_TT: "§YGambling Policy§! set to §YForbidden§!."
- 
- country_gambling_allowed: "Gambling Allowed"
- desc_country_gambling_allowed: "We allow gambling in our country."
- 
- country_gambling_forbidden: "Gambling Forbidden"
- desc_country_gambling_forbidden: "We forbid gambling in our country."
- 
+ #---------------------------
+ # Decisions
+ #---------------------------
  host_casino_night_title: "Host Casino Night"
  host_casino_night_desc: "Let us host a casino night for the elites of our country."
  
+ visit_brothel_title: "Visit Brothel"
+ visit_brothel_desc: "Let [Root.Monarch.GetName] visit a brothel."
+ 
+ synthesize_drug_title: "Synthesize Drug"
+ synthesize_drug_desc: "Let [Root.Monarch.GetName] take a synthesized drug to enhance their prowess."
+ 
+ purge_drug_manufacturing_title: "Purge Drug Manufacturing"
+ purge_drug_manufacturing_desc: "The fiends that partake in the manufacture of drugs must be eliminated. We shall run them out of our lands, and burn their operations to the ground."
+ 
+ start_scavenger_hunt_title: "Start Scavenger Hunt"
+ start_scavenger_hunt_desc: "Let us start a scavenger hunt for rare scrap."
+ 
+ search_for_lost_texts_title: "Search for Lost Texts"
+ search_for_lost_texts_desc: "Let us start a search of lost religious texts."
+ 
+ #---------------------------
+ # Events
+ #---------------------------
  gambling.1.title: "Casino Night"
  gambling.1.desc: "It is time to host a luxury casino night for the high rollers of [Root.GetName]. Only the most wealthy are permitted to attend, so the potential rewards for the House tonight are unimaginable."
  gambling.1.option.a: "The focus is on Blackjack tonight!"
@@ -131,27 +71,6 @@
  
  casino_night_cooldown: "Recent Casino Night"
  casino_night_cooldown_desc: "We have already recently had a casino night, we cannot have another so soon."
- 
- #------------------------------------------
- # Prostitution
- #------------------------------------------
- SET_PROSTITUTION_ALLOWED: "Set §YProstitution Policy§! to §YAllowed§!."
- SET_PROSTITUTION_FORBIDDEN: "Set §YProstitution Policy§! to §YForbidden§!."
- 
- PROSTITUTION_ALLOWED: "Prostitution is allowed."
- PROSTITUTION_FORBIDDEN: "Prostitution is forbidden."
- 
- PROSTITUTION_ALLOWED_TT: "§YProstitution Policy§! set to §YAllowed§!."
- PROSTITUTION_FORBIDDEN_TT: "§YProstitution Policy§! set to §YForbidden§!."
- 
- country_prostitution_allowed: "Prostitution Allowed"
- desc_country_prostitution_allowed: "We allow prostitution in our country."
- 
- country_prostitution_forbidden: "Prostitution Forbidden"
- desc_country_prostitution_forbidden: "We forbid prostitution in our country."
- 
- visit_brothel_title: "Visit Brothel"
- visit_brothel_desc: "Let [Root.Monarch.GetName] visit a brothel."
  
  prostitution.1.title: "The Brothel"
  prostitution.1.desc: "As [Root.Monarch.GetName] steps inside, the sights and sounds of the brothel draw [Root.Monarch.GetHerHim] inwards.\n\nHere [Root.Monarch.GetSheHe] peruses the selection of partners available..."
@@ -221,33 +140,9 @@
  
  visit_brothel_cooldown: "Recent Brothel Visit"
  visit_brothel_cooldown_desc: "We have already recently visited a brothel, we cannot visit another so soon."
- 
- #------------------------------------------
- # Narcotics
- #------------------------------------------
- SET_NARCOTICS_ALLOWED: "Set §YNarcotics Policy§! to §YAllowed§!."
- SET_NARCOTICS_FORBIDDEN: "Set §YNarcotics Policy§! to §YForbidden§!."
- 
- NARCOTICS_ALLOWED: "Narcotics are allowed."
- NARCOTICS_FORBIDDEN: "Narcotics are forbidden."
- 
- NARCOTICS_ALLOWED_TT: "§YNarcotics Policy§! set to §YAllowed§!."
- NARCOTICS_FORBIDDEN_TT: "§YNarcotics Policy§! set to §YForbidden§!."
- 
- country_narcotics_allowed: "Narcotics Allowed"
- desc_country_narcotics_allowed: "We allow narcotics in our country."
- 
- country_narcotics_forbidden: "Narcotics Forbidden"
- desc_country_narcotics_forbidden: "We forbid narcotics in our country."
- 
+
  ruler_drug_abuse: "Drug Abuse"
  desc_ruler_drug_abuse: "[Root.Monarch.GetName] has consumed drugs, enchaning their prowess, but stunting their fertility."
- 
- synthesize_drug_title: "Synthesize Drug"
- synthesize_drug_desc: "Let [Root.Monarch.GetName] take a synthesized drug to enhance their prowess."
- 
- purge_drug_manufacturing_title: "Purge Drug Manufacturing"
- purge_drug_manufacturing_desc: "The fiends that partake in the manufacture of drugs must be eliminated. We shall run them out of our lands, and burn their operations to the ground."
  
  drug_purge_cooldown: "Drug Purge"
  desc_drug_purge_cooldown: ""
@@ -267,30 +162,6 @@
  narcotics.10.title: "Purge Drug Manufacturing"
  narcotics.10.desc: "We have opted to purge all traces of drug manufacturing from our provinces, as a measure to enforce our narcotics policy more stringently."
  narcotics.10.option.a: "Good riddance!"
- 
- #------------------------------------------
- # Scavenging
- #------------------------------------------
- SET_SCAVENGING_ALLOWED: "Set §YScavenging Policy§! to §YAllowed§!."
- SET_SCAVENGING_FORBIDDEN: "Set §YScavenging Policy§! to §YForbidden§!."
- 
- SCAVENGING_ALLOWED: "Scavenging is allowed."
- SCAVENGING_FORBIDDEN: "Scavenging is forbidden."
- 
- SCAVENGING_ALLOWED_TT: "§YScavenging Policy§! set to §YAllowed§!."
- SCAVENGING_FORBIDDEN_TT: "§YScavenging Policy§! set to §YForbidden§!."
- 
- country_scavenging_allowed: "Scavenging Allowed"
- desc_country_scavenging_allowed: "We allow public scavenging in our country."
- 
- country_scavenging_forbidden: "Scavenging Forbidden"
- desc_country_scavenging_forbidden: "We forbid public scavenging in our country."
- 
- start_scavenger_hunt_title: "Start Scavenger Hunt"
- start_scavenger_hunt_desc: "Let us start a scavenger hunt for rare scrap."
- 
- search_for_lost_texts_title: "Search for Lost Texts"
- search_for_lost_texts_desc: "Let us start a search of lost religious texts."
  
  scavenging.1.title: "Scavenger Hunt"
  scavenging.1.desc: ""

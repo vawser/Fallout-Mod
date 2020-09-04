@@ -1,36 +1,33 @@
 monarch_power = MIL
 
+# applied when a country is ahead of time in this technology
+# no bonus for MIL currently
+ahead_of_time = {
+	army_tradition = 1
+    yearly_corruption = -0.05
+}
+
+# Pre-era techs
 technology = {
-	year = 100
-    
-    sprite_level = 1
-    
-    land_morale 		= 2.0
+	# Tech 0
+	year = 2241
+	
+	sprite_level = 1
+
+	land_morale 		= 2.0
     military_tactics    = 0.0
     combat_width        = 0.0
     supply_limit        = 0.0
     maneuver_value      = 0.0
     
-    infantry_fire		= 0.2
-    infantry_shock 	    = 0.2
-    cavalry_fire  	    = 0.2
-    cavalry_shock   	= 0.4
-    artillery_fire 	    = 0.4
-    artillery_shock  	= 0.2
-    
-    fbs_military_camp = yes
-    fbs_outpost = yes
-    fbs_barracks = yes
-    fbs_armory = yes
-    fbs_fort_1 = yes
-    fbs_army_command = yes
-    fbs_planning_command = yes
-    fbs_infantry_recruitment_centre = yes
-    fbs_chem_lab = yes
-    fbs_shooting_range = yes
-    fbs_slave_pit = yes
-    
-    # Infantry
+    infantry_fire		= 1.0
+    infantry_shock 	    = 1.0
+    cavalry_fire  	    = 1.0
+    cavalry_shock   	= 2.0
+    artillery_fire 	    = 2.0
+    artillery_shock  	= 1.0
+	
+	# Infantry
     enable = wastelander_grunt
     enable = raider_scum
     enable = tribal_grunt
@@ -56,6 +53,7 @@ technology = {
     enable = coa_cultist
     enable = hubologist_initiate
     enable = deathclaw_scavenger
+    enable = chinese_grunt
     
     # Cavalry
     enable = chevrolet_ak
@@ -72,68 +70,61 @@ technology = {
     enable = tankbot
     enable = laser_cannon
     enable = zetan_cannon
+    
+    fbs_military_camp = yes
+    fbs_outpost = yes
+    fbs_barracks = yes
+    fbs_armory = yes
+    fbs_fort_1 = yes
 }
-# 1
 technology = {
-	year = 2279
+	# Tech 1
+	year = 2254
     
-    
+    infantry_fire = 0.25
+    infantry_shock = 0.25
 }
-# 2
+
 technology = {
-	year = 2280
-    
-    land_morale = 0.2
-    combat_width = 1
-}
-# 3
-technology = {
-	year = 2290
-    
-    military_tactics = 0.2
-    supply_limit = 0.1
-}
-# 4
-technology = {
-	year = 2300
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
-}
-# 5
-technology = {
-	year = 2310
-    
+	# Tech 2
+	year = 2267
+
+    cavalry_shock = 0.5
     cavalry_fire = 0.1
-    cavalry_shock = 0.2
     maneuver_value = 0.1
 }
-# 6
+
 technology = {
-	year = 2320
+	# Tech 3
+	year = 2280
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 4
+	year = 2293
+	
+    land_morale = 0.5
+    military_tactics = 0.5
     
-    artillery_fire = 0.2
+    fbs_fort_2 = yes
+}
+
+technology = {
+	# Tech 5
+	year = 2306
+
+    artillery_fire = 0.5
     artillery_shock = 0.1
 }
-# 7
+
 technology = {
-	year = 2330
-    
-    land_morale = 0.2
-    combat_width = 1
-}
-# 8
-technology = {
-	year = 2340
-    
-    military_tactics = 0.2
-    supply_limit = 0.1
-}
-# 9
-technology = {
-	year = 2350
-    
-    # Infantry
+	# Tech 6
+	year = 2319
+
+	# Infantry
     enable = wastelander_trooper
     enable = raider_psycho
     enable = tribal_fighter
@@ -156,93 +147,118 @@ technology = {
     enable = coa_preacher
     enable = hubologist_cultist
     enable = deathclaw_roamer
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
+    enable = chinese_soldier
 }
-# 10
+
 technology = {
-	year = 2360
+	# Tech 7
+	year = 2332
+	
+	fbs_chem_lab = yes
+    fbs_shooting_range = yes
+    fbs_slave_pit = yes
+}
+
+technology = {
+	# Tech 8
+	year = 2345
+	
+    land_morale = 1
+    military_tactics = 0.5
     
-    # Cavalry
+    fbs_fort_3 = yes
+}
+
+technology = {
+	# Tech 9
+	year = 2358
+
+    cavalry_shock = 0.5
+    cavalry_fire = 0.1
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 10
+	year = 2371
+	
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 11
+	year = 2384
+
+    artillery_fire = 0.5
+    artillery_shock = 0.1
+}
+
+technology = {
+	# Tech 12
+	year = 2397
+	
+	# Cavalry
     enable = m46_patton
     enable = roadrunner
     enable = coyote
     enable = gun_drone
-    
-    cavalry_fire = 0.1
-    cavalry_shock = 0.2
-    maneuver_value = 0.1
-    
-    fbs_fort_2 = yes
 }
-# 11
+
 technology = {
-	year = 2370
-    
+	# Tech 13
+	year = 2410
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 14
+	year = 2423
+
+    cavalry_shock = 0.5
+    cavalry_fire = 0.1
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 15
+	year = 2436
+	
     # Artillery
     enable = m114_howitizer
     enable = telsabot
     enable = tesla_cannon
     
-    artillery_fire = 0.2
-    artillery_shock = 0.1
+	fbs_army_command = yes
+    fbs_planning_command = yes
+    fbs_infantry_recruitment_centre = yes
 }
-# 12
+
 technology = {
-	year = 2380
+	# Tech 16
+	year = 2449
+	
+    land_morale = 0.5
+    military_tactics = 0.5
     
-    land_morale = 0.4
+    fbs_fort_4 = yes
+}
+
+technology = {
+	# Tech 17
+	year = 2462
+
+    supply_limit = 0.25
     combat_width = 2
 }
-# 13
+
 technology = {
-	year = 2390
-    
-    military_tactics = 0.4
-    supply_limit = 0.2
-}
-# 14
-technology = {
-	year = 2400
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
-}
-# 15
-technology = {
-	year = 2410
-    
-    cavalry_fire = 0.1
-    cavalry_shock = 0.2
-    maneuver_value = 0.2
-}
-# 16
-technology = {
-	year = 2420
-    
-    artillery_fire = 0.2
-    artillery_shock = 0.1
-}
-# 17
-technology = {
-	year = 2430
-    
-    land_morale = 0.4
-    combat_width = 2
-}
-# 18
-technology = {
-	year = 2440
-    
-    military_tactics = 0.4
-    supply_limit = 0.2
-}
-# 19
-technology = {
-	year = 2450
-    
-    # Infantry
+	# Tech 18
+	year = 2475
+
+	# Infantry
     enable = wastelander_commando
     enable = raider_veteran
     enable = tribal_commando
@@ -265,186 +281,198 @@ technology = {
     enable = coa_zealot
     enable = hubologist_preacher
     enable = deathclaw_mankiller
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
+    enable = chinese_commando
 }
-# 20
+
 technology = {
-	year = 2460
+	# Tech 19
+	year = 2488
     
-    # Cavalry
+    artillery_fire = 0.5
+    artillery_shock = 0.1
+}
+
+technology = {
+	# Tech 20
+	year = 2501
+
+    land_morale = 1
+    military_tactics = 0.5
+    
+    fbs_fort_5 = yes
+}
+
+technology = {
+	# Tech 21
+	year = 2514
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 22
+	year = 2527
+
+    cavalry_shock = 0.5
+    cavalry_fire = 0.1
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 23
+	year = 2540
+    
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 24
+	year = 2553
+	
+	# Cavalry
     enable = m103
     enable = interceptor
     enable = dust_devil 
     enable = laser_drone
     enable = vb_02  # Add decision to unlock
     
-    cavalry_fire = 0.1
-    cavalry_shock = 0.2
-    maneuver_value = 0.2
-    
-    fbs_fort_3 = yes
-}
-# 21
-technology = {
-	year = 2470
-    
     # Artillery
     enable = m115_howitizer
     enable = nukebot
     enable = plasma_cannon
-    
-    artillery_fire = 0.2
+}
+
+technology = {
+	# Tech 25
+	year = 2566
+	
+    supply_limit = 0.25
+    combat_width = 2
+}
+
+technology = {
+	# Tech 26
+	year = 2579
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 27
+	year = 2592
+
+    artillery_fire = 0.5
     artillery_shock = 0.1
 }
-# 22
+
 technology = {
-	year = 2480
-    
-    land_morale = 0.6
-    combat_width = 3
-}
-# 23
-technology = {
-	year = 2490
-    
-    military_tactics = 0.6
-    supply_limit = 0.3
-}
-# 24
-technology = {
-	year = 2500
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
-}
-# 25
-technology = {
-	year = 2510
-    
-    cavalry_fire = 0.1
-    cavalry_shock = 0.2
-    maneuver_value = 0.3
-    
-    fbs_fort_4 = yes
-}
-# 26
-technology = {
-	year = 2520
-    
-    artillery_fire = 0.2
-    artillery_shock = 0.1
-}
-# 27
-technology = {
-	year = 2530
-    
-    land_morale = 0.6
-    combat_width = 3
-}
-# 28
-technology = {
-	year = 2540
-    
-    military_tactics = 0.6
-    supply_limit = 0.3
-}
-# 29
-technology = {
-	year = 2550
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
-}
-# 30
-technology = {
-	year = 2560
-    
-    cavalry_fire = 0.1
-    cavalry_shock = 0.2
-    maneuver_value = 0.3
-    
-    fbs_fort_5 = yes
-}
-# 31
-technology = {
-	year = 2570
-    
-    artillery_fire = 0.2
-    artillery_shock = 0.1
-}
-# 32
-technology = {
-	year = 2580
-    
-    land_morale = 0.8
-    combat_width = 4
-}
-# 33
-technology = {
-	year = 2590
-    
-    military_tactics = 0.8
-    supply_limit = 0.4
-}
-# 34
-technology = {
-	year = 2600
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
-}
-# 35
-technology = {
-	year = 2610
-    
-    cavalry_fire = 0.1
-    cavalry_shock = 0.2
-    maneuver_value = 0.4
-}
-# 36
-technology = {
-	year = 2620
-    
-    artillery_fire = 0.2
-    artillery_shock = 0.1
-}
-# 37
-technology = {
-	year = 2630
-    
-    land_morale = 0.8
-    combat_width = 4
-}
-# 38
-technology = {
-	year = 2640
-    
-    military_tactics = 0.8
-    supply_limit = 0.4
-}
-# 39
-technology = {
-	year = 2650
-    
-    infantry_fire = 0.1
-    infantry_shock = 0.1
-}
-# 40
-technology = {
-	year = 2660
-    
-    cavalry_fire = 0.1
-    cavalry_shock = 0.2
-    maneuver_value = 0.4
+	# Tech 28
+	year = 2605
+	
+    land_morale = 0.5
+    military_tactics = 0.75
     
     fbs_fort_6 = yes
 }
-# 41
+
 technology = {
-	year = 2670
+	# Tech 29
+	year = 2618
+
+    supply_limit = 0.25
+    combat_width = 2
+}
+
+technology = {
+	# Tech 30
+	year = 2631
+
+    cavalry_shock = 1
+    cavalry_fire = 0.3
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 31
+	year = 2644
     
-    artillery_fire = 0.2
-    artillery_shock = 0.1
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 32
+	year = 2657
+
+    land_morale = 1
+    military_tactics = 0.75
+}
+
+technology = {
+	# Tech 33
+	year = 2670
+
+    supply_limit = 0.25
+    combat_width = 2	
+}
+
+technology = {
+	# Tech 34
+	year = 2685
+
+    artillery_fire = 1
+    artillery_shock = 0.3
+}
+
+technology = {
+	# Tech 35
+	year = 2700
+
+    infantry_fire = 0.5
+    infantry_shock = 0.5
+}
+
+technology = {
+	# Tech 36
+	year = 2715
+
+    land_morale = 0.5
+    military_tactics = 1
+}
+
+technology = {
+	# Tech 37
+	year = 2730
+
+    cavalry_shock = 1
+    cavalry_fire = 0.3
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 38
+	year = 2745
+
+    infantry_fire = 0.5
+    infantry_shock = 0.5
+}
+
+technology = {
+	# Tech 39
+	year = 2750
+    
+    artillery_fire = 1
+    artillery_shock = 0.3
+}
+
+technology = {
+	# Tech 40
+	year = 2765
+	
+    land_morale = 1
+    military_tactics = 1
+    combat_width = 2
 }

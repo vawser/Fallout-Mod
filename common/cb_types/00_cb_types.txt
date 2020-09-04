@@ -993,7 +993,7 @@ cb_world_crusade = {
 	valid_for_subject = no
 
 	prerequisites = {
-		#has_reform = religious_permanent_revolution_reform
+		always = no
 		OR = {
 			is_neighbor_of = FROM
 			claim = FROM

@@ -129,8 +129,52 @@ medical_and_fev_researchers = {
 #----------------------------------
 # Institute
 #----------------------------------
-# Facilities
-# Bio-science
 # Advanced Systems
-# Synth Retention Bureau
+INS_advanced_systems = {
+    monarch_power = ADM
+	always = yes
+	modifier = {
+		movement_speed = 0.1
+        infantry_power = 0.1
+	}
+}
+
+# Facilities
+INS_facilities = {
+    monarch_power = ADM
+	always = yes
+	modifier = {
+		development_cost = -0.1
+        governing_capacity_modifier = 0.1
+	}
+}
+
+# Bio-science
+INS_institute_bioscience = {
+    monarch_power = DIP
+	always = yes
+	modifier = {
+		global_manpower_modifier = 0.15
+        monarch_lifespan = 0.25
+	}
+}
+
 # Robotics
+INS_robotics = {
+    monarch_power = DIP
+	always = yes
+	modifier = {
+		technology_cost = -0.1
+        idea_cost = -0.05
+	}
+}
+
+# Synth Retention Bureau
+INS_synth_retention_bureau = {
+    monarch_power = MIL
+	always = yes
+	modifier = {
+		global_unrest = -3
+        years_of_nationalism = -5
+	}
+}

@@ -1,13 +1,20 @@
 monarch_power = ADM
 
-# 0
+# applied when a country is ahead of time in this technology
+ahead_of_time = {
+	production_efficiency = 0.2
+	yearly_corruption = -0.05
+}
+
+# Pre-era techs
 technology = {
-	year = 100
-    
-    may_support_rebels = yes
-    may_force_march = yes
-    
-    settlement_legacy = yes
+	# Tech 0
+	year = 2241
+	
+	may_support_rebels = yes
+	may_force_march = yes
+	
+	settlement_legacy = yes
     militia_legacy = yes
     legion_legacy = yes
     think_tank_legacy = yes
@@ -31,268 +38,300 @@ technology = {
     swarm_legacy = yes
     wolf_pack_legacy = yes
     great_khan_legacy = yes
-
+    
     fbs_research_lab = yes
     fbs_bank = yes
     fbs_office = yes
     fbs_factory = yes
     fbs_police_station = yes
     fbs_religious_centre = yes
-    fbs_casino = yes
-    fbs_centre_of_harmony = yes
-    fbs_science_centre = yes
-    fbs_junkyard = yes
-    fbs_brothel = yes
-    
-    governing_capacity = 100
-    production_efficiency = 0.0
-    allowed_idea_groups = 0
-    administrative_efficiency = 0.0
-    development_efficiency = 0.0
 }
 
-# 1
 technology = {
-	year = 2279
-    
+	# Tech 1
+	year = 2254
+
+	production_efficiency = 0.05
 }
-# 2
+
 technology = {
+	# Tech 2
+	year = 2267
+
+	governing_capacity = 50
+}
+
+technology = {
+	# Tech 3
 	year = 2280
-    
-    production_efficiency = 0.02
+
+	production_efficiency = 0.05
 }
-# 3
+
 technology = {
-	year = 2290
-    
-    governing_capacity = 100
+	# Tech 4
+	year = 2293
+
+	allowed_idea_groups = 1
 }
-# 4
+
 technology = {
-	year = 2300
-    
-    allowed_idea_groups = 1
+	# Tech 5
+	year = 2306
+
+	governing_capacity = 50
 }
-# 5
+
 technology = {
-	year = 2310
-    
-    administrative_efficiency = 0.02
+	# Tech 6
+	year = 2319
+
+	production_efficiency = 0.05
 }
-# 6
+
 technology = {
-	year = 2320
-    
-    development_efficiency = 0.02
+	# Tech 7
+	year = 2332
+	
+	fbs_junkyard = yes
+    fbs_brothel = yes
 }
-# 7
+
 technology = {
-	year = 2330
-    
-    allowed_idea_groups = 2
+	# Tech 8
+	year = 2345
+
+	allowed_idea_groups = 2
 }
-# 8
+
 technology = {
-	year = 2340
+	# Tech 9
+	year = 2358
     
-    production_efficiency = 0.02
+    governing_capacity = 50
 }
-# 9
+
 technology = {
-	year = 2350
+	# Tech 10
+	year = 2371
     
-    governing_capacity = 100
+    production_efficiency = 0.05
 }
-# 10
+
 technology = {
-	year = 2360
+	# Tech 11
+	year = 2384
     
-    administrative_efficiency = 0.02
+     governing_capacity = 50
 }
-# 11
+
 technology = {
-	year = 2370
-    
-    development_efficiency = 0.02
+	# Tech 12
+	year = 2397
+
+	allowed_idea_groups = 3
 }
-# 12
+
 technology = {
-	year = 2380
-    
-    allowed_idea_groups = 3
-}
-# 13
-technology = {
-	year = 2390
-    
-    production_efficiency = 0.04
-}
-# 14
-technology = {
-	year = 2400
-    
-    governing_capacity = 200
-}
-# 15
-technology = {
+	# Tech 13
 	year = 2410
     
-    administrative_efficiency = 0.04
+    production_efficiency = 0.05
 }
-# 16
+
 technology = {
-	year = 2420
+	# Tech 14
+	year = 2423
     
-    development_efficiency = 0.04
+    governing_capacity = 50
 }
-# 17
+
 technology = {
-	year = 2430
+	# Tech 15
+	year = 2436
+	
+	fbs_casino = yes
+    fbs_centre_of_harmony = yes
+    fbs_science_centre = yes
+}
+
+technology = {
+	# Tech 16
+	year = 2449
+
+	allowed_idea_groups = 4
+}
+
+technology = {
+	# Tech 17
+	year = 2462
+
+    administrative_efficiency = 0.05
+    development_efficiency = 0.05
+}
+
+technology = {
+	# Tech 18
+	year = 2475
+
+    production_efficiency = 0.05
+}
+
+technology = {
+	# Tech 19
+	year = 2488
+
+    governing_capacity = 50
+}
+
+technology = {
+	# Tech 20
+	year = 2501
+
+	allowed_idea_groups = 5
+}
+
+technology = {
+	# Tech 21
+	year = 2514
+
+    production_efficiency = 0.05
+}
+
+technology = {
+	# Tech 22
+	year = 2527
+	
+    governing_capacity = 50
+}
+
+technology = {
+	# Tech 23
+	year = 2540
+
+    production_efficiency = 0.05
+}
+
+technology = {
+	# Tech 24
+	year = 2553
+
+	allowed_idea_groups = 6
+}
+
+technology = {
+	# Tech 25
+	year = 2566
+
+    administrative_efficiency = 0.05
+    development_efficiency = 0.05
+}
+
+technology = {
+	# Tech 26
+	year = 2579
+
+    production_efficiency = 0.05
+}
+
+technology = {
+	# Tech 27
+	year = 2592
+
+    governing_capacity = 50
+}
+
+technology = {
+	# Tech 28
+	year = 2605
+
+	allowed_idea_groups = 7
+}
+
+technology = {
+	# Tech 29
+	year = 2618
     
-    allowed_idea_groups = 4
+    administrative_efficiency = 0.1
+    development_efficiency = 0.1
 }
-# 18
+
 technology = {
-	year = 2440
-    
-    production_efficiency = 0.04
+	# Tech 30
+	year = 2631
+
+    governing_capacity = 50
 }
-# 19
+
 technology = {
-	year = 2450
+	# Tech 31
+	year = 2644
+
+    production_efficiency = 0.05
+}
+
+technology = {
+	# Tech 32
+	year = 2657
+
+	allowed_idea_groups = 8
+}
+
+technology = {
+	# Tech 33
+	year = 2670
+
+    administrative_efficiency = 0.1
+    development_efficiency = 0.1
+}
+
+technology = {
+	# Tech 34
+	year = 2685
+
+    governing_capacity = 100
+}
+
+technology = {
+	# Tech 35
+	year = 2700
+
+    production_efficiency = 0.1
+}
+
+technology = {
+	# Tech 36
+	year = 2715
+
+    administrative_efficiency = 0.1
+    development_efficiency = 0.1
+}
+
+technology = {
+	# Tech 37
+	year = 2730
+
+    governing_capacity = 150
+}
+
+technology = {
+	# Tech 38
+	year = 2745
+
+    production_efficiency = 0.15
+}
+
+technology = {
+	# Tech 39
+	year = 2750
     
     governing_capacity = 200
 }
-# 20
+
 technology = {
-	year = 2460
-    
-    administrative_efficiency = 0.04
-}
-# 21
-technology = {
-	year = 2470
-    
-    development_efficiency = 0.04
-}
-# 22
-technology = {
-	year = 2480
-    
-    allowed_idea_groups = 5
-}
-# 23
-technology = {
-	year = 2490
-    
-    production_efficiency = 0.06
-}
-# 24
-technology = {
-	year = 2500
-    
-    governing_capacity = 300
-}
-# 25
-technology = {
-	year = 2510
-    
-    administrative_efficiency = 0.06
-}
-# 26
-technology = {
-	year = 2520
-    
-    development_efficiency = 0.06
-}
-# 27
-technology = {
-	year = 2530
-    
-    allowed_idea_groups = 6
-}
-# 28
-technology = {
-	year = 2540
-    
-    production_efficiency = 0.06
-}
-# 29
-technology = {
-	year = 2550
-    
-    governing_capacity = 300
-}
-# 30
-technology = {
-	year = 2560
-    
-    administrative_efficiency = 0.06
-}
-# 31
-technology = {
-	year = 2570
-    
-    development_efficiency = 0.06
-}
-# 32
-technology = {
-	year = 2580
-    
-    allowed_idea_groups = 7
-}
-# 33
-technology = {
-	year = 2590
-    
-    production_efficiency = 0.08
-}
-# 34
-technology = {
-	year = 2600
-    
-    governing_capacity = 400
-}
-# 35
-technology = {
-	year = 2610
-    
-    administrative_efficiency = 0.08
-}
-# 36
-technology = {
-	year = 2620
-    
-    development_efficiency = 0.08
-}
-# 37
-technology = {
-	year = 2630
-    
-    allowed_idea_groups = 8
-}
-# 38
-technology = {
-	year = 2640
-    
-    production_efficiency = 0.08
-}
-# 39
-technology = {
-	year = 2650
-    
-    governing_capacity = 400
-}
-# 40
-technology = {
-	year = 2660
-    
-    administrative_efficiency = 0.08
-}
-# 41
-technology = {
-	year = 2670
-    
-    development_efficiency = 0.08
+	# Tech 40
+	year = 2765
+
+    administrative_efficiency = 0.1
+    development_efficiency = 0.1
 }

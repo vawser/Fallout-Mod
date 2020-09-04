@@ -3,11 +3,11 @@
 #-----------------------------------
 set_slavery_allowed = {
     custom_tooltip = SET_SLAVERY_ALLOWED
-    hidden_effect = { set_country_flag = policy_allows_slavery }
+    hidden_effect = { }
 }
 set_slavery_forbidden = {
     custom_tooltip = SET_SLAVERY_FORBIDDEN
-    hidden_effect = { clr_country_flag = policy_allows_slavery }
+    hidden_effect = { set_estate_privilege = policy_forbid_slavery }
 }
 
 #-----------------------------------
@@ -15,11 +15,11 @@ set_slavery_forbidden = {
 #-----------------------------------
 set_gambling_allowed = {
     custom_tooltip = SET_GAMBLING_ALLOWED
-    hidden_effect = { set_country_flag = policy_allows_gambling }
+    hidden_effect = { }
 }
 set_gambling_forbidden = {
     custom_tooltip = SET_GAMBLING_FORBIDDEN
-    hidden_effect = { clr_country_flag = policy_allows_gambling }
+    hidden_effect = { set_estate_privilege = policy_forbid_gambling }
 }
 
 #-----------------------------------
@@ -27,11 +27,11 @@ set_gambling_forbidden = {
 #-----------------------------------
 set_prostitution_allowed = {
     custom_tooltip = SET_PROSTITUTION_ALLOWED
-    hidden_effect = { set_country_flag = policy_allows_prostitution }
+    hidden_effect = { }
 }
 set_prostitution_forbidden = {
     custom_tooltip = SET_PROSTITUTION_FORBIDDEN
-    hidden_effect = { clr_country_flag = policy_allows_prostitution }
+    hidden_effect = { set_estate_privilege = policy_forbid_prostitution }
 }
 
 #-----------------------------------
@@ -39,11 +39,11 @@ set_prostitution_forbidden = {
 #-----------------------------------
 set_narcotics_allowed = {
     custom_tooltip = SET_NARCOTICS_ALLOWED
-    hidden_effect = { set_country_flag = policy_allows_narcotics }
+    hidden_effect = { }
 }
 set_narcotics_forbidden = {
     custom_tooltip = SET_NARCOTICS_FORBIDDEN
-    hidden_effect = { clr_country_flag = policy_allows_narcotics }
+    hidden_effect = { set_estate_privilege = policy_forbid_narcotics }
 }
 
 #-----------------------------------
@@ -51,10 +51,10 @@ set_narcotics_forbidden = {
 #-----------------------------------
 set_scavenging_allowed = {
     custom_tooltip = SET_SCAVENGING_ALLOWED
-    hidden_effect = { set_country_flag = policy_allows_scavenging }
+    hidden_effect = { }
 }
 set_scavenging_forbidden = {
     custom_tooltip = SET_SCAVENGING_FORBIDDEN
-    hidden_effect = { clr_country_flag = policy_allows_scavenging }
+    hidden_effect = { set_estate_privilege = policy_forbid_scavenging }
 }
 

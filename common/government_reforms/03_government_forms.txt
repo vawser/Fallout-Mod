@@ -385,7 +385,7 @@ republic_reform = {
     }
 }
 dictatorship_reform = {
-    icon = "charismatic_man"
+    icon = "charismatic_person"
 
     allow_normal_conversion = no
     legacy_equivalent = dictatorship_legacy
@@ -459,6 +459,14 @@ institute_reform = {
     
     different_religion_acceptance = -50
 	different_religion_group_acceptance = -50
+    
+    factions = { 
+        INS_advanced_systems
+        INS_facilities
+        INS_institute_bioscience
+        INS_robotics
+        INS_synth_retention_bureau
+    }
     
     modifiers = {
         technology_cost = -0.1
@@ -611,6 +619,35 @@ ncr_reform = {
         max_absolutism = -10
         global_autonomy = -0.05
         governing_capacity = 200
+    }
+}
+china_reform = {
+    icon = "vault_computer"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = china_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+    
+    trigger = {
+        have_had_reform = china_reform
+    }
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
+    modifiers = {
+        land_morale = 0.25
+        max_absolutism = 50
+        global_autonomy = -0.1
+        governing_capacity = 300
     }
 }
 

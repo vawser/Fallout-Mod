@@ -2,13 +2,13 @@
 has_slavery_allowed = { 
     custom_trigger_tooltip = {
         tooltip = SLAVERY_ALLOWED_TT
-        has_country_flag = policy_allows_slavery
+        NOT = { has_estate_privilege = policy_forbid_slavery }
     }
 }
 has_slavery_forbidden = { 
     custom_trigger_tooltip = {
         tooltip = SLAVERY_FORBIDDEN_TT
-        NOT = { has_country_flag = policy_allows_slavery }
+        has_estate_privilege = policy_forbid_slavery
     }
 }
 
@@ -16,13 +16,13 @@ has_slavery_forbidden = {
 has_gambling_allowed = { 
     custom_trigger_tooltip = {
         tooltip = GAMBLING_ALLOWED_TT
-        has_country_flag = policy_allows_gambling
+        NOT = { has_estate_privilege = policy_forbid_gambling }
     }
 }
 has_gambling_forbidden = { 
     custom_trigger_tooltip = {
         tooltip = GAMBLING_FORBIDDEN_TT
-        NOT = { has_country_flag = policy_allows_gambling }
+        has_estate_privilege = policy_forbid_gambling
     }
 }
 
@@ -30,13 +30,13 @@ has_gambling_forbidden = {
 has_prostitution_allowed = { 
     custom_trigger_tooltip = {
         tooltip = PROSTITUTION_ALLOWED_TT
-        has_country_flag = policy_allows_prostitution
+        NOT = { has_estate_privilege = policy_forbid_prostitution }
     }
 }
 has_prostitution_forbidden = { 
     custom_trigger_tooltip = {
         tooltip = PROSTITUTION_FORBIDDEN_TT
-        NOT = { has_country_flag = policy_allows_prostitution }
+        has_estate_privilege = policy_forbid_prostitution
     }
 }
 
@@ -44,13 +44,13 @@ has_prostitution_forbidden = {
 has_narcotics_allowed = { 
     custom_trigger_tooltip = {
         tooltip = NARCOTICS_ALLOWED_TT
-        has_country_flag = policy_allows_narcotics
+        NOT = { has_estate_privilege = policy_forbid_narcotics }
     }
 }
 has_narcotics_forbidden = { 
     custom_trigger_tooltip = {
         tooltip = NARCOTICS_FORBIDDEN_TT
-        NOT = { has_country_flag = policy_allows_narcotics }
+        has_estate_privilege = policy_forbid_narcotics
     }
 }
 
@@ -58,12 +58,12 @@ has_narcotics_forbidden = {
 has_scavenging_allowed = { 
     custom_trigger_tooltip = {
         tooltip = SCAVENGING_ALLOWED_TT
-        has_country_flag = policy_allows_scavenging
+        NOT = { has_estate_privilege = policy_forbid_scavenging }
     }
 }
 has_scavenging_forbidden = { 
     custom_trigger_tooltip = {
         tooltip = SCAVENGING_ALLOWED_TT
-        NOT = { has_country_flag = policy_allows_scavenging }
+        has_estate_privilege = policy_forbid_scavenging
     }
 }

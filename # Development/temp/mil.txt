@@ -1,0 +1,477 @@
+monarch_power = MIL
+
+# applied when a country is ahead of time in this technology
+# no bonus for MIL currently
+ahead_of_time = {
+	land_morale = 0.5
+}
+
+# Pre-era techs
+technology = {
+	# Tech 0
+	year = 2750
+	
+	sprite_level = 1
+
+	land_morale 		= 2.0
+    military_tactics    = 0.0
+    combat_width        = 0.0
+    supply_limit        = 0.0
+    maneuver_value      = 0.0
+    
+    infantry_fire		= 1.0
+    infantry_shock 	    = 1.0
+    cavalry_fire  	    = 1.0
+    cavalry_shock   	= 2.0
+    artillery_fire 	    = 2.0
+    artillery_shock  	= 1.0
+	
+	# Infantry
+    enable = wastelander_grunt
+    enable = raider_scum
+    enable = tribal_grunt
+    enable = super_mutant_soldier
+    enable = eyebot
+    enable = ghoul_grunt
+    enable = brotherhood_scout
+    enable = synth_strider
+    enable = pdq_88b_securitron_mk1
+    enable = pdq_88b_securitron_mk2
+    enable = ncr_grunt
+    enable = legionary_recruit
+    enable = enclave_grunt
+    enable = shi_grunt
+    enable = zetan_warrior
+    enable = great_khan_grunt
+    enable = swamp_warrior
+    enable = rodent_scurrier
+    enable = vault_guard
+    enable = child_soldier
+    enable = triggerman_grunt
+    enable = memphis_kid
+    enable = coa_cultist
+    enable = hubologist_initiate
+    enable = deathclaw_scavenger
+    enable = chinese_grunt
+    
+    # Cavalry
+    enable = chevrolet_ak
+    enable = chevrolet_3100
+    enable = gmc_100
+    enable = super_mutant_behemoth
+    enable = support_drone
+    enable = vb_01
+    enable = zetan_saucer
+
+    # Artillery
+    enable = m1_pack_howitizer
+    enable = super_mutant_suicider
+    enable = tankbot
+    enable = laser_cannon
+    enable = zetan_cannon
+    
+    fbs_military_camp = yes
+    fbs_outpost = yes
+    fbs_barracks = yes
+    fbs_armory = yes
+    fbs_fort_1 = yes
+}
+technology = {
+	# Tech 1
+	year = 2763
+    
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 2
+	year = 2776
+
+    cavalry_shock = 0.5
+    cavalry_fire = 0.1
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 3
+	year = 2789
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 4
+	year = 2802
+	
+    land_morale = 0.5
+    military_tactics = 0.5
+    
+    fbs_fort_2 = yes
+}
+
+technology = {
+	# Tech 5
+	year = 2815
+
+    artillery_fire = 0.5
+    artillery_shock = 0.1
+}
+
+technology = {
+	# Tech 6
+	year = 2828
+
+	# Infantry
+    enable = wastelander_trooper
+    enable = raider_psycho
+    enable = tribal_fighter
+    enable = super_mutant_brute
+    enable = gunbot
+    enable = ghoul_trooper
+    enable = brotherhood_knight
+    enable = synth_trooper
+    enable = ncr_trooper
+    enable = legionary_soldier
+    enable = enclave_trooper
+    enable = shi_soldier
+    enable = zetan_eradicator
+    enable = great_khan_survivalist
+    enable = swamp_psycho
+    enable = rodent_biter
+    enable = vault_trooper
+    enable = triggerman_guard
+    enable = jailhouse_rocker
+    enable = coa_preacher
+    enable = hubologist_cultist
+    enable = deathclaw_roamer
+    enable = chinese_soldier
+}
+
+technology = {
+	# Tech 7
+	year = 2841
+	
+	fbs_chem_lab = yes
+    fbs_shooting_range = yes
+    fbs_slave_pit = yes
+}
+
+technology = {
+	# Tech 8
+	year = 2854
+	
+    land_morale = 1
+    military_tactics = 0.5
+    
+    fbs_fort_3 = yes
+}
+
+technology = {
+	# Tech 9
+	year = 2867
+
+    cavalry_shock = 0.5
+    cavalry_fire = 0.1
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 10
+	year = 2880
+	
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 11
+	year = 2893
+
+    artillery_fire = 0.5
+    artillery_shock = 0.1
+}
+
+technology = {
+	# Tech 12
+	year = 2906
+	
+	# Cavalry
+    enable = m46_patton
+    enable = roadrunner
+    enable = coyote
+    enable = gun_drone
+}
+
+technology = {
+	# Tech 13
+	year = 2919
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 14
+	year = 2932
+
+    cavalry_shock = 0.5
+    cavalry_fire = 0.1
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 15
+	year = 2945
+	
+    # Artillery
+    enable = m114_howitizer
+    enable = telsabot
+    enable = tesla_cannon
+    
+	fbs_army_command = yes
+    fbs_planning_command = yes
+    fbs_infantry_recruitment_centre = yes
+}
+
+technology = {
+	# Tech 16
+	year = 2958
+	
+    land_morale = 0.5
+    military_tactics = 0.5
+    
+    fbs_fort_4 = yes
+}
+
+technology = {
+	# Tech 17
+	year = 2971
+
+    supply_limit = 0.25
+    combat_width = 2
+}
+
+technology = {
+	# Tech 18
+	year = 2984
+
+	# Infantry
+    enable = wastelander_commando
+    enable = raider_veteran
+    enable = tribal_commando
+    enable = super_mutant_master
+    enable = laserbot
+    enable = ghoul_commando
+    enable = brotherhood_paladin
+    enable = synth_eradicator
+    enable = ncr_ranger
+    enable = prime_legionary
+    enable = enclave_veteran
+    enable = shi_commando
+    enable = zetan_overlord
+    enable = great_khan_veteran
+    enable = swamp_master
+    enable = rodent_brute
+    enable = vault_soldier
+    enable = triggerman_lieutenant
+    enable = kings_frontman
+    enable = coa_zealot
+    enable = hubologist_preacher
+    enable = deathclaw_mankiller
+    enable = chinese_commando
+}
+
+technology = {
+	# Tech 19
+	year = 2997
+    
+    artillery_fire = 0.5
+    artillery_shock = 0.1
+}
+
+technology = {
+	# Tech 20
+	year = 3010
+
+    land_morale = 1
+    military_tactics = 0.5
+    
+    fbs_fort_5 = yes
+}
+
+technology = {
+	# Tech 21
+	year = 3023
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 22
+	year = 3036
+
+    cavalry_shock = 0.5
+    cavalry_fire = 0.1
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 23
+	year = 3049
+    
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 24
+	year = 3062
+	
+	# Cavalry
+    enable = m103
+    enable = interceptor
+    enable = dust_devil 
+    enable = laser_drone
+    enable = vb_02  # Add decision to unlock
+    
+    # Artillery
+    enable = m115_howitizer
+    enable = nukebot
+    enable = plasma_cannon
+}
+
+technology = {
+	# Tech 25
+	year = 3075
+	
+    supply_limit = 0.25
+    combat_width = 2
+}
+
+technology = {
+	# Tech 26
+	year = 3088
+
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 27
+	year = 3101
+
+    artillery_fire = 0.5
+    artillery_shock = 0.1
+}
+
+technology = {
+	# Tech 28
+	year = 3114
+	
+    land_morale = 0.5
+    military_tactics = 0.75
+    
+    fbs_fort_6 = yes
+}
+
+technology = {
+	# Tech 29
+	year = 3127
+
+    supply_limit = 0.25
+    combat_width = 2
+}
+
+technology = {
+	# Tech 30
+	year = 3140
+
+    cavalry_shock = 1
+    cavalry_fire = 0.3
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 31
+	year = 3153
+    
+    infantry_fire = 0.25
+    infantry_shock = 0.25
+}
+
+technology = {
+	# Tech 32
+	year = 3166
+
+    land_morale = 1
+    military_tactics = 0.75
+}
+
+technology = {
+	# Tech 33
+	year = 3179
+
+    supply_limit = 0.25
+    combat_width = 2	
+}
+
+technology = {
+	# Tech 34
+	year = 3192
+
+    artillery_fire = 1
+    artillery_shock = 0.3
+}
+
+technology = {
+	# Tech 35
+	year = 3205
+
+    infantry_fire = 0.5
+    infantry_shock = 0.5
+}
+
+technology = {
+	# Tech 36
+	year = 3220
+
+    land_morale = 0.5
+    military_tactics = 1
+}
+
+technology = {
+	# Tech 37
+	year = 3235
+
+    cavalry_shock = 1
+    cavalry_fire = 0.3
+    maneuver_value = 0.1
+}
+
+technology = {
+	# Tech 38
+	year = 3250
+
+    infantry_fire = 0.5
+    infantry_shock = 0.5
+}
+
+technology = {
+	# Tech 39
+	year = 3265
+    
+    artillery_fire = 1
+    artillery_shock = 0.3
+}
+
+technology = {
+	# Tech 40
+	year = 3280
+	
+    land_morale = 1
+    military_tactics = 1
+    combat_width = 2
+}

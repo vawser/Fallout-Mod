@@ -31,14 +31,77 @@ guiTypes = {
 			name = "great_war_aftermath"
 			position = { x= 35 y = -29}
 			upsound = age_of_discovery
+            
+			iconType = {
+				name ="icon_great_war_aftermath"
+				spriteType = "GFX_icon_ages"
+				position = { x= -15 y = 22 }
+				frame = 1
+            }
+			iconType = {
+				name ="icon_chinese_incursion"
+				spriteType = "GFX_icon_ages_grey"
+				position = { x= -15 y = 60 }
+				frame = 2
+            }
+			iconType = {
+				name ="icon_zetan_assault"
+				spriteType = "GFX_icon_ages_grey"
+				position = { x= -15 y = 98 }
+				frame = 3
+            }
 		}			
 		
 		WindowType = {
-			name = "industrialisation"
+			name = "chinese_incursion"
 			position = { x= 35 y = -29}
 			upsound = age_of_reformation
+            
+			iconType = {
+				name ="icon_great_war_aftermath"
+				spriteType = "GFX_icon_ages_grey"
+				position = { x= -15 y = 22 }
+				frame = 1
+            }
+			iconType = {
+				name ="icon_chinese_incursion"
+				spriteType = "GFX_icon_ages"
+				position = { x= -15 y = 60 }
+				frame = 2
+            }
+			iconType = {
+				name ="icon_zetan_assault"
+				spriteType = "GFX_icon_ages_grey"
+				position = { x= -15 y = 98 }
+				frame = 3
+            }
 		}	
 		
+        WindowType = {
+			name = "zetan_assault"
+			position = { x= 35 y = -29}
+			upsound = age_of_absolutism
+            
+			iconType = {
+				name ="icon_great_war_aftermath"
+				spriteType = "GFX_icon_ages_grey"
+				position = { x= -15 y = 22 }
+				frame = 1
+            }
+			iconType = {
+				name ="icon_chinese_incursion"
+				spriteType = "GFX_icon_ages_grey"
+				position = { x= -15 y = 60 }
+				frame = 2
+            }
+			iconType = {
+				name ="icon_zetan_assault"
+				spriteType = "GFX_icon_ages"
+				position = { x= -15 y = 98 }
+				frame = 3
+            }
+		}
+        
 		instantTextBoxType = {
 			name = "title"
 			position = { x = 86 y =-27 }

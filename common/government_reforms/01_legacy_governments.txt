@@ -385,6 +385,14 @@ institute_legacy = {
     different_religion_acceptance = -50
 	different_religion_group_acceptance = -50
     
+    factions = { 
+        INS_advanced_systems
+        INS_facilities
+        INS_institute_bioscience
+        INS_robotics
+        INS_synth_retention_bureau
+    }
+    
     modifiers = {
         technology_cost = -0.1
         idea_cost = -0.1
@@ -454,6 +462,34 @@ vault_legacy = {
         max_absolutism = -10
         global_autonomy = -0.05
         governing_capacity = 100
+    }
+    
+	ai = { factor = 1 }
+}
+china_legacy = {
+    icon = "union"
+    
+    republic = yes
+    
+    allow_normal_conversion = no
+	legacy_government = yes
+    
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
+    modifiers = {
+        land_morale = 0.25
+        max_absolutism = 50
+        global_autonomy = -0.1
+        governing_capacity = 300
     }
     
 	ai = { factor = 1 }
