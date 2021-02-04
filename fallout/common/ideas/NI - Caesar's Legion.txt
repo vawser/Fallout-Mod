@@ -10,7 +10,10 @@ CAE_ideas = {
     }
     
     trigger = {
-        tag = CAE
+        OR = {
+            tag = SPA
+            tag = CAE
+        }
     }
     free = yes
     

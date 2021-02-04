@@ -8,7 +8,10 @@ city_ideas = {
 	}
 	
 	trigger = {
-		has_reform = settlement_reform
+		OR = {
+            has_reform = republic_reform
+            has_reform = settlement_reform
+        }
         capital_scope = {
             development = 20
         }
