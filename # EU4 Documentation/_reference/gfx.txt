@@ -1,0 +1,27 @@
+#--------------------------------------------------------------------------------
+# GFX
+#--------------------------------------------------------------------------------
+- Can now use primary culture, religion, religious group as prefix for event pictures.
+- Advisor portraits now look for "GFX_advisor_[culture_group]_[...]" before the 'GfxCulture' sprite.
+
+# Position can be changed depending on resolution with if_resolution
+instantTextBoxType = {
+    # ....
+
+    # Supports any of the attributes within a guiType:
+    # i.e. spriteType, size, etc
+    
+    if_resolution = {
+        max_height = 867
+        position = { x = 20 y = 350 }
+    }
+    if_resolution = {
+        min_height = 868
+        max_height = 1047
+        position = { x = 20 y = 500 }
+    }
+    if_resolution = {
+        min_height = 1048
+        position = { x = 20 y = 680 }
+    }
+}

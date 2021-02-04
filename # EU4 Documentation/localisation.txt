@@ -1,0 +1,162 @@
+############################
+# Localization Strings
+############################
+
+- The ¤ code in localization now supports a number after it, from 0 to 2. 0 is default if none given.
+- The ¤1 code will give you development icon in the text.
+- THe ¤2 code will give you province icon in the text.
+- It is now possible to add flavor desc texts for buildings using localisation tags of the following structure building_<buildingname>_desc.
+- building localization can use building_<name>_<religion> to alter naming
+
+###
+# Old Method (doesn't work in tooltips)
+###
+$CAPITAL$ #name of the capital region
+$CAPITAL_CITY$ #name of the capital city
+$CONTROLLERNAME$ #name of the country controlling the province
+$COUNTRY$
+$COUNTRY_ADJ$
+$COUNTRYNAME$
+$COUNTRY_RELIGION$
+$CULTURE$
+$DYNASTY$
+$EMPERORNAME$
+$ESTATE_NAMEOFESTATE$ #Example- $ESTATE_NOBLES$
+$FROM$
+$FROMCOUNTRY$
+$GOOD$ #Trade good
+$GOV$
+$GOVT$
+$HEIR$
+$HEIR_DYNASTY$
+$HEIR_ADJ$ #his/her
+$HEIR_CAP_ADJ$ #His/Her
+$HEIR_O_PRONOUN$ #him/her
+$HEIR_S_PRONOUN$ #he/she
+$HEIR_CAP_S_PRONOUN$ #He/She
+$HEIRNAME$ #not sure of difference between this and regular $HEIR$
+$LIKELYREBELS$
+$LORD$ #Overlord
+$MONARCH$
+$MONARCHTITLE$
+$OWNERNAME$
+$PROVINCECAPITAL$
+$PROVINCECULTURE$
+$PROVINCENAME$
+$RANDOM_OLD_MONARCH$
+$RANDOM_OLD_WAR$
+$RANK$ #government rank
+$RANK1$ #name of government rank 1
+$RANK2$ #name of government rank 2
+$RANK3$ #name of government rank 3
+$RELIGION_GROUP$
+$RULER_ADJ$ #his/her
+$RULER_S_PRONOUN$ #he/she
+$TAG$
+$YEAR$
+
+\n #new line
+£adm£ #ADM power symbol
+£dip£ #DIP power symbol
+£mil£ #MIL power symbol
+£icon_manpower£ #Manpower symbol
+@TAG #Will show the flag of the country.  Can only use tags, not other scopes (e.g. ROOT)
+
+###
+# New Method (will work in tooltips)
+###
+#Can use Root, tag, From, This,
+[Root.GetTag]
+[Root.Culture.GetName] #Not found in code but confirmed to work by a fellow modder
+[Root.Culture.GetGroupName]
+[Root.GetCult]
+[Root.GovernmentName]
+[Root.Heir.GetName]
+[Root.Heir.Dynasty.GetName]
+[Root.Heir.GetHerHim]
+[Root.Heir.GetHerHis]
+[Root.Heir.GetHerselfHimself]
+[Root.Heir.GetSheHe]
+#[Root.Heir.GetWomanMan] #This one doesn't work for some reason
+[Root.GetName]
+[Root.GetAdjective]
+[Root.Monarch.GetName]
+[Root.Monarch.Dynasty.GetName]
+[Root.Monarch.GetTitle]
+[Root.Monarch.GetHerHim]
+[Root.Monarch.GetHerHis]
+[Root.Monarch.GetHerHisCap]
+[Root.Monarch.GetHerselfHimself]
+[Root.Monarch.GetSheHe]
+[Root.Monarch.GetWomanMan]
+[Root.Monarch.GetAdm]
+[Root.Monarch.GetDip]
+[Root.Monarch.GetMil]
+[Root.Capital.GetName]
+[Root.Capital.GetCapitalName]
+[Root.Capital.Religion.GetName]
+[Root.Owner.Capital.GetCapitalName]
+[Root.Owner.Monarch.GetName]
+[Root.Owner.Religion.GetName]
+[Root.Religion.GetName]
+[Root.Religion.GetCountryModifiers]
+[Root.Religion.GetProvinceModifiers]
+
+[Root.variable_name.GetName] #can use scopes, tags, and event targets
+[Root.variable_name.GetValue] #can use scopes, tags, and event targets
+
+# Used for variables that contain culture/religion indexes
+[Root.variable_name.GetCultureName]
+[Root.variable_name.GetReligionName]
+[Root.variable_name.GetCultureGroupName] 
+[Root.variable_name.GetReligionGroupName]
+
+#Examples of other uses
+[From.Monarch.GetName]
+
+#Can call farther back
+[From.From.Capital.GetCapitalName]
+[From.From.From.Capital.GetCapitalName]
+
+#Added in 1.4
+[GetDate]
+[GetDateText]
+[GetMonth]
+[GetWomanMan]
+[GetYear]
+
+# Saved names
+[Scope.key.GetName]
+
+###
+# Color of text
+###
+§b #Black
+§B #Blue
+§G #Green
+§R #Red
+§W #White
+§Y #Yellow
+§M #Light Blue
+§g #Grey
+§T #Turquoise
+§l #Lime Green
+§O #Orange
+§! #Return to the default color text
+
+###
+# Advisors
+###
+#Advisors are just capitalized
+#Examples
+$ARTIST$
+$THEOLOGIAN$
+$TREASURER$
+$STATESMAN$
+
+#Pronouns
+$INQUISITOR_ADJ$ #his/her
+$INQUISITOR_CAP_ADJ$ #His/Her
+$INQUISITORO_PRONOUN$ #him/her
+$INQUISITOR_S_PRONOUN$ #he/she
+$INQUISITOR_CAP_S_PRONOUN$ #He/She

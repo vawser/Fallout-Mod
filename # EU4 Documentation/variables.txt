@@ -1,0 +1,245 @@
+#--------------------------------------------------------------------------------
+# Variables
+#--------------------------------------------------------------------------------
+# Can be applied on the country or province scope. Associated with the 'object' added to
+# so you must scope to the same object to retrieve the variable.
+# Can only hold floats, although indexes are used when grabbing things such as ruler_culture
+# which refer to the culture's index in the culture file.
+
+# ----- Effects -----
+set_variable = {            
+    which = <var>
+    value = <float/var>
+    
+    which = <scope> # Used in place of value, makes <var> the <scope>'s value of <var>
+}
+
+# Follow format above
+change_variable             # Add
+subtract_variable           # Subtract
+divide_variable             # Divide
+multiply_variable           # Multiply
+
+# ----- Triggers -----
+check_variable = {
+    which = <var>
+    value = <float>
+    which = <var>       # Used in place of value, checks value of the first <var> against the value of second <var>
+}
+
+is_variable_equal = {
+    which = <var>
+    which = <var>
+}
+
+#--------------------------------------------------------------------------------
+# Exportable Variables
+#--------------------------------------------------------------------------------
+# Assigns internal variable values to script variables. 
+export_to_variable = {
+    which = <var>               # i.e. stabilityVar
+    variable_name = <var>       # same as which, alternative declaration
+    value = <string>            # i.e. stability
+    who = <scope>               # Who to grab the value from
+    
+    # Supports exporting trigger limit values. Works for int, float and boolean triggers
+    value = trigger_value:<trigger>
+}
+
+#--------------------------------------------------------------------------------
+# Event Scope Values
+#--------------------------------------------------------------------------------
+# Using export_to_variable, you can grab the religion/culture index and use it with religion/culture effects
+export_to_variable = {
+    which = primary_culture_var
+    value = primary_culture
+}
+
+# Examples:
+change_culture = variable:primary_culture_var
+change_culture = variable:FROM:primary_culture_var # Supports FROM
+culture = variable:FROM:primary_culture_var        # In province scope trigger, scope back to country to check province culture against country culture
+
+# You can do this inline with new_variable. This acts as if the chosen string had been exported, and checks against it
+primary_culture = new_variable:primary_culture
+
+
+# Supported effects:
+change_religion
+change_culture
+change_primary_culture
+set_ruler_culture
+set_ruler_religion
+set_consort_culture
+set_consort_religion
+set_heir_culture
+set_heir_religion
+
+# Supported triggers:
+ruler_culture
+consort_culture
+heir_culture
+ruler_religion
+consort_religion
+heir_religion
+culture
+religion
+
+#--------------------------------------------------------------------------------
+# Variable Arithmetic Trigger
+#--------------------------------------------------------------------------------
+# Used in triggers. Permits usage of export_to_variable, custom_tooltip, and then a variable trigger.
+# export_to_variable MUST be done before the trigger check
+
+variable_arithmetic_trigger = {
+    custom_tooltip = <string>
+    
+    export_to_variable = {
+        variable_name = <string1>
+        value = <var>
+    }
+    
+    export_to_variable = {
+        variable_name = <string2>
+        value = <var>
+    }
+    
+    is_variable_equal = {
+        which = <string1>
+        which = <string2>
+    }
+}
+
+# Example:
+variable_arithmetic_trigger = {
+    # Export heir's culture as cultural_heir_culture
+    export_to_variable = {
+        variable_name = cultural_heir_culture
+        value = heir_culture
+    }
+
+    # Export ruler's culture as parent_culture
+    export_to_variable = {
+        variable_name = parent_culture
+        value = ruler_culture
+    }
+
+    # Check if heir's culture is the same as ruler's culture
+    is_variable_equal = {
+        which = cultural_heir_culture
+        which = parent_culture
+    }
+    # If so, then trigger is valid
+}
+
+#--------------------------------------------------------------------------------
+# Exportable Variable List
+#--------------------------------------------------------------------------------
+# Use trigger_value:<trigger> to export trigger values.
+# i.e. trigger_value:max_manpower
+
+# ----- Country -----
+# All country modifiers with modifier:<modifier>
+
+# General
+prestige                                   
+war_exhaustion    
+corruption                              
+stability           # Negative is negative Stability
+treasury 
+mercantilism
+inflation                             
+num_of_cities  
+num_of_ports
+adm_tech                                
+dip_tech                                
+mil_tech                                
+
+# Wealth              
+years_of_income                            
+monthly_income  
+trade_income_percentage   
+states_development                      
+average_autonomy                        
+average_home_autonomy 
+   
+# Military       
+manpower                                
+manpower_percentage                    
+max_manpower                            
+land_forcelimit                         
+naval_forcelimit                                             
+army_tradition                          
+navy_tradition  
+army_size                               
+navy_size 
+  
+# Stability
+average_unrest                          
+average_autonomy_above_min              
+average_effective_unrest                
+num_of_rebel_armies                     
+num_of_rebel_controlled_provinces                             
+overextension_percentage                
+                                      
+# Comparisons   
+border_distance         # Require who = <scope> in export_to_variable for the comparison to work
+capital_distance
+opinion
+trust
+
+# Ruler                    
+ADM                                     
+DIP                                     
+MIL                                     
+consort_adm                             
+consort_dip                             
+consort_mil                             
+heir_adm                                
+heir_dip                                
+heir_mil  
+
+# Religion 
+religion                # Returns an index (i.e. English = 1, French = 2, etc)
+dominant_religion       
+secondary_religion
+ruler_religion
+heir_religion
+consort_religion
+adm_advisor_religion
+dip_advisor_religion
+mil_advisor_religion
+           
+patriarch_authority                     
+piety                                   
+religious_unity 
+tolerance_to_this       # Tolerance of the True Faith   
+
+# Culture
+primary_culture         # Returns an index (i.e. English = 1, French = 2, etc)
+dominant_culture
+ruler_culture
+heir_culture
+consort_culture
+adm_advisor_culture
+dip_advisor_culture
+mil_advisor_culture
+
+# ----- Province -----
+# All province modifiers with modifier:<modifier>
+
+base_manpower
+base_production
+base_tax
+development
+
+unrest
+nationalism
+local_autonomy
+
+culture
+religion
+
+province_trade_power
+tolerance_to_this
+

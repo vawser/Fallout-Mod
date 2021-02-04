@@ -1,0 +1,14 @@
+#--------------------------------------------------
+# Terrain atlas
+#--------------------------------------------------
+Save as DXT5 with Mipmaps
+
+Atlas tiles per row controlled in pdxmap.shader:
+static const float NUM_TILES = 4.0f; # Change this to the new count per row
+
+Size of tile controlled in pdxmap.shader:
+static const float TEXELS_PER_TILE = 512.0f;
+
+Width and height must match TEXELS_PER_TILE * NUM_TILES
+
+Color table index is the atlas index, i.e. color 0 is the first tile in the atlas, etc

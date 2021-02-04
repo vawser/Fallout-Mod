@@ -1,0 +1,39 @@
+# ----- Decisions -----
+# Operate on the country scope
+
+country_decisions = {
+    <name> = {
+        major = yes     # optional, changes decision background
+        
+        # Controls visibility
+        potential = {
+            <triggers>
+        }
+        
+        # Controls usage
+        allow = {
+            <triggers>
+        }
+        
+        # What the decision executes
+        effect = {
+            <effects>
+        }
+        
+        # Control the AI's usage of the decision
+        # 0 means the AI will never use the decision
+        ai_will_do = {
+            factor = <int>
+            
+            # Modifies the factor
+            modifier = {
+                factor = <float>
+                <triggers>
+            }
+        }
+        
+        # How important the AI should treat this decision (i.e. when to use it)
+        ai_importance = <int>
+    }
+}
+
