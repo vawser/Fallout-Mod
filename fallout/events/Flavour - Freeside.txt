@@ -175,7 +175,10 @@ country_event = {
     picture = MORMON_FORT_INSIDE_eventPicture
 	
 	trigger = {
-		tag = NCR
+		OR = {
+            tag = NCR
+            tag = SHA
+        }
 		owns = 261
 		261 = {
 			NOT = { has_province_modifier = expanded_mormon_fort }

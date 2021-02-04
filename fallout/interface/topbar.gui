@@ -49,6 +49,10 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
+
+
+
+
 		iconType =
 		{
 			name ="topbar_upper_left_bg"
@@ -56,7 +60,7 @@ guiTypes = {
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-		
+
 		iconType =
 		{
 			name ="topbar_upper_left_bg4"
@@ -65,15 +69,31 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 
 		}
-		
+
 		iconType = {
 			name = "government_reforms_button_base"
 			quadTextureSprite ="GFX_government_reforms_button_base"
-			position = { x= 93 y = -9999 }
+			position = { x= 93 y = 104 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
-
+		
+        iconType = {
+			name = "build_interface_button_base"
+			quadTextureSprite ="GFX_government_reforms_button_base"
+			position = { x= -10 y = 104 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+        
+		iconType = {
+			name = "great_power_button_base"
+			quadTextureSprite ="GFX_great_power_button_base"
+			position = { x= 111 y = 80 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+        
 		guiButtonType = {
 			name = "player_shield"
 			quadTextureSprite ="GFX_mega_flag"
@@ -84,7 +104,7 @@ guiTypes = {
 			delayedTooltipText = ""
 			shortcut = "F1"
 		}
-		
+
 		iconType = {
 			name = "player_shield_glow"
 			quadTextureSprite ="GFX_shield_fancy_great_power_glow"
@@ -92,21 +112,12 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
-		
-        #-------------------------------------
-        # Buttons
-        #-------------------------------------		
-		iconType = {
-			name = "great_power_button_base"
-			quadTextureSprite ="GFX_close_gold2"
-			position = { x= 910 y = 5 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}		
-		
+        
+        
+        
 		guiButtonType = {
 			name = "open_build_interface_button"
-			position = { x = 917 y = 12 }
+			position = { x = -3 y = 111 }
 			quadTextureSprite ="GFX_open_build_interface"
 			tooltip = ""
 			tooltipText =""
@@ -116,30 +127,36 @@ guiTypes = {
 			hint_tag = "hint_macrobuild"
 			shortcut = "b"
 		}
+
 		
+
+		guiButtonType = {
+			name = "great_power_button"
+			position = { x = 115 y = 84 }
+			quadTextureSprite ="GFX_great_power_button"
+			buttonFont = "Main_14_black"
+			clicksound = macro_build
+		}
+
+
 		iconType = {
 			name = "government_reforms_progress"
-			position = { x = 100 y = -9999 }
+			position = { x = 100 y = 110 }
 			quadTextureSprite ="GFX_government_reforms_progress"
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
-		
+
 		guiButtonType = {
 			name = "government_reforms_button"
-			position = { x = 100 y = -9999 }
+			position = { x = 100 y = 110 }
 			quadTextureSprite ="GFX_government_reforms_button"
 			buttonFont = "Main_14_black"
 			clicksound = macro_build
 		}
-		
-		guiButtonType = {
-			name = "great_power_button"
-			position = { x = 98 y = -9999 }
-			quadTextureSprite ="GFX_great_power_button"
-			buttonFont = "Main_14_black"
-			clicksound = macro_build
-		}		
+
+	######### top bar portraits ###########
+
 
 		guiButtonType =
 		{
@@ -159,7 +176,7 @@ guiTypes = {
 			hint_tag = "hint_colonist"
 		}
 
-		
+
 		guiButtonType =
 		{
 			name ="icon_diplomat"
@@ -177,9 +194,9 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_missionary"
 		}
-		
-	##########################################	
-		
+
+	##########################################
+
 		iconType =
 		{
 			name ="topbar_upper_left_bg2"
@@ -187,22 +204,22 @@ guiTypes = {
 			position = { x= 731 y = 30 }
 			Orientation = "UPPER_LEFT"
 		}
-	
+
 	#############  portrait values #############
-	
+
 		instantTextBoxType = {
 			name = "text_merchants"
 			position = { x = 732 y = 34 }
 			textureFile = ""
 			font = "ToolTip_Font"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			font = "vic_18"
 			maxWidth = 42
 			maxHeight = 32
-			format = centre			
+			format = centre
 		}
-	
+
 		instantTextBoxType = {
 			name = "text_settlers"
 			position = { x = 773 y = 34 }
@@ -213,9 +230,9 @@ guiTypes = {
 			font = "vic_18"
 			maxWidth = 42
 			maxHeight = 32
-			format = centre		
+			format = centre
 		}
-		
+
 		instantTextBoxType = {
 			name = "text_diplomats"
 			position = { x = 814 y = 34 }
@@ -226,9 +243,9 @@ guiTypes = {
 			font = "vic_18"
 			maxWidth = 42
 			maxHeight = 32
-			format = centre		
+			format = centre
 		}
-		
+
 		instantTextBoxType = {
 			name = "text_missionaries"
 			position = { x = 855 y = 34 }
@@ -239,12 +256,12 @@ guiTypes = {
 			font = "vic_18"
 			maxWidth = 42
 			maxHeight = 32
-			format = centre		
+			format = centre
 		}
-		
-		
+
+
 	###########  top bar icons and values #############
-		
+
 		iconType =
 		{
 			name ="icon_gold"
@@ -259,12 +276,12 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = ""	
+			text = ""
 			maxWidth = 60
-			maxHeight = 32	
+			maxHeight = 32
 			format = right
 		}
-		
+
 		iconType =
 		{
 			name ="icon_manpower"
@@ -279,12 +296,12 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = ""	
+			text = ""
 			maxWidth = 50
 			maxHeight = 32
 			format = right
 		}
-		
+
 
 		iconType =
 		{
@@ -299,13 +316,13 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = ""	
+			text = ""
 			maxWidth = 50
 			maxHeight = 32
 			format = right
 		}
 
-		
+
 		iconType =
 		{
 			name ="icon_stability"
@@ -320,16 +337,16 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = ""	
+			text = ""
 			maxWidth = 40
 			maxHeight = 32
 			format = right
 		}
-		
 
 
 
-		
+
+
 		iconType =
 		{
 			name ="icon_prestige"
@@ -344,12 +361,12 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "100"	
+			text = "100"
 			maxWidth = 40
 			maxHeight = 32
 			format = right
 		}
-			
+
 		iconType =
 		{
 			name ="icon_dev"
@@ -365,7 +382,7 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "100"	
+			text = "100"
 			maxWidth = 40
 			maxHeight = 32
 			format = right
@@ -386,13 +403,13 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "100"	
+			text = "100"
 			maxWidth = 40
 			maxHeight = 32
 			format = right
 		}
-		
-		
+
+
 		iconType =
 		{
 			name ="icon_leg"
@@ -408,12 +425,12 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "100"	
+			text = "100"
 			maxWidth = 40
 			maxHeight = 32
 			format = right
 		}
-		
+
 		iconType =
 		{
 			name ="icon_rep"
@@ -429,12 +446,12 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "100"	
+			text = "100"
 			maxWidth = 40
 			maxHeight = 32
 			format = right
 		}
-		
+
 		iconType =
 		{
 			name ="icon_unity"
@@ -449,7 +466,7 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "100"	
+			text = "100"
 			maxWidth = 40
 			maxHeight = 32
 			format = right
@@ -458,13 +475,13 @@ guiTypes = {
 		windowType = {
 			name = "powerprojection_topbar"
 			backGround=""
-			position = { x = 148 y = 0 }	
+			position = { x = 148 y = 0 }
 			size = { x=100 y=100 }
 			moveable = 0
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
-			fullScreen = no	
+			fullScreen = no
 
 				iconType =
 				{
@@ -472,7 +489,7 @@ guiTypes = {
 					spriteType = "GFX_topbar_liberty_overlay"
 					position = { x= 491 y = -1 }
 					Orientation = "UPPER_LEFT"
-				}	
+				}
 
 				iconType =
 				{
@@ -481,7 +498,7 @@ guiTypes = {
 					position = { x= 518 y = 10 }
 					Orientation = "UPPER_LEFT"
 					hint_tag = "hint_powerprojection"
-				}					
+				}
 
 				instantTextBoxType = {
 					name = "text_powerprojection"
@@ -489,24 +506,24 @@ guiTypes = {
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 4 y = 4}
-					text = ""	
+					text = ""
 					maxWidth = 40
 					maxHeight = 32
 					format = right
-				}			
-		
+				}
+
 		}
-		
+
 		windowType = {
 			name = "liberty_desire_topbar"
 			backGround=""
-			position = { x = 148 y = 0 }	
+			position = { x = 148 y = 0 }
 			size = { x=100 y=100 }
 			moveable = 0
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
-			fullScreen = no	
+			fullScreen = no
 
 				iconType =
 				{
@@ -514,7 +531,7 @@ guiTypes = {
 					spriteType = "GFX_topbar_liberty_overlay"
 					position = { x= 491 y = -1 }
 					Orientation = "UPPER_LEFT"
-				}	
+				}
 
 				iconType =
 				{
@@ -522,34 +539,34 @@ guiTypes = {
 					spriteType = "GFX_liberty_icon"
 					position = { x= 512 y = 10 }
 					Orientation = "UPPER_LEFT"
-				}					
+				}
 
-				instantTextBoxType = 
+				instantTextBoxType =
 				{
 					name = "topbar_liberty_value"
 					position = { x = 527 y = 13 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 4 y = 4}
-					text = "100"	
+					text = "100"
 					maxWidth = 40
 					maxHeight = 32
 					format = right
-				}		
-		
+				}
+
 		}
-	#######################################	
+	#######################################
 
-		
 
-		
 
-		
 
-		
-		
+
+
+
+
+
 	############### Power mechanics for a country ################
-	
+
 
 
 
@@ -566,21 +583,21 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = ""	
+			text = ""
 			maxWidth = 46
 			maxHeight = 32
 			format = right
-		}	
-		
+		}
+
 		instantTextBoxType = {
 			name = "text_ADM"
 			position = { x = 520 y = 52 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "5"	
+			text = "5"
 			maxWidth = 36
-			maxHeight = 32	
+			maxHeight = 32
 			format = left
 		}
 		iconType = {
@@ -589,16 +606,16 @@ guiTypes = {
 			position = { x= 498 y = 49 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_adm"
-		}		
-		
-		
+		}
+
+
 		instantTextBoxType = {
 			name = "text_DIP"
 			position = { x = 581 y = 52 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "5"	
+			text = "5"
 			maxWidth = 36
 			maxHeight = 32
 			format = left
@@ -617,7 +634,7 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "5"	
+			text = "5"
 			maxWidth = 36
 			maxHeight = 32
 			format = left
@@ -628,28 +645,28 @@ guiTypes = {
 			position = { x= 616 y = 49 }
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_mil"
-		}		
+		}
 
 		iconType = {
 			name = "button_base"
 			spriteType ="GFX_age_frame_addon"
 			position = { x= 690 y = 30 }
 			alwaystransparent = yes
-		}			
-		
+		}
+
 		guiButtonType = {
 			name = "current_age_button"
 			position = { x = 722 y = 32 }
 			quadTextureSprite ="GFX_age_button"
 			clicksound = macro_build
 		}
-		
+
 		guiButtonType = {
 			name = "age_icon"
 			spriteType ="GFX_icon_age_s"
 			position = { x= 705 y = 47 }
 			frame = 1
-		}	
+		}
 
 		instantTextBoxType = {
 			name = "age_title"
@@ -657,29 +674,29 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "AgeText"	
+			text = "AgeText"
 			maxWidth = 160
 			maxHeight = 32
 			format = left
 			alwaystransparent = yes
-		}		
-		
+		}
 
 
-		
-		
-		
+
+
+
+
 	#################################################
-	
+
 
 
 		instantTextBoxType = {
 			name = "PlayerNationText"
-			position = { x = 148 y = 50 }
+			position = { x = 151 y = 50 }
 			textureFile = ""
 			font = "vic_22"
 			borderSize = {x = 4 y = 4}
-			text = ""	
+			text = ""
 			maxWidth = 340
 			maxHeight = 32
 			fixedsize = yes
@@ -687,15 +704,15 @@ guiTypes = {
 
 
 	############### DATE PANEL ###################
-		
-		
 
-		
+
+
+
 
 		windowType = {
 			name = "pause_window"
 			backGround=""
-			position = { x=-203 y= 100 }	
+			position = { x=-203 y= 100 }
 			size = { x=406 y=70 }
 			dontRender = ""
 			horizontalBorder= ""
@@ -703,14 +720,14 @@ guiTypes = {
 			fullScreen = no
 			moveable = 0
 			Orientation = "CENTER_UP"
-			
+
 			iconType ={
 				name ="pause_banner"
 				spriteType = "GFX_pause_banner"
 				position = { x = 0 y = -15 }
 				Orientation = "UPPER_LEFT"
-			}	
-			
+			}
+
 			#Needs localisation change
 			instantTextBoxType = {
 				name = "pause_banner_text"
@@ -718,18 +735,18 @@ guiTypes = {
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 4 y = 4}
-				text = "CORE_PAUSED"	
+				text = "CORE_PAUSED"
 				maxWidth = 120
 				maxHeight = 32
 				format = center
 			}
 		}
 	} ### end of "topbar"
-	
+
 	windowType = {
 		name = "alerts_parent"
 		backGround=""
-		position = { x=0 y=-1 }	
+		position = { x=0 y=-1 }
 		size = { x=2048 y=100 }
 		moveable = 0
 		dontRender = ""

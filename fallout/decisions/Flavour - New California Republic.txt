@@ -54,7 +54,10 @@ country_decisions = {
     
     unify_the_republic = {
 		potential = {
-			has_reform = ncr_reform
+			OR = {
+                has_reform = ncr_reform
+                has_reform = ncr_state_reform
+            }
             NOT = { exists = NCR }
 			capital_scope = {
 				region = california_region
@@ -106,6 +109,12 @@ country_decisions = {
 				duration = 7300
 			}
 			change_tag = NCR
+            if = {
+                limit = {
+                    NOT = { has_reform = ncr_reform }
+                }
+                add_government_reform = ncr_reform
+            }
 		}
 	}
 }

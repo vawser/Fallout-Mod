@@ -1,0 +1,51 @@
+unity_of_caesar = {
+	potential = {
+		normal_or_historical_nations = yes
+		tag = CAE
+        has_ruler_modifier = son_of_mars
+	}
+	can_start = {
+        has_ruler_modifier = son_of_mars
+	}
+	can_stop = {
+		NOT = { has_ruler_modifier = son_of_mars }
+	}
+	progress = {
+		modifier = {
+			factor = 10
+		}
+	}
+	can_end = {
+		NOT = { has_ruler_modifier = son_of_mars }
+	}
+	modifier = {
+		global_tax_modifier = 1.0
+        production_efficiency = 1.0
+        trade_efficiency = 1.0
+        global_manpower_modifier = 1.0
+        army_tradition = 1.0
+	}
+	
+	on_start = legion_flavour.1 # "Caesar, Son of Mars"
+    
+	on_end = legion_flavour.36 # "Death of Caesar"
+    
+	on_monthly = {
+		events = {
+			legion_flavour.4 # "Born into Slavery"
+		}
+		random_events = {
+			1000 = 0
+			50 = legion_flavour.2 # "Alea Iacta Est"
+			50 = legion_flavour.3 # "The Howitzer"
+            10 = legion_flavour.28 # "Tribal Ferocity"
+            10 = legion_flavour.29 # "Tempus Belli"
+            10 = legion_flavour.30 # "Fortify Flagstaff"
+            10 = legion_flavour.31 # "Centro Imperium"
+            10 = legion_flavour.32 # "Patientia Opportuna"
+            10 = legion_flavour.33 # "Via Militaris"
+            10 = legion_flavour.34 # "Celeri Motus"
+            10 = legion_flavour.35 # "Loci Praesido"
+		}
+	}
+}

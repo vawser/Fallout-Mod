@@ -1037,3 +1037,45 @@
  WHITE_PEACE_INDEPENDANCE: "White Peace. \n §R$ATTACKER$ remains subject to $DEFENDER$.§!\n
  PERSONAL_UNION_WITH: "§Y$OTHER$§W's Ruler"
  
+ #------------------------------------------------------
+ # Daimyo
+ #------------------------------------------------------
+ daimyo_vassal: "NCR Territory"
+ daimyo_vassal_title: "NCR Territory"
+ daimyo_vassal_title_plural: "NCR Territories"
+ daimyo_vassal_long_desc:0 "A NCR Territory subject must follow their overlord to war, cannot make certain diplomatic actions and will pay a fraction of his income to his overlord. NCR Territory subjects can also fight each other."
+ daimyo_vassal_is_our: "$NAME|Y$ is our NCR Territory."
+ 
+ is_daimyo_vassal: "Is NCR Territory"
+ daimyo_vassal_nation: "NCR Territory"
+ daimyo_vassal_overlord: "NCR Overlord"
+ 
+ #------------------------------------------------------
+ # Disasters
+ #------------------------------------------------------
+ DISASTER_GIVES:0 "Gives the following effects:"
+ DISASTER_WILL_GIVE:0 "Would have the following effects:"
+ DISASTER_END_WHEN:0 "Ends when:\n$WHEN$"
+ DISASTER_START_WHEN:0 "Can happen under the following conditions:\n$WHEN$"
+ DISASTER_STOP_WHEN:0 "Can be stopped by:\n$WHEN$"
+ DISASTER_PROGRESS_MODS:0 "Progress modified by:\n$PROGRESS$"
+ DISASTER_PROGRESS_WHERE:0 "Currently at §Y$VAL$%§! progress towards starting."
+ DISASTER_DOWN_PROGRESS:0 "Progress would be $DEC$ each month if we stop this.\n$WHY$"
+ DISASTER_PROGRESS_WHY:1 "Progress is $INC$ each month:\n$WHY$"
+ DISASTER_ESTIMATED_START:0 "At this rate, $DISASTER|Y$ will start on $STARTDATE|Y$."
+ END_OF_DISASTER:0 "$NAME|Y$ will end.\n"
+ ALERT_DISASTER_ENTRY:0 "§Y$NAME$§! - §Y$CURR$%§! ($CHANGE$)\nThe monthly progress is due to:\n$REASON$"
+ CV_DISASTERS_DESC:0 "An Incident is a series of events that can affect your country. When the starting conditions are fulfilled for an Incident, its progress begins to tick up every month at a rate depending on a separate set of modifiers. A ticking incident can be stopped completely by fulfilling a set of stopping conditions that are separate from its starting conditions. When progress reaches 100% the incident starts and will continue until its ending conditions are fulfilled."
+ END_OF_DISASTER_MOD:0 "End of $NAME$"
+ DISASTERS:0 "Incidents"
+ disaster_active_for_10_years_tooltip:0 "Incident has been active for 10 years."
+ EXPIRES_AT_END_OF_DISASTER:0 "§YExpires at the end of $DISASTERNAME$.§!"
+ HAS_NOT_DISASTER:0 "Is NOT in $NAME|Y$.\n"
+ HAS_DISASTER:0 "Is currently in $NAME|Y$.\n"
+ HAVE_NO_DISASTER_TRIGGER:0 "Have no current incidents.\n"
+ HAVE_DISASTER_TRIGGER:0 "Currently in an incident.\n"
+ INCREASE_DISASTER_PROGRESS_EFFECT:0 "Incident progress for §Y$DISASTER$§! increased by §R$VALUE$§!"
+ DECREASE_DISASTER_PROGRESS_EFFECT:0 "Incident progress for §Y$DISASTER$§! decreased by §G$VALUE$§!"
+ DOES_NOT_HAVE_DISASTER_PROGRESS:0 "Incident progress for $DISASTER|Y$ less than $VALUE|Y$"
+ HAS_DISASTER_PROGRESS:0 "Incident progress for $DISASTER|Y$ at least $VALUE|Y$"
+ 

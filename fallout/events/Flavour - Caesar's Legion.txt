@@ -9,6 +9,8 @@ country_event = {
 	desc = legion_flavour.1.desc
     picture = LEGION_CROSS_eventPicture
 	
+    is_triggered_only = yes
+    
     trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = caesar_son_of_mars }
@@ -21,7 +23,7 @@ country_event = {
     }
     
     mean_time_to_happen = {
-		months = 1
+		days = 1
 	}
     
 	option = {
@@ -59,6 +61,8 @@ country_event = {
 	desc = legion_flavour.2.desc
     picture = LEGION_CROSS_eventPicture
 	
+    is_triggered_only = yes
+    
     trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = alea_iacta_est }
@@ -76,7 +80,7 @@ country_event = {
     }
     
     mean_time_to_happen = {
-		months = 12
+		days = 1
 	}
     
 	option = {
@@ -97,11 +101,18 @@ country_event = {
 	desc = legion_flavour.3.desc
     picture = HOWITIZER_eventPicture
 	
+    is_triggered_only = yes
+    
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = the_howitzer }
-        NCR = {
-            war_with = ROOT
+        OR = {
+            NCR = {
+                war_with = ROOT
+            }
+            SHA = {
+                war_with = ROOT
+            }
         }
     }
     
@@ -112,7 +123,7 @@ country_event = {
     }
  
     mean_time_to_happen = {
-		months = 36
+		days = 1
 	}
     
 	option = {
@@ -146,6 +157,10 @@ country_event = {
             set_country_flag = born_into_slavery 
         }
     }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
     
 	option = {
 		name = legion_flavour.4.option.a
@@ -835,9 +850,16 @@ country_event = {
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = the_water_merchants }
-        NCR = {
-            ROOT = {
-                claim = PREV
+        OR = {
+            NCR = {
+                ROOT = {
+                    claim = PREV
+                }
+            }
+            SHA = {
+                ROOT = {
+                    claim = PREV
+                }
             }
         }
     }
@@ -873,7 +895,10 @@ country_event = {
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = the_followers }
-        claim = NCR
+        OR = {
+            claim = NCR
+            claim = SHA
+        }
     }
     
     immediate = {
@@ -910,9 +935,15 @@ country_event = {
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = seat_of_the_council }
-        military_strength = {
-            who = NCR
-            value = 1.2
+        OR = {
+            military_strength = {
+                who = SHA
+                value = 1.2
+            }
+            military_strength = {
+                who = NCR
+                value = 1.2
+            }
         }
     }
     
@@ -1146,6 +1177,8 @@ country_event = {
 	desc = legion_flavour.28.desc
     picture = LEGION_CROSS_eventPicture
 	
+    is_triggered_only = yes
+    
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_modifier = tribal_ferocity }
@@ -1153,7 +1186,7 @@ country_event = {
     }
     
     mean_time_to_happen = {
-		months = 240
+		days = 1
 	}
     
 	option = {
@@ -1175,6 +1208,8 @@ country_event = {
 	desc = legion_flavour.29.desc
     picture = LEGION_CROSS_eventPicture
 	
+    is_triggered_only = yes
+    
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_modifier = tempus_belli }
@@ -1182,7 +1217,7 @@ country_event = {
     }
     
     mean_time_to_happen = {
-		months = 360
+		days = 1
 	}
 	
 	option = {
@@ -1204,6 +1239,8 @@ country_event = {
 	desc = legion_flavour.30.desc
     picture = LEGION_CROSS_eventPicture
 	
+    is_triggered_only = yes
+    
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = fortify_flagstaff }
@@ -1220,7 +1257,7 @@ country_event = {
     }
 	
     mean_time_to_happen = {
-		months = 600
+		days = 1
 	}
 	
 	option = {
@@ -1250,6 +1287,8 @@ country_event = {
 	desc = legion_flavour.31.desc
     picture = LEGION_CROSS_eventPicture
 	
+     is_triggered_only = yes
+     
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = centro_imperium }
@@ -1266,7 +1305,7 @@ country_event = {
     }
 	
     mean_time_to_happen = {
-		months = 600
+		days = 1
 	}
 	
 	option = {
@@ -1288,6 +1327,8 @@ country_event = {
 	desc = legion_flavour.32.desc
     picture = LEGION_CROSS_eventPicture
 	
+     is_triggered_only = yes
+     
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_modifier = patientia_opportuna }
@@ -1296,7 +1337,7 @@ country_event = {
     }
 	
     mean_time_to_happen = {
-		months = 120
+		days = 1
 	}
     
 	option = {
@@ -1318,6 +1359,8 @@ country_event = {
 	desc = legion_flavour.33.desc
     picture = LEGION_CROSS_eventPicture
 	
+     is_triggered_only = yes
+     
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_flag = via_militaris }
@@ -1334,7 +1377,7 @@ country_event = {
     }
 	
     mean_time_to_happen = {
-		months = 600
+		days = 1
 	}
 	
 	option = {
@@ -1357,13 +1400,15 @@ country_event = {
 	desc = legion_flavour.34.desc
     picture = LEGION_CROSS_eventPicture
 	
+     is_triggered_only = yes
+     
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_modifier = celeri_motus }
     }
 	
     mean_time_to_happen = {
-		months = 600
+		days = 1
 	}
 	
 	option = {
@@ -1385,13 +1430,15 @@ country_event = {
 	desc = legion_flavour.35.desc
     picture = LEGION_CROSS_eventPicture
 	
+    is_triggered_only = yes
+     
 	trigger = {
         has_reform = legion_reform
         NOT = { has_country_modifier = loci_praesido }
     }
 	
     mean_time_to_happen = {
-		months = 600
+		days = 1
 	}
 	
 	option = {
@@ -1403,6 +1450,43 @@ country_event = {
         }
 	}
 }
+
+#-------------------------------------
+# ""Death of Caesar"
+#-------------------------------------
+country_event = {
+	id = legion_flavour.36
+	title = legion_flavour.36.title
+	desc = legion_flavour.36.desc
+    picture = LEGION_CROSS_eventPicture
+	
+    is_triggered_only = yes
+     
+	trigger = {
+        has_reform = legion_reform
+    }
+	
+    mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = legion_flavour.36.option.a
+        
+        add_stability = -6
+        
+        every_owned_province = {
+            limit = {
+                culture = legionary
+            }
+            add_province_modifier = {
+                name = death_of_caesar
+                duration = 3650
+            }
+        }
+	}
+}
+
 
 
 

@@ -14,9 +14,14 @@ country_event = {
 	}	
 	
 	trigger = {
-        tag = BOS 	
-		NCR = {
-            war_with = BOS
+        tag = BOS
+        OR = {
+            NCR = {
+                war_with = BOS
+            }
+            SHA = {
+                war_with = BOS
+            }
         }
 	}
     
@@ -29,9 +34,26 @@ country_event = {
 	option = {
 		name = brotherhood_of_steel_west.1.option.a
         hidden_effect = {
-		    NCR = {
-                country_event = { id = ncr.4 days = 5 }
-			}
+            if = {
+                limit = {
+                    NCR = {
+                        war_with = BOS
+                    }
+                }
+                NCR = {
+                    country_event = { id = ncr.4 days = 5 }
+                }
+            }
+            if = {
+                limit = {
+                    SHA = {
+                        war_with = BOS
+                    }
+                }
+                SHA = {
+                    country_event = { id = ncr.4 days = 5 }
+                }
+            }
 		}
         custom_tooltip = bos_strike_ncr_economy_tt
 		ai_chance = {

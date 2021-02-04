@@ -107,6 +107,10 @@ country_event = {
 	trigger = {
 		tag = SHI
 		NOT = { owns = 384 }
+        OR = {
+            exists = NCR
+            exists = SHA
+        }
 	}
     
     immediate = {
@@ -120,12 +124,23 @@ country_event = {
 		add_claim = 384
 		set_country_flag = remove_brotherhood_from_shitown
 		    hidden_effect = {
-			    NCR = {
-                    country_event = {
-                        id = ncr.6
-                        days = 35
-                    }				
-				}
+                if = {
+                    limit = { exists = NCR }
+                    NCR = {
+                        country_event = {
+                            id = ncr.6
+                            days = 35
+                        }				
+                    }
+                }
+                else = {
+                    SHA = {
+                        country_event = {
+                            id = ncr.6
+                            days = 35
+                        }				
+                    }
+                }
             }				
 		ai_chance = {
 			factor = 100
@@ -669,6 +684,28 @@ country_event = {
         }
 		hidden_effect = {
 		    NCR = {
+                country_event = {
+                    id = ncr.7
+                    days = 20
+                }
+            }				
+        }
+		custom_tooltip = shi_ask_ncr_millitary_support
+		ai_chance = {
+			factor = 50
+		} 
+	}
+    
+    option = {
+		name = shi.14.option.c
+		trigger = { 
+            NOT = { exists = NCR }
+            SHA = {
+                has_opinion = { who = ROOT value = 25 }
+            }
+        }
+		hidden_effect = {
+		    SHA = {
                 country_event = {
                     id = ncr.7
                     days = 20
