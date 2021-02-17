@@ -248,3 +248,86 @@ country_event = {
 # Senator from Maxson
 
 # Senator from Dayglow
+
+# Request for Protection
+country_event = {
+	id = ncr.100
+	title = ncr.100.title
+	desc = ncr.100.desc
+    picture = NCR_STATUE_eventPicture
+
+    is_triggered_only = yes
+
+	option = {
+		name = ncr.100.option.a
+		
+        FROM = { country_event = { id = ncr.102 days = 7 } }
+        
+        add_stability = -1
+        
+        ai_chance = {
+            factor = 50
+        }
+	}
+    option = {
+		name = ncr.100.option.b
+		
+        FROM = { country_event = { id = ncr.101 days = 7 } }
+        
+        ai_chance = {
+            factor = 50
+        }
+	}
+}
+
+# Request Denied
+country_event = {
+	id = ncr.101
+	title = ncr.101.title
+	desc = ncr.101.desc
+    picture = NCR_STATUE_eventPicture
+
+    is_triggered_only = yes
+
+	option = {
+		name = ncr.101.option.a
+
+	}
+}
+
+# Request Accepted
+country_event = {
+	id = ncr.102
+	title = ncr.102.title
+	desc = ncr.102.desc
+    picture = NCR_STATUE_eventPicture
+
+    is_triggered_only = yes
+
+	option = {
+		name = ncr.102.option.a
+    
+        if = {
+            limit = { exists = NCR }
+            NCR = {
+                create_subject = {
+                    subject_type = daimyo_vassal
+                    subject = ROOT
+                }
+            }
+        }
+        else = {
+            SHA = {
+                create_subject = {
+                    subject_type = daimyo_vassal
+                    subject = ROOT
+                }
+            }
+        }
+	}
+    option = {
+		name = ncr.102.option.b
+
+        add_prestige = -5
+	}
+}
