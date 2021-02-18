@@ -808,4 +808,97 @@ country_decisions = {
 			set_government_rank = 3
 		}
 	}
+    
+    form_the_confederacy = {
+		major = yes
+		potential = {
+			NOT = { exists = CFD }
+			technology_group = tech_wastelander
+            NOT = { is_unswitchable_nation = yes }
+            capital_scope = {
+                OR = {
+                    region = texas_region
+                    region = arkansas_region
+                    region = mississippi_fm_region
+                    region = louisiana_region
+                    region = alabama_region
+                    region = georgia_region
+                    region = florida_region
+                    
+                }
+            }
+		}
+		
+		allow = {
+            own_header = yes
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_TEXAS
+                texas_region = {
+                    type = all
+                    country_or_vassal_holds = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_ARKANSAS
+                arkansas_region = {
+                    type = all
+                    country_or_vassal_holds = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_MISSISSIPPI
+                mississippi_fm_region = {
+                    type = all
+                    country_or_vassal_holds = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_LOUISIANA
+                louisiana_region = {
+                    type = all
+                    country_or_vassal_holds = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_ALABAMA
+                alabama_region = {
+                    type = all
+                    country_or_vassal_holds = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_GEORGIA
+                georgia_region = {
+                    type = all
+                    country_or_vassal_holds = ROOT
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = OWN_REGION_FLORIDA
+                florida_region = {
+                    type = all
+                    country_or_vassal_holds = ROOT
+                }
+            }
+            years_of_income = 1
+		}
+		
+		effect = {
+            add_years_of_income = -1
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 100
+			change_tag = CFD
+			set_government_rank = 3
+            
+            change_religion = protestant
+            change_primary_culture = confederate
+            capital_scope = {
+                change_culture = confederate
+                change_religion = protestant
+            }
+		}
+	}
 }
