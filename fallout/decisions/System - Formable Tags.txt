@@ -11,35 +11,38 @@ country_decisions = {
 			}
             NOT = { is_unswitchable_nation = yes }
 		}
-		
+		provinces_to_highlight = {
+            OR = {
+                province_id = 130
+                province_id = 335
+                province_id = 1202
+                province_id = 267
+            }
+        }
 		allow = {
             own_header = yes
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_PHOENIX
                 130 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SANTA_FE
                 335 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SHADY_SANDS
                 1202 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_HOOVER_DAM
                 267 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             years_of_income = 1
@@ -74,21 +77,24 @@ country_decisions = {
 			}
             NOT = { is_unswitchable_nation = yes }
 		}
-		
+		provinces_to_highlight = {
+            OR = {
+                province_id = 1202
+                province_id = 1120
+            }
+        }
 		allow = { 
 			own_header = yes
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SHADY_SANDS
                 1202 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SAN_FRANCISCO
                 1120 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             years_of_income = 1
@@ -121,77 +127,80 @@ country_decisions = {
 			technology_group = tech_ncr
             NOT = { is_unswitchable_nation = yes }
 		}
-		
+		provinces_to_highlight = {
+            OR = {
+                province_id = 1202
+                province_id = 1120
+                province_id = 1226
+                province_id = 1215
+                province_id = 1
+                province_id = 1200
+                province_id = 1223
+                province_id = 1227
+                province_id = 130
+                province_id = 335
+            }
+        }
 		allow = {
 			own_header = yes
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SHADY_SANDS
                 1202 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SAN_FRANCISCO
                 1120 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_MODOC
                 1226 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_THE_DEN
                 1215 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_ARROYO
                 1 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_THE_STRIP
                 1200 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_NEW_RENO
                 1223 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_VAULT_CITY
                 1227 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_PHOENIX
                 130 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SANTA_FE
                 335 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             years_of_income = 1
@@ -244,350 +253,354 @@ country_decisions = {
 			NOT = { exists = X04 }
             NOT = { is_unswitchable_nation = yes }
 		}
-		
+		provinces_to_highlight = {
+            OR = {
+                province_id = 2
+                province_id = 1223
+                province_id = 1329
+                province_id = 1434
+                province_id = 1347
+                province_id = 1252
+                province_id = 130
+                province_id = 335
+                province_id = 1251
+                province_id = 1250
+                province_id = 245
+                province_id = 477
+                province_id = 471
+                province_id = 898
+                province_id = 446
+                province_id = 143
+                province_id = 328
+                province_id = 1142
+                province_id = 913
+                province_id = 449
+                province_id = 1259
+                province_id = 1244
+                province_id = 1151
+                province_id = 943
+                province_id = 946
+                province_id = 895
+                province_id = 921
+                province_id = 1158
+                province_id = 589
+                province_id = 580
+                province_id = 928
+                province_id = 573
+                province_id = 598
+                province_id = 934
+                province_id = 1155
+                province_id = 608
+                province_id = 948
+                province_id = 1252
+                province_id = 1229
+                province_id = 5
+                province_id = 158
+                province_id = 291
+                province_id = 1194
+                province_id = 964
+                province_id = 1114
+                province_id = 1268
+                province_id = 539
+                province_id = 1187
+                province_id = 970
+                province_id = 1116
+            }
+        }
 		allow = { 
             own_header = yes
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SACREMENTO
                 2 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_NEW_RENO
                 1223 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SALEM
                 1329 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_OLIMPIA
                 1434 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_BOISE
                 1347 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_NEW_CANAAN
                 1252 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_PHOENIX
                 130 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SANTA_FE
                 335 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_DENVER
                 1251 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_CHEYENNE
                 1250 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_HELENA
                 245 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_BISMARCK
                 477 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_PIERRE
                 471 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_LINCOLN
                 898 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_TOPEKA
                 446 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_OKLAHOMA_CITY
                 143 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_AUSTIN
                 328 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_MINNEAPOLIS
                 1142 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_MADISON
                 913 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_DES_MOINES
                 449 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_CHICAGO
                 1259 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_JEFFERSON_CITY
                 1244 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_LANSING
                 1151 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_INDIANAPOLIS
                 943 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_COLUMBUS
                 946 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_LITTLE_ROCK
                 895 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_BATON_ROGUE
                 921 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_JACKSON
                 1158 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_MONTGOMERY
                 589 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_ATLANTA
                 580 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_TALLAHASSEE
                 928 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_COLUMBIA
                 573 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_RALEIGH
                 598 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_NASHVILLE
                 934 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_FRANKFORT
                 1155 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_RICHMOND
                 608 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_CHARLESTON
                 948 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_WASHINGTON
                 1229 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_ANNAPOLIS
                 5 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_DOVER
                 158 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_HARRISBURG
                 291 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_TRENTON
                 1194 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_ALBANY
                 964 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_HARTFORD
                 1114 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_PROVIDENCE
                 1268 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_DIAMOND_CITY
                 539 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_MONTPELIER
                 1187 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_CONCORD
                 970 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_AUGUSTA
                 1116 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             years_of_income = 1
@@ -616,6 +629,11 @@ country_decisions = {
 				religion = mormon
 			}
 		}
+        provinces_to_highlight = {
+            OR = {
+                province_id = 1252
+            }
+        }
 		allow =  {
 			OR = {
 				tag = DED
@@ -625,8 +643,7 @@ country_decisions = {
 			custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_NEW_CANAAN
                 1252 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             years_of_income = 1
@@ -665,41 +682,45 @@ country_decisions = {
             }
             NOT = { is_unswitchable_nation = yes }
 		}
+        provinces_to_highlight = {
+            OR = {
+                province_id = 83
+                province_id = 21
+                province_id = 206
+                province_id = 203
+                province_id = 518
+            }
+        }
 		allow =  {
             own_header = yes
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_LA_PAZ
                 83 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
 			custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SONORA
                 21 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_URUPAN
                 206     = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_MEXICO_CITY
                 203 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_FUERTE
                 518 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             years_of_income = 1
@@ -728,69 +749,73 @@ country_decisions = {
             }
             NOT = { is_unswitchable_nation = yes }
 		}
+        provinces_to_highlight = {
+            OR = {
+                province_id = 231
+                province_id = 611
+                province_id = 612
+                province_id = 613
+                province_id = 176
+                province_id = 1197
+                province_id = 175
+                province_id = 615
+                province_id = 171
+            }
+        }
 		allow =  {
             own_header = yes
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_VANCOUVER
                 231 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_EDMONTON
                 611 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_REGINA
                 612 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_WINNIPEG
                 613 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_FREDERICTON
                 176  = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_TORONTO
                 1197 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_QUEBEC_CITY
                 175 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_NEWFOUNDLAND
                 615 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_HALIFAX
                 171 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_vassal_holds = ROOT
                 }
             }
             years_of_income = 1
@@ -824,11 +849,20 @@ country_decisions = {
                     region = alabama_region
                     region = georgia_region
                     region = florida_region
-                    
                 }
             }
 		}
-		
+		provinces_to_highlight = {
+            OR = {
+                region = texas_region
+                region = arkansas_region
+                region = mississippi_fm_region
+                region = louisiana_region
+                region = alabama_region
+                region = georgia_region
+                region = florida_region
+            }
+        }
 		allow = {
             own_header = yes
             custom_trigger_tooltip = {
