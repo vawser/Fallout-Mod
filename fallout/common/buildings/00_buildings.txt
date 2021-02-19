@@ -22,7 +22,8 @@ fbs_research_lab = {
 	time = 12
 	
 	modifier = {
-		institution_growth = 1
+		institution_growth = 0.05
+        local_development_cost = -0.15
 	}
 
 	ai_will_do = {
@@ -51,7 +52,8 @@ fbs_bank = {
 	
 	modifier = {
         local_state_maintenance_modifier = -0.25
-		local_development_cost = -0.25
+        local_governing_cost = -0.25
+		
 	}
     
 	ai_will_do = {
@@ -75,7 +77,7 @@ fbs_office = {
 	time = 12
 	
 	modifier = {
-		local_tax_modifier = 1.0
+		local_tax_modifier = 0.5
 	}
     
 	ai_will_do = {
@@ -88,7 +90,7 @@ fbs_factory = {
 	time = 12
 	
 	modifier = {
-		local_production_efficiency = 1.0
+		local_production_efficiency = 0.5
 	}
 	
 	ai_will_do = {
@@ -101,7 +103,7 @@ fbs_marketplace = {
 	time = 12
 	
 	modifier = {
-		province_trade_power_modifier = 1.0
+		province_trade_power_modifier = 0.5
 	}
 	
 	ai_will_do = {
@@ -114,7 +116,7 @@ fbs_police_station = {
 	time = 12
 	
 	modifier = {
-		local_unrest = -5
+		local_unrest = -3
 	}
     
 	ai_will_do = {
@@ -133,7 +135,7 @@ fbs_religious_centre = {
 	time = 12
 	
 	modifier = {
-		local_missionary_strength = 0.05
+		local_missionary_strength = 0.03
 	}
 	
 	ai_will_do = {
@@ -154,7 +156,7 @@ fbs_military_camp = {
 	time = 12
 	
 	modifier = {
-		local_manpower_modifier = 1.0
+		local_manpower_modifier = 0.5
 	}
 	
 	ai_will_do = {
@@ -189,8 +191,8 @@ fbs_armory = {
 	time = 12
 	
 	modifier = {
-		local_regiment_cost = -0.5
-        regiment_recruit_speed = -0.5
+		local_regiment_cost = -0.33
+        regiment_recruit_speed = -0.33
 	}
 
 	ai_will_do = {
@@ -215,7 +217,7 @@ fbs_dock = {
     
 	modifier = {
 		local_sailors_modifier = 0.5
-        ship_recruit_speed = -0.5
+        ship_recruit_speed = -0.33
 	}
 
 	ai_will_do = {
@@ -240,7 +242,7 @@ fbs_shipyard = {
     
 	modifier = {
 		local_ship_repair = 0.5
-        local_ship_cost = -0.5
+        local_ship_cost = -0.33
 	}
     
 	ai_will_do = {
@@ -545,7 +547,7 @@ fbs_planning_command = {
 	one_per_country = yes
 	
 	modifier = {
-        land_attrition = -0.1
+        governing_capacity_modifier = 0.25
 	}
 
 	ai_will_do = {
@@ -717,7 +719,7 @@ fbs_junkyard = {
     }
     
 	modifier = {
-        development_cost = -0.2
+        development_cost = -0.1
 	}
 	
 	ai_will_do = {
