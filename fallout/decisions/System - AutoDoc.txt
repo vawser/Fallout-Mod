@@ -1,0 +1,43 @@
+country_decisions = {
+	source_autodoc_system = {
+		potential = {
+            NOT = { has_immortal_ruler = yes }
+			is_civilized_country = yes
+            NOT = { has_ruler_modifier = autodoc }
+            has_regency = no
+		}
+		allow =  {
+            NOT = { has_ruler_modifier = autodoc }
+            adm_power = 50
+            dip_power = 50
+            mil_power = 50
+		}
+	  	effect = {
+			add_adm_power = -50
+            add_dip_power = -50
+            add_mil_power = -50
+            
+            custom_tooltip = AUTODOC_TOOLTIP
+            add_ruler_modifier = {
+                name = autodoc
+                duration = 1825
+            }
+		}
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                NOT = { adm = 5 }
+            }
+            modifier = {
+                factor = 0
+                NOT = { dip = 5 }
+            }
+            modifier = {
+                factor = 0
+                NOT = { mil = 5 }
+            }
+		}
+	}
+}
