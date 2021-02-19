@@ -176,7 +176,7 @@ country_event = {
 
 	# Support the Wrights 
 	option = {
-		name = new_reno.3.option.b
+		name = new_reno.3.option.c
 		trigger = {
 			NOT = {
 				faction_in_power = the_van_graffs
@@ -195,7 +195,7 @@ country_event = {
 	
 	# Put a stop to them  
 	option = {
-		name = new_reno.3.option.b
+		name = new_reno.3.option.d
 		add_faction_influence = { faction = the_wrights influence = -5 }
 		add_faction_influence = { faction = the_van_graffs  influence = -5 }
 		add_stability = -2
@@ -234,6 +234,8 @@ country_event = {
 	option = {
 		name = new_reno.4.option.b
 		add_stability = -1
+		add_faction_influence = { faction = the_van_graffs  influence = 33 }
+		add_faction_influence = { faction = the_wrights  influence = -33 }
 		
 	}
 
@@ -262,18 +264,19 @@ country_event = {
         }
     }
     
-	# The Wrights are defeated  
+	# The Van Graffs are defeated  
 	option = {
 		name = new_reno.5.option.a
 		remove_faction = the_van_graffs
 		add_stability = -1
 	}
 	
-	# Intervene to save the Wrights 
+	# Intervene to save the Van Graffs 
 	option = {
 		name = new_reno.5.option.b
 		add_stability = -1
-		
+		add_faction_influence = { faction = the_van_graffs  influence = -33 }
+		add_faction_influence = { faction = the_wrights  influence = 33 }		
 	}
 
 }
@@ -866,10 +869,11 @@ country_event = {
         }
     }
     
-	# Strenghen The Golden Globe Studio
+	# Glorious
 	option = {
 		name = new_reno.17.option.a
 		add_army_tradition = 2
+		add_manpower = 2
 	}
 }
 

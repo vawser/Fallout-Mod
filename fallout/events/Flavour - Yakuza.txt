@@ -5,7 +5,7 @@ country_event = {
     id = yakuza.1
     title = yakuza.1.title
     desc = yakuza.1.desc
-    picture = LEGION_CROSS_eventPicture
+    picture = ROAD_SIGNS_eventPicture
 
     fire_only_once = yes
     
@@ -14,7 +14,7 @@ country_event = {
     }
     
     mean_time_to_happen = {
-		months = 32
+		months = 55
 	}
     
     immediate = {
@@ -33,12 +33,7 @@ country_event = {
 	
     option = { # We need to modernize 
         name = yakuza.1.option.b
-		if = {
-			limit = {
-				has_dlc = "Cradle of Civilization"
-			}
-			add_army_professionalism = 0.05	
-		}
+		add_army_professionalism = 0.05	
 		add_mil_power = 100	
     }
 }
