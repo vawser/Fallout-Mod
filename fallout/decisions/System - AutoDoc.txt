@@ -12,8 +12,8 @@ country_decisions = {
             if = {
                 limit = { NOT = { ruler_age = 100 } }
                 adm_power = 50
-                adm_power = 50
-                adm_power = 50
+                dip_power = 50
+                mil_power = 50
             }
             else_if = {
                 limit = { 
@@ -21,8 +21,8 @@ country_decisions = {
                     NOT = { ruler_age = 120 }
                 }
                 adm_power = 75
-                adm_power = 75
-                adm_power = 75
+                dip_power = 75
+                mil_power = 75
             }
             else_if = {
                 limit = { 
@@ -30,8 +30,8 @@ country_decisions = {
                     NOT = { ruler_age = 140 }
                 }
                 adm_power = 100
-                adm_power = 100
-                adm_power = 100
+                dip_power = 100
+                mil_power = 100
             }
             else_if = {
                 limit = { 
@@ -39,8 +39,8 @@ country_decisions = {
                     NOT = { ruler_age = 160 }
                 }
                 adm_power = 150
-                adm_power = 150
-                adm_power = 150
+                dip_power = 150
+                mil_power = 150
             }
             else_if = {
                 limit = { 
@@ -48,16 +48,16 @@ country_decisions = {
                     NOT = { ruler_age = 180 }
                 }
                 adm_power = 200
-                adm_power = 200
-                adm_power = 200
+                dip_power = 200
+                mil_power = 200
             }
             else_if = {
                 limit = { 
                     ruler_age = 180
                 }
                 adm_power = 250
-                adm_power = 250
-                adm_power = 250
+                dip_power = 250
+                mil_power = 250
             }
 		}
 	  	effect = {
@@ -147,8 +147,8 @@ country_decisions = {
             has_ruler_modifier = son_of_mars
             has_ruler_modifier = brain_tumour
             adm_power = 200
-            adm_power = 200
-            adm_power = 200
+            dip_power = 200
+            mil_power = 200
 		}
 	  	effect = {
             add_adm_power = -200
