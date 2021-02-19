@@ -1,0 +1,47 @@
+#Gunners
+gunners_ideas = {
+    start = {
+		global_manpower = 15		
+        mercenary_manpower= 0.20	
+    }
+    
+    bonus = {
+        infantry_power = 0.05
+    }
+    
+    trigger = {
+        tag = GUN
+    }
+	
+    free = yes
+    
+    # Soldiers For Hire 
+    gunners_1 = {
+        mercenary_cost = -0.15		
+		merc_maintenance_modifier = -0.10	
+    }
+    # Military Chain Of Command
+    gunners_2 = {
+        free_leader_pool = 1	
+    }
+    # Gunner Strongholds
+    gunners_3 = {
+        garrison_size = 0.10	
+    }
+    # Advanced Tactics   
+    gunners_4 = {
+		mercenary_discipline = 0.05
+    }
+    # Officer Integration 
+    gunners_5 = {
+        leader_land_manuever = 1	
+    }
+    # Contract Dividends    
+    gunners_6 = {
+        war_taxes_cost_modifier = -0.30	
+    }
+    # Profit Motivated 
+    gunners_7 = {
+        loot_amount = 0.20	
+    }
+}

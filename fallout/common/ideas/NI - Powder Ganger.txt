@@ -1,0 +1,51 @@
+#Powder Ganger
+powder_ganger_ideas = {
+    start = {
+		global_supply_limit_modifier = 0.10	
+        land_maintenance_modifier = -0.10	
+    }
+    
+    bonus = {
+        land_morale = 0.10	
+    }
+    
+    trigger = {
+        OR = {
+			tag = POW
+			tag = POC
+		}
+    }
+	
+    free = yes
+
+    # Dynamite Experts 
+    powder_ganger_1 = {
+        infantry_shock = 1	
+		siege_ability = 0.05
+    }    
+    # Highwaymen  
+    powder_ganger_2 = {
+        loot_amount = 0.30	
+    }
+    # Raiding Camps  
+    powder_ganger_3 = {
+        min_autonomy_in_territories = -0.1				
+    }
+    # Leaders Of The Revolt  
+    powder_ganger_4 = {
+        general_cost = -0.10	
+    }
+    # Tough Leadership    
+    powder_ganger_5 = {
+		legitimacy = 0.5
+		harsh_treatment_cost = -0.2	
+    }
+    # Tribute From The Raids 
+    powder_ganger_6 = {
+		available_province_loot = 0.10	
+    }
+    # Uniting The Gang 
+    powder_ganger_7 = {
+        global_manpower_modifier = 0.15	
+    }
+}

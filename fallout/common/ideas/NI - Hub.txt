@@ -1,0 +1,47 @@
+#Hub 
+hub_ideas = {
+    start = {
+		trade_range_modifier = 0.25	
+        merc_maintenance_modifier = -0.10	
+    }
+    
+    bonus = {
+        global_trade_power = 0.1	
+    }
+    
+    trigger = {
+        tag = TUB
+    }
+	
+    free = yes
+    
+    # The Cap Standard  
+    hub_1 = {
+        global_tax_modifier = 0.15		
+    }
+    # Water Barons  
+    hub_2 = {
+        global_supply_limit_modifier = 0.10	
+		global_trade_goods_size_modifier = 0.05
+    }
+    # Hub Police  
+    hub_3 = {
+        infantry_power = 0.05 
+    }
+    # Caravan Centre 
+    hub_4 = {
+		caravan_power = 0.1	
+    }
+    # Caravan Guards  
+    hub_5 = {
+        land_attrition = -0.10		
+    }
+    # Hub Library      
+    hub_6 = {
+        embracement_cost = -0.05	
+    }
+    # Trading Companies    
+    hub_7 = {
+        merchants = 1	
+    }
+}

@@ -15,6 +15,7 @@ on_startup = {
         # Caesar's Legion
         goodsprings.0 	# Courier Flavour 
         capital_wasteland.1 # Post F3 cleanup 
+        skynet.1 # A Bored AI  - Setup for New Reno-Skynet start situation 
         
     }
     if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_startup" }
@@ -352,7 +353,8 @@ on_death_foreign_slave_ruler = {
 	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_foreign_slave_ruler" }
 	events = {
 		wolf_pack.1 # Choose new for the Pack
-		shi.1 # Choose new ruler
+		shi.1 #Chosing the next Head Advisor
+		new_reno.18 #Family Games
 	}
 }
 

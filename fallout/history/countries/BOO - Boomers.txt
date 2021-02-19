@@ -11,16 +11,10 @@ capital = 1426
 set_wastelander_race = yes
 
 add_army_tradition = 10
-add_army_professionalism = 0.1
 
 #--------------------------------
 # Laws and Policies
 #--------------------------------
-
-
-
-
-
 
 set_slavery_forbidden = yes
 set_gambling_forbidden = yes
@@ -44,5 +38,12 @@ set_scavenging_allowed = yes
 		dip = 4
 		mil = 2
 		female = yes
+	}
+	
+	define_advisor = {
+		name = "Loyal"
+		type = fm_mechanic 
+		skill = 2
+		discount = yes
 	}
 }
