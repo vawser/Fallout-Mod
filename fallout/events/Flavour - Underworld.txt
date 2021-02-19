@@ -1,0 +1,75 @@
+namespace = underworld
+
+# "The Lost Exhibition"
+country_event = {
+	id = underworld.1
+	title = underworld.1.title
+	desc = underworld.1.desc
+	picture = CHURCH_MISTY_INSIDE_eventPicture
+
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - underworld.1" }
+        }
+    }
+    
+	# Electrify America 
+	option = {
+		name = underworld.1.option.a
+		add_country_modifier = { 
+			name = UND_electic_america
+			duration = -1 
+		}
+		define_advisor = {
+			name = "Winthrop"
+			type = fm_mechanic 
+			culture = underworld 
+			skill = 2
+			discount = yes
+		}
+		50 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	
+	# The American Dream 
+	option = {
+		name = underworld.1.option.b
+        change_religion = american_restorationists
+		50 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	
+	# Vault-tec Calling 
+	option = {
+		name = underworld.1.option.c
+       50 = {
+			change_trade_goods = vaulttec_supplies 
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	
+	# Gunboat Democracy 
+	option = {
+		name = underworld.1.option.d
+		add_country_modifier = { 
+			name = UND_gunboat_democracy 
+			duration = -1 
+		}
+		add_navy_tradition = 10	
+		50 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
