@@ -1,3 +1,5 @@
+# Exacting Recruitment Standards
+# Simulate the closed nature of the BoS Chapters, which would significantly reduce their manpower pool.
 exacting_recruitment_standards = {
 	potential = {
 		technology_group = tech_bos
@@ -6,12 +8,20 @@ exacting_recruitment_standards = {
 		NOT = { has_country_modifier = lifted_recruitment_restrictions }
 	}
 
-    global_manpower_modifier = -0.75
-    land_forcelimit_modifier = -0.75
-    
-    global_regiment_cost = 1.0
-    global_regiment_recruit_speed = 1.0
-    
-    discipline = 0.05
+    global_manpower_modifier = -0.5
+    land_forcelimit_modifier = -0.5
 }
 
+# Chapter Discipline
+# Simulate the improved combat effectiveness small chapters would posess. A large chapter would lose this as it succumbs to corruption and regionalism.
+chapter_discipline = {
+	potential = {
+		technology_group = tech_bos
+	}
+	trigger = {
+        NOT = { num_of_cities = 20 }
+	}
+
+    discipline = 0.05
+    army_tradition = 1.0
+}

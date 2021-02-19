@@ -1,17 +1,26 @@
+# The Howitizer
+# Debuff enemies of the Legion if the Howitizer was restored
 the_howitizer = {
 	potential = {
-		is_part_of_hre = yes
+		war_with = CAE
         exists = CAE
+        capital_scope = {
+            OR = {
+                region = arizona_region
+                region = nevada_region
+                region = california_region
+            }
+        }
 	}
 
 	trigger = {
+        war_with = CAE
         CAE = { 
             has_country_modifier = howitizer_firing_pin
         }
 	}
     
-    fire_damage_received = 0.1
-    shock_damage_received = 0.1
+    fire_damage_received = 0.5
 }
 
 revolt_of_the_heathens = {

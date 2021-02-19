@@ -1,3 +1,5 @@
+# Enclave Remnants
+# Simulate the weakened state the Enclave is in having retreated to Chicago
 enclave_remnants = {
 	potential = {
 		OR = {
@@ -5,10 +7,23 @@ enclave_remnants = {
 		}
 	}
 	trigger = {
-		NOT = { total_development = 150 }
+		NOT = { num_of_cities = 16 }
 	}
 	
-	global_regiment_recruit_speed = 0.5
-	manpower_recovery_speed = -0.1
-    global_tax_income = 120
+    global_manpower_modifier = -0.25
+    land_forcelimit_modifier = -0.25
+	manpower_recovery_speed = -0.33
+}
+
+# Pre-war Coffers
+# Simulate the access to gold the Enclave would have.
+prewar_coffers = {
+	potential = {
+		tag = ENC
+	}
+	trigger = {
+		tag = ENC
+	}
+	
+	global_tax_income = 64
 }
