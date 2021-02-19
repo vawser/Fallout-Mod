@@ -121,6 +121,30 @@ gov_kingdom_of_hate = {
 		tag = GHH
 	}
 }
+gov_tribe_beastlords = {
+	rank = {
+		1 = FM_EMPIRE_OF_BEASTS
+		2 = FM_EMPIRE_OF_BEASTS
+		3 = FM_EMPIRE_OF_BEASTS
+	}		
+	
+	ruler_male = {
+		1 = FM_EMPEROR
+		2 = FM_EMPEROR
+		3 = FM_EMPEROR
+	}
+	
+	ruler_female = {
+		1 = FM_EMPRESS
+		2 = FM_EMPRESS
+		3 = FM_EMPRESS
+	}
+	
+	trigger = {
+        tag = BCA
+		has_reform = tribe_reform
+	}
+}
 
 #-----------------------------------------
 # Base
