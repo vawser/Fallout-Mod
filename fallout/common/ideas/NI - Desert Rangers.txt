@@ -1,0 +1,48 @@
+#Desert Rangers
+desert_rangers_ideas = {
+    start = {
+		army_tradition = 1	
+        envoy_travel_time = -0.25
+    }
+    
+    bonus = {
+        fire_damage_received = -0.10		
+    }
+    
+    trigger = {
+        tag = DRG
+    }
+	
+    free = yes
+    
+    # Baja Expedition 
+    desert_rangers_1 = {
+        years_of_nationalism = -3
+		native_uprising_chance = -0.10
+    }
+    # Vigilante Origins
+    desert_rangers_2 = {
+        prestige_decay = -0.01	
+    }
+    # Elite Forces 
+    desert_rangers_3 = {
+        discipline = 0.025	
+		special_unit_forcelimit= 0.10					
+    }
+    # Survivalists  
+    desert_rangers_4 = {
+		global_supply_limit_modifier = 0.10		
+    }
+    # Big Iron On His Hip
+    desert_rangers_5 = {
+        infantry_power = 0.10		
+    }
+    # Ranger Outposts  
+    desert_rangers_6 = {
+        rival_border_fort_maintenance = -0.15			
+    }
+    # Veteran Commanders  
+    desert_rangers_7 = {
+        leader_land_fire = 1	
+    }
+}

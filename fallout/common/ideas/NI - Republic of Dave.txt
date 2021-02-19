@@ -1,0 +1,49 @@
+#Republic of Dave - DAVE STATE
+dave_ideas = {
+    start = {
+        global_unrest = -2	
+        infantry_cost = -0.10	
+    }
+    
+    bonus = {
+        land_morale = 0.10	
+    }
+    
+    trigger = {
+        tag = RPD
+    }
+	
+    free = yes
+    
+    # Sovereignty 
+    dave_1 = {
+        stability_cost_modifier = -0.15
+    }
+	
+    # The Last True Democracy 
+    dave_2 = {
+        republican_tradition = 0.5	
+    }
+	
+    # Immigration Bureau  
+    dave_3 = {
+        global_tax_modifier = 0.05	
+		global_colonial_growth = 15	
+    }
+    # Bureau of Dave-like Activities
+    dave_4 = {
+        global_spy_defence = 0.15			
+    }
+    # Shifting Caravan Routes  
+    dave_5 = {
+        caravan_power = 0.1	
+    }
+    # Dave's Mercenary Past 
+    dave_6 = {
+        mercenary_discipline = 0.05
+    }
+    # Expanding The Republic 
+    dave_7 = {
+        core_creation = -0.1		
+    }
+}

@@ -1,0 +1,48 @@
+#Abbey Of The Road
+abbey_of_the_road_ideas = {
+    start = {
+		warscore_cost_vs_other_religion = -0.1				
+        female_advisor_chance = 0.2	
+    }
+    
+    bonus = {
+        discipline = 0.05	
+    }
+    
+    trigger = {
+        tag = ABR
+    }
+	
+    free = yes
+    
+    # Missionaries 
+    abbey_of_the_road_1 = {
+        global_missionary_strength = 0.03	
+		native_assimilation = 0.25	
+    }
+    # Artifact Seekers
+    abbey_of_the_road_2 = {
+        technology_cost = -0.05	
+    }
+    # Construct New Abbeys  
+    abbey_of_the_road_3 = {
+        build_cost = -0.15	
+    }
+    # Opposition To The Occult
+    abbey_of_the_road_4 = {
+		missionaries = 1
+		global_heathen_missionary_strength = 0.02
+    }
+    # Secrecy
+    abbey_of_the_road_5 = {
+        global_spy_defence = 0.2	
+    }
+    # Unity In Faith  
+    abbey_of_the_road_6 = {
+        tolerance_own = 1		
+    }
+    # Spreading Across The Continent 
+    abbey_of_the_road_7 = {
+        movement_speed = 0.10	
+    }
+}
