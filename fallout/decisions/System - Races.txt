@@ -1,0 +1,84 @@
+country_decisions = {
+	shift_towards_tribal_administration = {
+		potential = {
+            is_wastelander = yes
+		}
+		allow = {
+			is_wastelander = yes
+            stability = 3
+		}
+		effect = {
+			add_stability = -6
+
+			add_country_modifier = {
+				name = "shifted_administration"
+				duration = 3650
+			}	
+            
+            set_tribal_race = yes
+            change_technology_group = tech_tribal
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+    shift_towards_raider_administration = {
+		potential = {
+            OR = {
+                is_wastelander = yes
+                is_tribal_race = yes
+            }
+		}
+		allow = {
+			OR = {
+                is_wastelander = yes
+                is_tribal_race = yes
+            }
+            stability = 3
+		}
+		effect = {
+			add_stability = -6
+
+			add_country_modifier = {
+				name = "shifted_administration"
+				duration = 3650
+			}	
+            
+            set_raider_race = yes
+            change_technology_group = tech_raider
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+    shift_towards_wastelander_administration = {
+		potential = {
+            OR = {
+                is_raider = yes
+                is_tribal_race = yes
+            }
+		}
+		allow = {
+			OR = {
+                is_raider = yes
+                is_tribal_race = yes
+            }
+            stability = 3
+            total_development = 200
+		}
+		effect = {
+			add_stability = -6
+
+			add_country_modifier = {
+				name = "shifted_administration"
+				duration = 3650
+			}	
+            
+            set_wastelander_race = yes
+            change_technology_group = tech_wastelander
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
