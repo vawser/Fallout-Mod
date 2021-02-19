@@ -327,3 +327,66 @@ country_event = {
 		}
     }
 }
+
+# Brain Tumour
+country_event = {
+	id = legion_ruler.2
+	title = legion_ruler.2.title
+	desc = legion_ruler.2.desc
+	picture = AUTO_DOC_eventPicture
+	
+    trigger = {
+        NOT = { has_ruler_modifier = brain_tumour }
+        has_ruler_modifier = son_of_mars
+        NOT = { has_global_flag = caesar_brain_tumour }
+    }
+    
+    mean_time_to_happen = {
+		months = 12
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - legion_ruler.2" }
+            
+            set_global_flag = caesar_brain_tumour
+        }
+    }
+    
+	option = {
+		name = legion_ruler.2.option.a
+		
+		add_ruler_modifier = {
+            name = brain_tumour
+            duration = -1
+        }
+	}
+}
+
+# Caesar succumbs...
+country_event = {
+	id = legion_ruler.3
+	title = legion_ruler.3.title
+	desc = legion_ruler.3.desc
+	picture = CAESAR_TENT_eventPicture
+	
+    trigger = {
+        has_ruler_modifier = brain_tumour
+    }
+    
+    mean_time_to_happen = {
+		months = 24
+    }
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - legion_ruler.3" }
+        }
+    }
+    
+	option = {
+		name = legion_ruler.3.option.a
+		
+		kill_ruler = yes
+	}
+}
