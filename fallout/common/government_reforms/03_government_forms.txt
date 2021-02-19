@@ -230,11 +230,46 @@ shi_reform = {
         }
         has_meritocracy = yes
     }
-    
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		heir = no
+		foreign_slave_rulers = yes
+	}
+
     modifiers = {
         idea_cost = -0.05
         global_autonomy = -0.05
         governing_capacity = 100
+    }
+}
+new_reno_reform = {
+    icon = "gambling"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = new_reno_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+
+    trigger = {
+       have_had_reform = new_reno_reform
+    }
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		heir = no
+		foreign_slave_rulers = yes
+	}
+    
+    heir = no
+	queen = no
+    
+    modifiers = {
+        global_autonomy = -0.05
+        governing_capacity = 200
     }
 }
 ncr_state_reform = {
