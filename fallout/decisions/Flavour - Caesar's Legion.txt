@@ -8,20 +8,23 @@ country_decisions = {
 			}
 			NOT = { has_country_modifier = the_glory_of_rome }
 		}
+        provinces_to_highlight = {
+            OR = {
+                province_id = 1202
+                province_id = 267
+            }
+        }
 		allow =  {
-			own_header = yes
 			custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SHADY_SANDS
                 1202 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_subject_holds = ROOT
                 }
             }
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_HOOVER_DAM
                 267 = {
-                    owned_by = ROOT
-                    is_core = ROOT
+                    country_or_subject_holds = ROOT
                 }
             }
             years_of_income = 1

@@ -7,14 +7,15 @@ country_decisions = {
 			}
 			NOT = { has_country_modifier = the_capitol }
 		}
+        provinces_to_highlight = {
+            region = the_capital_wasteland_region
+        }
 		allow =  {
-            own_header = yes
             custom_trigger_tooltip = {
                 tooltip = OWN_REGION_WASHINGTON_DC
                 the_capital_wasteland_region = {
-                    owned_by = ROOT
-                    is_core = ROOT
                     type = all
+                    country_or_subject_holds = ROOT
                 }
             }
             years_of_income = 1
