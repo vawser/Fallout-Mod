@@ -1,7 +1,8 @@
 # set_variable = { which = province_id value = 401  }
 
-owner = GRP
-controller = GRP
+owner = WSK
+controller = WSK
+add_core = WSK
 add_core = GRP
 is_city = yes
 
@@ -9,24 +10,17 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 
-culture = granite_peak
-religion = secular
+culture = whitestalker
+religion = fetishism
 
 hre = no
 center_of_trade = 1
 trade_goods = steel
 
-2282.1.1 = {
-    owner = WSK
-    controller = WSK
-    add_core = WSK
-    culture = whitestalker
-    religion = fetishism
-}
-
-
-
-
+# Pops
+set_majority_accepted_tribal = yes
+set_minority_accepted_wastelander = yes
+set_minority_maligned_raider = yes
 
 
 

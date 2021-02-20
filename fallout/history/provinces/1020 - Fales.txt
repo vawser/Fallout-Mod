@@ -1,7 +1,8 @@
 # set_variable = { which = province_id value = 68  }
 
-owner = HAT
-controller = HAT
+owner = NRN
+controller = NRN
+add_core = NRN
 add_core = HAT
 is_city = yes
 
@@ -9,17 +10,15 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 
-culture = hawthorne
+culture = new_reno
 religion = secular
 
 hre = no # hre = yes
 center_of_trade = 1
 trade_goods = food
 
-2282.1.1 = {
-    owner = NRN
-    controller = NRN
-    add_core = NRN
-    culture = new_reno
-    religion = secular
-}
+# Pops
+set_majority_accepted_wastelander = yes
+set_minority_accepted_raider = yes
+set_minority_accepted_ghoul = yes
+set_minority_maligned_tribal = yes

@@ -1,7 +1,8 @@
 # set_variable = { which = province_id value = 68  }
 
-owner = MND
-controller = MND
+owner = SHI
+controller = SHI
+add_core = SHI
 add_core = MND
 is_city = yes
 
@@ -9,17 +10,14 @@ base_tax = 2
 base_production = 1
 base_manpower = 1
 
-culture = mendota
-religion = secular
+culture = shi
+religion = taoism
 
 hre = no
 center_of_trade = 1
 trade_goods = food
 
-2282.1.1 = {
-    owner = SHI
-    controller = SHI
-    add_core = SHI
-    culture = shi
-    religion = taoism
-}
+# Pops
+set_majority_integrated_wastelander = yes
+set_minority_maligned_raider = yes
+set_minority_maligned_ghoul = yes

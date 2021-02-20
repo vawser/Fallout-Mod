@@ -1,9 +1,9 @@
 # set_variable = { which = province_id value = 3044  }
 
-native_size = 17
-native_ferocity = 17
-native_hostileness = 2
-is_city = no
+owner = VAU
+controller = VAU
+add_core = VAU
+is_city = yes
 
 base_tax = 3
 base_production = 3
@@ -12,15 +12,10 @@ base_manpower = 3
 culture = vault_city
 religion = secular
 
-trade_goods = unknown
+trade_goods = medical_supplies
+
 hre = no # hre = yes
 center_of_trade = 1
 
-2091.1.1 = {
-    owner = VAU
-    controller = VAU
-    add_core = VAU
-
-    trade_goods = medical_supplies
-}
-
+# Pops
+set_majority_integrated_wastelander = yes

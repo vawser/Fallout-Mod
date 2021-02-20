@@ -1,11 +1,9 @@
 # set_variable = { which = province_id value = 2982  }
 
-#2982 - Vault City
-
-native_size = 14
-native_ferocity = 9
-native_hostileness = 7
-is_city = no
+owner = VAU
+controller = VAU
+add_core = VAU
+is_city = yes
 
 base_tax = 8
 base_production = 6
@@ -14,42 +12,28 @@ base_manpower = 5
 culture = vault_city
 religion = secular
 
-trade_goods = unknown
+trade_goods = medical_supplies
+
 hre = no # hre = yes
 center_of_trade = 3
 
 capital = "Vault 8"
 
-
-
-2000.1.1 = {
-	add_permanent_province_modifier = {
-		name = pf_vault
-		duration = -1 
-	}
+add_permanent_province_modifier = {
+    name = pf_vault
+    duration = -1 
 }
 
-# Creation of Vault City
-2091.1.1 = {
-	add_permanent_province_modifier = {
-		name = uni_vault_city
-		duration = -1 
-	}
-	
-	add_permanent_province_modifier = {
-		name = vault_city_council 
-		duration = -1 
-	}	
-    
-    owner = VAU
-    controller = VAU
-    add_core = VAU
-
-    trade_goods = medical_supplies
+add_permanent_province_modifier = {
+    name = uni_vault_city
+    duration = -1 
 }
 
+add_permanent_province_modifier = {
+    name = vault_city_council 
+    duration = -1 
+}	
 
-
-
-
+# Pops
+set_majority_integrated_wastelander = yes
 

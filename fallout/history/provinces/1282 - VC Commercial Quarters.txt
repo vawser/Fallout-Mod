@@ -1,9 +1,9 @@
 # set_variable = { which = province_id value = 3045  }
 
-native_size = 4
-native_ferocity = 2
-native_hostileness = 2
-is_city = no
+owner = VAU
+controller = VAU
+add_core = VAU
+is_city = yes
 
 base_tax = 3
 base_production = 3
@@ -12,22 +12,19 @@ base_manpower = 2
 culture = vault_city
 religion = secular
 
-trade_goods = unknown
+trade_goods = food
+
+# Pops
+set_majority_accepted_tribal = yes
+set_minority_maligned_raider = yes
 hre = no # hre = yes
 center_of_trade = 1
 
-2091.1.1 = {
-    owner = VAU
-    controller = VAU
-    add_core = VAU
-
-    trade_goods = food
+add_permanent_province_modifier = {
+    name = pf_science_facility
+    duration = -1 
 }
 
-2280.1.1 = {
-    add_permanent_province_modifier = {
-		name = pf_science_facility
-		duration = -1 
-	}
-}
+# Pops
+set_majority_integrated_wastelander = yes
 
