@@ -1,0 +1,220 @@
+#-------------------------------------
+# Administration
+#-------------------------------------
+set_wastelander_administration = {
+    custom_tooltip = SET_WASTELANDER_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 1 } }
+}
+set_raider_administration = {
+    custom_tooltip = SET_RAIDER_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 2 } }
+}
+set_tribal_administration = {
+    custom_tooltip = SET_TRIBAL_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 3 } }
+}
+set_robot_administration = {
+    custom_tooltip = SET_ROBOT_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 4 } }
+}
+set_super_mutant_administration = {
+    custom_tooltip = SET_SUPER_MUTANT_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 5 } }
+}
+set_ghoul_administration = {
+    custom_tooltip = SET_GHOUL_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 6 } }
+}
+set_swampfolk_administration = {
+    custom_tooltip = SET_SWAMPFOLK_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 7 } }
+}
+set_synth_administration = {
+    custom_tooltip = SET_SYNTH_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 8 } }
+}
+set_rodent_administration = {
+    custom_tooltip = SET_RODENT_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 9 } }
+}
+set_beastlord_administration = {
+    custom_tooltip = SET_BEASTLORD_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 10 } }
+}
+set_alien_administration = {
+    custom_tooltip = SET_ALIEN_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 11 } }
+}
+set_deathclaw_administration = {
+    custom_tooltip = SET_DEATHCLAW_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 12 } }
+}
+set_fungal_administration = {
+    custom_tooltip = SET_FUNGAL_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 13 } }
+}
+set_dwarf_administration = {
+    custom_tooltip = SET_DWARF_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 14 } }
+}
+
+#-------------------------------------
+# Majorities
+#-------------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+
+boost_majority_status = {
+    if = {
+        limit = {
+            has_province_modifier = maligned_majority_$TYPE$
+        }
+        set_majority_accepted = { TYPE = $TYPE }
+    }
+    if = {
+        limit = {
+            has_province_modifier = accepted_majority_$TYPE$
+        }
+        set_majority_integrated = { TYPE = $TYPE }
+    }
+}
+reduce_majority_status = {
+    if = {
+        limit = {
+            has_province_modifier = accepted_majority_$TYPE$
+        }
+        set_majority_maligned = { TYPE = $TYPE }
+    }
+    if = {
+        limit = {
+            has_province_modifier = integrated_majority_$TYPE$
+        }
+        set_majority_accepted = { TYPE = $TYPE }
+    }
+}
+set_majority_maligned = {
+    hidden_effect = { 
+        remove_province_modifier = accepted_majority_$TYPE$
+        remove_province_modifier = integrated_majority_$TYPE$
+    }
+    add_permanent_province_modifier = {
+        name = maligned_majority_$TYPE$
+        duration = -1
+    }
+}
+set_majority_accepted = {
+    hidden_effect = { 
+        remove_province_modifier = maligned_majority_$TYPE$
+        remove_province_modifier = integrated_majority_$TYPE$
+    }
+    add_permanent_province_modifier = {
+        name = accepted_majority_$TYPE$
+        duration = -1
+    }
+}
+set_majority_integrated = {
+    hidden_effect = { 
+        remove_province_modifier = accepted_majority_$TYPE$
+        remove_province_modifier = maligned_majority_$TYPE$
+    }
+    add_permanent_province_modifier = {
+        name = integrated_majority_$TYPE$
+        duration = -1
+    }
+}
+
+#-------------------------------------
+# Minorities
+#-------------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+
+boost_minority_status = {
+    if = {
+        limit = {
+            has_province_modifier = maligned_minority_$TYPE$
+        }
+        set_minority_accepted = { TYPE = $TYPE }
+    }
+    if = {
+        limit = {
+            has_province_modifier = accepted_minority_$TYPE$
+        }
+        set_minority_integrated = { TYPE = $TYPE }
+    }
+}
+reduce_minority_status = {
+    if = {
+        limit = {
+            has_province_modifier = accepted_minority_$TYPE$
+        }
+        set_minority_maligned = { TYPE = $TYPE }
+    }
+    if = {
+        limit = {
+            has_province_modifier = integrated_minority_$TYPE$
+        }
+        set_minority_accepted = { TYPE = $TYPE }
+    }
+}
+set_minority_maligned = {
+    hidden_effect = { 
+        remove_province_modifier = accepted_minority_$TYPE$
+        remove_province_modifier = integrated_minority_$TYPE$
+    }
+    add_permanent_province_modifier = {
+        name = maligned_minority_$TYPE$
+        duration = -1
+    }
+}
+set_minority_accepted = {
+    hidden_effect = { 
+        remove_province_modifier = maligned_minority_$TYPE$
+        remove_province_modifier = integrated_minority_$TYPE$
+    }
+    add_permanent_province_modifier = {
+        name = accepted_minority_$TYPE$
+        duration = -1
+    }
+}
+set_minority_integrated = {
+    hidden_effect = { 
+        remove_province_modifier = accepted_minority_$TYPE$
+        remove_province_modifier = maligned_minority_$TYPE$
+    }
+    add_permanent_province_modifier = {
+        name = integrated_minority_$TYPE$
+        duration = -1
+    }
+}
+
+#-------------------------------------
+# System
+#-------------------------------------
+update_administration = {
+    
+}

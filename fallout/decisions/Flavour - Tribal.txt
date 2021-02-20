@@ -1,7 +1,7 @@
 country_decisions = {
 	assemble_a_raiding_party = {
 		potential = {
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
 			has_government_attribute = tribal
 			NOT = { has_country_modifier = assembled_raiding_party }
 		}
@@ -30,7 +30,7 @@ country_decisions = {
 	
 	construct_chem_lab = {
 		potential = {
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
 			has_government_attribute = tribal
 			NOT = { has_country_modifier = chem_lab }
 			NOT = {

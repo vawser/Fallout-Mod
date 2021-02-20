@@ -1,24 +1,23 @@
 #-----------------------------
 # Changelog
 #-----------------------------
-- Reduced the tax/trade/manpower modifiers on buildings to 50%.
-- Reduced the unit build speed/cost modifiers on buildings to 33%.
-- Reduced the local_unrest on the Police Station to -3
-- Reduced the local_missionary_strength on the Religious Centre to 3%
-- Changed the Research Lab modifiers to: institution_growth = 0.05, local_development_cost = -0.15
-- Changed the Bank modifiers to: local_state_maintenance_modifier = -0.25, local_governing_cost = -0.25
-- Changed Planning Command modifier to: governing_capacity_modifier = 0.25
-- Reduced the modifiers from the Unity of Caesar incident.
-- Changed the ruler death mechanics so it is purely done via event.
-- Added "Source Auto-Doc" decision that allows you to extend a ruler's life, blocking the ruler death event for 5 years. Cost scales based on ruler age and is only available if the ruler is over 60.
-- Added Brain Tumour event chain for Caesar's Legion, which kills Caesar unless his Auto-Doc is fixed via the "Fix Auto-Doc" decision.
-- Added Radstone, a dwarf nation.
-- Added Beastlords, a beastlord nation.
-- Added Sporelings, a fungal nation.
-- Added Dwarf NIs.
-- Added Beastlord NIs.
-- Added Fungal NIs.
+- Added racial shift decisions for Wastelander/Raider/Tribal nations.
 
 #-----------------------------
 # TODO
 #----------------------------- 
+# pop_majority_id:
+# 1 - Wastelander
+# 2 - Raider
+# 3 - Tribal
+# 4 - Robot
+# 5 - Super Mutant
+# 6 - Ghoul
+# 7 - Swampfolk
+# 8 - Synth
+# 9 - Rodent
+# 10 - Beastlord
+# 11 - Alien 
+# 12 - Deathclaw
+# 13 - Fungal
+# 14 - Dwarf

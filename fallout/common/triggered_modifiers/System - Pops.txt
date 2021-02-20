@@ -1,0 +1,155 @@
+# pop_administration_id:
+# 1 - Wastelander
+# 2 - Raider
+# 3 - Tribal
+# 4 - Robot
+# 5 - Super Mutant
+# 6 - Ghoul
+# 7 - Swampfolk
+# 8 - Synth
+# 9 - Mutant
+# 10 - Beastlord
+# 11 - Alien 
+# 12 - Deathclaw
+# 13 - Fungal
+# 14 - Dwarf
+
+administration_wastelander = {
+	potential = {
+		is_wastelander_administration = yes
+	}
+	trigger = {
+		is_wastelander_administration = yes
+	}
+    
+    land_forcelimit_modifier = 0.05
+}
+
+administration_raider = {
+	potential = {
+		is_raider_administration = yes
+	}
+	trigger = {
+		is_raider_administration = yes
+	}
+
+	reinforce_cost_modifier = -0.05
+}
+administration_tribal = {
+	potential = {
+		is_tribal_administration = yes
+	}
+	trigger = {
+		is_tribal_administration = yes
+	}
+
+	global_manpower_modifier = 0.05
+}
+administration_robot = {
+	potential = {
+		is_robot_administration = yes
+	}
+	trigger = {
+		is_robot_administration = yes
+	}
+}
+administration_super_mutant = {
+	potential = {
+		is_super_mutant_administration = yes
+	}
+	trigger = {
+		is_super_mutant_administration = yes
+	}
+
+	shock_damage = 0.05
+}
+administration_ghoul = {
+	potential = {
+		is_ghoul_administration = yes
+	}
+	trigger = {
+		is_ghoul_administration = yes
+	}
+
+	land_attrition = -0.05
+}
+administration_swampfolk = {
+	potential = {
+		is_swampfolk_administration = yes
+	}
+	trigger = {
+		is_swampfolk_administration = yes
+	}
+
+	reinforce_speed = 0.1
+}
+administration_synth = {
+	potential = {
+		is_synth_administration = yes
+	}
+	trigger = {
+		is_synth_administration = yes
+	}
+
+	fire_damage = 0.05
+}
+administration_rodent = {
+	potential = {
+		is_rodent_administration = yes
+	}
+	trigger = {
+		is_rodent_administration = yes
+	}
+
+	manpower_recovery_speed = 0.05
+}
+administration_beastlord = {
+	potential = {
+		is_beastlord_administration = yes
+	}
+	trigger = {
+		is_beastlord_administration = yes
+	}
+
+	recover_army_morale_speed = 0.05
+}
+administration_alien = {
+	potential = {
+		is_alien_administration = yes
+	}
+	trigger = {
+		is_alien_administration = yes
+	}
+
+	war_exhaustion = -0.05
+}
+administration_deathclaw = {
+	potential = {
+		is_deathclaw_administration = yes
+	}
+	trigger = {
+		is_deathclaw_administration = yes
+	}
+
+	land_morale = 0.05
+}
+administration_fungal = {
+	potential = {
+		is_fungal_administration = yes
+	}
+	trigger = {
+		is_fungal_administration = yes
+	}
+
+	global_regiment_recruit_speed = -0.25
+}
+administration_dwarf = {
+	potential = {
+		is_dwarf_administration = yes
+	}
+	trigger = {
+		is_dwarf_administration = yes
+	}
+
+	movement_speed = 0.1
+}

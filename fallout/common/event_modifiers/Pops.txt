@@ -1,0 +1,964 @@
+# pop_majority_id:
+# 1 - Wastelander
+# 2 - Raider
+# 3 - Tribal
+# 4 - Robot
+# 5 - Super Mutant
+# 6 - Ghoul
+# 7 - Swampfolk
+# 8 - Synth
+# 9 - Rodent
+# 10 - Beastlord
+# 11 - Alien 
+# 12 - Deathclaw
+# 13 - Fungal
+# 14 - Dwarf
+
+#-------------------------------------
+# System
+#-------------------------------------
+shifted_administration = {
+	legitimacy = -1
+	republican_tradition = -1
+    devotion = -1
+	horde_unity = -1
+}
+
+pop_menu_cooldown = { }
+
+gained_majority = {
+    local_unrest = -3
+}
+
+expel_majority = {
+    local_culture_conversion_cost = -0.25
+	local_unrest = 1
+    local_monthly_devastation = 0.05
+}
+
+purge_majority = {
+    local_culture_conversion_cost = -0.5
+	local_missionary_strength = 0.03
+	local_unrest = 3
+	local_monthly_devastation = 0.1
+}
+
+#-------------------------------------
+# Racial Majority Modifiers
+#-------------------------------------
+# Wastelander
+maligned_majority_wastelander = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_wastelander = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_wastelander = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Raider
+maligned_majority_raider = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_raider = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_raider = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Tribal
+maligned_majority_tribal = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_tribal = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_tribal = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Robot
+maligned_majority_robot = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_robot = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_robot = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Super Mutant
+maligned_majority_super_mutant = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_super_mutant = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_super_mutant = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Ghoul
+maligned_majority_ghoul = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_ghoul = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_ghoul = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Swampfolk
+maligned_majority_swampfolk = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_swampfolk = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_swampfolk = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Synth
+maligned_majority_synth = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_synth = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_synth = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Rodent
+maligned_majority_rodent = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_rodent = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_rodent = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Beastlord
+maligned_majority_beastlord = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_beastlord = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_beastlord = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Alien
+maligned_majority_alien = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_alien = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_alien = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Deathclaw
+maligned_majority_deathclaw = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_deathclaw = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_deathclaw = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Fungal
+maligned_majority_fungal = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_fungal = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_fungal = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Dwarf
+maligned_majority_dward = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_majority_dward = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_majority_dward = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+#-------------------------------------
+# Racial Minority Modifiers
+#-------------------------------------
+# Wastelander
+maligned_minority_wastelander = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_wastelander = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_wastelander = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Raider
+maligned_minority_raider = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_raider = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_raider = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Tribal
+maligned_minority_tribal = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_tribal = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_tribal = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Robot
+maligned_minority_robot = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_robot = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_robot = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Super Mutant
+maligned_minority_super_mutant = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_super_mutant = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_super_mutant = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Ghoul
+maligned_minority_ghoul = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_ghoul = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_ghoul = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Swampfolk
+maligned_minority_swampfolk = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_swampfolk = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_swampfolk = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Synth
+maligned_minority_synth = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_synth = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_synth = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Rodent
+maligned_minority_rodent = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_rodent = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_rodent = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Beastlord
+maligned_minority_beastlord = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_beastlord = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_beastlord = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Alien
+maligned_minority_alien = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_alien = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_alien = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Deathclaw
+maligned_minority_deathclaw = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_deathclaw = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_deathclaw = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Fungal
+maligned_minority_fungal = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_fungal = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_fungal = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+# Dwarf
+maligned_minority_dward = {
+    # Base
+    local_unrest = 1
+    
+    # Specific
+    local_tax_modifier = 0.1
+}
+accepted_minority_dward = {
+    # Base
+    local_unrest = 1
+    local_state_maintenance_modifier = 0.1
+    
+    # Specific
+    local_tax_modifier = 0.1
+    trade_value_modifier = 0.05
+}
+integrated_minority_dward = {
+    # Base
+    local_state_maintenance_modifier = 0.3
+	local_autonomy = 0.025
+    
+    # Specific
+	local_tax_modifier = 0.1
+	trade_value_modifier = 0.1
+	local_production_efficiency = 0.05
+}
+
+#-------------------------------------
+# Explusion/Purge
+#-------------------------------------
+# Wastelander
+expel_wastelander = {
+    administrative_efficiency = -0.01
+}
+purge_wastelander = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Raider
+expel_raider = {
+    administrative_efficiency = -0.01
+}
+purge_raider = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Tribal
+expel_tribal = {
+    administrative_efficiency = -0.01
+}
+purge_tribal = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Robot
+expel_robot = {
+    administrative_efficiency = -0.01
+}
+purge_robot = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Super Mutant
+expel_super_mutant = {
+    administrative_efficiency = -0.01
+}
+purge_super_mutant = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Ghoul
+expel_ghoul = {
+    administrative_efficiency = -0.01
+}
+purge_ghoul = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Swampfolk
+expel_swampfolk = {
+    administrative_efficiency = -0.01
+}
+purge_swampfolk = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Synth
+expel_synth = {
+    administrative_efficiency = -0.01
+}
+purge_synth = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Rodent
+expel_rodent = {
+    administrative_efficiency = -0.01
+}
+purge_rodent = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Beastlord
+expel_beastlord = {
+    administrative_efficiency = -0.01
+}
+purge_beastlord = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Alien
+expel_alien = {
+    administrative_efficiency = -0.01
+}
+purge_alien = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Deathclaw
+expel_deathclaw = {
+    administrative_efficiency = -0.01
+}
+purge_deathclaw = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Fungal
+expel_fungal = {
+    administrative_efficiency = -0.01
+}
+purge_fungal = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+
+# Dwarf
+expel_dwarf = {
+    administrative_efficiency = -0.01
+}
+purge_dwarf = {
+    administrative_efficiency = -0.02
+	diplomatic_reputation = -1
+}
+

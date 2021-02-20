@@ -1,0 +1,282 @@
+# pop_administration_id:
+# 1 - Wastelander
+# 2 - Raider
+# 3 - Tribal
+# 4 - Robot
+# 5 - Super Mutant
+# 6 - Ghoul
+# 7 - Swampfolk
+# 8 - Synth
+# 9 - Rodent
+# 10 - Beastlord
+# 11 - Alien 
+# 12 - Deathclaw
+# 13 - Fungal
+# 14 - Dwarf
+
+is_human_administration = {
+    OR = {
+		is_wastelander_administration = yes
+		is_raider_administration = yes
+		is_tribal_administration = yes
+		is_dwarf_administration = yes
+	}
+}
+
+is_humanlike_administration = {
+    OR = {
+		is_wastelander_administration = yes
+		is_raider_administration = yes
+		is_tribal_administration = yes
+		is_dwarf_administration = yes
+        is_super_mutant_administration = yes
+        is_ghoul_administration = yes
+        is_beastlord_administration = yes
+	}
+}
+
+# FROM is target
+is_same_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SAME_ADMINISTRATION
+        OR = {
+            AND = {
+                is_wastelander_administration = yes
+                FROM = { is_wastelander_administration = yes }
+            }
+            AND = {
+                is_raider_administration = yes
+                FROM = { is_raider_administration = yes }
+            }
+            AND = {
+                is_tribal_administration = yes
+                FROM = { is_tribal_administration_administration = yes }
+            }
+            AND = {
+                is_robot_administration = yes
+                FROM = { is_robot_administration = yes }
+            }
+            AND = {
+                is_super_mutant_administration = yes
+                FROM = { is_super_mutant_administration = yes }
+            }
+            AND = {
+                is_ghoul_administration = yes
+                FROM = { is_ghoul_administration = yes }
+            }
+            AND = {
+                is_swampfolk_administration = yes
+                FROM = { is_swampfolk_administration = yes }
+            }
+            AND = {
+                is_synth_administration = yes
+                FROM = { is_synth_administration = yes }
+            }
+            AND = {
+                is_rodent_administration = yes
+                FROM = { is_rodent_administration = yes }
+            }
+            AND = {
+                is_beastlord_administration = yes
+                FROM = { is_beastlord_administration = yes }
+            }
+            AND = {
+                is_alien_administration = yes
+                FROM = { is_alien_administration = yes }
+            }
+            AND = {
+                is_deathclaw_administration = yes
+                FROM = { is_deathclaw_administration = yes }
+            }
+            AND = {
+                is_fungal_administration = yes
+                FROM = { is_fungal_administration = yes }
+            }
+            AND = {
+                is_dwarf_administration = yes
+                FROM = { is_dwarf_administration = yes }
+            }
+        }
+    }
+}
+
+is_wastelander_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_WASTELANDER
+        is_variable_equal = { which = pop_administration_id value = 1 }
+    }
+}
+is_raider_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_RAIDER
+        is_variable_equal = { which = pop_administration_id value = 2 }
+    }
+}
+is_tribal_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_TRIBAL
+        is_variable_equal = { which = pop_administration_id value = 3 }
+    }
+}
+is_robot_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_ROBOT
+        is_variable_equal = { which = pop_administration_id value = 4 }
+    }
+}
+is_super_mutant_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SUPER_MUTANT
+        is_variable_equal = { which = pop_administration_id value = 5 }
+    }
+}
+is_ghoul_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_GHOUL
+        is_variable_equal = { which = pop_administration_id value = 6 }
+    }
+}
+is_swampfolk_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SWAMPFOLK
+        is_variable_equal = { which = pop_administration_id value = 7 }
+    }
+}
+is_synth_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SYNTH
+        is_variable_equal = { which = pop_administration_id value = 8 }
+    }
+}
+is_rodent_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_RODENT
+        is_variable_equal = { which = pop_administration_id value = 9 }
+    }
+}
+is_beastlord_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_BEASTLORD
+        is_variable_equal = { which = pop_administration_id value = 10 }
+    }
+}
+is_alien_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_ALIEN
+        is_variable_equal = { which = pop_administration_id value = 11 }
+    }
+}
+is_deathclaw_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_DEATHCLAW
+        is_variable_equal = { which = pop_administration_id value = 12 }
+    }
+}
+is_fungal_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_FUNGAL
+        is_variable_equal = { which = pop_administration_id value = 13 }
+    }
+}
+is_dwarf_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_DWARF
+        is_variable_equal = { which = pop_administration_id value = 14 }
+    }
+}
+cannot_breed = {
+	OR = {
+		is_robot_administration = yes
+		is_super_mutant_administration = yes
+        is_rodent_administration = yes
+		culture_group = super_mutant_group
+		culture_group = robot_group
+		culture_group = creatures_group
+		ruler_culture = robot
+		ruler_culture = synth
+		ruler_culture = android
+		ruler_culture = think_tank
+		ruler_culture = skynet
+		ruler_culture = robo_scorpion
+		ruler_culture = lobotomite
+		ruler_culture = uss_constitution
+		primary_culture = robot
+		primary_culture = synth
+		primary_culture = android
+		primary_culture = think_tank
+		primary_culture = skynet
+		primary_culture = robo_scorpion
+		primary_culture = lobotomite
+		primary_culture = uss_constitution
+	}
+}
+
+#-------------------------------------
+# Majorities
+#-------------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+
+is_majority_maligned = {
+    has_province_modifier = maligned_majority_$TYPE$
+}
+is_majority_accepted = {
+    has_province_modifier = accepted_majority_$TYPE$
+}
+is_majority_integrated = {
+    has_province_modifier = integrated_majority_$TYPE$
+}
+is_majority = {
+    OR = {
+        has_province_modifier = maligned_majority_$TYPE$
+        has_province_modifier = accepted_majority_$TYPE$
+        has_province_modifier = integrated_majority_$TYPE$
+    }
+}
+
+#-------------------------------------
+# Minorities
+#-------------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+
+is_minority_maligned = {
+    has_province_modifier = maligned_minority_$TYPE$
+}
+is_minority_accepted = {
+    has_province_modifier = accepted_minority_$TYPE$
+}
+is_minority_integrated = {
+    has_province_modifier = integrated_minority_$TYPE$
+}
+is_minority = {
+    OR = {
+        has_province_modifier = maligned_minority_$TYPE$
+        has_province_modifier = accepted_minority_$TYPE$
+        has_province_modifier = integrated_minority_$TYPE$
+    }
+}

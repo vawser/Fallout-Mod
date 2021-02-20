@@ -77,11 +77,11 @@ royal_marriage = {
 		tooltip = MARWAR
 		potential = {
 			NOT = { # Races that cannot normally reproduce
-				is_robot = yes  # Robots can't breed
-				is_synth = yes # Robots can't breed
-				is_fungal = yes # Fungi reproduce asexually
-				is_deathclaw = yes # Deathclaws can't breed with sentients
-				is_super_mutant = yes # Super Mutants can't breed, just ask the Master
+				is_robot_majority = yes  # Robots can't breed
+				is_synth_majority = yes # Robots can't breed
+				is_fungal_majority = yes # Fungi reproduce asexually
+				is_deathclaw_majority = yes # Deathclaws can't breed with sentients
+				is_super_mutant_majority = yes # Super Mutants can't breed, just ask the Master
 				cannot_breed = yes
 			}
 		}
@@ -90,28 +90,28 @@ royal_marriage = {
 			NOT = { cannot_breed = yes }
 			OR = {
 				AND = {
-					is_alien = yes # Aliens can't breed with men
-					FROM = { is_alien = yes # Aliens can breed with other aliens }
+					is_alien_majority = yes # Aliens can't breed with men
+					FROM = { is_alien_majority = yes # Aliens can breed with other aliens }
 				}
 				AND = {
 					OR = {
-						is_mutant = yes
-						is_swampfolk = yes
-						is_beastlord = yes
-						is_ghoul = yes
+						is_mutant_majority = yes
+						is_swampfolk_majority = yes
+						is_beastlord_majority = yes
+						is_ghoul_majority = yes
 					}
 					FROM = {
 						OR = {
-							is_mutant = yes
-							is_swampfolk = yes
-							is_beastlord = yes
-							is_ghoul = yes
+							is_mutant_majority = yes
+							is_swampfolk_majority = yes
+							is_beastlord_majority = yes
+							is_ghoul_majority = yes
 						}
 					}
 				}
 				AND = {
-					is_human_race = yes
-					FROM = { is_human_race = yes }
+					is_human_administration = yes
+					FROM = { is_human_administration = yes }
 				}
 			}
 		}

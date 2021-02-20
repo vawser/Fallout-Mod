@@ -3,7 +3,7 @@ country_decisions = {
     host_casino_night = {
 		potential = {
             has_gambling_allowed = yes
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
             NOT = { has_country_flag = trigger_gambling_event }
 		}
 		allow = {
@@ -39,7 +39,7 @@ country_decisions = {
 		potential = {
             has_government_attribute = heir
             has_prostitution_allowed = yes
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
             NOT = { has_country_flag = trigger_prostitution_event }
 		}
 		allow = {
@@ -80,7 +80,7 @@ country_decisions = {
     synthesize_drug = {
 		potential = {
             has_narcotics_allowed = yes
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
             NOT = { has_country_flag = trigger_narcotics_event }
 		}
 		allow = {
@@ -126,7 +126,7 @@ country_decisions = {
     
     purge_drug_manufacturing = {
 		potential = {
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
 			OR = {
 				AND = {
 					has_narcotics_forbidden = yes
@@ -169,7 +169,7 @@ country_decisions = {
     # Start Scavenger Hunt
     start_scavenger_hunt = {
 		potential = {
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
             always = no # TODO
             has_scavenging_allowed = yes
             NOT = { has_country_flag = trigger_scavenging_event }
@@ -204,7 +204,7 @@ country_decisions = {
     # Search for Lost Texts
     search_for_lost_texts = {
 		potential = {
-            is_humanlike_race = yes
+            is_humanlike_administration = yes
             has_scavenging_allowed = yes
             NOT = { has_country_flag = trigger_lost_religions_event }
 		}
