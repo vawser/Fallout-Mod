@@ -1,84 +1,25 @@
 country_decisions = {
-	shift_towards_tribal_administration = {
-		potential = {
-            is_wastelander_majority = yes
-		}
-		allow = {
-			is_wastelander_majority = yes
-            stability = 3
-		}
-		effect = {
-			add_stability = -6
+	# shift_towards_tribal_administration = {
+		# potential = {
+            # is_wastelander_administration = yes
+		# }
+		# allow = {
+			# is_wastelander_administration = yes
+            # stability = 3
+		# }
+		# effect = {
+			# add_stability = -6
 
-			add_country_modifier = {
-				name = "shifted_administration"
-				duration = 3650
-			}	
+			# add_country_modifier = {
+				# name = "shifted_administration"
+				# duration = 3650
+			# }	
             
-            set_tribal_administration = yes
-            change_technology_group = tech_tribal
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-    shift_towards_raider_administration = {
-		potential = {
-            OR = {
-                is_wastelander_majority = yes
-                is_tribal_majority = yes
-            }
-		}
-		allow = {
-			OR = {
-                is_wastelander_majority = yes
-                is_tribal_majority = yes
-            }
-            stability = 3
-		}
-		effect = {
-			add_stability = -6
-
-			add_country_modifier = {
-				name = "shifted_administration"
-				duration = 3650
-			}	
-            
-            set_raider_administration = yes
-            change_technology_group = tech_raider
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-    shift_towards_wastelander_administration = {
-		potential = {
-            OR = {
-                is_raider_majority = yes
-                is_tribal_majority = yes
-            }
-		}
-		allow = {
-			OR = {
-                is_raider_majority = yes
-                is_tribal_majority = yes
-            }
-            stability = 3
-            total_development = 200
-		}
-		effect = {
-			add_stability = -6
-
-			add_country_modifier = {
-				name = "shifted_administration"
-				duration = 3650
-			}	
-            
-            set_wastelander_administration = yes
-            change_technology_group = tech_wastelander
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+            # set_tribal_administration = yes
+            # change_technology_group = tech_tribal
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
 }
