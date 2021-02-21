@@ -610,7 +610,6 @@ take_capital_imperial = {
 		prestige_factor = 1
 		peace_cost_factor = 0.75	
 		
-		
 		allowed_provinces = {
 			always = yes
 		}
@@ -627,7 +626,6 @@ take_capital_imperial = {
 		badboy_factor = 0.75
 		prestige_factor = 1
 		peace_cost_factor = 0.75	
-		
 		
 		allowed_provinces = {
 			always = yes
@@ -989,10 +987,14 @@ take_province_excommunication = {
 	badboy_factor = 0.5
 	prestige_factor = 1.25
 	peace_cost_factor = 1.0	
+
+	defender = {
+		is_excommunication = yes
+	}
 	
 	allowed_provinces = {
 		owner = { 
-			is_excommunicated = yes	
+			is_excommunicated = yes
 		}
 		OR = {
 			is_core = ROOT
@@ -1026,6 +1028,7 @@ superiority_trade = {
 	peace_cost_factor = 0.75	
 	
 	peace_options = {
+        po_demand_provinces
 		po_revoke_cores
 		po_gold
 		po_concede_defeat
@@ -1045,6 +1048,7 @@ superiority_trade_mutual = {
 		peace_cost_factor = 0.75	
 		
 		peace_options = {
+            po_demand_provinces
 			po_revoke_cores
 			po_gold
 			po_concede_defeat
@@ -1059,6 +1063,7 @@ superiority_trade_mutual = {
 		peace_cost_factor = 0.75	
 		
 		peace_options = {
+            po_demand_provinces
 			po_revoke_cores
 			po_gold
 			po_concede_defeat
@@ -1172,31 +1177,6 @@ superiority_primitives = {
 		po_gold
 		#po_become_vassal
 		#po_change_religion
-	}
-	
-	country_desc = ALL_PRIMITIVES
-	prov_desc = ALL_PRIMITIVES
-	war_name = PRIMITIVE_WAR_NAME	
-}
-
-superiority_overseas = {
-	type = superiority
-	
-	badboy_factor = 0.5
-	prestige_factor = 1
-	peace_cost_factor = 0.5	
-	
-	allowed_provinces = {
-		
-	}
-	
-	peace_options = {
-		po_demand_provinces
-		po_revoke_cores
-		po_release_vassals
-		po_release_annexed
-		po_return_cores
-		po_gold
 	}
 	
 	country_desc = ALL_PRIMITIVES
@@ -1349,26 +1329,6 @@ annex_country = {
 	war_name = PRIMITIVE_WAR_NAME
 }
 
-annex_country_japan = {
-	type = take_capital
-	
-	badboy_factor = 0.75
-	prestige_factor = 1
-	peace_cost_factor = 1.0	
-	
-	allowed_provinces = {
-		
-	}
-
-	peace_options = {
-		po_demand_provinces
-	}
-	
-	allow_annex = yes
-	
-	war_name = PRIMITIVE_WAR_NAME
-}
-
 war_goal_change_government = {
 	type = take_capital
 	
@@ -1458,8 +1418,6 @@ humiliate = {
 		po_humiliate
 	}
 	
-	deny_annex = yes
-	
 	country_desc = ALL_NATIVES
 	prov_desc = ALL_PROVS
 	war_name = HUMILIATE_WAR_NAME	
@@ -1491,8 +1449,6 @@ humiliate_rotw = {
 		po_humiliate_rival
 	}
 	
-	deny_annex = yes
-	
 	country_desc = ALL_COUNTRIES
 	prov_desc = NO_PROVS
 	war_name = HUMILIATE_ROTW_WAR_NAME	
@@ -1502,6 +1458,7 @@ blockade_ports = {
 	type = blockade_ports
 	
 	peace_options = {
+        po_demand_provinces
 		po_gold
 		po_concede_defeat
 		po_trade_power
@@ -1655,8 +1612,6 @@ force_migration = {
 	prestige_factor = 1
 	peace_cost_factor = 1
 	
-	deny_annex = yes
-
 	war_name = FORCE_MIGRATION_WAR_NAME
 }
 

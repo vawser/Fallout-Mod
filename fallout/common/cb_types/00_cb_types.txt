@@ -146,18 +146,6 @@ cb_trade_war_triggered = {
 	months = 24
 
 	war_goal = superiority_trade
-
-	attacker_disabled_po = {
-		po_demand_provinces
-		po_revoke_cores
-		po_release_vassals
-		po_release_annexed
-		po_return_cores
-		po_become_vassal
-		po_become_tributary_state
-		po_form_personal_union
-		po_transfer_vassals
-	}
 }
 
 cb_trade_conflict = {
@@ -167,18 +155,6 @@ cb_trade_conflict = {
 	months = 24
 
 	war_goal = blockade_ports
-
-	attacker_disabled_po = {
-		po_demand_provinces
-		po_revoke_cores
-		po_release_vassals
-		po_release_annexed
-		po_return_cores
-		po_become_vassal
-		po_form_personal_union
-		po_become_tributary_state
-		po_transfer_vassals
-	}
 }
 
 cb_trade_league_conflict = {
@@ -191,18 +167,6 @@ cb_trade_league_conflict = {
 	months = 24
 
 	war_goal = blockade_ports
-
-	attacker_disabled_po = {
-		po_demand_provinces
-		po_revoke_cores
-		po_release_vassals
-		po_release_annexed
-		po_return_cores
-		po_become_vassal
-		po_become_tributary_state
-		po_form_personal_union
-		po_transfer_vassals
-	}
 }
 
 cb_annex = {
@@ -276,7 +240,8 @@ cb_independence_war = {
 	prerequisites = {
 		is_subject_other_than_tributary_trigger = yes
 		is_subject_of = FROM
-		NOT = { is_colonial_nation_of = FROM }
+		liberty_desire = 50
+		is_revolution_target = no
 	}
 
 	war_goal = defend_capital_independence
@@ -537,18 +502,6 @@ cb_trade_war = {
 	}
 
 	war_goal = superiority_trade_mutual
-
-	attacker_disabled_po = {
-		po_demand_provinces
-		po_revoke_cores
-		po_release_vassals
-		po_release_annexed
-		po_return_cores
-		po_become_vassal
-		po_become_tributary_state
-		po_form_personal_union
-		po_transfer_vassals
-	}
 }
 
 # Trade War for embargoed Trade League members
@@ -562,18 +515,6 @@ cb_trade_league_dispute = {
 	}
 
 	war_goal = superiority_trade_mutual
-
-	attacker_disabled_po = {
-		po_demand_provinces
-		po_revoke_cores
-		po_release_vassals
-		po_release_annexed
-		po_return_cores
-		po_become_vassal
-		po_become_tributary_state
-		po_form_personal_union
-		po_transfer_vassals
-	}
 }
 
 # Imperial Ban
@@ -627,7 +568,7 @@ cb_super_badboy = {
 		is_revolutionary = no
 	}
 
-	war_goal = superiority_punitive
+	war_goal = take_capital_punitive
 }
 
 
@@ -764,6 +705,7 @@ cb_spread_the_revolution = {
 	valid_for_subject = no
 
 	prerequisites = {
+        is_neighbor_of = FROM
 		is_revolutionary = yes
 		OR = {
 			ai = no
@@ -849,18 +791,7 @@ cb_humiliate_rotw = {
 		is_rival = FROM
 		is_revolutionary = no
 	}
-
-	attacker_disabled_po = {
-		po_demand_provinces
-		po_release_vassals
-		po_release_annexed
-		po_return_cores
-		po_become_vassal
-		po_become_tributary_state
-		po_form_personal_union
-		po_transfer_vassals
-	}
-
+    
 	war_goal = humiliate_rotw
 }
 
@@ -1014,3 +945,15 @@ cb_world_crusade = {
 
 	war_goal = superiority_world_crusade
 }
+
+cb_hegemon = {
+	valid_for_subject = no
+
+	prerequisites = {
+		is_hegemon = no
+		from = { is_hegemon = yes }
+	}
+
+	war_goal = take_capital_imperial
+}
+

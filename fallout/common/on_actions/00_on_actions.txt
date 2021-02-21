@@ -1,5 +1,14 @@
 # country
 on_startup = {
+	emperor = {
+		save_global_event_target_as = Emperor
+	}
+	if = {
+		limit = {
+			is_emperor_of_china = yes
+		}
+		save_global_event_target_as = celestial_emperor
+	}
     events = {
         startup.1       # Global flags
         startup.2       # Country flags
@@ -18,56 +27,80 @@ on_startup = {
         skynet.1 # A Bored AI  - Setup for New Reno-Skynet start situation 
         
     }
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_startup" }
 }
 
 # country
 on_religion_change = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_religion_change" }
+    if = {
+		limit = {
+			has_heir = yes
+		}
+		set_heir_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_regency = no
+		}
+		set_ruler_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+		}
+		set_consort_religion = ROOT
+	}
+    add_country_modifier = {
+		name = recently_changed_religion_dummy
+		duration = 10
+		hidden = yes
+	}
 }
 
 # country. Spawned when Enforcing Rebel Demands through a Support Rebels-war.
 on_enforce_rebel_demands = {
-    set_country_flag = helped_rebels_win_war
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_enforce_rebel_demands" }
+    # ROOT = The winning country
+	# FROM = The loosing country
+	set_country_flag = helped_rebels_win_war
 }
 
 # country
 on_colonial_liberation = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_colonial_liberation" }
+    
 }
 
 # country
 on_colonial_reintegration = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_colonial_reintegration" }
+	
 }
 
 # country
 on_peace_actor = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_peace_actor" }
+	events = {
+	}
 }
 
 # country
 on_peace_recipient = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_peace_recipient" }
+	events = {
+	}
 }
 
 # country
 # root = winning country, from = loser country
 on_war_won = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [Root.GetName] - loser : [From.GetName] - on_war_won" }
+    
 }
 
 # country
 # root = loser country, from = winner country
 on_war_lost = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [From.GetName] - loser : [Root.GetName] - on_war_lost" }
+    
 }
 
 # country
 # root = winning country, from = loser country
 on_battle_won_country = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [Root.GetName] - loser : [From.GetName] - on_battle_won_country" }
     
     events = {
 		
@@ -82,8 +115,6 @@ on_battle_won_country = {
 # country
 # root = loser country, from = winner country
 on_battle_lost_country = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - winner : [From.GetName] - loser : [Root.GetName] - on_battle_lost_country" }
-    
     # Cults
     if = {
         limit = { has_dlc = "Rights of Man" }
@@ -211,13 +242,6 @@ on_battle_lost_country = {
 # province
 # root = location, from = loser country
 on_battle_won_province = {
-   if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - loser : [From.GetName] - on_battle_won_province" }
-}
-
-# province
-# root = location, from = winner country
-on_battle_lost_province = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - winner : [From.GetName] - on_battle_lost_province" }
 }
 
 #Unit Scope OnAction for Battle Won
@@ -233,69 +257,69 @@ on_battle_won_unit = {
 
 # #Unit Scope OnAction for Battle Lost
 on_battle_lost_unit = {
-	
 }
 
 # province
 # root = location, from = country doing it
 on_added_to_trade_company ={
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_added_to_trade_company" }
+
 }
 
 # province
 # root = location, from = country doing it
 on_removed_from_company ={
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_removed_from_company" }
+
 }
 
 # province
 # root = location, from = country doing it
 on_company_formed ={
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_company_formed" }
+
 }
 
 # province
 # root = location, from = country doing it
 on_company_disolved ={
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_company_disolved" }
+
 }
 
+# province
+# root = location, from = winner country
+on_battle_lost_province = {
+}
 
 # country
 # root = winning country, from = location
 on_siege_won_country = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [From.GetName] - winner : [Root.GetName] - on_siege_won_country" }
+    
 }
 
 # country
 # root = losing country, from = location
 on_siege_lost_country = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [From.GetName] - loser : [Root.GetName] - on_siege_lost_country" }
 }
 
 # province
 # root = location, from = losing country
 on_siege_won_province = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - loser : [From.GetName] - on_siege_won_province" }
+    
 }
 
 # province
 # root = location, from = winning country
 on_siege_lost_province =  {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - winner : [From.GetName] - on_siege_lost_province" }
 }
 
 # province
 # root = location, from = country that abandons colony
 # Fired right before the colony is abandoned.
-on_abandon_colony = {   
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - country : [From.GetName] - on_abandon_colony" }
+on_abandon_colony = {
 }
 
+# OBS: Consider that the following on_actions can be called for Personal Union juniors as well.
 # country
 on_new_monarch = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_monarch" }
-
+    
     if = {
         limit = {
             OR = {
@@ -312,11 +336,10 @@ on_new_monarch = {
 }
 
 on_new_consort = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_consort" }
+	
 }
 
 on_monarch_death = { 
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_monarch_death" }
     
     events = {
         new_vegas.30 # Anarcho Vegas
@@ -327,12 +350,12 @@ on_monarch_death = {
 
 # country 
 on_regent = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_regent" }
+    
 }
 
 # country 
 on_new_term_election = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_term_election" }
+    
     events = {
         elections.1
         enclave_elections.1
@@ -341,7 +364,7 @@ on_new_term_election = {
 
 # country 
 on_death_election = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_election" }
+    
     events = {
         elections.2
         enclave_elections.2
@@ -350,7 +373,7 @@ on_death_election = {
 
 # country
 on_death_foreign_slave_ruler = {
-	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_foreign_slave_ruler" }
+	
 	events = {
 		wolf_pack.1 # Choose new for the Pack
 		shi.1 #Chosing the next Head Advisor
@@ -360,17 +383,17 @@ on_death_foreign_slave_ruler = {
 
 # country 
 on_replace_governor = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_replace_governor" }
+    
 }
+
 
 # country
 on_bankruptcy = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bankruptcy" }
 }
 
 # country (country annexing, root = target)
 on_diplomatic_annex = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_diplomatic_annex" }
+    
     events = {
         fm_subjects.1
     }
@@ -378,35 +401,35 @@ on_diplomatic_annex = {
 
 #country
 on_heir_death = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - country" }
+    
 
 }
 
 # country
-on_queen_death = {  
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_queen_death" }
+on_queen_death = {
+
 }
 
 # When a non-native changes government type
 on_government_change = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_government_change" }
+    
 }
 
 # country
 on_new_heir = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_new_heir" }
+    
 }
 
 # country 
 on_weak_heir_claim = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_weak_heir_claim" }
+    
     events = {
         fm_government.1
     }
 }
 
 on_heir_needed_theocracy = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_heir_needed_theocracy" }
+    
 	events = {
 		brotherhood_of_steel_government.1   # For Brotherhood of Steel
         renewal_cult.1                      # For the Renewal Cult
@@ -416,121 +439,109 @@ on_heir_needed_theocracy = {
 
 # Emperor from same dynasty
 on_successive_emperor = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_successive_emperor" }
     
-    events = {
-        #ncr_government.10
-    }
+}
+
+on_emperor_elected = {
+
 }
 
 # HRE Prince released by the emperor
 on_released_hre_member = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_released_hre_member" }
+    
 }
 
 # HRE Prince converts to non-Emperor religion
 on_hre_member_false_religion = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_member_false_religion" }
 }
 
 # HRE Prince converts to Emperor religion
 on_hre_member_true_religion = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_member_true_religion" }
 }
 
 # Emperor wins HRE defensive war
 on_hre_wins_defensive_war = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_wins_defensive_war" }
     
-    events = {
-        #ncr_government.11
-    }
 }
 
 # HRE member annexed by non-HRE country
 on_hre_member_annexed = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_member_annexed" }
     
-    events = {
-        #ncr_government.12
-    }
 }
 
 # HRE member released from non-HRE vassalage
 on_hre_released_vassal = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_released_vassal" }
+}
+
+# HRE member transferred from non-HRE vassalage to Emperor
+on_hre_transfered_vassal = {
 }
 
 # Emperor coming to the defense of a HRE member
 on_hre_defense = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_defense" }
     
-    events = {
-        #ncr_government.13
-    }
 }
 
 # Emperor NOT coming to the defense of a HRE member
 on_hre_non_defense = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_non_defense" }
     
-    events = {
-        #ncr_government.14
-    }
 }
 
-# HRE Member takes a HRE province from an outside country in a peace (province scope)
+# HRE Member takes a HRE province from an outs100e country in a peace (province scope)
 on_hre_province_reconquest = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_province_reconquest" }
 }
 
 on_lock_hre_religion = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_lock_hre_religion" }
 }
 
 on_change_hre_religion = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_change_hre_religion" }
 }
 
 on_hre_religion_white_peace = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_hre_religion_white_peace" }
 }
 
+# When a non-native changes government type
+on_government_change = {
+
+}
 
 # When a native changes government after filling all their advancement groups.
 on_native_change_government = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_native_change_government" }
 }
 
 # Nation is integrated after being in union
 on_integrate = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_integrate" }
+    
     events = {
         fm_subjects.1
     }
 }
 
-# Nation annexed
+# Nation annexed.
+# FROM is the nation being annexed
 on_annexed = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_annexed" }
+    
 }
 
 # When the chinese empire gets dismantled (e.g. when the emperor is annexed)
 # FROM = Emperor, ROOT = Current Nation
 on_chinese_empire_dismantled = {
-	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_chinese_empire_dismantled" }
+	clear_global_event_target = celestial_emperor
 }
 
 # When a nation gains the Mandate of Heaven (becomes the Emperor of China)
 # FROM = Old Emperor, ROOT = New Emperor
 on_mandate_of_heaven_gained = {
-	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - old emperor: [From.GetName] - new emperor: [Root.GetName] - on_mandate_of_heaven_gained" }
+	save_global_event_target_as = celestial_emperor
+    
+	set_mandate = 60
+	set_meritocracy = 60
 }
 
 # When a nation loses the Mandate of Heaven
 # FROM = New Emperor, ROOT = Old Emperor
 on_mandate_of_heaven_lost = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - old emperor: [Root.GetName] - new emperor: [From.GetName] - on_mandate_of_heaven_lost" }
+    add_stability = -2
 }
 
 on_embrace_revolution = {
@@ -538,35 +549,26 @@ on_embrace_revolution = {
 }
 
 on_dismantle_revolution = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_dismantle_revolution" }
     
-
 }
 
 # province
 on_adm_development = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_adm_development" }
-    
     owner = { subtract_variable = { which = civil_unrest value = 1 } }
 }
 
 # province
 on_dip_development = {  
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_dip_development" }
-    
     owner = { subtract_variable = { which = civil_unrest value = 1 } }
 }
 
 # province
 on_mil_development = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_mil_development" }
-    
     owner = { subtract_variable = { which = civil_unrest value = 1 } }
 }
 
 on_overextension_pulse = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_overextension_pulse" }
-
+    
     random_events = {
 		100 = overextension.1
 		100 = overextension.2
@@ -582,7 +584,6 @@ on_overextension_pulse = {
 }
 
 on_colonial_pulse = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_colonial_pulse" }
     
     random_events = {
 		10 = colonial_pulse.1 # "Settlement founded"
@@ -614,7 +615,6 @@ on_colonial_pulse = {
 }
 
 on_siberian_pulse = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_siberian_pulse" }
     
     random_events = {
 		10 = colonial_pulse.1 # "Settlement founded"
@@ -646,7 +646,6 @@ on_siberian_pulse = {
 }
 # country random events
 on_bi_yearly_pulse = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse" }
     
     random_events = {
         # Agenda from the Estates
@@ -657,12 +656,10 @@ on_bi_yearly_pulse = {
 }
 
 on_bi_yearly_pulse_2 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse_2" }
-
+    
 }
 
 on_bi_yearly_pulse_3 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse_3" }
     
     random_events = {
         10 = fallout_institutions.1
@@ -678,8 +675,7 @@ on_bi_yearly_pulse_3 = {
 }
 
 on_bi_yearly_pulse_4 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_bi_yearly_pulse_4" }
-
+    
     random_events = {
         10 = warlust.1
         10 = warlust.2
@@ -692,7 +688,6 @@ on_bi_yearly_pulse_4 = {
 
 # country random events
 on_thri_yearly_pulse = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse" }
     
     random_events = {
         1000 = legion_turmoil.1
@@ -701,7 +696,6 @@ on_thri_yearly_pulse = {
 }
 
 on_thri_yearly_pulse_2 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse_2" }
     
     random_events = {
         100 = nukes.10 # Protests against Nuclear Armament
@@ -715,15 +709,14 @@ on_thri_yearly_pulse_2 = {
 }
 
 on_thri_yearly_pulse_3 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse_3" }
+    
 }
 
 on_thri_yearly_pulse_4 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_thri_yearly_pulse_4" }
+    
 }
 
 on_four_year_pulse = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse" }
     
     random_events = {
         10 = leader_big_mountain.1
@@ -738,7 +731,7 @@ on_four_year_pulse = {
 }
 
 on_four_year_pulse_2 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_2" }
+    
     
     random_events = {
 		10 = new_vegas.1 # Profits at the Gomorrah
@@ -751,7 +744,6 @@ on_four_year_pulse_2 = {
 }
 
 on_four_year_pulse_3 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_3" }
     
      random_events = {
         10 = subject_nations.1		# Discontent on the Frontier
@@ -764,7 +756,6 @@ on_four_year_pulse_3 = {
 }
 
 on_four_year_pulse_4 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_4" }
     
     random_events = {
         10 = fallout_legitimacy.1
@@ -779,7 +770,6 @@ on_four_year_pulse_4 = {
 }
 
 on_four_year_pulse_5 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_four_year_pulse_5" }
     
     random_events = {
         10 = shi.18
@@ -792,7 +782,6 @@ on_four_year_pulse_5 = {
 }
 
 on_five_year_pulse = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse" }
     
     random_events = {
 		10 = tribal_flavour.1
@@ -820,7 +809,6 @@ on_five_year_pulse = {
 }
 
 on_five_year_pulse_2 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse_2" }
     
     random_events = {
 		10 = adherence.1
@@ -833,29 +821,27 @@ on_five_year_pulse_2 = {
 }
 
 on_five_year_pulse_3 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse_3" }
+    
 }
 
 on_five_year_pulse_4 = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_five_year_pulse_4" }
     
 }
 
 # El Dorado
 on_explore_coast = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_explore_coast" }
+    
 }
 
 on_conquistador_empty = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_conquistador_empty" }
+    
 }
 
 on_conquistador_native = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_conquistador_native" }
+    
 }
 
 on_buy_religious_reform = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_buy_religious_reform" }
     
     add_authority = -100 
     add_stability = -2
@@ -869,31 +855,29 @@ on_buy_religious_reform = {
 }
 
 on_circumnavigation = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_circumnavigation" }
+    
 }
 
 on_become_free_city = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_become_free_city" }
+    
 }
 
 on_remove_free_city = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_remove_free_city" }
+    
 }
 
-on_revoke_estate_land_ai = { #AI can't handle the rebels atm or perform a gradual revoke, sorry
+on_revoke_estate_land_ai = {
 	add_province_modifier = {
 		name = revoked_estate_modifier
 		duration = 5475 #15 years
 	}
 }
-
 
 on_revoke_estate_land = {
 	add_province_modifier = {
 		name = revoked_estate_modifier
 		duration = 5475 #15 years
 	}
-
 }
 
 on_revoke_estate_land_ai_post = {
@@ -913,134 +897,115 @@ on_grant_estate_land = {
 }
 
 on_death_has_harem = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_death_has_harem" }
 }
 
 on_select_heir_from_harem = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_select_heir_from_harem" }
 }
 
 on_fetishist_cult_change = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_fetishist_cult_change" }
 }
 
 # country
 on_gain_great_power_status = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_gain_great_power_status" }
-
-    if = {
-        limit = {
-            NOT = { has_country_flag = became_great_power_flag }
-        }
-        set_country_flag = became_great_power_flag
-    }
+	if = {
+		limit = {
+			NOT = { has_country_flag = became_great_power_flag }
+		}
+		set_country_flag = became_great_power_flag
+	}
 }
 
 # country
 on_lose_great_power_status = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_lose_great_power_status" }
 }
 
 # province
 on_province_religion_converted = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_province_religion_converted" }
-	on_province_religion_converted_estate_privileges_effect = yes
+    
 }
 
 # province
 on_province_culture_converted = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_province_culture_converted" }
+    
 }
 
 # THIS = Province, FROM = Country who Propogated
 on_convert_by_trade_policy = {
-	
 }
 
 # province
 # FROM = old owner
 on_province_owner_change = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - province : [Root.GetName] - owner : [Owner.GetName] - old owner : [From.GetName] - on_province_owner_change" }
+    
 }
 
 # country
 on_parliament_debate_failed = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_parliament_debate_failed" }
+    
 }
 
 # country
 on_parliament_debate_succeeded = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_parliament_debate_succeeded" }
+    
 }
 
 #on_harmonized_<religion>
 
 # country
-on_russian_subednik = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_russian_subednik" }
+on_russian_sudebnik = {
+
 }
 
 # country
 on_russian_oprichnina = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_russian_oprichnina" }
+
 }
 
 # country
 on_russian_streltsy = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_russian_streltsy" }
+
 }
 
 # province
 on_consecrate_patriarch = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_consecrate_patriarch" }
 }
 
 # country. from = overlord
 on_accept_tribute = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_accept_tribute" }
 }
 
 # country. from = overlord
 on_refuse_tribute = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_refuse_tribute" }
 }
 
 # country
 on_leader_recruited = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_leader_recruited" }
 }
 
 # country
 on_general_recruited = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_general_recruited" }
-    
-	add_army_professionalism = 0.01
+	add_army_professionalism = 0.02
 }
 
 # country
 on_admiral_recruited = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_admiral_recruited" }
 }
 
 # country
 on_conquistador_recruited = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_conquistador_recruited" }
 }
 
 # country
 on_explorer_recruited = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_explorer_recruited" }
 }
 
 # THIS = Province, FROM = Country
 on_regiment_recruited = {
-	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_regiment_recruited" }
+
 }
 
 # THIS = Province, FROM = Country
 on_mercenary_recruited = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_mercenary_recruited" }
-    
 	FROM = {
 		add_army_professionalism = -0.05
 	}
@@ -1048,24 +1013,31 @@ on_mercenary_recruited = {
 
 # THIS = One province in the state
 on_add_pasha = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_add_pasha" }
 }
 
 # THIS = One province in the state
 on_remove_pasha = {
-    if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_remove_pasha" }
+	hidden_effect = {
+		owner = {
+			save_event_target_as = province_owner
+		}
+		remove_province_modifier = pasha_removed_modifier
+	}
+
+	area = {
+		limit = { owned_by = event_target:province_owner }
+		add_or_extend_province_modifier_effect = { MODIFIER = pasha_removed_modifier DURATION = 3650 }
+	}
 }
 
 # THIS = Province
 on_janissaries_raised = {
-	if = { limit = { has_global_flag = enable_onaction_logging } log = "ON_ACTIONS - [Root.GetName] - on_janissaries_raised" }
 }
 
 on_revolutionary_guard_raised = {
 }
 
 on_reform_enacted = {
-
 }
 
 on_reform_changed = {
@@ -1088,7 +1060,6 @@ on_culture_promoted = {
 
 # FROM = Previous Country, ROOT = Province
 on_company_chartered = {
-	
 }
 
 # ROOT = Overlord, FROM = Minor
@@ -1138,8 +1109,8 @@ on_flagship_destroyed = {
 }
 
 # this = Released country, FROM = Releasing country
-on_country_released = {
-	
+on_country_released = { 
+    
 }
 
 # ROOT = province, FROM = country

@@ -21,7 +21,6 @@ can_harsh_treatment = {
 }
 
 can_reduce_war_exhaustion = {
-    # Reduce AI wastage of DIP power
     condition = {
 		tooltip = "IS_AI"
 		potential = {
@@ -34,11 +33,9 @@ can_reduce_war_exhaustion = {
 }
 
 can_reduce_inflation = {
-    
 }
 
 can_declare_bankruptcy = {
-    
 }
 
 can_release_colonial_nation = {
@@ -65,11 +62,9 @@ can_claim_defender_of_faith = {
 }
 
 can_change_national_focus = {
-    
 }
 
 can_increase_stability = {
-    
 }
 
 # ROOT = province, FROM = country
@@ -127,6 +122,7 @@ can_change_culture = {
 }
 
 can_move_capital = {
+	
 }
 
 can_move_trade_port = {
@@ -220,17 +216,10 @@ can_have_colonial_nations = {
 
 # Called by can_add_province_to_hre
 is_possible_hre_province = {
-	condition = {
-		tooltip = "APH_ONLY_EUROPE"
-		potential = {
-            always = yes
-		}
-		allow = {
-			continent = america
-		}
-	}
+	
 }
 
 will_demand_annexation = {
+	
 	
 }

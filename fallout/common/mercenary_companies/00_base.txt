@@ -1,52 +1,126 @@
-merc__local_free_company = {
-    regiments_per_development = 0.025
-    cavalry_weight = 0.1
-    artillery_weight = 0.1
-    cavalry_cap = 2
-    cost_modifier = 0.75
-    trigger = {
-        total_development = 150
-    }
-    # No home province means local mercenary company
+#--------------------------------
+# Generic
+#--------------------------------
+fm_merc_small_infantry = {
+    regiments_per_development = 0.01
+    cavalry_weight = 0.0
+    artillery_weight = 0.0
+}
+fm_merc_small_cavalry = {
+    regiments_per_development = 0.01
+    cavalry_weight = 1.0
+    artillery_weight = 0.0
+}
+fm_merc_small_artillery = {
+    regiments_per_development = 0.01
+    cavalry_weight = 0.0
+    artillery_weight = 1.0
 }
 
-merc__local_small_company = {
-    regiments_per_development = 0.07
-    cavalry_weight = 0.1
-    artillery_weight = 0.1
-    cavalry_cap = 2
-    trigger = {
-        NOT = { total_development = 150 }
-    }
-    cost_modifier = 0.3
-    modifier = {
-        reinforce_speed = -0.25
-        recover_army_morale_speed = -0.1
-    }
-    # No home province means local mercenary company
+fm_merc_medium_infantry = {
+    regiments_per_development = 0.023
+    cavalry_weight = 0.0
+    artillery_weight = 0.0
+}
+fm_merc_medium_cavalry = {
+    regiments_per_development = 0.023
+    cavalry_weight = 1.0
+    artillery_weight = 0.0
+}
+fm_merc_medium_artillery = {
+    regiments_per_development = 0.023
+    cavalry_weight = 0.0
+    artillery_weight = 1.0
 }
 
-merc__local_grand_company = {
-    regiments_per_development = 0.05
-    cavalry_weight = 0.1
-    artillery_weight = 0.1
-    cavalry_cap = 2
-    cost_modifier = 0.75
-    trigger = {
-        total_development = 150
-    }
-    # No home province means local mercenary company
+fm_merc_big_infantry = {
+    regiments_per_development = 0.035
+    cavalry_weight = 0.0
+    artillery_weight = 0.0
+}
+fm_merc_big_cavalry = {
+    regiments_per_development = 0.035
+    cavalry_weight = 1.0
+    artillery_weight = 0.0
+}
+fm_merc_big_artillery = {
+    regiments_per_development = 0.035
+    cavalry_weight = 0.0
+    artillery_weight = 1.0
 }
 
-merc__local_independent_army = {
-    regiments_per_development = 0.075
-    cavalry_weight = 0.1
-    artillery_weight = 0.1
-    cavalry_cap = 2
-    cost_modifier = 0.75
+#--------------------------------
+# Special
+#--------------------------------
+fm_merc_veteran_infantry = {
+    regiments_per_development = 0.023
+    cavalry_weight = 0.0
+    artillery_weight = 0.0
+    cost_modifier = 1.5
     trigger = {
-        total_development = 150
+		has_idea = fm_mercenary_army_ideas_5
+	}
+	modifier = {
+		discipline = 0.1
     }
-    # No home province means local mercenary company
 }
-
+fm_merc_veteran_cavalry = {
+    regiments_per_development = 0.023
+    cavalry_weight = 1.0
+    artillery_weight = 0.0
+    cost_modifier = 1.5
+    trigger = {
+		has_idea = fm_mercenary_army_ideas_5
+	}
+	modifier = {
+		discipline = 0.1
+    }
+}
+fm_merc_veteran_artillery = {
+    regiments_per_development = 0.023
+    cavalry_weight = 0.0
+    artillery_weight = 1.0
+    cost_modifier = 1.5
+    trigger = {
+		has_idea = fm_mercenary_army_ideas_5
+	}
+	modifier = {
+		discipline = 0.1
+    }
+}
+fm_merc_hardened_infantry = {
+    regiments_per_development = 0.023
+    cavalry_weight = 0.0
+    artillery_weight = 0.0
+    cost_modifier = 1.2
+    trigger = {
+		has_idea = fm_mercenary_army_ideas_2
+	}
+	modifier = {
+		land_morale = 0.1
+    }
+}
+fm_merc_hardened_cavalry = {
+    regiments_per_development = 0.023
+    cavalry_weight = 1.0
+    artillery_weight = 0.0
+    cost_modifier = 1.2
+    trigger = {
+		has_idea = fm_mercenary_army_ideas_2
+	}
+	modifier = {
+		land_morale = 0.1
+    }
+}
+fm_merc_hardened_artillery = {
+    regiments_per_development = 0.023
+    cavalry_weight = 0.0
+    artillery_weight = 1.0
+    cost_modifier = 1.2
+    trigger = {
+		has_idea = fm_mercenary_army_ideas_2
+	}
+	modifier = {
+		land_morale = 0.1
+    }
+}

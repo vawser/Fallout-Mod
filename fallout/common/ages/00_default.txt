@@ -1,0 +1,275 @@
+great_war_aftermath = {
+    start = 2280
+    
+    can_start = {
+        always = yes
+    }
+
+    religious_conflicts = yes
+    papacy = 1.0
+    
+    objectives = { } 
+    
+    abilities = {
+        ab_army_tradition = {
+            modifier = {
+                army_tradition = 1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_war_exhaustion = {
+            modifier = {
+                war_exhaustion = -0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_improve_relation_modifier = {
+            modifier = {
+                improve_relation_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_inflation_reduction = {
+            modifier = {
+                inflation_reduction = 0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_yearly_corruption = {
+            modifier = {
+                yearly_corruption = -0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_years_of_nationalism = {
+            modifier = {
+                years_of_nationalism = -5
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_colonial_growth = {
+            modifier = {
+                global_colonial_growth = 20
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_trade_goods_size_modifier = {
+            modifier = {
+                global_trade_goods_size_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_advisor_cost = {
+            modifier = {
+                advisor_cost = -0.2
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_settlement_frontier = {
+            modifier = {
+                colonists = 1
+                colonist_placement_chance = 0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_coring_distance = {
+            rule = {
+                ignore_coring_distance = yes
+            }
+            ai_will_do = { factor = 1 }
+        }
+    }
+}
+chinese_incursion = {
+    start = 2350
+    
+    can_start = {
+        custom_trigger_tooltip = {
+            tooltip = TOOLTIP_CHINESE_INCURSION
+            any_country = {
+                ai = no
+                grown_by_development = 500
+                current_age = great_war_aftermath
+            }
+        }
+    }
+
+    religious_conflicts = yes
+    papacy = 1.0
+    absolutism = {
+        harsh_treatment = 1
+        decrease_autonomy_command = 1
+        increase_autonomy_command = -2
+        execute_rebel_acceptance_command = -10
+        seat_in_parliament = -3
+    }
+
+    objectives = { } 
+    
+    abilities = {
+        ab_army_tradition = {
+            modifier = {
+                army_tradition = 1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_war_exhaustion = {
+            modifier = {
+                war_exhaustion = -0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_improve_relation_modifier = {
+            modifier = {
+                improve_relation_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_inflation_reduction = {
+            modifier = {
+                inflation_reduction = 0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_yearly_corruption = {
+            modifier = {
+                yearly_corruption = -0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_years_of_nationalism = {
+            modifier = {
+                years_of_nationalism = -5
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_colonial_growth = {
+            modifier = {
+                global_colonial_growth = 20
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_trade_goods_size_modifier = {
+            modifier = {
+                global_trade_goods_size_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_advisor_cost = {
+            modifier = {
+                advisor_cost = -0.2
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_settlement_frontier = {
+            modifier = {
+                colonists = 1
+                colonist_placement_chance = 0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_coring_distance = {
+            rule = {
+                ignore_coring_distance = yes
+            }
+            ai_will_do = { factor = 1 }
+        }
+    }
+}
+zetan_assault = {
+    start = 2400
+    
+    can_start = {
+        custom_trigger_tooltip = {
+            tooltip = TOOLTIP_ZETAN_ASSAULT
+            any_country = {
+                ai = no
+                grown_by_development = 1000
+                current_age = chinese_incursion
+                has_global_flag = setup_chinese_incursion
+            }
+        }
+    }
+
+    religious_conflicts = yes
+    papacy = 1.0
+    absolutism = {
+        harsh_treatment = 1
+        decrease_autonomy_command = 1
+        increase_autonomy_command = -2
+        execute_rebel_acceptance_command = -10
+        seat_in_parliament = -3
+    }
+
+    objectives = { } 
+    
+    abilities = {
+        ab_army_tradition = {
+            modifier = {
+                army_tradition = 1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_war_exhaustion = {
+            modifier = {
+                war_exhaustion = -0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_improve_relation_modifier = {
+            modifier = {
+                improve_relation_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_inflation_reduction = {
+            modifier = {
+                inflation_reduction = 0.1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_yearly_corruption = {
+            modifier = {
+                yearly_corruption = -0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_years_of_nationalism = {
+            modifier = {
+                years_of_nationalism = -5
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_colonial_growth = {
+            modifier = {
+                global_colonial_growth = 20
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_global_trade_goods_size_modifier = {
+            modifier = {
+                global_trade_goods_size_modifier = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_advisor_cost = {
+            modifier = {
+                advisor_cost = -0.2
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_settlement_frontier = {
+            modifier = {
+                colonists = 1
+                colonist_placement_chance = 0.05
+            }
+            ai_will_do = { factor = 1 }
+        }
+        ab_coring_distance = {
+            rule = {
+                ignore_coring_distance = yes
+            }
+            ai_will_do = { factor = 1 }
+        }
+    }
+}
