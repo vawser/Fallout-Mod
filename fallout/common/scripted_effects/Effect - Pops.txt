@@ -57,1486 +57,649 @@ set_dwarf_administration = {
     custom_tooltip = SET_DWARF_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 14 } }
 }
-
-#-------------------------------------
-# Majorities
-#-------------------------------------
-# wastelander
-set_majority_maligned_wastelander = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_wastelander
-        remove_province_modifier = integrated_majority_wastelander
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_wastelander
-        duration = -1
-    }
-}
-set_majority_accepted_wastelander = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_wastelander
-        remove_province_modifier = integrated_majority_wastelander
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_wastelander
-        duration = -1
-    }
-}
-set_majority_integrated_wastelander = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_wastelander
-        remove_province_modifier = maligned_majority_wastelander
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_wastelander
-        duration = -1
-    }
-}
-
-# raider
-set_majority_maligned_raider = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_raider
-        remove_province_modifier = integrated_majority_raider
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_raider
-        duration = -1
-    }
-}
-set_majority_accepted_raider = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_raider
-        remove_province_modifier = integrated_majority_raider
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_raider
-        duration = -1
-    }
-}
-set_majority_integrated_raider = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_raider
-        remove_province_modifier = maligned_majority_raider
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_raider
-        duration = -1
-    }
-}
-
-# tribal
-set_majority_maligned_tribal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_tribal
-        remove_province_modifier = integrated_majority_tribal
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_tribal
-        duration = -1
-    }
-}
-set_majority_accepted_tribal = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_tribal
-        remove_province_modifier = integrated_majority_tribal
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_tribal
-        duration = -1
-    }
-}
-set_majority_integrated_tribal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_tribal
-        remove_province_modifier = maligned_majority_tribal
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_tribal
-        duration = -1
-    }
-}
-
-# robot
-set_majority_maligned_robot = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_robot
-        remove_province_modifier = integrated_majority_robot
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_robot
-        duration = -1
-    }
-}
-set_majority_accepted_robot = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_robot
-        remove_province_modifier = integrated_majority_robot
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_robot
-        duration = -1
-    }
-}
-set_majority_integrated_robot = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_robot
-        remove_province_modifier = maligned_majority_robot
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_robot
-        duration = -1
-    }
-}
-
-# super_mutant
-set_majority_maligned_super_mutant = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_super_mutant
-        remove_province_modifier = integrated_majority_super_mutant
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_super_mutant
-        duration = -1
-    }
-}
-set_majority_accepted_super_mutant = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_super_mutant
-        remove_province_modifier = integrated_majority_super_mutant
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_super_mutant
-        duration = -1
-    }
-}
-set_majority_integrated_super_mutant = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_super_mutant
-        remove_province_modifier = maligned_majority_super_mutant
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_super_mutant
-        duration = -1
-    }
-}
-
-# ghoul
-set_majority_maligned_ghoul = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_ghoul
-        remove_province_modifier = integrated_majority_ghoul
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_ghoul
-        duration = -1
-    }
-}
-set_majority_accepted_ghoul = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_ghoul
-        remove_province_modifier = integrated_majority_ghoul
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_ghoul
-        duration = -1
-    }
-}
-set_majority_integrated_ghoul = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_ghoul
-        remove_province_modifier = maligned_majority_ghoul
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_ghoul
-        duration = -1
-    }
-}
-
-# swampfolk
-set_majority_maligned_swampfolk = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_swampfolk
-        remove_province_modifier = integrated_majority_swampfolk
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_swampfolk
-        duration = -1
-    }
-}
-set_majority_accepted_swampfolk = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_swampfolk
-        remove_province_modifier = integrated_majority_swampfolk
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_swampfolk
-        duration = -1
-    }
-}
-set_majority_integrated_swampfolk = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_swampfolk
-        remove_province_modifier = maligned_majority_swampfolk
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_swampfolk
-        duration = -1
-    }
-}
-
-# synth
-set_majority_maligned_synth = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_synth
-        remove_province_modifier = integrated_majority_synth
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_synth
-        duration = -1
-    }
-}
-set_majority_accepted_synth = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_synth
-        remove_province_modifier = integrated_majority_synth
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_synth
-        duration = -1
-    }
-}
-set_majority_integrated_synth = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_synth
-        remove_province_modifier = maligned_majority_synth
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_synth
-        duration = -1
-    }
-}
-
-# rodent
-set_majority_maligned_rodent = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_rodent
-        remove_province_modifier = integrated_majority_rodent
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_rodent
-        duration = -1
-    }
-}
-set_majority_accepted_rodent = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_rodent
-        remove_province_modifier = integrated_majority_rodent
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_rodent
-        duration = -1
-    }
-}
-set_majority_integrated_rodent = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_rodent
-        remove_province_modifier = maligned_majority_rodent
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_rodent
-        duration = -1
-    }
-}
-
-# beastlord
-set_majority_maligned_beastlord = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_beastlord
-        remove_province_modifier = integrated_majority_beastlord
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_beastlord
-        duration = -1
-    }
-}
-set_majority_accepted_beastlord = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_beastlord
-        remove_province_modifier = integrated_majority_beastlord
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_beastlord
-        duration = -1
-    }
-}
-set_majority_integrated_beastlord = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_beastlord
-        remove_province_modifier = maligned_majority_beastlord
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_beastlord
-        duration = -1
-    }
-}
-
-# alien
-set_majority_maligned_alien = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_alien
-        remove_province_modifier = integrated_majority_alien
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_alien
-        duration = -1
-    }
-}
-set_majority_accepted_alien = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_alien
-        remove_province_modifier = integrated_majority_alien
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_alien
-        duration = -1
-    }
-}
-set_majority_integrated_alien = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_alien
-        remove_province_modifier = maligned_majority_alien
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_alien
-        duration = -1
-    }
-}
-
-# deathclaw
-set_majority_maligned_deathclaw = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_deathclaw
-        remove_province_modifier = integrated_majority_deathclaw
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_deathclaw
-        duration = -1
-    }
-}
-set_majority_accepted_deathclaw = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_deathclaw
-        remove_province_modifier = integrated_majority_deathclaw
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_deathclaw
-        duration = -1
-    }
-}
-set_majority_integrated_deathclaw = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_deathclaw
-        remove_province_modifier = maligned_majority_deathclaw
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_deathclaw
-        duration = -1
-    }
-}
-
-# fungal
-set_majority_maligned_fungal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_fungal
-        remove_province_modifier = integrated_majority_fungal
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_fungal
-        duration = -1
-    }
-}
-set_majority_accepted_fungal = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_fungal
-        remove_province_modifier = integrated_majority_fungal
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_fungal
-        duration = -1
-    }
-}
-set_majority_integrated_fungal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_fungal
-        remove_province_modifier = maligned_majority_fungal
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_fungal
-        duration = -1
-    }
-}
-
-# dwarf
-set_majority_maligned_dwarf = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_dwarf
-        remove_province_modifier = integrated_majority_dwarf
-    }
-    add_permanent_province_modifier = {
-        name = maligned_majority_dwarf
-        duration = -1
-    }
-}
-set_majority_accepted_dwarf = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_majority_dwarf
-        remove_province_modifier = integrated_majority_dwarf
-    }
-    add_permanent_province_modifier = {
-        name = accepted_majority_dwarf
-        duration = -1
-    }
-}
-set_majority_integrated_dwarf = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_majority_dwarf
-        remove_province_modifier = maligned_majority_dwarf
-    }
-    add_permanent_province_modifier = {
-        name = integrated_majority_dwarf
-        duration = -1
-    }
-}
-
-#-------------------------------------
-# Minorities
-#-------------------------------------
-# wastelander
-set_minority_maligned_wastelander = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_wastelander
-        remove_province_modifier = integrated_minority_wastelander
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_wastelander
-        duration = -1
-    }
-}
-set_minority_accepted_wastelander = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_wastelander
-        remove_province_modifier = integrated_minority_wastelander
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_wastelander
-        duration = -1
-    }
-}
-set_minority_integrated_wastelander = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_wastelander
-        remove_province_modifier = maligned_minority_wastelander
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_wastelander
-        duration = -1
-    }
-}
-
-# raider
-set_minority_maligned_raider = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_raider
-        remove_province_modifier = integrated_minority_raider
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_raider
-        duration = -1
-    }
-}
-set_minority_accepted_raider = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_raider
-        remove_province_modifier = integrated_minority_raider
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_raider
-        duration = -1
-    }
-}
-set_minority_integrated_raider = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_raider
-        remove_province_modifier = maligned_minority_raider
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_raider
-        duration = -1
-    }
-}
-
-# tribal
-set_minority_maligned_tribal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_tribal
-        remove_province_modifier = integrated_minority_tribal
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_tribal
-        duration = -1
-    }
-}
-set_minority_accepted_tribal = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_tribal
-        remove_province_modifier = integrated_minority_tribal
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_tribal
-        duration = -1
-    }
-}
-set_minority_integrated_tribal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_tribal
-        remove_province_modifier = maligned_minority_tribal
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_tribal
-        duration = -1
-    }
-}
-
-# robot
-set_minority_maligned_robot = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_robot
-        remove_province_modifier = integrated_minority_robot
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_robot
-        duration = -1
-    }
-}
-set_minority_accepted_robot = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_robot
-        remove_province_modifier = integrated_minority_robot
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_robot
-        duration = -1
-    }
-}
-set_minority_integrated_robot = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_robot
-        remove_province_modifier = maligned_minority_robot
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_robot
-        duration = -1
-    }
-}
-
-# super_mutant
-set_minority_maligned_super_mutant = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_super_mutant
-        remove_province_modifier = integrated_minority_super_mutant
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_super_mutant
-        duration = -1
-    }
-}
-set_minority_accepted_super_mutant = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_super_mutant
-        remove_province_modifier = integrated_minority_super_mutant
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_super_mutant
-        duration = -1
-    }
-}
-set_minority_integrated_super_mutant = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_super_mutant
-        remove_province_modifier = maligned_minority_super_mutant
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_super_mutant
-        duration = -1
-    }
-}
-
-# ghoul
-set_minority_maligned_ghoul = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_ghoul
-        remove_province_modifier = integrated_minority_ghoul
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_ghoul
-        duration = -1
-    }
-}
-set_minority_accepted_ghoul = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_ghoul
-        remove_province_modifier = integrated_minority_ghoul
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_ghoul
-        duration = -1
-    }
-}
-set_minority_integrated_ghoul = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_ghoul
-        remove_province_modifier = maligned_minority_ghoul
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_ghoul
-        duration = -1
-    }
-}
-
-# swampfolk
-set_minority_maligned_swampfolk = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_swampfolk
-        remove_province_modifier = integrated_minority_swampfolk
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_swampfolk
-        duration = -1
-    }
-}
-set_minority_accepted_swampfolk = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_swampfolk
-        remove_province_modifier = integrated_minority_swampfolk
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_swampfolk
-        duration = -1
-    }
-}
-set_minority_integrated_swampfolk = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_swampfolk
-        remove_province_modifier = maligned_minority_swampfolk
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_swampfolk
-        duration = -1
-    }
-}
-
-# synth
-set_minority_maligned_synth = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_synth
-        remove_province_modifier = integrated_minority_synth
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_synth
-        duration = -1
-    }
-}
-set_minority_accepted_synth = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_synth
-        remove_province_modifier = integrated_minority_synth
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_synth
-        duration = -1
-    }
-}
-set_minority_integrated_synth = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_synth
-        remove_province_modifier = maligned_minority_synth
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_synth
-        duration = -1
-    }
-}
-
-# rodent
-set_minority_maligned_rodent = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_rodent
-        remove_province_modifier = integrated_minority_rodent
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_rodent
-        duration = -1
-    }
-}
-set_minority_accepted_rodent = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_rodent
-        remove_province_modifier = integrated_minority_rodent
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_rodent
-        duration = -1
-    }
-}
-set_minority_integrated_rodent = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_rodent
-        remove_province_modifier = maligned_minority_rodent
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_rodent
-        duration = -1
-    }
-}
-
-# beastlord
-set_minority_maligned_beastlord = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_beastlord
-        remove_province_modifier = integrated_minority_beastlord
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_beastlord
-        duration = -1
-    }
-}
-set_minority_accepted_beastlord = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_beastlord
-        remove_province_modifier = integrated_minority_beastlord
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_beastlord
-        duration = -1
-    }
-}
-set_minority_integrated_beastlord = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_beastlord
-        remove_province_modifier = maligned_minority_beastlord
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_beastlord
-        duration = -1
-    }
-}
-
-# alien
-set_minority_maligned_alien = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_alien
-        remove_province_modifier = integrated_minority_alien
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_alien
-        duration = -1
-    }
-}
-set_minority_accepted_alien = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_alien
-        remove_province_modifier = integrated_minority_alien
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_alien
-        duration = -1
-    }
-}
-set_minority_integrated_alien = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_alien
-        remove_province_modifier = maligned_minority_alien
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_alien
-        duration = -1
-    }
-}
-
-# deathclaw
-set_minority_maligned_deathclaw = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_deathclaw
-        remove_province_modifier = integrated_minority_deathclaw
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_deathclaw
-        duration = -1
-    }
-}
-set_minority_accepted_deathclaw = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_deathclaw
-        remove_province_modifier = integrated_minority_deathclaw
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_deathclaw
-        duration = -1
-    }
-}
-set_minority_integrated_deathclaw = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_deathclaw
-        remove_province_modifier = maligned_minority_deathclaw
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_deathclaw
-        duration = -1
-    }
-}
-
-# fungal
-set_minority_maligned_fungal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_fungal
-        remove_province_modifier = integrated_minority_fungal
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_fungal
-        duration = -1
-    }
-}
-set_minority_accepted_fungal = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_fungal
-        remove_province_modifier = integrated_minority_fungal
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_fungal
-        duration = -1
-    }
-}
-set_minority_integrated_fungal = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_fungal
-        remove_province_modifier = maligned_minority_fungal
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_fungal
-        duration = -1
-    }
-}
-
-# dwarf
-set_minority_maligned_dwarf = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_dwarf
-        remove_province_modifier = integrated_minority_dwarf
-    }
-    add_permanent_province_modifier = {
-        name = maligned_minority_dwarf
-        duration = -1
-    }
-}
-set_minority_accepted_dwarf = {
-    hidden_effect = { 
-        remove_province_modifier = maligned_minority_dwarf
-        remove_province_modifier = integrated_minority_dwarf
-    }
-    add_permanent_province_modifier = {
-        name = accepted_minority_dwarf
-        duration = -1
-    }
-}
-set_minority_integrated_dwarf = {
-    hidden_effect = { 
-        remove_province_modifier = accepted_minority_dwarf
-        remove_province_modifier = maligned_minority_dwarf
-    }
-    add_permanent_province_modifier = {
-        name = integrated_minority_dwarf
-        duration = -1
-    }
+set_legion_administration = {
+    custom_tooltip = SET_LEGION_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 15 } }
+}
+set_bos_administration = {
+    custom_tooltip = SET_BOS_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 16 } }
+}
+set_coa_administration = {
+    custom_tooltip = SET_COA_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 17 } }
+}
+set_vault_administration = {
+    custom_tooltip = SET_VAULT_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 18 } }
 }
 
 #-------------------------------------
 # System
 #-------------------------------------
 update_administration = {
-    set_variable = { which = wastelander_majority value = 0 }
-    set_variable = { which = raider_majority value = 0 }
-    set_variable = { which = tribal_majority value = 0 }
-    set_variable = { which = robot_majority value = 0 }
-    set_variable = { which = super_mutant_majority value = 0 }
-    set_variable = { which = ghoul_majority value = 0 }
-    set_variable = { which = swampfolk_majority value = 0 }
-    set_variable = { which = synth_majority value = 0 }
-    set_variable = { which = rodent_majority value = 0 }
-    set_variable = { which = beastlord_majority value = 0 }
-    set_variable = { which = alien_majority value = 0 }
-    set_variable = { which = deathclaw_majority value = 0 }
-    set_variable = { which = fungal_majority value = 0 }
-    set_variable = { which = dwarf_majority value = 0 }
-    
-    set_variable = { which = wastelander_dev_counter value = 0 }
-    set_variable = { which = raider_dev_counter value = 0 }
-    set_variable = { which = tribal_dev_counter value = 0 }
-    set_variable = { which = robot_dev_counter value = 0 }
-    set_variable = { which = super_mutant_dev_counter value = 0 }
-    set_variable = { which = ghoul_dev_counter value = 0 }
-    set_variable = { which = swampfolk_dev_counter value = 0 }
-    set_variable = { which = synth_dev_counter value = 0 }
-    set_variable = { which = rodent_dev_counter value = 0 }
-    set_variable = { which = beastlord_dev_counter value = 0 }
-    set_variable = { which = alien_dev_counter value = 0 }
-    set_variable = { which = deathclaw_dev_counter value = 0 }
-    set_variable = { which = fungal_dev_counter value = 0 }
-    set_variable = { which = dwarf_dev_counter value = 0 }
-    
-    set_variable = { which = wastelander_dev_percent value = 0 }
-    set_variable = { which = raider_dev_percent value = 0 }
-    set_variable = { which = tribal_dev_percent value = 0 }
-    set_variable = { which = robot_dev_percent value = 0 }
-    set_variable = { which = super_mutant_dev_percent value = 0 }
-    set_variable = { which = ghoul_dev_percent value = 0 }
-    set_variable = { which = swampfolk_dev_percent value = 0 }
-    set_variable = { which = synth_dev_percent value = 0 }
-    set_variable = { which = rodent_dev_percent value = 0 }
-    set_variable = { which = beastlord_dev_percent value = 0 }
-    set_variable = { which = alien_dev_percent value = 0 }
-    set_variable = { which = deathclaw_dev_percent value = 0 }
-    set_variable = { which = fungal_dev_percent value = 0 }
-    set_variable = { which = dwarf_dev_percent value = 0 }
-    
+   
+}
+
+
+#-------------------------------------
+# Pops
+#-------------------------------------
+# wastelander
+add_high_pop_wastelander = {
+    hidden_effect = { 
+        remove_province_modifier = pop_wastelander_med
+        remove_province_modifier = pop_wastelander_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_wastelander_high
+        duration = -1
+    }
+}
+add_med_pop_wastelander = {
+    hidden_effect = { 
+        remove_province_modifier = pop_wastelander_high
+        remove_province_modifier = pop_wastelander_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_wastelander_med
+        duration = -1
+    }
+}
+add_low_pop_wastelander = {
+    hidden_effect = { 
+        remove_province_modifier = pop_wastelander_med
+        remove_province_modifier = pop_wastelander_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_wastelander_low
+        duration = -1
+    }
+}
+# Raider
+add_high_pop_raider = {
+    hidden_effect = { 
+        remove_province_modifier = pop_raider_med
+        remove_province_modifier = pop_raider_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_raider_high
+        duration = -1
+    }
+}
+add_med_pop_raider = {
+    hidden_effect = { 
+        remove_province_modifier = pop_raider_high
+        remove_province_modifier = pop_raider_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_raider_med
+        duration = -1
+    }
+}
+add_low_pop_raider = {
+    hidden_effect = { 
+        remove_province_modifier = pop_raider_med
+        remove_province_modifier = pop_raider_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_raider_low
+        duration = -1
+    }
+}
+# Tribal
+add_high_pop_tribal = {
+    hidden_effect = { 
+        remove_province_modifier = pop_tribal_med
+        remove_province_modifier = pop_tribal_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_tribal_high
+        duration = -1
+    }
+}
+add_med_pop_tribal = {
+    hidden_effect = { 
+        remove_province_modifier = pop_tribal_high
+        remove_province_modifier = pop_tribal_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_tribal_med
+        duration = -1
+    }
+}
+add_low_pop_tribal = {
+    hidden_effect = { 
+        remove_province_modifier = pop_tribal_med
+        remove_province_modifier = pop_tribal_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_tribal_low
+        duration = -1
+    }
+}
+# Robot
+add_high_pop_robot = {
+    hidden_effect = { 
+        remove_province_modifier = pop_robot_med
+        remove_province_modifier = pop_robot_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_robot_high
+        duration = -1
+    }
+}
+add_med_pop_robot = {
+    hidden_effect = { 
+        remove_province_modifier = pop_robot_high
+        remove_province_modifier = pop_robot_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_robot_med
+        duration = -1
+    }
+}
+add_low_pop_robot = {
+    hidden_effect = { 
+        remove_province_modifier = pop_robot_med
+        remove_province_modifier = pop_robot_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_robot_low
+        duration = -1
+    }
+}
+# Super Mutant
+add_high_pop_super_mutant = {
+    hidden_effect = { 
+        remove_province_modifier = pop_super_mutant_med
+        remove_province_modifier = pop_super_mutant_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_super_mutant_high
+        duration = -1
+    }
+}
+add_med_pop_super_mutant = {
+    hidden_effect = { 
+        remove_province_modifier = pop_super_mutant_high
+        remove_province_modifier = pop_super_mutant_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_super_mutant_med
+        duration = -1
+    }
+}
+add_low_pop_super_mutant = {
+    hidden_effect = { 
+        remove_province_modifier = pop_super_mutant_med
+        remove_province_modifier = pop_super_mutant_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_super_mutant_low
+        duration = -1
+    }
+}
+# Ghoul
+add_high_pop_ghoul = {
+    hidden_effect = { 
+        remove_province_modifier = pop_ghoul_med
+        remove_province_modifier = pop_ghoul_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_ghoul_high
+        duration = -1
+    }
+}
+add_med_pop_ghoul = {
+    hidden_effect = { 
+        remove_province_modifier = pop_ghoul_high
+        remove_province_modifier = pop_ghoul_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_ghoul_med
+        duration = -1
+    }
+}
+add_low_pop_ghoul = {
+    hidden_effect = { 
+        remove_province_modifier = pop_ghoul_med
+        remove_province_modifier = pop_ghoul_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_ghoul_low
+        duration = -1
+    }
+}
+# Swampfolk
+add_high_pop_swampfolk = {
+    hidden_effect = { 
+        remove_province_modifier = pop_swampfolk_med
+        remove_province_modifier = pop_swampfolk_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_swampfolk_high
+        duration = -1
+    }
+}
+add_med_pop_swampfolk = {
+    hidden_effect = { 
+        remove_province_modifier = pop_swampfolk_high
+        remove_province_modifier = pop_swampfolk_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_swampfolk_med
+        duration = -1
+    }
+}
+add_low_pop_swampfolk = {
+    hidden_effect = { 
+        remove_province_modifier = pop_swampfolk_med
+        remove_province_modifier = pop_swampfolk_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_swampfolk_low
+        duration = -1
+    }
+}
+# Synth
+add_high_pop_synth = {
+    hidden_effect = { 
+        remove_province_modifier = pop_synth_med
+        remove_province_modifier = pop_synth_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_synth_high
+        duration = -1
+    }
+}
+add_med_pop_synth = {
+    hidden_effect = { 
+        remove_province_modifier = pop_synth_high
+        remove_province_modifier = pop_synth_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_synth_med
+        duration = -1
+    }
+}
+add_low_pop_synth = {
+    hidden_effect = { 
+        remove_province_modifier = pop_synth_med
+        remove_province_modifier = pop_synth_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_synth_low
+        duration = -1
+    }
+}
+# Rodent
+add_high_pop_rodent = {
+    hidden_effect = { 
+        remove_province_modifier = pop_rodent_med
+        remove_province_modifier = pop_rodent_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_rodent_high
+        duration = -1
+    }
+}
+add_med_pop_rodent = {
+    hidden_effect = { 
+        remove_province_modifier = pop_rodent_high
+        remove_province_modifier = pop_rodent_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_rodent_med
+        duration = -1
+    }
+}
+add_low_pop_rodent = {
+    hidden_effect = { 
+        remove_province_modifier = pop_rodent_med
+        remove_province_modifier = pop_rodent_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_rodent_low
+        duration = -1
+    }
+}
+# Beastlord
+add_high_pop_beastlord = {
+    hidden_effect = { 
+        remove_province_modifier = pop_beastlord_med
+        remove_province_modifier = pop_beastlord_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_beastlord_high
+        duration = -1
+    }
+}
+add_med_pop_beastlord = {
+    hidden_effect = { 
+        remove_province_modifier = pop_beastlord_high
+        remove_province_modifier = pop_beastlord_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_beastlord_med
+        duration = -1
+    }
+}
+add_low_pop_beastlord = {
+    hidden_effect = { 
+        remove_province_modifier = pop_beastlord_med
+        remove_province_modifier = pop_beastlord_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_beastlord_low
+        duration = -1
+    }
+}
+# Alien
+add_high_pop_alien = {
+    hidden_effect = { 
+        remove_province_modifier = pop_alien_med
+        remove_province_modifier = pop_alien_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_alien_high
+        duration = -1
+    }
+}
+add_med_pop_alien = {
+    hidden_effect = { 
+        remove_province_modifier = pop_alien_high
+        remove_province_modifier = pop_alien_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_alien_med
+        duration = -1
+    }
+}
+add_low_pop_alien = {
+    hidden_effect = { 
+        remove_province_modifier = pop_alien_med
+        remove_province_modifier = pop_alien_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_alien_low
+        duration = -1
+    }
+}
+# Deathclaw
+add_high_pop_deathclaw = {
+    hidden_effect = { 
+        remove_province_modifier = pop_deathclaw_med
+        remove_province_modifier = pop_deathclaw_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_deathclaw_high
+        duration = -1
+    }
+}
+add_med_pop_deathclaw = {
+    hidden_effect = { 
+        remove_province_modifier = pop_deathclaw_high
+        remove_province_modifier = pop_deathclaw_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_deathclaw_med
+        duration = -1
+    }
+}
+add_low_pop_deathclaw = {
+    hidden_effect = { 
+        remove_province_modifier = pop_deathclaw_med
+        remove_province_modifier = pop_deathclaw_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_deathclaw_low
+        duration = -1
+    }
+}
+# Fungal
+add_high_pop_fungal = {
+    hidden_effect = { 
+        remove_province_modifier = pop_fungal_med
+        remove_province_modifier = pop_fungal_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_fungal_high
+        duration = -1
+    }
+}
+add_med_pop_fungal = {
+    hidden_effect = { 
+        remove_province_modifier = pop_fungal_high
+        remove_province_modifier = pop_fungal_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_fungal_med
+        duration = -1
+    }
+}
+add_low_pop_fungal = {
+    hidden_effect = { 
+        remove_province_modifier = pop_fungal_med
+        remove_province_modifier = pop_fungal_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_fungal_low
+        duration = -1
+    }
+}
+# Dwarf
+add_high_pop_dwarf = {
+    hidden_effect = { 
+        remove_province_modifier = pop_dwarf_med
+        remove_province_modifier = pop_dwarf_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_dwarf_high
+        duration = -1
+    }
+}
+add_med_pop_dwarf = {
+    hidden_effect = { 
+        remove_province_modifier = pop_dwarf_high
+        remove_province_modifier = pop_dwarf_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_dwarf_med
+        duration = -1
+    }
+}
+add_low_pop_dwarf = {
+    hidden_effect = { 
+        remove_province_modifier = pop_dwarf_med
+        remove_province_modifier = pop_dwarf_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_dwarf_low
+        duration = -1
+    }
+}
+# Legion
+add_high_pop_legion = {
+    hidden_effect = { 
+        remove_province_modifier = pop_legion_med
+        remove_province_modifier = pop_legion_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_legion_high
+        duration = -1
+    }
+}
+add_med_pop_legion = {
+    hidden_effect = { 
+        remove_province_modifier = pop_legion_high
+        remove_province_modifier = pop_legion_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_legion_med
+        duration = -1
+    }
+}
+add_low_pop_legion = {
+    hidden_effect = { 
+        remove_province_modifier = pop_legion_med
+        remove_province_modifier = pop_legion_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_legion_low
+        duration = -1
+    }
+}
+# BOS
+add_high_pop_bos = {
+    hidden_effect = { 
+        remove_province_modifier = pop_bos_med
+        remove_province_modifier = pop_bos_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_bos_high
+        duration = -1
+    }
+}
+add_med_pop_bos = {
+    hidden_effect = { 
+        remove_province_modifier = pop_bos_high
+        remove_province_modifier = pop_bos_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_bos_med
+        duration = -1
+    }
+}
+add_low_pop_bos = {
+    hidden_effect = { 
+        remove_province_modifier = pop_bos_med
+        remove_province_modifier = pop_bos_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_bos_low
+        duration = -1
+    }
+}
+# Children of Atom
+add_high_pop_coa = {
+    hidden_effect = { 
+        remove_province_modifier = pop_coa_med
+        remove_province_modifier = pop_coa_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_coa_high
+        duration = -1
+    }
+}
+add_med_pop_coa = {
+    hidden_effect = { 
+        remove_province_modifier = pop_coa_high
+        remove_province_modifier = pop_coa_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_coa_med
+        duration = -1
+    }
+}
+add_low_pop_coa = {
+    hidden_effect = { 
+        remove_province_modifier = pop_coa_med
+        remove_province_modifier = pop_coa_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_coa_low
+        duration = -1
+    }
+}
+# Vault Dweller
+add_high_pop_vault_dweller = {
+    hidden_effect = { 
+        remove_province_modifier = pop_vault_dweller_med
+        remove_province_modifier = pop_vault_dweller_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_vault_dweller_high
+        duration = -1
+    }
+}
+add_med_pop_vault_dweller = {
+    hidden_effect = { 
+        remove_province_modifier = pop_vault_dweller_high
+        remove_province_modifier = pop_vault_dweller_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_vault_dweller_med
+        duration = -1
+    }
+}
+add_low_pop_vault_dweller = {
+    hidden_effect = { 
+        remove_province_modifier = pop_vault_dweller_med
+        remove_province_modifier = pop_vault_dweller_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_vault_dweller_low
+        duration = -1
+    }
+}
+
+#-------------------------------------
+# Setups
+#-------------------------------------
+add_base_pops = {
+    # Low Dev
     every_owned_province = {
-        if = {
-            limit = {
-                is_majority_wastelander = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = wastelander_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = wastelander_majority
-                    which = wastelander_dev_counter
-                }
-            }
+        limit = {
+            NOT = { development = 8 }
         }
-        if = {
-            limit = {
-                is_majority_raider = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = raider_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = raider_majority
-                    which = raider_dev_counter
-                }
-            }
+        add_low_pop_$TYPE$ = yes
+    }
+    
+    # Med Dev
+    every_owned_province = {
+        limit = {
+            development = 8
+            NOT = { development = 16 }
         }
-        if = {
-            limit = {
-                is_majority_tribal = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = tribal_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = tribal_majority
-                    which = tribal_dev_counter
-                }
-            }
+        add_med_pop_$TYPE$ = yes
+    }
+    
+    # High Dev
+    every_owned_province = {
+        limit = {
+            development = 16
         }
-        if = {
-            limit = {
-                is_majority_robot = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = robot_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = robot_majority
-                    which = robot_dev_counter
-                }
-            }
+        add_high_pop_$TYPE$ = yes
+    }
+}
+
+add_pops_to_terrain = { 
+    # Low Dev
+    every_owned_province = {
+        limit = {
+            has_terrain = $TERRAIN$
+            NOT = { development = 8 }
         }
-        if = {
-            limit = {
-                is_majority_super_mutant = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = super_mutant_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = super_mutant_majority
-                    which = super_mutant_dev_counter
-                }
-            }
+        add_low_pop_$TYPE$ = yes
+    }
+    
+    # Med Dev
+    every_owned_province = {
+        limit = {
+            has_terrain = $TERRAIN$
+            development = 8
+            NOT = { development = 16 }
         }
-        if = {
-            limit = {
-                is_majority_ghoul = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = ghoul_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = ghoul_majority
-                    which = ghoul_dev_counter
-                }
-            }
+        add_med_pop_$TYPE$ = yes
+    }
+    
+    # High Dev
+    every_owned_province = {
+        limit = {
+            has_terrain = $TERRAIN$
+            development = 16
         }
-        if = {
-            limit = {
-                is_majority_swampfolk = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = swampfolk_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = swampfolk_majority
-                    which = swampfolk_dev_counter
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_majority_synth = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = synth_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = synth_majority
-                    which = synth_dev_counter
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_majority_rodent = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = rodent_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = rodent_majority
-                    which = rodent_dev_counter
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_majority_beastlord = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = beastlord_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = beastlord_majority
-                    which = beastlord_dev_counter
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_majority_alien = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = alien_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = alien_majority
-                    which = alien_dev_counter
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_majority_deathclaw = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = deathclaw_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = deathclaw_majority
-                    which = deathclaw_dev_counter
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_majority_fungal = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = fungal_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = fungal_majority
-                    which = fungal_dev_counter
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_majority_dwarf = yes
-                is_core = ROOT
-                is_state = yes
-            }
-            ROOT = {
-                export_to_variable = {
-                    variable_name = dwarf_dev_counter
-                    value = development
-                    who = PREV
-                }
-                change_variable = {
-                    which = dwarf_majority
-                    which = dwarf_dev_counter
-                }
-            }
-        }
+        add_high_pop_$TYPE$ = yes
     }
-    
-    set_variable = {
-        which = total_dev
-        value = 0
-    }
-    export_to_variable = {
-        variable_name = total_dev
-        value = total_development
-        who = ROOT
-    }
-    
-    # wastelander
-    divide_variable = {
-        which = wastelander_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = wastelander_dev_percent
-        which = wastelander_majority
-    }
-    multiply_variable = {
-        which = wastelander_dev_percent
-        value = 100
-    }
-    
-    # raider
-    divide_variable = {
-        which = raider_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = raider_dev_percent
-        which = raider_majority
-    }
-    multiply_variable = {
-        which = raider_dev_percent
-        value = 100
-    }
-    
-    # tribal
-    divide_variable = {
-        which = tribal_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = tribal_dev_percent
-        which = tribal_majority
-    }
-    multiply_variable = {
-        which = tribal_dev_percent
-        value = 100
-    }
-    
-    # robot
-    divide_variable = {
-        which = robot_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = robot_dev_percent
-        which = robot_majority
-    }
-    multiply_variable = {
-        which = robot_dev_percent
-        value = 100
-    }
-    
-    # super_mutant
-    divide_variable = {
-        which = super_mutant_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = super_mutant_dev_percent
-        which = super_mutant_majority
-    }
-    multiply_variable = {
-        which = super_mutant_dev_percent
-        value = 100
-    }
-    
-    # ghoul
-    divide_variable = {
-        which = ghoul_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = ghoul_dev_percent
-        which = ghoul_majority
-    }
-    multiply_variable = {
-        which = ghoul_dev_percent
-        value = 100
-    }
-    
-    # swampfolk
-    divide_variable = {
-        which = swampfolk_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = swampfolk_dev_percent
-        which = swampfolk_majority
-    }
-    multiply_variable = {
-        which = swampfolk_dev_percent
-        value = 100
-    }
-    
-    # synth
-    divide_variable = {
-        which = synth_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = synth_dev_percent
-        which = synth_majority
-    }
-    multiply_variable = {
-        which = synth_dev_percent
-        value = 100
-    }
-    
-    # rodent
-    divide_variable = {
-        which = rodent_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = rodent_dev_percent
-        which = rodent_majority
-    }
-    multiply_variable = {
-        which = rodent_dev_percent
-        value = 100
-    }
-    
-    # beastlord
-    divide_variable = {
-        which = beastlord_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = beastlord_dev_percent
-        which = beastlord_majority
-    }
-    multiply_variable = {
-        which = beastlord_dev_percent
-        value = 100
-    }
-    
-    # alien
-    divide_variable = {
-        which = alien_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = alien_dev_percent
-        which = alien_majority
-    }
-    multiply_variable = {
-        which = alien_dev_percent
-        value = 100
-    }
-    
-    # deathclaw
-    divide_variable = {
-        which = deathclaw_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = deathclaw_dev_percent
-        which = deathclaw_majority
-    }
-    multiply_variable = {
-        which = deathclaw_dev_percent
-        value = 100
-    }
-    
-    # fungal
-    divide_variable = {
-        which = fungal_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = fungal_dev_percent
-        which = fungal_majority
-    }
-    multiply_variable = {
-        which = fungal_dev_percent
-        value = 100
-    }
-    
-    # dwarf
-    divide_variable = {
-        which = dwarf_majority
-        which = total_dev
-    }
-    set_variable = {
-        which = dwarf_dev_percent
-        which = dwarf_majority
-    }
-    multiply_variable = {
-        which = dwarf_dev_percent
-        value = 100
-    }
-    
-    # wastelander
-    log = "[Root.wastelander_majority.GetName] [Root.wastelander_majority.GetValue]"
-    log = "[Root.wastelander_dev_counter.GetName] [Root.wastelander_dev_counter.GetValue]"
-    log = "[Root.wastelander_dev_percent.GetName] [Root.wastelander_dev_percent.GetValue]"
-    
-    # raider
-    log = "[Root.raider_majority.GetName] [Root.raider_majority.GetValue]"
-    log = "[Root.raider_dev_counter.GetName] [Root.raider_dev_counter.GetValue]"
-    log = "[Root.raider_dev_percent.GetName] [Root.raider_dev_percent.GetValue]"
-    
-    # tribal
-    log = "[Root.tribal_majority.GetName] [Root.tribal_majority.GetValue]"
-    log = "[Root.tribal_dev_counter.GetName] [Root.tribal_dev_counter.GetValue]"
-    log = "[Root.tribal_dev_percent.GetName] [Root.tribal_dev_percent.GetValue]"
-    
-    # robot
-    log = "[Root.robot_majority.GetName] [Root.robot_majority.GetValue]"
-    log = "[Root.robot_dev_counter.GetName] [Root.robot_dev_counter.GetValue]"
-    log = "[Root.robot_dev_percent.GetName] [Root.robot_dev_percent.GetValue]"
-    
-    # super_mutant
-    log = "[Root.super_mutant_majority.GetName] [Root.super_mutant_majority.GetValue]"
-    log = "[Root.super_mutant_dev_counter.GetName] [Root.super_mutant_dev_counter.GetValue]"
-    log = "[Root.super_mutant_dev_percent.GetName] [Root.super_mutant_dev_percent.GetValue]"
-    
-    # ghoul
-    log = "[Root.ghoul_majority.GetName] [Root.ghoul_majority.GetValue]"
-    log = "[Root.ghoul_dev_counter.GetName] [Root.ghoul_dev_counter.GetValue]"
-    log = "[Root.ghoul_dev_percent.GetName] [Root.ghoul_dev_percent.GetValue]"
-    
-    # swampfolk
-    log = "[Root.swampfolk_majority.GetName] [Root.swampfolk_majority.GetValue]"
-    log = "[Root.swampfolk_dev_counter.GetName] [Root.swampfolk_dev_counter.GetValue]"
-    log = "[Root.swampfolk_dev_percent.GetName] [Root.swampfolk_dev_percent.GetValue]"
-    
-    # synth
-    log = "[Root.synth_majority.GetName] [Root.synth_majority.GetValue]"
-    log = "[Root.synth_dev_counter.GetName] [Root.synth_dev_counter.GetValue]"
-    log = "[Root.synth_dev_percent.GetName] [Root.synth_dev_percent.GetValue]"
-    
-    # rodent
-    log = "[Root.rodent_majority.GetName] [Root.rodent_majority.GetValue]"
-    log = "[Root.rodent_dev_counter.GetName] [Root.rodent_dev_counter.GetValue]"
-    log = "[Root.rodent_dev_percent.GetName] [Root.rodent_dev_percent.GetValue]"
-    
-    # beastlord
-    log = "[Root.beastlord_majority.GetName] [Root.beastlord_majority.GetValue]"
-    log = "[Root.beastlord_dev_counter.GetName] [Root.beastlord_dev_counter.GetValue]"
-    log = "[Root.beastlord_dev_percent.GetName] [Root.beastlord_dev_percent.GetValue]"
-    
-    # alien
-    log = "[Root.alien_majority.GetName] [Root.alien_majority.GetValue]"
-    log = "[Root.alien_dev_counter.GetName] [Root.alien_dev_counter.GetValue]"
-    log = "[Root.alien_dev_percent.GetName] [Root.alien_dev_percent.GetValue]"
-    
-    # deathclaw
-    log = "[Root.deathclaw_majority.GetName] [Root.deathclaw_majority.GetValue]"
-    log = "[Root.deathclaw_dev_counter.GetName] [Root.deathclaw_dev_counter.GetValue]"
-    log = "[Root.deathclaw_dev_percent.GetName] [Root.deathclaw_dev_percent.GetValue]"
-    
-    # fungal
-    log = "[Root.fungal_majority.GetName] [Root.fungal_majority.GetValue]"
-    log = "[Root.fungal_dev_counter.GetName] [Root.fungal_dev_counter.GetValue]"
-    log = "[Root.fungal_dev_percent.GetName] [Root.fungal_dev_percent.GetValue]"
-    
-    # dwarf
-    log = "[Root.dwarf_majority.GetName] [Root.dwarf_majority.GetValue]"
-    log = "[Root.dwarf_dev_counter.GetName] [Root.dwarf_dev_counter.GetValue]"
-    log = "[Root.dwarf_dev_percent.GetName] [Root.dwarf_dev_percent.GetValue]"
 }

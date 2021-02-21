@@ -20,6 +20,10 @@ is_human_administration = {
 		is_raider_administration = yes
 		is_tribal_administration = yes
 		is_dwarf_administration = yes
+        is_legion_administration = yes
+        is_bos_administration = yes
+        is_coa_administration = yes
+        is_vault_administration = yes
 	}
 }
 
@@ -32,6 +36,10 @@ is_humanlike_administration = {
         is_super_mutant_administration = yes
         is_ghoul_administration = yes
         is_beastlord_administration = yes
+        is_legion_administration = yes
+        is_bos_administration = yes
+        is_coa_administration = yes
+        is_vault_administration = yes
 	}
 }
 
@@ -95,6 +103,22 @@ is_same_administration = {
             AND = {
                 is_dwarf_administration = yes
                 FROM = { is_dwarf_administration = yes }
+            }
+            AND = {
+                is_legion_administration = yes
+                FROM = { is_legion_administration = yes }
+            }
+            AND = {
+                is_bos_administration = yes
+                FROM = { is_bos_administration = yes }
+            }
+            AND = {
+                is_coa_administration = yes
+                FROM = { is_coa_administration = yes }
+            }
+            AND = {
+                is_vault_administration = yes
+                FROM = { is_vault_administration = yes }
             }
         }
     }
@@ -184,6 +208,31 @@ is_dwarf_administration = {
         is_variable_equal = { which = pop_administration_id value = 14 }
     }
 }
+is_legion_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_LEGION
+        is_variable_equal = { which = pop_administration_id value = 15 }
+    }
+}
+is_bos_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_BOS
+        is_variable_equal = { which = pop_administration_id value = 16 }
+    }
+}
+is_coa_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_COA
+        is_variable_equal = { which = pop_administration_id value = 17 }
+    }
+}
+is_vault_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_VAULT
+        is_variable_equal = { which = pop_administration_id value = 18 }
+    }
+}
+
 cannot_breed = {
 	OR = {
 		is_robot_administration = yes
@@ -212,511 +261,178 @@ cannot_breed = {
 }
 
 #-------------------------------------
-# Majorities
+# Pops
 #-------------------------------------
-# wastelander
-is_majority_wastelander_maligned = {
-    has_province_modifier = maligned_majority_wastelander
-}
-is_majority_wastelander_accepted = {
-    has_province_modifier = accepted_majority_wastelander
-}
-is_majority_wastelander_integrated = {
-    has_province_modifier = integrated_majority_wastelander
-}
-is_majority_wastelander = {
+# Wastelander
+has_any_wastelander_pop = {
     OR = {
-        has_province_modifier = maligned_majority_wastelander
-        has_province_modifier = accepted_majority_wastelander
-        has_province_modifier = integrated_majority_wastelander
+        has_province_modifier = pop_wastelander_high
+        has_province_modifier = pop_wastelander_med
+        has_province_modifier = pop_wastelander_low
+    }
+}
+# Raider
+has_any_raider_pop = {
+    OR = {
+        has_province_modifier = pop_raider_high
+        has_province_modifier = pop_raider_med
+        has_province_modifier = pop_raider_low
+    }
+}
+# Tribal
+has_any_tribal_pop = {
+    OR = {
+        has_province_modifier = pop_tribal_high
+        has_province_modifier = pop_tribal_med
+        has_province_modifier = pop_tribal_low
+    }
+}
+# Robot
+has_any_robot_pop = {
+    OR = {
+        has_province_modifier = pop_robot_high
+        has_province_modifier = pop_robot_med
+        has_province_modifier = pop_robot_low
+    }
+}
+# Super Mutant
+has_any_super_mutant_pop = {
+    OR = {
+        has_province_modifier = pop_super_mutant_high
+        has_province_modifier = pop_super_mutant_med
+        has_province_modifier = pop_super_mutant_low
+    }
+}
+# Ghoul
+has_any_ghoul_pop = {
+    OR = {
+        has_province_modifier = pop_ghoul_high
+        has_province_modifier = pop_ghoul_med
+        has_province_modifier = pop_ghoul_low
+    }
+}
+# Swampfolk
+has_any_swampfolk_pop = {
+    OR = {
+        has_province_modifier = pop_swampfolk_high
+        has_province_modifier = pop_swampfolk_med
+        has_province_modifier = pop_swampfolk_low
+    }
+}
+# Synth
+has_any_synth_pop = {
+    OR = {
+        has_province_modifier = pop_synth_high
+        has_province_modifier = pop_synth_med
+        has_province_modifier = pop_synth_low
+    }
+}
+# Rodent
+has_any_rodent_pop = {
+    OR = {
+        has_province_modifier = pop_rodent_high
+        has_province_modifier = pop_rodent_med
+        has_province_modifier = pop_rodent_low
+    }
+}
+# Beastlord
+has_any_beastlord_pop = {
+    OR = {
+        has_province_modifier = pop_beastlord_high
+        has_province_modifier = pop_beastlord_med
+        has_province_modifier = pop_beastlord_low
+    }
+}
+# Alien
+has_any_alien_pop = {
+    OR = {
+        has_province_modifier = pop_alien_high
+        has_province_modifier = pop_alien_med
+        has_province_modifier = pop_alien_low
+    }
+}
+# Deathclaw
+has_any_deathclaw_pop = {
+    OR = {
+        has_province_modifier = pop_deathclaw_high
+        has_province_modifier = pop_deathclaw_med
+        has_province_modifier = pop_deathclaw_low
+    }
+}
+# Fungal
+has_any_fungal_pop = {
+    OR = {
+        has_province_modifier = pop_fungal_high
+        has_province_modifier = pop_fungal_med
+        has_province_modifier = pop_fungal_low
+    }
+}
+# Dwarf
+has_any_dwarf_pop = {
+    OR = {
+        has_province_modifier = pop_dwarf_high
+        has_province_modifier = pop_dwarf_med
+        has_province_modifier = pop_dwarf_low
+    }
+}
+# Legion
+has_any_legion_pop = {
+    OR = {
+        has_province_modifier = pop_legion_high
+        has_province_modifier = pop_legion_med
+        has_province_modifier = pop_legion_low
+    }
+}
+# BOS
+has_any_bos_pop = {
+    OR = {
+        has_province_modifier = pop_bos_high
+        has_province_modifier = pop_bos_med
+        has_province_modifier = pop_bos_low
+    }
+}
+# Children of Atom
+has_any_coa_pop = {
+    OR = {
+        has_province_modifier = pop_coa_high
+        has_province_modifier = pop_coa_med
+        has_province_modifier = pop_coa_low
+    }
+}
+# Vault Dweller
+has_any_vault_dweller_pop = {
+    OR = {
+        has_province_modifier = pop_vault_dweller_high
+        has_province_modifier = pop_vault_dweller_med
+        has_province_modifier = pop_vault_dweller_low
     }
 }
 
-# raider
-is_majority_raider_maligned = {
-    has_province_modifier = maligned_majority_raider
-}
-is_majority_raider_accepted = {
-    has_province_modifier = accepted_majority_raider
-}
-is_majority_raider_integrated = {
-    has_province_modifier = integrated_majority_raider
-}
-is_majority_raider = {
+has_any_pop = {
     OR = {
-        has_province_modifier = maligned_majority_raider
-        has_province_modifier = accepted_majority_raider
-        has_province_modifier = integrated_majority_raider
+        has_any_wastelander_pop = yes
+        has_any_raider_pop = yes
+        has_any_tribal_pop = yes
+        has_any_robot_pop = yes
+        has_any_super_mutant_pop = yes
+        has_any_ghoul_pop = yes
+        has_any_swampfolk_pop = yes
+        has_any_synth_pop = yes
+        has_any_rodent_pop = yes
+        has_any_beastlord_pop = yes
+        has_any_alien_pop = yes
+        has_any_deathclaw_pop = yes
+        has_any_fungal_pop = yes
+        has_any_dwarf_pop = yes
+        has_any_legion_pop = yes
+        has_any_bos_pop = yes
+        has_any_coa_pop = yes
+        has_any_vault_dweller_pop = yes
     }
 }
 
-# tribal
-is_majority_tribal_maligned = {
-    has_province_modifier = maligned_majority_tribal
-}
-is_majority_tribal_accepted = {
-    has_province_modifier = accepted_majority_tribal
-}
-is_majority_tribal_integrated = {
-    has_province_modifier = integrated_majority_tribal
-}
-is_majority_tribal = {
-    OR = {
-        has_province_modifier = maligned_majority_tribal
-        has_province_modifier = accepted_majority_tribal
-        has_province_modifier = integrated_majority_tribal
-    }
-}
-
-# robot
-is_majority_robot_maligned = {
-    has_province_modifier = maligned_majority_robot
-}
-is_majority_robot_accepted = {
-    has_province_modifier = accepted_majority_robot
-}
-is_majority_robot_integrated = {
-    has_province_modifier = integrated_majority_robot
-}
-is_majority_robot = {
-    OR = {
-        has_province_modifier = maligned_majority_robot
-        has_province_modifier = accepted_majority_robot
-        has_province_modifier = integrated_majority_robot
-    }
-}
-
-# super_mutant
-is_majority_super_mutant_maligned = {
-    has_province_modifier = maligned_majority_super_mutant
-}
-is_majority_super_mutant_accepted = {
-    has_province_modifier = accepted_majority_super_mutant
-}
-is_majority_super_mutant_integrated = {
-    has_province_modifier = integrated_majority_super_mutant
-}
-is_majority_super_mutant = {
-    OR = {
-        has_province_modifier = maligned_majority_super_mutant
-        has_province_modifier = accepted_majority_super_mutant
-        has_province_modifier = integrated_majority_super_mutant
-    }
-}
-
-# ghoul
-is_majority_ghoul_maligned = {
-    has_province_modifier = maligned_majority_ghoul
-}
-is_majority_ghoul_accepted = {
-    has_province_modifier = accepted_majority_ghoul
-}
-is_majority_ghoul_integrated = {
-    has_province_modifier = integrated_majority_ghoul
-}
-is_majority_ghoul = {
-    OR = {
-        has_province_modifier = maligned_majority_ghoul
-        has_province_modifier = accepted_majority_ghoul
-        has_province_modifier = integrated_majority_ghoul
-    }
-}
-
-# swampfolk
-is_majority_swampfolk_maligned = {
-    has_province_modifier = maligned_majority_swampfolk
-}
-is_majority_swampfolk_accepted = {
-    has_province_modifier = accepted_majority_swampfolk
-}
-is_majority_swampfolk_integrated = {
-    has_province_modifier = integrated_majority_swampfolk
-}
-is_majority_swampfolk = {
-    OR = {
-        has_province_modifier = maligned_majority_swampfolk
-        has_province_modifier = accepted_majority_swampfolk
-        has_province_modifier = integrated_majority_swampfolk
-    }
-}
-
-# synth
-is_majority_synth_maligned = {
-    has_province_modifier = maligned_majority_synth
-}
-is_majority_synth_accepted = {
-    has_province_modifier = accepted_majority_synth
-}
-is_majority_synth_integrated = {
-    has_province_modifier = integrated_majority_synth
-}
-is_majority_synth = {
-    OR = {
-        has_province_modifier = maligned_majority_synth
-        has_province_modifier = accepted_majority_synth
-        has_province_modifier = integrated_majority_synth
-    }
-}
-
-# rodent
-is_majority_rodent_maligned = {
-    has_province_modifier = maligned_majority_rodent
-}
-is_majority_rodent_accepted = {
-    has_province_modifier = accepted_majority_rodent
-}
-is_majority_rodent_integrated = {
-    has_province_modifier = integrated_majority_rodent
-}
-is_majority_rodent = {
-    OR = {
-        has_province_modifier = maligned_majority_rodent
-        has_province_modifier = accepted_majority_rodent
-        has_province_modifier = integrated_majority_rodent
-    }
-}
-
-# beastlord
-is_majority_beastlord_maligned = {
-    has_province_modifier = maligned_majority_beastlord
-}
-is_majority_beastlord_accepted = {
-    has_province_modifier = accepted_majority_beastlord
-}
-is_majority_beastlord_integrated = {
-    has_province_modifier = integrated_majority_beastlord
-}
-is_majority_beastlord = {
-    OR = {
-        has_province_modifier = maligned_majority_beastlord
-        has_province_modifier = accepted_majority_beastlord
-        has_province_modifier = integrated_majority_beastlord
-    }
-}
-
-# alien
-is_majority_alien_maligned = {
-    has_province_modifier = maligned_majority_alien
-}
-is_majority_alien_accepted = {
-    has_province_modifier = accepted_majority_alien
-}
-is_majority_alien_integrated = {
-    has_province_modifier = integrated_majority_alien
-}
-is_majority_alien = {
-    OR = {
-        has_province_modifier = maligned_majority_alien
-        has_province_modifier = accepted_majority_alien
-        has_province_modifier = integrated_majority_alien
-    }
-}
-
-# deathclaw
-is_majority_deathclaw_maligned = {
-    has_province_modifier = maligned_majority_deathclaw
-}
-is_majority_deathclaw_accepted = {
-    has_province_modifier = accepted_majority_deathclaw
-}
-is_majority_deathclaw_integrated = {
-    has_province_modifier = integrated_majority_deathclaw
-}
-is_majority_deathclaw = {
-    OR = {
-        has_province_modifier = maligned_majority_deathclaw
-        has_province_modifier = accepted_majority_deathclaw
-        has_province_modifier = integrated_majority_deathclaw
-    }
-}
-
-# fungal
-is_majority_fungal_maligned = {
-    has_province_modifier = maligned_majority_fungal
-}
-is_majority_fungal_accepted = {
-    has_province_modifier = accepted_majority_fungal
-}
-is_majority_fungal_integrated = {
-    has_province_modifier = integrated_majority_fungal
-}
-is_majority_fungal = {
-    OR = {
-        has_province_modifier = maligned_majority_fungal
-        has_province_modifier = accepted_majority_fungal
-        has_province_modifier = integrated_majority_fungal
-    }
-}
-
-# dwarf
-is_majority_dwarf_maligned = {
-    has_province_modifier = maligned_majority_dwarf
-}
-is_majority_dwarf_accepted = {
-    has_province_modifier = accepted_majority_dwarf
-}
-is_majority_dwarf_integrated = {
-    has_province_modifier = integrated_majority_dwarf
-}
-is_majority_dwarf = {
-    OR = {
-        has_province_modifier = maligned_majority_dwarf
-        has_province_modifier = accepted_majority_dwarf
-        has_province_modifier = integrated_majority_dwarf
-    }
-}
-
-#-------------------------------------
-# Minorities
-#-------------------------------------
-# wastelander
-is_minority_wastelander_maligned = {
-    has_province_modifier = maligned_minority_wastelander
-}
-is_minority_wastelander_accepted = {
-    has_province_modifier = accepted_minority_wastelander
-}
-is_minority_wastelander_integrated = {
-    has_province_modifier = integrated_minority_wastelander
-}
-is_minority_wastelander = {
-    OR = {
-        has_province_modifier = maligned_minority_wastelander
-        has_province_modifier = accepted_minority_wastelander
-        has_province_modifier = integrated_minority_wastelander
-    }
-}
-
-# raider
-is_minority_raider_maligned = {
-    has_province_modifier = maligned_minority_raider
-}
-is_minority_raider_accepted = {
-    has_province_modifier = accepted_minority_raider
-}
-is_minority_raider_integrated = {
-    has_province_modifier = integrated_minority_raider
-}
-is_minority_raider = {
-    OR = {
-        has_province_modifier = maligned_minority_raider
-        has_province_modifier = accepted_minority_raider
-        has_province_modifier = integrated_minority_raider
-    }
-}
-
-# tribal
-is_minority_tribal_maligned = {
-    has_province_modifier = maligned_minority_tribal
-}
-is_minority_tribal_accepted = {
-    has_province_modifier = accepted_minority_tribal
-}
-is_minority_tribal_integrated = {
-    has_province_modifier = integrated_minority_tribal
-}
-is_minority_tribal = {
-    OR = {
-        has_province_modifier = maligned_minority_tribal
-        has_province_modifier = accepted_minority_tribal
-        has_province_modifier = integrated_minority_tribal
-    }
-}
-
-# robot
-is_minority_robot_maligned = {
-    has_province_modifier = maligned_minority_robot
-}
-is_minority_robot_accepted = {
-    has_province_modifier = accepted_minority_robot
-}
-is_minority_robot_integrated = {
-    has_province_modifier = integrated_minority_robot
-}
-is_minority_robot = {
-    OR = {
-        has_province_modifier = maligned_minority_robot
-        has_province_modifier = accepted_minority_robot
-        has_province_modifier = integrated_minority_robot
-    }
-}
-
-# super_mutant
-is_minority_super_mutant_maligned = {
-    has_province_modifier = maligned_minority_super_mutant
-}
-is_minority_super_mutant_accepted = {
-    has_province_modifier = accepted_minority_super_mutant
-}
-is_minority_super_mutant_integrated = {
-    has_province_modifier = integrated_minority_super_mutant
-}
-is_minority_super_mutant = {
-    OR = {
-        has_province_modifier = maligned_minority_super_mutant
-        has_province_modifier = accepted_minority_super_mutant
-        has_province_modifier = integrated_minority_super_mutant
-    }
-}
-
-# ghoul
-is_minority_ghoul_maligned = {
-    has_province_modifier = maligned_minority_ghoul
-}
-is_minority_ghoul_accepted = {
-    has_province_modifier = accepted_minority_ghoul
-}
-is_minority_ghoul_integrated = {
-    has_province_modifier = integrated_minority_ghoul
-}
-is_minority_ghoul = {
-    OR = {
-        has_province_modifier = maligned_minority_ghoul
-        has_province_modifier = accepted_minority_ghoul
-        has_province_modifier = integrated_minority_ghoul
-    }
-}
-
-# swampfolk
-is_minority_swampfolk_maligned = {
-    has_province_modifier = maligned_minority_swampfolk
-}
-is_minority_swampfolk_accepted = {
-    has_province_modifier = accepted_minority_swampfolk
-}
-is_minority_swampfolk_integrated = {
-    has_province_modifier = integrated_minority_swampfolk
-}
-is_minority_swampfolk = {
-    OR = {
-        has_province_modifier = maligned_minority_swampfolk
-        has_province_modifier = accepted_minority_swampfolk
-        has_province_modifier = integrated_minority_swampfolk
-    }
-}
-
-# synth
-is_minority_synth_maligned = {
-    has_province_modifier = maligned_minority_synth
-}
-is_minority_synth_accepted = {
-    has_province_modifier = accepted_minority_synth
-}
-is_minority_synth_integrated = {
-    has_province_modifier = integrated_minority_synth
-}
-is_minority_synth = {
-    OR = {
-        has_province_modifier = maligned_minority_synth
-        has_province_modifier = accepted_minority_synth
-        has_province_modifier = integrated_minority_synth
-    }
-}
-
-# rodent
-is_minority_rodent_maligned = {
-    has_province_modifier = maligned_minority_rodent
-}
-is_minority_rodent_accepted = {
-    has_province_modifier = accepted_minority_rodent
-}
-is_minority_rodent_integrated = {
-    has_province_modifier = integrated_minority_rodent
-}
-is_minority_rodent = {
-    OR = {
-        has_province_modifier = maligned_minority_rodent
-        has_province_modifier = accepted_minority_rodent
-        has_province_modifier = integrated_minority_rodent
-    }
-}
-
-# beastlord
-is_minority_beastlord_maligned = {
-    has_province_modifier = maligned_minority_beastlord
-}
-is_minority_beastlord_accepted = {
-    has_province_modifier = accepted_minority_beastlord
-}
-is_minority_beastlord_integrated = {
-    has_province_modifier = integrated_minority_beastlord
-}
-is_minority_beastlord = {
-    OR = {
-        has_province_modifier = maligned_minority_beastlord
-        has_province_modifier = accepted_minority_beastlord
-        has_province_modifier = integrated_minority_beastlord
-    }
-}
-
-# alien
-is_minority_alien_maligned = {
-    has_province_modifier = maligned_minority_alien
-}
-is_minority_alien_accepted = {
-    has_province_modifier = accepted_minority_alien
-}
-is_minority_alien_integrated = {
-    has_province_modifier = integrated_minority_alien
-}
-is_minority_alien = {
-    OR = {
-        has_province_modifier = maligned_minority_alien
-        has_province_modifier = accepted_minority_alien
-        has_province_modifier = integrated_minority_alien
-    }
-}
-
-# deathclaw
-is_minority_deathclaw_maligned = {
-    has_province_modifier = maligned_minority_deathclaw
-}
-is_minority_deathclaw_accepted = {
-    has_province_modifier = accepted_minority_deathclaw
-}
-is_minority_deathclaw_integrated = {
-    has_province_modifier = integrated_minority_deathclaw
-}
-is_minority_deathclaw = {
-    OR = {
-        has_province_modifier = maligned_minority_deathclaw
-        has_province_modifier = accepted_minority_deathclaw
-        has_province_modifier = integrated_minority_deathclaw
-    }
-}
-
-# fungal
-is_minority_fungal_maligned = {
-    has_province_modifier = maligned_minority_fungal
-}
-is_minority_fungal_accepted = {
-    has_province_modifier = accepted_minority_fungal
-}
-is_minority_fungal_integrated = {
-    has_province_modifier = integrated_minority_fungal
-}
-is_minority_fungal = {
-    OR = {
-        has_province_modifier = maligned_minority_fungal
-        has_province_modifier = accepted_minority_fungal
-        has_province_modifier = integrated_minority_fungal
-    }
-}
-
-# dwarf
-is_minority_dwarf_maligned = {
-    has_province_modifier = maligned_minority_dwarf
-}
-is_minority_dwarf_accepted = {
-    has_province_modifier = accepted_minority_dwarf
-}
-is_minority_dwarf_integrated = {
-    has_province_modifier = integrated_minority_dwarf
-}
-is_minority_dwarf = {
-    OR = {
-        has_province_modifier = maligned_minority_dwarf
-        has_province_modifier = accepted_minority_dwarf
-        has_province_modifier = integrated_minority_dwarf
+has_no_pops = {
+    NOT = {
+        has_any_pop = yes
     }
 }

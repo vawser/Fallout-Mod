@@ -13,6 +13,8 @@
 # 12 - Deathclaw
 # 13 - Fungal
 # 14 - Dwarf
+# 15 - Legion
+# 16 - BOS
 
 #-------------------------------------
 # System
@@ -26,17 +28,17 @@ shifted_administration = {
 
 pop_menu_cooldown = { }
 
-gained_majority = {
+gained_pop = {
     local_unrest = -3
 }
 
-expel_majority = {
+expel_pop = {
     local_culture_conversion_cost = -0.25
 	local_unrest = 1
     local_monthly_devastation = 0.05
 }
 
-purge_majority = {
+purge_pop = {
     local_culture_conversion_cost = -0.5
 	local_missionary_strength = 0.03
 	local_unrest = 3
@@ -44,1005 +46,256 @@ purge_majority = {
 }
 
 #-------------------------------------
-# Racial Majority Modifiers
+# Pop Modifiers
 #-------------------------------------
 # Wastelander
-maligned_majority_wastelander = {
-    picture = "wastelander_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_wastelander_high = {
+    picture = "pop_wastelander_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_wastelander = {
-    picture = "wastelander_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_wastelander_med = {
+    picture = "pop_wastelander_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_wastelander = {
-    picture = "wastelander_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_wastelander_low = {
+    picture = "pop_wastelander_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Raider
-maligned_majority_raider = {
-    picture = "raider_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_raider_high = {
+    picture = "pop_raider_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_raider = {
-    picture = "raider_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_raider_med = {
+    picture = "pop_raider_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_raider = {
-    picture = "raider_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_raider_low = {
+    picture = "pop_raider_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Tribal
-maligned_majority_tribal = {
-    picture = "tribal_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_tribal_high = {
+    picture = "pop_tribal_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_tribal = {
-    picture = "tribal_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_tribal_med = {
+    picture = "pop_tribal_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_tribal = {
-    picture = "tribal_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_tribal_low = {
+    picture = "pop_tribal_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Robot
-maligned_majority_robot = {
-    picture = "robot_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_robot_high = {
+    picture = "pop_robot_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_robot = {
-    picture = "robot_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_robot_med = {
+    picture = "pop_robot_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_robot = {
-    picture = "robot_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_robot_low = {
+    picture = "pop_robot_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Super Mutant
-maligned_majority_super_mutant = {
-    picture = "super_mutant_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_super_mutant_high = {
+    picture = "pop_super_mutant_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_super_mutant = {
-    picture = "super_mutant_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_super_mutant_med = {
+    picture = "pop_super_mutant_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_super_mutant = {
-    picture = "super_mutant_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_super_mutant_low = {
+    picture = "pop_super_mutant_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Ghoul
-maligned_majority_ghoul = {
-    picture = "ghoul_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_ghoul_high = {
+    picture = "pop_ghoul_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_ghoul = {
-    picture = "ghoul_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_ghoul_med = {
+    picture = "pop_ghoul_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_ghoul = {
-    picture = "ghoul_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_ghoul_low = {
+    picture = "pop_ghoul_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Swampfolk
-maligned_majority_swampfolk = {
-    picture = "swampfolk_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_swampfolk_high = {
+    picture = "pop_swampfolk_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_swampfolk = {
-    picture = "swampfolk_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_swampfolk_med = {
+    picture = "pop_swampfolk_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_swampfolk = {
-    picture = "swampfolk_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_swampfolk_low = {
+    picture = "pop_swampfolk_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Synth
-maligned_majority_synth = {
-    picture = "synth_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_synth_high = {
+    picture = "pop_synth_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_synth = {
-    picture = "synth_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_synth_med = {
+    picture = "pop_synth_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_synth = {
-    picture = "synth_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_synth_low = {
+    picture = "pop_synth_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Rodent
-maligned_majority_rodent = {
-    picture = "rodent_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_rodent_high = {
+    picture = "pop_rodent_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_rodent = {
-    picture = "rodent_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_rodent_med = {
+    picture = "pop_rodent_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_rodent = {
-    picture = "rodent_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_rodent_low = {
+    picture = "pop_rodent_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Beastlord
-maligned_majority_beastlord = {
-    picture = "beastlord_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_beastlord_high = {
+    picture = "pop_beastlord_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_beastlord = {
-    picture = "beastlord_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_beastlord_med = {
+    picture = "pop_beastlord_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_beastlord = {
-    picture = "beastlord_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_beastlord_low = {
+    picture = "pop_beastlord_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Alien
-maligned_majority_alien = {
-    picture = "alien_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_alien_high = {
+    picture = "pop_alien_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_alien = {
-    picture = "alien_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_alien_med = {
+    picture = "pop_alien_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_alien = {
-    picture = "alien_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_alien_low = {
+    picture = "pop_alien_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Deathclaw
-maligned_majority_deathclaw = {
-    picture = "deathclaw_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_deathclaw_high = {
+    picture = "pop_deathclaw_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_deathclaw = {
-    picture = "deathclaw_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_deathclaw_med = {
+    picture = "pop_deathclaw_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_deathclaw = {
-    picture = "deathclaw_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_deathclaw_low = {
+    picture = "pop_deathclaw_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Fungal
-maligned_majority_fungal = {
-    picture = "fungal_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_fungal_high = {
+    picture = "pop_fungal_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_fungal = {
-    picture = "fungal_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_fungal_med = {
+    picture = "pop_fungal_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_fungal = {
-    picture = "fungal_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_fungal_low = {
+    picture = "pop_fungal_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
 # Dwarf
-maligned_majority_dwarf = {
-    picture = "dwarf_majority_maligned"
-    # Base
-    local_unrest = 1
+pop_dwarf_high = {
+    picture = "pop_dwarf_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_majority_dwarf = {
-    picture = "dwarf_majority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_dwarf_med = {
+    picture = "pop_dwarf_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_majority_dwarf = {
-    picture = "dwarf_majority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_dwarf_low = {
+    picture = "pop_dwarf_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
-#-------------------------------------
-# Racial Minority Modifiers
-#-------------------------------------
-# Wastelander
-maligned_minority_wastelander = {
-    picture = "wastelander_minority_maligned"
-    # Base
-    local_unrest = 1
+# Legion
+pop_legion_high = {
+    picture = "pop_legion_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_minority_wastelander = {
-    picture = "wastelander_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_legion_med = {
+    picture = "pop_legion_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_minority_wastelander = {
-    picture = "wastelander_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_legion_low = {
+    picture = "pop_legion_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
-# Raider
-maligned_minority_raider = {
-    picture = "raider_minority_maligned"
-    # Base
-    local_unrest = 1
+# BOS
+pop_bos_high = {
+    picture = "pop_bos_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_minority_raider = {
-    picture = "raider_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_bos_med = {
+    picture = "pop_bos_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_minority_raider = {
-    picture = "raider_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_bos_low = {
+    picture = "pop_bos_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
-# Tribal
-maligned_minority_tribal = {
-    picture = "tribal_minority_maligned"
-    # Base
-    local_unrest = 1
+# Children of Atom
+pop_coa_high = {
+    picture = "pop_coa_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_minority_tribal = {
-    picture = "tribal_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_coa_med = {
+    picture = "pop_coa_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_minority_tribal = {
-    picture = "tribal_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_coa_low = {
+    picture = "pop_coa_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
 
-# Robot
-maligned_minority_robot = {
-    picture = "robot_minority_maligned"
-    # Base
-    local_unrest = 1
+# Vault Dweller
+pop_vault_dweller_high = {
+    picture = "pop_vault_dweller_high"
     
-    # Specific
-    local_tax_modifier = 0.1
 }
-accepted_minority_robot = {
-    picture = "robot_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
+pop_vault_dweller_med = {
+    picture = "pop_vault_dweller_med"
     
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
 }
-integrated_minority_robot = {
-    picture = "robot_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
+pop_vault_dweller_low = {
+    picture = "pop_vault_dweller_low"
     
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
 }
-
-# Super Mutant
-maligned_minority_super_mutant = {
-    picture = "super_mutant_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_super_mutant = {
-    picture = "super_mutant_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_super_mutant = {
-    picture = "super_mutant_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Ghoul
-maligned_minority_ghoul = {
-    picture = "ghoul_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_ghoul = {
-    picture = "ghoul_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_ghoul = {
-    picture = "ghoul_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Swampfolk
-maligned_minority_swampfolk = {
-    picture = "swampfolk_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_swampfolk = {
-    picture = "swampfolk_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_swampfolk = {
-    picture = "swampfolk_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Synth
-maligned_minority_synth = {
-    picture = "synth_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_synth = {
-    picture = "synth_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_synth = {
-    picture = "synth_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Rodent
-maligned_minority_rodent = {
-    picture = "rodent_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_rodent = {
-    picture = "rodent_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_rodent = {
-    picture = "rodent_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Beastlord
-maligned_minority_beastlord = {
-    picture = "beastlord_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_beastlord = {
-    picture = "beastlord_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_beastlord = {
-    picture = "beastlord_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Alien
-maligned_minority_alien = {
-    picture = "alien_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_alien = {
-    picture = "alien_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_alien = {
-    picture = "alien_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Deathclaw
-maligned_minority_deathclaw = {
-    picture = "deathclaw_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_deathclaw = {
-    picture = "deathclaw_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_deathclaw = {
-    picture = "deathclaw_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Fungal
-maligned_minority_fungal = {
-    picture = "fungal_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_fungal = {
-    picture = "fungal_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_fungal = {
-    picture = "fungal_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-# Dwarf
-maligned_minority_dwarf = {
-    picture = "dwarf_minority_maligned"
-    # Base
-    local_unrest = 1
-    
-    # Specific
-    local_tax_modifier = 0.1
-}
-accepted_minority_dwarf = {
-    picture = "dwarf_minority_accepted"
-    # Base
-    local_unrest = 1
-    local_state_maintenance_modifier = 0.1
-    
-    # Specific
-    local_tax_modifier = 0.1
-    trade_value_modifier = 0.05
-}
-integrated_minority_dwarf = {
-    picture = "dwarf_minority_integrated"
-    # Base
-    local_state_maintenance_modifier = 0.3
-	local_autonomy = 0.025
-    
-    # Specific
-	local_tax_modifier = 0.1
-	trade_value_modifier = 0.1
-	local_production_efficiency = 0.05
-}
-
-#-------------------------------------
-# Explusion/Purge
-#-------------------------------------
-# Wastelander
-expel_wastelander = {
-    administrative_efficiency = -0.01
-}
-purge_wastelander = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Raider
-expel_raider = {
-    administrative_efficiency = -0.01
-}
-purge_raider = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Tribal
-expel_tribal = {
-    administrative_efficiency = -0.01
-}
-purge_tribal = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Robot
-expel_robot = {
-    administrative_efficiency = -0.01
-}
-purge_robot = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Super Mutant
-expel_super_mutant = {
-    administrative_efficiency = -0.01
-}
-purge_super_mutant = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Ghoul
-expel_ghoul = {
-    administrative_efficiency = -0.01
-}
-purge_ghoul = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Swampfolk
-expel_swampfolk = {
-    administrative_efficiency = -0.01
-}
-purge_swampfolk = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Synth
-expel_synth = {
-    administrative_efficiency = -0.01
-}
-purge_synth = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Rodent
-expel_rodent = {
-    administrative_efficiency = -0.01
-}
-purge_rodent = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Beastlord
-expel_beastlord = {
-    administrative_efficiency = -0.01
-}
-purge_beastlord = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Alien
-expel_alien = {
-    administrative_efficiency = -0.01
-}
-purge_alien = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Deathclaw
-expel_deathclaw = {
-    administrative_efficiency = -0.01
-}
-purge_deathclaw = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Fungal
-expel_fungal = {
-    administrative_efficiency = -0.01
-}
-purge_fungal = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-
-# Dwarf
-expel_dwarf = {
-    administrative_efficiency = -0.01
-}
-purge_dwarf = {
-    administrative_efficiency = -0.02
-	diplomatic_reputation = -1
-}
-

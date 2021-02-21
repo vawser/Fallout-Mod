@@ -22,7 +22,7 @@ administration_wastelander = {
 		is_wastelander_administration = yes
 	}
     
-    land_forcelimit_modifier = 0.05
+    
 }
 
 administration_raider = {
@@ -33,7 +33,7 @@ administration_raider = {
 		is_raider_administration = yes
 	}
 
-	reinforce_cost_modifier = -0.05
+	
 }
 administration_tribal = {
 	potential = {
@@ -43,7 +43,7 @@ administration_tribal = {
 		is_tribal_administration = yes
 	}
 
-	global_manpower_modifier = 0.05
+	
 }
 administration_robot = {
 	potential = {
@@ -61,7 +61,7 @@ administration_super_mutant = {
 		is_super_mutant_administration = yes
 	}
 
-	shock_damage = 0.05
+	
 }
 administration_ghoul = {
 	potential = {
@@ -71,7 +71,7 @@ administration_ghoul = {
 		is_ghoul_administration = yes
 	}
 
-	land_attrition = -0.05
+	
 }
 administration_swampfolk = {
 	potential = {
@@ -81,7 +81,7 @@ administration_swampfolk = {
 		is_swampfolk_administration = yes
 	}
 
-	reinforce_speed = 0.1
+	
 }
 administration_synth = {
 	potential = {
@@ -91,7 +91,7 @@ administration_synth = {
 		is_synth_administration = yes
 	}
 
-	fire_damage = 0.05
+	
 }
 administration_rodent = {
 	potential = {
@@ -101,7 +101,7 @@ administration_rodent = {
 		is_rodent_administration = yes
 	}
 
-	manpower_recovery_speed = 0.05
+	
 }
 administration_beastlord = {
 	potential = {
@@ -111,7 +111,7 @@ administration_beastlord = {
 		is_beastlord_administration = yes
 	}
 
-	recover_army_morale_speed = 0.05
+	
 }
 administration_alien = {
 	potential = {
@@ -121,7 +121,7 @@ administration_alien = {
 		is_alien_administration = yes
 	}
 
-	war_exhaustion = -0.05
+	
 }
 administration_deathclaw = {
 	potential = {
@@ -131,7 +131,7 @@ administration_deathclaw = {
 		is_deathclaw_administration = yes
 	}
 
-	land_morale = 0.05
+	
 }
 administration_fungal = {
 	potential = {
@@ -141,7 +141,7 @@ administration_fungal = {
 		is_fungal_administration = yes
 	}
 
-	global_regiment_recruit_speed = -0.25
+	
 }
 administration_dwarf = {
 	potential = {
@@ -151,5 +151,48 @@ administration_dwarf = {
 		is_dwarf_administration = yes
 	}
 
-	movement_speed = 0.1
+	
+}
+administration_legion = {
+	potential = {
+		is_legion_administration = yes
+	}
+	trigger = {
+		is_legion_administration = yes
+	}
+
+	
+}
+
+administration_bos = {
+	potential = {
+		is_bos_administration = yes
+	}
+	trigger = {
+		is_bos_administration = yes
+	}
+
+	
+}
+
+administration_coa = {
+	potential = {
+		is_coa_administration = yes
+	}
+	trigger = {
+		is_coa_administration = yes
+	}
+
+	
+}
+
+administration_vault = {
+	potential = {
+		is_vault_administration = yes
+	}
+	trigger = {
+		is_vault_administration = yes
+	}
+
+	
 }

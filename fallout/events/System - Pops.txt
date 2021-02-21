@@ -1,5 +1,6 @@
 namespace = pop_setup
 
+# Pop Setup
 country_event = {
 	id = pop_setup.1
 	title = pop_setup.1.title
@@ -10,155 +11,650 @@ country_event = {
     is_triggered_only = yes
 
 	trigger = {
-        NOT = { has_country_flag = pop_administration_setup }
-        is_variable_equal = { which = pop_administration_id value = 0 } # Has no majority set
+        NOT = { has_country_flag = country_pop_setup }
     }
 
     immediate = {
-        set_country_flag = pop_administration_setup
+        set_country_flag = country_pop_setup
     }
 
 	option = {
 		name = pop_setup.1.option.a
 
-		# Default race setups
+		# Default pop setups
 		if = {
 			limit = {
 				technology_group = tech_wastelander
 			}
-			set_wastelander_administration = yes
+            
+            add_base_pops = { TYPE = wastelander }
+            set_wastelander_administration  yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_raider
 			}
-			set_raider_administration = yes
+			
+            add_base_pops = { TYPE = raider }
+            set_raider_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_tribal
 			}
-			set_tribal_administration = yes
+			
+            add_base_pops = { TYPE = tribal }
+            set_tribal_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_super_mutant
 			}
-			set_super_mutant_administration = yes
+			
+            add_base_pops = { TYPE = super_mutant }
+            set_super_mutant_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_robot
 			}
-			set_robot_administration = yes
+			
+            add_base_pops = { TYPE = robot }
+            set_robot_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_ghoul
 			}
-			set_ghoul_administration = yes
+			
+            add_base_pops = { TYPE = ghoul }
+            set_ghoul_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_bos
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = bos }
+            set_bos_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_commonwealth
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            add_base_pops = { TYPE = synth }
+            set_wastelander_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_new_vegas
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_ncr
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            add_pops_to_terrain = {
+                TYPE = dwarf
+                TERRAIN = fm_settlement
+            }
+            set_wastelander_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_caesars_legion
 			}
-			set_raider_administration = yes
+			
+            add_base_pops = { TYPE = legion }
+            set_legion_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_enclave
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            set_wastelander_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_shi
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            add_pops_to_terrain = {
+                TYPE = robot
+                TERRAIN = fm_settlement
+            }
+            set_wastelander_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_great_khan
 			}
-			set_tribal_administration = yes
+			
+            add_base_pops = { TYPE = tribal }
+            set_tribal_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_swampfolk
 			}
-			set_swampfolk_administration = yes
+			
+            add_base_pops = { TYPE = swampfolk }
+            set_swampfolk_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_rodent
 			}
-			set_rodent_administration = yes
+			
+            add_base_pops = { TYPE = rodent }
+            set_rodent_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_alien
 			}
-			set_alien_administration = yes
+			
+            add_base_pops = { TYPE = alien }
+            set_alien_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_vault_dweller
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = vault_dweller }
+            set_vault_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_children
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            set_wastelander_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_triggermen
 			}
-			set_raider_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            set_wastelander_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_the_kings
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            set_wastelander_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_children_of_the_atom
 			}
-			set_tribal_administration = yes
+			
+            add_base_pops = { TYPE = coa }
+            set_coa_administration = yes
 		}
-		if = {
+		else_if = {
 			limit = {
 				technology_group = tech_hubologist
 			}
-			set_wastelander_administration = yes
+			
+            add_base_pops = { TYPE = wastelander }
+            set_wastelander_administration = yes
 		}
+        else_if = {
+            limit = {
+                technology_group = tech_deathclaw
+            }
+            
+            add_base_pops = { TYPE = deathclaw }
+            set_deathclaw_administration = yes
+        }
+        else_if = {
+            limit = {
+                technology_group = tech_dwarf
+            }
+            
+            add_base_pops = { TYPE = dwarf }
+            set_dwarf_administration = yes
+        }
+        else_if = {
+            limit = {
+                technology_group = tech_fungal
+            }
+            
+            add_base_pops = { TYPE = fungal }
+            set_fungal_administration = yes
+        }
+        else_if = {
+            limit = {
+                technology_group = tech_synth
+            }
+            
+            add_base_pops = { TYPE = synth }
+            set_synth_administration = yes
+        }
+	}
+}
+
+# Shift in Adminstration
+country_event = {
+	id = pop_setup.2
+	title = pop_setup.2.title
+	desc = pop_setup.2.desc
+	picture = USA_FLAG_eventPicture
+	
+    is_triggered_only = yes
+    
+    option = {
+		name = pop_setup.2.option.none
+    }
+
+    # Wastelander Administration
+	option = {
+		name = pop_setup.2.option.wastelander
+
+		trigger = {
+            NOT = { is_wastelander_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_wastelander_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_wastelander_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Raider Administration
+	option = {
+		name = pop_setup.2.option.raider
+
+		trigger = {
+            NOT = { is_raider_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_raider_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_raider_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Tribal Administration
+	option = {
+		name = pop_setup.2.option.tribal
+
+		trigger = {
+            NOT = { is_tribal_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_tribal_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_tribal_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Robot Administration
+	option = {
+		name = pop_setup.2.option.robot
+
+		trigger = {
+            NOT = { is_robot_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_robot_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_robot_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Super Mutant Administration
+	option = {
+		name = pop_setup.2.option.super_mutant
+
+		trigger = {
+            NOT = { is_super_mutant_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_super_mutant_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_super_mutant_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Ghoul Administration
+	option = {
+		name = pop_setup.2.option.ghoul
+
+		trigger = {
+            NOT = { is_ghoul_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_ghoul_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_ghoul_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Swampfolk Administration
+	option = {
+		name = pop_setup.2.option.swampfolk
+
+		trigger = {
+            NOT = { is_swampfolk_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_swampfolk_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_swampfolk_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Synth Administration
+	option = {
+		name = pop_setup.2.option.synth
+
+		trigger = {
+            NOT = { is_synth_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_synth_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_synth_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Rodent Administration
+	option = {
+		name = pop_setup.2.option.rodent
+
+		trigger = {
+            NOT = { is_rodent_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_rodent_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_rodent_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Beastlord Administration
+	option = {
+		name = pop_setup.2.option.beastlord
+
+		trigger = {
+            NOT = { is_beastlord_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_beastlord_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_beastlord_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Alien Administration
+	option = {
+		name = pop_setup.2.option.alien
+
+		trigger = {
+            NOT = { is_alien_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_alien_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_alien_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Deathclaw Administration
+	option = {
+		name = pop_setup.2.option.deathclaw
+
+		trigger = {
+            NOT = { is_deathclaw_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_deathclaw_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_deathclaw_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Fungal Administration
+	option = {
+		name = pop_setup.2.option.fungal
+
+		trigger = {
+            NOT = { is_fungal_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_fungal_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_fungal_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Dwarf Administration
+	option = {
+		name = pop_setup.2.option.dwarf
+
+		trigger = {
+            NOT = { is_dwarf_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_dwarf_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_dwarf_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Legion Administration
+	option = {
+		name = pop_setup.2.option.legion
+
+		trigger = {
+            NOT = { is_legion_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_legion_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_legion_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # BOS Administration
+	option = {
+		name = pop_setup.2.option.bos
+
+		trigger = {
+            NOT = { is_bos_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_bos_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_bos_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # COA Administration
+	option = {
+		name = pop_setup.2.option.coa
+
+		trigger = {
+            NOT = { is_coa_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_coa_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_coa_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Vault Administration
+	option = {
+		name = pop_setup.2.option.vault_dweller
+
+		trigger = {
+            NOT = { is_vault_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_vault_dweller_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_vault_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
 	}
 }

@@ -1,25 +1,16 @@
 country_decisions = {
-	# shift_towards_tribal_administration = {
-		# potential = {
-            # is_wastelander_administration = yes
-		# }
-		# allow = {
-			# is_wastelander_administration = yes
-            # stability = 3
-		# }
-		# effect = {
-			# add_stability = -6
-
-			# add_country_modifier = {
-				# name = "shifted_administration"
-				# duration = 3650
-			# }	
-            
-            # set_tribal_administration = yes
-            # change_technology_group = tech_tribal
-		# }
-		# ai_will_do = {
-			# factor = 0
-		# }
-	# }
+	shift_administration = {
+		potential = {
+            always = yes
+		}
+		allow = {
+			stability = 0
+		}
+		effect = {
+            country_event = { id = pop_setup.2 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
