@@ -1,18 +1,27 @@
-# pop_administration_id:
-# 1 - Wastelander
-# 2 - Raider
-# 3 - Tribal
-# 4 - Robot
-# 5 - Super Mutant
-# 6 - Ghoul
-# 7 - Swampfolk
-# 8 - Synth
-# 9 - Rodent
-# 10 - Beastlord
-# 11 - Alien 
-# 12 - Deathclaw
-# 13 - Fungal
-# 14 - Dwarf
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
 
 is_human_administration = {
     OR = {
@@ -24,6 +33,9 @@ is_human_administration = {
         is_bos_administration = yes
         is_coa_administration = yes
         is_vault_administration = yes
+        is_institute_administration = yes
+        is_enclave_administration = yes
+        is_shi_administration = yes
 	}
 }
 
@@ -40,6 +52,9 @@ is_humanlike_administration = {
         is_bos_administration = yes
         is_coa_administration = yes
         is_vault_administration = yes
+        is_institute_administration = yes
+        is_enclave_administration = yes
+        is_shi_administration = yes
 	}
 }
 
@@ -119,6 +134,18 @@ is_same_administration = {
             AND = {
                 is_vault_administration = yes
                 FROM = { is_vault_administration = yes }
+            }
+            AND = {
+                is_institute_administration = yes
+                FROM = { is_institute_administration = yes }
+            }
+            AND = {
+                is_enclave_administration = yes
+                FROM = { is_enclave_administration = yes }
+            }
+            AND = {
+                is_shi_administration = yes
+                FROM = { is_shi_administration = yes }
             }
         }
     }
@@ -230,6 +257,24 @@ is_vault_administration = {
     custom_trigger_tooltip = {
         tooltip = IS_VAULT
         is_variable_equal = { which = pop_administration_id value = 18 }
+    }
+}
+is_institute_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_INSTITUTE
+        is_variable_equal = { which = pop_administration_id value = 19 }
+    }
+}
+is_enclave_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_ENCLAVE
+        is_variable_equal = { which = pop_administration_id value = 20 }
+    }
+}
+is_shi_administration = {
+    custom_trigger_tooltip = {
+        tooltip = IS_SHI
+        is_variable_equal = { which = pop_administration_id value = 21 }
     }
 }
 
@@ -407,6 +452,108 @@ has_any_vault_dweller_pop = {
         has_province_modifier = pop_vault_dweller_low
     }
 }
+# Institute
+has_any_institute_pop = {
+    OR = {
+        has_province_modifier = pop_institute_high
+        has_province_modifier = pop_institute_med
+        has_province_modifier = pop_institute_low
+    }
+}
+# Enclave
+has_any_enclave_pop = {
+    OR = {
+        has_province_modifier = pop_enclave_high
+        has_province_modifier = pop_enclave_med
+        has_province_modifier = pop_enclave_low
+    }
+}
+# Shi
+has_any_shi_pop = {
+    OR = {
+        has_province_modifier = pop_shi_high
+        has_province_modifier = pop_shi_med
+        has_province_modifier = pop_shi_low
+    }
+}
+
+has_any_high_pop = {
+    OR = {
+        has_province_modifier = pop_wastelander_high
+        has_province_modifier = pop_raider_high
+        has_province_modifier = pop_tribal_high
+        has_province_modifier = pop_robot_high
+        has_province_modifier = pop_super_mutant_high
+        has_province_modifier = pop_ghoul_high
+        has_province_modifier = pop_swampfolk_high
+        has_province_modifier = pop_synth_high
+        has_province_modifier = pop_rodent_high
+        has_province_modifier = pop_beastlord_high
+        has_province_modifier = pop_alien_high
+        has_province_modifier = pop_deathclaw_high
+        has_province_modifier = pop_fungal_high
+        has_province_modifier = pop_dwarf_high
+        has_province_modifier = pop_legion_high
+        has_province_modifier = pop_bos_high
+        has_province_modifier = pop_coa_high
+        has_province_modifier = pop_vault_dweller_high
+        has_province_modifier = pop_institute_high
+        has_province_modifier = pop_enclave_high
+        has_province_modifier = pop_shi_high
+    }
+}
+
+has_any_med_pop = {
+    OR = {
+        has_province_modifier = pop_wastelander_med
+        has_province_modifier = pop_raider_med
+        has_province_modifier = pop_tribal_med
+        has_province_modifier = pop_robot_med
+        has_province_modifier = pop_super_mutant_med
+        has_province_modifier = pop_ghoul_med
+        has_province_modifier = pop_swampfolk_med
+        has_province_modifier = pop_synth_med
+        has_province_modifier = pop_rodent_med
+        has_province_modifier = pop_beastlord_med
+        has_province_modifier = pop_alien_med
+        has_province_modifier = pop_deathclaw_med
+        has_province_modifier = pop_fungal_med
+        has_province_modifier = pop_dwarf_med
+        has_province_modifier = pop_legion_med
+        has_province_modifier = pop_bos_med
+        has_province_modifier = pop_coa_med
+        has_province_modifier = pop_vault_dweller_med
+        has_province_modifier = pop_institute_med
+        has_province_modifier = pop_enclave_med
+        has_province_modifier = pop_shi_med
+    }
+}
+
+has_any_low_pop = {
+    OR = {
+        has_province_modifier = pop_wastelander_low
+        has_province_modifier = pop_raider_low
+        has_province_modifier = pop_tribal_low
+        has_province_modifier = pop_robot_low
+        has_province_modifier = pop_super_mutant_low
+        has_province_modifier = pop_ghoul_low
+        has_province_modifier = pop_swampfolk_low
+        has_province_modifier = pop_synth_low
+        has_province_modifier = pop_rodent_low
+        has_province_modifier = pop_beastlord_low
+        has_province_modifier = pop_alien_low
+        has_province_modifier = pop_deathclaw_low
+        has_province_modifier = pop_fungal_low
+        has_province_modifier = pop_dwarf_low
+        has_province_modifier = pop_legion_low
+        has_province_modifier = pop_bos_low
+        has_province_modifier = pop_coa_low
+        has_province_modifier = pop_vault_dweller_low
+        has_province_modifier = pop_institute_low
+        has_province_modifier = pop_enclave_low
+        has_province_modifier = pop_shi_low
+    }
+}
 
 has_any_pop = {
     OR = {
@@ -428,6 +575,9 @@ has_any_pop = {
         has_any_bos_pop = yes
         has_any_coa_pop = yes
         has_any_vault_dweller_pop = yes
+        has_any_institute_pop = yes
+        has_any_enclave_pop = yes
+        has_any_shi_pop = yes
     }
 }
 

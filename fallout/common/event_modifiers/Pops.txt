@@ -1,20 +1,27 @@
-# pop_majority_id:
-# 1 - Wastelander
-# 2 - Raider
-# 3 - Tribal
-# 4 - Robot
-# 5 - Super Mutant
-# 6 - Ghoul
-# 7 - Swampfolk
-# 8 - Synth
-# 9 - Rodent
-# 10 - Beastlord
-# 11 - Alien 
-# 12 - Deathclaw
-# 13 - Fungal
-# 14 - Dwarf
-# 15 - Legion
-# 16 - BOS
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
 
 #-------------------------------------
 # System
@@ -28,20 +35,23 @@ shifted_administration = {
 
 pop_menu_cooldown = { }
 
-gained_pop = {
+gain_pop = {
     local_unrest = -3
 }
 
 expel_pop = {
+    min_local_autonomy = 25 # Econ hit
     local_culture_conversion_cost = -0.25
+    local_missionary_strength = 0.01
 	local_unrest = 1
     local_monthly_devastation = 0.05
 }
 
-purge_pop = {
-    local_culture_conversion_cost = -0.5
-	local_missionary_strength = 0.03
-	local_unrest = 3
+kill_pop = {
+    min_local_autonomy = 75 # Econ hit
+    local_culture_conversion_cost = -0.8
+	local_missionary_strength = 0.05
+	local_unrest = 5
 	local_monthly_devastation = 0.1
 }
 
@@ -52,250 +62,605 @@ purge_pop = {
 pop_wastelander_high = {
     picture = "pop_wastelander_high"
     
+    # Boon
+    trade_goods_size_modifier = 0.33
+    
+    # Penalty
+    local_state_maintenance_modifier = 0.5
 }
 pop_wastelander_med = {
     picture = "pop_wastelander_med"
     
+    # Boon
+    trade_goods_size_modifier = 0.25
+    
+    # Penalty
+    local_state_maintenance_modifier = 0.33
 }
 pop_wastelander_low = {
     picture = "pop_wastelander_low"
     
+    # Boon
+    trade_goods_size_modifier = 0.1
+    
+    # Penalty
+    local_state_maintenance_modifier = 0.25
 }
 
 # Raider
 pop_raider_high = {
     picture = "pop_raider_high"
     
+    # Boon
+    local_hostile_attrition = 3
+    
+    # Penalty
+    local_governing_cost = 0.25
 }
 pop_raider_med = {
     picture = "pop_raider_med"
     
+    # Boon
+    local_hostile_attrition = 2
+    
+    # Penalty
+    local_governing_cost = 0.15
 }
 pop_raider_low = {
     picture = "pop_raider_low"
     
+    # Boon
+    local_hostile_attrition = 1
+    
+    # Penalty
+    local_governing_cost = 0.1
 }
 
 # Tribal
 pop_tribal_high = {
     picture = "pop_tribal_high"
     
+    # Boon
+    local_manpower_modifier = 0.33
+    
+    # Penalty
+    local_tax_modifier = -0.5
 }
 pop_tribal_med = {
     picture = "pop_tribal_med"
     
+    # Boon
+    local_manpower_modifier = 0.25
+    
+    # Penalty
+    local_tax_modifier = -0.33
 }
 pop_tribal_low = {
     picture = "pop_tribal_low"
     
+    # Boon
+    local_manpower_modifier = 0.1
+    
+    # Penalty
+    local_tax_modifier = -0.25
 }
 
 # Robot
 pop_robot_high = {
     picture = "pop_robot_high"
     
+    # Boon
+    local_production_efficiency = 0.5
+    
+    # Penalty
+    local_institution_spread = -0.5
 }
 pop_robot_med = {
     picture = "pop_robot_med"
     
+    # Boon
+    local_production_efficiency = 0.33
+    
+    # Penalty
+    local_institution_spread = -0.33
 }
 pop_robot_low = {
     picture = "pop_robot_low"
     
+    # Boon
+    local_production_efficiency = 0.25
+    
+    # Penalty
+    local_institution_spread = -0.25
 }
 
 # Super Mutant
 pop_super_mutant_high = {
     picture = "pop_super_mutant_high"
     
+    # Boon
+    infantry_power = 0.005
+    
+    # Penalty
+    local_development_cost = 0.5
+    
 }
 pop_super_mutant_med = {
     picture = "pop_super_mutant_med"
     
+    # Boon
+    infantry_power = 0.003
+    
+    # Penalty
+    local_development_cost = 0.25
 }
 pop_super_mutant_low = {
     picture = "pop_super_mutant_low"
     
+    # Boon
+    infantry_power = 0.002
+    
+    # Penalty
+    local_development_cost = 0.1
 }
 
 # Ghoul
 pop_ghoul_high = {
     picture = "pop_ghoul_high"
     
+    # Boon
+    local_defensiveness = 0.5
+    
+    # Penalty
+    local_development_cost = 0.25
 }
 pop_ghoul_med = {
     picture = "pop_ghoul_med"
     
+    # Boon
+    local_defensiveness = 0.33
+    
+    # Penalty
+    local_development_cost = 0.15
 }
 pop_ghoul_low = {
     picture = "pop_ghoul_low"
     
+    # Boon
+    local_defensiveness = 0.25
+    
+    # Penalty
+    local_development_cost = 0.1
 }
 
 # Swampfolk
 pop_swampfolk_high = {
     picture = "pop_swampfolk_high"
     
+    # Boon
+    local_hostile_movement_speed = -0.5
+    
+    # Penalty
+    local_tax_modifier = -0.5
 }
 pop_swampfolk_med = {
     picture = "pop_swampfolk_med"
     
+    # Boon
+    local_hostile_movement_speed = -0.33
+    
+    # Penalty
+    local_tax_modifier = -0.33
 }
 pop_swampfolk_low = {
     picture = "pop_swampfolk_low"
     
+    # Boon
+    local_hostile_movement_speed = -0.25
+    
+    # Penalty
+    local_tax_modifier = -0.25
 }
 
 # Synth
 pop_synth_high = {
     picture = "pop_synth_high"
     
+    # Boon
+    local_regiment_cost = -0.5
+    
+    # Penalty
+    local_state_maintenance_modifier = 0.25
 }
 pop_synth_med = {
     picture = "pop_synth_med"
     
+    # Boon
+    local_regiment_cost = -0.33
+    
+    # Penalty
+    local_state_maintenance_modifier = 0.15
 }
 pop_synth_low = {
     picture = "pop_synth_low"
     
+    # Boon
+    local_regiment_cost = -0.25
+    
+    # Penalty
+    local_state_maintenance_modifier = 0.1
 }
 
 # Rodent
 pop_rodent_high = {
     picture = "pop_rodent_high"
     
+    # Boon
+    local_manpower_modifier = 0.5
+    
+    # Penalty
+    local_development_cost = 0.25
 }
 pop_rodent_med = {
     picture = "pop_rodent_med"
     
+    # Boon
+    local_manpower_modifier = 0.33
+    
+    # Penalty
+    local_development_cost = 0.15
 }
 pop_rodent_low = {
     picture = "pop_rodent_low"
     
+    # Boon
+    local_manpower_modifier = 0.25
+    
+    # Penalty
+    local_development_cost = 0.1
 }
 
 # Beastlord
 pop_beastlord_high = {
     picture = "pop_beastlord_high"
     
+    # Boon
+    local_defensiveness = 0.5
+    
+    # Penalty
+    supply_limit_modifier = -0.1
 }
 pop_beastlord_med = {
     picture = "pop_beastlord_med"
     
+    # Boon
+    local_defensiveness = 0.33
+    
+    # Penalty
+    supply_limit_modifier = -0.075
 }
 pop_beastlord_low = {
     picture = "pop_beastlord_low"
     
+    # Boon
+    local_defensiveness = 0.25
+    
+    # Penalty
+    supply_limit_modifier = -0.05
 }
 
 # Alien
 pop_alien_high = {
     picture = "pop_alien_high"
     
+    # Boon
+    discipline = 0.01
+    
+    # Penalty
 }
 pop_alien_med = {
     picture = "pop_alien_med"
     
+    # Boon
+    discipline = 0.0075
+    
+    # Penalty
 }
 pop_alien_low = {
     picture = "pop_alien_low"
     
+    # Boon
+    discipline = 0.005
+    
+    # Penalty
 }
 
 # Deathclaw
 pop_deathclaw_high = {
     picture = "pop_deathclaw_high"
     
+    # Boon
+    shock_damage = 0.01
+    
+    # Penalty
+    local_governing_cost = 0.5
 }
 pop_deathclaw_med = {
     picture = "pop_deathclaw_med"
     
+    # Boon
+    shock_damage = 0.0075
+    
+    # Penalty
+    local_governing_cost = 0.33
 }
 pop_deathclaw_low = {
     picture = "pop_deathclaw_low"
     
+    # Boon
+    shock_damage = 0.005
+    
+    # Penalty
+    local_governing_cost = 0.25
 }
 
 # Fungal
 pop_fungal_high = {
     picture = "pop_fungal_high"
     
+    # Boon
+    global_manpower_modifier = 0.01
+    
+    # Penalty
+    local_governing_cost = 0.5
 }
 pop_fungal_med = {
     picture = "pop_fungal_med"
     
+    # Boon
+    global_manpower_modifier = 0.0075
+    
+    # Penalty
+    local_governing_cost = 0.33
 }
 pop_fungal_low = {
     picture = "pop_fungal_low"
     
+    # Boon
+    global_manpower_modifier = 0.005
+    
+    # Penalty
+    local_governing_cost = 0.25
 }
 
 # Dwarf
 pop_dwarf_high = {
     picture = "pop_dwarf_high"
     
+    # Boon
+    province_trade_power_modifier = 0.33
+    
+    # Penalty
+    garrison_growth = -0.25
 }
 pop_dwarf_med = {
     picture = "pop_dwarf_med"
     
+    # Boon
+    province_trade_power_modifier = 0.25
+    
+    # Penalty
+    garrison_growth = -0.15
 }
 pop_dwarf_low = {
     picture = "pop_dwarf_low"
     
+    # Boon
+    province_trade_power_modifier = 0.1
+    
+    # Penalty
+    garrison_growth = -0.1
 }
 
 # Legion
 pop_legion_high = {
     picture = "pop_legion_high"
     
+    # Boon
+    local_manpower_modifier = 0.33
+    
+    # Penalty
+    local_tax_modifier = -0.25
 }
 pop_legion_med = {
     picture = "pop_legion_med"
     
+    # Boon
+    local_manpower_modifier = 0.25
+    
+    # Penalty
+    local_tax_modifier = -0.15
 }
 pop_legion_low = {
     picture = "pop_legion_low"
     
+    # Boon
+    local_manpower_modifier = 0.15
+    
+    # Penalty
+    local_tax_modifier = -0.1
 }
 
 # BOS
 pop_bos_high = {
     picture = "pop_bos_high"
     
+    # Boon
+    fire_damage = 0.01
+    
+    # Penalty
+    local_manpower_modifier = -0.5
 }
 pop_bos_med = {
     picture = "pop_bos_med"
     
+    # Boon
+    fire_damage = 0.0075
+    
+    # Penalty
+    local_manpower_modifier = -0.33
 }
 pop_bos_low = {
     picture = "pop_bos_low"
     
+    # Boon
+    fire_damage = 0.005
+    
+    # Penalty
+    local_manpower_modifier = -0.25
 }
 
 # Children of Atom
 pop_coa_high = {
     picture = "pop_coa_high"
     
+    # Boon
+    local_hostile_attrition = 5
+    
+    # Penalty
+    max_attrition = 5
 }
 pop_coa_med = {
     picture = "pop_coa_med"
     
+    # Boon
+    local_hostile_attrition = 4
+    
+    # Penalty
+    max_attrition = 4
 }
 pop_coa_low = {
     picture = "pop_coa_low"
     
+    # Boon
+    local_hostile_attrition = 3
+    
+    # Penalty
+    max_attrition = 3
 }
 
 # Vault Dweller
 pop_vault_dweller_high = {
     picture = "pop_vault_dweller_high"
     
+    # Boon
+    local_governing_cost = -0.5
+    
+    # Penalty
+    local_regiment_cost = 0.5
 }
 pop_vault_dweller_med = {
     picture = "pop_vault_dweller_med"
     
+    # Boon
+    local_governing_cost = -0.33
+    
+    # Penalty
+    local_regiment_cost = 0.33
 }
 pop_vault_dweller_low = {
     picture = "pop_vault_dweller_low"
     
+    # Boon
+    local_governing_cost = -0.25
+    
+    # Penalty
+    local_regiment_cost = 0.25
+}
+
+# Institute
+pop_institute_high = {
+    picture = "pop_institute_high"
+    
+    # Boon
+    local_development_cost = -0.25
+    
+    # Penalty
+    local_autonomy = 0.03
+}
+pop_institute_med = {
+    picture = "pop_institute_med"
+    
+    # Boon
+    local_development_cost = -0.2
+    
+    # Penalty
+    local_autonomy = 0.02
+}
+pop_institute_low = {
+    picture = "pop_institute_low"
+    
+    # Boon
+    local_development_cost = -0.15
+    
+    # Penalty
+    local_autonomy = 0.01
+}
+
+# Enclave
+pop_enclave_high = {
+    picture = "pop_enclave_high"
+    
+    # Boon
+    local_unrest = -5
+    
+    # Penalty
+    local_manpower_modifier = -0.33
+}
+pop_enclave_med = {
+    picture = "pop_enclave_med"
+    
+    # Boon
+    local_unrest = -4
+    
+    # Penalty
+    local_manpower_modifier = -0.25
+}
+pop_enclave_low = {
+    picture = "pop_enclave_low"
+    
+    # Boon
+    local_unrest = -3
+    
+    # Penalty
+    local_manpower_modifier = -0.15
+}
+
+# Shi
+pop_shi_high = {
+    picture = "pop_shi_high"
+    
+    # Boon
+    technology_cost = -0.01
+    
+    # Penalty
+    local_manpower_modifier = -0.5
+}
+pop_shi_med = {
+    picture = "pop_shi_med"
+    
+    # Boon
+    technology_cost = -0.0075
+    
+    # Penalty
+    local_manpower_modifier = -0.33
+}
+pop_shi_low = {
+    picture = "pop_shi_low"
+    
+    # Boon
+    technology_cost = -0.005
+    
+    # Penalty
+    local_manpower_modifier = -0.25
 }

@@ -1,18 +1,27 @@
-# pop_administration_id:
-# 1 - Wastelander
-# 2 - Raider
-# 3 - Tribal
-# 4 - Robot
-# 5 - Super Mutant
-# 6 - Ghoul
-# 7 - Swampfolk
-# 8 - Synth
-# 9 - Mutant
-# 10 - Beastlord
-# 11 - Alien 
-# 12 - Deathclaw
-# 13 - Fungal
-# 14 - Dwarf
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
 
 administration_wastelander = {
 	potential = {
@@ -192,6 +201,39 @@ administration_vault = {
 	}
 	trigger = {
 		is_vault_administration = yes
+	}
+
+	
+}
+
+administration_institute = {
+	potential = {
+		is_institute_administration = yes
+	}
+	trigger = {
+		is_institute_administration = yes
+	}
+
+	
+}
+
+administration_enclave = {
+	potential = {
+		is_enclave_administration = yes
+	}
+	trigger = {
+		is_enclave_administration = yes
+	}
+
+	
+}
+
+administration_shi = {
+	potential = {
+		is_shi_administration = yes
+	}
+	trigger = {
+		is_shi_administration = yes
 	}
 
 	

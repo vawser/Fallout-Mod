@@ -1,5 +1,30 @@
 namespace = pop_setup
 
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
+
 # Pop Setup
 country_event = {
 	id = pop_setup.1
@@ -28,7 +53,7 @@ country_event = {
 			}
             
             add_base_pops = { TYPE = wastelander }
-            set_wastelander_administration  yes
+            set_wastelander_administration = yes
 		}
 		else_if = {
 			limit = {
@@ -83,9 +108,9 @@ country_event = {
 				technology_group = tech_commonwealth
 			}
 			
-            add_base_pops = { TYPE = wastelander }
+            add_base_pops = { TYPE = institute }
             add_base_pops = { TYPE = synth }
-            set_wastelander_administration = yes
+            set_institute_administration = yes
 		}
 		else_if = {
 			limit = {
@@ -119,20 +144,20 @@ country_event = {
 				technology_group = tech_enclave
 			}
 			
-            add_base_pops = { TYPE = wastelander }
-            set_wastelander_administration = yes
+            add_base_pops = { TYPE = enclave }
+            set_enclave_administration = yes
 		}
 		else_if = {
 			limit = {
 				technology_group = tech_shi
 			}
 			
-            add_base_pops = { TYPE = wastelander }
+            add_base_pops = { TYPE = shi }
             add_pops_to_terrain = {
                 TYPE = robot
                 TERRAIN = fm_settlement
             }
-            set_wastelander_administration = yes
+            set_shi_administration = yes
 		}
 		else_if = {
 			limit = {
@@ -245,6 +270,14 @@ country_event = {
             
             add_base_pops = { TYPE = synth }
             set_synth_administration = yes
+        }
+        else_if = {
+            limit = {
+                technology_group = tech_beastlord
+            }
+            
+            add_base_pops = { TYPE = beastlord }
+            set_beastlord_administration = yes
         }
 	}
 }
@@ -651,6 +684,72 @@ country_event = {
         }
         
         set_vault_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Institute
+    option = {
+		name = pop_setup.2.option.institute
+
+		trigger = {
+            NOT = { is_institute_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_institute_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_institute_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Enclave
+    option = {
+		name = pop_setup.2.option.enclave
+
+		trigger = {
+            NOT = { is_enclave_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_enclave_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_enclave_administration = yes
+        add_stability = -6
+        add_country_modifier = {
+            name = shifted_administration
+            duration = 3650
+        }
+	}
+    
+    # Shi
+    option = {
+		name = pop_setup.2.option.shi
+
+		trigger = {
+            NOT = { is_shi_administration = yes }
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_shi_pop = yes
+                }
+                amount = 10
+            }
+        }
+        
+        set_shi_administration = yes
         add_stability = -6
         add_country_modifier = {
             name = shifted_administration

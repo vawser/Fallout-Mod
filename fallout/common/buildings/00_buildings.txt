@@ -415,7 +415,7 @@ fbs_fort_1 = {
     influencing_fort = yes
     
 	modifier = {
-		fort_level = 1
+		fort_level = 2
 	}
 	
 	ai_will_do = {
@@ -432,7 +432,7 @@ fbs_fort_2 = {
     influencing_fort = yes
     
 	modifier = {
-		fort_level = 2
+		fort_level = 4
 	}
 	
 	ai_will_do = {
@@ -449,63 +449,12 @@ fbs_fort_3 = {
     influencing_fort = yes
     
 	modifier = {
-		fort_level = 3
-	}
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fbs_fort_4 = {
-	cost = 1000
-	time = 12
-	make_obsolete = fbs_fort_3
-	
-    onmap = yes
-    influencing_fort = yes
-    
-	modifier = {
-		fort_level = 4
-	}
-	
-	ai_will_do = {
-		factor = 1
-    }
-}
-
-fbs_fort_5 = {
-	cost = 1250
-	time = 12
-	make_obsolete = fbs_fort_4
-	
-    onmap = yes
-    influencing_fort = yes
-    
-	modifier = {
-		fort_level = 5
-	}
-	
-	ai_will_do = {
-		factor = 1
-    }
-}
-
-fbs_fort_6 = {
-	cost = 1500
-	time = 12
-	make_obsolete = fbs_fort_5
-	
-    onmap = yes
-    influencing_fort = yes
-    
-	modifier = {
 		fort_level = 6
 	}
 	
 	ai_will_do = {
 		factor = 1
-    }
+	}
 }
 
 #--------------------------------------------------
@@ -741,3 +690,67 @@ fbs_science_centre = {
 	}
 }
 
+#--------------------------------------------------
+# Pops
+#--------------------------------------------------
+pop_attraction = {
+	cost = 200
+	time = 12
+    
+    build_trigger = {
+        NOT = { has_province_modifier = gain_pop }
+        NOT = { has_province_modifier = expel_pop }
+        NOT = { has_province_modifier = kill_pop }
+        OR = {
+            has_any_med_pop = yes
+            has_any_low_pop = yes
+        }
+    }
+    
+    on_built = {
+        province_event = { id = pop_attraction.1 }
+        remove_building = pop_attraction
+    }
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+pop_expulsion = {
+	cost = 100
+	time = 6
+    
+    build_trigger = {
+        NOT = { has_province_modifier = gain_pop }
+        NOT = { has_province_modifier = expel_pop }
+        NOT = { has_province_modifier = kill_pop }
+    }
+    
+    on_built = {
+        province_event = { id = pop_expulsion.1 }
+        remove_building = pop_expulsion
+    }
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+pop_decimation = {
+	cost = 50
+	time = 3
+    
+    build_trigger = {
+        NOT = { has_province_modifier = gain_pop }
+        NOT = { has_province_modifier = expel_pop }
+        NOT = { has_province_modifier = kill_pop }
+    }
+    
+    on_built = {
+        province_event = { id = pop_decimation.1 }
+        remove_building = pop_decimation
+    }
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

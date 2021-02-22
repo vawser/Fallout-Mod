@@ -825,7 +825,43 @@ on_five_year_pulse_3 = {
 }
 
 on_five_year_pulse_4 = {
-    
+    # Spawn the Pop Control events for the AI here, as AI construction priority is too random to allow them to use the building system to do so.
+    # This also allows for greater control over how the events are fired for the AI
+    random_list = {
+        50 = {
+            # Pop Attraction
+            random_owned_province = {
+                limit = {
+                    OR = {
+                        has_any_med_pop = yes
+                        has_any_low_pop = yes
+                    }
+                }
+                province_event = { id = pop_attraction.1 }
+            }
+        }
+        30 = {
+            # Pop Expulsion
+            random_owned_province = {
+                limit = {
+                    has_any_pop = yes
+                }
+                province_event = { id = pop_expulsion.1 }
+            }
+        }
+        10 = {
+            # Pop Decimation
+            random_owned_province = {
+                limit = {
+                    has_any_pop = yes
+                }
+                province_event = { id = pop_decimation.1 }
+            }
+        }
+        10 = {
+            # Nothing
+        }
+    }
 }
 
 # El Dorado

@@ -1,3 +1,28 @@
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
+
 #-------------------------------------
 # Administration
 #-------------------------------------
@@ -73,14 +98,18 @@ set_vault_administration = {
     custom_tooltip = SET_VAULT_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 18 } }
 }
-
-#-------------------------------------
-# System
-#-------------------------------------
-update_administration = {
-   
+set_institute_administration = {
+    custom_tooltip = SET_INSTITUTE_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 19 } }
 }
-
+set_enclave_administration = {
+    custom_tooltip = SET_ENCLAVE_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 20 } }
+}
+set_shi_administration = {
+    custom_tooltip = SET_SHI_ADMINISTRATION
+    hidden_effect = { set_variable = { which = pop_administration_id value = 21 } }
+}
 
 #-------------------------------------
 # Pops
@@ -642,6 +671,187 @@ add_low_pop_vault_dweller = {
         name = pop_vault_dweller_low
         duration = -1
     }
+}
+# Institute
+add_high_pop_institute = {
+    hidden_effect = { 
+        remove_province_modifier = pop_institute_med
+        remove_province_modifier = pop_institute_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_institute_high
+        duration = -1
+    }
+}
+add_med_pop_institute = {
+    hidden_effect = { 
+        remove_province_modifier = pop_institute_high
+        remove_province_modifier = pop_institute_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_institute_med
+        duration = -1
+    }
+}
+add_low_pop_institute = {
+    hidden_effect = { 
+        remove_province_modifier = pop_institute_med
+        remove_province_modifier = pop_institute_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_institute_low
+        duration = -1
+    }
+}
+# Enclave
+add_high_pop_enclave = {
+    hidden_effect = { 
+        remove_province_modifier = pop_enclave_med
+        remove_province_modifier = pop_enclave_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_enclave_high
+        duration = -1
+    }
+}
+add_med_pop_enclave = {
+    hidden_effect = { 
+        remove_province_modifier = pop_enclave_high
+        remove_province_modifier = pop_enclave_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_enclave_med
+        duration = -1
+    }
+}
+add_low_pop_enclave = {
+    hidden_effect = { 
+        remove_province_modifier = pop_enclave_med
+        remove_province_modifier = pop_enclave_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_enclave_low
+        duration = -1
+    }
+}
+# Shi
+add_high_pop_shi = {
+    hidden_effect = { 
+        remove_province_modifier = pop_shi_med
+        remove_province_modifier = pop_shi_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_shi_high
+        duration = -1
+    }
+}
+add_med_pop_shi = {
+    hidden_effect = { 
+        remove_province_modifier = pop_shi_high
+        remove_province_modifier = pop_shi_low
+    }
+    add_permanent_province_modifier = {
+        name = pop_shi_med
+        duration = -1
+    }
+}
+add_low_pop_shi = {
+    hidden_effect = { 
+        remove_province_modifier = pop_shi_med
+        remove_province_modifier = pop_shi_high
+    }
+    add_permanent_province_modifier = {
+        name = pop_shi_low
+        duration = -1
+    }
+}
+
+upgrade_pop = {
+    if = {
+        limit = {
+            NOT = { has_province_modifier = pop_$TYPE$_low }
+            NOT = { has_province_modifier = pop_$TYPE$_med }
+            NOT = { has_province_modifier = pop_$TYPE$_high }
+        }
+        add_permanent_province_modifier = {
+            name = pop_$TYPE$_low
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = pop_$TYPE$_low
+        }
+        remove_province_modifier = pop_$TYPE$_low
+        add_permanent_province_modifier = {
+            name = pop_$TYPE$_med
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = pop_$TYPE$_med
+        }
+        remove_province_modifier = pop_$TYPE$_med
+        add_permanent_province_modifier = {
+            name = pop_$TYPE$_high
+            duration = -1
+        }
+    }
+}
+
+downgrade_pop = {
+    if = {
+        limit = {
+            has_province_modifier = pop_$TYPE$_high
+        }
+        remove_province_modifier = pop_$TYPE$_high
+        add_permanent_province_modifier = {
+            name = pop_$TYPE$_med
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = pop_$TYPE$_med
+        }
+        remove_province_modifier = pop_$TYPE$_med
+        add_permanent_province_modifier = {
+            name = pop_$TYPE$_low
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = pop_$TYPE$_low
+        }
+        remove_province_modifier = pop_$TYPE$_low
+    }
+}
+
+downgrade_all_pop = {
+    downgrade_pop = { TYPE = wastelander }
+    downgrade_pop = { TYPE = raider }
+    downgrade_pop = { TYPE = tribal }
+    downgrade_pop = { TYPE = robot }
+    downgrade_pop = { TYPE = super_mutant }
+    downgrade_pop = { TYPE = ghoul }
+    downgrade_pop = { TYPE = swampfolk }
+    downgrade_pop = { TYPE = synth }
+    downgrade_pop = { TYPE = rodent }
+    downgrade_pop = { TYPE = beastlord }
+    downgrade_pop = { TYPE = alien }
+    downgrade_pop = { TYPE = deathclaw }
+    downgrade_pop = { TYPE = fungal }
+    downgrade_pop = { TYPE = dwarf }
+    downgrade_pop = { TYPE = legion }
+    downgrade_pop = { TYPE = bos }
+    downgrade_pop = { TYPE = coa }
+    downgrade_pop = { TYPE = vault_dweller }
+    downgrade_pop = { TYPE = institute }
+    downgrade_pop = { TYPE = enclave }
+    downgrade_pop = { TYPE = shi }
+    
 }
 
 #-------------------------------------

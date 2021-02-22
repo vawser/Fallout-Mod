@@ -1,0 +1,1154 @@
+namespace = pop_attraction
+
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
+
+province_event = {
+	id = pop_attraction.1
+	title = pop_attraction.1.title
+	desc = pop_attraction.1.desc
+	picture = ATOMIC_WRANGLER_eventPicture
+	
+    is_triggered_only = yes
+
+    # Wastelander
+    option = {
+		name = pop_attraction.1.option.wastelander
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_wastelander_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_wastelander_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_wastelander_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_wastelander_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_wastelander_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_wastelander_pop = yes }
+            }
+            add_low_pop_wastelander = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_wastelander_low
+            }
+            add_med_pop_wastelander = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_wastelander_med
+            }
+            add_high_pop_wastelander = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Raider
+    option = {
+		name = pop_attraction.1.option.raider
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_raider_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_raider_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_raider_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_raider_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_raider_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_raider_pop = yes }
+            }
+            add_low_pop_raider = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_raider_low
+            }
+            add_med_pop_raider = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_raider_med
+            }
+            add_high_pop_raider = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Tribal
+    option = {
+		name = pop_attraction.1.option.tribal
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_tribal_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_tribal_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_tribal_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_tribal_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_tribal_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_tribal_pop = yes }
+            }
+            add_low_pop_tribal = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_tribal_low
+            }
+            add_med_pop_tribal = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_tribal_med
+            }
+            add_high_pop_tribal = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Robot
+    option = {
+		name = pop_attraction.1.option.robot
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_robot_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_robot_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_robot_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_robot_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_robot_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_robot_pop = yes }
+            }
+            add_low_pop_robot = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_robot_low
+            }
+            add_med_pop_robot = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_robot_med
+            }
+            add_high_pop_robot = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Super Mutant
+    option = {
+		name = pop_attraction.1.option.super_mutant
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_super_mutant_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_super_mutant_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_super_mutant_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_super_mutant_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_super_mutant_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_super_mutant_pop = yes }
+            }
+            add_low_pop_super_mutant = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_super_mutant_low
+            }
+            add_med_pop_super_mutant = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_super_mutant_med
+            }
+            add_high_pop_super_mutant = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Ghoul
+    option = {
+		name = pop_attraction.1.option.ghoul
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_ghoul_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_ghoul_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_ghoul_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_ghoul_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_ghoul_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_ghoul_pop = yes }
+            }
+            add_low_pop_ghoul = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_ghoul_low
+            }
+            add_med_pop_ghoul = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_ghoul_med
+            }
+            add_high_pop_ghoul = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Swampfolk
+    option = {
+		name = pop_attraction.1.option.swampfolk
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_swampfolk_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_swampfolk_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_swampfolk_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_swampfolk_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_swampfolk_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_swampfolk_pop = yes }
+            }
+            add_low_pop_swampfolk = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_swampfolk_low
+            }
+            add_med_pop_swampfolk = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_swampfolk_med
+            }
+            add_high_pop_swampfolk = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Synth
+    option = {
+		name = pop_attraction.1.option.synth
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_synth_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_synth_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_synth_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_synth_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_synth_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_synth_pop = yes }
+            }
+            add_low_pop_synth = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_synth_low
+            }
+            add_med_pop_synth = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_synth_med
+            }
+            add_high_pop_synth = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Rodent
+    option = {
+		name = pop_attraction.1.option.rodent
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_rodent_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_rodent_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_rodent_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_rodent_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_rodent_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_rodent_pop = yes }
+            }
+            add_low_pop_rodent = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_rodent_low
+            }
+            add_med_pop_rodent = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_rodent_med
+            }
+            add_high_pop_rodent = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Beastlord
+    option = {
+		name = pop_attraction.1.option.beastlord
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_beastlord_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_beastlord_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_beastlord_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_beastlord_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_beastlord_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_beastlord_pop = yes }
+            }
+            add_low_pop_beastlord = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_beastlord_low
+            }
+            add_med_pop_beastlord = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_beastlord_med
+            }
+            add_high_pop_beastlord = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Alien
+    option = {
+		name = pop_attraction.1.option.alien
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_alien_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_alien_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_alien_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_alien_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_alien_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_alien_pop = yes }
+            }
+            add_low_pop_alien = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_alien_low
+            }
+            add_med_pop_alien = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_alien_med
+            }
+            add_high_pop_alien = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Deathclaw
+    option = {
+		name = pop_attraction.1.option.deathclaw
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_deathclaw_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_deathclaw_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_deathclaw_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_deathclaw_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_deathclaw_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_deathclaw_pop = yes }
+            }
+            add_low_pop_deathclaw = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_deathclaw_low
+            }
+            add_med_pop_deathclaw = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_deathclaw_med
+            }
+            add_high_pop_deathclaw = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Fungal
+    option = {
+		name = pop_attraction.1.option.fungal
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_fungal_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_fungal_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_fungal_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_fungal_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_fungal_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_fungal_pop = yes }
+            }
+            add_low_pop_fungal = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_fungal_low
+            }
+            add_med_pop_fungal = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_fungal_med
+            }
+            add_high_pop_fungal = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Dwarf
+    option = {
+		name = pop_attraction.1.option.dwarf
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_dwarf_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_dwarf_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_dwarf_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_dwarf_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_dwarf_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_dwarf_pop = yes }
+            }
+            add_low_pop_dwarf = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_dwarf_low
+            }
+            add_med_pop_dwarf = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_dwarf_med
+            }
+            add_high_pop_dwarf = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Legion
+    option = {
+		name = pop_attraction.1.option.legion
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_legion_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_legion_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_legion_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_legion_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_legion_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_legion_pop = yes }
+            }
+            add_low_pop_legion = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_legion_low
+            }
+            add_med_pop_legion = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_legion_med
+            }
+            add_high_pop_legion = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # BOS
+    option = {
+		name = pop_attraction.1.option.bos
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_bos_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_bos_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_bos_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_bos_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_bos_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_bos_pop = yes }
+            }
+            add_low_pop_bos = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_bos_low
+            }
+            add_med_pop_bos = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_bos_med
+            }
+            add_high_pop_bos = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Children of Atom
+    option = {
+		name = pop_attraction.1.option.coa
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_coa_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_coa_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_coa_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_coa_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_coa_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_coa_pop = yes }
+            }
+            add_low_pop_coa = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_coa_low
+            }
+            add_med_pop_coa = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_coa_med
+            }
+            add_high_pop_coa = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Vault
+    option = {
+		name = pop_attraction.1.option.vault_dweller
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_vault_dweller_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_vault_dweller_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_vault_dweller_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_vault_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_vault_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_vault_dweller_pop = yes }
+            }
+            add_low_pop_vault_dweller = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_vault_dweller_low
+            }
+            add_med_pop_vault_dweller = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_vault_dweller_med
+            }
+            add_high_pop_vault_dweller = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Institute
+    option = {
+		name = pop_attraction.1.option.institute
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_institute_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_institute_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_institute_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_institute_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_institute_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_institute_pop = yes }
+            }
+            add_low_pop_institute = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_institute_low
+            }
+            add_med_pop_institute = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_institute_med
+            }
+            add_high_pop_institute = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Enclave
+    option = {
+		name = pop_attraction.1.option.enclave
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_enclave_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_enclave_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_enclave_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_enclave_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_enclave_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_enclave_pop = yes }
+            }
+            add_low_pop_enclave = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_enclave_low
+            }
+            add_med_pop_enclave = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_enclave_med
+            }
+            add_high_pop_enclave = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    # Shi
+    option = {
+		name = pop_attraction.1.option.shi
+    
+        trigger = {
+            NOT = { has_province_modifier = pop_shi_high } # Block attraction if already at highest
+            OR = {
+                AND = {
+                    has_any_shi_pop = yes
+                }
+                # If no pop of X type is present, see if they can attract foreign pop from friendly country
+                AND = {
+                    NOT = { has_any_shi_pop = yes }
+                    OR = {
+                        owner = {
+                            any_neighbor_country = {
+                                is_shi_administration = yes
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                        owner = { is_shi_administration = yes }
+                    }
+                }
+            }
+        }
+        
+        if = {
+            limit = { 
+                NOT = { has_any_shi_pop = yes }
+            }
+            add_low_pop_shi = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_shi_low
+            }
+            add_med_pop_shi = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_shi_med
+            }
+            add_high_pop_shi = yes
+        }
+        
+        add_province_modifier = {
+            name = "gain_pop"
+            duration = 1095
+        }
+    }
+    
+    option = {
+		name = pop_attraction.1.option.exit
+    }
+}
+

@@ -1,0 +1,365 @@
+namespace = pop_influx
+
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
+
+#-------------------------------
+# Influx events
+#-------------------------------
+# Influx of Wastelanders
+province_event = {
+	id = pop_influx.1
+	title = pop_influx.1.title
+	desc = pop_influx.1.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.1.option.a
+    
+        upgrade_pop = { TYPE = wastelander }
+    }
+}
+
+# Influx of Raiders
+province_event = {
+	id = pop_influx.2
+	title = pop_influx.2.title
+	desc = pop_influx.2.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.2.option.a
+    
+        upgrade_pop = { TYPE = raider }
+    }
+}
+
+# Influx of Tribal
+province_event = {
+	id = pop_influx.3
+	title = pop_influx.3.title
+	desc = pop_influx.3.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.3.option.a
+    
+        upgrade_pop = { TYPE = tribal }
+    }
+}
+
+# Influx of Robots
+province_event = {
+	id = pop_influx.4
+	title = pop_influx.4.title
+	desc = pop_influx.4.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.4.option.a
+    
+        upgrade_pop = { TYPE = robot }
+    }
+}
+
+# Influx of Super Mutants
+province_event = {
+	id = pop_influx.5
+	title = pop_influx.5.title
+	desc = pop_influx.5.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.5.option.a
+    
+        upgrade_pop = { TYPE = super_mutant }
+    }
+}
+
+# Influx of Ghoul
+province_event = {
+	id = pop_influx.6
+	title = pop_influx.6.title
+	desc = pop_influx.6.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.6.option.a
+    
+        upgrade_pop = { TYPE = ghoul }
+    }
+}
+
+# Influx of Swampfolk
+province_event = {
+	id = pop_influx.7
+	title = pop_influx.7.title
+	desc = pop_influx.7.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.7.option.a
+    
+        upgrade_pop = { TYPE = swampfolk }
+    }
+}
+
+# Influx of Synths
+province_event = {
+	id = pop_influx.8
+	title = pop_influx.8.title
+	desc = pop_influx.8.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.8.option.a
+    
+        upgrade_pop = { TYPE = synth }
+    }
+}
+
+# Influx of Rodents
+province_event = {
+	id = pop_influx.9
+	title = pop_influx.9.title
+	desc = pop_influx.9.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.9.option.a
+    
+        upgrade_pop = { TYPE = rodent }
+    }
+}
+
+# Influx of Beastlords
+province_event = {
+	id = pop_influx.10
+	title = pop_influx.10.title
+	desc = pop_influx.10.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.10.option.a
+    
+        upgrade_pop = { TYPE = beastlord }
+    }
+}
+
+# Influx of Zetans
+province_event = {
+	id = pop_influx.11
+	title = pop_influx.11.title
+	desc = pop_influx.11.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.11.option.a
+    
+        upgrade_pop = { TYPE = alien }
+    }
+}
+
+# Influx of Deathclaws
+province_event = {
+	id = pop_influx.12
+	title = pop_influx.12.title
+	desc = pop_influx.12.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.12.option.a
+    
+        upgrade_pop = { TYPE = deathclaw }
+    }
+}
+
+# Influx of Spore Carriers
+province_event = {
+	id = pop_influx.13
+	title = pop_influx.13.title
+	desc = pop_influx.13.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.13.option.a
+    
+        upgrade_pop = { TYPE = fungal }
+    }
+}
+
+# Influx of Dwarfs
+province_event = {
+	id = pop_influx.14
+	title = pop_influx.14.title
+	desc = pop_influx.14.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.14.option.a
+    
+        upgrade_pop = { TYPE = dwarf }
+    }
+}
+
+# Influx of Legionaries
+province_event = {
+	id = pop_influx.15
+	title = pop_influx.15.title
+	desc = pop_influx.15.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.15.option.a
+    
+        upgrade_pop = { TYPE = legion }
+    }
+}
+
+# Influx of Paladins
+province_event = {
+	id = pop_influx.16
+	title = pop_influx.16.title
+	desc = pop_influx.16.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.16.option.a
+    
+        upgrade_pop = { TYPE = bos }
+    }
+}
+
+# Influx of Cultists
+province_event = {
+	id = pop_influx.17
+	title = pop_influx.17.title
+	desc = pop_influx.17.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.17.option.a
+    
+        upgrade_pop = { TYPE = coa }
+    }
+}
+
+# Influx of Vault Dwellers
+province_event = {
+	id = pop_influx.18
+	title = pop_influx.18.title
+	desc = pop_influx.18.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.18.option.a
+    
+        upgrade_pop = { TYPE = vault_dweller }
+    }
+}
+
+# Influx of Institute Staff
+province_event = {
+	id = pop_influx.19
+	title = pop_influx.19.title
+	desc = pop_influx.19.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.19.option.a
+    
+        upgrade_pop = { TYPE = institute }
+    }
+}
+
+# Influx of Enclave
+province_event = {
+	id = pop_influx.20
+	title = pop_influx.20.title
+	desc = pop_influx.20.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.20.option.a
+    
+        upgrade_pop = { TYPE = enclave }
+    }
+}
+
+# Influx of Shi
+province_event = {
+	id = pop_influx.21
+	title = pop_influx.21.title
+	desc = pop_influx.21.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_influx.21.option.a
+    
+        upgrade_pop = { TYPE = shi }
+    }
+}

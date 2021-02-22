@@ -1,7 +1,222 @@
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
+
 country_decisions = {
 	shift_administration = {
 		potential = {
-            always = yes
+            OR = {
+                AND = {
+                    NOT = { is_wastelander_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_wastelander_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_raider_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_raider_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_tribal_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_tribal_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_robot_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_robot_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_super_mutant_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_super_mutant_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_ghoul_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_ghoul_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_swampfolk_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_swampfolk_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_synth_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_synth_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_rodent_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_rodent_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_beastlord_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_beastlord_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_alien_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_alien_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_deathclaw_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_deathclaw_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_fungal_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_fungal_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_dwarf_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_dwarf_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_legion_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_legion_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_bos_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_bos_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_coa_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_coa_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_vault_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_vault_dweller_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_institute_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_institute_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_enclave_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_enclave_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+                AND = {
+                    NOT = { is_shi_administration = yes }
+                    calc_true_if = {
+                        all_owned_province = {
+                            has_any_shi_pop = yes
+                        }
+                        amount = 10
+                    }
+                }
+            }
 		}
 		allow = {
 			stability = 0

@@ -1,0 +1,1004 @@
+namespace = pop_expulsion
+
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
+
+province_event = {
+	id = pop_expulsion.1
+	title = pop_expulsion.1.title
+	desc = pop_expulsion.1.desc
+	picture = THE_BURNED_MAN_eventPicture
+	
+    is_triggered_only = yes
+    
+	# Wastelander
+    option = {
+		name = pop_expulsion.1.option.wastelander
+    
+        trigger = {
+            has_any_wastelander_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_wastelander_low
+            }
+            remove_province_modifier = pop_wastelander_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_wastelander_med
+            }
+            add_low_pop_wastelander = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_wastelander_med
+            }
+            add_med_pop_wastelander = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_wastelander_high }
+                        }
+                        province_event = { id = pop_influx.1 }
+                    }
+                }
+            }
+        }
+    }
+    # Raider
+    option = {
+		name = pop_expulsion.1.option.raider
+    
+        trigger = {
+            has_any_raider_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_raider_low
+            }
+            remove_province_modifier = pop_raider_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_raider_med
+            }
+            add_low_pop_raider = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_raider_med
+            }
+            add_med_pop_raider = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_raider_high }
+                        }
+                        province_event = { id = pop_influx.2 }
+                    }
+                }
+            }
+        }
+    }
+    # Tribal
+    option = {
+		name = pop_expulsion.1.option.tribal
+    
+        trigger = {
+            has_any_tribal_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_tribal_low
+            }
+            remove_province_modifier = pop_tribal_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_tribal_med
+            }
+            add_low_pop_tribal = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_tribal_med
+            }
+            add_med_pop_tribal = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_tribal_high }
+                        }
+                        province_event = { id = pop_influx.3 }
+                    }
+                }
+            }
+        }
+    }
+    # Robot
+    option = {
+		name = pop_expulsion.1.option.robot
+    
+        trigger = {
+            has_any_robot_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_robot_low
+            }
+            remove_province_modifier = pop_robot_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_robot_med
+            }
+            add_low_pop_robot = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_robot_med
+            }
+            add_med_pop_robot = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_robot_high }
+                        }
+                        province_event = { id = pop_influx.4 }
+                    }
+                }
+            }
+        }
+    }
+    # Super Mutant
+    option = {
+		name = pop_expulsion.1.option.super_mutant
+    
+        trigger = {
+            has_any_super_mutant_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_super_mutant_low
+            }
+            remove_province_modifier = pop_super_mutant_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_super_mutant_med
+            }
+            add_low_pop_super_mutant = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_super_mutant_med
+            }
+            add_med_pop_super_mutant = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_super_mutant_high }
+                        }
+                        province_event = { id = pop_influx.5 }
+                    }
+                }
+            }
+        }
+    }
+    # Ghoul
+    option = {
+		name = pop_expulsion.1.option.ghoul
+    
+        trigger = {
+            has_any_ghoul_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_ghoul_low
+            }
+            remove_province_modifier = pop_ghoul_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_ghoul_med
+            }
+            add_low_pop_ghoul = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_ghoul_med
+            }
+            add_med_pop_ghoul = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_ghoul_high }
+                        }
+                        province_event = { id = pop_influx.6 }
+                    }
+                }
+            }
+        }
+    }
+    # Swampfolk
+    option = {
+		name = pop_expulsion.1.option.swampfolk
+    
+        trigger = {
+            has_any_swampfolk_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_swampfolk_low
+            }
+            remove_province_modifier = pop_swampfolk_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_swampfolk_med
+            }
+            add_low_pop_swampfolk = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_swampfolk_med
+            }
+            add_med_pop_swampfolk = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_swampfolk_high }
+                        }
+                        province_event = { id = pop_influx.7 }
+                    }
+                }
+            }
+        }
+    }
+    # Synth
+    option = {
+		name = pop_expulsion.1.option.synth
+    
+        trigger = {
+            has_any_synth_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_synth_low
+            }
+            remove_province_modifier = pop_synth_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_synth_med
+            }
+            add_low_pop_synth = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_synth_med
+            }
+            add_med_pop_synth = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_synth_high }
+                        }
+                        province_event = { id = pop_influx.8 }
+                    }
+                }
+            }
+        }
+    }
+    # Rodent
+    option = {
+		name = pop_expulsion.1.option.rodent
+    
+        trigger = {
+            has_any_rodent_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_rodent_low
+            }
+            remove_province_modifier = pop_rodent_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_rodent_med
+            }
+            add_low_pop_rodent = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_rodent_med
+            }
+            add_med_pop_rodent = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_rodent_high }
+                        }
+                        province_event = { id = pop_influx.9 }
+                    }
+                }
+            }
+        }
+    }
+    # Beastlord
+    option = {
+		name = pop_expulsion.1.option.beastlord
+    
+        trigger = {
+            has_any_beastlord_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_beastlord_low
+            }
+            remove_province_modifier = pop_beastlord_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_beastlord_med
+            }
+            add_low_pop_beastlord = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_beastlord_med
+            }
+            add_med_pop_beastlord = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_beastlord_high }
+                        }
+                        province_event = { id = pop_influx.10 }
+                    }
+                }
+            }
+        }
+    }
+    # Alien
+    option = {
+		name = pop_expulsion.1.option.alien
+    
+        trigger = {
+            has_any_alien_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_alien_low
+            }
+            remove_province_modifier = pop_alien_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_alien_med
+            }
+            add_low_pop_alien = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_alien_med
+            }
+            add_med_pop_alien = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_alien_high }
+                        }
+                        province_event = { id = pop_influx.11 }
+                    }
+                }
+            }
+        }
+    }
+    # Deathclaw
+    option = {
+		name = pop_expulsion.1.option.deathclaw
+    
+        trigger = {
+            has_any_deathclaw_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_deathclaw_low
+            }
+            remove_province_modifier = pop_deathclaw_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_deathclaw_med
+            }
+            add_low_pop_deathclaw = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_deathclaw_med
+            }
+            add_med_pop_deathclaw = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_deathclaw_high }
+                        }
+                        province_event = { id = pop_influx.12 }
+                    }
+                }
+            }
+        }
+    }
+    # Fungal
+    option = {
+		name = pop_expulsion.1.option.fungal
+    
+        trigger = {
+            has_any_fungal_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_fungal_low
+            }
+            remove_province_modifier = pop_fungal_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_fungal_med
+            }
+            add_low_pop_fungal = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_fungal_med
+            }
+            add_med_pop_fungal = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_fungal_high }
+                        }
+                        province_event = { id = pop_influx.13 }
+                    }
+                }
+            }
+        }
+    }
+    # Dwarf
+    option = {
+		name = pop_expulsion.1.option.dwarf
+    
+        trigger = {
+            has_any_dwarf_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_dwarf_low
+            }
+            remove_province_modifier = pop_dwarf_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_dwarf_med
+            }
+            add_low_pop_dwarf = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_dwarf_med
+            }
+            add_med_pop_dwarf = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_dwarf_high }
+                        }
+                        province_event = { id = pop_influx.14 }
+                    }
+                }
+            }
+        }
+    }
+    # Legion
+    option = {
+		name = pop_expulsion.1.option.legion
+    
+        trigger = {
+            has_any_legion_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_legion_low
+            }
+            remove_province_modifier = pop_legion_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_legion_med
+            }
+            add_low_pop_legion = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_legion_med
+            }
+            add_med_pop_legion = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_legion_high }
+                        }
+                        province_event = { id = pop_influx.15 }
+                    }
+                }
+            }
+        }
+    }
+    # BOS
+    option = {
+		name = pop_expulsion.1.option.bos
+    
+        trigger = {
+            has_any_bos_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_bos_low
+            }
+            remove_province_modifier = pop_bos_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_bos_med
+            }
+            add_low_pop_bos = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_bos_med
+            }
+            add_med_pop_bos = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_bos_high }
+                        }
+                        province_event = { id = pop_influx.16 }
+                    }
+                }
+            }
+        }
+    }
+    # COA
+    option = {
+		name = pop_expulsion.1.option.coa
+    
+        trigger = {
+            has_any_coa_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_coa_low
+            }
+            remove_province_modifier = pop_coa_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_coa_med
+            }
+            add_low_pop_coa = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_coa_med
+            }
+            add_med_pop_coa = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_coa_high }
+                        }
+                        province_event = { id = pop_influx.17 }
+                    }
+                }
+            }
+        }
+    }
+    # Vault Dweller
+    option = {
+		name = pop_expulsion.1.option.vault_dweller
+    
+        trigger = {
+            has_any_vault_dweller_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_vault_dweller_low
+            }
+            remove_province_modifier = pop_vault_dweller_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_vault_dweller_med
+            }
+            add_low_pop_vault_dweller = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_vault_dweller_med
+            }
+            add_med_pop_vault_dweller = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_vault_dweller_high }
+                        }
+                        province_event = { id = pop_influx.18 }
+                    }
+                }
+            }
+        }
+    }
+    # Institute
+    option = {
+		name = pop_expulsion.1.option.institute
+    
+        trigger = {
+            has_any_institute_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_institute_low
+            }
+            remove_province_modifier = pop_institute_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_institute_med
+            }
+            add_low_pop_institute = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_institute_med
+            }
+            add_med_pop_institute = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_institute_high }
+                        }
+                        province_event = { id = pop_influx.19 }
+                    }
+                }
+            }
+        }
+    }
+    # Enclave
+    option = {
+		name = pop_expulsion.1.option.enclave
+    
+        trigger = {
+            has_any_enclave_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_enclave_low
+            }
+            remove_province_modifier = pop_enclave_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_enclave_med
+            }
+            add_low_pop_enclave = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_enclave_med
+            }
+            add_med_pop_enclave = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_enclave_high }
+                        }
+                        province_event = { id = pop_influx.20 }
+                    }
+                }
+            }
+        }
+    }
+    # Shi
+    option = {
+		name = pop_expulsion.1.option.shi
+    
+        trigger = {
+            has_any_shi_pop = yes
+        }
+        
+        if = {
+            limit = {
+                has_province_modifier = pop_shi_low
+            }
+            remove_province_modifier = pop_shi_low
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_shi_med
+            }
+            add_low_pop_shi = yes
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = pop_shi_med
+            }
+            add_med_pop_shi = yes
+        }
+        
+        add_province_modifier = {
+            name = "expel_pop"
+            duration = 3650
+        }
+        
+        # Influx of X event for random country
+        hidden_effect = {
+            owner = {
+                random_neighbor_country = {
+                    random_owned_province = {
+                        limit = {
+                            NOT = { has_province_modifier = pop_shi_high }
+                        }
+                        province_event = { id = pop_influx.21 }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+		name = pop_expulsion.1.option.exit
+    }
+}

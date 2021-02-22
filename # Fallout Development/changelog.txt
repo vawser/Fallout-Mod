@@ -1,8 +1,12 @@
 #-----------------------------
 # Changelog
 #-----------------------------
-- Added racial shift decisions for Wastelander/Raider/Tribal nations.
 - Changed truce timer to base 2 years, 3 years scaled.
+- Added pop system: each province can have up to 21 types of pop. Each type of pop can be small, medium or large. Each pop is represented by a province modifier, and confers a bonus and penalty linked somewhat to what they represent.
+- Added Population Attraction 'building': lets you boost the size of a pop type or attract a new type to the province.
+- Added Population Expulsion 'building: lets you expel a pop type, sending it to another state, and granting temporary bonses for culture/religion conversion.
+- Added Population Decimation 'building: lets you kill a pop type, granting big temporary bonses for culture/religion conversion but with significant unrest.
+- Added 'Pop' Administration system. You gain bonuses based on the pop type that leads your government. This is set by default at game start in a logical way (i.e. Caesar's Legion has Legion Administration). However, this can be changed by amassing enough of another pop type in your provinces, allowing you to adopt their type of administration. Each administration assigns powerful bonses and penalties that align with their theme.
 
 #-----------------------------
 # TODO
@@ -25,3 +29,7 @@
 # bos
 # coa
 # vault_dweller
+# institute
+# enclave
+# shi
+
