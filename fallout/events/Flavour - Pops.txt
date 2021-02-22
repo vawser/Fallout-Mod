@@ -26,5 +26,188 @@ namespace = pop_flavour
 # shi
 
 #-------------------------------
-# Flavour events
+# Wastelander events
 #-------------------------------
+#  pop_flavour.1 <>  pop_flavour.9
+
+# Wastelander Ingenuity
+country_event = {
+	id = pop_flavour.1
+	title = pop_flavour.1.title
+	desc = pop_flavour.1.desc
+	picture = DIAMOND_CITY_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+        is_wastelander_administration = yes
+        any_owned_province = {
+            has_any_wastelander_pop = yes
+        }
+	}
+
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = { has_any_wastelander_pop = yes }
+                save_event_target_as = valid_province
+            }
+        }
+    }
+    
+	option = {
+		name = pop_flavour.1.option.a
+        
+		add_base_tax = 1
+	}
+    option = {
+		name = pop_flavour.1.option.b
+        
+		add_base_production = 1
+	}
+}
+
+# Wastelander Representation
+country_event = {
+	id = pop_flavour.2
+	title = pop_flavour.2.title
+	desc = pop_flavour.2.desc
+	picture = CONFRONTATION_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+        NOT = { is_wastelander_administration = yes }
+        any_owned_province = {
+            has_any_wastelander_pop = yes
+        }
+	}
+
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = { has_any_wastelander_pop = yes }
+                save_event_target_as = valid_province
+            }
+        }
+    }
+    
+	option = {
+		name = pop_flavour.1.option.a
+        
+		add_prestige = -20
+	}
+    option = {
+		name = pop_flavour.1.option.b
+        
+		add_stability = -1
+	}
+}
+
+#-------------------------------
+# Raider events
+#-------------------------------
+#  pop_flavour.10 <>  pop_flavour.19
+
+#-------------------------------
+# Tribal events
+#-------------------------------
+#  pop_flavour.20 <>  pop_flavour.29
+
+#-------------------------------
+# Robot events
+#-------------------------------
+#  pop_flavour.30 <>  pop_flavour.39
+
+#-------------------------------
+# Super Mutant events
+#-------------------------------
+#  pop_flavour.40 <>  pop_flavour.49
+
+#-------------------------------
+# Ghoul events
+#-------------------------------
+#  pop_flavour.50 <>  pop_flavour.59
+
+#-------------------------------
+# Swampfolk events
+#-------------------------------
+#  pop_flavour.60 <>  pop_flavour.69
+
+#-------------------------------
+# Synth events
+#-------------------------------
+#  pop_flavour.70 <>  pop_flavour.79
+
+#-------------------------------
+# Rodent events
+#-------------------------------
+#  pop_flavour.80 <>  pop_flavour.89
+
+#-------------------------------
+# Beastlord events
+#-------------------------------
+#  pop_flavour.90 <>  pop_flavour.99
+
+#-------------------------------
+# Alien events
+#-------------------------------
+#  pop_flavour.100 <>  pop_flavour.109
+
+#-------------------------------
+# Deathclaw events
+#-------------------------------
+#  pop_flavour.110 <>  pop_flavour.119
+
+#-------------------------------
+# Fungal events
+#-------------------------------
+#  pop_flavour.120 <>  pop_flavour.129
+
+#-------------------------------
+# Dwarf events
+#-------------------------------
+#  pop_flavour.130 <>  pop_flavour.139
+
+#-------------------------------
+# Legion events
+#-------------------------------
+#  pop_flavour.140 <>  pop_flavour.149
+
+#-------------------------------
+# Brotherhood of Steel events
+#-------------------------------
+#  pop_flavour.150 <>  pop_flavour.159
+
+#-------------------------------
+# Children of Atom events
+#-------------------------------
+#  pop_flavour.160 <>  pop_flavour.169
+
+#-------------------------------
+# Vault Dweller events
+#-------------------------------
+#  pop_flavour.170 <>  pop_flavour.179
+
+#-------------------------------
+# Institute events
+#-------------------------------
+#  pop_flavour.180 <>  pop_flavour.189
+
+#-------------------------------
+# Enclave events
+#-------------------------------
+#  pop_flavour.190 <>  pop_flavour.199
+
+#-------------------------------
+# Shi events
+#-------------------------------
+#  pop_flavour.200 <>  pop_flavour.209

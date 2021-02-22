@@ -387,7 +387,7 @@
  shift_administration_desc: "The change in the demographics of our nation must be represented in our government. Let us shift our administrative apparatus to empower these rising cohorts."
  
  #-------------------------------------
- # Events
+ # Pop Setup
  #-------------------------------------
  pop_setup.1.title: "Pop Setup"
  pop_setup.1.desc: ""
@@ -418,6 +418,9 @@
  pop_setup.2.option.enclave: "Empower the Enclave"
  pop_setup.2.option.shi: "Empower the Shi"
  
+ #-------------------------------------
+ # Pop Attraction
+ #-------------------------------------
  pop_attraction.1.title: "Attraction in $PROVINCENAME$"
  pop_attraction.1.desc: "Our local government has been working on making $PROVINCENAME$ more attract to various types of people, in a bit to attract new talent and wealth to the area."
  pop_attraction.1.option.exit: "Exit"
@@ -443,6 +446,9 @@
  pop_attraction.1.option.enclave: "Attract Enclave"
  pop_attraction.1.option.shi: "Attract Shi"
  
+ #-------------------------------------
+ # Pop Expulsion
+ #-------------------------------------
  pop_expulsion.1.title: "Expulsion in $PROVINCENAME$"
  pop_expulsion.1.desc: "Our local government has expelled a cohort from $PROVINCENAME$, greatly reducing their sway in the province."
  pop_expulsion.1.option.exit: "Exit"
@@ -468,6 +474,9 @@
  pop_expulsion.1.option.enclave: "Expel Enclave"
  pop_expulsion.1.option.shi: "Expel Shi"
  
+ #-------------------------------------
+ # Pop Decimation
+ #-------------------------------------
  pop_decimation.1.title: "Decimation of $PROVINCENAME$"
  pop_decimation.1.desc: "Our local government has killed a cohort from $PROVINCENAME$, greatly reducing their sway in the province. However, this has worried and angered many of the other cohorts."
  pop_decimation.1.option.exit: "Exit"
@@ -493,6 +502,9 @@
  pop_decimation.1.option.enclave: "Kill Enclave"
  pop_decimation.1.option.shi: "Kill Shi"
  
+ #-------------------------------------
+ # Pop Influx
+ #-------------------------------------
  pop_influx.1.title: "Influx of Wastelanders"
  pop_influx.1.desc: "A recent expulsion from a neighbouring state has resulted in the expulsion of wastelanders. They have wandered far and have chosen to settle in our lands."
  pop_influx.1.option.a: "Let's see what they offer"
@@ -577,6 +589,15 @@
  pop_influx.21.desc: "A recent expulsion from a neighbouring state has resulted in the expulsion of shi members. They have wandered far and have chosen to settle in our lands."
  pop_influx.21.option.a: "Let's see what they offer"
  
- pop_flavour.1.title: ""
- pop_flavour.1.desc: ""
- pop_flavour.1.option.a: ""
+ #-------------------------------------
+ # Pop Flavour
+ #-------------------------------------
+ pop_flavour.1.title: "Wastelander Ingenuity"
+ pop_flavour.1.desc: "The ingenuity of the wastelanders in [Root.valid_province.GetName] is something to behold. They have made the most of their surroundings and throughly developed [Root.valid_province.GetName] into a province to be proud of."
+ pop_flavour.1.option.a: "The facilities are amazing!"
+ pop_flavour.1.option.b: "The factories are churning!"
+ 
+ pop_flavour.2.title: "Wastelander Representation"
+ pop_flavour.2.desc: "The wastelanders within our state feel as if they have been left to rot, and demand representation in our government. Without it, they could become a threat to law and order."
+ pop_flavour.2.option.a: "Promise to grant them some form of representation"
+ pop_flavour.2.option.b: "Ignore their grievances"
