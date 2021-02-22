@@ -542,7 +542,7 @@ base_values = {
 	horde_unity = -2
 	devotion = -0.5
 	meritocracy = -2
-	governing_capacity = 300
+	governing_capacity = 250
 	num_accepted_cultures = 2
 	monthly_splendor = 1
 	artillery_bonus_vs_fort = 5
@@ -1199,11 +1199,11 @@ maintained_forts = {
 }
 
 gov_rank_1 = {
-    governing_capacity = 100
+    
 }
 
 gov_rank_2 = {
-    governing_capacity = 250
+    governing_capacity_modifier = 0.25
     unjustified_demands = -0.05
     diplomats = 1
     diplomatic_upkeep = 1
@@ -1211,7 +1211,7 @@ gov_rank_2 = {
 }
 
 gov_rank_3 = {
-    governing_capacity = 500
+    governing_capacity_modifier = 0.5
     unjustified_demands = -0.1
     diplomats = 1
     diplomatic_upkeep = 2
@@ -1571,8 +1571,8 @@ cossacks_modifier = {
 ########################################
 
 expand_administation_modifier = {
-	expand_administration_cost = 0.25
-	governing_capacity = 25
+	expand_administration_cost = 0.1
+	governing_capacity = 50
 }
 
 # At 100% over capacity, this modifier will be fully used

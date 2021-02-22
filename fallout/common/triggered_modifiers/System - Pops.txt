@@ -23,6 +23,9 @@
 # enclave
 # shi
 
+#-------------------------------------
+# Wastelander
+#-------------------------------------
 administration_wastelander = {
 	potential = {
 		is_wastelander_administration = yes
@@ -31,9 +34,14 @@ administration_wastelander = {
 		is_wastelander_administration = yes
 	}
     
+	# Boons
     
+    # Penalty
 }
 
+#-------------------------------------
+# Raider
+#-------------------------------------
 administration_raider = {
 	potential = {
 		is_raider_administration = yes
@@ -42,8 +50,14 @@ administration_raider = {
 		is_raider_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Tribal
+#-------------------------------------
 administration_tribal = {
 	potential = {
 		is_tribal_administration = yes
@@ -52,8 +66,14 @@ administration_tribal = {
 		is_tribal_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Robot
+#-------------------------------------
 administration_robot = {
 	potential = {
 		is_robot_administration = yes
@@ -61,7 +81,15 @@ administration_robot = {
 	trigger = {
 		is_robot_administration = yes
 	}
+    
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Super Mutant
+#-------------------------------------
 administration_super_mutant = {
 	potential = {
 		is_super_mutant_administration = yes
@@ -70,8 +98,14 @@ administration_super_mutant = {
 		is_super_mutant_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Ghoul
+#-------------------------------------
 administration_ghoul = {
 	potential = {
 		is_ghoul_administration = yes
@@ -80,8 +114,14 @@ administration_ghoul = {
 		is_ghoul_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Swampfolk
+#-------------------------------------
 administration_swampfolk = {
 	potential = {
 		is_swampfolk_administration = yes
@@ -90,8 +130,14 @@ administration_swampfolk = {
 		is_swampfolk_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Synth
+#-------------------------------------
 administration_synth = {
 	potential = {
 		is_synth_administration = yes
@@ -100,8 +146,14 @@ administration_synth = {
 		is_synth_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Rodent
+#-------------------------------------
 administration_rodent = {
 	potential = {
 		is_rodent_administration = yes
@@ -110,8 +162,14 @@ administration_rodent = {
 		is_rodent_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Beastlord
+#-------------------------------------
 administration_beastlord = {
 	potential = {
 		is_beastlord_administration = yes
@@ -120,8 +178,14 @@ administration_beastlord = {
 		is_beastlord_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Alien
+#-------------------------------------
 administration_alien = {
 	potential = {
 		is_alien_administration = yes
@@ -130,8 +194,14 @@ administration_alien = {
 		is_alien_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Deathclaw
+#-------------------------------------
 administration_deathclaw = {
 	potential = {
 		is_deathclaw_administration = yes
@@ -140,8 +210,14 @@ administration_deathclaw = {
 		is_deathclaw_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Fungal
+#-------------------------------------
 administration_fungal = {
 	potential = {
 		is_fungal_administration = yes
@@ -150,8 +226,14 @@ administration_fungal = {
 		is_fungal_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Dwarf
+#-------------------------------------
 administration_dwarf = {
 	potential = {
 		is_dwarf_administration = yes
@@ -160,8 +242,14 @@ administration_dwarf = {
 		is_dwarf_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
+
+#-------------------------------------
+# Legion
+#-------------------------------------
 administration_legion = {
 	potential = {
 		is_legion_administration = yes
@@ -170,9 +258,14 @@ administration_legion = {
 		is_legion_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
 
+#-------------------------------------
+# Brotherhood of Steel
+#-------------------------------------
 administration_bos = {
 	potential = {
 		is_bos_administration = yes
@@ -181,9 +274,22 @@ administration_bos = {
 		is_bos_administration = yes
 	}
 
-	
+	# Boons
+    army_tradition = 1.0                # Military training is regularly undergone
+    discipline = 0.05                   # BOS soldiers are well-disciplined
+    yearly_absolutism = 0.5             # BOS rule is harsh
+    administrative_efficiency = 0.1     # BOS benefit from technology when it comes to administration
+    
+    # Penalty
+    global_manpower_modifier = -0.3     # Recruitment is limited
+    land_forcelimit_modifier = -0.3     # Recruitment is limited
+    reform_progress_growth = -0.5       # BOS are not reformers
+    governing_capacity_modifier = -0.25 # BOS lack the ability to project power well
 }
 
+#-------------------------------------
+# Children of Atom
+#-------------------------------------
 administration_coa = {
 	potential = {
 		is_coa_administration = yes
@@ -192,9 +298,14 @@ administration_coa = {
 		is_coa_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
 
+#-------------------------------------
+# Vault Dweller
+#-------------------------------------
 administration_vault = {
 	potential = {
 		is_vault_administration = yes
@@ -203,9 +314,14 @@ administration_vault = {
 		is_vault_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
 
+#-------------------------------------
+# Institute
+#-------------------------------------
 administration_institute = {
 	potential = {
 		is_institute_administration = yes
@@ -214,9 +330,14 @@ administration_institute = {
 		is_institute_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
 
+#-------------------------------------
+# Enclave
+#-------------------------------------
 administration_enclave = {
 	potential = {
 		is_enclave_administration = yes
@@ -225,9 +346,14 @@ administration_enclave = {
 		is_enclave_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }
 
+#-------------------------------------
+# Shi
+#-------------------------------------
 administration_shi = {
 	potential = {
 		is_shi_administration = yes
@@ -236,5 +362,7 @@ administration_shi = {
 		is_shi_administration = yes
 	}
 
-	
+	# Boons
+    
+    # Penalty
 }

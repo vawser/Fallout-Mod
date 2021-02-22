@@ -8,20 +8,7 @@ exacting_recruitment_standards = {
 		NOT = { has_country_modifier = lifted_recruitment_restrictions }
 	}
 
-    global_manpower_modifier = -0.5
-    land_forcelimit_modifier = -0.5
+    global_manpower_modifier = -0.2
+    land_forcelimit_modifier = -0.2
 }
 
-# Chapter Discipline
-# Simulate the improved combat effectiveness small chapters would posess. A large chapter would lose this as it succumbs to corruption and regionalism.
-chapter_discipline = {
-	potential = {
-		technology_group = tech_bos
-	}
-	trigger = {
-        NOT = { num_of_cities = 20 }
-	}
-
-    discipline = 0.05
-    army_tradition = 1.0
-}

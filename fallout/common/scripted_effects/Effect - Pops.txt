@@ -29,86 +29,125 @@
 set_wastelander_administration = {
     custom_tooltip = SET_WASTELANDER_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 1 } }
+    if = {
+        limit = {
+            OR = {
+                has_reform = ncr_reform
+                has_reform = ncr_state_reform
+            }
+        }
+        
+        hidden_effect = { change_technology_group = tech_ncr }
+    }
+    else_if = {
+        limit = {
+            has_reform = new_vegas_reform
+        }
+        hidden_effect = { change_technology_group = tech_new_vegas }
+    }
+    else = {
+        hidden_effect = { change_technology_group = tech_wastelander }
+    }
 }
 set_raider_administration = {
     custom_tooltip = SET_RAIDER_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 2 } }
+    hidden_effect = { change_technology_group = tech_raider }
 }
 set_tribal_administration = {
     custom_tooltip = SET_TRIBAL_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 3 } }
+    hidden_effect = { change_technology_group = tech_tribal }
 }
 set_robot_administration = {
     custom_tooltip = SET_ROBOT_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 4 } }
+    hidden_effect = { change_technology_group = tech_robot }
 }
 set_super_mutant_administration = {
     custom_tooltip = SET_SUPER_MUTANT_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 5 } }
+    hidden_effect = { change_technology_group = tech_super_mutant }
 }
 set_ghoul_administration = {
     custom_tooltip = SET_GHOUL_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 6 } }
+    hidden_effect = { change_technology_group = tech_ghoul }
 }
 set_swampfolk_administration = {
     custom_tooltip = SET_SWAMPFOLK_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 7 } }
+    hidden_effect = { change_technology_group = tech_swampfolk }
 }
 set_synth_administration = {
     custom_tooltip = SET_SYNTH_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 8 } }
+    #hidden_effect = { change_technology_group = tech_rodent }
 }
 set_rodent_administration = {
     custom_tooltip = SET_RODENT_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 9 } }
+    hidden_effect = { change_technology_group = tech_rodent }
 }
 set_beastlord_administration = {
     custom_tooltip = SET_BEASTLORD_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 10 } }
+    hidden_effect = { change_technology_group = tech_beastlord }
 }
 set_alien_administration = {
     custom_tooltip = SET_ALIEN_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 11 } }
+    hidden_effect = { change_technology_group = tech_alien }
 }
 set_deathclaw_administration = {
     custom_tooltip = SET_DEATHCLAW_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 12 } }
+    hidden_effect = { change_technology_group = tech_deathclaw }
 }
 set_fungal_administration = {
     custom_tooltip = SET_FUNGAL_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 13 } }
+    hidden_effect = { change_technology_group = tech_fungal }
 }
 set_dwarf_administration = {
     custom_tooltip = SET_DWARF_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 14 } }
+    hidden_effect = { change_technology_group = tech_dwarf }
 }
 set_legion_administration = {
     custom_tooltip = SET_LEGION_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 15 } }
+    hidden_effect = { change_technology_group = tech_caesars_legion }
 }
 set_bos_administration = {
     custom_tooltip = SET_BOS_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 16 } }
+    hidden_effect = { change_technology_group = tech_bos }
 }
 set_coa_administration = {
     custom_tooltip = SET_COA_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 17 } }
+    hidden_effect = { change_technology_group = tech_children_of_the_atom }
 }
 set_vault_administration = {
     custom_tooltip = SET_VAULT_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 18 } }
+    hidden_effect = { change_technology_group = tech_vault_dweller }
 }
 set_institute_administration = {
     custom_tooltip = SET_INSTITUTE_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 19 } }
+    hidden_effect = { change_technology_group = tech_commonwealth }
 }
 set_enclave_administration = {
     custom_tooltip = SET_ENCLAVE_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 20 } }
+    hidden_effect = { change_technology_group = tech_enclave }
 }
 set_shi_administration = {
     custom_tooltip = SET_SHI_ADMINISTRATION
     hidden_effect = { set_variable = { which = pop_administration_id value = 21 } }
+    hidden_effect = { change_technology_group = tech_shi }
 }
 
 #-------------------------------------
