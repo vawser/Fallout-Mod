@@ -32,6 +32,7 @@ monarch_lifespan = 0.1
 candidate_random_bonus = 1
 heir_chance = 0.5
 monthly_support_heir_gain = 0.1
+monthly_heir_claim_increase = 0.1
 
 #-----------------------------------------
 # Economy
@@ -46,6 +47,7 @@ interest = -1
 development_cost = -0.1
 build_cost = -0.1
 build_time = -0.25
+great_project_upgrade_cost = -0.1
 
 #-----------------------------------------
 # Technology
@@ -209,10 +211,17 @@ global_colonial_growth = 25
 range = 0.2
 native_uprising_chance = -0.25
 native_assimilation = 0.25
-migration_cooldown = -0.1
 global_tariffs = 0.25
 treasure_fleet_income = 0.5
 expel_minorities_cost = -0.3
+
+#-----------------------------------------
+# Natives
+#-----------------------------------------
+migration_cost = -0.1
+settle_cost = -0.1
+monthly_federation_favor_growth = 0.05
+tribal_development_growth = 0.05
 
 #-----------------------------------------
 # Trade
@@ -532,6 +541,10 @@ local_institution_spread = 0.1
 local_core_creation = 0.5
 local_governing_cost = -0.2
 statewide_governing_cost = -0.2
+allowed_num_of_manufactories = 1
+local_governing_cost_increase = 10
+state_governing_cost_increase = 10
+local_great_project_upgrade_cost = -0.1
 
 #-----------------------------------------
 # Trade

@@ -81,6 +81,7 @@ every_local_enemy
 every_neighbor_country 
 every_rival_country
 every_subject_country
+every_federation_member
 
 # Scopes to ONE valid country that meet the triggers in the limit
 random_ally
@@ -93,6 +94,7 @@ random_local_enemy
 random_neighbor_country
 random_rival_country
 random_subject_country
+random_federation_member
 
 # Changes scope to province
 every_core_province
@@ -128,11 +130,13 @@ every_province_in_state = {
 every_empty_neighbor_province
 every_neighbor_province         # Ignores empty provinces
 every_province_in_state 
+every_tribal_land_province
 
 random_empty_neighbor_province 
 random_neighbor_province        # Ignores empty provinces
 random_province_in_state 
 random_province
+random_tribal_land_province
 
 # Changes scope to country
 every_core_country
@@ -179,6 +183,7 @@ all_neighbor_country
 all_rival_country 
 all_subject_country
 all_countries_including_self
+all_federation_member
 
 # Changes scope to army
 any_hired_mercenary_company
@@ -208,6 +213,7 @@ any_local_enemy
 any_neighbor_country 
 any_rival_country 
 any_subject_country 
+any_federation_member
 
 # Changes scope to province
 any_core_province
@@ -231,12 +237,14 @@ all_province_in_state = {  }
 all_empty_neighbor_province         
 all_province_in_state 
 all_neighbor_province           # Ignores empty provinces
+all_tribal_land_province
 
 any_empty_neighbor_province                  
 any_province
 any_province_in_state 
 any_friendly_coast_border_province  # Friendly means postive relations or owned by self
 any_neighbor_province               # Ignores empty provinces
+any_tribal_land_province
 
 # Changes scope to country
 all_core_country

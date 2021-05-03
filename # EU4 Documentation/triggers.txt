@@ -143,6 +143,10 @@ production_leader = {
 # Checks if the owned provinces of the current scope have the specified amount (or more) of the specified building
 <building> = <int>
 
+num_of_times_used_transfer_development = <int>
+num_of_times_used_pillage_capital = <int>
+has_pillaged_capital_against = <scope>
+
 # Used in missions
 share_of_starting_income = <float>
 grown_by_development = <int>
@@ -469,7 +473,8 @@ has_commanding_three_star = yes
 has_wartaxes = yes / no
 is_at_war = yes / no
 
-# Mercs
+is_renting_condottieri_to = <scope>
+
 hired_for_months = <int>
 is_foreign_company = yes
 
@@ -518,6 +523,7 @@ navy_tradition = <int> / <scope>
 num_of_admirals = <int> / <scope>
 num_of_admirals_with_traits = <int> / <scope>
 num_of_explorers = <int> / <scope>
+num_of_free_explorers = <int>
 num_of_galley = <int> / <scope>
 num_of_heavy_ship = <int> / <scope>
 num_of_light_ship = <int> / <scope>
@@ -713,6 +719,9 @@ is_client_nation_of = <scope>
 is_colonial_nation_of = <scope>
 is_subject_of = <scope>
 
+has_subject_of_type = <type>
+is_subject_of_type_with_overlord = <type>
+
 liberty_desire = <int> / <scope>
 
 years_under_vassalage = {
@@ -770,6 +779,19 @@ had_ruler_flag = {
 }
 
 exiled_same_dynasty_as_current = <string> 
+
+ruler_has_personality_ancestor = {
+    key = <type>
+}
+
+has_estate_led_regency = {
+    estate = <estate> / <any>
+    duration = <int>
+}
+
+is_in_extended_regency = <bool>
+estate_led_regency_loyalty = <float>
+estate_led_regency_influence = <float>
 
 # ----- Consort -----
 consort_adm = <int>
