@@ -122,6 +122,6 @@ tags={
 	"Trade"
 	"Utilities"
 }
-supported_version="1.30.*"
+supported_version="1.34.*"
 path="C:/Users/Xylozi/Documents/Paradox Interactive/Europa Universalis IV/mod/fallout"
 remote_file_id="2068586727"
