@@ -1,0 +1,39 @@
+namespace = yakuza
+
+# "Yakuza Traditions"
+country_event = {
+    id = yakuza.1
+    title = yakuza.1.title
+    desc = yakuza.1.desc
+    picture = ROAD_SIGNS_eventPicture
+
+    fire_only_once = yes
+    
+    trigger = {
+        tag = YAK
+    }
+    
+    mean_time_to_happen = {
+		months = 55
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.Owner.GetName] - [Root.GetName] - yakuza.1" }
+        }
+    }
+    
+    option = { # Honour tradition 
+        name = yakuza.1.option.a
+		add_country_modifier = {
+    		name = yak_traditions
+    		duration = -1
+		}
+    }
+	
+    option = { # We need to modernize 
+        name = yakuza.1.option.b
+		add_army_professionalism = 0.05	
+		add_mil_power = 100	
+    }
+}

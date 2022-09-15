@@ -1,0 +1,34 @@
+country_decisions = {
+	van_graff_takeover = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = {
+				has_global_flag = van_graff_coup
+			}
+			tag = NRN
+			faction_influence = {
+				faction = the_van_graffs
+				influence = 60
+			}			
+		}
+		allow = {
+			faction_in_power = the_van_graffs
+			faction_influence = {
+				faction = the_van_graffs
+				influence = 100
+			}		
+		}
+		effect = {
+			override_country_name = THE_VAN_GRAFFS
+			set_global_flag = van_graff_coup
+			remove_faction = the_wrights
+			remove_faction = the_mordinos
+			remove_faction = the_bishops
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+	

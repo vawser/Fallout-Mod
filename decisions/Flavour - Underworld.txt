@@ -1,0 +1,27 @@
+country_decisions = {
+	underworld_the_lost_exhibition = {
+		potential = {
+			tag = UND
+			owns = 50
+			NOT = {
+				has_country_flag = und_lost_exhibit
+			}
+		}
+		allow = {
+			grown_by_development = 20
+			owns = 50 
+			treasury = 100 
+		}
+		effect = {
+			add_treasury = -100
+			country_event = { 
+				id = underworld.1
+			}			
+			set_country_flag = und_lost_exhibit
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+	

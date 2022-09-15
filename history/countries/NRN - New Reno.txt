@@ -1,0 +1,55 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = monarchy
+add_government_reform = new_reno_reform
+technology_group = tech_ncr
+religion = secular
+primary_culture = new_reno
+capital = 1223
+
+add_faction = the_mordinos
+add_faction = the_bishops
+add_faction = the_wrights
+add_faction = the_van_graffs
+
+
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+
+set_slavery_allowed = yes
+set_gambling_allowed = yes
+set_prostitution_allowed = yes
+
+set_narcotics_allowed = yes
+set_scavenging_allowed = yes
+
+#--------------------------------
+# Relationships
+#--------------------------------
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Tiaret"
+		dynasty = "Van Graff"
+		adm = 3
+		dip = 4
+		mil = 3
+		female = yes
+	}
+
+	add_country_modifier = {
+		name = "the_abolish_slavery_act"
+		duration = -1
+	}
+
+	add_country_modifier = {
+		name = "nrn_salvatore"
+		duration = 3453
+	}
+}
