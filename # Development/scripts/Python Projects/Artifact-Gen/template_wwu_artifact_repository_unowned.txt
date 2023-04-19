@@ -1,0 +1,14 @@
+option = [
+    name = wwu_artifact_repository.1.option.unowned.{artifact}
+
+    trigger = [
+        NOT = [ has_country_flag = artifact_hide_unowned ]
+        NOT = [ has_country_flag = artifact_{artifact} ]
+    ]
+
+    country_event = [ id = wwu_artifact_repository.{event_id} ]
+
+    ai_chance = [
+        factor = 0
+    ]
+]

@@ -1,0 +1,25 @@
+# {artifact_name}
+country_event = [
+	id = wwu_artifact_heist.{event_id}
+	title = wwu_artifact_heist.{event_id}.title
+	desc = wwu_artifact_heist.{event_id}.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	trigger = [
+        has_country_flag = artifact_{artifact}_stolen
+    ]
+
+    immediate = [
+        hidden_effect = [
+            clr_country_flag = artifact_{artifact}_stolen
+        ]
+    ]
+
+    mean_time_to_happen = [
+		days = 1
+	]
+
+	option = [
+		name = wwu_artifact_heist.{event_id}.option.a
+	]
+]

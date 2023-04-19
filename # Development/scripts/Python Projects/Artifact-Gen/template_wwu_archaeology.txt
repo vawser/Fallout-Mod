@@ -1,0 +1,18 @@
+# {artifact_name}
+country_event = [
+	id = wwu_archaeology.{event_id}
+	title = wwu_archaeology.{event_id}.title
+	desc = wwu_archaeology.{event_id}.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	option = [
+		name = wwu_archaeology.{event_id}.option.a
+
+        unlock_artifact = [
+            artifact = {artifact}
+        ]
+	]
+]
+

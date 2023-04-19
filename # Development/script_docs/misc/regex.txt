@@ -1,0 +1,91 @@
+#---------------------
+# Character Class:
+#---------------------
+[]
+
+Matches the defined characters (only) in an OR fashion, takes individual characters or ranges.
+
+So [0-9] will match "1" and "4" but not "B"
+
+Useful:
+[0-9]
+[a-z]
+
+#---------------------
+# Group
+#---------------------
+(string|string)
+Matches the defined token in an OR fashion 
+
+#---------------------
+# Metacharacters
+#---------------------
+. matches all characters (other than newline if disabled)
+
+To search for a dot, do [.]
+
+? means the preceding token is optional. For example:
+
+Nov(ember)? will match Nov and November
+
+{0,1} does the same thing as ?
+
+? is greedy by default, and will include tokens after the found token, i.e. 
+
+Feb 23(rd)? will find "Feb 23rd" not just "Feb 23" although that is the first instance.
+
+?? will disable the greediness
+
+If .* is used anywhere in the expression, ? needs to be added after it to make the expression non-greedy.
+
+* will match the preceding token 0 or more times. This means it is optional in instances where it finds 0 tokens, i.e. [0-9][0-9]* will match "0" and "00"
+
+{min,max} can be used as well, i.e. [0-9][0-9]{0,2} will match "0", "00", "000" but only the "000" part of "0000"
+
+Use \b to restrict it properly, i.e. \b[0-9]{1,4}\b
+
++ means the previous token will apply 1 or more times, i.e. [0-9]+ will match: "0" and "199292"
+
+#---------------------
+# Anchors
+#---------------------
+Anchors match the position in a string, not a character
+
+^ means start of line position
+$ means end of line position
+/A means start of line position (accounting for CRLF)
+/Z means end of line position (accounting for CRLF)
+
+Example of $:
+
+    add_core = SWE
+    owner = SWE #
+
+SWE$ will only match the first line, not the second
+
+#---------------------
+# Word Boundries
+#---------------------
+\b is an anchor for a specified word "character"
+
+Example:
+
+\bis\b on "This island is beautiful." will match:
+
+"is"
+
+But not:
+
+"This", or "island" or any segment of a word containing the word character
+
+\B is a negated version of \b
+
+#---------------------
+# Examples
+#---------------------
+
+# For dates
+[0-9]+[.][0-9]+[.][0-9]+
+
+# String search
+discovered_by = (western|ottoman)

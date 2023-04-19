@@ -1,0 +1,76 @@
+#--------------------------------------------------------------------------------
+# Events
+#--------------------------------------------------------------------------------
+# Operate on the country scope
+country_event = {
+    id = <namespace>.<int>
+    title = <localized_string>
+    desc = <localized_string>
+    picture = <gfx_string>
+    
+    # title, desc and picture can be limited with triggers
+    title = {
+        trigger = { tag = FRA }
+        title = FRA_title
+    }
+    
+    desc = {
+        trigger = { tag = FRA }
+        desc = FRA_desc
+    }
+    
+    picture = {
+        trigger = { tag = FRA }
+        picture = FRA_eventPicture
+    }
+    
+    major = yes                 # optional, displays event without options to all countries that see ROOT
+    is_triggered_only = yes     # optional, requires an explicit call from country_event = { } or on_actions
+    
+    # Triggers ROOT must meet to fire the event
+    trigger = {
+        <triggers>
+    }
+    
+    # Occurs immediate on trigger being met
+    immediate = {
+        <effects>
+    }
+    
+    mean_time_to_happen = {
+        # Use only one
+        days = <int>
+        months = <int>
+        
+        # Modify the MTTH based on triggers
+        modifier = {
+            factor = 0.8    # Example: MTTH = 100, 100 * 0.8 == 80
+            
+            <triggers>
+        }
+    }
+    
+    # Chosen by player, if timed out, first option is chosen
+    option = {
+        name = <localized_string>
+        
+        highlight = <yes>                       # optional, highlights event option
+        required_personality = <personality>    # optional, displays event option only when ruler has <personality>
+        
+        trigger = {                             # optional, displays event option only when triggers are met
+            <triggers>
+        }
+        
+        <effects>
+    }
+ 
+    # Applied after event option is chosen
+    after = {
+        <effects>
+    }
+}
+
+# Operate on the province scope
+province_event = {
+    # same as above
+}

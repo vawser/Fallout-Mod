@@ -1,0 +1,19 @@
+option = [
+    name = wwu_artifact_repository.1.option.{artifact}
+
+    trigger = [
+        has_country_flag = artifact_{artifact}
+    ]
+
+    country_event = [ id = wwu_artifact_repository.{event_id} ]
+
+    ai_chance = [
+        factor = 1
+
+        modifier = [
+            factor = 0
+
+            has_country_modifier = ai_recently_set_primary_artifact
+        ]
+    ]
+]

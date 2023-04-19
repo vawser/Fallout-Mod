@@ -1,0 +1,52 @@
+# {artifact_name}
+country_event = [
+	id = wwu_artifact_repository.{event_id}
+	title = wwu_artifact_repository.{event_id}.title
+	desc = wwu_artifact_repository.{event_id}.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = [
+        hidden_effect = [
+            save_artifact_location = [ artifact = {artifact} ]
+        ]
+    ]
+
+	option = [
+		name = wwu_artifact_repository.{event_id}.option.make_primary
+
+        trigger = [
+            has_country_flag = artifact_{artifact}
+        ]
+
+        make_primary_artifact = [
+            artifact = {artifact}
+        ]
+
+        hidden_effect = [
+            country_event = [ id = wwu_artifact_repository.1 ]
+
+            if = [
+                limit = [
+                    ai = yes
+                ]
+                add_country_modifier = [
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                ]
+            ]
+        ]
+
+        ai_chance = [
+            factor = 100
+        ]
+	]
+    option = [
+		name = wwu_artifact_repository.{event_id}.option.exit
+
+        hidden_effect = [
+            country_event = [ id = wwu_artifact_repository.1 ]
+        ]
+	]
+]

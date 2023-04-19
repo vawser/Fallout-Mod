@@ -1,0 +1,1460 @@
+# For testing, you can place text files in your mod's folder, i.e. my_script.txt, with effects defined within.
+# Then ingame, open console and type: run my_script.txt and the effects will execute.
+#--------------------------------------------------------------------------------
+# Dual scope Effects
+#--------------------------------------------------------------------------------
+# Scripted Effects are sections of code that can be used in a macro like fashion. 
+# They are defined in common\scripted_effects
+scripted_effect_name = yes
+
+# Scripted Effects can now take parameters.
+# In the example below, the scripted effect itself would have $count$ somewhere within.
+scripted_effect_name = { COUNT = 1 }
+
+set_global_flag = <string>              # Defines a global flag
+clr_global_flag = <string>              # Clears a global flag
+
+custom_tooltip = <string>               # Displays the localized string in the effect tooltip
+
+log = "[Root.GetName] text here"        # Writes to the game.log when executed. Accepts most localization functions.
+
+save_event_target_as = <string>         # Persists until the event chain ends.
+save_global_event_target_as = <string>  # Persists until cleared via effect
+
+clear_global_event_target = <event target>
+clear_global_event_targets = <yes>
+
+show_ambient_object = <ambient object>  # Force an ambient object to appear (if hidden in ambient_objects.txt)
+hide_ambient_object = <ambient object>  # Hide an ambient object
+
+override_country_name = <scope>
+restore_country_name = <scope>
+
+add_canal = <name>
+
+
+restore_country_color = yes
+change_country_color = {
+    # Set color to that of target tag
+    country = <scope>
+    
+    # Set specific color
+    color = {
+        <r>
+        <g>
+        <b>
+    }
+}
+
+
+release_all_possible_countries = <bool> # Releases all possible countries from current scope.
+remove_country = <bool> # Removes current scope fully
+
+#--------------------------------------------------------------------------------
+# Country-scope Effects
+#--------------------------------------------------------------------------------
+# ----- General -----
+add_adm_power = <int>
+add_dip_power = <int>
+add_mil_power = <int>
+
+# Scale with power cost modifier
+adm_power_cost = <int>
+dip_power_cost = <int>
+mil_power_cost = <int>
+
+change_tag = <scope>             # Changes country tag, removing the old tag
+change_graphical_culture = <gfx> # Switches graphical culture, which determines the assets used for units, advisors, etc
+switch_tag = <scope>             # Switch the player perspective to <scope>, original country exists
+
+set_country_flag = <string>      # Flag strings can be appended with scopes or event targets: flag_@ROOT, flag_@event_target:name
+clr_country_flag = <string>
+
+# Fires the event for the country if the event triggers are met.
+country_event = { 
+    id = <id>           # Use namespace ids, i.e. my_namespace.1
+    days = <days>       # optional, how long to wait until the event fires after this effect is executed
+    random = <days>     # optional, days is the max additional number of days to add to the days attribute, randomize when the event fires
+    tooltip = <string>  # optional, defines the tooltip that appears in the country_event effect tooltip 
+}
+
+# Applies a defined modifier from common/event_modifiers
+add_country_modifier = {
+    name = <modifier>
+    duration = <days>                       # -1 for unlimited duration
+    hidden = yes                            # optional, hides modifier in country view
+    desc = <string>                         # optional, replaces the duration part of the tooltip
+    message = <loc>
+    message_data = <string>
+}
+remove_country_modifier = <modifier>    # Removes a country modifier, if it exists, from the country
+
+# Extends an existing modifier by X days 1.35
+extend_country_modifier = {
+    name = <modifier>
+    duration = <days>
+}
+
+complete_mission = <mission>
+swap_non_generic_missions = yes
+
+set_capital = <province>
+
+add_power_projection = {
+    type = mission_rewards_power_projection
+    amount = 25
+}
+
+
+remove_power_projection = {
+    key = <id>
+    amount = <int> # Optional
+}
+
+# ----- Government -----
+add_absolutism = <int>
+add_legitimacy = <int/scope>
+add_republican_tradition = <int>
+add_scaled_republican_tradition = <int>         # Scales to the duration of the government's election cycle
+add_devotion = <int>                            # DLC - Common Sense
+add_horde_unity = <int>                         # DLC - The Cossacks
+add_meritocracy = <int>                         # DLC - Mandate of Heaven
+set_meritocracy = <int>                         # DLC - Mandate of Heaven
+add_militarised_society = <int>                 # DLC - Rights of Man - Militarization government mechanic
+add_tribal_allegiance = <int>                   # DLC - Cradle of Civilization - Tribal Allegiance government mechanic
+
+change_government = <government>                # Changes the country's government.
+change_statists_vs_monarchists = <float>        # DLC - Res Publica - Positive is Right-side, negative is Left-side
+
+set_government_rank = <int>                     # DLC - Common Sense - Set the government rank, by default there are three levels
+set_government_rank_force = <int>               # DLC - Common Sense
+
+add_government_reform = <string>            
+change_government_via_reform = <string>         # Change type of government
+change_government_reform_progress = <float>     # Alters government reform progress
+lose_reforms = <int>
+set_legacy_government = <string>                
+remove_government_reform = <string>
+adopt_reform_progress = <scope>                 # Adopts reform progress from specified scope (not tags)
+
+
+remove_hegemon = <scope>
+
+# Regenerate Government Power UI - 1.35
+regenerate_government_mechanics = <yes>
+
+
+add_government_power = {
+    mechanic_type = <mechanic>
+    power_type = <id>
+    value = <float>
+}
+
+
+add_government_power_scaled_to_seats = {
+    mechanic_type = <mechanic>
+    power_type = <id>
+    value = <float>
+}
+
+
+set_government_power = {
+    mechanic_type = <mechanic>
+    power_type = <id>
+    value = <float>
+}
+
+
+freeze_government_power = {
+    mechanic_type = <mechanic>
+    power_type = <id>
+}
+
+
+unfreeze_government_power = {
+    mechanic_type = <mechanic>
+    power_type = <id>
+}
+
+
+# DLC - Common Sense
+set_government_and_rank = { 
+    government = <government>
+    rank = <rank>                               # 1, 2 or 3 is the default range
+}
+
+dissolve_parliament = yes                       # DLC - Common Sense - Removes Parliament government mechanic
+reinstate_parliament = yes                      # DLC - Common Sense - Adds Parliament government mechanic, if dissolve_parliament was used to remove it
+
+add_years_of_manpower_scaled_to_seats = <float> # DLC - Common Sense 
+add_years_of_sailors_scaled_to_seats = <float>  # DLC - Common Sense 
+add_years_of_tax_scaled_to_seats = <float>      # DLC - Common Sense 
+add_prestige_scaled_to_seats = <float>          # DLC - Common Sense 
+add_militarization_scaled_to_seats = <float>    # DLC - Common Sense 
+
+# ----- Culture -----
+add_accepted_culture = <culture/scope>          # Adds an accepted culture to a country
+change_primary_culture = <culture/scope>        # Changes the country's primary culture. Does not affect owned provinces.
+remove_accepted_culture = <culture/scope>       # Removes the accepted culture, if it exists, from the country
+
+# ----- Religion -----
+change_religion = <religion>                    # Change country's religion
+enable_religion = <religion>                    # Enable religion with a date = <date> set in 00_religions.txt
+force_converted = <yes>                         # Set if country was force converted
+
+# DLC - Emperor
+set_defender_of_the_faith = {
+    who = <scope>
+    religion = <scope>
+}
+
+# DLC - Emperor
+remove_defender_of_the_faith = {
+    who = <scope>
+    religion = <scope>
+}
+
+# --- Papacy
+set_papal_controller = <scope> 
+add_papal_influence = <int>             
+add_reform_desire = <int>
+excommunicate = <scope>                         # Excommunicates <scope>. Removes if already applied.
+set_papacy_active = <yes/no>                    # Enables/disables the Papacy
+enable_council = yes                            # DLC - Emperor - Papacy
+finish_council = yes                            # DLC - Emperor - Papacy
+add_curia_treasury = <int>                      # DLC - Emperor - Papacy
+
+# --- Fervor
+add_fervor = <int>                              # DLC - Wealth of Nations
+
+# --- Karma
+add_karma = <int>                               # DLC - Common Sense
+set_karma = <int>                               # DLC - Common Sense
+
+# --- Protestant Aspect
+add_church_power = <int>                        # DLC - Common Sense
+add_church_aspect = <aspect>                    # DLC - Common Sense
+remove_church_aspect = <aspect>                 # DLC - Common Sense
+
+# --- Orthodox Patriarchy
+add_patriarch_authority = <float>               
+
+# --- Personal Deities
+change_personal_deity = <deity>                 # DLC - Wealth of Nations
+
+# --- Harmonization
+add_harmony = <int>                             # DLC - Mandate of Heaven
+add_harmonized_religion = <religion>            # DLC - Mandate of Heaven
+add_harmonization_progress = <int>              # DLC - Mandate of Heaven
+
+# --- Fetishist Cult
+change_cult = <string>
+
+# --- Piety
+add_piety = <float>                             
+
+# DLC - Cradle of Civilization
+# Muslim Schools mechanic: set current opinion towards <scope>'s school
+set_school_opinion = {                  
+    who = <scope>
+    opinion = <int>                     
+}
+
+# --- Fetishist Cult
+unlock_cult = <cult>                            # DLC - Rights of Man
+
+# --- Isolationism
+add_isolationism = <int>                        # DLC - Mandate of Heaven
+set_isolationism = <int>                        # DLC - Mandate of Heaven
+end_incident = <incident>                       # DLC - Mandate of Heaven
+
+# DLC - Mandate of Heaven
+add_incident_variable_value = {
+    incident = <incident>
+    value = <int>
+}
+
+# DLC - Mandate of Heaven
+set_incident_variable_value = {
+    incident = <incident>
+    value = <int>
+}
+
+# --- Primitive Religion
+add_authority = <int>                           # DLC - El Dorado - Autority
+add_doom = <int>                                # DLC - El Dorado - Doom
+remove_religious_reforms = <int>                # DLC - El Dorado - Religious Reforms
+
+# ----- Technology -----
+add_idea = <idea>                               # Adds an idea to the country, if the country has the National Idea set or ideagroup.
+add_idea_group = <ideagroup>                    # Adds an ideagroup to the country, if the country has available ideagroup slots
+add_active_policy = <policy>                    # Activates a policy, must meet trigger however
+
+change_technology_group = <tech group>          # Changes the country's technology group.
+
+remove_idea = <idea>                            # Removes a idea of an ideagroup from country, uses script name from 00_basic_ideas.txt
+remove_idea_group = <ideagroup>                 # Removes a ideagroup from country, uses script name from 00_basic_ideas.txt
+set_primitive = <yes/no>                        # Set Primitive status, which removes boat availability, allows native advancement and permits the visibility of the religious reform mechanic.
+swap_free_idea_group = yes                      # Re-evaluates the country's National Idea set, so if they match a different set, they will switch to it.
+
+add_next_institution_embracement = <int>
+embrace_institutions_of = <scope>
+
+# Created dynamically from the technology.txt file. 
+# Currently (1.23) add_x_tech for custom technologies is bugged however. 
+add_adm_tech = 1
+add_dip_tech = 1
+add_mil_tech = 1
+
+change_innovativeness = <float>                 # DLC - Rule Britannia - -100 to 100
+
+# ----- Economy -----
+add_years_of_income = <float>                   # 1.0 == 12 months of income 
+add_treasury = <int>
+add_inflation = <int>
+add_mercantilism = <int>
+add_tariff_value = <float>
+loan_size = <int>               
+raise_war_taxes = <bool>
+add_years_of_estate_land_income = <estate>
+
+set_bankruptcy = <scope> # 1.34
+
+# Changes price globally
+change_price = {
+    trade_goods = <tradegood>
+    key = <string>              # the localization to use for this price change
+    value = <decimal>           # the amount of change, in percentage. i.e. 0.2 for 20% increase
+    duration = <days>           # -1 for unlimited duration
+}
+
+add_loan = {
+    interest_modifier = <float>
+    fixed_interest = <bool>
+    duration = <months>
+    estate_loan = <bool>
+}
+
+add_years_of_owned_provinces_production_income = {
+    years = <int>
+    trigger = {
+        <triggers>
+    }
+    custom_tooltip = <string>
+}
+
+
+# Adds dcuats based on development of defined subject (trigger defines which subjects to account for)
+add_subjects_development_ducats = {
+    multiplier = <float>
+    age_multiplier = <float>
+    custom_tooltip = <string>
+    
+    trigger = {
+        <triggers>
+    }
+}
+
+
+# Adds ducats based on the development of owned provinces (trigger defines which provinces to account for). 
+add_owned_provinces_development_ducats = {
+    multiplier = <float>
+    age_multiplier = <float>
+    custom_tooltip = <string>
+    
+    trigger = {
+        <triggers>
+    }
+}
+
+# ----- Court -----
+add_prestige = <int/scope>
+add_corruption = <int>
+add_splendor = <int>                    # DLC - Mandate of Heaven
+
+reset_golden_age = <bool>       # 1.34
+extend_golden_age = <int>       # 1.34
+
+create_advisor = <advisor>                      # Advisor names are found in common/advisortypes/00_advisortypes.txt
+kill_advisor = <random/advisor/advisor_id>      # Advisor id is used in history/advisors
+remove_advisor = <random/advisor/advisor_id>    # Advisor id is used in history/advisors, returns advisor to pool
+remove_advisor_by_category = <power type>       # ADM/DIP/MIL
+
+define_advisor = {
+    type = <advisor>
+    name = <string>     
+    skill = <int>                   # 1 to 3
+    location = <province scope>     # optional, sets location of origin, without this advisor comes from capital
+    discount = <yes>                # optional, applies SCRIPTED_ADVISOR_DISCOUNT defines cost reduction
+    female = <yes>                  # optional, makes advisor female
+    culture = <culture>             # optional, sets advisor culture
+    religion = <religion>           # optional, sets advisor religion
+    cost_multiplier = <float>
+    age = <int> 
+    min_age = <int> 
+    max_age = <int> 
+}
+
+
+hire_advisor = {
+    type = <advisor>
+    cost_multiplier = <float>
+    skill = <int>
+    name = <string>
+    religion = <religion>
+    culture = <culture>
+    female = <bool>
+    location = <province id>
+    age = <int>
+    max_age = <int>
+}
+
+# ----- Stability -----
+add_stability = <int>
+add_war_exhaustion = <int>
+add_liberty_desire = <int>
+
+disband_rebels = <rebel type>   # Disbands all rebels within owned provinces
+collapse_nation = <yes>         # Causes owned cores to be released as nations and take a percentage of your owned provinces. 
+
+
+add_rebel_progress = {
+    rebel_type = <id>
+    value = <int>
+}
+
+add_disaster_modifier = { 
+    name = <key>                # Used to localize disaster modifier
+    disaster = <disaster>       # Found in common/disasters/*.txt
+    duration = <days>           # -1 for unlimited duration
+}
+
+add_disaster_progress = { 
+    disaster = <disaster> 
+    value = <int> 
+}
+
+end_disaster = <disaster>
+
+# ----- Estates -----
+# Names found in common/estates/*.txt
+# These effects require setup within estate file to work properly.
+set_estate_privilege = <string>
+remove_estate_privilege = <string>
+
+change_estate_land_share = {
+    estate = <string>
+    share = <float>
+}
+
+create_independent_estate = {
+    estate = <estate>
+    play_as = <bool>
+    government = <string>
+    government_reform = <string>
+}
+
+create_independent_estate_from_religion = {
+    estate = <estate>
+    play_as = <bool>
+    government = <string>
+    government_reform = <string>
+}
+
+add_estate_influence_modifier = {
+    estate = <estate>
+    desc = <string>         # Used to localize modifier
+    influence = <int>      
+    duration = <days>   
+    add = <bool>
+}
+
+add_estate_loyalty = {
+    estate = <estate>
+    loyalty = <int>
+    short = <bool> # Short description
+}
+
+add_estate_loyalty_modifier = {
+    estate = <estate>
+    desc = <string>         # Used to localize modifier
+    loyalty = <loyalty>      
+    duration = <days>   
+}
+
+# ----- Factions -----
+add_faction = <faction>     # Found in common/factions/00_factions.txt
+remove_faction = <faction>
+add_faction_influence = {   
+    faction = <faction> 
+    influence = <int> 
+}                  
+
+# ----- Ruler -----
+change_adm = <int>
+change_dip = <int>
+change_mil = <int>
+add_ruler_personality = <personality>               # DLC - Rights of Man 
+remove_ruler_personality = <personality>            # DLC - Rights of Man 
+set_ruler_flag = <string>
+clr_ruler_flag = <string>
+set_dynasty = <string/scope>                        # Will set dynasty to <scope>'s dynasty, if used like so
+set_ruler_culture = <culture/scope>                 # Will set culture to <scope>'s culture, if used like so
+set_ruler_religion = <religion/scope>               # Will set religion to <scope>'s religion, if used like so
+
+set_ruler = <exile_string>                          # Sets ruler to the exiled ruler
+exile_ruler_as = <exile_string>                     # Exiles (removes) ruler. Can append @ROOT, TAG, etc, like flags
+
+kill_ruler = <yes>
+convert_female_ruler_to_general = <yes>
+convert_ruler_to_general = <yes>
+
+extend_regency = <int>                                  # DLC - Leviathan
+set_estate_led_regency_privilege = <type> / <random>    # DLC - Leviathan
+
+# DLC - Leviathan
+regency = {
+    estate = <estate>
+}
+
+# DLC - Leviathan
+add_ruler_personality_ancestor = {
+    key = <type>
+}
+
+# DLC - Leviathan
+remove_ruler_personality_ancestor = {
+    key = <type>
+}
+
+add_ruler_modifier = {      # Applies modifier to country, tied to the current ruler.
+    name = <modifier>
+    duration = <days>       # optional, -1 for unlimited duration
+}
+
+# Creates a new ruler. replacing the current.
+define_ruler = <scope>
+define_ruler = {
+    name = <string>             # optional, assigns fixed name
+    dynasty = <string/scope>    # optional, assigns dynasty. For republics, changes surname. original_dynasty can be used to get country's starting dynasty
+    age = <years>               # optional, sets age
+    min_age = <years>
+    max_age = <years>
+    claim = <int>               # optional, sets starting legitimacy
+    change_adm = <int>          # optional, apply value to rolled ADM stat
+    change_dip = <int>          # optional, apply value to rolled DIP stat
+    change_mil = <int>          # optional, apply value to rolled MIL stat
+    hide_skills = <yes>         # optional, hides skill values
+    regency = <yes>             # optional, ruler counts as a Regency
+    attach_leader = <string>    # optional, creates leader with <string> name
+    female = <yes>              # optional, makes female
+    male = <yes>                # optional, forces male
+    culture = <culture/scope>   # optional, defines ruler culture
+    religion = <religion/scope> # optional, defines ruler religion 
+    random_gender = <yes>       # optional, randomise gender
+}
+
+define_exiled_ruler = {
+    exiled_as = <exile string>
+    option = 0
+    
+    name = <string>             # optional, assigns fixed name
+    dynasty = <string/scope>    # optional, assigns dynasty. For republics, changes surname. original_dynasty can be used to get country's starting dynasty
+    age = <years>               # optional, sets age
+    min_age = <years>
+    max_age = <years>
+    claim = <int>               # optional, sets starting legitimacy
+    change_adm = <int>          # optional, apply value to rolled ADM stat
+    change_dip = <int>          # optional, apply value to rolled DIP stat
+    change_mil = <int>          # optional, apply value to rolled MIL stat
+    hide_skills = <yes>         # optional, hides skill values
+    regency = <yes>             # optional, ruler counts as a Regency
+    attach_leader = <string>    # optional, creates leader with <string> name
+    female = <yes>              # optional, makes female
+    male = <yes>                # optional, forces male
+    culture = <culture/scope>   # optional, defines ruler culture
+    religion = <religion/scope> # optional, defines ruler religion 
+    random_gender = <yes>       # optional, randomise gender
+}
+
+# Creates a general from ruler
+define_ruler_to_general = {
+    fire = <int>
+    shock = <int>
+    manuever = <int>
+    siege = <int>
+}
+
+# Creates a ruler from a leader
+define_leader_to_ruler = {
+    type = <general/conquistador/admiral/explorer>
+    name = <string>             # Used instead of type to target a specific leader
+    adm = <int>                 # optional, sets ADM minimum roll
+    dip = <int>                 # optional, sets DIP minimum roll
+    mil = <int>                 # optional, sets MIL minimum roll
+    fixed = <yes>               # optional, fixes the ADM/DIP/MIL values, so they are the exact numbers used
+    claim = <int>               # optional, sets starting legitimacy
+}
+
+# Usable with rulers, heirs, consorts, leaders, advisors and rebel leaders.
+set_saved_name = {
+    key = <key>                 # Reference key. Used in name attribute of define_advisor to set name
+    type = <simple/advisor>     # advisor generates name from <scope> namelist, simple uses name attribute
+    name = <string>             # Only used with simple type
+    scope = <scope>             # Country scope. Generates name from scope's namelist
+}
+clear_saved_name = yes          # Clears <key>.
+
+# Example:
+set_saved_name = {
+    key = noble_zealot
+    type = advisor
+    scope = ROOT
+}
+
+# Then in a province scope:
+spawn_rebels = {
+    size = 1
+    leader = noble_zealot
+    type = religious_rebels
+}
+
+# ----- Queen -----
+add_queen_personality = <personality>       # DLC - Rights of Man 
+remove_queen_personality = <personality>    # DLC - Rights of Man 
+set_consort_culture = <culture/scope>       # DLC - Rights of Man - Will set culture to <scope>'s culture, if used like so
+set_consort_religion = <religion/scope>     # DLC - Rights of Man - Will set religion to <scope>'s religion, if used like so
+
+set_consort_flag = <string>                 # DLC - Rights of Man
+clr_consort_flag = <string>                 # DLC - Rights of Man
+
+set_consort = <string>                      # DLC - Rights of Man
+exile_consort_as = <string>                 # DLC - Rights of Man
+
+change_consort_regent_to_ruler = <yes>      # DLC - Rights of Man
+remove_consort = <yes>                      # DLC - Rights of Man
+kill_consort = yes                          # DLC - Rights of Man
+
+# DLC - Rights of Man
+# Create a new consort. Replaces current.
+define_consort = {
+    name = <string>             # optional, assigns fixed name
+    country_of_origin = <scope> # optional, defines where the consort comes from. By default will use ROOT
+    dynasty = <string/scope>    # optional, assigns dynasty. For republics, changes surname. original_dynasty can be used to get country's starting dynasty
+    age = <years>               # optional, sets age
+    adm = <int>                 # optional, sets exact ADM 
+    dip = <int>                 # optional, sets exact DIP 
+    mil = <int>                 # optional, sets exact MIL 
+    female = <yes>              # optional, makes female
+    male = <yes>                # optional, forces male
+    culture = <culture/scope>   # optional, defines consort culture
+    religion = <religion>       # optional, defines consort religion 
+    hide_skills = <yes>         # optional, hides skill values
+}
+
+# ----- Heir -----
+add_heir_personality = <personality>            # DLC - Rights of Man
+remove_heir_personality = <personality>         # DLC - Rights of Man
+set_heir_culture = <culture/scope>              # Will set culture to <scope>'s culture, if used like so
+set_heir_religion = <religion/scope>            # Will set religion to <scope>'s religion, if used like so
+
+change_heir_adm = <int>
+change_heir_dip = <int>
+change_heir_mil = <int>
+
+set_heir_flag = <string>
+clr_heir_flag = <string>
+
+add_heir_claim = <int>                          # Add to heir starting legitimacy
+add_heir_support = <int>                        # Elective Monarchy: add local heir support
+
+set_heir = <exile_string>                       # Sets heir to the exiled heir
+exile_heir_as = <exile_string>                  # Exiles (removes) heir. Can append @ROOT, TAG, etc, like flags
+
+kill_heir = {
+    allow_new_heir = <bool>
+}
+remove_heir = {
+    allow_new_heir = <bool>
+}
+convert_female_heir_to_general = <yes>  # Fails if they're under 15
+convert_heir_to_general = <yes>         # Fails if they're under 15
+
+# Create a new heir. Replaces current.
+define_heir = <scope>
+define_heir = {
+    name = <string>                 # optional, assigns fixed name
+    dynasty = <string/scope>        # optional, assigns dynasty. For republics, changes surname. original_dynasty can be used to get country's starting dynasty
+    age = <years>                   # optional, sets age
+    birth_date = <date>             # optional, sets age via date
+    claim = <int>                   # optional, sets starting legitimacy
+    adm = <int>                     # optional, sets ADM minimum roll
+    dip = <int>                     # optional, sets DIP minimum roll
+    mil = <int>                     # optional, sets MIL minimum roll
+    fixed = <yes>                   # optional, fixes the ADM/DIP/MIL values, so they are the exact numbers used
+    max_random_adm = <int>          # optional, sets ADM max roll
+    max_random_dip = <int>          # optional, sets DIP max roll
+    max_random_mil = <int>          # optional, sets MIL max roll
+    hide_skills = <yes>             # optional, hides skill values
+    hidden = <yes>                  # optional, hides skill values (older version of hide_skills)
+    female = <yes>                  # optional, makes female
+    male = <yes>                    # optional, forces male
+    culture = <culture/scope>       # optional, defines heir culture
+    religion = <religion/scope>     # optional, defines ruler religion 
+    no_consort_with_heir = <yes>    # optional, means heir is not child of consort, i.e. bastard
+}
+
+# Creates a general from heir
+define_heir_to_general = {
+    fire = <int>
+    shock = <int>
+    manuever = <int
+    siege = <int>
+}
+
+# ----- Diplomacy -----
+add_historical_friend = <scope>     # Accepts ROOT, FROM, PREV, etc
+add_historical_rival = <scope>
+remove_historical_friend = <scope>
+remove_historical_rival = <scope>
+
+add_trust = {                   # Adds trust (Diplomatic Feedback) for current scope with <scope>
+    who = <scope>
+    value = <int>               
+    mutual = <yes>              # optional, applies for both
+}
+
+# 1.34
+add_aggressive_expansion = {
+    who = <scope>
+    value = <int>
+    apply_calc = yes    # Apply religion, culture, etc modifiers
+}
+
+# 1.34
+reverse_add_aggressive_expansion = {
+    who = <scope>
+    value = <int>
+    apply_calc = yes    # Apply religion, culture, etc modifiers
+}
+
+add_opinion = {                 # Adds opinion modifier for current scope against <scope>
+    who = <scope> 
+    modifier = <modifier>       # Uses modifiers from common/opinion_modifiers/00_opinion_modifiers.txt
+    years = <int>               # optional, modifier is removed after <int> years
+} 
+
+reverse_add_opinion = {         # Adds opinion modifier for <scope> against current scope
+    who = <scope> 
+    modifier = <modifier>       # Uses modifiers from common/opinion_modifiers/00_opinion_modifiers.txt
+} 
+
+remove_opinion = {              # Removes an opinion modifier against <scope> for current scope
+    who = <scope>
+    modifier = <modifier>
+}
+
+reverse_remove_opinion = {      # Removes an opinion modifier against current scope for <scope>            
+    who = <scope>
+    modifier = <modifier>
+}
+
+create_alliance = <scope>
+break_alliance = <scope> 
+create_guarantee = <scope>
+remove_guarantee = <scope> 
+create_march = <scope>
+create_marriage = <scope>
+create_union = <scope>
+create_vassal = <scope>
+create_subject = {              # Used to create subjects not covered by other effects
+    subject_type = <type>       # Found in common/subject_types/00_subject_types.txt
+	subject = <scope>           # Who the current scope makes subject
+}
+
+break_marriage = <scope>
+break_union = <scope>
+
+inherit = <scope>
+release = <scope>
+release_all_subjects = <yes>
+vassalize = <scope>
+grant_independence = yes        # Grants independence for current scope against their overlord
+
+join_all_offensive_wars_of = <scope>
+join_all_defensive_wars_of = <scope>
+declare_war = <scope>
+add_truce_with = <scope>            # Uses default truce length. Applies after one tick.
+white_peace = <scope>               # Forces a white peace against <scope>
+form_coalition_against = <scope>
+support_independence_of = <scope>
+steer_trade = <scope> 
+
+add_casus_belli = {
+    target = <scope>
+    type = <cb>                 # Found in common/cb_types/00_cb_types.txt
+    months = <months>
+}
+
+reverse_add_casus_belli = {     # Adds casus belli for <scope> against current scope
+    target = <scope>
+    type = <cb>                 
+    months = <months>
+}
+
+remove_casus_belli = {          # Removes casus belli against <scope>, if it exists
+    type = <cb>
+    target = <scope>
+}
+
+reverse_remove_casus_belli = {  # Removes casus belli for <scope> against current scope, if it exists
+    type = <cb>
+    target = <scope>
+}
+
+declare_war_with_cb = {         # Declares a war with <cb> against <scope>
+    who = <scope>
+    casus_belli = <cb>
+}
+
+remove_fow = <months>           # Removes fog of war against the current scope for the ROOT scope
+
+add_spy_network_from = {        # Adds spy network power in current scope for <scope>
+    who = <scope>
+    value = <int> 
+}
+
+add_spy_network_in = {          # Adds spy network power against <scope> for current scope
+    who = <scope> 
+    value = <int> 
+}
+
+add_favors = {
+    who = <scope>
+    amount = <value>
+}
+
+# ----- Military -----
+add_army_tradition = <int>
+add_navy_tradition = <int>
+add_army_professionalism = <float>      # DLC - Cradle of Civilization
+add_manpower = <float>                  # 1 == 1000
+add_sailors = <int>                     # 1 == 1
+add_yearly_manpower = <float>           # 0.1 == 10%
+add_yearly_sailors = <float>
+
+
+# Adds manpower based on the development of owned provinces (trigger defines which provinces to account for). 
+add_owned_provinces_development_manpower = {
+    multiplier = <float>
+    age_multiplier = <float>
+    custom_tooltip = <string>
+    
+    trigger = {
+        <triggers>
+    }
+}
+
+
+# Adds manpower based on the subject development (trigger defines which subjects to account for). 
+add_subjects_development_manpower = {
+    multiplier = <float>
+    age_multiplier = <float>
+    custom_tooltip = <string>
+    
+    trigger = {
+        <triggers>
+    }
+}
+
+add_years_of_owned_provinces_manpower = {
+    years = <int>
+    trigger = {
+        <triggers>
+    }
+    custom_tooltip = <string>
+}
+
+add_years_of_owned_provinces_sailors = {
+    years = <int>
+    trigger = {
+        <triggers>
+    }
+    custom_tooltip = <string>
+}
+
+add_company_manpower = <float>
+unlock_merc_company = {
+    merc_company = <company>
+}
+
+create_conquistador = <int>
+create_explorer = <int>
+
+create_general = <int>
+create_general = {
+    tradition = <int>
+    add_fire = <int>
+    add_shock = <int>
+    add_manuever = <int>
+    add_siege = <int>
+    culture = <string>
+}
+
+create_admiral = <int>
+create_admiral = {
+    tradition = <int>
+    add_fire = <int>
+    add_shock = <int>
+    add_manuever = <int>
+    add_siege = <int>
+    culture = <string>
+}
+
+change_unit_type = <unit type>              # Changes the country's unit type
+
+kill_leader = {
+    type = <general/admiral/conquistador/explorer/random/name> # Name is a specific name, i.e. "John"
+}
+
+define_admiral = {
+    shock = <int>           
+    fire = <int>    
+    manuever = <int>  
+    siege = <int>           # Blockade Efficiency
+    name = <string>         # optional, without it name is randomly generated
+    female = <yes>          # optional, makes female
+    trait = <trait>         # Found in common/leader_personalities/*.txt
+}
+
+define_explorer = {
+    shock = <int>           
+    fire = <int>    
+    manuever = <int>    
+    siege = <int>           # Blockade Efficiency
+    name = <string>         # optional, without it name is randomly generated
+    female = <yes>          # optional, makes female
+    trait = <trait>         # Found in common/leader_personalities/*.txt
+}
+
+define_conquistador = {
+    shock = <int>           
+    fire = <int>    
+    manuever = <int>    
+    siege = <int>
+    name = <string>         # optional, without it name is randomly generated
+    female = <yes>          # optional, makes female
+    trait = <trait>         # Found in common/leader_personalities/*.txt
+}
+
+define_general = {
+    shock = <int>           
+    fire = <int>    
+    manuever = <int>    
+    siege = <int>
+    name = <string>         # optional, without it name is randomly generated
+    female = <yes>          # optional, makes female
+    trait = <trait>         # Found in common/leader_personalities/*.txt
+}
+
+# All below accept province scopes, which controls where the unit spawns.
+# The unit's stat base is your currently selected one
+artillery = <scope>
+cavalry = <scope>
+infantry = <scope>
+
+mercenary_infantry = <scope>    # Is a mercenary unit
+mercenary_cavalry = <scope>     # Is a mercenary unit
+
+heavy_ship = <scope>
+light_ship = <scope>
+transport = <scope>
+galley = <scope>
+
+# You can spawn specific units, i.e. british_redcoat
+<unit_name> = <scope>
+
+disband_all_units = <bool> 
+disband_all_regiments = <bool> 
+disband_all_ships = <bool> 
+
+# ----- Tribal -----
+settle_province = <scope>                   # DLC - Conquest of Paradise - Change tribal land into normal province
+change_tribal_land = <scope>                # DLC - Conquest of Paradise 
+disband_federation = <bool>                 # DLC - Conquest of Paradise - Disband current federation
+allow_federation_offensive_wars = <bool>    # DLC - Conquest of Paradise - Permit offensive wars for members of current federation
+
+# ----- HRE -----
+set_emperor = <bool> # Makes current scope the emperor
+
+add_imperial_influence = <int>              # Only applies if used on emperor
+add_scaled_imperial_influence = <int>
+set_imperial_incident = <string>            # DLC - Emperor
+        
+elector = <scope>                           # Makes <scope> an elector
+revoke_reform = <reform>                    # Found in common/imperial_reforms/00_hre.txt
+set_in_empire = <yes/no>                    # Adds country and provinces to HRE, or removes them
+
+hre_inheritable = <yes>                     # Makes Emperorship is inheritable
+imperial_ban_allowed = <yes>                # Allows Imperial Ban CB
+internal_hre_cb = <no>                      # Disallows internal HRE wars
+set_allow_female_emperor = <yes>            # Permit female Emperors
+dismantle_hre = <yes>                       # Disables HRE
+
+enable_hre_leagues = <yes>                  # DLC - Art of War - Starts Religious Leagues
+set_hre_heretic_religion =  <religion>      # DLC - Art of War
+set_hre_religion = <religion>               # DLC - Art of War
+set_hre_religion_locked = <yes>             # DLC - Art of War
+set_hre_religion_treaty = <yes>             # DLC - Art of War
+join_league = <scope>                       # DLC - Art of War - Joins the Religious League that <scope> belongs to
+leave_league = <scope>                      # DLC - Art of War
+
+# DLC - Art of War - Used to trigger HRE succession crisis
+create_succession_crisis = {
+    attacker = <scope>
+    defender = <scope>
+    target = <scope>
+}
+
+# ----- Empire of China -----
+dismantle_empire_of_china = <yes/no>        # DLC - Mandate of Heaven - Enables/disables Mandate system
+set_emperor_of_china = <scope>              # DLC - Mandate of Heaven - Set current Emperor of China
+add_mandate = <int>                         # DLC - Mandate of Heaven 
+set_mandate = <int>                         # DLC - Mandate of Heaven 
+
+# ----- Revolution -----
+set_revolution_target = <scope>             # DLC - Art of War - Set the current Revolution target. XXX will clear, and there can only ever be one current target.
+add_revolutionary_zeal = <int>              # DLC - Emperor
+
+# ----- AI -----
+set_ai_personality = {
+    personality = <personality>     # Found in common/ai_personalities/00_ai_personalities.txt
+    locked = <yes/no>               # Whether the game is allowed to change the AI's personality away from this.
+}
+
+set_ai_attitude = {
+    attitude = <attitude>   # Found in common/ai_attitudes/00_ai_attitudes.txt
+    who = <scope>           # Attitude towards <scope>    
+    locked = <yes/no>       # Whether the game is allowed to change the AI's personality away from this.
+}
+
+#--------------------------------------------------------------------------------
+# Province-scope Effects
+#--------------------------------------------------------------------------------
+# Fires the event for the owner of the province if the event triggers are met.
+province_event = { 
+    id = <id>           # Use namespace ids, i.e. my_namespace.1
+    days = <days>       # optional, how long to wait until the event fires after this effect is executed
+    random = <days>     # optional, days is the max additional number of days to add to the days attribute, randomize when the event fires
+    tooltip = <string>  # optional, defines the tooltip that appears in the province_event effect tooltip 
+}
+
+set_province_flag = <string>
+set_permanent_province_flag = <string>
+clr_province_flag = <string>
+
+# Applies a defined modifier from common/event_modifiers.
+# This modifier is removed on conquest or ownership changes.
+add_province_modifier = {
+    name = <modifier>
+    duration = <days>                       # -1 for unlimited duration
+    hidden = yes                            # optional, hides modifier in province view
+    desc = <string>                         # optional, replaces the duration part of the tooltip
+}
+
+# Applies a defined modifier from common/event_modifiers. 
+# This modifier is only removed via remove_province_modifier
+add_permanent_province_modifier = {
+    name = <modifier>
+    duration = <days>                       # -1 for unlimited duration
+    hidden = yes                            # optional, hides modifier in province view
+    desc = <string>                         # optional, replaces the duration part of the tooltip
+}
+
+# Applies a defined triggered modifier from common/province_triggered_modifiers.
+# This modifier is always visible in the province view, with the trigger tooltip on mouseover.
+add_province_triggered_modifier = <modifier>
+remove_province_triggered_modifier = <modifier>
+
+# Extends an existing modifier on a province
+extend_province_modifier = {                
+    name = <modifier>
+    duration = <days>
+}
+
+remove_province_modifier = <modifier>
+
+change_province_name = <string>         # Changes the province name
+rename_capital = <string>               # Changes the province's capital name in province view
+
+# ----- Development -----
+add_base_tax = <int>
+add_base_production = <int>
+add_base_manpower = <int>
+add_random_development = <int>
+
+set_base_tax = <int>
+set_base_production = <int>
+set_base_manpower = <int>
+
+add_prosperity = <int>          
+add_devastation = <int>
+add_local_autonomy = <int>
+set_local_autonomy = <int>
+add_local_autonomy_no_authority_effect = <int>
+
+change_trade_goods = <tradegood>
+
+add_scaled_local_adm_power = <int>      # 1 power per point of yearly base tax
+add_scaled_local_dip_power = <int>      # 1 power per point of yearly base production
+add_scaled_local_mil_power = <int>      # 1 power per point of yearly base manpower
+
+add_core_construction = <yes>           # Starts core creation
+cancel_construction = <yes>             # Works for all constructions
+
+add_construction_progress = <float>     # Only for Great Project construction, for all buildings in 1.35
+
+add_building = <building>               # Found in common/buildings/*.txt
+remove_building = <building>
+
+add_building_construction = {
+    building = <building>
+    speed = <int>                       # 1 == 100% of normal speed
+    cost = <int>                        # 1 == 100% of normal cost
+}
+
+# DLC - Leviathan
+add_great_project = {
+    type = <string>
+    province = <id>
+    instant = <bool>
+}
+
+# DLC - Emperor
+add_great_project_tier = {
+    type = <type>
+    tier = <int>
+}
+
+# DLC - Leviathan
+destroy_great_project = {
+    type = <string>
+}
+
+# ----- Revolution -----
+set_revolution_in_province = <bool>         # DLC - Emperor
+spawn_center_of_revolution = <id>           # DLC - Emperor
+remove_center_of_revolution = <id>          # DLC - Emperor
+
+# ----- Society -----
+create_advisor = <advisor>
+
+change_national_focus = <type>              # DLC - Res Publica - ADM/DIP/MIL/NONE
+
+start_debate = <id> 
+cancel_current_debate = <yes> 
+set_seat_in_parliament = <yes/no>           # DLC - Common Sense
+back_current_issue = <yes/no>               # DLC - Common Sense
+remove_enacted_issue = <yes> 
+enact_issue = <id> 
+end_current_debate = <bool> 
+
+change_culture =  <culture/scope>
+change_original_culture = <culture/scope>
+add_culture_construction = <yes>        # Starts culture conversion
+
+change_religion = <religion/scope>
+change_to_secondary_religion = <yes>    # Changes province to secondary religion of owner
+send_missionary = <yes>                 # Starts religion conversion
+add_cardinal = <yes>
+remove_cardinal = <yes>
+add_reform_center = <religion>          # Spawns a centre of reformation for <religion>
+remove_reform_center = <religion>
+
+set_estate = <estate>
+remove_estate = <estate>                # Tooltip will not be displayed correctly
+
+set_in_empire = <yes/no>                # Set if the province is part of the HRE
+
+# Adds institution advancement to current province. Institution must be enabled first.
+add_institution_embracement = {             
+    which = <institution>
+    value = <int>
+}
+
+add_next_institution_embracement_scaled  = <int>
+
+# ----- Trade -----
+center_of_trade = <level>           # Spawn Center of Trade in current scope
+add_center_of_trade_level = <int>   # Adds the specified center of trade level to the current scope.
+
+add_to_trade_company = <scope>      # Adds the current scope to a trade company region
+
+# Adds a investment to the current scope if within a trade company region.
+add_trade_company_investment = {
+    investment = <string>
+    investor = <scope>
+}
+
+# ----- Unrest -----
+# <int> is the size of the uprising, following the revolt size algorithm
+# ROUND( REVOLT_SIZE_BASE + ( REVOLT_SIZE_DEVELOPMENT_MULTIPLIER * <dev> ) * ( 1 + REVOLT_TECH_IMPACT * <tech count> ) * SIZE )
+# Example: ROUND( 4 + ( 0.3 * 8 ) * ( 1 + 0.03 * 96 ) * 1 ) = 13
+add_nationalism = <int>     
+add_unrest = <int>                      # Applies to Base Unrest
+remove_named_unrest = <string>
+
+create_native = <int>       # Only spawn in uncolonized provinces
+create_pirate = <int>       # Only spawn in sea zones and sea adjacent provinces (in the ports)
+create_revolt = <int>       # Spawns the rebel type displays in the province view
+
+# You can specify the exact type of rebel to spawn by using it's script name.
+<rebel_type> = <int>
+
+# For full control
+spawn_rebels = {
+    type = <type>                   # Found in common/rebel_types/*.txt
+    size = <int>            
+    culture = <culture/scope>       # optional, sets the rebels culture
+    religion = <religion/scope>     # optional, sets the rebels religion
+    
+    unrest = <int>                  # optional, adds <int> to rebel faction on spawning
+    win = <yes>                     # optional, change province control to rebels on spawning
+    friend = <scope>                # optional, associate rebel support with rebels
+    
+    leader = <string>               # optional, names the rebel leader (if not using heir/consort)
+    female = <yes>                  # optional, makes female
+    use_heir_as_leader = <yes>      # optional, uses current heir as rebel leader. Removes current heir.
+    use_consort_as_leader = <yes>   # optional, uses current consort as rebel leader. Removes current consort.
+}
+
+# ----- Colonisation -----
+create_colony = <int>                   # Starts colony in province with <int> initial settlers
+add_colonysize = <int>                  # Adds to colony in province
+multiply_colonysize = <float>           # Multiplies current settler size, i.e. 100 * ( 1 + 0.5 ) == 150
+add_siberian_construction = <int>       # Only valid if root scope is a country that can send it.
+
+decolonize = <scope> / yes
+
+change_native_ferocity = <int>
+change_native_hostileness = <int>
+change_native_size = <int>
+
+discover_province = <scope>
+discover_country = <scope>              # <scope> gains vision the current province scope. Use with areas, regions, etc
+undiscover_country = <scope>            # <scope> loses vision of the current province scope. Use with areas, regions, etc
+
+native_policy = <policy>
+
+# ----- Diplomacy -----
+# <scope> gains effect on current province scope 
+add_claim = <scope>                     
+add_core = <scope>
+add_permanent_claim = <scope>
+add_territorial_core = <scope>
+cede_province = <scope>             # You can use previous_owner to get the last owner of a province.
+change_controller = <scope>
+remove_claim = <scope>
+remove_core = <scope>
+remove_territorial_core = <scope>
+
+# ----- Military -----
+# Land Units
+infantry = <scope>
+cavalry = <scope>
+artillery = <scope>
+
+mercenary_infantry = <scope>    # Is a mercenary unit
+mercenary_cavalry = <scope>     # Is a mercenary unit
+
+cossack_cavalry = <scope>       
+streltsy_infantry = <scope>      
+rajput_infantry = <scope>       
+cawa_infantry = <scope>
+marine_infantry = <scope>
+janissary_infantry = <scope> 
+revolutionary_guard_infantry = <scope> 
+revolutionary_guard_cavalry = <scope> 
+revolutionary_guard_artillery = <scope> 
+tercio_infantry = <scope> 
+musketeer_infantry = <scope> 
+samurai_infantry = <scope> 
+
+# Naval Units
+heavy_ship = <scope>
+light_ship = <scope>
+galley = <scope>
+transport = <scope>
+
+geobukseon_galley = <scope> 
+man_of_war_heavy = <scope> 
+man_of_war_light = <scope> 
+galleon_heavy = <scope> 
+galleass_galley = <scope> 
+caravel_light = <scope> 
+voc_indiamen_light = <scope> 
+
+# Create special units up to a forcelimit % 1.35
+create_unit_forcelimit_percentage = {
+    type = <unit type>
+    special_unit_category = <special unit type>
+    force_limit_percentage = <float>
+}
+
+# Creates flagship
+create_flagship = {
+    name = <string>
+    type = <type>
+}
+# Creates ship with custom name
+create_named_ship = {
+    name = <string>
+    type = <type>
+}
+
+# Only works if leader is in province 
+kill_leader = <general/admiral/conquistador/explorer/random/name> # Name is a specific name, i.e. "John"
+kill_mercenary_leader = <general/admiral/conquistador/explorer/random/name>
+
+# Only works if unit is in province 
+kill_units = {
+    who = <scope>   # optional, only affect <scope>'s units. Scopes enemy, owner and controller work here.
+    type = <type>   # optional, only affect <type>: infantry, cavalry, artillery, light_ship, heavy_ship, galley, transport, <unit_name>
+    amount = <int>  # optional, total number to kill
+}
+
+add_unit_construction = {
+    type = <type>   # infantry, cavalry, artillery, light_ship, heavy_ship, galley, transport, <unit_name>
+    amount = <int>  # amount to build
+    speed = <float> # 1 == 100% of normal speed
+    cost = <float>  # 1 == 100% of normal cost
+    mercenary = yes # optional, makes units mercenary
+}
+
+# Type: infantry, cavalry, artillery, light_ship, heavy_ship, galley, transport
+# Float: percentage of forcelimit
+build_to_forcelimit = {
+    <type> = <float>    
+}
+
+# Removes loot gold from current province, awarding it to <scope>.
+remove_loot = {
+    who = <scope>                       # enemy scope will split loot between all current enemies.
+    amount = <int>
+}
+change_siege = <int>                    # Alter level of siege progress, if sieged
+
+#--------------------------------------------------------------------------------
+# Army Effects
+#--------------------------------------------------------------------------------
+# Mercs
+convert_leader_to_general = yes
+disband_mercenary_company = <scope>
+
+#--------------------------------------------------------------------------------
+# Tradenode Effects
+#--------------------------------------------------------------------------------
+# Tradenodes are province scopes, but operate in an different way.
+# These apply to the tradenode the province belongs to.
+# Example:
+random_active_trade_node = {
+    limit = {
+        province_id = <province id>     # Must be the location for the tradenode 
+    }
+    <effects>
+}
+
+recall_merchant = <scope>               # Recalls placed merchant
+add_trade_node_income = <int>           # No visible effect ingame, but command is recognized
+
+# Applies a trade power modifier to the current tradenode for <scope>
+add_trade_modifier = {
+    who = <scope>
+    duration = <days>       # -1 for unlimited duration
+    power = <float>         # Flat, so 1 == 1 Trade Power
+    key = <string>          # Used to localize modifier
+}
+
+remove_trade_modifier = {
+    who = <scope>
+    name = <key>            # Uses the key set in add_trade_modifier
+}
+
+#--------------------------------------------------------------------------------
+# Effect - Script
+#--------------------------------------------------------------------------------
+# A switch scope. Used to simply multiple trigger checks
+trigger_switch = {
+    on_trigger = <trigger>
+    <trigger value> = { <effect> }
+    <trigger value> = { <effect> }
+}
+
+# Example:
+trigger_switch = {
+    on_trigger = technology_group
+    western = { add_stability = 1 }
+    easter = { add_stability = -1 }
+}
+
+# Uses the hide the effect tooltips that appear in decisions, event options, etc
+hidden_effect = {
+    <effects>
+}
+
+# Uses to generate a tooltip of a set of effects. Does NOT execute the effects.
+tooltip = { 
+    <effects>
+} 
+
+# Used to continously execute effects. Fails after 100k loops if trigger is never invalid. Produces no tooltip.
+while = {
+    limit = {
+        <triggers>
+    }
+    
+    <effects>
+}
+
+# Used to check triggers, then execute effects
+if = {
+    limit = {
+        <triggers>
+    }
+    
+    <effects>
+    
+    else_if = {
+        limit = {
+            <triggers
+        }
+        <effects>
+    }
+    
+    # Can include else, which executes if the triggers are NOT valid
+    else = {
+        <effects>
+    }
+}
+
+# Randomize effect. Requires a seeded state, so in some script locations may return exact same result
+random = {
+    chance = <int>
+    
+    <effects>
+}
+
+# Randomize list. Requires a seeded state, so in some script locations may return exact same result
+random_list = {
+    <int> = {
+        <effects>
+    }
+    <int> = {
+        <effects>
+    }
+}
+
+
+#--------------------------------------------------------------------------------
+# 
+#--------------------------------------------------------------------------------

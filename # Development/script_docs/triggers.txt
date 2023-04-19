@@ -1,0 +1,1453 @@
+#--------------------------------------------------------------------------------
+# Dual-scope Triggers
+#--------------------------------------------------------------------------------   
+always = <bool>
+log = "[Root.GetName] text here"
+ironman = <bool>
+has_dlc = <dlc>                 # Only for gameplay DLCs
+is_random_new_world = <bool>
+map_setup = <string>
+
+is_month = <month>
+is_year = <year>
+real_day_of_year = <day>
+real_month_of_year = <month>
+start_date = <date>             # Returns true only on exact date
+started_in = <date>
+has_game_started = yes          
+
+has_global_flag = <flag>
+had_global_flag = { 
+    flag = <flag> 
+    days = <days> 
+} 
+
+normal_or_historical_nations = <bool>     # Checks if the normal country setup is being used
+normal_province_values = <bool>           # Checks if the normal province setup is being used
+num_of_custom_nations = <int>     
+end_game_tags_blocked = <bool>
+
+check_variable = {
+    which = <var>
+    value = <float>
+    which = <var>       # Used to compare
+}
+
+is_variable_equal = {
+    which = <var>
+    value = <float>
+    which = <var>       # Used to compare
+}
+   
+   
+# Highlights provinces for decisions and missions
+# Acts as all_province scope
+provinces_to_highlight = { 
+    <trigger>
+}
+
+#--------------------------------------------------------------------------------
+# Country-scope Triggers
+#--------------------------------------------------------------------------------
+# ----- General -----
+tag = <scope>
+was_tag = <scope>   
+is_or_was_tag = <scope>               
+exists = yes / <scope>          
+ai = yes    
+luck = <bool>                        
+was_player = <bool>             
+has_switched_nation = <bool> 
+
+has_saved_event_target = <event target>    
+has_saved_global_event_target = <event target> 
+
+has_country_flag = <flag>                   
+has_country_modifier = <id>               
+
+has_liberty_desire_modifier = <id> 
+
+had_country_flag = {                        
+    flag = <flag> 
+    days = <days> 
+}
+
+has_global_modifier_value = {
+    which = <modifier>
+    value = <float>
+    extra_shortcut = yes    # Display tooltip as if the modifier is 100% + value
+}
+
+# Same as has_global_modifier_value but accounts for technology increases to the value
+has_administrative_efficiency_value = {
+    value = <float>
+    extra_shortcut = yes    # Display tooltip as if the modifier is 100% + value
+}
+
+active_major_mission = <mission>
+last_mission = <mission>
+mission_completed = <mission>
+
+has_custom_ideas = <bool>                 
+is_playing_custom_nation = <bool>                   
+nation_designer_points = <int>              
+is_dynamic_tag = yes                        
+
+has_mission = <mission>
+
+is_hegemon = <bool>
+hegemon_strength = <int>
+
+# ----- Cores, Claims and Territories -----
+capital = <scope> / <id>                    
+controls = <scope> / <id>     
+is_claim = <scope> / <id>    
+is_foreign_claim = <scope> / <id>       # Is permanently claimed by non-owner        
+is_core = <scope> / <id>                    
+is_state_core = <scope> / <id>              
+is_territorial_core = <scope> / <id>        
+owns = <scope> / <id>                       
+owns_core_province = <scope> / <id>         
+owns_or_vassal_of = <scope> / <id>                  
+owns_or_subject_of = <scope> / <id> 
+subject_owns = <scope> / <id>                
+owns_or_non_sovereign_subject_of = <scope> / <id>   
+same_continent = <scope> / <id>                     
+
+num_of_provinces_in_states = <int> / <scope>          
+num_of_provinces_in_territories = <int> / <scope>     
+num_of_states = <int> / <scope>                       
+num_of_territories = <int> / <scope>                  
+num_of_continents = <int>                             
+num_of_cities = <int> / <scope>                       
+core_percentage = <float>                             
+
+# Checks if an amount of owned provinces meet the specified triggers
+num_of_owned_provinces_with = {
+    value = <amount>
+    <triggers>
+}
+
+num_of_provinces_owned_or_owned_by_subjects_with = {
+    value = <amount>
+    <triggers>
+}
+
+num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+    value = <amount>
+    <triggers>
+}
+
+owns_all_provinces = {
+    <triggers>
+}
+
+# ----- Economy -----
+adm_power = <int> / <scope>                     
+dip_power = <int> / <scope>                     
+mil_power = <int> / <scope>        
+monthly_adm = <int>
+monthly_dip = <int>
+monthly_mil = <int>             
+national_focus = <type>                         
+total_base_tax = <int> / <scope>                
+total_development = <int>                       
+treasury = <int> / <scope>                      
+years_of_income = <float> / <scope>          
+monthly_income = <int> / <scope>
+current_income_balance = <float>             
+tax_income_percentage = <float>    
+gold_income = <int>             
+gold_income_percentage = <float>                
+production_income_percentage = <float>          
+trade_income_percentage = <float>               
+inflation = <float> / <scope>                   
+is_bankrupt = <bool>                          
+is_in_deficit = <bool>                        
+num_of_loans = <int> / <scope>     
+has_estate_loan = <bool>
+is_in_large_debt = yes             
+production_efficiency = <float> / <scope>       
+trade_efficiency = <float> / <scope>            
+
+production_leader = {   
+    trade_goods = <trade good> 
+}
+
+# Checks if the owned provinces of the current scope have the specified amount (or more) of the specified building
+<building> = <int>
+
+num_of_times_used_transfer_development = <int>
+num_of_times_used_pillage_capital = <int>
+has_pillaged_capital_against = <scope>
+
+# Used in missions
+share_of_starting_income = <float>
+grown_by_development = <int>
+grown_by_states = <int>
+
+development_in_provinces = {
+    value = <int>
+    
+    <triggers>
+}
+
+# ----- Trade -----
+<tradegood> = <int>
+mercantilism = <int> / <scope>
+
+num_of_merchants = <int>
+num_of_strong_trade_companies = <int>
+num_of_trade_companies = <int>
+num_of_trading_bonuses = <int>
+num_of_trade_embargos = <int>
+
+is_in_trade_league_with = <scope>
+trade_embargoing = <scope>
+trade_embargo_by = <scope>
+trade_league_embargoed_by = <scope>
+
+is_in_trade_league = yes
+is_trade_league_leader = yes
+
+num_of_centers_of_trade = <int>         
+has_center_of_trade_of_level = <int>    
+
+transfers_trade_power_to = <scope> 
+steers_trade_to = <scope> 
+receives_trade_power_from = <scope> 
+receives_trade_steering_from = <scope> 
+
+trading_bonus = {
+    trade_goods = <good>
+    value = <bool>
+}
+
+trading_part = {
+    trade_goods = <good>
+    value = <float>
+}
+
+# ----- Government -----
+prestige = <int> / <scope>          
+absolutism = <int> / <scope>        
+corruption = <float>                    
+yearly_corruption_increase = <float> / <scope>   
+
+government = <type>             # Checks: monarchy, republic, tribal, dictatorship
+government_rank = <int>             
+legitimacy = <int> / <scope>                    
+republican_tradition = <int> / <scope>          
+horde_unity = <int> / <scope>                   
+legitimacy_or_horde_unity = <int> / <scope>     
+devotion = <int> / <scope>                      
+meritocracy = <int>                             
+legitimacy_equivalent = <int> / <scope>     
+
+is_nomad = <bool>                 
+is_tribal = <bool>     
+           
+is_monarchists_in_power = yes         
+is_statists_in_power = yes     
+     
+has_parliament = <bool>           
+has_active_debate = <bool>        
+current_debate = <string>           
+current_size_of_parliament = <int>  
+percentage_backing_issue = <float>  
+
+uses_devotion = yes                 
+militarised_society = <int>         
+tribal_allegiance = <int> / <scope>          
+statists_vs_orangists = <float>         # 0 to 1
+
+num_of_pashas = <int> 
+
+# Types: russian_mechanic, feudal_theocracy_mechanic, tribal_federation_mechanic, mamluk_mechanic, iqta_mechanic
+has_government_mechanic = <type>        
+
+# Type: ADM, DIP, MIL
+has_government_power = {
+    type = <type>
+    value = <amount>
+}
+
+# Attributes:
+# Legitimacy  - monarchy, republic, religion, tribal, dictatorship, nomad, papacy, has_meritocracy, has_devotion
+# Abilities   - militarised_society, has_parliament, allow_migration, claim_states, native_mechanic
+# Ruler       - heir, queen, has_term_election, election_on_death, is_elective
+# Other       - republican_name, valid_for_nation_designer, allow_normal_conversion
+
+has_government_attribute = <attribute>      
+has_states_general_mechanic = <bool>
+
+has_reform = <reform>                       
+is_reform_available = <reform>              
+have_had_reform = <reform>
+government_reform_progress = <int>          
+has_reform_level = <int>
+reform_level = <int>
+
+uses_meritocracy = <bool>
+uses_horde_unity = <bool>
+uses_republican_tradition - <bool>
+
+is_hegemon_of_type = <type> / all 
+
+# ----- Tribal -----
+tribal_development = <int>
+tribal_land_of = <scope>
+
+# ----- Court -----
+has_advisor = yes                       
+<advisortype> = <skill>                   
+advisor = <advisor>                     
+advisor_exists = <advisor id>               # Historical advisors only
+is_advisor_employed = <advisor id>          # Historical advisors only
+has_advisor_type_in_pool = <type> 
+
+# Checks if the current scope has an advisor hired with the specified attributes.
+employed_advisor = {
+    type = <advisortype>
+    category = <type>       # ADM / DIP / MIL
+    religion = <scope> / <religion> / true_faith / heretic / heathen
+    culture = <scope> / <culture>
+    is_male = yes
+    is_female = yes
+    is_discounted = yes
+}
+
+num_of_different_religions_in_court = <int>
+num_of_different_cultures_in_court = <int>
+
+# ----- Culture -----
+primary_culture = <culture> / <scope>       
+accepted_culture = <culture> / <scope>      
+culture_group = <culture group> / <scope>   
+dominant_culture = <culture> / <capital>    
+has_assimilated_culture_group = <culture group> / <scope> 
+has_assimilated_culture = <culture> / <scope> 
+
+has_unified_culture_group = yes             
+num_accepted_cultures = <int>               
+
+has_cultural_union = yes
+
+# ----- Religion -----
+religion = <religion> / <scope> / secondary                                                  
+religion_group = <religion group> / <scope>                                        
+dominant_religion = <religion group> / <scope>  / capital / secondary   
+secondary_religion = <religion> / <scope>       
+force_converted_by = <scope>
+secondary_religion_group = <religio group> / <scope> 
+
+papacy_active = <bool>            
+total_number_of_cardinals = <int>   
+is_council_enabled = <bool>
+council_position = <type>
+
+papal_influence = <int> / <scope>           
+authority = <int> / <scope>                 # (0 to max)
+doom = <int> / <scope>                      # (0 to max)
+church_power = <int> / <scope>              # (0 to max)
+fervor = <int>                              # (0 to max)
+karma = <int> / <scope>                     # (-100 to 100)
+harmony = <int>                             # (0 to 100)
+harmonization_progress = <int>              # (0 to 100)
+patriarch_authority = <float>               # (0 to 1) 
+piety = <float> / <scope>                   # (-1 to 1) 
+reform_desire = <float>                     
+invested_papal_influence = <int> / <scope>  
+isolationism = <int>                        
+religious_unity = <float> / <scope>         
+
+is_religion_enabled = <religion>        
+has_matching_religion = <scope>         
+has_personal_deity = <deity>            
+has_unlocked_cult = <cult>              
+has_adopted_cult = <cult>               
+has_church_aspect = <aspect>            
+has_religious_school_of = <tag>         
+is_harmonizing_with = <religion>        
+has_harmonized_with = <religion>        
+is_incident_potential =  <incident>     
+is_incident_happened = <incident>       
+is_incident_possible = <incident>       
+is_incident_active = <incident> / any / none    
+current_icon = <icon>                   
+
+has_friendly_reformation_center = <bool>      
+has_hostile_reformation_center = <bool>       
+has_active_fervor = <bool>                    
+has_religious_school = <bool>                 
+is_any_heresy_enabled = <bool>                # Is an heretic religion available to convert to
+is_crusade_target = <bool>                    
+is_defender_of_faith = <bool>                 
+is_excommunicated = <bool>                    
+is_force_converted = <bool>                   
+is_papal_controller = <bool>                  
+is_previous_papal_controller = <bool>         
+is_religion_reformed = <bool>                 # Religious Reforms
+at_war_with_religious_enemy = yes
+has_border_with_religious_enemy = yes
+has_secondary_religion = yes
+
+num_of_active_blessings = <int>     
+num_of_aspects = <int> / <scope>    
+num_of_cardinals = <int> / <scope>  
+num_of_missionaries = <int>         
+num_of_unlocked_cults = <int>       
+num_of_harmonized = <int>           
+is_defender_of_faith_of_tier = <int>
+
+uses_authority = <bool>               # Checks if the current scope uses Authority (Religious Reforms).
+uses_blessings = <bool>               # Checks if the current scope uses Blessings.
+uses_church_aspects = <bool>          # Checks if the current scope uses Church Aspects.
+uses_cults = <bool>                   # Checks if the current scope uses Cults.
+uses_doom = <bool>                    # Checks if the current scope uses Doom (Religious Reforms).
+uses_fervor = <bool>                  # Checks if the current scope uses Fervor.
+uses_karma = <bool>                   # Checks if the current scope uses Karma.
+uses_isolationism = <bool>            # Checks if the current scope uses Isolationism.
+uses_papacy = <bool>                  # Checks if the current scope uses the Papacy.
+uses_patriarch_authority = <bool>     # Checks if the current scope uses Patriarch Authority.
+uses_personal_deities = <bool>        # Checks if the current scope uses Personal Deities.
+uses_piety = <bool>                   # Checks if the current scope uses Piety.
+uses_syncretic_faiths = <bool>        # Checks if the current scope uses Syncretic Religions.
+uses_religious_icons = <bool>         # Checks if the current scope uses Patriarch Icons.
+
+<religion> = <tolerance>
+religion_years = { 
+    <religion> = <years> 
+}
+
+num_of_religion = { 
+    religion = <religion>
+    value = <float>         # Percentage of specified religion to match for
+    heretic = yes           # Optional. Used in place of religion, matches all heretic religions
+}
+
+incident_variable_value = {
+    incident = <incident>
+    value = <value>
+}
+
+# Check if country has religious school
+religious_school = {
+    group = <religion group>
+    school = <school>
+}
+
+school_opinion = {
+    who = <tag>
+    opinion = <value>
+}
+
+# ----- Technology -----
+technology_group = <technology group>
+neighbors_tech_discount = <float>       
+tech_difference = <int>                 # Checks if the current scope has the specified tech difference with the previous or root scope.
+
+adm_tech = <int>
+dip_tech = <int>
+mil_tech = <int>
+
+has_idea = <idea>
+<ideagroup> = <int>
+full_idea_group = <ideagroup>
+has_idea_group = <ideagroup>
+
+has_active_policy = <policy>
+had_active_policy = {
+    policy = <policy>
+    days = <days>
+}
+
+is_institution_enabled = <institution>
+has_institution = <institution>
+current_institution_growth = <float>
+num_of_owned_and_controlled_institutions = <int> / <scope>
+has_unembraced_institution = <institution>
+is_lacking_institutions = <bool>
+
+institution_difference = { 
+    who = <scope>
+    value = <amount>
+}
+
+current_age = <age>
+has_age_ability = <ability>
+in_golden_age = <bool>
+splendor = <int> / <scope>
+
+innovativeness = <float>
+
+# ----- Unrest -----
+stability = <int> / <scope>
+unrest = <float>
+average_autonomy = <int>
+average_autonomy_above_min = <int>
+average_effective_unrest = <int>
+average_home_autonomy = <int>               # Only counts provinces connected to the capital.
+average_unrest = <int>
+num_of_rebel_armies = <int> / <scope>
+num_of_rebel_controlled_provinces = <int> / <scope>
+num_of_revolts = <int> / <scope>
+revolt_percentage = <float>
+has_spawned_rebels = <type>
+overextension_percentage = <float> / <scope>
+revanchism = <bool>
+has_any_disaster = <bool>
+has_disaster = <disaster>
+has_disaster_progress = { 
+    disaster = <disaster>
+    value = <progress>
+}
+
+# ----- Military -----
+army_size = <int> / <scope>
+army_size_percentage = <float>
+army_tradition = <int> / <scope>
+army_professionalism = <float>
+artillery_fraction = <float>
+cavalry_fraction = <float>
+infantry_fraction = <float>
+land_forcelimit = <int> / <scope>
+land_maintenance = <float>
+land_morale = <float> / <scope>
+war_exhaustion = <float> / <scope>
+manpower = <int> 
+manpower_percentage = <float>
+max_manpower = <int> / <scope>
+years_of_manpower = <float> 
+num_of_artillery = <int> / <scope>
+num_of_cavalry = <int> / <scope>
+num_of_infantry = <int> / <scope>
+num_of_conquistadors = <int> / <scope>
+num_of_generals = <int> / <scope>
+num_of_generals_with_traits = <int> / <scope>
+num_of_banners = <int> / <scope>
+num_of_cossacks = <int> / <scope>
+num_of_streltsy = <int> / <scope>
+num_of_cawa = <int> / <scope>
+num_of_marines = <int> / <scope>
+num_of_rajput = <int> / <scope>
+janissary_percentage  = <float> 
+num_of_hired_mercenary_companies = <int>
+num_of_regiments_at_full_drill = <int>
+num_of_revolutionary_guard = <int> / <scope> 
+needs_regiment_type = <string>
+
+war_score = <int>
+had_recent_war = <int>      # years
+has_leader = <string>
+general_with_name = <string>
+has_unit_type = <unitname>
+
+has_truce = <bool>
+has_commanding_three_star = yes
+has_wartaxes = <bool>
+is_at_war = <bool>
+
+is_renting_condottieri_to = <scope>
+
+gives_military_access_to = <scope>          
+receives_military_access_from = <scope>     
+
+num_of_mercenaries = <int> / <scope>
+has_company_manpower = <int>
+hired_for_months = <int>
+is_foreign_company = yes
+
+mercenary_company = <company>
+
+num_of_special_units = {
+    special_unit_category = <special unit type>
+    type = <unit type>
+    value = <int>
+}
+
+
+any_hired_mercenary_company = {
+    template = <company>
+}
+
+has_unlocked_merc_company = {
+    merc_company = <company>
+}
+
+has_leader_with = {
+    general = yes
+    admiral = yes
+    fire = <int>
+    shock = <int>
+    manuever = <int>
+    siege = <int>
+    total_pips = <int>
+}
+
+has_leaders = {
+    value = <amount>
+    type = <type>
+    include_monarch = no
+    include_heir = no
+}
+
+
+compare_regiments_to_province_of_estate = {
+    regiment = <type>   # rajput_regiment, streltsy_regiment, cossacks_regiment, janissaries_regiment, banner_regiment
+    estate = <string>
+    compare = <type>    # less, (more?), (equals?)
+}
+
+total_losses_in_won_wars = {
+    winner = <scope>
+    loser = <scope>
+    casualties = <int>
+}
+
+current_war_losses = {
+    who_with = <scope>
+    type = <infantry/artillery/cavalry/heavy_ship/light_ship/transport/galley/men/ships/all>
+    cause = <attrition/battle/capture>
+    amount = <value>
+}
+
+# ----- Navy -----
+sailors = <int>
+max_sailors = <int>
+sailors_percentage = <float>
+years_of_sailors = <float> 
+naval_forcelimit = <int>
+naval_maintenance = <float> / <scope>
+naval_morale = <float> / <scope>
+navy_size = <int> / <scope>
+navy_size_percentage = <float>
+galley_fraction = <float>
+heavy_ship_fraction = <float>
+light_ship_fraction = <float>
+transport_fraction = <float>
+navy_tradition = <int> / <scope>
+num_of_admirals = <int> / <scope>
+num_of_admirals_with_traits = <int> / <scope>
+num_of_explorers = <int> / <scope>
+num_of_free_explorers = <int>
+num_of_galley = <int> / <scope>
+num_of_heavy_ship = <int> / <scope>
+num_of_light_ship = <int> / <scope>
+num_of_transport = <int> / <scope>
+num_of_ports = <int> / <scope>
+num_of_ports_blockading = <int> / <scope>
+num_of_total_ports = <int> / <scope>
+num_ships_privateering = <int> / <scope>
+blockade = <float> / <scope>                 # Current blockade penalty
+has_privateers = <bool>
+has_flagship = <bool>
+
+has_naval_doctrine = <string> / any         
+is_blockaded_by = <scope>                   
+gives_fleet_basing_rights_to = <scope>      
+receives_fleet_basing_rights_from = <scope> 
+
+num_ships_protecting_trade = <int> / <scope> 
+
+# ----- Diplomacy -----
+cb_on_government_enemies = <bool>
+cb_on_overseas = <bool>
+cb_on_primitives = <bool>
+cb_on_religious_enemies = <bool>
+is_great_power = <bool>
+is_in_important_war = <bool>
+is_in_coalition = <bool>
+
+can_create_subject_of_type = <type>
+
+coalition_target = <scope>
+historical_friend_with = <scope>
+historical_rival_with = <scope>
+alliance_with = <scope>
+defensive_pact_with = <scope>
+can_justify_trade_conflict = <scope>
+can_release = <scope>
+claim = <scope>
+core_claim = <scope>
+defensive_war_with = <scope>
+guaranteed_by = <scope>
+has_casus_belli_against = <scope>
+has_guaranteed = <scope>
+has_spawned_supported_rebels = <scope>
+is_enemy = <scope>
+is_neighbor_of = <scope>
+is_possible_march = <scope>
+is_possible_vassal = <scope>
+is_rival = <scope>
+is_threat = <scope>
+junior_union_with = <scope>
+march_of = <scope>
+marriage_with = <scope>
+offensive_war_with = <scope>
+overlord_of = <scope>
+provinces_on_capital_continent_of = <scope>
+succession_claim = <scope>
+senior_union_with = <scope>
+truce_with = <scope>
+vassal_of = <scope>
+war_with = <scope>
+
+<subjectype> = <amount>
+num_of_allies = <int> / <scope>
+num_of_coalition_members = <int>
+num_of_colonial_subjects = <int>
+num_of_diplomats = <int>
+num_of_diplomatic_relations = <int>
+num_of_free_diplomatic_relations = <int>
+num_of_marches = <int>
+num_of_protectorates = <int>
+num_of_royal_marriages = <int> / <scope>
+num_of_trusted_allies = <int>
+num_of_unions = <int>
+num_of_vassals = <int>
+num_of_war_reparations = <int> / <scope>
+
+diplomatic_reputation = <int> / <scope>
+great_power_rank = <int> / <scope>
+development_of_overlord_fraction = <float>
+subsidised_percent_amount = <float>
+
+has_been_humiliated_by  = <scope> 
+humiliated = <scope> 
+
+has_eclipsed = <scope> 
+has_been_eclipsed_by = <scope> 
+has_neighbor = <yes>
+
+owes_favors  = {
+    who = <scope>
+    value = <int>
+}
+
+border_distance = { 
+    who = <scope>
+    distance = <float>
+}
+
+capital_distance = { 
+    who = <scope>
+    distance = <float>
+}
+
+has_spy_network_from = { 
+    who = <scope>
+    value = <float>
+}
+
+has_spy_network_in = { 
+    who = <scope>
+    value = <float>
+}
+
+has_casus_belli = { 
+    type = <cb>
+    target = <scope>
+}
+
+war_score_against = {
+    who = <scope>
+    value = <int>
+}
+
+has_opinion_diff = {
+    first = <scope>
+    second = <scope> 
+    value = <int>
+}
+reverse_has_opinion_diff = {
+    first = <scope>
+    second = <scope>
+    value = <int>
+}
+
+has_opinion = {
+    who = <scope>
+    value = <int>
+}
+
+trust = {
+    who = <scope>
+    value = <int>
+}
+
+reverse_has_opinion = {
+    who = <scope>
+    value = <int>
+}
+
+has_opinion_modifier = {
+    modifier = <modifier>
+    who = <scope>
+    value = <int>           # used with aggressive_expansion modifier
+}
+
+reverse_has_opinion_modifier = {
+    modifier = <modifier>
+    who = <scope>
+    value = <int>           # used with aggressive_expansion modifier
+}
+
+# Parameters are mix and match
+is_in_war = {
+    attacker_leader = <scope>
+    defender_leader = <scope>
+    casus_belli = <cb>
+    war_score = <int>
+    duration = <days>
+    start_date = <date>
+    war_goal_province = <scope> / <province id>
+    
+    # You can add multiple to check for multiple defenders/participants
+    attackers = <scope>
+    defenders = <scope>
+    participants = <scope>
+}
+
+army_strength = {
+    who = <scope>
+    value = <float>
+}
+military_strength = {
+    who = <scope>
+    value = <float>
+}
+naval_strength = {
+    who = <scope>
+    value = <float>
+}
+
+# ----- Subjects -----
+can_create_vassals = <bool>
+has_divert_trade = <bool>
+has_embargo_rivals = <bool>
+has_promote_investments = <bool>
+has_scutage = <bool>
+has_send_officers = <bool>
+has_subsidize_armies = <bool>
+has_support_loyalists = <bool>
+has_colonial_parent = <bool>
+ 
+is_client_nation = <bool>
+is_lesser_in_union = <bool>
+is_march = <bool>
+is_overseas_subject = <bool>
+is_subject = <bool>
+is_vassal = <bool>
+is_colonial_nation = <bool>
+
+is_subject_of_type = <type>
+is_client_nation_of = <scope>
+is_colonial_nation_of = <scope>
+is_subject_of = <scope>
+
+has_subject_of_type = <type>
+is_subject_of_type_with_overlord = <type>
+
+liberty_desire = <int> / <scope>
+
+years_under_vassalage = {
+    type = <type>
+    duration = <int>
+    all_subject_country = yes   # Optional, removes limit by subject type.
+}
+
+years_in_union_under = {
+    who = <scope>
+    years = <int>
+    all_subject_country = yes   # Optional, removes limit by subject type.
+}
+
+num_subjects_of_type_with_liberty_desire = {
+    type = <type>
+    liberty_desire = <int>
+    value = <int>
+}
+
+# ----- Colonialism -----
+knows_country = <scope>
+has_removed_fow = <scope>   # Has lifted all FOW over <scope>
+has_discovered = <scope>
+num_of_colonies = <int> / <scope>
+num_of_colonists = <int> 
+num_of_conquistadors = <int> / <scope>
+num_of_explorers = <int> / <scope>
+tariff_value = <float>
+overseas_provinces_percentage = <float>
+federation_size = <int> / <scope>
+
+is_former_colonial_nation = <bool>
+primitives = <bool>
+is_federation_leader = <bool>
+is_federation_nation = <bool>
+
+native_policy = <policy>
+
+
+can_have_colonial_nations = <scope> / <province id>
+
+# ----- Ruler -----
+ADM = <int> / <scope>
+DIP = <int> / <scope>
+MIL = <int> / <scope>
+ruler_age = <int>
+ruler_has_personality = <personality>
+ruler_culture = <culture>               # Excludes specific tag scopes
+ruler_religion = <scope>                # Excludes specific tag scopes
+dynasty = <string> / <scope>
+has_ruler = <string> / <bool>
+has_ruler_flag = <flag>
+
+ruler_is_foreigner = yes
+has_new_dynasty = <bool>
+has_regency = <bool>
+is_female = <bool>
+is_monarch_leader = yes
+
+has_ruler_modifier = <modifier>
+had_ruler_flag = { 
+    flag = <flag>
+    days = <int>
+}
+
+exiled_same_dynasty_as_current = <string> 
+
+ruler_has_personality_ancestor = {
+    key = <type>
+}
+
+has_estate_led_regency = {
+    estate = <estate> / <any>
+    duration = <int>
+}
+
+is_in_extended_regency = <bool>
+estate_led_regency_loyalty = <float>
+estate_led_regency_influence = <float>
+
+# ----- Consort -----
+consort_adm = <int>
+consort_dip = <int>
+consort_mil = <int>
+consort_age = <int>
+consort_has_personality = <personality>
+consort_culture = <scope>               # Excludes specific tag scopes
+consort_religion = <scope>              # Excludes specific tag scopes
+has_consort = <string> / <bool>
+has_consort_flag = <flag>
+
+has_consort_regency = <bool>
+has_female_consort = <bool>
+has_foreign_consort = <bool>
+
+ruler_consort_marriage_length = <int>
+months_of_ruling = <int> 
+has_given_consort_to = <scope>
+is_origin_of_consort = <scope>
+num_of_consorts = <int>
+
+had_consort_flag = { 
+    flag = <flag>
+    days = <int>
+}
+
+# ----- Heir -----
+heir_adm = <int> / <scope>
+heir_dip = <int> / <scope>
+heir_mil = <int> / <scope>
+heir_age = <int>
+heir_has_personality = <personality>
+heir_culture = <scope>                  # Excludes specific tag scopes
+heir_religion = <scope>                 # Excludes specific tag scopes
+heir_claim = <int>
+has_heir = <string> / <bool>
+has_heir_flag = <flag>
+
+heir_has_consort_dynasty = <bool>
+heir_has_ruler_dynasty = <bool>
+can_heir_be_child_of_consort = yes
+has_female_heir = <bool>
+has_foreign_heir = yes 
+is_heir_leader = yes 
+
+heir_nationality = <scope>
+
+had_heir_flag = { 
+    flag = <flag>
+    days = <int>
+}
+
+# ----- Estates -----
+has_estate = <estate>
+num_of_powerful_estates = <int>
+crown_land_share = <float>
+has_any_active_estate_agenda = <bool>
+has_estate_privilege = <string>
+can_revoke_estate_privilege = <string>
+
+num_of_estate_privileges = {
+    estate = <estate> 
+    value = <int>
+}
+                
+estate_influence = { 
+    estate = <estate> 
+    influence = <float>
+}
+estate_loyalty = { 
+    estate = <estate>  
+    loyalty = <float>
+    higher_than_influence = <bool>
+}
+estate_territory = { 
+    estate = <estate> 
+    territory = <float> 
+}
+has_estate_influence_modifier = { 
+    estate = <estate> 
+    modifier = <modifier> 
+}
+has_estate_loyalty_modifier = { 
+    estate = <estate> 
+    modifier = <modifier>
+}
+
+# ----- Factions -----
+has_factions = <bool>
+has_faction = <faction>
+faction_in_power = <faction>
+faction_influence = {
+    faction = <faction>
+    influence = <float>
+}
+
+# ----- Holy Roman Empire -----
+preferred_emperor = <scope>
+hre_reform_level = <int>
+hre_size = <int>
+imperial_influence = <int>
+num_of_electors = <int>
+hre_reform_passed = <string>
+
+is_elector = yes 
+is_emperor = <bool>
+is_imperial_ban_allowed = <bool>
+allows_female_emperor = <bool>
+is_part_of_hre = <bool>
+will_back_next_reform = <bool>
+
+hre_leagues_enabled = yes
+hre_religion = <religion> / <scope>
+hre_heretic_religion = <religion> / <scope>
+hre_religion_locked = <bool>
+hre_religion_treaty = <bool>
+is_league_leader = <bool>
+is_in_league_war = <bool>
+in_league = <religion>
+is_league_enemy = <scope>
+is_league_friend = <scope>
+
+num_of_foreign_hre_provinces = <int>
+
+active_imperial_incident = <any> / <string>
+
+# ----- Empire of China -----
+is_emperor_of_china = <bool>
+imperial_mandate = <int>
+empire_of_china_reform_level = <int>
+empire_of_china_num_reforms_passed = <int> 
+empire_of_china_has_active_decree = <id> / <bool> 
+
+# ----- Revolution -----
+is_revolution_target = yes
+has_first_revolution_started = yes
+revolution_target_exists = yes
+is_revolutionary = <bool>
+
+# ----- AI -----
+personality = <personality>
+
+ai_attitude = { 
+    who = <scope> 
+    attitude = <attitude>
+}
+
+#--------------------------------------------------------------------------------
+# Province-scope Triggers
+#--------------------------------------------------------------------------------
+# ----- General -----
+has_province_flag = <flag>
+has_province_modifier = <modifier>
+
+development = <int>
+development_discounting_tribal = <int>
+base_manpower = <int>
+base_production = <int>
+base_tax = <int>
+devastation = <int>
+prosperity = <int>
+local_autonomy = <int>
+local_autonomy_above_min = <int>
+num_of_times_improved = <int>
+
+has_climate = <climate>
+has_terrain = <terrain>
+has_winter = <winter>
+has_monsoon = <type>
+
+has_supply_depot = <bool>
+island = <bool>
+is_island = <bool>
+is_capital = <bool>
+is_city = <bool>
+is_wasteland = <bool>
+is_in_capital_area = <bool>       # Means is province connected to capital via other provinces
+is_part_of_hre = yes 
+is_sea = <bool>
+is_prosperous = <bool>
+is_empty = <bool>
+is_overseas = <bool>
+has_port = <bool>
+has_empty_adjacent_province = yes 
+province_is_on_an_island = <bool>
+
+had_province_flag = { 
+    flag = <flag>
+    days = <int>
+}
+
+has_local_modifier_value = {
+    which = <modifier>
+    value = <float>
+}
+
+province_distance = { 
+    who = <province scope>
+    distance = <int> 
+}
+
+has_active_triggered_province_modifier = <modifier>
+
+# Used in Ages for development goal
+exclude_from_progress = {
+    <triggers>
+}
+
+# ----- Control, States and Territories -----
+owned_by = <scope>
+owned_by_subject_of = <scope> 
+is_neighbor_of = <scope> 
+previous_owner = <scope>
+controlled_by = <scope> / <rebel type>
+is_capital_of = <scope>
+is_claim = <scope>
+is_core = <scope>
+is_state_core = <scope>
+is_permanent_claim = <scope>
+is_territorial_core =  <scope>
+is_state = yes
+is_territory = yes
+has_pasha = yes
+
+province_id = <id> / <scope>
+area = <area>
+continent = <continent> / <scope> / <province>
+region = <region> / capital / <scope>
+superregion = <superregion>
+province_group = <prov group>
+
+province_size = <int>
+months_since_defection = <int>
+
+# Within a region scope:
+country_or_vassal_holds = <scope>   # If scope or any vassal subjects hold a province in the region
+country_or_subject_holds = <scope>  # If scope or any subjects hold a province in the region
+country_or_non_sovereign_subject_holds = <scope> # If scope or any non-tributary subjects hold a province in the region
+
+culture_group_claim = <scope>       # If cur. primary culture is in the same culture group as any culture group within the provinces owned by <scope>
+
+# ----- Colonialism -----
+colonial_region = <colonial region>
+
+has_colonist = yes
+is_colony = <bool>
+
+colony = <int>
+range = <scope>
+colonysize = <int>
+native_ferocity = <int>
+native_hostileness = <int>
+native_size = <int>
+
+colony_claim = <scope>
+colonial_claim_by_anyone_of_religion = <religion> / <scope>     # Treaty of Tortillas
+is_religion_grant_colonial_claim = <bool> / <scope>           # Treaty of Tortillas
+
+expelling_minorities_from = <scope>
+expelling_minorities = <bool>
+expelled_different_minorities = <int>
+recent_treasure_ship_passage = <bool>
+
+# ----- Construction -----
+can_build = <building>
+has_building = <building>
+construction_progress = <float>
+possible_buildings = <int> 
+num_of_times_expanded_infrastructure = <int> 
+
+has_great_project = {
+    type = <project> / monument / any
+    tier = <int>
+}
+
+has_construction = <type>       # Types: core, culture, building, merchant, diplomat, missionary, 
+                                # army, navy, canal, great_project, siberian, colonist or any
+num_free_building_slots = <int>
+
+# ----- Society -----
+<institution> = <int>
+current_institution = <int>
+is_institution_origin = <institution>
+has_state_edict = <edict>
+
+has_estate = <estate> / yes
+has_seat_in_parliament = <bool>
+is_backing_current_issue = <bool>
+current_bribe = <string>
+
+culture = <scope> / <culture>
+culture_group = <scope> / <culture>
+has_owner_culture = yes
+has_owner_accepted_culture = yes
+
+religion = <scope> / <religion> / secondary
+religion_group = <scope> / <religion> 
+tolerance_to_this = <int>
+has_cardinal = yes
+has_missionary = yes
+has_owner_religion = yes
+is_reformation_center = yes
+papacy_active = yes
+has_state_patriach = <bool>
+holy_order = <order>
+has_owner_harmonized_religion = yes 
+has_owner_secondary_religion = yes 
+
+provincial_institution_progress = {
+    which = <institution>
+    value = <int>
+}
+
+
+# ----- Military -----
+fort_level = <int>
+garrison = <int>
+
+sieged_by = <scope> / <rebel type>
+
+has_influencing_fort = yes
+has_siege = yes
+is_blockaded = no
+is_looted = yes
+
+has_heir_leader_from = <scope>
+has_ruler_leader_from = <scope>
+
+units_in_province = <int> / <scope>
+unit_in_battle = yes
+unit_has_leader = yes
+unit_in_siege = yes
+
+infantry_in_province = <int> / <scope>
+cavalry_in_province = <int> / <scope>
+artillery_in_province = <int> / <scope>
+heavy_ships_in_province = <int> / <scope>
+light_ships_in_province = <int> / <scope>
+galleys_in_province = <int> / <scope>
+transports_in_province = <int> / <scope>
+
+num_of_units_in_province = {
+    who = <scope> / enemy
+    type = <unit type>          # optional
+    amount = <int>              # optional
+}
+
+# ----- Unrest -----
+is_rebel_type = <type>
+can_spawn_rebels = <rebel type>
+has_rebel_faction = REB / <rebel type>
+likely_rebels = <rebel type>
+
+nationalism = <int>
+pure_unrest = <int>
+unrest = <int>
+
+has_harsh_treatment = yes
+has_revolution_in_province = <bool>
+
+rebel_progress_at_least = {
+    value = <int>
+}
+
+# ----- Trade -----
+trade_goods = <good>
+has_latent_trade_goods = <good>
+trade_range = <scope>
+province_trade_power = <int>
+trade_company_size = <int>
+trade_company_region = <trade company region>
+is_owned_by_trade_company = yes
+same_home_trade_node_as = <scope> 
+
+province_has_center_of_trade_of_level = <int>
+
+# Has specified number of investments in the trade company region the current province belongs to.
+num_investments_in_trade_company_region = {
+    investment = <investment>
+    value = <int>
+}
+
+# Has the specified investment in the area of the current province.
+has_trade_company_investment_in_area = {
+    investment = <investment>
+    investor = <scope>
+}
+
+# Within a tradenode scope:
+has_merchant = <scope>
+has_most_province_trade_power = <scope>
+has_trader = <scope>
+is_strongest_trade_power = <scope>
+is_node_in_trade_company_region = <bool>
+highest_value_trade_node = yes
+trader_has_active_policy = <policy>
+trade_node_value = <int>
+same_trade_node_as = <province> 
+trade_node = <tradenode id> 
+home_trade_node = <tradenode id> 
+
+
+has_protecting_trade_share_in_trade_node  = {
+    who = <scope>
+    share = <float>
+}
+
+#Can use name and key
+has_trade_modifier = {
+    who = <scope>
+    name = <key>
+}
+
+privateer_power = {
+    share = <float>
+    country = <scope>      # optional, limits to scope's privateers
+}
+
+trade_share = {
+    share = <float>
+    country = <scope>
+}
+
+trading_policy_in_node = {
+    node = <scope>
+    policy = <policy> / any
+}
+
+has_privateer_share_in_trade_node = {
+    who = <scope>
+    share = <float>
+}
+
+#--------------------------------------------------------------------------------
+# Trigger - Script
+#--------------------------------------------------------------------------------
+# Hides trigger tooltip for a set of triggers
+hidden_trigger = {
+    <triggers>
+}
+
+# Adds a custom tooltip for a set of triggers
+custom_trigger_tooltip = {
+    tooltip = <string>
+}  
+
+#Following Trigger has two separate uses
+calc_true_if = {
+    #triggers
+    amount = 3
+}
+
+#It can be used with multiple triggers, and it returns true if at least X amount of the triggers return true
+calc_true_if = {
+    ADM = 4
+    religion = catholic
+    full_idea_group = religious_ideas
+    religious_unity = 1.0
+    is_papal_controller = yes
+    amount = 3
+}
+#So this will return true if at least 3 of these 5 triggers are true
+
+#This trigger funtions differently if using one of the all_ triggers
+#Country Scope Example
+calc_true_if = {
+    all_country = {
+        religion = protestant
+    }
+    amount = 5
+}
+#This will return true if there are at least 5 Protestant countries in the world
+
+#Province Scope Example
+calc_true_if = {
+    all_owned_province = {
+        has_terrain = marsh
+    }
+    amount = 2
+}
+#This will return true if the scope has at least two provinces that have the marsh terrain
+
+
+#Scripted Triggers (defined in common\scripted_triggers)
+scripted_triggers_name = yes #no doesn't work, must use NOT = { scripted_triggers_name = yes }
+
+#--------------------------------------------------------------------------------
+# Removed
+#--------------------------------------------------------------------------------
+has_sphere = #EU IV doesn't use spheres in the way that EU III did.
+in_sphere_of = # EU IV doesn't use spheres in the way that EU III did.
+leads_coalition = yes #never found in code, coalitions no longer have leaders
+num_of_free_ideas = #never found in code, tested and wasn't working properly
+num_of_total_ideas = #never found in code, tested and wasn't working properly
+num_of_placed_merchants = #never found in code. Not really needed since merchants are no longer a currency, they'll always be placed so can just count number of merchants.
+num_of_trade_rights = #not found in code. I don't think there are trade rights in EU IV
+pure_revolt_risk = 3 #Removed as of patch 1.8
+revolt_risk = 1 #Removed as of patch 1.8
+trade_leader = #Removed by Gars in 1.6 and didn't work before that
+war_with_nomads = yes
+is_colonial = <bool>
+has_discovered_region = {
+    region = <region>
+    years = <int>
+}
+
+has_discovered_capital_region_of = {
+    who = <scope>
+    years = <int>
+}
+
+#This trigger is not localized
+has_any_country_in_region_discovered_capital_region_of = {
+    region = <region>
+    who = <scope>
+    years = <int>
+}
+has_hre_emperor_modifier = test
+has_hre_member_modifier = test
+months_since_last_owner_change = 60 #never found in code and reported that it doesn't work
+is_protectorate = yes

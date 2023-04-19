@@ -1,0 +1,823 @@
+# Ranges are for reasonable minimum and maximum.
+#-----------------------------------------
+# Conditionals
+#-----------------------------------------
+# Modifiers with this in will be auto-removed if the listed source mechanic is removed.
+religion                                    # yes
+secondary_religion                          # yes
+
+# Causes other modifiers to only affect the listed special unit
+is_mercenary_modifier                       # yes
+is_janissary_modifier                       # yes
+is_rajput_modifier                          # yes
+is_marine_modifier                          # yes
+is_banner_modifier                          # yes
+is_streltsy_modifier                        # yes
+is_cossack_modifier                         # yes
+is_revolutionary_guard_modifier             # yes
+is_cawa_modifier                            # yes
+is_carolean_modifier                        # yes
+is_hussars_modifier                         # yes
+is_tercio_modifier                          # yes
+is_musketeer_modifier                       # yes
+is_samurai_modifier                         # yes
+is_geobukseon_modifier                      # yes
+is_man_of_war_modifier                      # yes
+is_galleon_modifier                         # yes
+is_galleass_modifier                        # yes
+is_caravel_fraction                         # yes
+is_voc_indiamen_fraction                    # yes
+
+# Shows a special icon: no actual effect though
+immortal                                    # yes
+
+#-----------------------------------------
+# Mechanic Modifiers
+#-----------------------------------------
+cb_on_government_enemies                    # yes
+cb_on_overseas                              # yes
+cb_on_primitives                            # yes
+cb_on_religious_enemies                     # yes
+idea_claim_colonies                         # yes
+may_explore                                 # yes
+may_perform_slave_raid                      # yes
+may_recruit_female_generals                 # yes
+no_religion_penalty                         # yes
+reduced_stab_impacts                        # yes
+sea_repair                                  # yes
+may_establish_frontier                      # yes
+extra_manpower_at_religious_war             # yes
+auto_explore_adjacent_to_colony             # yes
+can_fabricate_for_vassals                   # yes
+may_perform_slave_raid_on_same_religion     # yes
+block_introduce_heir                        # yes
+attack_bonus_in_capital_terrain             # yes 
+can_bypass_forts                            # yes
+can_chain_claim                             # yes
+can_colony_boost_development                # yes
+can_transfer_vassal_wargoal                 # yes
+force_march_free                            # yes
+free_maintenance_on_expl_conq               # yes
+ignore_coring_distance                      # yes
+allow_client_states                         # yes   
+may_return_manpower_on_disband              # yes   
+may_refill_garrison                         # yes   
+may_build_supply_depot                      # yes   
+capped_by_forcelimit                        # yes   
+can_not_send_merchants                      # yes   
+can_not_declare_war                         # yes   
+can_not_build_missionaries                  # yes   
+can_not_build_buildings                     # yes   
+can_not_build_colonies                      # yes   
+no_stability_loss_on_monarch_death          # yes
+allow_client_states                         # yes
+allow_free_estate_privilege_revocation      # yes
+can_claim_states                            # yes
+free_concentrate_development                # yes
+can_revoke_parliament_seats                 # yes
+allow_mercenary_drill                       # yes
+allow_mercenaries_to_split                  # yes
+merc_independent_from_trade_range           # yes
+reduced_native_attacks                      # yes
+may_not_reduce_inflation                    # yes
+no_cost_for_reinforcing                     # yes
+may_not_convert_territories                 # yes
+enable_forced_march                         # yes
+no_claim_cost_increasement                  # yes
+
+# Province
+block_slave_raid                            # yes
+
+#-----------------------------------------
+# Special Unit Mechanic Modifiers
+#-----------------------------------------
+# Country
+has_banners                                 # yes
+has_carolean                                # yes
+has_tercio                                  # yes       
+has_musketeer                               # yes       
+has_samurai                                 # yes       
+has_geobukseon                              # yes       
+has_man_of_war                              # yes       
+has_galleon                                 # yes       
+has_galleass                                # yes       
+has_caravel                                 # yes       
+has_voc_indiamen                            # yes       
+has_streltsy                                # yes       
+
+can_recruit_hussars                         # yes
+can_recruit_janissaries                     # yes       
+can_recruit_cawa                            # yes       
+can_recruit_cossacks                        # yes       
+can_recruit_rajputs                         # yes       
+can_recruit_revolutionary_guards            # yes       
+
+allow_janissaries_from_own_faith            # yes       
+can_transport_units                         # yes       
+
+# Province
+local_has_banners                           # yes
+local_has_carolean                          # yes
+local_has_streltsy                          # yes       
+local_has_tercio                            # yes       
+local_has_musketeers                        # yes       
+local_has_samurai                           # yes       
+local_has_geobukseon                        # yes       
+local_has_man_of_war                        # yes       
+local_has_galleon                           # yes       
+local_has_galleass                          # yes       
+local_has_caravel                           # yes       
+local_has_voc_indiamen                      # yes       
+
+#-----------------------------------------
+# Administration
+#-----------------------------------------
+core_creation                               # -0.05 : -1.0
+administrative_efficiency                   # 0.05 : 1.0
+overextension_impact_modifier               # -0.05 : -1.0      
+yearly_absolutism                           # 0.5 : 5.0
+max_absolutism                              # 10 : 100
+max_absolutism_effect                       # 0.1 : 1.0         
+governing_capacity                          # 100 : 1000
+governing_capacity_modifier                 # 0.1 : 1.0
+reform_progress_growth                      # 0.1 : 1.0
+reform_progress_growth_building             # 0.1 : 1.0         
+monthly_reform_progress                     # 0.1 : 1.0         
+monthly_reform_progress_modifier            # 0.1 : 1.0     
+monthly_reform_progress_building            # 0.1 : 1.0            
+global_monthly_devastation                  # -0.05 : -1.0
+election_cycle                              # -1 : -5
+reelection_cost                             # -0.1 : -1.0
+
+expand_administration_cost                  # -0.1 : -1.0
+trade_company_governing_cost                # -0.1 : -1.0
+state_governing_cost                        # -0.1 : -1.0
+global_prosperity_growth                    # 0.05 : 1.0
+legitimacy                                  # 0.5 : 5.0
+republican_tradition                        # 0.5 : 5.0
+devotion                                    # 0.5 : 5.0
+horde_unity                                 # 0.5 : 5.0
+meritocracy                                 # 0.5 : 5.0
+monthly_militarized_society                 # 0.05 : 1.0
+yearly_tribal_allegiance                    # 0.05 : 1.0
+yearly_authority                            # 0.05 : 1.0
+
+move_capital_cost_modifier                  # -0.1 : -1.0
+core_decay_on_your_own                      # -0.1 : -1.0
+
+#-----------------------------------------
+# Court
+#-----------------------------------------
+country_admin_power                         # 1 : 10
+country_diplomatic_power                    # 1 : 10
+country_military_power                      # 1 : 10
+candidate_random_bonus                      # 1 : 6
+yearly_corruption                           # -0.05 : -1.0
+advisor_cost                                # -0.1 : -1.0
+
+monarch_admin_power                         # 1 : 6
+monarch_diplomatic_power                    # 1 : 6
+monarch_military_power                      # 1 : 6
+heir_chance                                 # 0.25 : 1.0
+monthly_support_heir_gain                   # 0.05 : 1.0
+monthly_heir_claim_increase                 # 0.05 : 1.0
+monthly_heir_claim_increase_modifier        # 0.05 : 1.0        
+prestige                                    # 0.5 : 5.0
+prestige_decay                              # -0.01 : -0.1
+adm_advisor_cost                            # -0.1 : -1.0
+dip_advisor_cost                            # -0.1 : -1.0
+mil_advisor_cost                            # -0.1 : -1.0
+same_culture_advisor_cost                   # -0.1 : -1.0
+same_religion_advisor_cost                  # -0.1 : -1.0       
+all_estate_loyalty_equilibrium              # 0.05 : 1.0
+all_estate_influence_modifier               # 0.05 : 1.0        
+<estate>_influence_modifier                 # 0.05 : 1.0
+<estate>_loyalty_modifier                   # 0.05 : 1.0
+loyalty_change_on_revoked                   # -1 : -10          
+estate_interaction_cooldown_modifier        # -0.1 : -1.0       
+all_estate_possible_privileges              # 1 : 10            
+
+local_heir_adm                              # 1 : 6
+local_heir_dip                              # 1 : 6
+local_heir_mil                              # 1 : 6
+monarch_lifespan                            # 0.1 : 1
+monthly_splendor                            # 1 : 10
+advisor_pool                                # 1 : 10
+female_advisor_chance                       # 1.0 : 1.0
+power_projection_from_insults               # 0.25 : 1.0
+<faction>_influence                         # 0.05 : 1.0
+
+parliament_backing_chance                   # 0.1 : 1.0         
+parliament_effect_duration                  # 0.1 : 1.0         
+parliament_debate_duration                  # -0.1 : -1.0       
+parliament_chance_of_decision               # 0.1 : 1.0         
+num_of_parliament_issues                    # 1 : 10            
+max_possible_parliament_seats               # 1 : 10            
+
+#-----------------------------------------
+# Economy
+#-----------------------------------------
+production_efficiency                       # 0.05 : 1.0
+development_cost                            # -0.05 : -1.0
+development_cost_modifier                   # -0.05 : -1.0
+development_cost_in_primary_culture         # -0.05 : -1.0      
+interest                                    # -1 : -4
+inflation_reduction                         # 0.01 : 0.1
+global_trade_goods_size_modifier            # 0.05 : 1.0
+global_trade_goods_size                     # 0.05 : 1.0        
+trade_efficiency                            # 0.05 : 1.0
+global_trade_power                          # 0.1 : 1.0
+global_foreign_trade_power                  # 0.1 : 1.0
+global_prov_trade_power_modifier            # 0.1 : 1.0
+caravan_power                               # 0.1 : 1.0
+trade_steering                              # 0.1 : 1.0
+merchants                                   # 1 : 10
+global_allowed_num_of_buildings             # 1 : 10            
+reduced_trade_penalty_on_non_main_tradenode # 0.1 : 1.0         
+global_allowed_num_of_manufactories         # 1 : 10            
+
+global_tax_modifier                         # 0.1 : 1.0
+global_tax_income                           # 12 : 120
+build_cost                                  # -0.05 : -1.0
+build_time                                  # -0.1 : -1.0
+great_project_upgrade_cost                  # -0.05 : -1.0
+great_project_upgrade_time                  # -0.05 : -1.0      
+global_own_trade_power                      # 0.1 : 1.0
+placed_merchant_power                       # 5 : 100
+placed_merchant_power_modifier              # 0.1 : 1.0         
+trade_range_modifier                        # 0.1 : 1.0
+global_ship_trade_power                     # 0.1 : 1.0
+privateer_efficiency                        # 0.1 : 1.0
+embargo_efficiency                          # 0.1 : 1.0
+ship_power_propagation                      # 0.1 : 1.0
+
+state_maintenance_modifier                  # -0.25 : -1.0
+inflation_action_cost                       # -0.25 : -1.0
+gold_depletion_chance_modifier              # -0.25 : -1.0
+monthly_gold_inflation_modifier             # -0.25 : -1.0
+mercantilism_cost                           # -0.1 : -1.0
+trade_company_investment_cost               # -0.1 : -1.0
+center_of_trade_upgrade_cost                # -0.1 : -1.0
+expand_infrastructure_cost_modifier         # -0.1 : -1.0       
+centralize_state_cost                       # -0.1 : -1.0       
+
+#-----------------------------------------
+# Advancement
+#-----------------------------------------
+all_power_cost                              # -0.05 : -1.0
+technology_cost                             # -0.05 : -1.0
+idea_cost                                   # -0.05 : -1.0
+free_policy                                 # 1 : 10
+free_adm_policy                             # 1 : 10
+free_dip_policy                             # 1 : 10
+free_mil_policy                             # 1 : 10
+national_focus_years                        # -1 : -3   
+
+adm_tech_cost_modifier                      # -0.1 : -1.0
+dip_tech_cost_modifier                      # -0.1 : -1.0
+mil_tech_cost_modifier                      # -0.1 : -1.0
+innovativeness_gain                         # 0.1 : 1.0
+yearly_innovativeness                       # 1 : 10            
+embracement_cost                            # -0.1 : -1.0
+global_institution_spread                   # 0.1 : 1.0
+
+institution_spread_from_true_faith          # 0.1 : 1.0
+native_advancement_cost                     # -0.1 : -1.0
+possible_policy                             # 1 : 10
+possible_adm_policy                         # 1 : 10
+possible_dip_policy                         # 1 : 10
+possible_mil_policy                         # 1 : 10
+yearly_government_power                     # 1 : 10            
+
+#-----------------------------------------
+# Nation
+#-----------------------------------------
+global_autonomy                             # -0.05 : -1
+years_of_nationalism                        # -5 : -20
+min_autonomy_in_territories                 # -0.05 : -1
+
+global_unrest                               # -1 : -10
+harsh_treatment_cost                        # -0.1 : -1
+culture_conversion_cost                     # -0.1 : -1
+num_accepted_cultures                       # 1 : 10
+culture_conversion_time                     # -0.1 : -1.0       
+
+stability_cost_modifier                     # -0.1 : -1
+autonomy_change_time                        # -0.1 : -1
+promote_culture_cost                        # -0.1 : -1
+
+min_autonomy                                # 10 : 100
+unrest_catholic_provinces                   # -1 : -10
+
+#-----------------------------------------
+# Diplomacy
+#-----------------------------------------
+diplomatic_annexation_cost                  # -0.1 : -1.0
+province_warscore_cost                      # -0.1 : -1.0
+unjustified_demands                         # -0.1 : -1.0
+ae_impact                                   # -0.1 : -1.0
+warscore_from_battles_modifier              # 0.1 : 1.0         
+
+diplomats                                   # 1 : 10
+diplomatic_reputation                       # 1 : 10
+diplomatic_upkeep                           # 1 : 10
+improve_relation_modifier                   # 0.1 : 1.0
+monthly_favor_modifier                      # 0.1 : 1.0
+vassal_forcelimit_bonus                     # 0.1 : 1.0
+vassal_naval_forcelimit_bonus               # 0.1 : 1.0         
+vassal_manpower_bonus                       # 0.1 : 1.0         
+vassal_sailors_bonus                        # 0.1 : 1.0         
+vassal_income                               # 0.1 : 1.0
+accept_vassalization_reasons                # 1 : 20
+reduced_liberty_desire                      # 10 : 100  - Overlord scope
+reduced_liberty_desire_on_same_continent    # 10 : 100  - Overlord scope
+reduced_liberty_desire_on_other_continent   # 10 : 100  - Overlord scope    
+years_to_integrate_personal_union           # -5 : -50   Overlord scope
+
+transfer_trade_power_reasons                # 1 : 20
+justify_trade_conflict_cost                 # -0.1 : -1.0
+rival_change_cost                           # -0.1 : -1.0
+fabricate_claims_cost                       # -0.1 : -1.0
+enemy_core_creation                         # 0.1 : 1.0
+envoy_travel_time                           # -0.25 : -1.0
+claim_duration                              # 0.25 : 1.0
+liberty_desire                              # 10 : 100  - Subject scope
+liberty_desire_from_subject_development     # 10 : 100  - Subject scope
+annexation_relations_impact                 # -0.1 : -1.0       
+chance_to_inherit                           # 1 : 10            
+
+stability_cost_to_declare_war               # 1 : 6
+relation_with_heretics                      # 10 : 100
+relation_with_heathens                      # 10 : 100
+relation_with_same_religion                 # 10 : 100
+reverse_relation_with_same_religion         # 10 : 100      
+relation_with_same_culture                  # 10 : 100
+relation_with_same_culture_group            # 10 : 100
+relation_with_accepted_culture              # 10 : 100
+relation_with_other_culture                 # 10 : 100
+
+monarch_power_tribute                       # 1 : 10        
+tributary_conversion_cost_modifier          # -0.1 : -1.0   
+
+#-----------------------------------------
+# Religion
+#-----------------------------------------
+missionaries                                # 1 : 10
+global_missionary_strength                  # 0.01 : 0.1
+warscore_cost_vs_other_religion             # -0.1 : -1.0
+religious_unity                             # 0.1 : 1.0
+
+missionary_maintenance_cost                 # -0.1 : -1.0
+tolerance_own                               # 1 : 10
+tolerance_heathen                           # 1 : 10
+tolerance_heretic                           # 1 : 10
+yearly_doom_reduction                       # 1 : 10
+papal_influence                             # 1 : 10
+monthly_church_power                        # 1 : 10        
+monthly_fervor_increase                     # 1 : 10
+yearly_harmony                              # 1 : 10
+church_power_modifier                       # 0.1 : 1
+harmonization_speed                         # 0.1 : 1
+monthly_piety                               # 0.1 : 1
+monthly_piety_accelerator                   # 0.1 : 1
+monthly_karma                               # 0.1 : 1
+yearly_karma_decay                          # 0.1 : 1
+monthly_karma_accelerator                   # 0.1 : 1       
+yearly_patriarch_authority                  # 0.01 : 1.0
+global_heretic_missionary_strength          # 0.01 : 0.1
+global_heathen_missionary_strength          # 0.01 : 0.1
+
+tolerance_of_heretics_capacity              # 1 : 10
+tolerance_of_heathens_capacity              # 1 : 10
+enforce_religion_cost                       # -0.1 : -1
+prestige_per_development_from_conversion    # 0.1 : 1.0
+global_religious_conversion_resistance      # 0.1 : 1.0 - Resistance to Centers of Reformation
+establish_order_cost                        # -0.1 : -1
+curia_treasury_contribution                 # -0.1 : -1
+curia_powers_cost                           # -0.1 : -1
+appoint_cardinal_cost                       # -0.1 : -1
+papal_influence_from_cardinals              # 1 : 10
+
+#-----------------------------------------
+# Colonisation
+#-----------------------------------------
+colonists                                   # 1 : 10
+colonist_placement_chance                   # 0.05 : 1.0
+global_colonial_growth                      # 10 : 100
+colony_cost_modifier                        # -0.1 : -1.0       
+colony_development_boost                    # 1 : 10            
+colonial_type_change_cost_modifier          # -0.1 : -1.0       
+colonial_subject_type_upgrade_cost_modifier # -0.1 : -1.0       
+
+native_uprising_chance                      # -0.1 : -1.0
+native_assimilation                         # 0.1 : 1.0
+range                                       # 0.1 : 1.0
+migration_cost                              # -0.1 : -1.0
+settle_cost                                 # -0.1 : -1.0
+
+global_tariffs                              # 0.1 : 1.0
+treasure_fleet_income                       # 0.1 : 1.0
+expel_minorities_cost                       # -0.1 : -1.0
+monthly_federation_favor_growth             # 0.1 : 1.0
+tribal_development_growth                   # 0.1 : 1.0
+add_tribal_land_cost                        # 0.1 : 1.0
+
+#-----------------------------------------
+# Espionage
+#-----------------------------------------
+spy_offence                                 # 0.1 : 1.0
+spy_action_cost_modifier                    # -0.1 : -1.0       
+
+global_spy_defence                          # 0.1 : 1.0
+
+rebel_support_efficiency                    # 0.1 : 1.0     - Size of Rebel Stack spawned via Rebel Support
+global_rebel_suppression_efficiency         # 0.1 : 1.0     - Effectiveness of Rebel Suppression action
+discovered_relations_impact                 # -0.1 : -1.0   - Opinion hit from discovery of Covert action
+
+#-----------------------------------------
+# Army Command
+#-----------------------------------------
+army_tradition                              # 1.0 : 10.0
+army_tradition_decay                        # -0.01 : -0.1
+yearly_army_professionalism                 # 0.01 : 1.0
+leader_cost                                 # -0.1 : -1
+general_cost                                # -0.1 : -1
+global_regiment_cost                        # -0.1 : -1
+war_exhaustion                              # -0.01 : -1.0
+raze_power_gain                             # 0.1 : 1.0
+leader_siege                                # 1 : 6
+
+leader_land_fire                            # 1 : 6
+leader_land_shock                           # 1 : 6
+leader_land_manuever                        # 1 : 6
+army_tradition_from_battle                  # 0.1 : 1.0
+infantry_cost                               # -0.1 : -1.0
+cavalry_cost                                # -0.1 : -1.0
+artillery_cost                              # -0.1 : -1.0
+reinforce_cost_modifier                     # -0.1 : -1.0
+global_manpower                             # 5.0 : 100.0
+global_manpower_modifier                    # 0.1 : 1.0
+manpower_in_own_culture_provinces           # 0.1 : 1.0     
+manpower_in_culture_group_provinces         # 0.1 : 1.0     
+manpower_in_accepted_culture_provinces      # 0.1 : 1.0      - Only Accepted, not Primary
+global_regiment_recruit_speed               # -0.1 : -1.0
+manpower_in_true_faith_provinces            # 0.1 : 1.0
+manpower_recovery_speed                     # 0.05 : 1.0
+land_forcelimit                             # 1 : 100
+land_forcelimit_modifier                    # 0.1 : 1.0
+land_maintenance_modifier                   # -0.05 : -1.0
+mercenary_cost                              # -0.1 : -1.0
+merc_maintenance_modifier                   # -0.05 : -1.0
+fort_maintenance_modifier                   # -0.1 : -1.0
+loot_amount                                 # 0.1 : 1.0
+available_province_loot                     # 0.1 : 1.0
+artillery_level_modifier                    # 1.0 : 10.0        
+artillery_barrage_cost                      # -0.1 : -1.0       
+
+free_leader_pool                            # 1 : 10
+free_land_leader_pool                       # 1 : 10
+drill_gain_modifier                         # 0.1 : 1.0
+drill_decay_modifier                        # -0.1 : -1.0
+mercenary_manpower                          # 0.1 : 1.0
+possible_condottieri                        # 0.25 : 1.0
+possible_mercenaries                        # 0.25 : 1.0
+imperial_mercenary_cost                     # -0.1 : -1.0
+rival_border_fort_maintenance               # -0.25 : -1.0
+prestige_from_land                          # 0.25 : 1.0
+war_taxes_cost_modifier                     # -0.25 : -1.0
+war_exhaustion_cost                         # -0.25 : -1.0
+max_general_shock                           # 1 : 6         
+max_general_fire                            # 1 : 6         
+max_general_maneuver                        # 1 : 6         
+max_general_siege                           # 1 : 6         
+
+# Special Units
+special_unit_forcelimit                     # 0.1 : 1.0
+special_unit_cost_modifier                  # -0.1 : -1.0   
+special_unit_manpower_cost_modifier         # -0.1 : -1.0   
+
+cawa_cost_modifier                          # -0.1 : -1.0
+janissary_cost_modifier                     # -0.1 : -1.0   
+hussars_cost_modifier                       # -0.1 : -1.0   
+
+allowed_marine_fraction                     # 0.05 : 1.0
+allowed_streltsy_fraction                   # 0.05 : 1.0        
+allowed_tercio_fraction                     # 0.05 : 1.0        
+allowed_musketeer_fraction                  # 0.05 : 1.0        
+allowed_samurai_fraction                    # 0.05 : 1.0        
+allowed_geobukseon_fraction                 # 0.05 : 1.0        
+
+amount_of_banners                           # 0.1 : 1.0         
+amount_of_carolean                          # 0.1 : 1.0
+amount_of_hussars                           # 0.1 : 1.0
+amount_of_cawa                              # 0.1 : 1.0
+amount_of_streltsy                          # 0.1 : 1.0         
+amount_of_tercio                            # 0.1 : 1.0         
+amount_of_musketeers                        # 0.1 : 1.0         
+amount_of_samurai                           # 0.1 : 1.0         
+
+#-----------------------------------------
+# Army Combat
+#-----------------------------------------
+discipline                                  # 0.05 : 1.0
+mercenary_discipline                        # 0.05 : 1.0
+land_morale                                 # 0.05 : 1.0
+land_morale_constant                        # 0.05 : 1.0        
+siege_ability                               # 0.05 : 1.0
+fire_damage_received                        # -0.05 : -1.0
+shock_damage_received                       # -0.05 : -1.0
+fire_damage                                 # 0.1 : 1.0
+shock_damage                                # 0.1 : 1.0
+infantry_power                              # 0.05 : 1.0
+artillery_power                             # 0.05 : 1.0
+artillery_fire                              # 0.25 : 1.0
+cavalry_shock                               # 0.25 : 1.0
+infantry_fire                               # 0.25 : 1.0
+infantry_shock                              # 0.25 : 1.0
+morale_damage                               # 0.1 : 1.0     
+morale_damage_received                      # -0.1 : 1.0    
+military_tactics                            # 0.1 : 1.0     
+global_attacker_dice_roll_bonus             # 1 : 10        
+global_defender_dice_roll_bonus             # 1 : 10        
+own_territory_dice_roll_bonus               # 1 : 10        
+
+cavalry_fire                                # 0.25 : 1.0
+artillery_shock                             # 0.25 : 1.0
+artillery_levels_available_vs_fort          # 1 : 10        
+backrow_artillery_damage                    # 0.1 : 1.0
+movement_speed                              # 0.1 : 1.0
+defensiveness                               # 0.1 : 1.0
+cavalry_power                               # 0.1 : 1.0
+cav_to_inf_ratio                            # 0.25 : 1.0
+reserves_organisation                       # 0.1 : 1.0     
+recover_army_morale_speed                   # 0.1 : 1.0
+land_attrition                              # -0.1 : -1.0
+reinforce_speed                             # 0.1 : 1.0
+
+garrison_size                               # 0.25 : 1.0
+global_garrison_growth                      # 0.25 : 1.0
+global_supply_limit_modifier                # 0.1 : 1.0
+hostile_attrition                           # 1 : 10
+max_hostile_attrition                       # 1 : 10        
+cavalry_flanking                            # 0.25 : 1.0
+regiment_manpower_usage                     # 0.05 : 1.0
+garrison_damage                             # 0.05 : 1.0        
+assault_fort_cost_modifier                  # -0.1 : -1.0       
+assault_fort_ability                        # 0.05 : 1.0        
+
+#-----------------------------------------
+# Navy Command
+#-----------------------------------------
+navy_tradition                              # 1.0 : 10.0
+navy_tradition_decay                        # -0.01 : -0.1
+leader_naval_fire                           # 1 : 6
+leader_naval_manuever                       # 1 : 6
+global_ship_cost                            # -0.05 : -1.0
+
+leader_naval_shock                          # 1 : 6
+naval_tradition_from_trade                  # 0.25 : 1.0
+naval_tradition_from_battle                 # 0.25 : 1.0
+free_navy_leader_pool                       # 1 : 10
+heavy_ship_cost                             # -0.1 : -1.0
+light_ship_cost                             # -0.1 : -1.0
+galley_cost                                 # -0.1 : -1.0
+global_ship_recruit_speed                   # -0.1 : -1.0
+naval_forcelimit                            # 1 : 100
+naval_forcelimit_modifier                   # 0.1 : 1.0
+naval_maintenance_modifier                  # -0.1 : -1.0
+global_sailors                              # 1000 : 100000
+global_sailors_modifier                     # 0.1 : 1.0
+sailor_maintenance_modifer                  # -0.1 : -1.0
+sailors_recovery_speed                      # 0.1 : 1.0
+
+admiral_cost                                # -0.1 : -1.0
+admiral_skill_gain_modifier                 # 0.1 : 1.0
+flagship_cost                               # 0.1 : 1.0
+transport_cost                              # -0.1 : -1.0
+transport_attrition                         # -0.1 : -1.0   
+overlord_naval_forcelimit_modifier          # 0.1 : 1.0
+coast_raid_range                            # 0.1 : 1.0     
+max_admiral_shock                           # 1 : 6         
+max_admiral_fire                            # 1 : 6         
+max_admiral_maneuver                        # 1 : 6         
+max_admiral_siege                           # 1 : 6         
+
+#-----------------------------------------
+# Navy Combat
+#-----------------------------------------
+heavy_ship_power                            # 0.05 : 1.0
+galley_power                                # 0.05 : 1.0
+naval_morale                                # 0.05 : 1.0
+naval_morale_constant                       # 0.05 : 1.0        
+naval_morale_damage                         # 0.05 : 1.0        
+naval_morale_damage_received                # -0.05 : -1.0      
+flagship_morale                             # 0.05 : 1.0
+ship_durability                             # 0.05 : 1.0
+hull_size                                   # 1 : 10            
+hull_size_modifier                          # 0.1 : 1.0         
+heavy_ship_hull_size_modifier               # 0.1 : 1.0         
+light_ship_hull_size_modifier               # 0.1 : 1.0         
+galley_hull_size_modifier                   # 0.1 : 1.0         
+transport_hull_size_modifier                # 0.1 : 1.0         
+flagship_durability                         # 0.05 : 1.0
+capture_ship_chance                         # 0.05 : 1.0
+sunk_ship_morale_hit_recieved               # -0.05 : -1.0
+own_coast_naval_combat_bonus                # 1 : 10
+global_naval_engagement                     # 1 : 10            
+number_of_cannons                           # 1 : 10            
+number_of_cannons_modifier                  # 0.1 : 1.0         
+heavy_ship_number_of_cannons_modifier       # 0.1 : 1.0         
+light_ship_number_of_cannons_modifier       # 0.1 : 1.0         
+galley_number_of_cannons_modifier           # 0.1 : 1.0         
+transport_number_of_cannons_modifier        # 0.1 : 1.0         
+
+light_ship_power                            # 0.05 : 1.0
+global_ship_repair                          # 0.05 : 1.0
+global_naval_engagement_modifier            # 0.05 : 1.0
+flagship_naval_engagement_modifier          # 0.05 : 1.0
+recover_navy_morale_speed                   # 0.05 : 1.0
+blockade_efficiency                         # 0.1 : 1.0
+siege_blockade_progress                     # 0.1 : 1.0
+disengagement_chance                        # 0.05 : 1.0
+engagement_cost                             # 0.05 : 1.0        
+engagement_cost_modifier                    # 0.05 : 1.0        
+
+transport_power                             # 0.05 : 1.0
+naval_attrition                             # -0.1 : -1.0
+prestige_from_naval                         # 0.25 : 1.0
+movement_speed_onto_off_boat_modifier       # -0.25 : -1.0
+global_naval_barrage_cost                   # -0.25 : -1.0
+regiment_disembark_speed                    # 0.05 : 1.0
+landing_penalty                             # -1 : -10
+ship_trade_power                            # 1 : 10            
+ship_trade_power_modifier                   # 0.05 : 1.0        
+
+# Special Units
+allowed_man_of_war_fraction                 # 0.05 : 1.0        
+allowed_galleon_fraction                    # 0.05 : 1.0        
+allowed_galleass_fraction                   # 0.05 : 1.0        
+allowed_caravel_fraction                    # 0.05 : 1.0        
+allowed_voc_indiamen_fraction               # 0.05 : 1.0        
+
+amount_of_geobukseon                        # 0.1 : 1.0         
+amount_of_man_of_war                        # 0.1 : 1.0         
+amount_of_galleon                           # 0.1 : 1.0         
+amount_of_galleass                          # 0.1 : 1.0         
+amount_of_caravel                           # 0.1 : 1.0         
+amount_of_voc_indiamen                      # 0.1 : 1.0         
+
+#-----------------------------------------
+# Fleet 
+#-----------------------------------------
+max_flagships                               # 1 : 10        
+
+number_of_cannons_flagship_modifier         # 0.1 : 1.0
+morale_in_fleet_modifier                    # 0.1 : 1.0
+number_of_cannons_flagship                  # 0.1 : 1.0     
+
+naval_maintenance_flagship_modifier         # 0.1 : 1.0
+blockade_impact_on_siege_in_fleet_modifier  # 0.1 : 1.0
+trade_power_in_fleet_modifier               # 0.1 : 1.0
+privateering_efficiency_in_fleet_modifier   # 0.1 : 1.0
+naval_tradition_in_fleet_modifier           # 0.1 : 1.0
+movement_speed_in_fleet_modifier            # 0.1 : 1.0
+
+flagship_landing_penalty                    # 0.1 : 1.0
+exploration_mission_range_in_fleet_modifier # 100 : 1000
+barrage_cost_in_fleet_modifier              # -0.1 : -1.0
+naval_attrition_in_fleet_modifier           # 0.1 : 1.0
+prestige_from_battles_in_fleet_modifier     # 0.1 : 1.0
+cannons_for_hunting_pirates_in_fleet        # 100 : 1000
+
+#-----------------------------------------
+# Misc
+#-----------------------------------------
+imperial_authority                          # 0.05 : 1.0    - HRE
+imperial_authority_value                    # 1 : 10        - HRE
+free_city_imperial_authority                # 0.05 : 1.0    - HRE
+max_free_cities                             # 1 : 10        - HRE
+max_electors                                # 1 : 10        - HRE
+legitimate_subject_elector                  # 1 : 100       - HRE: Elector desire for current scope to become Emperor   
+reasons_to_elect                            # 1 : 100       - HRE
+imperial_reform_catholic_approval           # 1 : 100       - HRE   
+manpower_against_imperial_enemies           # 0.1 : 1.0
+
+imperial_mandate                            # 1 : 10        - Mandate of Heaven
+
+yearly_revolutionary_zeal                   # 1 : 10        - Revolution
+max_revolutionary_zeal                      # 10 : 100      - Revolution
+
+#-----------------------------------------
+# Province: Civil
+#-----------------------------------------
+governing_cost                              # -1 : -10          
+territories_governing_cost                  # -1 : -10          
+local_development_cost                      # -0.05 : -1.0
+local_development_cost_modifier             # -0.05 : -1.0
+local_monthly_devastation                   # -0.1 : -1.0
+local_prosperity_growth                     # 0.1 : 1.0
+local_production_efficiency                 # 0.05 : 1.0
+local_core_creation                         # -0.1 : -1.0
+local_governing_cost                        # -0.1 : -1.0
+local_governing_cost_increase               # -10 : -100
+statewide_governing_cost                    # -0.1 : -1.0
+state_governing_cost_increase               # -10 : -100
+allowed_num_of_manufactories                # 1 : 10
+local_centralize_state_cost                 # -0.1 : -1.0       
+local_colony_cost_modifier                  # -0.1 : -1.0       
+local_center_of_trade_upgrade_cost          # -0.1 : -1.0       
+local_great_project_upgrade_time            # -0.1 : -1.0       
+
+local_tax_modifier                          # 0.1 : 1.0
+local_build_cost                            # -0.1 : -1.0
+local_build_time                            # -0.1 : -1.0
+local_great_project_upgrade_cost            # -0.1 : -1.0
+inflation_reduction_local                   # 0.01 : 0.1
+province_trade_power_modifier               # 0.1 : 1.0
+province_trade_power_value                  # 0.1 : 1.0
+trade_goods_size                            # 0.1 : 1.0
+trade_goods_size_modifier                   # 0.1 : 1.0
+trade_value_modifier                        # 0.1 : 1.0
+local_institution_spread                    # 0.05 : 1.0
+local_gold_depletion_chance_modifier        # -0.1 : -1.0       
+
+trade_value                                 # 1 : 10
+tax_income                                  # 1 : 10
+local_state_maintenance_modifier            # -0.1 : -1.0
+allowed_num_of_buildings                    # 1 : 10
+
+#-----------------------------------------
+# Province: Population 
+#-----------------------------------------
+institution_growth                          # 0.1 : 1.0
+local_autonomy                              # -0.05 : -1.0
+local_years_of_nationalism                  # -5 : -100
+
+local_unrest                                # -1 : -100
+local_missionary_strength                   # 0.01 : 1.0
+local_missionary_maintenance_cost           # -0.1 : -1.0
+local_culture_conversion_cost               # -0.1 : -1.0
+local_culture_conversion_time               # -0.1 : -1.0   
+local_tolerance_of_heretics                 # 1 : 3         
+local_tolerance_of_heathens                 # 1 : 3         
+
+local_religious_unity_contribution          # 0.1 : 1.0
+local_religious_conversion_resistance       # 0.25 : 1.0
+
+min_local_autonomy                          # 10 : 100
+
+#-----------------------------------------
+# Province: Army
+#-----------------------------------------
+local_manpower                              # 0.05 : 1.0
+local_manpower_modifier                     # 0.05 : 1.0
+fort_level                                  # 1 : 10
+max_attrition                               # 1 : 10
+attrition                                   # 1 : 10
+
+local_friendly_movement_speed               # 0.1 : 1.0
+local_hostile_movement_speed                # 0.1 : 1.0
+local_hostile_attrition                     # 1 : 10
+local_defensiveness                         # 0.1 : 1.0
+supply_limit                                # 1 : 10
+supply_limit_modifier                       # 0.1 : 1.0
+
+garrison_growth                             # 0.1 : 1.0
+local_regiment_cost                         # -0.1 : 1.0
+regiment_recruit_speed                      # -0.1 : 1.0
+local_amount_of_banners                     # 0.1 : 1.0
+local_amount_of_carolean                    # 0.1 : 1.0
+local_amount_of_hussars                     # 0.1 : 1.0
+local_warscore_cost_modifier                # 0.1 : 1.0
+local_fort_maintenance_modifier             # -0.1 : -1.0   
+local_garrison_size                         # 0.1 : 1.0     
+local_attacker_dice_roll_bonus              # 1 : 10        
+local_defender_dice_roll_bonus              # 1 : 10        
+local_garrison_damage                       # 0.05 : 1.0        
+local_assault_fort_cost_modifier            # -0.1 : -1.0       
+local_assault_fort_ability                  # 0.05 : 1.0        
+
+#-----------------------------------------
+# Province: Navy
+#-----------------------------------------
+local_sailors_modifier                      # 0.05 : 1.0
+local_ship_cost                             # -0.1 : -1.0
+local_ship_repair                           # 0.1 : 1.0
+local_own_coast_naval_combat_bonus          # 1 : 10        
+
+blockade_force_required                     # 0.1 : 1.0
+local_naval_engagement_modifier             # 0.1 : 1.0
+hostile_fleet_attrition                     # 1 : 10
+local_sailors                               # 1 : 100
+
+ship_recruit_speed                          # -0.1 : -1.0
+hostile_disembark_speed                     # 0.1 : 1.0
+
+#-----------------------------------------
+# Province: Colonisation
+#-----------------------------------------
+local_colonial_growth                       # 10 : 100
+local_colonist_placement_chance             # 0.05 : 1.0
+
+
+

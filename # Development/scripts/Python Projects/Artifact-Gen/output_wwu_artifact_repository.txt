@@ -1,0 +1,572 @@
+# Elemental Lairat
+country_event = {
+	id = wwu_artifact_repository.75
+	title = wwu_artifact_repository.75.title
+	desc = wwu_artifact_repository.75.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = elemental_lairat }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.75.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_elemental_lairat
+        }
+
+        make_primary_artifact = {
+            artifact = elemental_lairat
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.75.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Onyx Annulet
+country_event = {
+	id = wwu_artifact_repository.76
+	title = wwu_artifact_repository.76.title
+	desc = wwu_artifact_repository.76.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = onyx_annulet }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.76.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_onyx_annulet
+        }
+
+        make_primary_artifact = {
+            artifact = onyx_annulet
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.76.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Spark of Ingenuity
+country_event = {
+	id = wwu_artifact_repository.77
+	title = wwu_artifact_repository.77.title
+	desc = wwu_artifact_repository.77.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = spark_of_ingenuity }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.77.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_spark_of_ingenuity
+        }
+
+        make_primary_artifact = {
+            artifact = spark_of_ingenuity
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.77.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Awak'mani, Grimtotem's Legacy
+country_event = {
+	id = wwu_artifact_repository.78
+	title = wwu_artifact_repository.78.title
+	desc = wwu_artifact_repository.78.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = awakmani }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.78.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_awakmani
+        }
+
+        make_primary_artifact = {
+            artifact = awakmani
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.78.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Kharnalex, The First Light
+country_event = {
+	id = wwu_artifact_repository.79
+	title = wwu_artifact_repository.79.title
+	desc = wwu_artifact_repository.79.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = kharnalex }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.79.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_kharnalex
+        }
+
+        make_primary_artifact = {
+            artifact = kharnalex
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.79.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Pashmar's Finial
+country_event = {
+	id = wwu_artifact_repository.80
+	title = wwu_artifact_repository.80.title
+	desc = wwu_artifact_repository.80.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = pashmars_finial }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.80.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_pashmars_finial
+        }
+
+        make_primary_artifact = {
+            artifact = pashmars_finial
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.80.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Anu-Azshara, Staff of the Eternal
+country_event = {
+	id = wwu_artifact_repository.81
+	title = wwu_artifact_repository.81.title
+	desc = wwu_artifact_repository.81.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = anu_azshara }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.81.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_anu_azshara
+        }
+
+        make_primary_artifact = {
+            artifact = anu_azshara
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.81.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Scepter of the Azsh'ari
+country_event = {
+	id = wwu_artifact_repository.82
+	title = wwu_artifact_repository.82.title
+	desc = wwu_artifact_repository.82.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = scepter_of_the_azshari }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.82.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_scepter_of_the_azshari
+        }
+
+        make_primary_artifact = {
+            artifact = scepter_of_the_azshari
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.82.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Phial of the Arcane Tempest
+country_event = {
+	id = wwu_artifact_repository.83
+	title = wwu_artifact_repository.83.title
+	desc = wwu_artifact_repository.83.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = arcane_phial }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.83.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_arcane_phial
+        }
+
+        make_primary_artifact = {
+            artifact = arcane_phial
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.83.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Vision of Demise
+country_event = {
+	id = wwu_artifact_repository.84
+	title = wwu_artifact_repository.84.title
+	desc = wwu_artifact_repository.84.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = vision_of_demise }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.84.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_vision_of_demise
+        }
+
+        make_primary_artifact = {
+            artifact = vision_of_demise
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.84.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}
+# Pearl of Pandaria
+country_event = {
+	id = wwu_artifact_repository.85
+	title = wwu_artifact_repository.85.title
+	desc = wwu_artifact_repository.85.desc
+	picture = TREASURE_VAULT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+        hidden_effect = {
+            save_artifact_location = { artifact = pearl_of_pandaria }
+        }
+    }
+
+	option = {
+		name = wwu_artifact_repository.85.option.make_primary
+
+        trigger = {
+            has_country_flag = artifact_pearl_of_pandaria
+        }
+
+        make_primary_artifact = {
+            artifact = pearl_of_pandaria
+        }
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+
+            if = {
+                limit = {
+                    ai = yes
+                }
+                add_country_modifier = {
+                    name = ai_recently_set_primary_artifact
+                    duration = 9125
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 100
+        }
+	}
+    option = {
+		name = wwu_artifact_repository.85.option.exit
+
+        hidden_effect = {
+            country_event = { id = wwu_artifact_repository.1 }
+        }
+	}
+}

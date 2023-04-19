@@ -1,0 +1,199 @@
+#------------------------------
+# Crashes
+#------------------------------
+During Gameplay:
+ - On monthly tick:
+  - Map definitions have unused but defined province ID in continent/native/tradenode/trade_company
+   - Causes crash in Nudge if switched to political mapmode
+   
+
+During "Loading Databases" 	
+- If you are using the defines.lua, check you have included all the entries that vanilla includes.
+- Check that there are no references to non-existing files.
+- A tag in country_tags must not reference a file that does not exist.
+- Make sure that all defined colonial regions have at least one province assigned.
+- Scripted Effect / Meta Script with wrongly coded (leads to stack overflow exception) -> conditional input not used correctly, [] used for something thats not an conditional input e.g. - , non closed $input$ like $input
+
+During "Initializing Maplogic"
+- Check that the gamelogic map images have been saved in the correct formats. Make sure the map files used follows the guidelines listed in Map modding.
+- default.map province limit isn't higher than the last province ID in definition.csv.
+- A province ID in default.map no longer exists in the definition.csv.
+- A province ID in adjacencies.txt no longer exists in the definition.csv.
+- A province ID in area.txt no longer exists in the definition.csv.
+- A province ID in climate.txt no longer exists in the definition.csv.
+- A province ID in continent.txt no longer exists in the definition.csv.
+- A province ID in terrain.txt no longer exists in the definition.csv.
+- A province ID in trade_winds.txt no longer exists in the definition.csv.
+- A province ID in area.txt no longer exists in the definition.csv.
+- terrain.bmp has a missing or corrupted color table.
+- rivers.bmp has a missing or corrupted color table.
+- trees.bmp has a missing or corrupted color table.
+- Map dimensions are not a product of 128.
+- The provinces.bmp exceeds 52 megabytes.
+- The provinces.bmp contains provinces that are too large.
+
+During "Loading History Files..."
+- Check that the history files do not reference any missing country tags or provinces IDs.
+
+During "Loads Flags..."
+- Check that the history files do not reference any missing country tags (specifically the diplomacy folder).
+
+During "Loading Graphics..."
+- Check that the graphical map images have been saved in the correct formats. Make sure the map files used follows the guidelines listed in Map modding.
+
+During "Loading Map (Creating Straits)..."
+- 
+Check that the adjacencies.txt file lists valid straits.
+
+Clicking Play in the lobby 	The issue can lie within the common files:
+- Missing entries in required files such as static_modifiers
+- Missing entries for modifiers used in effects or triggers.
+
+History files:
+- A country capital defined in history/countries references a province id that has no pixels in map/provinces.bmp.
+
+Clicking a Province
+- Make sure the province belongs to a continent in continent.txt.
+- Make sure the province belongs to an area in area.txt.
+
+Nation Designer Government Tab when using more than 3 Government Ranks
+- The nationadesignerview.gui file needs to be edited to have additional icon_gov_desc_* and gov_desc_* for each new level of government rank.
+
+Crash on Hover in an Interface
+- Typically caused by a clause missing from the relevant files, i.e. the army professionalism static modifiers when hovering over the Hire General button. It may also be caused by errors in on_actions.txt.
+
+Trying to Move a Capital
+- Often caused by missing or misnumbered provinces in continent.txt.
+
+Hovering over a country in the Great Powers list
+- Also often caused by missing or misnumbered provinces in continent.txt. 
+
+Load Order:
+    Databases (Load)
+    Maplogic
+    Databases (Setup)
+    History 
+    Events
+    Flags
+    Checksum
+    Graphics
+    Provinces
+    Borders
+    Terrain
+    Straits
+    Trees
+    
+Setup Order:
+[eu4application.cpp:820]: Loaded GUI Definition File
+[eu4application.cpp:1372]: TradingPolicyDataBase Initialized
+[eu4application.cpp:1388]: CGovernmentRankDatabase Initialized
+[eu4application.cpp:1405]: FactionDatabase Initialized
+[technology.cpp:1482]: Technology Table
+[eu4application.cpp:1422]: TechnologyDatabase Phase
+[eu4application.cpp:1438]: CenterOfTradeDatabase Initialized
+[eu4application.cpp:1458]: Static Modifiers Initialized
+[eu4application.cpp:1473]: Event Modifiers Initialized
+[opinion_modifier.cpp:576]: Opinion Modifier
+[eu4application.cpp:1490]: Opinions Initialized
+[eu4application.cpp:1507]: Timed Modifiers Initialized
+[eu4application.cpp:1529]: CountryTags Initialized
+[powerprojection.cpp:415]: Power Modifier
+[eu4application.cpp:1545]: PowerProjection Initialized
+[eu4application.cpp:1560]: Scripted triggers Initialized
+[eu4application.cpp:1575]: Scripted effects Initialized
+[culture.cpp:139]: Culture Group
+[eu4application.cpp:1591]: CultureDatabase Initialized
+[religion.cpp:228]: Religion Group
+[religion.cpp:231]: Religious School loaded
+[religion.cpp:228]: Religion Group
+[eu4application.cpp:1606]: ReligionDatabase Initialized
+[eu4application.cpp:1622]: ReligiousConversionDataBase Initialized
+[tradegoods.cpp:311]: TradeGoods
+[eu4application.cpp:1637]: TradeGoodsDatabase Initialized
+[advisortype.cpp:151]: AdvisorType
+[eu4application.cpp:1653]: AdvisorTypeDatabase Initialized
+[eu4application.cpp:1670]: GovernmentReformDatabase Initialized
+[government.cpp:578]: Government Name
+[eu4application.cpp:1686]: GovernmentNameDatabase Initialized
+[eu4application.cpp:1701]: GovernmentDatabase Initialized
+[eu4application.cpp:1722]: EstateDatabase Initialized
+[eu4application.cpp:1737]: BuildingDatabase Initialized
+[eu4application.cpp:1752]: DeityDatabase Initialized
+[eu4application.cpp:1767]: FetishistCultDatabase Initialized
+[eu4application.cpp:1787]: BuildingDatabase Initialized
+[eu4application.cpp:1802]: TechnologyDatabase Phase
+[eu4application.cpp:1817]: CountryDatabase Initialized
+[eu4application.cpp:1833]: FervorDatabase Initialized
+[eu4application.cpp:1848]: ChurchAspectDatabase Initialized
+[eu4application.cpp:1863]: IdeaDatabase Initialized
+[religiousreform.cpp:209]: Idea Group
+[eu4application.cpp:1878]: ReligiousReformDatabase Initialized
+[customideas.cpp:571]: Custom Idea modifers:
+[eu4application.cpp:1894]: CustomIdeaDataBase Initialized
+[eu4application.cpp:1911]: NavalDoctrineDatabase Initialized
+[eu4application.cpp:1929]: Custom Country Colors Initialized
+[eu4application.cpp:1959]: CountryDatabaseFiles Read
+[policy.cpp:194]: Decisions loaded
+[eu4application.cpp:1980]: Policies Initialized
+[map.cpp:705]: Terrain 
+[map.cpp:743]: Tree Terrain
+[map.cpp:1063]: Continent
+[map.cpp:1355]: Area 
+[map.cpp:1191]: SuperRegion 
+[eu4application.cpp:2011]: Map Initialized
+[tradenodedatabase.cpp:320]:  Loaded Tradenode
+[eu4application.cpp:2034]: TradeNodeDatabase Initialized
+[eu4application.cpp:2049]: Dynamic Province Names Initialized
+[colonialregion.cpp:462]: Colonial Region 
+[eu4application.cpp:2066]: Colonial Regions Initialized
+[client_states.cpp:162]: Client State Region
+[eu4application.cpp:2083]: Client States Initialized
+[tradecompany.cpp:276]: Colonial Region 
+[eu4application.cpp:2101]: Trade Companies Initialized
+[eu4application.cpp:2117]: Trade Companies Investments Initialized
+[triggeredmodifier.cpp:128]: TriggeredModifier 
+[eu4application.cpp:2135]: Triggered Modifiers Initialized
+[provincetriggeredmodifier.cpp:164]: TriggeredModifier 
+[eu4application.cpp:2151]: TProvince riggered Modifiers Initialized
+[eu4application.cpp:2167]: Revolt Triggers Initialized
+[ai_personality.cpp:147]: AI Personalities
+[eu4application.cpp:2182]: AI Personality Types Initialized
+[eu4application.cpp:2197]: AI Attitude Types Initialized
+[luck.cpp:56]: Lucky script
+[eu4application.cpp:2219]: Imperial Reforms Initialized
+[eu4application.cpp:2235]: Imperial Incidents Initialized
+[eu4application.cpp:2251]: Decrees Initialized
+[eu4application.cpp:2266]: Isolation levels Initialized
+[eu4application.cpp:2281]: Incidents Initialized
+[eu4application.cpp:2296]: Insults Initialized
+[rebeltype.cpp:586]: Rebel Type
+[eu4application.cpp:2311]: Rebel Types Initialized
+[wargoaltype.cpp:447]: War Goal Types
+[eu4application.cpp:2326]: War Goal Types Initialized
+[casusbelli.cpp:326]: Casus Belli Types
+[eu4application.cpp:2343]: Casus Belli Types Initialized
+[tradegoods.cpp:354]: TradeGoods price definition 
+[eu4application.cpp:2361]: TradeGoods Prices Initialized
+[hegemon.cpp:155]: Hegemons loaded 
+[state_edict.cpp:177]: Edicts loaded 
+[parliament.cpp:956]: Parliament Issues loaded 
+[parliament.cpp:1022]: Parliament Bribes loaded 
+[diplomaticaction_trigger.cpp:167]: Scripted trigger 
+[eu4application.cpp:2381]: Diplomatic Actions Initialized
+[eu4application.cpp:2396]: Scripted Functions Initialized
+[institutions.cpp:562]: Institutions loaded 
+[age.cpp:400]: Ages loaded 
+[professionalism.cpp:192]: Professionalism Modifiers
+[eu4application.cpp:2439]: Graphical unit types database Initialized
+[decision.cpp:294]: Decisions loaded
+[mercenary.cpp:630]: MercenaryTemplates 
+[musicmanager.cpp:94]: Loaded songs.
+[eu4application.cpp:2540]: Dynasty Colors Initialized
+[rulerpersonality.cpp:584]: RulerPersonalitys 
+[leaderpersonality.cpp:141]: LeaderPersonalities
+[history.cpp:1049]: History loaded 
+[eu4application.cpp:2568]: History Initialized
+[eventmanager.cpp:132]: >=== NAMESPACE >
+[onaction.cpp:381]: ActionList 
+[disaster.cpp:352]: Disasters loaded 
+[natives.cpp:168]: NativeType 

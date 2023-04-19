@@ -1,0 +1,32 @@
+if = [
+    limit = [
+        has_country_flag = artifact_focus_{artifact}
+    ]
+
+    random_list = [
+        50 = [
+            trigger = [
+                NOT = [ has_global_flag = discovered_artifact_{artifact} ]
+            ]
+            country_event = [ id = wwu_archaeology.{event_id} ]
+        ]
+        10 = [
+            country_event = [ id = wwu_archaeology.400 ]
+        ]
+        17 = [
+            country_event = [ id = wwu_archaeology.401 ]
+        ]
+        10 = [
+            country_event = [ id = wwu_archaeology.402 ]
+        ]
+        5 = [
+            country_event = [ id = wwu_archaeology.403 ]
+        ]
+        5 = [
+            country_event = [ id = wwu_archaeology.404 ]
+        ]
+        10 = [
+            country_event = [ id = wwu_archaeology.405 ]
+        ]
+    ]
+]

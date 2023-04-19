@@ -1,0 +1,36 @@
+government_rank = 1
+government = theocracy
+add_government_reform = white_walker_cult_reform
+mercantilism = 0
+
+technology_group = white_walker
+primary_culture = white_walkers
+religion = asoiaf_white_walker
+
+capital = 1
+fixed_capital = 1
+
+100.1.1 = {
+	monarch = {
+		name = "The Night King"
+		dynasty = "of the Eternal Winter"
+		adm = 6
+		dip = 6
+		mil = 6
+		birth_date = 1.1.1
+	}
+    clear_scripted_personalities = yes
+    add_ruler_personality = immortal_personality
+    
+    add_country_modifier = {
+        name = army_of_the_undead
+        duration = -1
+    }
+}
+
+304.1.1 = {
+    add_country_modifier = {
+        name = undead_viserion
+        duration = -1
+    }
+}
