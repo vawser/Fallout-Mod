@@ -1,145 +1,137 @@
 #--------------------------------------------
 # Republic
 #--------------------------------------------
+# Generic
 settlement_reform = {
-    icon = "peace"
-
-    allow_normal_conversion = no
-    legacy_equivalent = settlement_legacy
+    icon                        = "peace"
+    legacy_equivalent           = settlement_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes
+	allow_convert               = yes
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
     
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    heir = no
-	queen = no
-
-	valid_for_nation_designer = no
-    
-    duration = 5
     has_term_election = no
     election_on_death = yes
     
     modifiers = {
+        stability_cost_modifier = -0.15
         global_colonial_growth = 5
         global_trade_goods_size_modifier = 0.1
-        max_absolutism = -20
+        
+        governing_capacity = 100
+        
+        max_absolutism = -30
     }
+    
+     potential = {
+        NOT = { has_government_attribute = locked_government_type }
+	}
+    
+    ai = { factor = 1 }
 }
-militia_reform = {
-    icon = "military"
-    
-    allow_normal_conversion = no
-    legacy_equivalent = militia_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    heir = no
-	queen = no
 
-    allow_migration = yes
-    
-    duration = 5
-    has_term_election = no
-    election_on_death = yes
+# Generic
+militia_reform = {
+    icon                        = "military"
+    legacy_equivalent           = militia_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes
+	allow_convert               = yes
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
     
     modifiers = {
         global_manpower_modifier = 0.1
         global_regiment_cost = -0.15
+        
+        land_forcelimit = 5
+        
+        governing_capacity = -100
+        
+        max_absolutism = 5
     }
+    
+    potential = {
+        NOT = { has_government_attribute = locked_government_type }
+	}
+    
+    ai = { factor = 1 }
 }
-republic_reform = {
-    icon = "person"
-    
-    allow_normal_conversion = no
-    legacy_equivalent = republic_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    heir = no
-	queen = no
 
-	valid_for_nation_designer = no
-    
-    duration = 5
-    has_term_election = yes
-    
-    republican_name = yes
-	royal_marriage = yes
+# Generic
+republic_reform = {
+    icon                        = "person"
+    legacy_equivalent           = republic_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes
+	allow_convert               = yes
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
     
     modifiers = {
         diplomatic_reputation = 1
         diplomatic_upkeep = 1
+        
+        governing_capacity = 100
+        
         max_absolutism = -20
     }
+    
+    potential = {
+        NOT = { has_government_attribute = locked_government_type }
+	}
+    
+    ai = { factor = 1 }
 }
+
+# Forced for low Republican Tradition
 dictatorship_reform = {
-    icon = "charismatic_person"
-
-    allow_normal_conversion = no
-    legacy_equivalent = dictatorship_legacy
+    icon                        = "charismatic_person"
+    legacy_equivalent           = dictatorship_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    heir = no
-	queen = no
-
-	valid_for_nation_designer = no
-    
-    duration = 5
     has_term_election = no
-    election_on_death = yes
-    
-    republican_name = yes
-	royal_marriage = no
     
     modifiers = {
         diplomatic_annexation_cost = -0.25
         envoy_travel_time = -0.20
+        
+        governing_capacity = -100
+        
         max_absolutism = -10
     }
+    
+    ai = { factor = 0 }
 }
+
+# Institute
 institute_reform = {
-    icon = "console"
-
-    allow_normal_conversion = no
-    legacy_equivalent = institute_legacy
+    icon                        = "console"
+    legacy_equivalent           = institute_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    lock_level_when_selected = yes
-    
-    trigger = {
-        OR = {
-            have_had_reform = institute_reform
-            any_country = {
-                has_reform = institute_reform
-                has_opinion = {
-                    who = ROOT
-                    value = 150
-                }
-            }
-        }
-    }
-    
-    heir = no
-	queen = no
-
-	valid_for_nation_designer = no
-    
-    duration = 5
     has_term_election = no
-    election_on_death = yes
-   
-    royal_marriage = no
     
-    election_on_death = yes
-    
-    different_religion_acceptance = -50
-	different_religion_group_acceptance = -50
+    modifiers = {
+        country_admin_power = 1
+        country_diplomatic_power = 1
+        country_military_power = 1
+        
+        governing_capacity = 250
+        
+        max_absolutism = 10
+    }
     
     factions = { 
         INS_advanced_systems
@@ -149,124 +141,95 @@ institute_reform = {
         INS_synth_retention_bureau
     }
     
-    modifiers = {
-        country_admin_power = 1
-        country_diplomatic_power = 1
-        country_military_power = 1
+    potential = {
+        have_had_reform = institute_reform
     }
+    
+    ai = { factor = 0 }
 }
+
+# Enclave
 enclave_reform = {
-    icon = "usa_flag"
+    icon                        = "usa_flag"
+    legacy_equivalent           = enclave_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
 
-    allow_normal_conversion = no
-    legacy_equivalent = enclave_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    lock_level_when_selected = yes
-    
-    trigger = {
-        OR = {
-            have_had_reform = enclave_reform
-            any_country = {
-                has_reform = enclave_reform
-                has_opinion = {
-                    who = ROOT
-                    value = 150
-                }
-            }
-        }
-    }
-    
-    heir = no
-	queen = no
-
-	valid_for_nation_designer = no
-    
-    duration = 5
-    has_term_election = yes
-    
-    republican_name = yes
-    royal_marriage = no
-
-    different_religion_acceptance = -50
-	different_religion_group_acceptance = -50
-    
     modifiers = {
         republican_tradition = 0.25
         prestige_decay = -0.03
+        
+        land_forcelimit = 10
+        naval_forcelimit = 10
+        
+        governing_capacity = 250
+        
         max_absolutism = 20
     }
-}
-vault_reform = {
-    icon = "overseer"
     
-    allow_normal_conversion = no
-    legacy_equivalent = vault_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-
-    trigger = {
-        OR = {
-            have_had_reform = vault_reform
-            any_country = {
-                has_reform = vault_reform
-                has_opinion = {
-                    who = ROOT
-                    value = 150
-                }
-            }
-        }
+    potential = {
+        have_had_reform = enclave_reform
     }
     
-    heir = no
-	queen = no
+    ai = { factor = 0 }
+}
 
-	valid_for_nation_designer = no
-    
-    duration = 5
-    has_term_election = no
-    election_on_death = yes
-    
+# Vault
+vault_reform = {
+    icon                        = "overseer"
+    legacy_equivalent           = vault_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
+
     republican_name = no
-	royal_marriage = no
     
     modifiers = {
         development_cost = -0.1
         advisor_pool = 1
+        
+        land_forcelimit = -3
+        naval_forcelimit = -3
+        
+        governing_capacity = -100
+        
         max_absolutism = -10
     }
-}
-ncr_reform = {
-    icon = "artillery"
-
-    allow_normal_conversion = no
-    legacy_equivalent = ncr_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    lock_level_when_selected = yes
     
     potential = {
-        OR = {
-            have_had_reform = ncr_reform
-            is_emperor = yes
-        }
+        have_had_reform = vault_reform
     }
-    
-    heir = no
-	queen = no
+}
 
-	valid_for_nation_designer = no
-    
-    different_religion_acceptance = 25
-	different_religion_group_acceptance = 25
-    
-    duration = 5
-    has_term_election = yes
+# NCR
+ncr_reform = {
+    icon                        = "artillery"
+    legacy_equivalent           = ncr_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
+
+    modifiers = {
+        global_tax_modifier = 0.1
+        num_accepted_cultures = 2
+        
+        land_forcelimit = 15
+        naval_forcelimit = 15
+        
+        governing_capacity = 300
+        
+        max_absolutism = -10
+    }
     
     conditional = {
         allow = {
@@ -275,37 +238,38 @@ ncr_reform = {
         has_parliament = yes
     }
 
-    modifiers = {
-        global_tax_modifier = 0.1
-        num_accepted_cultures = 2
-        max_absolutism = -10
+
+    potential = {
+        have_had_reform = ncr_reform
     }
 }
-china_reform = {
-    icon = "vault_computer"
-    
-    allow_normal_conversion = no
-    legacy_equivalent = china_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
 
-    lock_level_when_selected = yes
+# Chinese Invasion
+china_reform = {
+    icon                        = "vault_computer"
+    legacy_equivalent           = china_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
-    trigger = {
-        have_had_reform = china_reform
-    }
-    
-    duration = 5
     has_term_election = no
-    election_on_death = yes
-    
-    different_religion_acceptance = -200
-	different_religion_group_acceptance = -200
     
     modifiers = {
         land_morale = 0.2
         global_unrest = -3
+        
+        land_forcelimit = 30
+        naval_forcelimit = 30
+        
+        governing_capacity = 300
+        
         max_absolutism = 30
+    }
+    
+    potential = {
+        have_had_reform = china_reform
     }
 }

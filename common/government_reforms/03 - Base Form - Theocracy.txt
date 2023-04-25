@@ -1,119 +1,94 @@
 #--------------------------------------------
 # Theocracy
 #--------------------------------------------
+# Generic
 theocracy_reform = {
-    icon = "church"
-    
-    allow_normal_conversion = no
-    legacy_equivalent = theocracy_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-
-    has_devotion = yes
-
-    rulers_can_be_generals = no
-	royal_marriage = no
-    
-    queen = no
-	heir = yes
+    icon                        = "church"
+    legacy_equivalent           = theocracy_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes 
+	allow_convert               = yes 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
     different_religion_acceptance = -50
 	different_religion_group_acceptance = -50
-    
-	valid_for_nation_designer = no
-    
-    conditional = {
-        allow = {
-            has_dlc = "Common Sense"
-        }
-        has_devotion = yes
-    }
-    
+
     modifiers = {
         tolerance_own = 1
         missionaries = 1
     }
-}
-brotherhood_reform = {
-    icon = "power_armor"
     
-    allow_normal_conversion = no
-    legacy_equivalent = brotherhood_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    lock_level_when_selected = yes
-    
-    trigger = {
-        OR = {
-            have_had_reform = brotherhood_reform
-            any_country = {
-                has_reform = brotherhood_reform
-                has_opinion = {
-                    who = ROOT
-                    value = 150
-                }
-            }
-        }
+    potential = {
+        NOT = { has_government_attribute = locked_government_type }
     }
     
-	has_devotion = yes
+    ai = { factor = 1 }
+}
 
-	royal_marriage = no
-    
-    queen = no
-	heir = yes
+# Brotherhood of Steel
+brotherhood_reform = {
+    icon                        = "power_armor"
+    legacy_equivalent           = brotherhood_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
     different_religion_acceptance = -50
 	different_religion_group_acceptance = -50
-    
-	valid_for_nation_designer = no
-
-    conditional = {
-        allow = {
-            has_dlc = "Common Sense"
-        }
-        has_devotion = yes
-    }
     
     modifiers = {
         technology_cost = -0.05
         free_mil_policy = 1
+        
+        land_forcelimit = -3
+        naval_forcelimit = -3
+        
+        governing_capacity = -100
+        
         max_absolutism = 20
     }
+    
+    potential = {
+        have_had_reform = brotherhood_reform
+    }
+    
+    ai = { factor = 1 }
 }
+
+# Cult
 cult_reform = {
-    icon = "graveyard"
-
-    allow_normal_conversion = no
-    legacy_equivalent = cult_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-
-    has_devotion = yes
-
-	royal_marriage = no
-    
-    queen = no
-	heir = yes
+    icon                        = "graveyard"
+    legacy_equivalent           = cult_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
     different_religion_acceptance = -50
 	different_religion_group_acceptance = -50
     
-	valid_for_nation_designer = no
-    
-    conditional = {
-        allow = {
-            has_dlc = "Common Sense"
-        }
-        has_devotion = yes
-    }
-    
     modifiers = {
         global_missionary_strength = 0.03
         yearly_corruption = -0.05
+        
+        land_forcelimit = -3
+        naval_forcelimit = -3
+        
+        governing_capacity = -100
+        
+        max_absolutism = 5
     }
+    
+     potential = {
+        have_had_reform = cult_reform
+    }
+    
+    ai = { factor = 1 }
 }

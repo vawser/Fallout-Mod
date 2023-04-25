@@ -1,266 +1,249 @@
 #--------------------------------------------
 # Tribal
 #--------------------------------------------
+# Generic
 tribe_reform = {
-    icon = "brahmin"
-    
-    allow_normal_conversion = no
-    legacy_equivalent = tribe_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    heir = yes
-	queen = no
-    
-    native_mechanic = yes
-	allow_migration = yes
-    
-	valid_for_nation_designer = no
-    
-    min_autonomy = 50
-    
-    conditional = {
-        allow = {
-            has_dlc = "El Dorado"
-        }
-        native_mechanic = no
-    }
+    icon                        = "brahmin"
+    legacy_equivalent           = tribe_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes 
+	allow_convert               = yes
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
     
     modifiers = {
-        stability_cost_modifier = -0.5
+        core_creation = -0.1
+		global_unrest = -1
+        morale_damage = 0.1
+        
+        governing_capacity = -100
+        
+        max_absolutism = 10
     }
+    
+    potential = {
+        NOT = { has_government_attribute = locked_government_type }
+    }
+    
+	ai = { factor = 1 }
 }
+
+# Generic
 commune_reform = {
-    icon = "person"
-    
-    allow_normal_conversion = no
-    legacy_equivalent = commune_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    heir = yes
-	queen = no
-    
-	valid_for_nation_designer = no
-    
-    native_mechanic = yes
-	allow_migration = yes
-    
-    republican_name = yes
-	royal_marriage = no
-    
-    min_autonomy = 50
-    
-    conditional = {
-        allow = {
-            has_dlc = "El Dorado"
-        }
-        native_mechanic = no
-    }
+    icon                        = "person"
+    legacy_equivalent           = commune_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes 
+	allow_convert               = yes
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
     
     modifiers = {
-        global_unrest = -3
+        global_tax_modifier = 0.1
+        improve_relation_modifier = 0.05
+		reinforce_speed = 0.1
+        
+        max_absolutism = -10
     }
+    
+    potential = {
+        NOT = { has_government_attribute = locked_government_type }
+    }
+    
+	ai = { factor = 1 }
 }
+
+# Raider
 raider_reform = {
-    icon = "raider"
-
-    allow_normal_conversion = no
-    legacy_equivalent = raider_legacy
+    icon                        = "raider"
+    legacy_equivalent           = raider_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes 
+	allow_convert               = yes
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
     
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
+    nomad                   = yes
+    monarchy                = no
+    heir                    = no
+    generals_become_rulers  = yes
+    raze_province           = yes
     
-    heir = yes
-	queen = no
-    
-	valid_for_nation_designer = no
-    
-    native_mechanic = yes
-	allow_migration = yes
-    
-    min_autonomy = 50
-    
-    conditional = {
-        allow = {
-            has_dlc = "El Dorado"
-        }
-        native_mechanic = no
-    }
-
     modifiers = {
-        mercenary_cost = -0.5
-        merc_maintenance_modifier = -0.5
-        mercenary_discipline = 0.1
+        land_morale = 0.1
+        global_regiment_cost = -0.1
+        manpower_in_own_culture_provinces = 0.15
+        
+        land_forcelimit = 5
+        
+        governing_capacity = -150
+        
+        max_absolutism = 20
     }
+    
+    potential = {
+        NOT = { has_government_attribute = locked_government_type }
+    }
+    
+	ai = { factor = 1 }
 }
+
+# Super Mutant
 super_mutant_reform = {
-    icon = "union"
+    icon                        = "union"
+    legacy_equivalent           = super_mutant_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
-    allow_normal_conversion = no
-    legacy_equivalent = super_mutant_legacy
+    nomad                   = yes
+    monarchy                = no
+    heir                    = no
+    generals_become_rulers  = yes
+    raze_province           = yes
     
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
+    modifiers = {
+        global_regiment_cost = -0.1
+        unjustified_demands = -0.1
+		army_tradition_from_battle = 0.33
+        
+        land_forcelimit = 5
+        
+        governing_capacity = -100
+        
+        max_absolutism = 10
+    }
     
-    lock_level_when_selected = yes
+    custom_attributes = {
+		locked_government_type = yes
+	}
     
     potential = {
         have_had_reform = super_mutant_reform
     }
     
-    heir = yes
-	queen = no
+    ai = { factor = 0 }
+}
+
+# Swarm
+swarm_reform = {
+    icon                        = "factory"
+    legacy_equivalent           = swarm_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
-	valid_for_nation_designer = no
-    
-    native_mechanic = yes
-	allow_migration = yes
-    
-    min_autonomy = 50
-    
-    conditional = {
-        allow = {
-            has_dlc = "El Dorado"
-        }
-        native_mechanic = no
-    }
+    nomad                   = yes
+    monarchy                = no
+    heir                    = no
+    generals_become_rulers  = yes
+    raze_province           = yes
     
     modifiers = {
-        shock_damage_received = -0.2
-        fire_damage_received = -0.2
+        global_manpower_modifier = 0.1
+        province_warscore_cost = -0.1
+        infantry_shock = 1.0
+        
+        land_forcelimit = 10
+        
+        governing_capacity = -200
+        
+        max_absolutism = 20
     }
-}
-swarm_reform = {
-    icon = "factory"
     
-    allow_normal_conversion = no
-    legacy_equivalent = swarm_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    lock_level_when_selected = yes
+    custom_attributes = {
+		locked_government_type = yes
+	}
     
     potential = {
         have_had_reform = swarm_reform
     }
     
-    heir = yes
-	queen = no
-    
-	valid_for_nation_designer = no
-    
-    native_mechanic = yes
-	allow_migration = yes
-    
-    royal_marriage = no
-    
-    min_autonomy = 50
-    
-    conditional = {
-        allow = {
-            has_dlc = "El Dorado"
-        }
-        native_mechanic = no
-    }
-    
-    modifiers = {
-        global_regiment_recruit_speed = -0.5
-        global_regiment_cost = -0.5
-    }
+    ai = { factor = 0 }
 }
-wolf_pack_reform = {
-    icon = "military"
-    
-    allow_normal_conversion = no
-    legacy_equivalent = wolf_pack_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    lock_level_when_selected = yes
-    
-    trigger = {
-        OR = {
-            have_had_reform = wolf_pack_reform
-            any_country = {
-                has_reform = wolf_pack_reform
-                has_opinion = {
-                    who = ROOT
-                    value = 150
-                }
-            }
-        }
-    }
-    
-    heir = yes
-	queen = no
-    
-    native_mechanic = yes
-	allow_migration = yes
-    
-	valid_for_nation_designer = no
-    
-    min_autonomy = 50
-    
-    conditional = {
-        allow = {
-            has_dlc = "El Dorado"
-        }
-        native_mechanic = no
-    }
 
+# Wolf Pack
+wolf_pack_reform = {
+    icon                        = "military"
+    legacy_equivalent           = wolf_pack_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
+    
+    nomad                   = yes
+    monarchy                = no
+    heir                    = no
+    generals_become_rulers  = yes
+    raze_province           = yes
+    
     modifiers = {
+        core_creation = -0.1
+        harsh_treatment_cost = -0.2
         infantry_power = 0.1
-        reinforce_cost_modifier = -0.1
+        
+        land_forcelimit = 5
+        
+        governing_capacity = -250
+        
+        max_absolutism = 20
     }
+    
+    custom_attributes = {
+		locked_government_type = yes
+	}
+    
+    potential = {
+		have_had_reform = wolf_pack_reform
+	}
+    
+	ai = { factor = 0 }
 }
+
+# Great Khan
 great_khan_reform = {
-    icon = "cross"
+    icon                        = "cross"
+    legacy_equivalent           = great_khan_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
     
-    allow_normal_conversion = no
-    legacy_equivalent = great_khan_legacy
-    
-    valid_for_nation_designer = yes
-	nation_designer_cost = 0
-    
-    lock_level_when_selected = yes
-    
-    trigger = {
-        OR = {
-            have_had_reform = great_khan_reform
-            any_country = {
-                has_reform = great_khan_reform
-                has_opinion = {
-                    who = ROOT
-                    value = 150
-                }
-            }
-        }
-    }
-    
-    heir = yes
-	queen = no
-    
-	valid_for_nation_designer = no
-    
-    native_mechanic = yes
-	allow_migration = yes
-    
-    min_autonomy = 50
-    
-    conditional = {
-        allow = {
-            has_dlc = "El Dorado"
-        }
-        native_mechanic = no
-    }
+    heir                    = no
+    monarchy                = no
+    nomad                   = yes
+    generals_become_rulers  = yes
+    raze_province           = yes
     
     modifiers = {
-        loot_amount = 1.0
-        war_taxes_cost_modifier = -1.0
-    }
+        harsh_treatment_cost = -0.2
+		cavalry_power = 0.25
+        raze_power_gain = 0.33
+        
+        land_forcelimit = 5
+        
+        governing_capacity = -100
+        
+        max_absolutism = 20
+	}
+    
+    custom_attributes = {
+		locked_government_type = yes
+	}    
+    
+    potential = {
+		have_had_reform = great_khan_reform
+	}
+    
+	ai = { factor = 0 }
 }
