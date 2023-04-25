@@ -18,10 +18,10 @@ bureaucrats_dominance = {
 traders_dominance = {
 	potential = {
 		has_estate = estate_traders
-        estate_influence = { estate = estate_merchants influence = 80 }
+        estate_influence = { estate = estate_traders influence = 80 }
 	}
 	trigger = {
-		estate_influence = { estate = estate_merchants influence = 100 }
+		estate_influence = { estate = estate_traders influence = 100 }
 	}
 
 	global_unrest = 10
@@ -60,10 +60,10 @@ citizens_dominance = {
 tribals_dominance = {
 	potential = {
 		has_estate = estate_tribals
-        estate_influence = { estate = estate_tribesmen influence = 80 }
+        estate_influence = { estate = estate_tribals influence = 80 }
 	}
 	trigger = {
-		estate_influence = { estate = estate_tribesmen influence = 100 }
+		estate_influence = { estate = estate_tribals influence = 100 }
 	}
 
 	global_unrest = 10

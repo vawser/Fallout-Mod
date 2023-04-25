@@ -466,14 +466,14 @@ guiTypes = {
 		{
 			name ="governing_capacity_icon"
 			spriteType = "GFX_governing_capacity"
-			position = { x= 20 y = 278 }
+			position = { x= 32 y = 290 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.75
 		}
 
 		instantTextBoxType = {
 			name = "Governing Capacity_label"
-			position = { x = 58 y = 287 }
+			position = { x = 56 y = 287 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -678,11 +678,11 @@ guiTypes = {
 		listboxType = {
 			name = "revolters_listbox"
 			backGround = ""
-			position = { x=25 y=385 }
-			size = { x=482 y=143 }
+			position = { x=22 y=385 }
+			size = { x=482 y=163 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
-			spacing = 1.5
+			spacing = 0
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 		}
@@ -717,8 +717,7 @@ guiTypes = {
 				name ="sort_overext_tax"
 				quadTextureSprite = "GFX_sort_62_dev"
 				position = { x = 114 y = 46 }
-#				buttonFont = "vic_18"
-#				buttonText = "LEDGER_DEVELOPMENT"
+				buttonFont = "vic_18"
 				pdx_tooltip = "SORT_BY_DEVELOPMENT"
 				pdx_tooltip_delayed = ""
 			}
@@ -757,8 +756,7 @@ guiTypes = {
 				name ="sort_cores"
 				quadTextureSprite = "GFX_sort_79_core"
 				position = { x = 404 y = 46 }
-#				buttonFont = "vic_18"
-#				buttonText = "GIVE_UP_CORES"
+				buttonFont = "vic_18"
 				pdx_tooltip = "GIVE_UP_CORES"
 				pdx_tooltip_delayed = ""
 			}
@@ -859,7 +857,7 @@ guiTypes = {
 				borderSize = {x = 4 y = 4}
 				text = "..."
 				maxWidth = 180
-				maxHeight = 64
+				maxHeight = 32
 				format = left
 				fixedsize = yes
 			}
@@ -910,12 +908,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "rebelsize_desc"
-				position = { x = 54 y = 394}
+				position = { x = 56 y = 394}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}
 				text = ""
-				maxWidth = 248
+				maxWidth = 246
 				maxHeight = 48
 				format = left
 				fixedsize = yes
@@ -931,12 +929,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "onsiegewon_desc"
-				position = { x = 54 y = 438}
+				position = { x = 56 y = 438}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}
 				text = ""
-				maxWidth = 248
+				maxWidth = 246
 				maxHeight = 48
 				format = left
 				fixedsize = yes
@@ -1595,7 +1593,7 @@ guiTypes = {
 			maxHeight = 22
 			fixedsize = yes
 			format = centre
-			allwaystransparent = yes
+			alwaystransparent = yes
 		}
 
 	}
@@ -1632,7 +1630,7 @@ guiTypes = {
 			maxHeight = 22
 			fixedsize = yes
 			format = centre
-			allwaystransparent = yes
+			alwaystransparent = yes
 		}
 	}
 
@@ -1668,7 +1666,7 @@ guiTypes = {
 			maxHeight = 22
 			fixedsize = yes
 			format = centre
-			allwaystransparent = yes
+			alwaystransparent = yes
 		}
 	}
 
@@ -1683,7 +1681,7 @@ guiTypes = {
 	horizontalBorder= ""
 	verticalBorder= ""
 	fullScreen = no
-	#allwaystransparent = yes
+	#alwaystransparent = yes
 
 	instantTextBoxType = {
 		name = "demand_text"
@@ -1696,7 +1694,7 @@ guiTypes = {
 		maxHeight = 70
 		format = left
 		fixedsize = yes
-		allwaystransparent = yes
+		alwaystransparent = yes
 	}
 }
 

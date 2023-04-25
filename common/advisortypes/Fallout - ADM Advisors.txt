@@ -2,15 +2,23 @@ fm_administrator = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
 	core_creation = -0.05
-
+    
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
 }
@@ -18,13 +26,21 @@ fm_treasurer = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
 	global_tax_modifier = 0.1
 
 	chance = { factor = 1 }
@@ -34,13 +50,21 @@ fm_researcher = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
 	idea_cost = -0.05
 
 	chance = { factor = 1 }
@@ -49,14 +73,22 @@ fm_researcher = {
 fm_inquisitor = {
     monarch_power = ADM
 	
-    skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+   skill_scaled_modifier = { 
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
 	global_missionary_strength = 0.02
 
 	chance = { factor = 1 }
@@ -66,13 +98,21 @@ fm_orator = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
 	global_unrest = -2
 
 	chance = { factor = 1 }
@@ -82,13 +122,21 @@ fm_bureaucrat = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     state_maintenance_modifier = -0.1
 
 	chance = { factor = 1 }
@@ -98,13 +146,21 @@ fm_architect = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     build_cost = -0.15
 
 	chance = { factor = 1 }
@@ -114,13 +170,21 @@ fm_artist = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     prestige = 1
 
 	chance = { factor = 1 }
@@ -130,13 +194,21 @@ fm_farmer = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     production_efficiency = 0.1
 
 	chance = { factor = 1 }
@@ -146,13 +218,21 @@ fm_evangelist = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     missionaries = 1 
 
 	chance = { factor = 1 }
@@ -162,13 +242,21 @@ fm_theologian = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     missionary_maintenance_cost = -0.2
 
 	chance = { factor = 1 }
@@ -178,13 +266,21 @@ fm_mayor = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     global_autonomy = -0.05 
 
 	chance = { factor = 1 }
@@ -194,13 +290,21 @@ fm_chemist = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     global_institution_spread = 0.25 
 
 	chance = { factor = 1 }
@@ -209,14 +313,22 @@ fm_chemist = {
 fm_physicist = {
     monarch_power = ADM
 	
-    skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+   skill_scaled_modifier = { 
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     technology_cost = -0.05
 
 	chance = { factor = 1 }
@@ -226,13 +338,21 @@ fm_biologist = {
     monarch_power = ADM
 	
     skill_scaled_modifier = { 
-        legitimacy = 0.05
-        republican_tradition = 0.05
-        devotion = 0.05
-        horde_unity = 0.05
-        meritocracy = 0.05
+        trigger = {
+            owner = {
+                stability = 0
+            }
+        }
+        modifier = {
+            legitimacy = 0.05
+            republican_tradition = 0.05
+            devotion = 0.05
+            horde_unity = 0.05
+            meritocracy = 0.05
+        }
     }
     
+    # Bonus
     embracement_cost = -0.15
 
 	chance = { factor = 1 }

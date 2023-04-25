@@ -1,0 +1,266 @@
+#--------------------------------------------
+# Tribal
+#--------------------------------------------
+tribe_reform = {
+    icon = "brahmin"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = tribe_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    modifiers = {
+        stability_cost_modifier = -0.5
+    }
+}
+commune_reform = {
+    icon = "person"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = commune_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    republican_name = yes
+	royal_marriage = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    modifiers = {
+        global_unrest = -3
+    }
+}
+raider_reform = {
+    icon = "raider"
+
+    allow_normal_conversion = no
+    legacy_equivalent = raider_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+
+    modifiers = {
+        mercenary_cost = -0.5
+        merc_maintenance_modifier = -0.5
+        mercenary_discipline = 0.1
+    }
+}
+super_mutant_reform = {
+    icon = "union"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = super_mutant_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        have_had_reform = super_mutant_reform
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    modifiers = {
+        shock_damage_received = -0.2
+        fire_damage_received = -0.2
+    }
+}
+swarm_reform = {
+    icon = "factory"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = swarm_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        have_had_reform = swarm_reform
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    royal_marriage = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    modifiers = {
+        global_regiment_recruit_speed = -0.5
+        global_regiment_cost = -0.5
+    }
+}
+wolf_pack_reform = {
+    icon = "military"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = wolf_pack_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = wolf_pack_reform
+            any_country = {
+                has_reform = wolf_pack_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = yes
+	queen = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+	valid_for_nation_designer = no
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+
+    modifiers = {
+        infantry_power = 0.1
+        reinforce_cost_modifier = -0.1
+    }
+}
+great_khan_reform = {
+    icon = "cross"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = great_khan_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = great_khan_reform
+            any_country = {
+                has_reform = great_khan_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    native_mechanic = yes
+	allow_migration = yes
+    
+    min_autonomy = 50
+    
+    conditional = {
+        allow = {
+            has_dlc = "El Dorado"
+        }
+        native_mechanic = no
+    }
+    
+    modifiers = {
+        loot_amount = 1.0
+        war_taxes_cost_modifier = -1.0
+    }
+}

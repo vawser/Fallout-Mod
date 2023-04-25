@@ -1,0 +1,119 @@
+#--------------------------------------------
+# Theocracy
+#--------------------------------------------
+theocracy_reform = {
+    icon = "church"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = theocracy_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    has_devotion = yes
+
+    rulers_can_be_generals = no
+	royal_marriage = no
+    
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
+    modifiers = {
+        tolerance_own = 1
+        missionaries = 1
+    }
+}
+brotherhood_reform = {
+    icon = "power_armor"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = brotherhood_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = brotherhood_reform
+            any_country = {
+                has_reform = brotherhood_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+	has_devotion = yes
+
+	royal_marriage = no
+    
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
+    modifiers = {
+        technology_cost = -0.05
+        free_mil_policy = 1
+        max_absolutism = 20
+    }
+}
+cult_reform = {
+    icon = "graveyard"
+
+    allow_normal_conversion = no
+    legacy_equivalent = cult_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    has_devotion = yes
+
+	royal_marriage = no
+    
+    queen = no
+	heir = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+	valid_for_nation_designer = no
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_devotion = yes
+    }
+    
+    modifiers = {
+        global_missionary_strength = 0.03
+        yearly_corruption = -0.05
+    }
+}

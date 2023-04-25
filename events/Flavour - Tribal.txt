@@ -423,7 +423,6 @@ country_event = { # The Khan wins!
 		add_horde_unity = 33
         add_legitimacy = 33
         add_devotion = 33
-        add_militarised_society = 33
         
         ai_chance = { factor = 33 }
 	}
@@ -779,7 +778,9 @@ country_event = {
 		
 		add_horde_unity = -20
 		add_stability = -1
-		kill_heir = yes
+		kill_heir = {
+            allow_new_heir = yes
+        }
         
         ai_chance = { factor = 100 }
 	}
@@ -822,7 +823,9 @@ country_event = {
 		
 		add_prestige = 15
 		add_stability = -1
-		kill_heir = yes
+		kill_heir = {
+            allow_new_heir = yes
+        }
         
         ai_chance = { factor = 100 }
 	}

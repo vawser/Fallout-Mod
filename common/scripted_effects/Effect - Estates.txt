@@ -518,7 +518,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	if = {
 		limit = {
 			has_province_modifier = estate_citizens_monopoly_of_edible_food_mod
-			NOT = { trade_goods = wool }
+			#NOT = { trade_goods = wool }
             NOT = { trade_goods = food }
             NOT = { trade_goods = meat }
             NOT = { trade_goods = fungus }
@@ -605,7 +605,7 @@ on_trade_good_changed_estate_privileges_effect = {
     if = {
 		limit = {
 			has_province_modifier = estate_tribals_monopoly_of_edible_food_mod
-			NOT = { trade_goods = wool }
+			#NOT = { trade_goods = wool }
             NOT = { trade_goods = food }
             NOT = { trade_goods = meat }
             NOT = { trade_goods = fungus }

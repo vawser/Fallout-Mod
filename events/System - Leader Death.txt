@@ -135,8 +135,7 @@ country_event = {
 		define_ruler = {
 			mil = 3
 			adm = 3
-			dip = 3			
-			fixed = yes
+			dip = 3
 		}
 	}
 }
@@ -408,6 +407,8 @@ country_event = {
 	option = {
 		name = leader_death.5.option.a
 
-        kill_heir = yes
+        kill_heir = {
+            allow_new_heir = yes
+        }
 	}
 }

@@ -15,6 +15,13 @@ estate_bureaucrats = {
 			has_estate = estate_bureaucrats
 		}
 	}
+    modifier_definition = {
+		type = privileges
+		key = bureaucrats_privilege_slots
+		trigger = {
+			has_estate = estate_bureaucrats
+		}
+	}
 }
 
 estate_traders = {
@@ -28,6 +35,13 @@ estate_traders = {
 	modifier_definition = {
 		type = influence
 		key = traders_influence_modifier
+		trigger = {
+			has_estate = estate_traders
+		}
+	}
+    modifier_definition = {
+		type = privileges
+		key = traders_privilege_slots
 		trigger = {
 			has_estate = estate_traders
 		}
@@ -49,6 +63,13 @@ estate_officers = {
 			has_estate = estate_officers
 		}
 	}
+    modifier_definition = {
+		type = privileges
+		key = officers_privilege_slots
+		trigger = {
+			has_estate = estate_officers
+		}
+	}
 }
 
 estate_citizens = {
@@ -62,6 +83,13 @@ estate_citizens = {
 	modifier_definition = {
 		type = influence
 		key = citizens_influence_modifier
+		trigger = {
+			has_estate = estate_citizens
+		}
+	}
+    modifier_definition = {
+		type = privileges
+		key = citizens_privilege_slots
 		trigger = {
 			has_estate = estate_citizens
 		}
@@ -81,6 +109,25 @@ estate_tribals = {
 		key = tribals_influence_modifier
 		trigger = {
 			has_estate = estate_tribals
+		}
+	}
+    modifier_definition = {
+		type = privileges
+		key = tribals_privilege_slots
+		trigger = {
+			has_estate = estate_tribals
+		}
+	}
+}
+
+#For special scripted modifiers which are not in the code base.
+estate_special = {
+	#For the Republics which only have limited terms
+	modifier_definition = {
+		type = privileges
+		key = max_terms
+		trigger = {
+			has_government_attribute = has_limited_terms
 		}
 	}
 }

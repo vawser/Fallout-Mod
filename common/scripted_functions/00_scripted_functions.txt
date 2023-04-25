@@ -21,15 +21,6 @@ can_harsh_treatment = {
 }
 
 can_reduce_war_exhaustion = {
-    condition = {
-		tooltip = "IS_AI"
-		potential = {
-            ai = yes
-		}
-		allow = {
-			dip_power = 800
-		}
-	}
 }
 
 can_reduce_inflation = {
@@ -72,14 +63,19 @@ can_add_province_to_hre = {
 	
 }
 
+#ROOT = province, FROM = country
 can_remove_province_from_hre = {
 	condition = {
 		potential = {
-			ai = yes
+			owner = {
+				ai = yes
+			}
 		}
 		allow = {
-			NOT = {
-				has_country_flag = permanently_left_hre_flag
+			owner = {
+				NOT = {
+					has_country_flag = permanently_left_hre_flag
+				}
 			}
 		}
 	}
@@ -180,6 +176,9 @@ can_colonize_province_siberian_frontier = {
 }
 
 can_add_seat_in_parliament = {
+}
+
+can_remove_seat_in_parliament = {
 }
 
 can_add_estate = {

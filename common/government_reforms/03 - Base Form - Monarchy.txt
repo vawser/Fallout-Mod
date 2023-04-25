@@ -1,0 +1,291 @@
+#--------------------------------------------
+# Monarchy
+#--------------------------------------------
+autocracy_reform = {
+    icon = "military"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = autocracy_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = yes
+	queen = no
+    
+    modifiers = {
+        stability_cost_modifier = -0.1
+        province_warscore_cost = -0.1
+        max_absolutism = 5
+    }
+}
+legion_reform = {
+    icon = "cross"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = legion_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = legion_reform
+            any_country = {
+                has_reform = legion_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = yes
+	queen = no
+
+	different_religion_acceptance = -25
+	different_religion_group_acceptance = -25
+    
+    modifiers = {
+        army_tradition = 1
+        monarch_military_power = 2
+        max_absolutism = 20
+    }
+}
+new_vegas_reform = {
+    icon = "gambling"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = new_vegas_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = new_vegas_reform
+            any_country = {
+                has_reform = new_vegas_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+    factions = {
+        the_omertas 
+        the_chairmen
+        the_white_glove_society
+    }
+    
+    modifiers = {
+        global_tax_modifier = 0.2
+        monarch_diplomatic_power = 1
+        max_absolutism = 10
+    }
+}
+think_tank_reform = {
+    icon = "satellite"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = think_tank_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = think_tank_reform
+            any_country = {
+                has_reform = think_tank_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+    royal_marriage = no
+    rulers_can_be_generals = no
+    
+	different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
+    modifiers = {
+        technology_cost = -0.1
+        yearly_corruption = -0.05
+        max_absolutism = 20
+    }
+}
+zetan_reform = {
+    icon = "sim_centre"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = zetan_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = zetan_reform
+            any_country = {
+                has_reform = zetan_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+    royal_marriage = no
+    
+    different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
+    modifiers = {
+        discipline = 0.1
+        unjustified_demands = -0.5
+        max_absolutism = 50
+    }
+}
+shi_reform = {
+    icon = "vault_computer"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = shi_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+
+    trigger = {
+        OR = {
+            have_had_reform = shi_reform
+            any_country = {
+                has_reform = shi_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+    conditional = {
+        allow = {
+            has_dlc = "Mandate of Heaven"
+        }
+        has_meritocracy = yes
+    }
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		heir = no
+		foreign_slave_rulers = yes
+	}
+
+    modifiers = {
+        production_efficiency = 0.1
+        innovativeness_gain = 0.5
+    }
+}
+new_reno_reform = {
+    icon = "gambling"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = new_reno_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+
+    trigger = {
+       have_had_reform = new_reno_reform
+    }
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		heir = no
+		foreign_slave_rulers = yes
+	}
+    
+    heir = no
+	queen = no
+    
+    modifiers = {
+        advisor_cost = -0.1
+        autonomy_change_time = -0.25
+    }
+}
+ncr_state_reform = {
+    icon = "artillery"
+
+    allow_normal_conversion = no
+    legacy_equivalent = ncr_state_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = ncr_state_reform
+            any_country = {
+                OR = {
+                    has_reform = ncr_state_reform
+                    has_reform = ncr_reform
+                }
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = yes
+	queen = no
+    
+	valid_for_nation_designer = no
+    
+    different_religion_acceptance = 25
+	different_religion_group_acceptance = 25
+    
+    modifiers = {
+        global_colonial_growth = 5
+        global_own_trade_power = 0.1
+        max_absolutism = -10
+    }
+}

@@ -1,0 +1,311 @@
+#--------------------------------------------
+# Republic
+#--------------------------------------------
+settlement_reform = {
+    icon = "peace"
+
+    allow_normal_conversion = no
+    legacy_equivalent = settlement_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    modifiers = {
+        global_colonial_growth = 5
+        global_trade_goods_size_modifier = 0.1
+        max_absolutism = -20
+    }
+}
+militia_reform = {
+    icon = "military"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = militia_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+    allow_migration = yes
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    modifiers = {
+        global_manpower_modifier = 0.1
+        global_regiment_cost = -0.15
+    }
+}
+republic_reform = {
+    icon = "person"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = republic_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = yes
+    
+    republican_name = yes
+	royal_marriage = yes
+    
+    modifiers = {
+        diplomatic_reputation = 1
+        diplomatic_upkeep = 1
+        max_absolutism = -20
+    }
+}
+dictatorship_reform = {
+    icon = "charismatic_person"
+
+    allow_normal_conversion = no
+    legacy_equivalent = dictatorship_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    republican_name = yes
+	royal_marriage = no
+    
+    modifiers = {
+        diplomatic_annexation_cost = -0.25
+        envoy_travel_time = -0.20
+        max_absolutism = -10
+    }
+}
+institute_reform = {
+    icon = "console"
+
+    allow_normal_conversion = no
+    legacy_equivalent = institute_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = institute_reform
+            any_country = {
+                has_reform = institute_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+   
+    royal_marriage = no
+    
+    election_on_death = yes
+    
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+    factions = { 
+        INS_advanced_systems
+        INS_facilities
+        INS_institute_bioscience
+        INS_robotics
+        INS_synth_retention_bureau
+    }
+    
+    modifiers = {
+        country_admin_power = 1
+        country_diplomatic_power = 1
+        country_military_power = 1
+    }
+}
+enclave_reform = {
+    icon = "usa_flag"
+
+    allow_normal_conversion = no
+    legacy_equivalent = enclave_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    trigger = {
+        OR = {
+            have_had_reform = enclave_reform
+            any_country = {
+                has_reform = enclave_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = yes
+    
+    republican_name = yes
+    royal_marriage = no
+
+    different_religion_acceptance = -50
+	different_religion_group_acceptance = -50
+    
+    modifiers = {
+        republican_tradition = 0.25
+        prestige_decay = -0.03
+        max_absolutism = 20
+    }
+}
+vault_reform = {
+    icon = "overseer"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = vault_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    trigger = {
+        OR = {
+            have_had_reform = vault_reform
+            any_country = {
+                has_reform = vault_reform
+                has_opinion = {
+                    who = ROOT
+                    value = 150
+                }
+            }
+        }
+    }
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    republican_name = no
+	royal_marriage = no
+    
+    modifiers = {
+        development_cost = -0.1
+        advisor_pool = 1
+        max_absolutism = -10
+    }
+}
+ncr_reform = {
+    icon = "artillery"
+
+    allow_normal_conversion = no
+    legacy_equivalent = ncr_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+    
+    lock_level_when_selected = yes
+    
+    potential = {
+        OR = {
+            have_had_reform = ncr_reform
+            is_emperor = yes
+        }
+    }
+    
+    heir = no
+	queen = no
+
+	valid_for_nation_designer = no
+    
+    different_religion_acceptance = 25
+	different_religion_group_acceptance = 25
+    
+    duration = 5
+    has_term_election = yes
+    
+    conditional = {
+        allow = {
+            has_dlc = "Common Sense"
+        }
+        has_parliament = yes
+    }
+
+    modifiers = {
+        global_tax_modifier = 0.1
+        num_accepted_cultures = 2
+        max_absolutism = -10
+    }
+}
+china_reform = {
+    icon = "vault_computer"
+    
+    allow_normal_conversion = no
+    legacy_equivalent = china_legacy
+    
+    valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    lock_level_when_selected = yes
+    
+    trigger = {
+        have_had_reform = china_reform
+    }
+    
+    duration = 5
+    has_term_election = no
+    election_on_death = yes
+    
+    different_religion_acceptance = -200
+	different_religion_group_acceptance = -200
+    
+    modifiers = {
+        land_morale = 0.2
+        global_unrest = -3
+        max_absolutism = 30
+    }
+}

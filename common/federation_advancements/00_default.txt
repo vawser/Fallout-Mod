@@ -1,0 +1,132 @@
+federal_constitution = {
+	gfx = GFX_federal_constitution
+	can_pick = {
+		# Need all other advancements
+		num_federation_advancements = 7
+		is_migratory_tribe = no
+	}
+
+	effect = {
+		
+	}
+
+	ai_chance = {
+		factor = 0
+	}
+}
+
+unified_warbands = {
+	gfx = GFX_unified_warbands
+
+	can_pick = {
+		# Need at least 3 members
+		# Need max trust with all members
+		#federation_size = 3
+		#all_federation_members = {
+		#	trust = { who = ROOT value = 100 }
+		#}
+	}
+
+	effect = {
+		
+	}
+
+	ai_chance = {
+		factor = 5
+	}
+}
+
+mutual_trust = {
+	gfx = GFX_mutual_trust
+	
+	can_pick = {
+		always = yes
+	}
+
+	modifier = {
+		monthly_federation_favor_growth = 0.1
+	}
+
+	ai_chance = {
+		factor = 15
+	}
+}
+
+joint_grain_depots = {
+	gfx = GFX_joint_grain_depots
+	
+	can_pick = {
+		always = yes
+	}
+
+	modifier = {
+		tribal_development_growth = 0.02
+	}
+
+	ai_chance = {
+		factor = 15
+	}
+}
+
+pax_americana = {
+	gfx = GFX_pax_americana
+	
+	can_pick = {
+		always = yes
+	}
+
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	ai_chance = {
+		factor = 15
+	}
+}
+
+united_resistance = {
+	gfx = GFX_united_resistance
+	
+	can_pick = {
+		always = yes
+	}
+	modifier = {
+		hostile_attrition = 1
+	}
+
+	ai_chance = {
+		factor = 5
+	}
+}
+
+chartered_settlements = {
+	gfx = GFX_chartered_settlements
+	
+	can_pick = {
+		always = yes
+	}
+	modifier = {
+		settle_cost = -0.2
+	}
+
+	ai_chance = {
+		factor = 10
+	}
+}
+
+
+shared_knowledge = {
+	gfx = GFX_shared_knowledge
+	
+	can_pick = {
+		always = yes
+	}
+	modifier = {
+		global_institution_spread = 0.2
+	}
+
+	ai_chance = {
+		factor = 1
+	}
+}
+

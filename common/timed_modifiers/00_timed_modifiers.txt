@@ -61,6 +61,27 @@ siphoned_income = {
 	}
 }
 
+siezed_court_resources = {
+	liberty_desire = {
+		value = 25
+		yearly_decay = 1
+	}
+}
+
+requested_extra_levies = {
+	liberty_desire = {
+		value = 25
+		yearly_decay = 1
+	}
+}
+
+granted_administrative_autonomy = {
+	reduced_liberty_desire = {
+		value = 10
+		yearly_decay = 1
+	}
+}
+
 replaced_governor = {
 	liberty_desire = {
 		value = 10
@@ -169,6 +190,13 @@ enforced_peace = {
 overlord_refused_call = {
 	liberty_desire = {
 		value = 50
+		yearly_decay = 1
+	}
+}
+
+subject_of_rivals = {
+	liberty_desire = {
+		value = 25
 		yearly_decay = 1
 	}
 }

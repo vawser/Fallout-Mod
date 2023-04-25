@@ -265,7 +265,8 @@ country_event = {
         }
         else_if = {
             limit = {
-                technology_group = tech_synth
+                always = no
+                #technology_group = tech_synth
             }
             
             add_base_pops = { TYPE = synth }
