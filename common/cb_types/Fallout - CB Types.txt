@@ -30,3 +30,45 @@ cb_merciless_war = {
 
 	war_goal = take_capital_merciless
 }
+
+cb_just_world = {
+    valid_for_subject = no
+
+    prerequisites_self = {
+        has_reform = strategic_ambition_a_just_world_reform
+    }
+    
+	war_goal = take_capital_merciless
+}
+
+cb_cultural_unification = {
+    valid_for_subject = no
+
+    prerequisites_self = {
+        has_reform = strategic_ambition_unification_reform
+    }
+
+	prerequisites = {
+        FROM = {
+            culture_group = ROOT
+        }
+	}
+
+	war_goal = take_capital_unification
+}
+
+cb_religious_unification = {
+    valid_for_subject = no
+
+    prerequisites_self = {
+        has_reform = strategic_ambition_one_faith_reform
+    }
+    
+	prerequisites = {
+        FROM = {
+            NOT = { religion_group = ROOT }
+        }
+	}
+
+	war_goal = take_capital_force_religion
+}

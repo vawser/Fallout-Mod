@@ -30,9 +30,9 @@ rebels_bright_brotherhood = {
 		modifier = {
 			factor = 2
 			culture_group = ghoul_group
-            			owner = {
-                			NOT = { culture_group = ghoul_group }
-            			}
+            owner = {
+                NOT = { culture_group = ghoul_group }
+            }
 		}
 		modifier = {
 			factor = 2000
@@ -47,7 +47,7 @@ rebels_bright_brotherhood = {
 		}
 		modifier = {
 			factor = 0
-			tag = GHH
+			owner = { tag = GHH }
 		}
 		modifier = {
 			factor = 0

@@ -145,7 +145,7 @@ fm_cartographer = {
         modifier = {
             factor = 0
             
-            NOT = { num_of_colonists = 1 }
+            owner = { NOT = { num_of_colonists = 1 } }
         }
     }
 	ai_will_do = { factor = 1 }
@@ -201,7 +201,7 @@ fm_settler = {
         modifier = {
             factor = 0
             
-            NOT = { num_of_colonists = 1 }
+            owner = { NOT = { num_of_colonists = 1 } }
         }
     }
 	ai_will_do = { factor = 1 }
@@ -233,7 +233,7 @@ fm_navigator = {
         modifier = {
             factor = 0
             
-            NOT = { num_of_colonists = 1 }
+            owner = { NOT = { num_of_colonists = 1 } }
         }
     }
 	ai_will_do = { factor = 1 }
@@ -265,7 +265,7 @@ fm_mariner = {
         modifier = {
             factor = 0
             
-            NOT = { num_of_ports = 1 }
+            owner = { NOT = { num_of_ports = 1 } } 
         }
     }
 	ai_will_do = { factor = 1 }
@@ -297,7 +297,7 @@ fm_governor = {
         modifier = {
             factor = 0
             
-            NOT = { num_of_colonists = 1 }
+            owner = { NOT = { num_of_colonists = 1 } }
         }
     }
 	ai_will_do = { factor = 1 }

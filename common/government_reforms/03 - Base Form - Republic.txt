@@ -141,6 +141,10 @@ institute_reform = {
         INS_synth_retention_bureau
     }
     
+    custom_attributes = {
+		locked_government_type = yes
+	}
+    
     potential = {
         have_had_reform = institute_reform
     }
@@ -170,6 +174,10 @@ enclave_reform = {
         
         max_absolutism = 20
     }
+    
+    custom_attributes = {
+		locked_government_type = yes
+	}
     
     potential = {
         have_had_reform = enclave_reform
@@ -203,9 +211,15 @@ vault_reform = {
         max_absolutism = -10
     }
     
+    custom_attributes = {
+		locked_government_type = yes
+	}
+    
     potential = {
         have_had_reform = vault_reform
     }
+    
+    ai = { factor = 0 }
 }
 
 # NCR
@@ -238,10 +252,15 @@ ncr_reform = {
         has_parliament = yes
     }
 
-
+    custom_attributes = {
+		locked_government_type = yes
+	}
+    
     potential = {
         have_had_reform = ncr_reform
     }
+    
+    ai = { factor = 0 }
 }
 
 # Chinese Invasion
@@ -269,7 +288,13 @@ china_reform = {
         max_absolutism = 30
     }
     
+    custom_attributes = {
+		locked_government_type = yes
+	}
+    
     potential = {
         have_had_reform = china_reform
     }
+    
+    ai = { factor = 0 }
 }
