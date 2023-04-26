@@ -1,5 +1,10 @@
 objectTypes = {
-
+    pdxmesh = {
+		name = "empty_mesh"
+		file = "gfx/models/Mapitems/empty.mesh"
+		scale = 1.0
+	}
+    
 	pdxmesh = {
 		name = "selection"
 		file = "gfx/models/Mapitems/selection.mesh"		
@@ -96,6 +101,14 @@ objectTypes = {
         scale = 1
 	}
 	
+    pdxmesh = {
+		name = "siege"
+		file = "gfx/models/Mapitems/Siege_cannon.mesh"			
+
+		animation = { id = "idle"	type = "siege_cannon" }
+		scale = 0.5
+	}
+
 	pdxmesh = {
 		name = "siege_howitzer_mesh"
 		file = "gfx/models/units/howitzer.mesh"
@@ -322,17 +335,13 @@ objectTypes = {
 		scale = 1.1
 		cull_distance = 99999999.0f
 	}
-}
-
-objectTypes = {
+    
     pdxmesh = {
         name = "mesh_lucky38"
         file = "gfx/models/ambient/lucky38.mesh" 
         scale = 0.25
     } 
-}
 
-objectTypes = {
     pdxmesh = {
         name = "mesh_hooverdam"
         file = "gfx/models/ambient/hooverdam.mesh" 
