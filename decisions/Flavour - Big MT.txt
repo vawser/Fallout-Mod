@@ -1,4 +1,5 @@
 country_decisions = {
+    # Destroy the Fence
     destroy_the_fence = {
 		potential = {
             OR = {
@@ -6,9 +7,9 @@ country_decisions = {
 				capital_scope = { region = big_mt_region }
 				has_country_flag = the_new_think_tank
 			}
-            has_discovered = 1390
-            has_discovered = 568
-            has_discovered = 569
+            has_discovered = 1390 # South Collapsed Tunnel
+            has_discovered = 568 # East Collapsed Tunnel
+            has_discovered = 569 # North Collapsed Tunnel
             NOT = { has_country_flag = destroying_fence }
         }
         
