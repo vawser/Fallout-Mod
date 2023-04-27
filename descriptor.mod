@@ -1,4 +1,4 @@
-name="Fallout"
+name="Fallout: Wild Wasteland"
 replace_path="common/advisortypes"
 replace_path="common/ages"
 replace_path="common/ai_army"
@@ -108,4 +108,3 @@ tags={
 }
 version="1.0"
 supported_version="1.35.*"
-remote_file_id="2068586727"
