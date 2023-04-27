@@ -36,7 +36,8 @@ country_event = {
 	title = pop_flavour.1.title
 	desc = pop_flavour.1.desc
 	picture = DIAMOND_CITY_eventPicture
-
+    goto = valid_province
+    
     is_triggered_only = yes
     
 	trigger = {
@@ -62,12 +63,16 @@ country_event = {
 	option = {
 		name = pop_flavour.1.option.a
         
-		add_base_tax = 1
+		event_target:valid_province = {
+            add_base_tax = 1
+        }
 	}
     option = {
 		name = pop_flavour.1.option.b
         
-		add_base_production = 1
+        event_target:valid_province = {
+            add_base_production = 1
+        }
 	}
 }
 

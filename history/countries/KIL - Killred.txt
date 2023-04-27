@@ -1,0 +1,38 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = republic
+add_government_reform = settlement_reform
+technology_group = tech_robot
+religion = robotics	
+primary_culture = killred
+capital = 1266
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+set_slavery_allowed = yes
+set_gambling_allowed = yes
+set_prostitution_allowed = yes
+
+set_narcotics_allowed = yes
+set_scavenging_allowed = yes
+
+#--------------------------------
+# Relationships
+#--------------------------------
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Killred"
+        dynasty = "the Seer"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+    clear_scripted_personalities = yes
+    add_ruler_personality = immortal_personality
+}

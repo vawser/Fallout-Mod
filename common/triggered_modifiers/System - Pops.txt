@@ -35,13 +35,13 @@ administration_wastelander = {
 	}
     
 	# Boons
-    production_efficiency = 0.1     # Wastelanders are inventive
+    production_efficiency = 0.05    # Wastelanders are productive
     interest = -1                   # Stability of wastelander nations secures loans
     global_institution_spread = 0.1 # Spread of ideas occurs naturally in wastelander states
     
     # Penalty
-    global_tax_modifier = -0.1      # Wastelanders distrust taxation
-    development_cost = 0.1          # Desire for accountability slows development
+    global_tax_modifier = -0.05     # Wastelanders distrust taxation
+    development_cost = 0.05         # Desire for accountability slows development
     ae_impact = 0.1                 # Values of wastelander states means conquest is viewed harshly
 }
 
@@ -57,8 +57,14 @@ administration_raider = {
 	}
 
 	# Boons
+    overextension_impact_modifier = -0.2 # Raiders can tolerate disorder
+    loot_amount = 1.0 # Raiders love to loot
+    harsh_treatment_cost = -0.25 # Dissidents are dealt with swiftly
     
     # Penalty
+    technology_cost = 0.1 # Raiders care little for technology
+    diplomatic_reputation = -2 # Nobody cares for raiders
+    global_spy_defence = -0.2 # Raiders are disorganised, allowing for infiltration
 }
 
 #-------------------------------------
@@ -73,8 +79,14 @@ administration_tribal = {
 	}
 
 	# Boons
+    global_colonial_growth = 10 # Tribals are capable when it comes to living with the land
+    native_assimilation = 1.0 # Tribals assimilate locals more easily
+    stability_cost_modifier = -0.2 # Tribal culture makes it easier to cope with changes
     
     # Penalty
+    technology_cost = 0.2 # Tribals care litte for technology
+    idea_cost = 0.2 # Tribals resist new ideas
+    governing_capacity_modifier = -0.1 # Tribals struggle to manage vast territories
 }
 
 #-------------------------------------
@@ -89,8 +101,14 @@ administration_robot = {
 	}
     
 	# Boons
+    yearly_corruption = -0.05 # Self-debugging helps prevent corruption
+    technology_cost = -0.1 # Robots more easily integrate new technologies
+    global_autonomy = -0.05 # Police routines quell unrest
     
     # Penalty
+    prestige_decay = 0.01 # Robots care little about prestige
+    culture_conversion_cost = 0.25 # Conversion to robots is messy
+    diplomatic_upkeep = -1 # Few trust robots as diplomatic entities
 }
 
 #-------------------------------------
@@ -105,8 +123,14 @@ administration_super_mutant = {
 	}
 
 	# Boons
+    unjustified_demands = -0.1 # Many will give super mutants what they want to get rid of them
+    max_absolutism_effect = 0.25 # Super Mutants are natural tyrants
+    core_creation = -0.1 # Super Mutants need little in terms of bureaucracy to integrate new territory
     
     # Penalty
+    adm_tech_cost_modifier = 0.2 # Super Mutants care little about administrative matters
+    dip_tech_cost_modifier = 0.2 # Super Mutants care little about diplomatic matters
+    advisor_cost = 0.25 # Intelligent super mutants are hard to find
 }
 
 #-------------------------------------
@@ -121,8 +145,14 @@ administration_ghoul = {
 	}
 
 	# Boons
+    global_spy_defence = 0.25 # Ghouls are fairly conspicuous to each other
+    advisor_pool = 2 # Ghouls retain old world knowledge
+    global_monthly_devastation = -0.05 # Ghouls cope with devastation more easily
     
     # Penalty
+    spy_offence = -0.25 # Ghouls are fairly conspicuous to others
+    diplomatic_reputation = -1 # Ghouls are not trusted
+    idea_cost = 0.1 # Ghouls are resistant to new ideas
 }
 
 #-------------------------------------
@@ -137,8 +167,14 @@ administration_swampfolk = {
 	}
 
 	# Boons
+    free_mil_policy = 1 # Swampfolk love a fight
+    warscore_from_battles_modifier = 0.25 # Swampfolk love a fight
+    enemy_core_creation = 1.0 # Enemies struggle to control swampfolk land
     
     # Penalty
+    production_efficiency = -0.1 # Swamps are not conductive to industry
+    advisor_pool = -1 # Swampfolk are limited in number
+    governing_capacity_modifier = -0.25 # Swampfolk have little coherent statecraft
 }
 
 #-------------------------------------
@@ -282,15 +318,11 @@ administration_bos = {
 
 	# Boons
     army_tradition = 1.0                # Military training is regularly undergone
-    discipline = 0.05                   # BOS soldiers are well-disciplined
-    yearly_absolutism = 0.5             # BOS rule is harsh
-    administrative_efficiency = 0.1     # BOS benefit from technology when it comes to administration
+    administrative_efficiency = 0.05    # BOS benefit from technology when it comes to administration
     
     # Penalty
-    global_manpower_modifier = -0.3     # Recruitment is limited
-    land_forcelimit_modifier = -0.3     # Recruitment is limited
-    reform_progress_growth = -0.5       # BOS are not reformers
-    governing_capacity_modifier = -0.25 # BOS lack the ability to project power well
+    reform_progress_growth = -0.25      # BOS are not reformers
+    governing_capacity_modifier = -0.1  # BOS lack the ability to project power well
 }
 
 #-------------------------------------

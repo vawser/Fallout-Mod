@@ -1,0 +1,24 @@
+namespace = fm_debug
+
+country_event = {
+	id = fm_debug.1
+	title = fm_debug.1.title
+	desc = fm_debug.1.desc
+    picture = NCR_RANGER_CAMP_eventPicture
+    goto = random_prov
+	
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                save_event_target_as = random_prov
+            }
+        }
+    }
+	
+	option = {
+		name = baja.1.option.a
+		goto = random_prov
+	}
+}
