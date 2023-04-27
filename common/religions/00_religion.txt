@@ -1,27 +1,21 @@
 #----------------------------------------------------------------------
-# Internal
+# Mechanics
 #----------------------------------------------------------------------
-religion_group_internal = {
-	defender_of_faith = no
-	can_form_personal_unions = no
-
-    internal = {
-		color = { 0.6 0.33 0.5 }
-		icon = 1
-
-		country = { }
-        
-        #hre_religion = yes
-        #hre_heretic_religion = yes
-        
-        papacy = {
-			papal_tag = X04
-			election_cost = 1000
-			seat_of_papacy = 1
-        }
-    }
-}
-
+#   fervor:                 generic
+#   patriarch_authority:    creatorism
+#   religious_authority:    NONE
+#   blessings:              robotics / american_restorationists
+#   church_aspects:         atomic_worship
+#   cults:                  NONE
+#   doom:                   NONE
+#   karma:                  NONE
+#   isolationism:           NONE
+#   papacy:                 NONE
+#   personal_diety:         survivalist / animism / fetishism / totemism
+#   piety:                  cult_of_mars
+#   syncretic_faith         NONE
+#   harmony:                NONE
+ 
 #----------------------------------------------------------------------
 # Post War
 #----------------------------------------------------------------------
@@ -475,6 +469,62 @@ religion_group_pagan = {
         personal_deity = yes
 	}
 
+    #-------------------------------------
+    # Fungal
+    #-------------------------------------
+    fungal = {
+		color = { 0.25 0.34 0.51 }
+		icon = 28
+
+		country = { 
+            manpower_recovery_speed = 0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+        
+        on_convert = {
+			change_religion = fungal
+			add_prestige = -100
+			add_stability = -2
+			
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}					
+		}
+        
+        personal_deity = yes
+	}
+    
+    #-------------------------------------
+    # Swamp Cult
+    #-------------------------------------
+    swamp_cult = {
+		color = { 0.35 0.24 0.21 }
+		icon = 29
+
+		country = { 
+            global_manpower_modifier = 0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+        
+        on_convert = {
+			change_religion = swamp_cult
+			add_prestige = -100
+			add_stability = -2
+			
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}					
+		}
+        
+        personal_deity = yes
+	}
+    
 	crusade_name = HOLY_WAR
 }
 
@@ -729,8 +779,6 @@ religion_group_prewar = {
 			}
 		}
 		
-        personal_deity = yes
-        
 		heretic = { BHAKTI }
 	}
 
@@ -788,4 +836,26 @@ religion_group_prewar = {
 	}
 	
 	crusade_name = HOLY_WAR
+}
+
+# Required to prevent CTD
+religion_group_internal = {
+	defender_of_faith = no
+	can_form_personal_unions = no
+
+    internal = {
+		color = { 0.6 0.33 0.5 }
+		icon = 1
+
+		country = { }
+        
+        #hre_religion = yes
+        #hre_heretic_religion = yes
+        
+        papacy = {
+			papal_tag = X04
+			election_cost = 1000
+			seat_of_papacy = 1
+        }
+    }
 }

@@ -11,7 +11,6 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no
 
-
 		guiButtonType = {
 			name = "power"
 			position = { x=0 y = 0 }
@@ -287,7 +286,7 @@ guiTypes = {
 			# in the smallest resolution in most cases (but not harmonization view for example)
 			name ="religionpanel_bg_top"
 			spriteType = "GFX_country_religion_view_bg"
-			position = { x= -9 y = -10 }
+			position = { x= -7 y = -10 }
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -868,7 +867,7 @@ guiTypes = {
 				name ="harmonizing_with_icon"
 				spriteType = "GFX_icon_religion_small"
 				position = { x= 280 y = 265 }
-				allwaystransparent = yes
+				alwaystransparent = yes
 			}
 			
 			iconType = {
@@ -1262,7 +1261,7 @@ guiTypes = {
 		windowType = {
 			name = "personal_deity"
 			backGround =""
-			position = { x=20 y=300 }	
+			position = { x=32 y=300 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1331,7 +1330,7 @@ guiTypes = {
 		windowType = {
 			name = "fetishist_cult"
 			backGround =""
-			position = { x=125 y=300 }	
+			position = { x=32 y=300 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1545,7 +1544,7 @@ guiTypes = {
 				max_slots_vertical = 2
 				format = "UPPER_LEFT"
 			}
-			
+		
 			iconType =
 			{
 				name = "whitebg"
@@ -1692,7 +1691,7 @@ guiTypes = {
 		windowType = {
 			name = "protestant_specific_window"
 			backGround =""
-			position = { x=50 y=300 }	
+			position = { x=32 y=300 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -2765,7 +2764,7 @@ guiTypes = {
 		name = "fetishist_cult_item"
 		backGround =""
 		position = { x=10 y=-20 }	
-		size = { x=50 y=46 }
+		size = { x=50 y=54 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -2775,12 +2774,12 @@ guiTypes = {
 		{
 			name ="cult_item_icon"
 			spriteType = "GFX_fetishists_strip"
-			position = { x= 107 y = -4 }
+			position = { x= 107 y = 5 }
 		}
 		
 		instantTextBoxType = {
 			name = "cult_item_name"
-			position = { x= 0 y = 7 }
+			position = { x= 0 y = 16 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "CultName"
@@ -2797,14 +2796,15 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			text = "CultEffect"	
 			maxWidth = 208
-			maxHeight = 24
+			maxHeight = 54
 			Orientation = "UPPER_LEFT"
 			format = left
+			fixedsize = yes
 		}
 		
 		guiButtonType = {
 			name = "pick_cult"
-			position = { x=362 y = 1}
+			position = { x=362 y = 10}
 			quadTextureSprite ="GFX_standard_button_71"
 			buttonText = "SELECT"
 			buttonFont = "vic_18"
@@ -2898,14 +2898,66 @@ guiTypes = {
 			Orientation = "LEFT"
 		}
 	}
-    
+
+	################################################################################################
+	################# Church aspect item (for selection) For Jewish
+	windowType = {
+		name = "countryreligionview_aspectitem_jewish"
+		backGround =""
+		position = { x=10 y=-20 }	
+		size = { x=50 y=46 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType = {
+			name = "aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 45 y = -14 }
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -42 y = 6 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 102
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 98 y = -2 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 206
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=301 y = 1}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
 	################################################################################################
 	################# Church aspect item (for selection) For Anglican
 	windowType = {
-		name = "countryreligionview_aspectitem_unused"
+		name = "countryreligionview_aspectitem_anglican"
 		backGround =""
 		position = { x=10 y=-30 }	
-		size = { x=50 y=46 }
+		size = { x=50 y=55 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -2915,7 +2967,7 @@ guiTypes = {
 		{
 			name ="aspect_icon"
 			spriteType = "GFX_hindu_deities_strip"
-			position = { x= -43 y = -8 }
+			position = { x= -51 y = -10 }
 		}
 		
 		instantTextBoxType = {
