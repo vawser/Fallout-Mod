@@ -35,37 +35,32 @@ country_event = {
             20 = { country_event = { id = lost_religions.5 } } # Catholic
             50 = { country_event = { id = lost_religions.6 } } # Baptist
             20 = { country_event = { id = lost_religions.7 } } # Mormon
-            10 = { country_event = { id = lost_religions.8 } } # Orthodox
-            10 = { country_event = { id = lost_religions.9 } } # Coptic
+            10 = { country_event = { id = lost_religions.8 } } # Presbyterian
         }
 	}
     # Muslim
 	option = {
-		name = lost_religions.2.option.a
+		name = lost_religions.1.option.b
 
         random_list = {
             25 = { country_event = { id = lost_religions.2 } } # Failure
-            30 = { country_event = { id = lost_religions.10 } } # Sunni
-            30 = { country_event = { id = lost_religions.11 } } # Shia
-            10 = { country_event = { id = lost_religions.12 } } # Ibadi
+            30 = { country_event = { id = lost_religions.10 } } # Islam
         }
 	}
     # Dharmic
 	option = {
-		name = lost_religions.3.option.a
+		name = lost_religions.1.option.c
 
         random_list = {
             25 = { country_event = { id = lost_religions.2 } } # Failure
-            20 = { country_event = { id = lost_religions.13 } } # Theravada
-            20 = { country_event = { id = lost_religions.14 } } # Vajrayana
-            20 = { country_event = { id = lost_religions.15 } } # Mahayana
+            20 = { country_event = { id = lost_religions.13 } } # Buyddism
             30 = { country_event = { id = lost_religions.18 } } # Hinduism
             10 = { country_event = { id = lost_religions.19 } } # Sikhism
         }
 	}
     # Eastern
 	option = {
-		name = lost_religions.4.option.a
+		name = lost_religions.1.option.d
 
         random_list = {
             25 = { country_event = { id = lost_religions.2 } } # Failure
@@ -75,22 +70,11 @@ country_event = {
 	}
     # Jewish
 	option = {
-		name = lost_religions.5.option.a
+		name = lost_religions.1.option.e
 
         random_list = {
             25 = { country_event = { id = lost_religions.2 } } # Failure
             50 = { country_event = { id = lost_religions.20 } } # Jewish
-        }
-	}
-    # Forgotten
-	option = {
-		name = lost_religions.6.option.a
-
-        random_list = {
-            25 = { country_event = { id = lost_religions.2 } } # Failure
-            20 = { country_event = { id = lost_religions.3 } } # Tengri
-            20 = { country_event = { id = lost_religions.4 } } # Norse
-            20 = { country_event = { id = lost_religions.21 } } # Zoroastrian
         }
 	}
 }
@@ -114,71 +98,6 @@ country_event = {
 		name = lost_religions.option.bad
 	
         add_prestige = -5
-	}
-}
-
-# Tengri
-country_event = {
-	id = lost_religions.3
-	title = lost_religions.3.title
-	desc = lost_religions.3.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.3" }
-        }
-    }
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = tengri
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = tengri
-        }
-        change_religion = tengri
-	}
-}
-
-# Norse
-country_event = {
-	id = lost_religions.4
-	title = lost_religions.4.title
-	desc = lost_religions.4.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.4" }
-        }
-    }
-    
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = norse
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = norse
-        }
-        change_religion = norse
 	}
 }
 
@@ -281,7 +200,7 @@ country_event = {
 	}
 }
 
-# Orthodoxy
+# Presbyterian
 country_event = {
 	id = lost_religions.8
 	title = lost_religions.8.title
@@ -300,7 +219,7 @@ country_event = {
 		name = lost_religions.option.good
 	
         random_owned_province = {
-            change_religion = orthodox
+            change_religion = presbyterian
         }
 	}
     option = {
@@ -308,46 +227,13 @@ country_event = {
 	
         add_stability = -2
         capital_scope = {
-            change_religion = orthodox
+            change_religion = presbyterian
         }
-        change_religion = orthodox
+        change_religion = presbyterian
 	}
 }
 
-# Coptic
-country_event = {
-	id = lost_religions.9
-	title = lost_religions.9.title
-	desc = lost_religions.9.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.9" }
-        }
-    }
-    
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = coptic
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = coptic
-        }
-        change_religion = coptic
-	}
-}
-
-# Sunni
+# Islam
 country_event = {
 	id = lost_religions.10
 	title = lost_religions.10.title
@@ -366,7 +252,7 @@ country_event = {
 		name = lost_religions.option.good
 	
         random_owned_province = {
-            change_religion = sunni
+            change_religion = islam
         }
 	}
     option = {
@@ -374,79 +260,13 @@ country_event = {
 	
         add_stability = -2
         capital_scope = {
-            change_religion = sunni
+            change_religion = islam
         }
-        change_religion = sunni
+        change_religion = islam
 	}
 }
 
-# Shia
-country_event = {
-	id = lost_religions.11
-	title = lost_religions.11.title
-	desc = lost_religions.11.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.11" }
-        }
-    }
-    
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = shia
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = shia
-        }
-        change_religion = shia
-	}
-}
-
-# Ibadi
-country_event = {
-	id = lost_religions.12
-	title = lost_religions.12.title
-	desc = lost_religions.12.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.12" }
-        }
-    }
-    
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = ibadi
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = ibadi
-        }
-        change_religion = ibadi
-	}
-}
-
-# Theravada
+# Buddist
 country_event = {
 	id = lost_religions.13
 	title = lost_religions.13.title
@@ -465,7 +285,7 @@ country_event = {
 		name = lost_religions.option.good
 	
         random_owned_province = {
-            change_religion = theravada
+            change_religion = buddism
         }
 	}
     option = {
@@ -473,75 +293,9 @@ country_event = {
 	
         add_stability = -2
         capital_scope = {
-            change_religion = theravada
+            change_religion = buddism
         }
-        change_religion = theravada
-	}
-}
-
-# Vajrayana
-country_event = {
-	id = lost_religions.14
-	title = lost_religions.14.title
-	desc = lost_religions.14.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.14" }
-        }
-    }
-    
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = vajrayana
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = vajrayana
-        }
-        change_religion = vajrayana
-	}
-}
-
-# Mahayana
-country_event = {
-	id = lost_religions.15
-	title = lost_religions.15.title
-	desc = lost_religions.15.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.15" }
-        }
-    }
-    
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = mahayana
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = mahayana
-        }
-        change_religion = mahayana
+        change_religion = buddism
 	}
 }
 
@@ -709,38 +463,3 @@ country_event = {
         change_religion = jewish
 	}
 }
-
-
-# Zoroastrian
-country_event = {
-	id = lost_religions.21
-	title = lost_religions.21.title
-	desc = lost_religions.21.desc
-    picture = CHURCH_MISTY_INSIDE_eventPicture
-
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - lost_religions.21" }
-        }
-    }
-    
-	option = {
-		name = lost_religions.option.good
-	
-        random_owned_province = {
-            change_religion = zoroastrian
-        }
-	}
-    option = {
-		name = lost_religions.option.convert
-	
-        add_stability = -2
-        capital_scope = {
-            change_religion = zoroastrian
-        }
-        change_religion = zoroastrian
-	}
-}
-

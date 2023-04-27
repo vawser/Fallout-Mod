@@ -177,7 +177,7 @@ religion_group_postwar = {
     #-------------------------------------
     robotics = {
 		color = { 0.75 0.23 0.55 }
-		icon = 37
+		icon = 24
 
 		country = { 
             technology_cost = -0.05
@@ -206,7 +206,7 @@ religion_group_postwar = {
     #-------------------------------------
 	lord_of_the_pitt = {
 		color = { 0.659 0.487 0.145 }
-		icon = 22
+		icon = 25
 		
 		country = { 
 			global_manpower_modifier = 0.1
@@ -221,7 +221,7 @@ religion_group_postwar = {
     #-------------------------------------
     american_restorationists = {
 		color = { 0.0 0.272 0.316 }
-		icon = 38
+		icon = 23
         
 		country = { 
             institution_spread_from_true_faith = 0.1	
@@ -293,7 +293,7 @@ religion_group_atomic = {
     #-------------------------------------
 	bright_brotherhood = {
 		color = { 0.0383 0.697 0.325 }
-		icon = 4
+		icon = 22
         
 		country = {
 			diplomatic_reputation = 1
@@ -342,11 +342,11 @@ religion_group_pagan = {
 	flag_emblem_index_range = { 1 18 }
     
     #-------------------------------------
-    # Tribalist
+    # Survivalist
     #-------------------------------------
-    tribalism = {
+    survivalist = {
 		color = { 0.204 0.22 0.32 }
-		icon = 5
+		icon = 26
 
 		country = { 
             yearly_absolutism = 1
@@ -362,7 +362,7 @@ religion_group_pagan = {
             totemism
 		}
         on_convert = {
-			change_religion = tribalism
+			change_religion = survivalist
 			add_prestige = -100
 			add_stability = -2
 			
@@ -380,7 +380,7 @@ religion_group_pagan = {
     #-------------------------------------
     animism = {
 		color = { 0.374 0.418 0.252 }
-		icon = 20
+		icon = 27
 
 		country = { 
 			core_creation = -0.1
@@ -390,7 +390,7 @@ religion_group_pagan = {
 		}
         
         allowed_conversion = {
-			tribalism
+			survivalist
 			fetishism
             totemism
 		}
@@ -413,7 +413,7 @@ religion_group_pagan = {
     #-------------------------------------
     fetishism = {
 		color = { 0.374 0.418 0.252 }
-		icon = 21
+		icon = 20
 
 		country = { 
             global_unrest = -3
@@ -423,7 +423,7 @@ religion_group_pagan = {
 		}
         
         allowed_conversion = {
-			tribalism
+			survivalist
 			animism
             totemism
 		}
@@ -446,7 +446,7 @@ religion_group_pagan = {
     #-------------------------------------
     totemism = {
 		color = { 0.374 0.418 0.252 }
-		icon = 22
+		icon = 5
 
 		country = { 
             build_cost = -0.2
@@ -457,7 +457,7 @@ religion_group_pagan = {
 		}
         
         allowed_conversion = {
-			tribalism
+			survivalist
 			animism
             fetishism
 		}
@@ -501,10 +501,8 @@ religion_group_prewar = {
 		
 		allowed_conversion = {
 			baptist
-			protestant
+			presbyterian
             mormon
-            orthodox
-            coptic
 		}
         on_convert = {
 			change_religion = catholic
@@ -537,10 +535,8 @@ religion_group_prewar = {
 		
 		allowed_conversion = {
             catholic
-			protestant
+			presbyterian
             mormon
-            orthodox
-            coptic
 		}
         on_convert = {
 			change_religion = baptist
@@ -559,11 +555,11 @@ religion_group_prewar = {
 	}
 	
     #-------------------------------------
-    # Protestant
+    # Presbyterian
     #-------------------------------------
-	protestant = {
+	presbyterian = {
 		color = { 0.33 0.2 0.5 }
-		icon = 11
+		icon = 12
 
 		country = {
 			global_tax_modifier = 0.2
@@ -573,11 +569,9 @@ religion_group_prewar = {
             catholic
 			baptist
             mormon
-            orthodox
-            coptic
 		}
         on_convert = {
-			change_religion = protestant
+			change_religion = presbyterian
 			add_prestige = -100
 			add_stability = -2
 			
@@ -595,7 +589,7 @@ religion_group_prewar = {
     #-------------------------------------
 	mormon = {
 		color = { 0.353 0.0913 0.438 }
-		icon = 12
+		icon = 9
 
 		country = { 
 			development_cost = -0.1
@@ -607,9 +601,7 @@ religion_group_prewar = {
         allowed_conversion = {
             catholic
 			baptist
-            protestant
-            orthodox
-            coptic
+            presbyterian
 		}
         on_convert = {
 			change_religion = mormon
@@ -624,78 +616,13 @@ religion_group_prewar = {
         
 		fervor = yes
 	}
-    
+
     #-------------------------------------
-    # Orthodox
+    # Islam
     #-------------------------------------
-    orthodox = {
-		color = { 0.7 0.5 0 }
-		icon = 13
-        
-		country = {
-			state_maintenance_modifier = -0.2
-		}
-		province = {
-			local_missionary_strength = -0.01
-		}
-		
-        allowed_conversion = {
-            catholic
-			baptist
-            protestant
-            mormon
-            coptic
-		}
-        on_convert = {
-			change_religion = orthodox
-			add_prestige = -100
-			add_stability = -2
-			
-			add_country_modifier = {
-				name = "fm_conversion_zeal"
-				duration = 3650
-			}					
-		}
-        
-		heretic = { OLD_BELIEVER ICONOCLAST }
-	}
-    
-    #-------------------------------------
-    # Coptic
-    #-------------------------------------
-    coptic = {
-		color = { 0.7 0.5 0.5 }
-		icon = 23
-        
-		country = {
-			defensiveness = 0.33
-		}
-        
-        allowed_conversion = {
-            catholic
-			baptist
-            protestant
-            mormon
-            orthodox
-		}
-        on_convert = {
-			change_religion = coptic
-			add_prestige = -100
-			add_stability = -2
-			
-			add_country_modifier = {
-				name = "fm_conversion_zeal"
-				duration = 3650
-			}					
-		}
-	}
-    
-    #-------------------------------------
-    # Sunni
-    #-------------------------------------
-    sunni = {
+    islam = {
 		color = { 0 0.6 0 }
-		icon = 14
+		icon = 7
         
 		country = {
 			stability_cost_modifier = -0.2
@@ -704,12 +631,8 @@ religion_group_prewar = {
 			local_missionary_strength = -0.03
 		}
         
-        allowed_conversion = {
-            shia
-            ibadi
-		}
         on_convert = {
-			change_religion = sunni
+			change_religion = islam
 			add_prestige = -100
 			add_stability = -2
 			
@@ -719,75 +642,13 @@ religion_group_prewar = {
 			}					
 		}
 	}
-
+    
     #-------------------------------------
-    # Shia
+    # Buddism
     #-------------------------------------
-	shia = {
-		color = { 0 0.8 0 }
-		icon = 15
-        
-		country = {
-			land_morale = 0.1
-		}
-		province = {
-			local_missionary_strength = -0.03
-		}
-        
-        allowed_conversion = {
-            sunni
-            ibadi
-		}
-        on_convert = {
-			change_religion = shia
-			add_prestige = -100
-			add_stability = -2
-			
-			add_country_modifier = {
-				name = "fm_conversion_zeal"
-				duration = 3650
-			}					
-		}
-	}
-	
-    #-------------------------------------
-    # Ibadi
-    #-------------------------------------
-	ibadi = {
-		color = { 0 0.4 0 }
-		icon = 25
-        
-		country = {
-			governing_capacity_modifier = 0.2
-		}
-		province = {
-			local_missionary_strength = -0.03
-		}
-        
-		heretic = { HARURI SUFRI NAJADAT AZRAQI }
-        
-        allowed_conversion = {
-            sunni
-            shia
-		}
-        on_convert = {
-			change_religion = ibadi
-			add_prestige = -100
-			add_stability = -2
-			
-			add_country_modifier = {
-				name = "fm_conversion_zeal"
-				duration = 3650
-			}					
-		}
-	}
-	
-    #-------------------------------------
-    # Theravada
-    #-------------------------------------
-	theravada = { 
+	buddism = { 
 		color = { 0.8 0.3 0 }
-		icon = 33
+		icon = 13
 
 		country = {
 			tolerance_heretic = 2
@@ -797,12 +658,8 @@ religion_group_prewar = {
         
 		heretic = { ZEN }
         
-        allowed_conversion = {
-            vajrayana
-            mahayana
-		}
         on_convert = {
-			change_religion = theravada
+			change_religion = buddism
 			add_prestige = -100
 			add_stability = -2
 			
@@ -813,74 +670,12 @@ religion_group_prewar = {
 		}
 	}
 	
-    #-------------------------------------
-    # Vajrayana
-    #-------------------------------------
-	vajrayana = {
-		color = { 0.8 0.3 0.3 }
-		icon = 34
-
-		country = {
-			tolerance_heretic = 2
-			tolerance_heathen = 1
-            global_unrest = -1
-		}
-        
-		allowed_conversion = {
-            theravada
-            mahayana
-		}
-        on_convert = {
-			change_religion = vajrayana
-			add_prestige = -100
-			add_stability = -2
-			
-			add_country_modifier = {
-				name = "fm_conversion_zeal"
-				duration = 3650
-			}					
-		}
-		
-		heretic = { ZEN }
-	}
-	
-    #-------------------------------------
-    # Mahayana
-    #-------------------------------------
-	mahayana = {
-		color = { 0.8 0.3 0.5 }
-		icon = 32
-
-		country = {
-			tolerance_heretic = 2
-			tolerance_heathen = 1
-            prestige_decay = -0.01
-		}
-		
-		heretic = { ZEN }
-        
-        allowed_conversion = {
-            theravada
-            vajrayana
-		}
-        on_convert = {
-			change_religion = mahayana
-			add_prestige = -100
-			add_stability = -2
-			
-			add_country_modifier = {
-				name = "fm_conversion_zeal"
-				duration = 3650
-			}					
-		}
-	}
-
     #-------------------------------------
     # Taoism
     #-------------------------------------
 	taoism = {
 		color = { 0.84 0.9 0.55 }
-		icon = 18
+		icon = 15
         
 		country = {
 			global_institution_spread = 0.2
@@ -895,7 +690,7 @@ religion_group_prewar = {
     #-------------------------------------
 	shinto = {
 		color = { 0.8 0 0 }
-		icon = 19
+		icon = 16
         
 		country = {
 			infantry_power = 0.1
@@ -912,7 +707,7 @@ religion_group_prewar = {
     #-------------------------------------
 	hinduism = {
 		color = { 0 0.8 0.8 }
-		icon = 17
+		icon = 14
 		
 		country = {
 			tolerance_heretic = 2
@@ -944,7 +739,7 @@ religion_group_prewar = {
     #-------------------------------------
 	sikhism = {
 		color = { 0 0.6 0.6 }
-		icon = 24
+		icon = 17
 		
 		country = {
 			mil_tech_cost_modifier = -0.2
@@ -974,7 +769,7 @@ religion_group_prewar = {
     # Jewish
     #-------------------------------------
 	jewish = {
-		icon = 29
+		icon = 18
 		color = { 0.6 0.1 0.4 }
         
 		country = {
@@ -992,53 +787,5 @@ religion_group_prewar = {
 		heretic = { SAMARITAN KARAITE }
 	}
 	
-    #-------------------------------------
-    # Zoroastrian
-    #-------------------------------------
-	zoroastrian = {
-		icon = 35
-		color = { 0.5 0.7 0.2 }
-		
-		country = {
-			tolerance_own = 2
-			trade_efficiency = 0.2
-		}
-		province = {
-			local_missionary_strength = -0.02
-		}
-		
-		heretic = { MAZDAKI MANICHEAN }	
-	}
-	
-    #-------------------------------------
-    # Tengri
-    #-------------------------------------
-    tengri = {
-        color = { 0.1 0.3 0.85 }
-		icon = 36
-
-		country = {
-			cavalry_power = 0.1
-		}
-
-		heretic = { OLD_TENGRI }
-	}
-    
-    #-------------------------------------
-    # Norse
-    #-------------------------------------
-    norse = {
-		icon = 30
-		color = { 0.75 0.75 0.75 }
-        
-		country = {
-			discipline = 0.05
-		}
-
-		heretic = { OLD_NORSE }	
-        
-        personal_deity = yes
-	}
-    
 	crusade_name = HOLY_WAR
 }
