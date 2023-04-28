@@ -18,334 +18,96 @@ country_event = {
 	option = {
 		name = discovery.1.option.a
     
-        # West Coast
-        if = {
-            limit = {
-                capital_scope = {
-                    superregion = west_coast_superregion
-                }
-            }
+        # Show all provinces
+        every_province = {
+            discover_country = ROOT
             
-            west_coast_superregion = {
+            sea_zone = {
                 discover_country = ROOT
             }
-            west_seaboard_region = {
-                discover_country = ROOT
-            }
-            mexico_superregion = {
-                discover_country = ROOT
-            }
-            kansas_region = {
-                discover_country = ROOT
-            }
-            texas_region = {
-                discover_country = ROOT
-            }
-            oklahoma_region = {
-                discover_country = ROOT
-            }
-            
-            6 = {
-                discover_country = ROOT
-            }
-            45 = {
-                discover_country = ROOT
-            }
-            1109 = {
-                discover_country = ROOT
-            }
-            1110 = {
-                discover_country = ROOT
-            }
-            8 = {
-                discover_country = ROOT
-            }
+        }
+        # Show close seazones
+        west_seaboard_region = {
+            discover_country = ROOT
+        }
+        gulf_of_mexico_region = {
+            discover_country = ROOT
+        }
+        caribbean_seaboard_region = {
+            discover_country = ROOT
+        }
+        east_seaboard_region = {
+            discover_country = ROOT
         }
         
-        # East Coast
-        if = {
-            limit = {
-                OR = {
-                    capital_scope = {
-                        superregion = east_coast_superregion
-                    }
-                    tag = DTC
-                }
-            }
-            
-            ronto_area = {
-                discover_country = ROOT
-            }
-            ottawa_area = {
-                discover_country = ROOT
-            }
-            quebec_area = {
-                discover_country = ROOT
-            }
-            east_coast_superregion = {
-                discover_country = ROOT
-            }
-            east_seaboard_region = {
-                discover_country = ROOT
-            }
-            572 = {
-                discover_country = ROOT
-            }
-            1104 = {
-                discover_country = ROOT
-            }
-            1102 = {
-                discover_country = ROOT
-            }
-            1103 = {
-                discover_country = ROOT
-            }
-            1101 = {
-                discover_country = ROOT
-            }
+        
+        # Show only some of Canada
+        quebec_region = {
+            undiscover_country = ROOT
+        }
+        north_bay_area = {
+            undiscover_country = ROOT
+        }
+        ogoki_area = {
+            undiscover_country = ROOT
+        }
+        winisk_area = {
+            undiscover_country = ROOT
+        }
+        opasquia_area = {
+            undiscover_country = ROOT
+        }
+        pikangikum_area = {
+            undiscover_country = ROOT
+        }
+        manitoba_region = {
+            undiscover_country = ROOT
+        }
+        saskatchewan_region = {
+            undiscover_country = ROOT
+        }
+        alberta_region = {
+            undiscover_country = ROOT
+        }
+        british_columbia_region = {
+            undiscover_country = ROOT
+        }
+        228 = {
+            undiscover_country = ROOT
+        }
+        1745 = {
+            undiscover_country = ROOT
         }
         
-        # Midwest
-        if = {
-            limit = {
-                OR = {
-                    capital_scope = {
-                        superregion = midwest_superregion
-                    }
-                    tag = DTC
-                }
-            }
-            
-            midwest_superregion = {
-                discover_country = ROOT
-            }
-            gulf_superregion = {
-                discover_country = ROOT
-            }
-            colorado_region = {
-                discover_country = ROOT
-            }
-            new_mexico_region = {
-                discover_country = ROOT
-            }
-            ronto_area = {
-                discover_country = ROOT
-            }
-            572 = {
-                discover_country = ROOT
-            }
-            1104 = {
-                discover_country = ROOT
-            }
-            1102 = {
-                discover_country = ROOT
-            }
-            1103 = {
-                discover_country = ROOT
-            }
-            1101 = {
-                discover_country = ROOT
-            }
+        # Show these lakes
+        1103 = {
+            discover_country = ROOT
+        }
+        1102 = {
+            discover_country = ROOT
+        }
+        1101 = {
+            discover_country = ROOT
+        }
+        572 = {
+            discover_country = ROOT
+        }
+        1905 = {
+            discover_country = ROOT
+        }
+        12 = {
+            discover_country = ROOT
+        }
+        1110 = {
+            discover_country = ROOT
+        }
+        1109 = {
+            discover_country = ROOT
+        }
+        1104 = {
+            discover_country = ROOT
         }
         
-        # Gulf
-        if = {
-            limit = {
-                OR = {
-                    capital_scope = {
-                        superregion = gulf_superregion
-                    }
-                    tag = DTC
-                    tag = MAW
-                }
-            }
-            midwest_superregion = {
-                discover_country = ROOT
-            }
-            gulf_superregion = {
-                discover_country = ROOT
-            }
-            colorado_region = {
-                discover_country = ROOT
-            }
-            new_mexico_region = {
-                discover_country = ROOT
-            }
-            gulf_of_mexico_region = {
-                discover_country = ROOT
-            }
-            mexico_superregion = {
-                discover_country = ROOT
-            }
-            8 = {
-                discover_country = ROOT
-            }
-        }
-        
-        if = {
-            limit = {
-                capital_scope = {
-                    region = big_mt_region
-                }
-            }
-            big_mt_region = {
-                discover_country = ROOT
-            }
-        }
-        
-        # Mexico
-        if = {
-            limit = {
-                OR = {
-                    capital_scope = {
-                        superregion = mexico_superregion
-                    }
-                   tag = MAW
-                }
-            }
-            mexico_superregion = {
-                discover_country = ROOT
-            }
-            gulf_superregion = {
-                discover_country = ROOT
-            }
-            arizona_region = {
-                discover_country = ROOT
-            }
-            new_mexico_region = {
-                discover_country = ROOT
-            }
-            baja_california_region = {
-                discover_country = ROOT
-            }
-            mexico_west_coast_area = {
-                discover_country = ROOT
-            }
-            baja_california_coast_area = {
-                discover_country = ROOT
-            }
-            gulf_of_california_area = {
-                discover_country = ROOT
-            }
-            gulf_of_mexico_region = {
-                discover_country = ROOT
-            }
-            45 = {
-                discover_country = ROOT
-            }
-            8 = {
-                discover_country = ROOT
-            }
-        }
-        
-        # Caribbean
-        if = {
-            limit = {
-                OR = {
-                    capital_scope = {
-                        region = caribbean_region
-                    }
-                    tag = MAW
-                }
-            }
-            mexico_superregion = {
-                discover_country = ROOT
-            }
-            gulf_superregion = {
-                discover_country = ROOT
-            }
-            gulf_of_mexico_region = {
-                discover_country = ROOT
-            }
-            caribbean_region = {
-                discover_country = ROOT
-            }
-            caribbean_seaboard_region = {
-                discover_country = ROOT
-            }
-            8 = {
-                discover_country = ROOT
-            }
-        }
-        
-        # Canada
-        if = {
-            limit = {
-                capital_scope = {
-                    superregion = canada_superregion
-                }
-            }
-            michigan_region = {
-                discover_country = ROOT
-            }
-            midwest_superregion = {
-                discover_country = ROOT
-            }
-            idaho_region = {
-                discover_country = ROOT
-            }
-            washington_region = {
-                discover_country = ROOT
-            }
-            wyoming_region = {
-                discover_country = ROOT
-            }
-            east_coast_superregion = {
-                discover_country = ROOT
-            }
-            canada_superregion = {
-                discover_country = ROOT
-            }
-            west_canada_coast_area = {
-                discover_country = ROOT
-            }
-            east_canada_coast_area = {
-                discover_country = ROOT
-            }
-            572 = {
-                discover_country = ROOT
-            }
-            1104 = {
-                discover_country = ROOT
-            }
-            1102 = {
-                discover_country = ROOT
-            }
-            1103 = {
-                discover_country = ROOT
-            }
-            1101 = {
-                discover_country = ROOT
-            }
-        }  
-
-        # Hide Sierra Madre
-        if = {
-            limit = { 
-                NOT = {
-                    capital_scope = {
-                        area = sierra_madre_area
-                    }
-                }
-            }
-            sierra_madre_area = {
-                undiscover_country = ROOT
-            }
-        }
-        
-        # Hide The Divide
-        if = {
-            limit = { 
-                NOT = {
-                    capital_scope = {
-                        area = divide_area
-                    }
-                }
-            }
-            divide_area = {
-                undiscover_country = ROOT
-            }
-        }
     }
 }
 

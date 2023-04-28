@@ -13,11 +13,13 @@ fm_spymaster = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            spy_offence = 0.01
         }
     }
     
     # Bonus
-	spy_offence = 0.25
+	spy_offence = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -37,6 +39,8 @@ fm_trader = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_trade_power = 0.02
         }
     }
     
@@ -61,6 +65,8 @@ fm_diplomat = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            diplomatic_reputation = 0.2
         }
     }
     
@@ -85,11 +91,13 @@ fm_proclaimer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            culture_conversion_cost = -0.01
         }
     }
     
     # Bonus
-	culture_conversion_cost = -0.2
+	culture_conversion_cost = -0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -109,6 +117,8 @@ fm_naval_officer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            navy_tradition = 0.1
         }
     }
     
@@ -133,11 +143,13 @@ fm_cartographer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            colony_development_boost = 0.1
         }
     }
     
     # Bonus
-    colonist_placement_chance = 0.05
+    colony_development_boost = 1
 
 	chance = { 
         factor = 1 
@@ -165,11 +177,13 @@ fm_interpreter = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            stability_cost_modifier = -0.01
         }
     }
     
     # Bonus
-	stability_cost_modifier = -0.15
+	stability_cost_modifier = -0.1
     
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -189,6 +203,8 @@ fm_settler = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_colonial_growth = 1
         }
     }
     
@@ -221,11 +237,13 @@ fm_navigator = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            colony_cost_modifier = -0.01
         }
     }
     
     # Bonus
-	range = 0.2 
+	colony_cost_modifier = -0.2
     
 	chance = { 
         factor = 1 
@@ -253,11 +271,13 @@ fm_mariner = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_sailors_modifier = 0.01
         }
     }
     
     # Bonus
-	global_sailors_modifier = 0.15
+	global_sailors_modifier = 0.1
     
 	chance = { 
         factor = 1 
@@ -285,11 +305,13 @@ fm_governor = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            native_assimilation = 0.025
         }
     }
     
     # Bonus
-	native_assimilation = 0.25 
+	native_assimilation = 0.25
     
 	chance = { 
         factor = 1 
@@ -317,11 +339,13 @@ fm_broker = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_trade_goods_size_modifier = 0.01
         }
     }
     
     # Bonus
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.05
     
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -341,11 +365,13 @@ fm_trafficker = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            trade_efficiency = 0.02
         }
     }
     
     # Bonus
-	trade_steering = 0.1
+	trade_efficiency = 0.1
     
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -365,11 +391,13 @@ fm_marshal = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            yearly_corruption = -0.01
         }
     }
     
     # Bonus
-	yearly_corruption = -0.05 
+	yearly_corruption = -0.03
     
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -389,11 +417,13 @@ fm_envoy = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            improve_relation_modifier = 0.01
         }
     }
     
     # Bonus
-	improve_relation_modifier = 0.2
+	improve_relation_modifier = 0.1
     
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }

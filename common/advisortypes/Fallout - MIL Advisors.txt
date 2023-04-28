@@ -13,6 +13,8 @@ fm_army_officer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            army_tradition = 0.1
         }
     }
     
@@ -37,6 +39,8 @@ fm_recruitmaster = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_regiment_cost = -0.01
         }
     }
     
@@ -61,11 +65,13 @@ fm_disciplinarian = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            discipline = 0.01
         }
     }
     
     # Bonus
-	yearly_absolutism = 1
+	discipline = 0.05
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -85,11 +91,13 @@ fm_commandant = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            own_territory_dice_roll_bonus = 0.1
         }
     }
     
     # Bonus
-	discipline = 0.05
+	own_territory_dice_roll_bonus = 1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -109,11 +117,13 @@ fm_logistician = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_supply_limit_modifier = 0.01
         }
     }
     
     # Bonus
-	global_supply_limit_modifier = 0.2
+	global_supply_limit_modifier = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -133,6 +143,8 @@ fm_mechanic = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            land_maintenance_modifier = -0.01
         }
     }
     
@@ -157,11 +169,13 @@ fm_comms_officer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            movement_speed = 0.01
         }
     }
     
     # Bonus
-	movement_speed = 0.2
+	movement_speed = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -181,11 +195,13 @@ fm_crewman = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            morale_damage = 0.01
         }
     }
     
     # Bonus
-	cavalry_power = 0.1 
+	morale_damage = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -205,11 +221,13 @@ fm_mechanical_engineer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            artillery_levels_available_vs_fort = 0.1
         }
     }
     
     # Bonus
-	backrow_artillery_damage = 0.1 
+	artillery_levels_available_vs_fort = 1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -229,6 +247,8 @@ fm_surveyor = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            land_attrition = -0.01
         }
     }
     
@@ -253,11 +273,13 @@ fm_fabricator = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            reinforce_speed = 0.01
         }
     }
     
     # Bonus
-    reinforce_speed = 0.2
+    reinforce_speed = 0.15
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -277,11 +299,13 @@ fm_armourer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            defensiveness = 0.01
         }
     }
     
     # Bonus
-	fire_damage_received = -0.1
+	defensiveness = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -301,11 +325,12 @@ fm_corps_officer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            military_tactics = 0.01
         }
     }
     
     # Bonus
-	infantry_power = 0.1 
+	military_tactics = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -325,6 +350,8 @@ fm_platoon_officer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            land_morale = 0.01
         }
     }
     
@@ -349,11 +376,13 @@ fm_slaver = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_manpower_modifier = 0.01
         }
     }
     
     # Bonus
-	global_manpower_modifier = 0.15
+	global_manpower_modifier = 0.1
 
 	chance = { 
         factor = 1 

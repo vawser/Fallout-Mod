@@ -13,6 +13,8 @@ fm_administrator = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            core_creation = -0.01
         }
     }
     
@@ -37,6 +39,8 @@ fm_treasurer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_tax_modifier = 0.02
         }
     }
     
@@ -61,6 +65,8 @@ fm_researcher = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            idea_cost = -0.01
         }
     }
     
@@ -85,7 +91,10 @@ fm_inquisitor = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_missionary_strength = 0.005
         }
+        
     }
     
     # Bonus
@@ -109,6 +118,8 @@ fm_orator = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_unrest = -0.2
         }
     }
     
@@ -133,11 +144,13 @@ fm_bureaucrat = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            overextension_impact_modifier = -0.01
         }
     }
     
     # Bonus
-    state_maintenance_modifier = -0.1
+    overextension_impact_modifier = -0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -157,11 +170,13 @@ fm_architect = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            build_cost = -0.01
         }
     }
     
     # Bonus
-    build_cost = -0.15
+    build_cost = -0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -181,6 +196,8 @@ fm_artist = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            prestige = 0.1
         }
     }
     
@@ -205,6 +222,8 @@ fm_farmer = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            production_efficiency = 0.02
         }
     }
     
@@ -229,11 +248,13 @@ fm_evangelist = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            prestige_per_development_from_conversion = 0.02
         }
     }
     
     # Bonus
-    missionaries = 1 
+    prestige_per_development_from_conversion = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -253,11 +274,13 @@ fm_theologian = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            missionary_maintenance_cost = -0.01
         }
     }
     
     # Bonus
-    missionary_maintenance_cost = -0.2
+    missionary_maintenance_cost = -0.15
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -277,6 +300,8 @@ fm_mayor = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            global_autonomy = -0.01
         }
     }
     
@@ -301,11 +326,13 @@ fm_chemist = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            monthly_reform_progress_modifier = 0.01
         }
     }
     
     # Bonus
-    global_institution_spread = 0.25 
+    monthly_reform_progress_modifier = 0.1 
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }
@@ -325,6 +352,8 @@ fm_physicist = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            technology_cost = -0.01
         }
     }
     
@@ -349,11 +378,13 @@ fm_biologist = {
             devotion = 0.05
             horde_unity = 0.05
             meritocracy = 0.05
+            
+            governing_capacity_modifier = 0.01
         }
     }
     
     # Bonus
-    embracement_cost = -0.15
+    governing_capacity_modifier = 0.1
 
 	chance = { factor = 1 }
 	ai_will_do = { factor = 1 }

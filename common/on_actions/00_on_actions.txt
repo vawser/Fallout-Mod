@@ -674,10 +674,21 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+    
 }
+
 on_yearly_pulse = {
-	
+	# --- Trade Good Price Swing
+    # Only do this for the player so it occurs once
+    if = {
+        limit = {
+            ai = no
+        }
+        
+        randomise_goods_price = yes
+    }
 }
+
 on_yearly_pulse_2 = {
 }
 on_yearly_pulse_3 = {
