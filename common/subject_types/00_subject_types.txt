@@ -42,6 +42,7 @@ self_governing_colony = {}
 tributary_state = {}
 commercial_enterprise = {}
 trade_protectorate = {}
+hegemonic_vassal = {}
 
 default = {
 	# Graphics:
@@ -989,4 +990,35 @@ trade_protectorate = {
 dummy =
 {
 	copy_from = default
+}
+
+# Hegemonic Vassal
+hegemonic_vassal = {
+	copy_from = vassal
+	
+	# Graphics:
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal
+
+	# Properties:
+	base_liberty_desire = -25.0
+	can_be_annexed = no
+    takes_diplo_slot = no
+    
+	# Modifiers:
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+    
+	modifier_subject = {
+		modifier = subject_nation
+	}
+    
+	modifier_overlord = {
+		modifier = hegemonic_subject
+	}
+    
+	modifier_subject = {
+		modifier = hegemonic_bonus
+	}
 }

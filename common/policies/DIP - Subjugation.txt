@@ -1,7 +1,7 @@
 #---------------------------------------------------------
 # Subjugation
 #---------------------------------------------------------
-military_bureaucrats = {
+educated_commanders = {
 	monarch_power = ADM
 
 	potential = {
@@ -22,7 +22,7 @@ military_bureaucrats = {
                 full_idea_group = fallout_absolutism_ideas
                 full_idea_group = fallout_autonomy_ideas
                 full_idea_group = fallout_settlement_ideas
-				full_idea_group = fallout_tolerance_ideas
+				full_idea_group = fallout_citizenship_ideas
             }
         }
 	}
@@ -53,15 +53,14 @@ fervent_conquest = {
                 full_idea_group = fallout_assimilation_ideas 
                 full_idea_group = fallout_society_ideas
                 full_idea_group = fallout_propaganda_ideas
-                full_idea_group = fallout_naval_organisation_ideas
-                full_idea_group = fallout_naval_leadership_ideas
-                full_idea_group = fallout_naval_tactics_ideas
+                full_idea_group = fallout_naval_ideas
+                full_idea_group = fallout_piracy_ideas
             }
         }
 	}
 	
 	# Modifier
-    unjustified_demands = -0.1
+    unjustified_demands = -0.05
     
 	ai_will_do = {
 		factor = 1
@@ -75,13 +74,13 @@ local_support = {
 	}
 	allow = {
         AND = {
-            full_idea_group = fallout_subjugation_ideas
+            full_idea_group = fallout_subjugation_ideas 
             OR  = {
-                full_idea_group = fallout_offensive_ideas 
+                full_idea_group = fallout_offensive_ideas
                 full_idea_group = fallout_defensive_ideas
                 full_idea_group = fallout_quality_ideas
-                full_idea_group = fallout_quantity_ideas 
-                full_idea_group = fallout_professional_army_ideas 
+                full_idea_group = fallout_quantity_ideas
+                full_idea_group = fallout_professional_army_ideas  
                 full_idea_group = fallout_mercenary_army_ideas
                 full_idea_group = fallout_army_organisation_ideas
                 full_idea_group = fallout_army_leadership_ideas
@@ -93,7 +92,7 @@ local_support = {
 	}
 	
 	# Modifier
-    province_warscore_cost = -0.1
+    province_warscore_cost = -0.05
     
 	ai_will_do = {
 		factor = 1

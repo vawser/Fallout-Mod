@@ -12,12 +12,12 @@ fallout_innovation_ideas = {
     category = ADM
 
     bonus = {
-        advisor_cost = -0.15
+        advisor_cost = -0.2
     }
     
     # Scientific Progress
     fallout_innovation_ideas_1 = {
-        technology_cost = -0.15
+        technology_cost = -0.1
     }
     # Astute Accounting
     fallout_innovation_ideas_2 = {
@@ -30,10 +30,12 @@ fallout_innovation_ideas = {
     # Local Advisors
     fallout_innovation_ideas_4 = {
         advisor_pool = 1
+        yearly_corruption = -0.03
     }
     # Pragmatism
     fallout_innovation_ideas_5 = {
-        mercenary_cost = -0.1
+        global_institution_spread = 0.25
+        embracement_cost = -0.25
     }
     # Hope for the Future
     fallout_innovation_ideas_6 = {
@@ -42,6 +44,7 @@ fallout_innovation_ideas = {
     # Military Routines
     fallout_innovation_ideas_7 = {
         free_leader_pool = 1
+        free_mil_policy = 1
     }
     
     ai_will_do = {
@@ -63,13 +66,18 @@ fallout_innovation_ideas = {
 fallout_religious_ideas = {
     category = ADM
 
-    bonus = {
-        culture_conversion_cost = -0.2
+    trigger = {
+        NOT = { has_idea_group = fallout_harmony_ideas }
     }
     
-    # Deus Vult
+    bonus = {
+        culture_conversion_cost = -0.1
+    }
+    
+    # Inqusitorial Practices
     fallout_religious_ideas_1 = {
-        cb_on_religious_enemies = yes
+        missionaries = 1
+		missionary_maintenance_cost = -0.2
     }
     # Religious Fervor
     fallout_religious_ideas_2 = {
@@ -77,27 +85,30 @@ fallout_religious_ideas = {
     }
     # Attendance Duty
     fallout_religious_ideas_3 = {
-        stability_cost_modifier = -0.25
+        stability_cost_modifier = -0.1
     }
     # Divine Supremacy
     fallout_religious_ideas_4 = {
         global_missionary_strength = 0.03
+        relation_with_same_religion = 25
     }
     # Devotion
     fallout_religious_ideas_5 = {
-        tolerance_own = 1
-		papal_influence = 2
+        tolerance_own = 2
+		papal_influence = 1
 		devotion = 0.5
-		monthly_fervor_increase = 0.25
+		monthly_fervor_increase = 0.1
 		church_power_modifier = 0.1
     }
     # Religious Traditions
     fallout_religious_ideas_6 = {
-        prestige = 1
+        prestige = 1.0
+		prestige_per_development_from_conversion = 0.5
     }
-    # Inqusitorial Practices
+    # Deus Vult
     fallout_religious_ideas_7 = {
-        missionary_maintenance_cost = -0.2
+        cb_on_religious_enemies = yes
+		warscore_cost_vs_other_religion = -0.15
     }
     
     ai_will_do = {
@@ -122,40 +133,41 @@ fallout_religious_ideas = {
     }
 }
 
-# Tolerance
-fallout_tolerance_ideas = {
+# Citizenship
+fallout_citizenship_ideas = {
     category = ADM
 
     bonus = {
-        num_accepted_cultures = 2
+        possible_policy = 1
     }
-    # Religious Tolerance
-    fallout_tolerance_ideas_1 = {
-        religious_unity = 0.2
+    
+    # Wisdom of the Crowds
+    fallout_citizenship_ideas_1 = {
+        reform_progress_growth = 0.25
     }
-    # Tolerate the Heathen
-    fallout_tolerance_ideas_2 = {
-        tolerance_heathen = 2
+    # Promises of Freedom
+    fallout_citizenship_ideas_2 = {
+       overextension_impact_modifier = -0.1
     }
-    # United Front
-    fallout_tolerance_ideas_3 = {
-        global_unrest = -2
+    # Local Support
+    fallout_citizenship_ideas_3 = {
+        global_monthly_devastation = -0.05
     }
-    # Tolerate the Heretic
-    fallout_tolerance_ideas_4 = {
-        tolerance_heretic = 2
+    # State Pride
+    fallout_citizenship_ideas_4 = {
+        state_governing_cost = -0.1
     }
-    # Stability through Faith
-    fallout_tolerance_ideas_5 = {
-        stability_cost_modifier = -0.2
+    # Power Brokers
+    fallout_citizenship_ideas_5 = {
+        all_estate_loyalty_equilibrium = 0.1
     }
-    # Cultural Similarities
-    fallout_tolerance_ideas_6 = {
-        promote_culture_cost = -0.5
+    # Industrious Citizens
+    fallout_citizenship_ideas_6 = {
+        global_allowed_num_of_manufactories = 1
     }
-    # Varied Advisors
-    fallout_tolerance_ideas_7 = {
-        same_culture_advisor_cost = -0.2
+    # Citizenship for All
+    fallout_citizenship_ideas_7 = {
+        development_cost_modifier = -0.05
     }
     
     ai_will_do = {
@@ -163,15 +175,7 @@ fallout_tolerance_ideas = {
         
         modifier = {
 			factor = 2
-			NOT = { religious_unity = 0.9 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { religious_unity = 0.8 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { religious_unity = 0.7 }
+			personality = ai_capitalist 
 		}
     }
 }
@@ -182,33 +186,36 @@ fallout_economic_ideas = {
     category = ADM
 
     bonus = {
-        development_cost = -0.1
+        development_cost = -0.15
     }
     
     # Wasteland Bureaucracy
     fallout_economic_ideas_1 = {
-        global_tax_modifier = 0.1
+        global_tax_modifier = 0.2
+        expand_administration_cost = -0.2
     }
     # Organised Construction
     fallout_economic_ideas_2 = {
-        build_cost = -0.2
-		build_time = -0.2
+        build_cost = -0.1
+        build_time = -0.1
     }
     # National Bank
     fallout_economic_ideas_3 = {
-        inflation_reduction = 0.1
+        inflation_reduction = 0.05
     }
     # Debt and Loans
     fallout_economic_ideas_4 = {
-        interest = -2
+        interest = -1
+        monthly_gold_inflation_modifier = -0.25
     }
     # Centralization
     fallout_economic_ideas_5 = {
         global_autonomy = -0.05
+        gold_depletion_chance_modifier = -0.1
     }
     # War Enthusiasm
     fallout_economic_ideas_6 = {
-        land_maintenance_modifier = -0.1
+        land_maintenance_modifier = -0.15
     }
     # Engineered Seeds
     fallout_economic_ideas_7 = {
@@ -243,7 +250,7 @@ fallout_expansion_ideas = {
     }
     # Surge of Growth
     fallout_expansion_ideas_3 = {
-        global_colonial_growth = 5
+        global_colonial_growth = 10
     }
     # Colonial Recruitment
     fallout_expansion_ideas_4 = {
@@ -255,15 +262,32 @@ fallout_expansion_ideas = {
     }
     # Vast Territories
     fallout_expansion_ideas_6 = {
-        governing_capacity_modifier = 0.2
+        min_autonomy_in_territories = -0.1
     }
-    # Local Policing
+    # Wasteland Expansion
     fallout_expansion_ideas_7 = {
-        harsh_treatment_cost = -0.25
+        colony_cost_modifier = -0.2
     }
     
     ai_will_do = {
         factor = 1
+        
+        # VAWSER: stop the AI picking this once 6 nations have Exploration/Expansion/Imperialism
+        modifier = {
+			factor = 0
+			
+            calc_true_if = {
+                amount = 6
+                
+                all_country = {
+                    OR = {
+                        has_idea_group = fallout_expansion_ideas
+                        has_idea_group = fallout_exploration_ideas
+                        has_idea_group = fallout_imperialism_ideas
+                    }
+                }
+            }
+		}
         
         modifier = {
 			factor = 0
@@ -279,6 +303,12 @@ fallout_expansion_ideas = {
 			factor = 2
 			has_idea_group = fallout_exploration_ideas
 		}
+        
+        modifier = {
+			factor = 0
+			
+            government = tribal
+		}
     }
 }
 
@@ -289,13 +319,13 @@ fallout_administrative_ideas = {
     bonus = {
         governing_capacity_modifier = 0.25
     }
-    # Organised Mercenary Payments
+    # Organised Payments
     fallout_administrative_ideas_1 = {
-        mercenary_cost = -0.2
+        adm_advisor_cost = -0.25
     }
     # Adaptability
     fallout_administrative_ideas_2 = {
-        core_creation = -0.1
+        core_creation = -0.15
     }
     # Consistent Recordkeeping
     fallout_administrative_ideas_3 = {
@@ -311,11 +341,11 @@ fallout_administrative_ideas = {
     }
     # Administrative Efficiency
     fallout_administrative_ideas_6 = {
-        administrative_efficiency = 0.1
+        administrative_efficiency = 0.05
     }
     # Prewar Codex
     fallout_administrative_ideas_7 = {
-        adm_tech_cost_modifier = -0.05
+        adm_tech_cost_modifier = -0.1
     }
     
     ai_will_do = {
@@ -333,12 +363,14 @@ fallout_harmony_ideas = {
     category = ADM
 
     bonus = {
-        stability_cost_modifier = -0.25
+        stability_cost_modifier = -0.1
+        citizens_loyalty_modifier = 0.1
     }
     
     # Religious Unity
     fallout_harmony_ideas_1 = {
-        religious_unity = 0.2
+        religious_unity = 0.15
+        relation_with_same_religion = 30
     }
     # Local Traditions
     fallout_harmony_ideas_2 = {
@@ -347,6 +379,7 @@ fallout_harmony_ideas = {
     # Love Thy Neighbour
     fallout_harmony_ideas_3 = {
         tolerance_heretic = 2
+        relation_with_other_culture = 30
     }
     # Indirect Rule
     fallout_harmony_ideas_4 = {
@@ -355,6 +388,7 @@ fallout_harmony_ideas = {
     # Cultural Ties
     fallout_harmony_ideas_5 = {
         num_accepted_cultures = 1
+        relation_with_accepted_culture = 30
     }
     # Benevolence
     fallout_harmony_ideas_6 = {
@@ -363,6 +397,7 @@ fallout_harmony_ideas = {
     # Entertain the Exotic
     fallout_harmony_ideas_7 = {
         tolerance_heathen = 2
+        relation_with_heathens = 30
     }
     
     ai_will_do = {
@@ -419,7 +454,7 @@ fallout_law_ideas = {
     category = ADM
 
     bonus = {
-        reform_progress_growth = 0.5
+        reform_progress_growth = 0.25
     }
     # Collection of Laws
     fallout_law_ideas_1 = {
@@ -431,24 +466,26 @@ fallout_law_ideas = {
     }
     # Wasteland Justice
     fallout_law_ideas_2 = {
-        yearly_corruption = -0.1
+        yearly_corruption = -0.05
     }
     # Ministerial Traditions
     fallout_law_ideas_3 = {
-        idea_cost = -0.05
+        monthly_splendor = 2
+        advisor_cost = -0.2
     }
     # Sealed Contracts
     fallout_law_ideas_4 = {
         trade_efficiency = 0.1
+        transfer_trade_power_reasons = 20
     }
     # Persuit of Usury
     fallout_law_ideas_5 = {
         interest = -1
+        global_prosperity_growth = 0.1
     }
     # Bureaucratic Consensus
     fallout_law_ideas_6 = {
-        core_creation = -0.1
-		diplomatic_annexation_cost = -0.1
+        diplomatic_annexation_cost = -0.2
     }
     # Minority Rights
     fallout_law_ideas_7 = {
@@ -458,11 +495,6 @@ fallout_law_ideas = {
     
     ai_will_do = {
         factor = 1
-        
-        modifier = {
-			factor = 2
-			personality = ai_capitalist 
-		}
     }
 }
 
@@ -471,11 +503,11 @@ fallout_development_ideas = {
     category = ADM
 
     bonus = {
-        state_maintenance_modifier = -0.15
+        global_monthly_devastation = -0.1
     }
     # Local Development
     fallout_development_ideas_1 = {
-        development_cost = -0.2
+        development_cost = -0.1
     }
     # Regional Standards
     fallout_development_ideas_2 = {
@@ -492,14 +524,16 @@ fallout_development_ideas = {
     # Cooperative Mayors
     fallout_development_ideas_5 = {
         global_autonomy = -0.05
+        move_capital_cost_modifier = -0.5
     }
     # Local Building Materials
     fallout_development_ideas_6 = {
         build_cost = -0.15
     }
-    # Monetary Policy
+    # Cultural Assimilation
     fallout_development_ideas_7 = {
-        inflation_reduction = 0.05
+        num_accepted_cultures = 1
+        same_culture_advisor_cost = -0.2
     }
     
     ai_will_do = {
@@ -525,7 +559,8 @@ fallout_absolutism_ideas = {
     }
     # Ruling with an Iron Fist
     fallout_absolutism_ideas_1 = {
-        global_autonomy = -0.05
+        yearly_absolutism = 1.0
+        max_absolutism = 10
     }
     # Autocratic Favours
     fallout_absolutism_ideas_2 = {
@@ -533,23 +568,29 @@ fallout_absolutism_ideas = {
     }
     # Surpressed People
     fallout_absolutism_ideas_3 = {
-        global_unrest = -2
+        global_unrest = -1
+        global_rebel_suppression_efficiency = 0.25
     }
     # Might is Right
     fallout_absolutism_ideas_4 = {
-        war_exhaustion_cost = -0.25
+        war_exhaustion_cost = -0.2
     }
     # Religious Conviction
     fallout_absolutism_ideas_5 = {
-        global_heretic_missionary_strength = 0.02
+        missionaries = 1
+        global_heretic_missionary_strength = 0.01
     }
     # Uncompromising Vision
     fallout_absolutism_ideas_6 = {
-        idea_cost = -0.05
+        legitimacy = 1
+        republican_tradition = 0.5
+        devotion = 1
+        horde_unity = 1
+        meritocracy = 1
     }
     # Autarchs
     fallout_absolutism_ideas_7 = {
-        yearly_absolutism = 1
+        state_governing_cost = -0.1
     }
     
     ai_will_do = {
@@ -562,11 +603,13 @@ fallout_autonomy_ideas = {
     category = ADM
 
     bonus = {
-        reduced_liberty_desire = 10
+       reduced_liberty_desire = 10
+        all_estate_loyalty_equilibrium = 0.05
     }
     # Local Rule
     fallout_autonomy_ideas_1 = {
         state_maintenance_modifier = -0.25
+        relation_with_accepted_culture = 30
     }
     # Farming Techniques
     fallout_autonomy_ideas_2 = {
@@ -574,11 +617,12 @@ fallout_autonomy_ideas = {
     }
     # Provincial Traditions
     fallout_autonomy_ideas_3 = {
-        promote_culture_cost = -0.5
+        promote_culture_cost = -1.0
     }
     # Collobrative Communities
     fallout_autonomy_ideas_4 = {
-        development_cost = -0.1
+        development_cost = -0.05
+        relation_with_same_culture_group = 50
     }
     # Streetside Stories
     fallout_autonomy_ideas_5 = {
@@ -586,7 +630,9 @@ fallout_autonomy_ideas = {
     }
     # Folklore
     fallout_autonomy_ideas_6 = {
-        stability_cost_modifier = -0.25
+        autonomy_change_time = -0.25
+        tolerance_of_heretics_capacity = 1
+        tolerance_of_heathens_capacity = 1
     }
     # Power to the People
     fallout_autonomy_ideas_7 = {
@@ -602,8 +648,12 @@ fallout_autonomy_ideas = {
 fallout_settlement_ideas = {
     category = ADM
 
+    trigger = {
+        has_reform = settlement_reform
+    }
+
     bonus = {
-        governing_capacity_modifier = 0.15
+        governing_capacity_modifier = 0.1
     }
     # Wasteland Colonists
     fallout_settlement_ideas_1 = {
@@ -615,7 +665,7 @@ fallout_settlement_ideas = {
     }
     # Frontier Development
     fallout_settlement_ideas_3 = {
-        development_cost = -0.1
+        development_cost = -0.05
     }
     # Colonial Rush
     fallout_settlement_ideas_4 = {
@@ -627,11 +677,11 @@ fallout_settlement_ideas = {
     }
     # Cultural Hegemony
     fallout_settlement_ideas_6 = {
-        culture_conversion_cost = -0.25
+        culture_conversion_cost = -0.15
     }
     # Integration of Natives
     fallout_settlement_ideas_7 = {
-        native_assimilation = 0.25
+        native_assimilation = 0.33
     }
     
     ai_will_do = {
@@ -651,12 +701,12 @@ fallout_creatorism_ideas = {
     }
     
     bonus = {
-        yearly_corruption = -0.05
+        missionaries = 1
     }
     
     # The Codex
     fallout_creatorism_ideas_1 = {
-        technology_cost = -0.1
+        adm_tech_cost_modifier = -0.1
     }
     # Rites of Engineering
     fallout_creatorism_ideas_2 = {
@@ -664,11 +714,11 @@ fallout_creatorism_ideas = {
     }
     # Technological Relics
     fallout_creatorism_ideas_3 = {
-        embracement_cost = -0.2
+        mil_tech_cost_modifier = -0.15
     }
     # Brotherhood Supremacy
     fallout_creatorism_ideas_4 = {
-        missionary_maintenance_cost = -0.2
+        global_missionary_strength = 0.03
     }
     # Prewar Collections
     fallout_creatorism_ideas_5 = {
@@ -676,11 +726,11 @@ fallout_creatorism_ideas = {
     }
     # Subjugation of Lessers
     fallout_creatorism_ideas_6 = {
-        missionaries = 1
+        global_unrest = -2
     }
     # Brotherhood of Steel
     fallout_creatorism_ideas_7 = {
-        global_missionary_strength = 0.03
+        fire_damage = 0.1
     }
     
     ai_will_do = {
@@ -750,8 +800,8 @@ fallout_hubology_ideas = {
     }
     # Knowledge of Neurodynes
     fallout_hubology_ideas_2 = {
-        devotion = 0.5
-        legitimacy = 0.5
+        devotion = 1
+        legitimacy = 1
     }
     # Survivors of the Great Deluge
     fallout_hubology_ideas_3 = {
@@ -767,7 +817,7 @@ fallout_hubology_ideas = {
     }
     # The Uplifting
     fallout_hubology_ideas_6 = {
-        prestige = 1
+        country_admin_power = 1
     }
     # Zetan Origins
     fallout_hubology_ideas_7 = {
@@ -845,15 +895,15 @@ fallout_atomic_worship_ideas = {
     }
     # Transformation through Division
     fallout_atomic_worship_ideas_3 = {
-        tolerance_own = 1
+        tolerance_own = 2
     }
     # Irratiated Shrines
     fallout_atomic_worship_ideas_4 = {
-        land_attrition = -0.2
+        land_attrition = -0.25
     }
     # Asceticism
     fallout_atomic_worship_ideas_5 = {
-        missionary_maintenance_cost = -0.3
+        missionary_maintenance_cost = -0.2
     }
     # Absolition of Self
     fallout_atomic_worship_ideas_6 = {

@@ -1,0 +1,45 @@
+#-------------------------------
+# Hegemonic Subjugate
+#-------------------------------
+po_make_hegemonic_vassal = {
+	category = 6
+	power_projection = humiliated_rival 
+	power_cost_base = 1.25
+	prestige_base = 1.0
+	ae_base = 1.25
+    
+	warscore_cost = {
+		all_provinces = 1.0
+		no_provinces = 0.0
+		owner_keeps = 0.0
+		conquered = 1.0
+		returned_core = 0.0
+		released_nation = 0.0
+		cancelled_subject = 0.0
+		concede_colonial_region = 0.0
+	}
+	warscore_cap = 100.0
+	requires_demand_independence = yes
+	is_make_subject = yes
+	requires_is_allowed = no
+	
+	is_visible = {
+        full_idea_group = fallout_subjugation_ideas
+	}
+	is_allowed = {
+        full_idea_group = fallout_subjugation_ideas
+	}
+	effect = {
+        create_subject = {
+            subject_type = hegemonic_vassal
+            subject = FROM
+        }
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 100
+		}
+	}
+}
+

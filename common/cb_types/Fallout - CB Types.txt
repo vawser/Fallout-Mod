@@ -24,7 +24,7 @@ cb_merciless_war = {
 	valid_for_subject = no
 
 	prerequisites = {
-		has_idea = fallout_imperialism_ideas_7
+		has_idea = fallout_absolutism_ideas_7
 		is_free_or_tributary_trigger = yes
 	}
 
@@ -71,4 +71,23 @@ cb_religious_unification = {
 	}
 
 	war_goal = take_capital_force_religion
+}
+
+cb_distant_conquest = {
+	valid_for_subject = no
+
+    prerequisites_self = {
+        has_idea = fallout_expansion_ideas_7
+		is_free_or_tributary_trigger = yes
+    }
+    
+    prerequisites = {
+        FROM = {
+            NOT = {
+                capital_scope = { continent = ROOT }
+            }
+        }
+	}
+
+	war_goal = take_capital_justified
 }

@@ -1,7 +1,7 @@
 #---------------------------------------------------------
-# Naval Leadership
+# Tolerance
 #---------------------------------------------------------
-spirit_of_leadership = {
+citizen_participation = {
 	monarch_power = ADM
 
 	potential = {
@@ -9,10 +9,9 @@ spirit_of_leadership = {
 	}
 	allow = {
         AND = {
-            full_idea_group = fallout_naval_leadership_ideas 
+            full_idea_group = fallout_citizenship_ideas
             OR  = {
                 full_idea_group = fallout_innovation_ideas 
-                full_idea_group = fallout_religious_ideas
                 full_idea_group = fallout_economic_ideas          
                 full_idea_group = fallout_expansion_ideas
                 full_idea_group = fallout_administrative_ideas
@@ -21,21 +20,19 @@ spirit_of_leadership = {
                 full_idea_group = fallout_development_ideas
                 full_idea_group = fallout_absolutism_ideas
                 full_idea_group = fallout_autonomy_ideas
-                full_idea_group = fallout_settlement_ideas
-				full_idea_group = fallout_tolerance_ideas
+                full_idea_group = fallout_religious_ideas
             }
         }
 	}
 	
 	# Modifier
-    admiral_cost = -0.25
-    admiral_skill_gain_modifier = 0.25
+    free_policy = 1
     
 	ai_will_do = {
 		factor = 1
 	}
 }
-spirit_of_exploration = {
+local_development_support = {
 	monarch_power = DIP
 
 	potential = {
@@ -43,31 +40,32 @@ spirit_of_exploration = {
 	}
 	allow = {
         AND = {
-            full_idea_group = fallout_naval_leadership_ideas
+            full_idea_group = fallout_citizenship_ideas
             OR  = {
-                full_idea_group = fallout_espionage_ideas 
+                full_idea_group = fallout_espionage_ideas
                 full_idea_group = fallout_community_ideas
                 full_idea_group = fallout_influence_ideas
                 full_idea_group = fallout_trade_ideas
                 full_idea_group = fallout_exploration_ideas
                 full_idea_group = fallout_maritime_ideas
-                full_idea_group = fallout_assimilation_ideas 
-                full_idea_group = fallout_society_ideas
+                full_idea_group = fallout_assimilation_ideas
+                full_idea_group = fallout_society_ideas 
                 full_idea_group = fallout_propaganda_ideas
-                full_idea_group = fallout_naval_organisation_ideas
-                full_idea_group = fallout_naval_tactics_ideas
+                full_idea_group = fallout_naval_ideas
+                full_idea_group = fallout_piracy_ideas
+                full_idea_group = fallout_subjugation_ideas
             }
         }
 	}
 	
 	# Modifier
-    leader_naval_manuever = 1
+    development_cost_modifier = -0.05
     
 	ai_will_do = {
 		factor = 1
 	}
 }
-spirit_of_war = {
+obedient_citizens = {
 	monarch_power = MIL
 
 	potential = {
@@ -75,7 +73,7 @@ spirit_of_war = {
 	}
 	allow = {
         AND = {
-            full_idea_group = fallout_naval_leadership_ideas 
+            full_idea_group = fallout_citizenship_ideas
             OR  = {
                 full_idea_group = fallout_offensive_ideas
                 full_idea_group = fallout_defensive_ideas
@@ -87,14 +85,13 @@ spirit_of_war = {
                 full_idea_group = fallout_army_leadership_ideas
                 full_idea_group = fallout_army_tactics_ideas
                 full_idea_group = fallout_fortification_ideas
-                full_idea_group = fallout_subjugation_ideas
                 full_idea_group = fallout_imperialism_ideas
             }
         }
 	}
 	
 	# Modifier
-    navy_tradition = 0.5
+    overextension_impact_modifier = -0.1
     
 	ai_will_do = {
 		factor = 1

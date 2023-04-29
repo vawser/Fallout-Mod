@@ -95,7 +95,10 @@ propagate_religion = {
 		custom_trigger_tooltip = {
             tooltip = ALLOW_PROPAGATE_RELIGON
             
-            has_country_flag = allow_propagate_religion
+            OR = {
+                has_idea = fallout_religious_ideas_2
+                has_country_flag = allow_propagate_religion
+            }
         }
 		dominant_religion = ROOT
 		FROM = {

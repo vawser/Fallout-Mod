@@ -367,11 +367,502 @@ conduct_slave_raid = {
 	}
 }
 
+#---------------------------------------
+# Disrupt Alliance
+#---------------------------------------
+disrupt_alliance = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = disrupt_alliance_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {
+        has_idea = fallout_espionage_ideas_1
+        
+        # Target has more than 0 allies
+        FROM = {
+            num_of_allies = 1
+            
+            any_ally = {
+                NOT = { 
+                    has_opinion_modifier = {
+                        modifier = alliance_disrupted
+                        who = FROM
+                    }
+                }
+            }
+        }
+	}
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+	on_accept = {
+        hidden_effect = {
+            if = { 
+                limit = { has_global_flag = enable_diplomacy_logging }
+                log = "DEBUG - [Root.GetName], [From.GetName] - disrupt_alliance"
+            }
+        }
+        
+		add_spy_network_in = {
+			who = FROM
+			value = -50
+		}
+        
+        hidden_effect = {
+            FROM = {
+                save_event_target_as = disrupt_target
+                
+                random_ally = {
+                    limit = {
+                        NOT = { 
+                            has_opinion_modifier = {
+                                modifier = alliance_disrupted
+                                who = FROM
+                            }
+                        }
+                    }
+                    save_event_target_as = disrupted_ally
+                }
+            }
+        }
+        
+        country_event = { id = diplomatic_actions.20 }
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
 
+	ai_will_do = {
+        always = no
+	}
+}
 
+#---------------------------------------
+# Provoke Rebels
+#---------------------------------------
+provoke_rebels = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = provoke_rebels_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {
+        dip_tech = 8
+        is_neighbor_of = FROM
+	}
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 30
+		}
+	}
+	on_accept = {
+        hidden_effect = {
+            if = { 
+                limit = { has_global_flag = enable_diplomacy_logging }
+                log = "DEBUG - [Root.GetName], [From.GetName] - provoke_rebels"
+            }
+        }
+        
+		add_spy_network_in = {
+			who = FROM
+			value = -30
+		}
+        
+        if = {
+            limit = {
+                has_idea = fallout_espionage_ideas_4
+            }
+            if = {
+                limit = {
+                    DIP = 6
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 8
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 6 }
+                    DIP = 4
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 7
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 4 }
+                    DIP = 2
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 6
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 2 }
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 4
+                            win = yes
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            if = {
+                limit = {
+                    DIP = 6
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 6
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 6 }
+                    DIP = 4
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 5
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 4 }
+                    DIP = 2
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 4
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 2 }
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = anti_tax_rebels
+                            size = 2
+                            win = yes
+                        }
+                    }
+                }
+            }
+        }
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
 
+	ai_will_do = {
+        always = no
+	}
+}
 
+#---------------------------------------
+# Provoke Pretenders
+#---------------------------------------
+provoke_pretenders = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = provoke_pretenders_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {  
+        dip_tech = 8
+        is_neighbor_of = FROM
+        FROM = {
+            NOT = {
+                government = republic
+            }
+        }
+	}
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 40
+		}
+	}
+	on_accept = {
+        hidden_effect = {
+            if = { 
+                limit = { has_global_flag = enable_diplomacy_logging }
+                log = "DEBUG - [Root.GetName], [From.GetName] - provoke_pretenders"
+            }
+        }
+        
+		add_spy_network_in = {
+			who = FROM
+			value = -40
+		}
+        
+        if = {
+            limit = {
+                has_idea = fallout_espionage_ideas_4
+            }
+            if = {
+                limit = {
+                    DIP = 6
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 8
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 6 }
+                    DIP = 4
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 6
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 4 }
+                    DIP = 2
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 6
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 2 }
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 4
+                            win = yes
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            if = {
+                limit = {
+                    DIP = 6
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 6
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 6 }
+                    DIP = 4
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 5
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 4 }
+                    DIP = 2
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 4
+                            win = yes
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = { DIP = 2 }
+                }
+                FROM = {
+                    random_owned_province = {
+                        spawn_rebels = {
+                            type = pretender_rebels
+                            size = 2
+                            win = yes
+                        }
+                    }
+                }
+            }
+        }
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
 
+	ai_will_do = {
+        always = no
+	}
+}
 
+#---------------------------------------
+# Manipulate Opinion
+#---------------------------------------
+manipulate_opinion = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = manipulate_opinion_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {
+        FROM = { 
+            custom_trigger_tooltip = {
+                tooltip = RECENTLY_TARGET_OF_MANIPULATE_OPINION
+                NOT = { has_country_modifier = cooldown_manipulate_opinion }
+            }
+        }
+	}
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+	on_accept = {
+        hidden_effect = {
+            if = { 
+                limit = { has_global_flag = enable_diplomacy_logging }
+                log = "DEBUG - [Root.GetName], [From.GetName] - manipulate_opinion"
+            }
+        }
+        
+		add_spy_network_in = {
+			who = FROM
+			value = -50
+		}
+        
+        FROM = {
+            add_aggressive_expansion = {
+                who = ROOT
+                value = -20
+            }
+            
+            if = {
+                limit = {
+                    ROOT = {
+                        has_idea = fallout_espionage_ideas_7
+                    }
+                }
+                
+                add_aggressive_expansion = {
+                    who = ROOT
+                    value = -10
+                }
+            }
+        }
+        
+        FROM = {
+            hidden_effect = {
+                add_country_modifier = {
+                    name = cooldown_manipulate_opinion
+                    duration = 1825
+                    hidden = yes
+                }
+            }
+        }
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
 
-
+	ai_will_do = {
+        always = no
+	}
+}

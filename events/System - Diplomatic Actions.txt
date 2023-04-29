@@ -358,3 +358,55 @@ country_event = {
         }
 	}
 }
+
+# Disrupt Alliance
+country_event = {
+	id = diplomatic_actions.20
+	title = diplomatic_actions.20.title
+    desc = diplomatic_actions.20.desc
+	picture = DEADLY_POISON_eventPicture
+
+    is_triggered_only = yes
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = diplomatic_actions.20.option.a
+        
+        event_target:disrupted_ally = {
+            country_event = { id = diplomatic_actions.21 }
+        }
+	}
+}
+
+# Engineered Upset
+country_event = {
+	id = diplomatic_actions.21
+	title = diplomatic_actions.21.title
+    desc = diplomatic_actions.21.desc
+	picture = DEADLY_POISON_eventPicture
+
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = diplomatic_actions.21.option.a
+		
+        event_target:disrupt_target = {
+            add_opinion = {
+                who = ROOT
+                modifier = alliance_disrupted
+            }
+        }
+        
+        add_opinion = {
+            who = event_target:disrupt_target
+            modifier = alliance_disrupted
+        }
+	}
+}

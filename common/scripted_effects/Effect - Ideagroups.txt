@@ -1,0 +1,37 @@
+#-----------------------------------
+# On Actions
+#-----------------------------------
+# ROOT = Losing Country, FROM = Winning Country
+ideagroups_on_battle_lost_country_effect = {
+    # Ideagroup: Trial by Combat
+    if = {
+        limit = {
+            # Loser has a general
+            has_leaders = {
+                value = 1
+                type = general
+                include_monarch = no
+                include_heir = no
+            }
+            
+            # Winner has Trial by Combat
+            FROM = {
+                has_idea = fallout_law_ideas_2
+            }
+        }
+        
+        random_list = {
+            25 = {
+                # Loser event
+                country_event = { id = fallout_ideagroups.11 }
+                
+                # Winner event
+                FROM = {
+                    country_event = { id = fallout_ideagroups.10 }
+                }
+            }
+            75 = { }
+        }
+    }
+}
+

@@ -1,7 +1,7 @@
 #---------------------------------------------------------
-# Naval Tactics
+# Piracy
 #---------------------------------------------------------
-wide_fleet_engagements = {
+flanking_maneuvers = {
 	monarch_power = ADM
 
 	potential = {
@@ -9,7 +9,7 @@ wide_fleet_engagements = {
 	}
 	allow = {
         AND = {
-            full_idea_group = fallout_naval_tactics_ideas 
+            full_idea_group = fallout_piracy_ideas 
             OR  = {
                 full_idea_group = fallout_innovation_ideas 
                 full_idea_group = fallout_religious_ideas
@@ -22,39 +22,7 @@ wide_fleet_engagements = {
                 full_idea_group = fallout_absolutism_ideas
                 full_idea_group = fallout_autonomy_ideas
                 full_idea_group = fallout_settlement_ideas
-				full_idea_group = fallout_tolerance_ideas
-            }
-        }
-	}
-	
-	# Modifier
-    global_naval_engagement_modifier = 0.05
-    
-	ai_will_do = {
-		factor = 1
-	}
-}
-sea_shanties = {
-	monarch_power = DIP
-
-	potential = {
-		always = yes
-	}
-	allow = {
-        AND = {
-            full_idea_group = fallout_naval_tactics_ideas
-            OR  = {
-                full_idea_group = fallout_espionage_ideas 
-                full_idea_group = fallout_community_ideas
-                full_idea_group = fallout_influence_ideas
-                full_idea_group = fallout_trade_ideas
-                full_idea_group = fallout_exploration_ideas
-                full_idea_group = fallout_maritime_ideas
-                full_idea_group = fallout_assimilation_ideas 
-                full_idea_group = fallout_society_ideas
-                full_idea_group = fallout_propaganda_ideas
-                full_idea_group = fallout_naval_organisation_ideas
-                full_idea_group = fallout_naval_leadership_ideas
+				full_idea_group = fallout_citizenship_ideas
             }
         }
 	}
@@ -66,7 +34,39 @@ sea_shanties = {
 		factor = 1
 	}
 }
-fearless_sailors = {
+commandeered_ships = {
+	monarch_power = DIP
+
+	potential = {
+		always = yes
+	}
+	allow = {
+        AND = {
+            full_idea_group = fallout_piracy_ideas
+            OR  = {
+                full_idea_group = fallout_espionage_ideas 
+                full_idea_group = fallout_community_ideas
+                full_idea_group = fallout_influence_ideas
+                full_idea_group = fallout_trade_ideas
+                full_idea_group = fallout_exploration_ideas
+                full_idea_group = fallout_maritime_ideas
+                full_idea_group = fallout_assimilation_ideas 
+                full_idea_group = fallout_society_ideas
+                full_idea_group = fallout_propaganda_ideas
+                full_idea_group = fallout_naval_ideas
+                full_idea_group = fallout_subjugation_ideas
+            }
+        }
+	}
+	
+	# Modifier
+    global_ship_cost = -0.15
+    
+	ai_will_do = {
+		factor = 1
+	}
+}
+pirate_swarms = {
 	monarch_power = MIL
 
 	potential = {
@@ -74,7 +74,7 @@ fearless_sailors = {
 	}
 	allow = {
         AND = {
-            full_idea_group = fallout_naval_tactics_ideas 
+            full_idea_group = fallout_piracy_ideas 
             OR  = {
                 full_idea_group = fallout_offensive_ideas
                 full_idea_group = fallout_defensive_ideas
@@ -86,14 +86,13 @@ fearless_sailors = {
                 full_idea_group = fallout_army_leadership_ideas
                 full_idea_group = fallout_army_tactics_ideas
                 full_idea_group = fallout_fortification_ideas
-                full_idea_group = fallout_subjugation_ideas
                 full_idea_group = fallout_imperialism_ideas
             }
         }
 	}
 	
 	# Modifier
-    sunk_ship_morale_hit_recieved = -0.05
+    privateer_efficiency = 0.25
     
 	ai_will_do = {
 		factor = 1

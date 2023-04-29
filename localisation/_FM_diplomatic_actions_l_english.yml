@@ -31,3 +31,42 @@
  conduct_slave_raid_desc: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves. [From.GetName] will gain the §YSlaver§! opinion modifier against you if they discover you conducted the raid." 
  conduct_slave_raid_tooltip: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves. [From.GetName] will gain the §YSlaver§! opinion modifier against you if they discover you conducted the raid." 
  conduct_slave_raid_alert_tooltip: "Conduct Slave Raid"
+
+ disrupt_alliance: "Disrupt Alliance"
+ disrupt_alliance_title: "Disrupt Alliance"
+ disrupt_alliance_desc: "Disrupt Alliance will reduce the size of our §Y[From.GetName]§! Spy Network by §R50.0§! and have the following effect:\n\nWe will cause an ally of §Y[From.GetName]§! to break their alliance."
+ disrupt_alliance_tooltip: "We shall antagonise the target and one of their allies via indirect means, causing both to see each other as the wrongful party. This will cause the breakdown of their alliance."
+ disrupt_alliance_dialog: "We shall antagonise the target and one of their allies via indirect means, causing both to see each other as the wrongful party. This will cause the breakdown of their alliance."
+ 
+ provoke_rebels: "Provoke Locals"
+ provoke_rebels_title: "Provoke Locals"
+ provoke_rebels_desc: "Provoke Locals will reduce the size of our §Y[From.GetName]§! Spy Network by §R30.0§! and have the following effect:\n\nA group of §YAnti-Tax Rebels§! will appear in one of the provinces of §Y[From.GetName]§!. The size of the rebels is scaled based on our Diplomatic technology."
+ provoke_rebels_tooltip: "Provoke upset enemy locals, causing them to disrupt their nation."
+ provoke_rebels_dialog: "Provoke upset enemy locals, causing them to disrupt their nation."
+ 
+ provoke_pretenders: "Provoke Pretenders"
+ provoke_pretenders_title: "Provoke Pretenders"
+ provoke_pretenders_desc: "Provoke Pretenders will reduce the size of our §Y[From.GetName]§! Spy Network by §R40.0§! and have the following effect:\n\nA group of §YPretender Rebels§! will appear in one of the provinces of §Y[From.GetName]§!. The size of the rebels is scaled based on our Diplomatic technology."
+ provoke_pretenders_tooltip: "Provoke local enemy pretenders, causing them to disrupt their nation."
+ provoke_pretenders_dialog: "Provoke local enemy pretenders, causing them to disrupt their nation."
+ 
+ manipulate_opinion: "Manipulate Opinion"
+ manipulate_opinion_title: "Manipulate Opinion"
+ manipulate_opinion_desc: "Manipulate Opinion will reduce the size of our §Y[From.GetName]§! Spy Network by §R50.0§! and have the following effect:\n\nWe will reduce our Aggressive Expansion in §Y[From.GetName]§! by §G20§!."
+ manipulate_opinion_tooltip: "Sway the population of our target, increasing their relations with us."
+ manipulate_opinion_dialog: "Sway the population of our target, increasing their relations with us."
+ 
+ # Opinion Modifiers
+ alliance_disrupted: "Alliance Disrupted"
+ 
+ # Events
+ diplomatic_actions.20.title: "Disrupt Alliance"
+ diplomatic_actions.20.desc: "We have targeted [disrupt_target.GetName]. It is time to select which ally of theirs will be victim to our disruption."
+ diplomatic_actions.20.option.a: "Incite tensions between [disrupt_target.GetName] and [disrupted_ally.GetName]"
+ 
+ diplomatic_actions.21.title: "Engineered Upset"
+ diplomatic_actions.21.desc: "We have been victim to an unknown campaign of sabotage. These saboteurs habe sowed chaos between us and our ally, [disrupt_target.GetName]."
+ diplomatic_actions.21.option.a: "Oh dear..."
+ 
+ # Tooltip
+ RECENTLY_TARGET_OF_MANIPULATE_OPINION: "Recently target of Manipulate Opinion"

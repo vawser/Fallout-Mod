@@ -255,6 +255,8 @@ on_battle_lost_country = {
             ROOT = { country_event = { id = cults.9 } }
         }
     }
+    
+    ideagroups_on_battle_lost_country_effect = yes
 }
 
 # province
@@ -582,16 +584,97 @@ on_dismantle_revolution = {
 # province
 on_adm_development = {
     owner = { subtract_variable = { which = civil_unrest value = 1 } }
+    
+    if = {
+        limit = {
+            owner = {
+                has_idea = fallout_administrative_ideas_7
+            }
+        }
+            
+        add_province_modifier = {
+            name = local_prosperity
+            duration = 3650
+        }
+    }
+    
+    if = {
+        limit = {
+            owner = {
+                has_idea = fallout_development_ideas_1
+            }
+        }
+        random_list = {
+            25 = {
+                add_base_tax = 1
+            }
+            75 = { }
+        }
+    }
 }
 
 # province
 on_dip_development = {  
     owner = { subtract_variable = { which = civil_unrest value = 1 } }
+    
+    if = {
+        limit = {
+            owner = {
+                has_idea = fallout_administrative_ideas_7
+            }
+        }
+        
+        add_province_modifier = {
+            name = local_prosperity
+            duration = 3650
+        }
+    }
+    
+    if = {
+        limit = {
+            owner = {
+                has_idea = fallout_development_ideas_1
+            }
+        }
+        random_list = {
+            25 = {
+                add_base_production = 1
+            }
+            75 = { }
+        }
+    }
 }
 
 # province
 on_mil_development = {
     owner = { subtract_variable = { which = civil_unrest value = 1 } }
+    
+    if = {
+        limit = {
+            owner = {
+                has_idea = fallout_administrative_ideas_7
+            }
+        }
+        
+        add_province_modifier = {
+            name = local_prosperity
+            duration = 3650
+        }
+    }
+    
+    if = {
+        limit = {
+            owner = {
+                has_idea = fallout_development_ideas_1
+            }
+        }
+        random_list = {
+            25 = {
+                add_base_manpower = 1
+            }
+            75 = { }
+        }
+    }
 }
 
 on_overextension_pulse = {
@@ -885,39 +968,84 @@ on_five_year_pulse_3 = {
 on_five_year_pulse_4 = {
     # Spawn the Pop Control events for the AI here, as AI construction priority is too random to allow them to use the building system to do so.
     # This also allows for greater control over how the events are fired for the AI
-    random_list = {
-        50 = {
-            # Pop Attraction
-            random_owned_province = {
-                limit = {
-                    OR = {
-                        has_any_med_pop = yes
-                        has_any_low_pop = yes
+    
+    # Citizenship Boost
+    if = {
+        limit = {
+            has_idea = fallout_citizenship_ideas_7
+        }
+        random_list = {
+            70 = {
+                # Pop Attraction
+                random_owned_province = {
+                    limit = {
+                        OR = {
+                            has_any_med_pop = yes
+                            has_any_low_pop = yes
+                        }
                     }
+                    province_event = { id = pop_attraction.1 }
                 }
-                province_event = { id = pop_attraction.1 }
+            }
+            30 = {
+                # Pop Expulsion
+                random_owned_province = {
+                    limit = {
+                        has_any_pop = yes
+                    }
+                    province_event = { id = pop_expulsion.1 }
+                }
+            }
+            5 = {
+                # Pop Decimation
+                random_owned_province = {
+                    limit = {
+                        has_any_pop = yes
+                    }
+                    province_event = { id = pop_decimation.1 }
+                }
+            }
+            5 = {
+                # Nothing
             }
         }
-        30 = {
-            # Pop Expulsion
-            random_owned_province = {
-                limit = {
-                    has_any_pop = yes
+    }
+    # Default
+    else = { 
+        random_list = {
+            50 = {
+                # Pop Attraction
+                random_owned_province = {
+                    limit = {
+                        OR = {
+                            has_any_med_pop = yes
+                            has_any_low_pop = yes
+                        }
+                    }
+                    province_event = { id = pop_attraction.1 }
                 }
-                province_event = { id = pop_expulsion.1 }
             }
-        }
-        10 = {
-            # Pop Decimation
-            random_owned_province = {
-                limit = {
-                    has_any_pop = yes
+            30 = {
+                # Pop Expulsion
+                random_owned_province = {
+                    limit = {
+                        has_any_pop = yes
+                    }
+                    province_event = { id = pop_expulsion.1 }
                 }
-                province_event = { id = pop_decimation.1 }
             }
-        }
-        10 = {
-            # Nothing
+            10 = {
+                # Pop Decimation
+                random_owned_province = {
+                    limit = {
+                        has_any_pop = yes
+                    }
+                    province_event = { id = pop_decimation.1 }
+                }
+            }
+            10 = {
+                # Nothing
+            }
         }
     }
     
@@ -1093,6 +1221,14 @@ on_leader_recruited = {
 # country
 on_general_recruited = {
 	add_army_professionalism = 0.02
+    
+    if = {
+        limit = {
+            has_idea = fallout_innovation_ideas_7
+        }
+        
+        add_army_professionalism = 0.01
+    }
 }
 
 # country
@@ -1467,7 +1603,18 @@ on_expanded_infrastructure = {
 
 #ROOT = province that was centralized in
 on_centralized_state = {
-	
+	if = {
+        limit = {
+            owner = {
+                has_idea = fallout_economic_ideas_5
+            }
+        }
+        area = {
+            add_base_tax = 1
+            add_base_production = 1
+            add_base_manpower = 1
+        }
+    }
 }
 
 #ROOT = country
