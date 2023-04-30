@@ -21,6 +21,16 @@ tribe_reform = {
         max_absolutism = 10
     }
     
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            tribal_unity_mechanic
+        }
+    }
+    
     custom_attributes = {
 		tribal_succession = yes
 	}
@@ -50,6 +60,16 @@ commune_reform = {
         max_absolutism = -10
     }
     
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            communal_harmony_mechanic
+        }
+    }
+    
     custom_attributes = {
 		tribal_succession = yes
 	}
@@ -74,7 +94,6 @@ raider_reform = {
     nomad                   = yes
     monarchy                = no
     heir                    = no
-    generals_become_rulers  = yes
     raze_province           = yes
     
     modifiers = {
@@ -114,7 +133,6 @@ super_mutant_reform = {
     nomad                   = yes
     monarchy                = no
     heir                    = no
-    generals_become_rulers  = yes
     raze_province           = yes
     
     modifiers = {
@@ -155,7 +173,6 @@ swarm_reform = {
     nomad                   = yes
     monarchy                = no
     heir                    = no
-    generals_become_rulers  = yes
     raze_province           = yes
     
     modifiers = {
@@ -196,7 +213,6 @@ wolf_pack_reform = {
     nomad                   = yes
     monarchy                = no
     heir                    = no
-    generals_become_rulers  = yes
     raze_province           = yes
     
     modifiers = {
@@ -237,7 +253,6 @@ great_khan_reform = {
     heir                    = no
     monarchy                = no
     nomad                   = yes
-    generals_become_rulers  = yes
     raze_province           = yes
     
     modifiers = {

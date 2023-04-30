@@ -1,0 +1,106 @@
+legion_bloodlust_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Cradle of Civilization"
+	}
+
+	powers = {
+		legion_bloodlust = {
+			max = 100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0.0
+			
+			scaled_modifier = {
+				modifier = {
+                    infantry_power = 0.2
+                    war_exhaustion = -0.1
+                    siege_ability = 0.2
+					ae_impact = 0.25
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		legion_bloodlust_call_to_arms = {
+			icon = GFX_legion_bloodlust_ability_1
+			cost_type = legion_bloodlust
+			cost = 50
+            
+			cooldown_years = 0
+            
+			trigger = {
+                is_at_war = yes
+			}
+            
+			effect = {
+				add_yearly_manpower = 1.0
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+		
+        legion_bloodlust_scorch_the_earth = {
+			icon = GFX_legion_bloodlust_ability_2
+			cost_type = legion_bloodlust
+			cost = 30
+            
+			cooldown_years = 5
+            
+			trigger = {
+                NOT = { has_country_modifier = legion_bloodlust_scorch_the_earth }
+			}
+            
+			effect = {
+                add_country_modifier = {
+                    name = legion_bloodlust_scorch_the_earth
+                    duration = 1800
+                }
+                
+                custom_tooltip = SCORCH_THE_EARTH_TT
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+        
+		legion_bloodlust_trial_by_combat = {
+			icon = GFX_legion_bloodlust_ability_3
+			cost_type = legion_bloodlust
+			cost = 60
+            
+			cooldown_years = 5
+            
+			trigger = {
+				num_of_generals = 2
+			}
+            
+			effect = {
+                if = {
+                    limit = {
+                        NOT = { num_of_generals = 2 }
+                    }
+                    custom_tooltip = GENERAL_TRIAL_BY_COMBAT_TT
+                }
+                else = {
+                    kill_leader = {
+                        type = random
+                    }
+                }
+                
+                create_general = {
+                    tradition = 100
+                }
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}

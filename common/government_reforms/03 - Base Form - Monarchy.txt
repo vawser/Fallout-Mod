@@ -53,53 +53,15 @@ legion_reform = {
         max_absolutism = 10
     }
     
-    assimilation_cultures = {
-		wastelander_group = {
-			free_leader_pool = 1
-		}
-		ghoul_group = {
-			land_attrition = -0.1
-		}
-		hispanic_group = {
-			missionaries = 1
-		}
-		ncr_group = {
-			production_efficiency = 0.05
-		}
-		legion_group = {
-			diplomats = 1
-		}
-		new_vegas_group = {
-			core_creation = -0.05
-		}
-		shi_group = {
-			advisor_cost = -0.1
-		}
-		enclave_group = {
-			land_morale = 0.05
-		}
-		children_of_the_atom_group = {
-			movement_speed = 0.05
-		}
-		vault_dweller_group = {
-			idea_cost = -0.05
-		}
-		brotherhood_group = {
-			discipline = 0.05
-		}
-		tribal_group = {
-			prestige_decay = -0.005
-		}
-		raider_group = {
-			global_autonomy = -0.005
-		}
-		super_mutant_group = {
-			shock_damage = 0.05
-		}
-		robot_group = {
-			development_cost = -0.05
-		}
-	}
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            legion_bloodlust_mechanic
+        }
+    }
     
     custom_attributes = {
 		legion_succession = yes
@@ -143,6 +105,16 @@ new_vegas_reform = {
         the_omertas 
         the_chairmen
         the_white_glove_society
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            casino_mechanic
+        }
     }
     
     custom_attributes = {

@@ -1,0 +1,136 @@
+tribal_unity_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Cradle of Civilization"
+	}
+
+	powers = {
+		tribal_unity = {
+			max = 100
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0.25
+			development_scaled_monthly_growth = -0.1
+			
+			scaled_modifier = {
+				modifier = {
+					production_efficiency = 0.15
+                    development_cost = -0.1
+					global_unrest = -4
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		tribal_unity_promote_open_discussion = {
+			icon = GFX_tribal_unity_ability_1
+			cost_type = tribal_unity
+			cost = 50
+            
+			cooldown_years = 10
+            
+			trigger = {
+                NOT = { has_country_modifier = tribal_unity_open_discussion }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = tribal_unity_open_discussion
+                    duration = 3650
+                }
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+		
+        tribal_unity_establish_tribal_connections = {
+			icon = GFX_tribal_unity_ability_2
+			cost_type = tribal_unity
+			cost = 30
+            
+			cooldown_years = 5
+            
+			trigger = {
+                # Any friendly neighbor
+                any_known_country = {
+                    is_neighbor_of = ROOT
+                    has_opinion = {
+                        who = ROOT
+                        value = 0
+                    }
+                }
+			}
+            
+			effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            any_known_country = {
+                                is_neighbor_of = ROOT
+                                has_opinion = {
+                                    who = ROOT
+                                    value = 0
+                                }
+                            }
+                        }
+                    }
+                    custom_tooltip = GAIN_OPINION_BOOST_IN_FRIENDLY_NEIGHBOR_TT
+                }
+                
+                # Up to 3 random known friendly neighbors gain an opinion boost
+				random_known_country = {
+                    limit = {
+                        is_neighbor_of = ROOT
+                        has_opinion = {
+                            who = ROOT
+                            value = 0
+                        }
+                    }
+                    type = random
+                    amount = 3
+                    
+                    add_opinion = {
+                        who = ROOT
+                        modifier = tribal_unity_tribal_connections
+                    }
+                }
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+        
+		tribal_unity_prepare_for_war = {
+			icon = GFX_tribal_unity_ability_3
+			cost_type = tribal_unity
+			cost = 50
+            
+			cooldown_years = 5
+            
+			trigger = {
+				capital_scope = {
+                    controlled_by = ROOT
+                }
+			}
+            
+			effect = {
+				capital_scope = {
+					add_unit_construction = {
+						type = infantry
+						amount = 5
+						speed = 0.0
+						cost = 0
+					}
+				}
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}

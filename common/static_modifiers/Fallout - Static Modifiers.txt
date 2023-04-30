@@ -1,3 +1,6 @@
+#------------
+# Hegemonic Vassal
+#------------
 # For Hegemonic Vassal overlord
 hegemonic_subject = {
     land_forcelimit = 1
@@ -9,3 +12,86 @@ hegemonic_bonus = {
 	development_cost = 0.2
 }
 
+#------------
+# Tribal Unity
+#------------
+tribal_unity_open_discussion = {
+    idea_cost = -0.1
+}
+
+#------------
+# Communal Harmony
+#------------
+communal_harmony_prepared_ambushes = {
+    own_territory_dice_roll_bonus = 1
+}
+
+#------------
+# Legion Bloodlust
+#------------
+legion_bloodlust_scorch_the_earth = {
+    loot_amount = 1.0
+}
+
+#------------
+# Casino
+#------------
+casino_joker = {
+    global_autonomy = 0.1
+}
+
+# Administrative
+casino_ace_of_spades = {
+    administrative_efficiency = 0.05
+}
+casino_king_of_spades = {
+    core_creation = -0.1
+}
+casino_queen_of_spades = {
+    expand_administration_cost = -0.15
+}
+casino_jack_of_spades = {
+    move_capital_cost_modifier = -0.5
+}
+
+# Economic
+casino_ace_of_diamonds = {
+    global_trade_goods_size_modifier = 0.1
+}
+casino_king_of_diamonds = {
+    production_efficiency = 0.15
+}
+casino_queen_of_diamonds = {
+    global_tax_modifier = 0.1
+}
+casino_jack_of_diamonds = {
+    trade_steering = 0.1
+}
+
+# Military
+casino_ace_of_clubs = {
+    land_morale = 0.2
+}
+casino_king_of_clubs = {
+    siege_ability = 0.2
+}
+casino_queen_of_clubs = {
+    shock_damage = 0.2
+}
+casino_jack_of_clubs = {
+    recover_army_morale_speed = 0.2
+}
+
+# Diplomatic
+casino_ace_of_hearts = {
+    ae_impact = -0.2
+}
+casino_king_of_hearts = {
+    diplomatic_annexation_cost = -0.15
+}
+casino_queen_of_hearts = {
+    diplomatic_reputation = 2
+}
+casino_jack_of_hearts = {
+    fabricate_claims_cost = -0.25
+}

@@ -663,6 +663,10 @@ positive_stability = {
 	devotion = 0.33
     horde_unity = 0.33
 	meritocracy = 0.33
+    
+    # Government
+    monthly_tribal_unity = 1.0
+    monthly_communal_harmony = 1.0
 
 	# Estates
     bureaucrats_loyalty_modifier = 0.05
@@ -692,6 +696,10 @@ negative_stability = {
     horde_unity = 2.5
 	meritocracy = 2.5
     yearly_patriarch_authority = -0.05
+    
+    # Government
+    monthly_tribal_unity = -1.0
+    monthly_communal_harmony = -1.0
     
     # Estates
     bureaucrats_loyalty_modifier = 0.05
@@ -783,7 +791,10 @@ bankruptcy = {
 
 
 war = {
-	#monthly_militarized_society = 0.1
+    # Government
+    monthly_tribal_unity = -1.0
+    monthly_communal_harmony = -1.0
+    monthly_legion_bloodlust = 0.25
 }
 
 peace = {
@@ -792,6 +803,11 @@ peace = {
 	global_autonomy = -0.01
 	global_institution_spread = 0.1
 	yearly_absolutism = -0.5
+    
+    # Government
+    monthly_tribal_unity = 0.5
+    monthly_communal_harmony = 0.5
+    monthly_legion_bloodlust = -0.25
 }
 
 unconditional_surrender = {
@@ -814,6 +830,10 @@ war_exhaustion = {
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
 	global_autonomy = 0.04
+    
+    # Government
+	monthly_tribal_unity = -0.2
+    monthly_communal_harmony = -0.2
 }
 
 doom = {
@@ -863,6 +883,9 @@ army_tradition = {
 	land_morale = 0.1
 	siege_ability = 0.1
 	free_leader_pool = 2
+    
+    # Government
+    monthly_legion_bloodlust = 0.05
     
     # Estates
 	officers_loyalty_modifier = 0.1
@@ -1134,6 +1157,10 @@ over_extension = {
 	yearly_corruption = 1.0
 	prestige = -1
 	harsh_treatment_cost = 1.0
+    
+    # Government
+    monthly_tribal_unity = -1.0
+    monthly_communal_harmony = -1.0
 }
 
 prestige = {
@@ -1150,6 +1177,10 @@ prestige = {
 	ae_impact = -0.10
 	embracement_cost = -0.1
     global_autonomy = -0.05
+    
+    # Government
+    monthly_tribal_unity = 1.0
+    monthly_communal_harmony = 1.0
     
     # Estates
 	bureaucrats_loyalty_modifier = 0.1

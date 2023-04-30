@@ -306,6 +306,22 @@ on_company_disolved ={
 # province
 # root = location, from = winner country
 on_battle_lost_province = {
+    # Bloodlust - Add power on battle win
+    if = {
+        limit = {
+            FROM = {
+                has_government_mechanic = legion_bloodlust_mechanic
+            }
+        }
+        
+        FROM = {
+            add_government_power = {
+                mechanic_type = legion_bloodlust_mechanic
+                power_type = legion_bloodlust
+                value = 5
+            }
+        }
+    }
 }
 
 # country
@@ -328,6 +344,16 @@ on_siege_won_province = {
 # province
 # root = location, from = winning country
 on_siege_lost_province =  {
+    # Bloodlust
+    if = {
+        limit = {
+            FROM = {
+                has_country_modifier = legion_bloodlust_scorch_the_earth
+            }
+        }
+            
+        add_devastation = 25
+    }
 }
 
 # province

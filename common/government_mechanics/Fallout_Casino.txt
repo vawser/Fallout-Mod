@@ -1,0 +1,124 @@
+casino_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Cradle of Civilization"
+	}
+
+	powers = {
+		chips = {
+			max = 100
+			reset_on_new_ruler = no
+			base_monthly_growth = 1.0
+			development_scaled_monthly_growth = 0.0
+		}
+	}
+	
+	interactions = {
+        casino_play_the_cards = {
+			icon = GFX_casino_ability_1
+            cost_type = chips
+			cost = 60
+            
+			effect = {
+				custom_tooltip = CASINO_CARDS_TT
+                
+                random_list = {
+                    1 = { add_country_modifier = { name = casino_joker duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_ace_of_spades duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_king_of_spades duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_queen_of_spades duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_jack_of_spades duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_ace_of_diamonds duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_king_of_diamonds duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_queen_of_diamonds duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_jack_of_diamonds duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_ace_of_clubs duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_king_of_clubs duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_queen_of_clubs duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_jack_of_clubs duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_ace_of_hearts duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_king_of_hearts duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_queen_of_hearts duration = 1800 } }
+                    1 = { add_country_modifier = { name = casino_jack_of_hearts duration = 1800 } }
+                }
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+        
+		casino_play_the_slots = {
+			icon = GFX_casino_ability_2
+            cost_type = chips
+			cost = 60
+            
+			effect = {
+                custom_tooltip = CASINO_SLOTS_TT
+                
+                random_list = {
+                    10 = { add_treasury = 1 }
+                    10 = { add_treasury = 10 }
+                    8 = { add_treasury = 25 }
+                    8 = { add_treasury = 50 }
+                    8 = { add_treasury = 75 }
+                    6 = { add_treasury = 100 }
+                    6 = { add_treasury = 150 }
+                    6 = { add_treasury = 200 }
+                    5 = { add_treasury = 250 }
+                    4 = { add_treasury = 300 }
+                    4 = { add_treasury = 350 }
+                    3 = { add_treasury = 400 }
+                    3 = { add_treasury = 450 }
+                    2 = { add_treasury = 500 }
+                    2 = { add_treasury = 750 }
+                    1 = { add_treasury = 1000 }
+                }
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+		
+        casino_play_the_dice = {
+			icon = GFX_casino_ability_3
+            cost_type = chips
+			cost = 60
+            
+			effect = {
+				custom_tooltip = CASINO_DICE_TT
+                
+                random_list = {
+                    5 = { add_adm_power = 100 }
+                    5 = { add_dip_power = 100 }
+                    5 = { add_mil_power = 100 }
+                    5 = { add_prestige = 10 }
+                    5 = { add_splendor = 50 }
+                    5 = { add_stability = 1 }
+                    5 = { add_army_tradition = 15 }
+                    5 = { add_navy_tradition = 15 }
+                    5 = { add_yearly_manpower = 5 }
+                    5 = { 
+                        trigger = {
+                            num_of_ports = 1
+                        }
+                        add_yearly_sailors = 5 
+                    }
+                    5 = {
+                        trigger = {
+                            is_at_war = yes
+                        }
+                        
+                        add_war_exhaustion = -2
+                    }
+                }
+			}
+            
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}
