@@ -95,7 +95,10 @@ country_event = {
             mil = 5
             female = yes
         }
-
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+        
         capital_scope = {
             random_empty_neighbor_province = {
                 limit = {

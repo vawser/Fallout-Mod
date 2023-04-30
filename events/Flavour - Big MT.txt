@@ -250,15 +250,10 @@ country_event = {
 		    mil = 6			
 		}
         add_ruler_personality = immortal_personality
-		if = {
-			limit = {
-				has_heir = yes
-			}
-			kill_heir = {
-                allow_new_heir = yes
-            }
-		}
-		
+		hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+        
 		ai_chance = {
 		    factor = 0
 		}

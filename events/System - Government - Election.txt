@@ -1,0 +1,542 @@
+namespace = fallout_government_election
+
+#------------------------------
+# New Term Election
+#------------------------------
+country_event = {
+	id = fallout_government_election.1
+	title = fallout_government_election.1.title
+	desc = fallout_government_election.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = standard_election
+    }
+	
+	option = {
+		name = fallout_government_election.1.option.a
+
+        define_ruler = {
+			change_adm = 2
+			change_dip = -1
+			change_mil = -1
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+	option = {
+		name = fallout_government_election.1.option.b
+
+        define_ruler = {
+			change_adm = -1
+			change_dip = 2
+			change_mil = -1
+			hide_skills = yes
+		}
+
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+	option = {
+		name = fallout_government_election.1.option.c
+
+        define_ruler = {
+			change_adm = -1
+			change_dip = -1
+			change_mil = 2
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.1.option.d
+
+		trigger = {
+			has_regency = no
+		}
+        
+		custom_tooltip = remains_ruler
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		
+		add_scaled_republican_tradition = -10
+        
+		random_list = {
+			33 = {
+				add_adm_power = 50
+			}
+			33 = {
+				add_dip_power = 50
+			}
+			33 = {
+				add_mil_power = 50
+			}
+		}
+        
+        ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				NOT = { republican_tradition = 25 }
+			}	
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 50 }
+			}				
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 75 }
+			}	
+			modifier = {
+				factor = 2.0
+				republican_tradition = 90
+			}		
+		}
+	}
+}
+
+# Vault
+country_event = {
+	id = fallout_government_election.2
+	title = fallout_government_election.2.title
+	desc = fallout_government_election.2.desc
+	picture = VAULT_OFFICE_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = vault_election
+        NOT = { has_ruler_modifier = overseer_for_life }
+    }
+	
+	option = {
+		name = fallout_government_election.2.option.a
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 2
+			change_mil = -1
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+	option = {
+		name = fallout_government_election.2.option.b
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 2
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.2.option.c
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.2.option.d
+
+        define_ruler = {
+			change_adm = -1
+			change_mil = 1
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = ambitious_vault_dweller
+            duration = -1
+        }
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.2.option.e
+
+        define_ruler = {
+			change_adm = -1
+			change_dip = 3
+			change_mil = -1
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.2.option.f
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = -1
+			change_mil = -1
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = technical_wizzkid
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.2.option.g
+
+        define_ruler = {
+			change_adm = 2
+			change_dip = 1
+			change_mil = -3
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = medical_interventions
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.2.option.h
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = -1
+			change_mil = -2
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = scientific_research
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.2.option.i
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 2
+			change_mil = -3
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = educational_legacy
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    
+    option = {
+		name = fallout_government_election.2.option.x
+
+		trigger = {
+			has_regency = no
+		}
+        
+		custom_tooltip = remains_ruler
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+		
+		add_scaled_republican_tradition = -10
+        
+        add_ruler_modifier = {
+            name = overseer_for_life
+            duration = -1
+        }
+        
+		random_list = {
+			33 = {
+				add_adm_power = 50
+			}
+			33 = {
+				add_dip_power = 50
+			}
+			33 = {
+				add_mil_power = 50
+			}
+		}
+        
+        ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				NOT = { republican_tradition = 25 }
+			}	
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 50 }
+			}				
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 75 }
+			}	
+			modifier = {
+				factor = 2.0
+				republican_tradition = 90
+			}		
+		}
+	}
+}
+
+#------------------------------
+# On Death Election
+#------------------------------
+country_event = {
+	id = fallout_government_election.10
+	title = fallout_government_election.10.title
+	desc = fallout_government_election.10.desc
+	picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+	
+    trigger = {
+        has_government_attribute = standard_election
+    }
+    
+	option = {
+		name = fallout_government_election.10.option.a
+
+        define_ruler = {
+			change_adm = 2
+			change_dip = -1
+			change_mil = -1
+			hide_skills = yes
+		}
+        
+        ai_chance = { factor = 40 }
+	}
+	option = {
+		name = fallout_government_election.10.option.b
+
+        define_ruler = {
+			change_adm = -1
+			change_dip = 2
+			change_mil = -1
+			hide_skills = yes
+		}
+        
+        ai_chance = { factor = 30 }
+	}
+	option = {
+		name = fallout_government_election.10.option.c
+
+		define_ruler = {
+			change_adm = -1
+			change_dip = -1
+			change_mil = 2
+			hide_skills = yes
+		}
+        
+		ai_chance = { factor = 30 }
+	}
+}
+
+# Vault
+country_event = {
+	id = fallout_government_election.11
+	title = fallout_government_election.11.title
+	desc = fallout_government_election.11.desc
+    picture = VAULT_OFFICE_eventPicture
+
+    is_triggered_only = yes
+    
+	trigger = {
+        has_government_attribute = vault_election
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_government_election.11.option.a
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 2
+			change_mil = -1
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+	option = {
+		name = fallout_government_election.11.option.b
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 2
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.11.option.c
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.11.option.d
+
+        define_ruler = {
+			change_adm = -1
+			change_mil = 1
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = ambitious_vault_dweller
+            duration = -1
+        }
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.11.option.e
+
+        define_ruler = {
+			change_adm = -1
+			change_dip = 3
+			change_mil = -1
+			hide_skills = yes
+		}
+		
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.11.option.f
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = -1
+			change_mil = -1
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = technical_wizzkid
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.11.option.g
+
+        define_ruler = {
+			change_adm = 2
+			change_dip = 1
+			change_mil = -3
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = medical_interventions
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.11.option.h
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = -1
+			change_mil = -2
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = scientific_research
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+    option = {
+		name = fallout_government_election.11.option.i
+
+        define_ruler = {
+			change_adm = 1
+			change_dip = 2
+			change_mil = -3
+			hide_skills = yes
+		}
+		
+        add_ruler_modifier = {
+            name = educational_legacy
+            duration = -1
+        }
+        
+        add_republican_tradition = 5
+        
+        ai_chance = { factor = 20 }
+	}
+}

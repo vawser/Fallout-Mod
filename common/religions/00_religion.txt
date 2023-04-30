@@ -448,7 +448,7 @@ religion_group_atomic = {
     #-------------------------------------
     # Renewal Cult
     #-------------------------------------
- 	renewal = {
+ 	renewal_cult = {
 		icon = 8
 		color = { 123 81 82 }
         
@@ -466,7 +466,7 @@ religion_group_atomic = {
         fervor = yes
         
         on_convert = {
-			change_religion = renewal
+			change_religion = renewal_cult
 			add_prestige = -100
 
 			add_country_modifier = {

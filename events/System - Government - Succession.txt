@@ -1,0 +1,987 @@
+namespace = fallout_government_succession
+
+# Autocratic Succession
+country_event = {
+	id = fallout_government_succession.1
+	title = fallout_government_succession.1.title
+	desc = fallout_government_succession.1.desc
+	picture = THE_BURNED_MAN_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = autocratic_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.1.option.a
+        
+        trigger = {
+            adm_power = 50
+        }
+        
+        add_adm_power = -50
+        
+        define_ruler = {
+            change_adm = 2
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.1.option.b
+        
+        trigger = {
+            dip_power = 50
+        }
+        
+        add_dip_power = -50
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = 2
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.1.option.c
+        
+        trigger = {
+            mil_power = 50
+        }
+        
+        add_mil_power = -50
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = 2
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.1.option.d
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+}
+
+# Succession of the Caesar (Caesar's Death)
+country_event = {
+	id = fallout_government_succession.2
+	title = fallout_government_succession.2.title
+	desc = fallout_government_succession.2.desc
+	picture = THE_BURNED_MAN_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        NOT = { has_country_flag = initial_legion_succession }
+        has_government_attribute = legion_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.2.option.a
+        
+        trigger = {
+            adm_power = 50
+        }
+        
+       define_ruler = {
+    		name = "Lanius"
+    		dynasty = "of the Eastern Legions"
+			adm = 4
+			dip = 2
+			mil = 6		
+			claim = 100
+    	}
+        
+    	add_ruler_modifier = {
+    		name = legion_monster_east
+			duration = -1
+    	}
+        
+	}
+    option = {
+		name = fallout_government_succession.2.option.b
+        
+        define_ruler = {
+    		name = "Aurelius"
+    		dynasty = "of Phoenix"
+    	    adm = 5
+    	    dip = 3
+    	    mil = 5
+            claim = 100
+    	}
+        
+    	add_ruler_modifier = {
+    		name = legion_pheonix_oa
+            duration = -1
+    	}
+	}
+    option = {
+		name = fallout_government_succession.2.option.c
+        
+        define_ruler = {
+            hide_skills = yes
+        }
+	}
+    after = {
+        set_country_flag = initial_legion_succession
+    }
+}
+
+# Succession of the Caesar (Default)
+country_event = {
+	id = fallout_government_succession.3
+	title = fallout_government_succession.3.title
+	desc = fallout_government_succession.3.desc
+	picture = THE_BURNED_MAN_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = initial_legion_succession
+        has_government_attribute = legion_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.3.option.a
+        
+        trigger = {
+            adm_power = 50
+        }
+        
+        add_adm_power = -50
+        
+        define_ruler = {
+            change_adm = 2
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.3.option.b
+        
+        trigger = {
+            dip_power = 50
+        }
+        
+        add_dip_power = -50
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = 2
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.3.option.c
+        
+        trigger = {
+            mil_power = 50
+        }
+        
+        add_mil_power = -50
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = 2
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.3.option.d
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+}
+
+# Death of Mr. House
+country_event = {
+	id = fallout_government_succession.4
+	title = fallout_government_succession.4.title
+	desc = fallout_government_succession.4.desc
+	picture = THE_STRIP_WALL_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        NOT = { has_country_flag = initial_new_vegas_succession }
+        has_government_attribute = new_vegas_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+    option = {
+		name = fallout_government_succession.4.option.a
+        
+		define_ruler = {
+			name = "Yes Man"
+			change_adm = 4
+			change_dip = 3
+			change_mil = 3
+			claim = 50
+            hide_skills = yes
+		}		
+	}
+	option = {
+		name = fallout_government_succession.4.option.b
+        
+		define_ruler = {
+			name = "Benny the Joker"
+			change_adm = 4
+			change_dip = 6
+			change_mil = 2
+			claim = 85
+            hide_skills = yes
+		}
+	}
+    option = { 
+		name = fallout_government_succession.4.option.c
+        
+		trigger = { 
+			OR = {
+                faction_in_power = the_omertas 
+                faction_in_power = the_chairmen
+                faction_in_power = the_white_glove_society
+            }
+		}
+        
+		if = {
+			limit = {
+				faction_in_power = the_omertas  
+			}
+            
+			define_ruler = {
+				change_mil = 2
+                hide_skills = yes
+			}
+		}
+        else_if = {
+			limit = {
+				faction_in_power = the_chairmen   
+			}
+            
+			define_ruler = {
+				change_adm = 2	
+                hide_skills = yes
+			}
+		}
+        else_if = {
+			limit = {
+				faction_in_power = the_white_glove_society    
+			}
+            
+			define_ruler = {
+				change_dip = 2	
+                hide_skills = yes
+			}
+		}
+	}
+    after = {
+        set_country_flag = initial_new_vegas_succession
+    }
+}
+
+# Ruler of the Strip
+country_event = {
+	id = fallout_government_succession.5
+	title = fallout_government_succession.5.title
+	desc = fallout_government_succession.5.desc
+	picture = THE_STRIP_WALL_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = initial_new_vegas_succession
+        has_government_attribute = new_vegas_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+    option = {
+		name = fallout_government_succession.5.option.a
+        
+		define_ruler = {
+            change_mil = 2
+            hide_skills = yes
+        }	
+        
+        add_faction_influence = {
+            faction = the_omertas
+            influence = 20
+        }
+	}
+	option = {
+		name = fallout_government_succession.5.option.b
+        
+		define_ruler = {
+            change_adm = 2
+            hide_skills = yes
+        }	
+        
+        add_faction_influence = {
+            faction = the_chairmen
+            influence = 20
+        }
+	}
+    option = {
+		name = fallout_government_succession.5.option.c
+        
+		define_ruler = {
+            change_dip = 2
+            hide_skills = yes
+        }	
+        
+        add_faction_influence = {
+            faction = the_white_glove_society
+            influence = 20
+        }
+	}
+}
+
+# Big MT
+country_event = {
+	id = fallout_government_succession.6
+	title = fallout_government_succession.6.title
+	desc = fallout_government_succession.6.desc
+	picture = BIG_MT_CINEMATIC_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = big_mt_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+    option = {
+		name = fallout_government_succession.6.option.a
+        
+        if = {
+            limit = {
+                tag = TNK
+            }
+            
+            define_ruler = {
+                name = "Klein"
+                dynasty = "the Big Mountain Boardman"
+                change_adm = 1
+                change_dip = 1
+                change_mil = 1
+                hide_skills = yes
+            }
+        }
+        
+        if = {
+            limit = {
+                tag = FBZ
+            }
+            
+            define_ruler = {
+                name = "Mobius"
+                dynasty = "the Big Mountain Boardman"
+                change_adm = 1
+                change_dip = 1
+                change_mil = 1
+                hide_skills = yes
+            }
+        }
+	}
+    option = {
+		name = fallout_government_succession.6.option.b
+        
+        trigger = {
+            adm_power = 20
+            dip_power = 20
+            mil_power = 20
+        }
+        
+        add_adm_power = -20
+        add_dip_power = -20
+        add_mil_power = -20
+        
+        if = {
+            limit = {
+                tag = TNK
+            }
+            
+            define_ruler = {
+                name = "Klein"
+                dynasty = "the Big Mountain Boardman"
+                change_adm = 2
+                change_dip = 2
+                change_mil = 2
+                hide_skills = yes
+            }
+        }
+        
+        if = {
+            limit = {
+                tag = FBZ
+            }
+            
+            define_ruler = {
+                name = "Mobius"
+                dynasty = "the Big Mountain Boardman"
+                change_adm = 2
+                change_dip = 2
+                change_mil = 2
+                hide_skills = yes
+            }
+        }
+	}
+    option = {
+		name = fallout_government_succession.6.option.c
+        
+        trigger = {
+            adm_power = 80
+            dip_power = 80
+            mil_power = 80
+        }
+        
+        add_adm_power = -80
+        add_dip_power = -80
+        add_mil_power = -80
+            
+        if = {
+            limit = {
+                tag = TNK
+            }
+            
+            define_ruler = {
+                name = "Klein"
+                dynasty = "the Big Mountain Boardman"
+                change_adm = 3
+                change_dip = 3
+                change_mil = 3
+                hide_skills = yes
+            }
+        }
+        
+        if = {
+            limit = {
+                tag = FBZ
+            }
+            
+            define_ruler = {
+                name = "Mobius"
+                dynasty = "the Big Mountain Boardman"
+                change_adm = 3
+                change_dip = 3
+                change_mil = 3
+                hide_skills = yes
+            }
+        }
+	}
+}
+
+# Shi
+country_event = {
+	id = fallout_government_succession.7
+	title = fallout_government_succession.7.title
+	desc = fallout_government_succession.7.desc
+    picture = GOV_RUINS_POLLUTED_eventPicture
+
+    is_triggered_only = yes
+	
+	trigger = {
+        has_government_attribute = shi_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.7.option.a
+        
+		trigger = {
+		    faction_in_power = chemistry_and_mechanics_researchers
+		}
+        
+		define_ruler = {
+			age = 30
+		    claim = 100
+		}
+        
+		if = {
+		    limit = {
+				NOT = { stability = 1 }
+			}
+		    add_legitimacy = -25
+		}
+        
+		add_ruler_modifier = { 
+            name = chemistry_and_mechanics_researchers_head_advisor 
+            duration = -1
+        } 
+        
+		custom_tooltip = shi_head_advisor_select_a
+        
+		ai_chance = {
+			factor = 33
+		}        
+	}
+	
+	option = {
+		name = fallout_government_succession.7.option.b
+        
+		trigger = {
+		    faction_in_power = xeno_and_botany_researchers
+		}
+        
+		define_ruler = {
+			age = 30
+		    claim = 100
+		}
+        
+		if = {
+		    limit = {
+				NOT = { stability = 1 }
+			}
+		    add_legitimacy = -25
+		}
+        
+		add_ruler_modifier = { 
+            name = xeno_and_botany_researchers_head_advisor 
+            duration = -1
+        }
+        
+		custom_tooltip = shi_head_advisor_select_b
+        
+		ai_chance = {
+			factor = 33
+		}        
+	}
+	
+	option = {
+		name = fallout_government_succession.7.option.c
+        
+		trigger = {
+		    faction_in_power = medical_and_fev_researchers
+		}
+        
+		define_ruler = {
+			age = 30
+		    claim = 100
+		}
+        
+		if = {
+		    limit = {
+				NOT = { stability = 1 }
+			}
+		    add_legitimacy = -25
+		}
+        
+		add_ruler_modifier = { 
+            name = medical_and_fev_researchers_head_advisor 
+            duration = -1
+        } 	
+        
+		custom_tooltip = shi_head_advisor_select_c
+        
+		ai_chance = {
+			factor = 33
+		}        
+	}
+}
+
+# New Reno
+country_event = {
+	id = fallout_government_succession.8
+	title = fallout_government_succession.8.title
+	desc = fallout_government_succession.8.desc
+    picture = DEAD_JUNKIE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_government_attribute = new_reno_succession
+	}
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.8.option.a
+        
+		trigger = {
+			faction_in_power = the_van_graffs
+		}
+        
+		define_ruler = {
+			dynasty = "Van Graff"
+		}
+	}
+	
+	option = {
+		name = fallout_government_succession.8.option.b
+        
+		trigger = {
+			faction_in_power = the_wrights
+		}
+        
+		define_ruler = {
+			dynasty = "Wright"
+		}
+	}
+	
+	option = {
+		name = fallout_government_succession.8.option.c
+        
+		trigger = {
+			faction_in_power = the_salvatores
+		}
+        
+		define_ruler = {
+			dynasty = "Salvatore"
+		}
+	}
+	
+	option = {
+		name = fallout_government_succession.8.option.d
+        
+		trigger = {
+			faction_in_power = the_bishops
+		}
+        
+		define_ruler = {
+			dynasty = "Bishop"
+		}
+	}
+
+	option = {
+		name = fallout_government_succession.8.option.e
+        
+		trigger = {
+			faction_in_power = the_mordinos
+		}
+        
+		define_ruler = {
+			dynasty = "Mordino"
+		}
+	}
+}
+
+# NCR Politics
+country_event = {
+	id = fallout_government_succession.9
+	title = fallout_government_succession.9.title
+	desc = fallout_government_succession.9.desc
+	picture = COLLAPSED_HIGHWAY_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = ncr_state_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.9.option.a
+        
+        trigger = {
+            adm_power = 50
+        }
+        
+        add_adm_power = -50
+        
+        define_ruler = {
+            change_adm = 2
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.9.option.b
+        
+        trigger = {
+            dip_power = 50
+        }
+        
+        add_dip_power = -50
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = 2
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.9.option.c
+        
+        trigger = {
+            mil_power = 50
+        }
+        
+        add_mil_power = -50
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = 2
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.9.option.d
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+}
+
+# Cult
+country_event = {
+	id = fallout_government_succession.10
+	title = fallout_government_succession.10.title
+	desc = fallout_government_succession.10.desc
+	picture = CONFRONTATION_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = cult_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.10.option.a
+        
+        define_ruler = {
+            change_adm = 2
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.10.option.b
+
+        define_ruler = {
+            change_adm = -1
+            change_dip = 2
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.10.option.c
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = 2
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.10.option.renewal_cult
+        
+        trigger = {
+			tag = RNC
+            NOT = { has_country_flag = renewal_cult_first_succession }
+		}
+        
+        define_ruler = {
+            name = "Zomak"
+			dynasty = "Ra'at"
+			culture = mole_rat
+            change_adm = 3
+            change_dip = 3
+            change_mil = 3
+            hide_skills = yes
+        }
+        
+        hidden_effect = {
+            set_country_flag = renewal_cult_first_succession
+        }
+	}
+}
+
+# Brotherhood of Steel
+country_event = {
+	id = fallout_government_succession.11
+	title = fallout_government_succession.11.title
+	desc = fallout_government_succession.11.desc
+	picture = BOS_CHAT_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = bos_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.11.option.a
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = 2
+            hide_skills = yes
+        }
+        
+        create_general = {
+            tradition = 50
+        }
+	}
+    option = {
+		name = fallout_government_succession.11.option.b
+
+        define_ruler = {
+            change_adm = 1
+            change_dip = 1
+            change_mil = 1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.11.option.c
+        
+        define_ruler = {
+            change_adm = 3
+            change_dip = 1
+            change_mil = -3
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.11.option.d
+        
+        add_devotion = 10
+         
+        define_ruler = {    
+            dynasty = "Maxson"
+            change_adm = -1
+            change_dip = -1
+            change_mil = 4
+            hide_skills = yes
+        }
+	}
+}
+
+# Tribal
+country_event = {
+	id = fallout_government_succession.12
+	title = fallout_government_succession.12.title
+	desc = fallout_government_succession.12.desc
+	picture = CONFRONTATION_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_government_attribute = tribal_succession
+    }
+	
+    immediate = {
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
+    }
+    
+	option = {
+		name = fallout_government_succession.12.option.a
+        
+        define_ruler = {
+            change_adm = 2
+            change_dip = -1
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.12.option.b
+
+        define_ruler = {
+            change_adm = -1
+            change_dip = 2
+            change_mil = -1
+            hide_skills = yes
+        }
+	}
+    option = {
+		name = fallout_government_succession.12.option.c
+        
+        define_ruler = {
+            change_adm = -1
+            change_dip = -1
+            change_mil = 2
+            hide_skills = yes
+        }
+	}
+}

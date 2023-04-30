@@ -20,6 +20,10 @@ theocracy_reform = {
         missionaries = 1
     }
     
+    custom_attributes = {
+		cult_succession = yes
+	}
+    
     potential = {
         NOT = { has_government_attribute = locked_government_type }
     }
@@ -52,6 +56,11 @@ brotherhood_reform = {
         
         max_absolutism = 20
     }
+    
+    custom_attributes = {
+		bos_succession = yes
+        locked_government_type = yes
+	}
     
     potential = {
         have_had_reform = brotherhood_reform
@@ -86,7 +95,11 @@ cult_reform = {
         max_absolutism = 5
     }
     
-     potential = {
+    custom_attributes = {
+		cult_succession = yes
+	}
+    
+    potential = {
         have_had_reform = cult_reform
     }
     

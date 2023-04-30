@@ -367,11 +367,33 @@ on_new_consort = {
 
 # country
 on_monarch_death = { 
-    
-    events = {
-        new_vegas.30 # Anarcho Vegas
-		new_vegas.31 # Independent Vegas
-        legion_ruler.1 # Death of the Caesar
+    # Succession
+    # The 'skip_next_succession_event' flag is used so these events only fire on the initial triggering death, and not for the 'fake' death when the temp ruler is replaced.
+    if = {
+        limit = {
+            NOT = { has_country_flag = skip_next_succession_event }
+        }
+        
+        # Monarchy
+        country_event = { id = fallout_government_succession.1 } # Autocratic Succession
+        country_event = { id = fallout_government_succession.2 } # Succession of the Caesar (Caesar's Death)
+        country_event = { id = fallout_government_succession.3 } # Succession of the Caesar (Default)
+        country_event = { id = fallout_government_succession.4 } # Ruler of the Strip (Mr. House Death)
+        country_event = { id = fallout_government_succession.5 } # Ruler of the Strip (Default)
+        country_event = { id = fallout_government_succession.6 } # Mechanical Reconfiguration
+        country_event = { id = fallout_government_succession.7 } # Head Advisor to the Shi Emperor
+        country_event = { id = fallout_government_succession.8 } # Family Games
+        country_event = { id = fallout_government_succession.9 } # NCR Politics
+        
+        # Theocracy
+        country_event = { id = fallout_government_succession.10 } # Cult Succession
+        country_event = { id = fallout_government_succession.11 } # Elder Succession
+        
+        # Tribal
+        country_event = { id = fallout_government_succession.12 } # Tribal Succession
+    }
+    else = {
+        clr_country_flag = skip_next_succession_event
     }
 }
 
@@ -387,30 +409,23 @@ on_extend_regency = {
 
 # country 
 on_new_term_election = {
-    
     events = {
-        elections.1
-        enclave_elections.1
+        fallout_government_election.1 # Standard Election
+        fallout_government_election.2  # Vault Election
     }
 }
 
 # country 
 on_death_election = {
-    
     events = {
-        elections.2
-        enclave_elections.2
+        fallout_government_election.10 # Standard Election
+        fallout_government_election.11 # Vault Election
     }
 }
 
 # country
 on_death_foreign_slave_ruler = {
-	
-	events = {
-		wolf_pack.1 # Choose new for the Pack
-		shi.1 #Chosing the next Head Advisor
-		new_reno.18 #Family Games
-	}
+    
 }
 
 # country 
@@ -418,16 +433,15 @@ on_replace_governor = {
     
 }
 
-
 # country
 on_bankruptcy = {
 }
 
 # country (country annexing, root = target)
 on_diplomatic_annex = {
-    
-    events = {
-        fm_subjects.1
+    add_country_modifier = {
+        name = annexers_legacy
+        duration = 3650
     }
 }
 
@@ -451,19 +465,23 @@ on_new_heir = {
 
 # country 
 on_weak_heir_claim = {
-    
-    events = {
-        fm_government.1
+    # Weak Heir - Spawn Pretenders
+    if = {
+        limit = {
+            has_government_attribute = heir
+        }
+        
+        capital_scope = {
+            spawn_rebels = {
+                type = pretender_rebels
+                size = 3
+            }
+        }
     }
 }
 
 on_heir_needed_theocracy = {
     
-	events = {
-		brotherhood_of_steel_government.1   # For Brotherhood of Steel
-        renewal_cult.1                      # For the Renewal Cult
-		theocracy.1                         # For everyone else
-	}
 }
 
 # Emperor from same dynasty
@@ -540,9 +558,9 @@ on_native_change_government = {
 
 # Nation is integrated after being in union
 on_integrate = {
-    
-    events = {
-        fm_subjects.1
+    add_country_modifier = {
+        name = annexers_legacy
+        duration = 3650
     }
 }
 
@@ -783,7 +801,6 @@ on_yearly_pulse_5 = {
 
 # country random events
 on_bi_yearly_pulse = {
-    
     random_events = {
         # Agenda from the Estates
 		1000 = estate_system.1
@@ -889,8 +906,6 @@ on_four_year_pulse_3 = {
      random_events = {
         10 = subject_nations.1		# Discontent on the Frontier
         10 = ruler_choices.1
-        10 = vault_government.1
-        5 = vault_government.100    # Serve for Life alt.
         160 = 0
         # 25% any event will be picked per pulse
      }

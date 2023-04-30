@@ -39,7 +39,7 @@ feral_ghoul_rebels = {
 		}
 		modifier = {
 			factor = 1.2
-			religion = renewal # Large population of sentient ghouls attract ferals
+			religion = renewal_cult # Large population of sentient ghouls attract ferals
 		}
         modifier = {
 			factor = 0.25
@@ -54,9 +54,9 @@ feral_ghoul_rebels = {
 			NOT = {
 				culture_group = ghoul_group
 				owner = { religion = bright_brotherhood }
-				owner = { religion = renewal }
+				owner = { religion = renewal_cult }
 				religion = bright_brotherhood
-				religion = renewal
+				religion = renewal_cult
 			}
 		}
 	}
@@ -92,11 +92,11 @@ feral_ghoul_rebels = {
 			factor = 1.1
 			NOT = {
 				religion = bright_brotherhood
-				religion = renewal
+				religion = renewal_cult
 			}
 			owner = {
 				OR = {
-					religion = renewal
+					religion = renewal_cult
 					religion = bright_brotherhood
 				}
 			}
@@ -105,11 +105,11 @@ feral_ghoul_rebels = {
 			factor = 2
 			OR = {
 				religion = bright_brotherhood
-				religion = renewal
+				religion = renewal_cult
 			}
 			owner = {
 				NOT = {
-					religion = renewal
+					religion = renewal_cult
 					religion = bright_brotherhood
 				}
 			}

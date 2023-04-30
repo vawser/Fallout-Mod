@@ -18,6 +18,10 @@ autocracy_reform = {
         
         max_absolutism = 5
 	}
+    
+    custom_attributes = {
+		autocratic_succession = yes
+	}
 	
     potential = {
         NOT = { has_government_attribute = locked_government_type }
@@ -98,6 +102,7 @@ legion_reform = {
 	}
     
     custom_attributes = {
+		legion_succession = yes
 		locked_government_type = yes
 	}
     
@@ -140,6 +145,11 @@ new_vegas_reform = {
         the_white_glove_society
     }
     
+    custom_attributes = {
+		new_vegas_succession = yes
+		locked_government_type = yes
+	}
+    
     potential = {
         technology_group = tech_new_vegas
     }
@@ -169,6 +179,11 @@ think_tank_reform = {
         
         max_absolutism = 20
     }
+    
+    custom_attributes = {
+		big_mt_succession = yes
+		locked_government_type = yes
+	}
     
     potential = {
         have_had_reform = think_tank_reform
@@ -202,6 +217,10 @@ zetan_reform = {
         max_absolutism = 50
     }
     
+    custom_attributes = {
+		locked_government_type = yes
+	}
+    
     potential = {
         have_had_reform = zetan_reform
     }
@@ -230,6 +249,11 @@ shi_reform = {
         max_absolutism = 10
     }
     
+    custom_attributes = {
+        shi_succession = yes
+		locked_government_type = yes
+	}
+    
     potential = {
         have_had_reform = shi_reform
     }
@@ -257,6 +281,11 @@ new_reno_reform = {
         
         max_absolutism = 10
     }
+    
+    custom_attributes = {
+        new_reno_succession = yes
+		locked_government_type = yes
+	}
     
     potential = {
        have_had_reform = new_reno_reform
@@ -287,6 +316,11 @@ ncr_state_reform = {
         
         max_absolutism = -10
     }
+    
+    custom_attributes = {
+        ncr_state_succession = yes
+		locked_government_type = yes
+	}
     
     potential = {
         have_had_reform = ncr_state_reform
