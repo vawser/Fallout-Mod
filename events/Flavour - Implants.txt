@@ -1,10 +1,10 @@
-namespace = ruler_choices
+namespace = fallout_implants
 
 # Traveling Salesman
 country_event = {
-	id = ruler_choices.1
-	title = ruler_choices.1.title
-	desc = ruler_choices.1.desc
+	id = fallout_implants.1
+	title = fallout_implants.1.title
+	desc = fallout_implants.1.desc
     picture = VICTOR_eventPicture
 	
 	is_triggered_only = yes
@@ -20,12 +20,12 @@ country_event = {
 	
     immediate = {
         hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - ruler_choices.1" }
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_implants.1" }
         }
     }
     
 	option = {
-		name = ruler_choices.1.option.a
+		name = fallout_implants.1.option.a
 		
         trigger = {
             NOT = { has_ruler_modifier = intelligence_implant }
@@ -44,7 +44,7 @@ country_event = {
 	}
 
     option = {
-		name = ruler_choices.1.option.b
+		name = fallout_implants.1.option.b
 		
         trigger = {
             NOT = { has_ruler_modifier = charisma_implant }
@@ -63,7 +63,7 @@ country_event = {
 	}
     
     option = {
-		name = ruler_choices.1.option.c
+		name = fallout_implants.1.option.c
 		
         trigger = {
             NOT = { has_ruler_modifier = strength_implant }
@@ -82,7 +82,7 @@ country_event = {
 	}
     
     option = {
-		name = ruler_choices.1.option.d
+		name = fallout_implants.1.option.d
 		
         trigger = {
             NOT = { has_ruler_modifier = lucky_implant }
@@ -101,7 +101,7 @@ country_event = {
 	}
     
     option = {
-		name = ruler_choices.1.option.e
+		name = fallout_implants.1.option.e
 
 		ai_chance = {
 			factor = 20

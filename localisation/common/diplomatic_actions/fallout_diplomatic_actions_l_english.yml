@@ -56,10 +56,58 @@
  manipulate_opinion_tooltip: "Sway the population of our target, increasing their relations with us."
  manipulate_opinion_dialog: "Sway the population of our target, increasing their relations with us."
  
+ #----------------------------------------------------------------------
  # Opinion Modifiers
+ #----------------------------------------------------------------------
  alliance_disrupted: "Alliance Disrupted"
  
+ #----------------------------------------------------------------------
  # Events
+ #----------------------------------------------------------------------
+ diplomatic_actions.1.title: "Assassination"
+ diplomatic_actions.1.desc: "Assassination"
+ diplomatic_actions.1.option.a: "Assassination"
+ 
+ diplomatic_actions.2.title: "[Root.Monarch.GetTitle] [Root.Monarch.GetName] dies!"
+ diplomatic_actions.2.desc: "A mysterious affliction has caused [Root.Monarch.GetName] to die rather rapidily. One would suspect foul play, but there is no evidence to support such accusations."
+ diplomatic_actions.2.option.a: "Oh dear"
+ 
+ diplomatic_actions.3.title: "[Root.Monarch.GetTitle] [Root.Monarch.GetName] assassinated!"
+ diplomatic_actions.3.desc: "An assassin from [ass_killer.GetName] has killed our beloved [Root.Monarch.GetTitle] [Root.Monarch.GetName]. They will rue the day they ever thought we could be subjugated!"
+ diplomatic_actions.3.option.a: "Grr..."
+ 
+ diplomatic_actions.4.title: "Successful Assassination"
+ diplomatic_actions.4.desc: "Our assassin has successfully killed [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]."
+ diplomatic_actions.4.option.a: "Hurrah!"
+ 
+ diplomatic_actions.5.title: "Successful Assassination Exposed"
+ diplomatic_actions.5.desc: "Our assassin has successfully killed [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]. Unfortunately the assassin was caught, and the officials of [ass_target.GetName] are aware of our involvement."
+ diplomatic_actions.5.option.a: "Oh well"
+ 
+ diplomatic_actions.6.title: "Assassination Failed"
+ diplomatic_actions.6.desc: "Our assassin has failed to kill [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]."
+ diplomatic_actions.6.option.a: "Idiot!"
+ 
+ diplomatic_actions.7.title: "Failed Assassination Exposed"
+ diplomatic_actions.7.desc: "Our assassin has failed to kill [ass_target.Monarch.GetTitle] [ass_target.Monarch.GetName], leader of [ass_target.GetName]. Additionaly, the assassin was caught and the officials of [ass_target.GetName] are aware of our involvement."
+ diplomatic_actions.7.option.a: "Curses!"
+ 
+ diplomatic_actions.8.title: "Attempted Assassination of [Root.Monarch.GetTitle] [Root.Monarch.GetName]"
+ diplomatic_actions.8.desc: "An assassin from [ass_killer.GetName] has attempted to kill our beloved [Root.Monarch.GetTitle] [Root.Monarch.GetName]. The assassin failed, and through torture we elicited the whereabots of who ordered the assassination."
+ diplomatic_actions.8.option.a: "They will pay!"
+ 
+ diplomatic_actions.9.title: "Slave Raid"
+ diplomatic_actions.9.desc: "Slave Raid"
+ diplomatic_actions.9.option.a: "Slave Raid"
+ 
+ diplomatic_actions.10.title: "Slave Raid by [slave_raider.GetName]"
+ diplomatic_actions.10.desc: "Our poor citizens have been raided by dispicable slavers from [slave_raider.GetName]. They will not be forgotten."
+ diplomatic_actions.10.option.a: "[slave_raider.GetName] will pay!"
+ 
+ diplomatic_actions.11.title: "Slave Haul"
+ diplomatic_actions.11.desc: "The slavers have successfully captured slaves from [slaver_target.GetName]. Let's see how big their haul was."
+ diplomatic_actions.11.option.a: "Wonderful..."
+ 
  diplomatic_actions.20.title: "Disrupt Alliance"
  diplomatic_actions.20.desc: "We have targeted [disrupt_target.GetName]. It is time to select which ally of theirs will be victim to our disruption."
  diplomatic_actions.20.option.a: "Incite tensions between [disrupt_target.GetName] and [disrupted_ally.GetName]"
@@ -68,5 +116,7 @@
  diplomatic_actions.21.desc: "We have been victim to an unknown campaign of sabotage. These saboteurs habe sowed chaos between us and our ally, [disrupt_target.GetName]."
  diplomatic_actions.21.option.a: "Oh dear..."
  
+ #----------------------------------------------------------------------
  # Tooltip
+ #----------------------------------------------------------------------
  RECENTLY_TARGET_OF_MANIPULATE_OPINION: "Recently target of Manipulate Opinion"

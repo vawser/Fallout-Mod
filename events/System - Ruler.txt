@@ -7,57 +7,67 @@ country_event = {
 	desc = fallout_ruler.1.desc
     picture = USA_FLAG_eventPicture
 	
+    is_triggered_only = yes
+    
 	trigger = {
         has_regency = no
-		NOT = { has_government_attribute = republic }
         NOT = { has_immortal_ruler = yes }
-        NOT = { has_ruler_modifier = autodoc }
 	}
-	
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_ruler.1" }
-        }
-    }
-    
+
 	mean_time_to_happen = {
-		months = 2400
+		days = 1
 		
         modifier = {
-            factor = 0.9
+            factor = 0.5
+            has_ruler_modifier = autodoc
+        }
+        modifier = {
+            factor = 1.1
             has_ruler_modifier = ruler_drug_abuse
         }
-        
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			is_monarch_leader = yes
 		}
-        
         modifier = {
-			factor = 1.1
+			factor = 0.95
 			is_female = yes
-		}
-        
-		modifier = {
-			factor = 2
-			technology_group = tech_ghoul
 		}
 		modifier = {
 			factor = 0.5
+			technology_group = tech_ghoul
+		}
+		modifier = {
+			factor = 2
 			technology_group = tech_super_mutant
 		}
-		
         modifier = {
-			factor = 0.9
+			factor = 2
+			ruler_age = 60
+		}
+		modifier = {
+			factor = 2
+			ruler_age = 70
+		}
+        modifier = {
+			factor = 2
 			ruler_age = 80
 		}
-		modifier = {
-			factor = 0.9
+        modifier = {
+			factor = 2
 			ruler_age = 90
 		}
-		modifier = {
-			factor = 0.9
+        modifier = {
+			factor = 2
 			ruler_age = 100
+		}
+        modifier = {
+			factor = 2
+			ruler_age = 110
+		}
+        modifier = {
+			factor = 2
+			ruler_age = 120
 		}
 	}
 
@@ -68,347 +78,152 @@ country_event = {
 	}
 }
 
-# "Succession of [Root.Monarch.GetTitle] [Root.Monarch.GetName]"
+# Ruler Change (Good)
 country_event = {
-	id = fallout_ruler.2
-	title = fallout_ruler.2.title
-	desc = fallout_ruler.2.desc
+	id = fallout_ruler.10
+	title = fallout_ruler.10.title
+	desc = fallout_ruler.10.desc
     picture = USA_FLAG_eventPicture
 	
-	trigger = {
-		has_government_attribute = republic
-        has_regency = no
-        NOT = { has_immortal_ruler = yes }
-        NOT = { has_ruler_modifier = autodoc }
-	}
-	
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_ruler.2" }
-        }
-    }
+    is_triggered_only = yes
     
-	mean_time_to_happen = {
-		months = 2400
-		
-        modifier = {
-            factor = 0.9
-            has_ruler_modifier = ruler_drug_abuse
-        }
-        
-        modifier = {
-			factor = 0.9
-			is_monarch_leader = yes
-		}
-        
-        modifier = {
-			factor = 1.1
-			is_female = yes
-		}
-        
-		modifier = {
-			factor = 2
-			technology_group = tech_ghoul
-		}
-		modifier = {
-			factor = 0.5
-			technology_group = tech_super_mutant
-		}
-		
-		modifier = {
-			factor = 0.9
-			ruler_age = 80
-		}
-		modifier = {
-			factor = 0.9
-			ruler_age = 90
-		}
-		modifier = {
-			factor = 0.9
-			ruler_age = 100
-		}
-	}
-
-	option = {
-		name = fallout_ruler.2.option.a
-		
-		define_ruler = {
-			mil = 3
-			adm = 3
-			dip = 3
-		}
-	}
-}
-    
-# "[Root.Monarch.GetName] changes!"
-country_event = {
-	id = fallout_ruler.3
-	title = fallout_ruler.3.title
-	desc = fallout_ruler.3.desc
-    picture = USA_FLAG_eventPicture
-	
 	trigger = {
         has_regency = no
         has_immortal_ruler = yes
 	}
 	
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_ruler.3" }
-        }
-    }
-    
 	mean_time_to_happen = {
-		months = 600
+		days = 1
+        
+        modifier = {
+            factor = 2
+            
+            stability = 1
+        }
+        modifier = {
+            factor = 2
+            
+            stability = 2
+        }
+        modifier = {
+            factor = 2
+            
+            stability = 3
+        }
 	}
 
 	option = {
-		name = fallout_ruler.3.option.a
+		name = fallout_ruler.10.option.a
 		
-		random_list = {
-			50 = {
-                if = { 
-					limit = { adm = 6 }
-					add_stability = 1
-				}
-				if = { 
-					limit = { NOT = { adm = 6 } }
-					change_adm = 1
-				}
-			}
-            50 = {
-                if = { 
-					limit = { NOT = { adm = 2 } }
-					add_stability = -1
-				}
-				if = { 
-					limit = { adm = 2 }
-					change_adm = -1
-				}
-			}
+		if = { 
+            limit = { 
+                adm = 6 
+            }
+            add_stability = 1
+        }
+        else = {
+            change_adm = 1
         }
 	}
-    
     option = {
-		name = fallout_ruler.3.option.b
+		name = fallout_ruler.10.option.b
 		
-		random_list = {
-			50 = {
-                if = { 
-					limit = { dip = 6 }
-					add_stability = 1
-				}
-				if = { 
-					limit = { NOT = { dip = 6 } }
-					change_dip = 1
-				}
-			}
-            50 = {
-                if = { 
-					limit = { NOT = { dip = 2 } }
-					add_stability = -1
-				}
-				if = { 
-					limit = { dip = 2 }
-					change_dip = -1
-				}
-			}
+		if = { 
+            limit = { 
+                dip = 6 
+            }
+            add_stability = 1
+        }
+        else = {
+            change_dip = 1
         }
 	}
-    
     option = {
-		name = fallout_ruler.3.option.c
+		name = fallout_ruler.10.option.c
 		
-		random_list = {
-			50 = {
-                if = { 
-					limit = { mil = 6 }
-					add_stability = 1
-				}
-				if = { 
-					limit = { NOT = { mil = 6 } }
-					change_mil = 1
-				}
-			}
-            50 = {
-                if = { 
-					limit = { NOT = { mil = 2 } }
-					add_stability = -1
-				}
-				if = { 
-					limit = { mil = 2 }
-					change_mil = -1
-				}
-			}
+		if = { 
+            limit = { 
+                mil = 6 
+            }
+            add_stability = 1
+        }
+        else = {
+            change_mil = 1
         }
 	}
 }
 
-# "Through Age comes Wisdom"
+# Ruler Change (Bad)
 country_event = {
-	id = fallout_ruler.4
-	title = fallout_ruler.4.title
-	desc = fallout_ruler.4.desc
+	id = fallout_ruler.11
+	title = fallout_ruler.11.title
+	desc = fallout_ruler.11.desc
     picture = USA_FLAG_eventPicture
 	
+    is_triggered_only = yes
+    
 	trigger = {
         has_regency = no
-        NOT = { has_immortal_ruler = yes }
-        ruler_age = 60
-        has_ruler_flag = wisdom_through_age
+        has_immortal_ruler = yes
 	}
 	
-    immediate = {
-        set_ruler_flag = wisdom_through_age
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_ruler.4" }
-        }
-    }
-    
 	mean_time_to_happen = {
-		months = 1
+		days = 1
+        
+        modifier = {
+            factor = 2
+            
+            NOT = { stability = 0 }
+        }
+        modifier = {
+            factor = 2
+            
+            NOT = { stability = -1 }
+        }
+        modifier = {
+            factor = 2
+            
+            NOT = { stability = -2 }
+        }
 	}
 
 	option = {
-		name = fallout_ruler.4.option.a
+		name = fallout_ruler.11.option.a
 		
-		random_list = {
-			50 = {
-                if = { 
-					limit = { adm = 6 }
-					add_stability = 1
-				}
-				if = { 
-					limit = { NOT = { adm = 6 } }
-					change_adm = 1
-				}
-			}
-            50 = {
-                if = { 
-					limit = { adm = 6 }
-					add_stability = 2
-				}
-				if = { 
-					limit = { NOT = { adm = 6 } }
-					change_adm = 2
-				}
-			}
+		if = { 
+            limit = { 
+                NOT = { adm = 1 }
+            }
+            add_stability = -1
+        }
+        else = {
+            change_adm = -1
         }
 	}
-    
     option = {
-		name = fallout_ruler.4.option.b
+		name = fallout_ruler.11.option.b
 		
-		random_list = {
-			50 = {
-                if = { 
-					limit = { dip = 6 }
-					add_stability = 1
-				}
-				if = { 
-					limit = { NOT = { dip = 6 } }
-					change_dip = 1
-				}
-			}
-            50 = {
-                if = { 
-					limit = { dip = 6 }
-					add_stability = 2
-				}
-				if = { 
-					limit = { NOT = { dip = 6 } }
-					change_dip = 2
-				}
-			}
+		if = { 
+            limit = { 
+                NOT = { dip = 1 }
+            }
+            add_stability = -1
+        }
+        else = {
+            change_dip = -1
         }
 	}
-    
     option = {
-		name = fallout_ruler.4.option.c
+		name = fallout_ruler.11.option.c
 		
-		random_list = {
-			50 = {
-                if = { 
-					limit = { mil = 6 }
-					add_stability = 1
-				}
-				if = { 
-					limit = { NOT = { mil = 6 } }
-					change_mil = 1
-				}
-			}
-            50 = {
-                if = { 
-					limit = { mil = 6 }
-					add_stability = 2
-				}
-				if = { 
-					limit = { NOT = { mil = 6 } }
-					change_mil = 2
-				}
-			}
+		if = { 
+            limit = { 
+                NOT = { mil = 1 }
+            }
+            add_stability = -1
         }
-	}
-}
-
-# "Death of [Root.Heir.GetTitle] [Root.Heir.GetName]"
-country_event = {
-	id = fallout_ruler.5
-	title = fallout_ruler.5.title
-	desc = fallout_ruler.5.desc
-    picture = USA_FLAG_eventPicture
-	
-	trigger = {
-        has_heir = yes
-	}
-	
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - fallout_ruler.5" }
-        }
-    }
-    
-	mean_time_to_happen = {
-		months = 2400 # Mean time means this fires every 100 years.
-        
-		modifier = {
-			factor = 0.9
-			is_heir_leader = yes
-		}
-        
-        modifier = {
-			factor = 1.1
-			has_female_heir = yes
-		}
-        
-		modifier = {
-			factor = 2
-			technology_group = tech_ghoul
-		}
-		modifier = {
-			factor = 0.5
-			technology_group = tech_super_mutant
-		}
-		
-		modifier = {
-			factor = 0.9
-			heir_age = 80
-		}
-        modifier = {
-			factor = 0.9
-			heir_age = 90
-		}
-        modifier = {
-			factor = 0.9
-			heir_age = 100
-		}
-	}
-
-	option = {
-		name = fallout_ruler.5.option.a
-
-        kill_heir = {
-            allow_new_heir = yes
+        else = {
+            change_mil = -1
         }
 	}
 }
