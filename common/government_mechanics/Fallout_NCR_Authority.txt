@@ -1,0 +1,176 @@
+ncr_authority_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Cradle of Civilization"
+	}
+
+	powers = {
+		ncr_authority = {
+			max = 100
+            default = 0
+			base_monthly_growth = 0.0
+		}
+	}
+	
+	interactions = {
+        ncr_authority_action_frontier_diplomacy = {
+            gui = six_slots_interaction_gui
+			icon = GFX_ncr_authority_ability_1
+            cost_type = ncr_authority
+			cost = 100
+            
+			trigger = {
+				NOT = { has_global_flag = ncr_authority_frontier_diplomacy_3 }
+			}
+            
+			effect = {
+                hidden_effect = {
+                    set_global_flag = ncr_authority_frontier_diplomacy
+                }
+                show_faction_modifier_leader = {
+                    FACTION_MODIFIER_FLAG = ncr_authority_frontier_diplomacy
+                    MODIFIER = frontier_diplomacy
+                }
+                custom_tooltip = NCR_MEMBERS_EFFECTED_TT
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        ncr_authority_action_law_and_order = {    
+            gui = six_slots_interaction_gui
+			icon = GFX_ncr_authority_ability_2
+            cost_type = ncr_authority
+			cost = 100
+            
+			trigger = {
+				NOT = { has_global_flag = ncr_authority_law_and_order_3 }
+			}
+            
+			effect = {
+                hidden_effect = {
+                    set_global_flag = ncr_authority_law_and_order
+                }
+                show_faction_modifier_leader = {
+                    FACTION_MODIFIER_FLAG = ncr_authority_law_and_order
+                    MODIFIER = law_and_order
+                }
+                custom_tooltip = NCR_MEMBERS_EFFECTED_TT
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        ncr_authority_action_government_support = {
+            gui = six_slots_interaction_gui
+			icon = GFX_ncr_authority_ability_3
+            cost_type = ncr_authority
+			cost = 100
+            
+			trigger = {
+				NOT = { has_global_flag = ncr_authority_government_support_3 }
+			}
+            
+			effect = {
+                hidden_effect = {
+                    set_global_flag = ncr_authority_government_support
+                }
+                show_faction_modifier_leader = {
+                    FACTION_MODIFIER_FLAG = ncr_authority_government_support
+                    MODIFIER = government_support
+                }
+                custom_tooltip = NCR_MEMBERS_EFFECTED_TT
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        ncr_authority_action_common_aspirations = {
+            gui = six_slots_interaction_gui
+			icon = GFX_ncr_authority_ability_4
+            cost_type = ncr_authority
+			cost = 100
+            
+			trigger = {
+				NOT = { has_global_flag = ncr_authority_common_aspirations_3 }
+			}
+            
+			effect = {
+                hidden_effect = {
+                    set_global_flag = ncr_authority_common_aspirations
+                }
+                show_faction_modifier_leader = {
+                    FACTION_MODIFIER_FLAG = ncr_authority_common_aspirations
+                    MODIFIER = common_aspirations
+                }
+                custom_tooltip = NCR_MEMBERS_EFFECTED_TT
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        ncr_authority_action_unify = {    
+            gui = six_slots_interaction_gui
+			icon = GFX_ncr_authority_ability_5
+            cost_type = ncr_authority
+			cost = 100
+            
+			trigger = { 
+                NOT = { has_global_flag = country_unified_the_ncr }
+                has_global_flag = ncr_authority_frontier_diplomacy_1
+                has_global_flag = ncr_authority_frontier_diplomacy_2
+                has_global_flag = ncr_authority_frontier_diplomacy_3
+                has_global_flag = ncr_authority_law_and_order_1
+                has_global_flag = ncr_authority_law_and_order_2
+                has_global_flag = ncr_authority_law_and_order_3
+                has_global_flag = ncr_authority_government_support_1
+                has_global_flag = ncr_authority_government_support_2
+                has_global_flag = ncr_authority_government_support_3
+                has_global_flag = ncr_authority_common_aspirations_1
+                has_global_flag = ncr_authority_common_aspirations_2
+                has_global_flag = ncr_authority_common_aspirations_3
+                has_global_flag = ncr_authority_virtues_of_democracy_1
+                has_global_flag = ncr_authority_virtues_of_democracy_2
+                has_global_flag = ncr_authority_virtues_of_democracy_3
+			}
+            
+			effect = {
+                country_event = { id = fallout_faction_system.100 }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        ncr_authority_action_virtues_of_democracy = {
+            gui = six_slots_interaction_gui
+			icon = GFX_ncr_authority_ability_6
+            cost_type = ncr_authority
+			cost = 100
+            
+			trigger = {
+				NOT = { has_global_flag = ncr_authority_virtues_of_democracy_3 }
+			}
+            
+			effect = {
+                hidden_effect = {
+                    set_global_flag = ncr_authority_virtues_of_democracy
+                }
+                show_faction_modifier_leader = {
+                    FACTION_MODIFIER_FLAG = ncr_authority_virtues_of_democracy
+                    MODIFIER = virtues_of_democracy
+                }
+                custom_tooltip = NCR_MEMBERS_EFFECTED_TT
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,250 @@
+namespace = fallout_war_assist
+
+# Diplomatic Intercept
+country_event = {
+	id = fallout_war_assist.1
+	title = fallout_war_assist.1.title
+	desc = fallout_war_assist.1.desc
+	picture = CONFRONTATION_eventPicture
+    
+    is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+	option = {
+		name = fallout_war_assist.1.option.a
+        
+        event_target:receiver = {
+            # Join offensive war
+            if = {
+                limit = {
+                    # Calling nation is attacker
+                    event_target:caller = {
+                        is_in_war = {
+                            attackers = THIS
+                        }
+                    }
+                }
+                join_all_offensive_wars_of = event_target:caller
+            }
+            # Join defensive war
+            if = {
+                limit = {
+                    # Calling nation is defender
+                    event_target:caller = {
+                        is_in_war = {
+                            defenders = THIS
+                        }
+                    }
+                }
+                join_all_defensive_wars_of = event_target:caller
+            }
+        }
+        
+        ai_chance = {
+            factor = 80
+        }
+	}
+    
+    option = {
+		name = fallout_war_assist.1.option.b
+        
+        trigger = {
+            years_of_income = 0.25
+        }
+        
+        add_years_of_income = -1
+        
+        event_target:caller = {
+            country_event = { id = fallout_war_assist.2 days = 1 }
+        }
+        
+        event_target:receiver = {
+            country_event = { id = fallout_war_assist.3 days = 1 }
+        }
+        
+        ai_chance = {
+            factor = 10
+            
+            # More likely if calling nation is our strength or greater
+            modifier = {
+                factor = 2
+                
+                military_strength = {
+                    who = event_target:caller
+                    value = 1.0
+                }
+            }
+            
+            # More likely if flush with gold
+            modifier = {
+                factor = 2
+                
+                years_of_income = 5
+            }
+        }
+	}
+    
+    option = {
+		name = fallout_war_assist.1.option.c
+        
+        trigger = {
+            mil_power = 25
+        }
+        
+        add_mil_power = -100
+        
+        event_target:caller = {
+            country_event = { id = fallout_war_assist.2 days = 1 }
+        }
+        
+        event_target:receiver = {
+            country_event = { id = fallout_war_assist.4 days = 1 }
+        }
+        
+        ai_chance = {
+            factor = 10
+            
+            # More likely if calling nation is our strength or greater
+            modifier = {
+                factor = 2
+                
+                military_strength = {
+                    who = event_target:caller
+                    value = 1.0
+                }
+            }
+            
+            # More likely if flush with MIL power
+            modifier = {
+                factor = 2
+                
+                mil_power = 600
+            }
+        }
+	}
+    
+    option = {
+		name = fallout_war_assist.1.option.d
+        
+        trigger = { 
+            dip_power = 25
+            
+            event_target:receiver = {
+                has_opinion = {
+                    who = ROOT
+                    value = 120
+                }
+            }
+        }
+        
+        add_dip_power = -100
+        
+        event_target:caller = {
+            country_event = { id = fallout_war_assist.2 days = 1 }
+        }
+        event_target:receiver = {
+            country_event = { id = fallout_war_assist.5 days = 1 }
+        }
+        
+        ai_chance = {
+            factor = 10
+            
+            # More likely if calling nation is our strength or greater
+            modifier = {
+                factor = 2
+                
+                military_strength = {
+                    who = event_target:caller
+                    value = 1.0
+                }
+            }
+            
+            # More likely if flush with DIP power
+            modifier = {
+                factor = 2
+                
+                dip_power = 600
+            }
+        }
+	}
+}
+
+# Call for Aid has been intercepted
+country_event = {
+	id = fallout_war_assist.2
+	title = fallout_war_assist.2.title
+	desc = fallout_war_assist.2.desc
+	picture = CONFRONTATION_eventPicture
+    
+    is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+	option = {
+		name = fallout_war_assist.2.option.a
+        
+	}
+}
+
+# Benefits of Bribery
+country_event = {
+	id = fallout_war_assist.3
+	title = fallout_war_assist.3.title
+	desc = fallout_war_assist.3.desc
+	picture = GAS_STATION_eventPicture
+    
+    is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+	option = {
+		name = fallout_war_assist.3.option.a
+        
+        add_years_of_income = 1
+	}
+}
+
+# Intimidated
+country_event = {
+	id = fallout_war_assist.4
+	title = fallout_war_assist.4.title
+	desc = fallout_war_assist.4.desc
+	picture = DIXON_eventPicture
+    
+    is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+	option = {
+		name = fallout_war_assist.4.option.a
+        
+	}
+}
+
+# Diplomatic History
+country_event = {
+	id = fallout_war_assist.5
+	title = fallout_war_assist.5.title
+	desc = fallout_war_assist.5.desc
+	picture = USA_FLAG_RUBBLE_eventPicture
+    
+    is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+	option = {
+		name = fallout_war_assist.5.option.a
+        
+	}
+}

@@ -635,6 +635,11 @@ base_values = {
 ai_nation = {
 	diplomats = 1                       # ai has to reserve a diplomat for short term action so it gets an extra to put it on equal footing with player
 	free_leader_pool = 2				# ai needs to have enough pool for 1 general & 1 admiral
+    
+    # Give the AI a passive bonus to Faction Authority gain, as the AI is unlikely to properly use the actions needed to gain it
+    # 0.25 * 12 = 3 per year, 100 / 3 = 33.3 years per reform
+    # 33.3 * 15 = 499 years to complete the reforms.
+    monthly_ncr_authority = 0.25
 }
 
 war_taxes = {

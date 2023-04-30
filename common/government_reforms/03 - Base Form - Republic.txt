@@ -272,6 +272,16 @@ ncr_reform = {
         has_parliament = yes
     }
 
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            ncr_authority_mechanic
+        }
+    }
+    
     custom_attributes = {
         standard_election = yes
 		locked_government_type = yes

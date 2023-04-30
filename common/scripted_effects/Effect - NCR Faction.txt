@@ -1,0 +1,154 @@
+#-----------------------------------
+# Factions
+#-----------------------------------
+set_head_of_faction = {
+    if = {
+        limit = {
+            any_country = {
+                has_country_modifier = head_of_$faction$
+            }
+        }
+        every_country = {
+            limit = {
+                has_country_modifier = head_of_$faction$
+            }
+            remove_country_modifier = head_of_$faction$
+        }
+    }
+    add_country_modifier = {
+        name = head_of_$faction$
+        duration = -1
+    }
+}
+
+set_member_of_faction = {
+    add_country_modifier = {
+        name = member_of_$faction$
+        duration = -1
+    }
+}
+
+destroy_faction = {
+    every_country = {
+        remove_country_modifier = head_of_$faction$
+        remove_country_modifier = member_of_$faction$
+    }
+    clr_global_flag = $faction$_exists
+}
+
+# This is for all members
+update_faction_modifier = {
+    if = {
+        limit = {
+            has_global_flag = $FACTION_MODIFIER_FLAG$
+        }
+        
+        every_country = {
+            limit = {
+                has_country_modifier = member_of_$FACTION$
+            }
+            
+            if = {
+                limit = {
+                    has_global_flag = $FACTION_MODIFIER_FLAG$_1
+                    NOT = { has_country_modifier = $MODIFIER$_1 }
+                    NOT = { has_country_modifier = $MODIFIER$_2 }
+                    NOT = { has_country_modifier = $MODIFIER$_3 }
+                }
+                
+                add_country_modifier = {
+                    name =  $MODIFIER$_1
+                    duration = -1
+                }
+            }
+            else_if = {
+                limit = {
+                    has_global_flag = $FACTION_MODIFIER_FLAG$_2
+                    NOT = { has_country_modifier = $MODIFIER$_2 }
+                    NOT = { has_country_modifier = $MODIFIER$_3 }
+                    has_country_modifier = $MODIFIER$_1
+                }
+                
+                hidden_effect = {
+                    remove_country_modifier = $MODIFIER$_1
+                }
+                add_country_modifier = {
+                    name =  $MODIFIER$_2
+                    duration = -1
+                }
+            }
+            else_if = {
+                limit = {
+                    has_global_flag = $FACTION_MODIFIER_FLAG$_3
+                    NOT = { has_country_modifier = $MODIFIER$_3 }
+                    has_country_modifier = $MODIFIER$_2
+                }
+                
+                hidden_effect = {
+                    remove_country_modifier = $MODIFIER$_2
+                }
+                add_country_modifier = {
+                    name =  $MODIFIER$_3
+                    duration = -1
+                }
+            }
+        }
+    }
+}
+
+# This is for the leader - this is seen by the player
+show_faction_modifier_leader = {
+    if = {
+        limit = {
+            NOT = { has_global_flag = $FACTION_MODIFIER_FLAG$_1 }
+        }
+        
+        hidden_effect = {
+            set_global_flag = $FACTION_MODIFIER_FLAG$_1
+        }
+        
+        tooltip = {
+            add_country_modifier = {
+                name =  $MODIFIER$_1
+                duration = -1
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            has_global_flag = $FACTION_MODIFIER_FLAG$_1
+            NOT = { has_global_flag = $FACTION_MODIFIER_FLAG$_2 }
+        }
+        
+        hidden_effect = {
+            set_global_flag = $FACTION_MODIFIER_FLAG$_2
+        }
+        
+        tooltip = {
+            add_country_modifier = {
+                name =  $MODIFIER$_2
+                duration = -1
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            has_global_flag = $FACTION_MODIFIER_FLAG$_2
+            NOT = { has_global_flag = $FACTION_MODIFIER_FLAG$_3 }
+        }
+        
+        hidden_effect = {
+            set_global_flag = $FACTION_MODIFIER_FLAG$_3
+        }
+        
+        tooltip = {
+            add_country_modifier = {
+                name =  $MODIFIER$_3
+                duration = -1
+            }
+        }
+    }
+    else = {
+        custom_tooltip = FACTION_$MODIFIER$_TT
+    }
+}

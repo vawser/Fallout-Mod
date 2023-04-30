@@ -1,0 +1,850 @@
+#---------------------------------------
+# Invite - NCR
+#---------------------------------------
+# ROOT - Faction Leader
+invite_to_ncr = {
+	category = alliance
+	
+	alert_index = 3
+	alert_tooltip = invite_to_ncr_tooltip
+	require_acceptance = yes
+    
+	is_visible = {  
+		has_country_modifier = head_of_ncr
+        FROM = {
+            NOT = { has_country_modifier = member_of_ncr }
+			NOT = { has_country_modifier = recent_faction_interaction }
+			NOT = { cannot_join_ncr = yes }
+		}
+	}
+	is_allowed = {
+		has_country_modifier = head_of_ncr
+		FROM = {
+			NOT = { has_country_modifier = recent_faction_interaction }
+			NOT = { cannot_join_ncr = yes }
+		}
+	}
+	on_accept = {
+		FROM = {
+            set_member_of_faction = {
+                faction = ncr
+            }
+            add_country_modifier = {
+                name = recent_faction_interaction
+                duration = 365
+            }
+        }
+	}
+	on_decline = { 
+        FROM = {
+            add_country_modifier = {
+                name = recent_faction_interaction
+                duration = 365
+            }
+        }
+	}
+	
+	ai_acceptance = {
+        #----------------------
+        # Standard
+        #----------------------
+		add_entry = {
+			name = INV_BASE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -25
+			}
+		}
+		add_entry = {
+			name = INV_ROOTPRESTIGE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = prestige
+			}
+			subtract_variable = { which = ai_value value = 25 }
+			divide_variable = { which = ai_value value = 2 }
+		}
+		add_entry = {
+			name = INV_OPINION
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			subtract_variable = { which = ai_value value = 25 }
+		}
+        
+        #----------------------
+        # Factional Weights
+        #----------------------
+		add_entry = {
+			name = INV_OVER_4_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 4
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = INV_OVER_6_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 6
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = INV_OVER_8_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 8
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = INV_OVER_10_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 10
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -25
+			}
+		}
+		add_entry = {
+			name = INV_OVER_12_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 12
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = INV_ALLIANCE_WITH_MEMBER
+			limit = {
+				any_country = {
+                    has_country_modifier = member_of_ncr
+                    alliance_with = FROM
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 25
+			}
+		}
+	}
+
+	ai_will_do = {
+        # AI will stop after 12 members
+        NOT = {
+            calc_true_if = {
+                amount = 12
+                all_country = {
+                    has_country_modifier = member_of_ncr
+                }
+            }
+        }
+	}
+}
+
+#---------------------------------------
+# Join - NCR
+#---------------------------------------
+# ROOT - Potential Member
+join_the_ncr = {
+	category = alliance
+	
+	alert_index = 3
+	alert_tooltip = join_the_ncr_tooltip
+	require_acceptance = yes
+    
+	is_visible = {
+		NOT = { has_country_modifier = member_of_ncr }
+        NOT = { cannot_join_ncr = yes }
+        FROM = { 
+            has_country_modifier = head_of_ncr
+        }
+	}
+	is_allowed = {
+        NOT = { has_country_modifier = recent_faction_interaction }
+		NOT = { has_country_modifier = member_of_ncr }
+        NOT = { cannot_join_ncr = yes }
+        FROM = { 
+            has_country_modifier = head_of_ncr
+        }
+	}
+	on_accept = {
+		set_member_of_faction = {
+            faction = ncr
+        }
+        add_country_modifier = {
+            name = recent_faction_interaction
+            duration = 365
+        }
+	}
+	on_decline = { 
+        add_country_modifier = {
+            name = recent_faction_interaction
+            duration = 365
+        }
+	}
+	
+	ai_acceptance = {
+        #----------------------
+        # Standard
+        #----------------------
+		add_entry = {
+			name = INV_BASE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -25
+			}
+		}
+		add_entry = {
+			name = INV_ROOTPRESTIGE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = prestige
+			}
+			subtract_variable = { which = ai_value value = 25 }
+			divide_variable = { which = ai_value value = 2 }
+		}
+		add_entry = {
+			name = INV_OPINION
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = ROOT
+				with = FROM
+			}
+			subtract_variable = { which = ai_value value = 25 }
+		}
+        
+        #----------------------
+        # Factional Weights
+        #----------------------
+		add_entry = {
+			name = INV_OVER_4_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 4
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = INV_OVER_6_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 6
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = INV_OVER_8_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 8
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = INV_OVER_10_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 10
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -25
+			}
+		}
+		add_entry = {
+			name = INV_OVER_12_MEMBERS
+			limit = {
+				calc_true_if = {
+                    amount = 12
+                    all_country = {
+                        has_country_modifier = member_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = INV_ALLIANCE_WITH_MEMBER
+			limit = {
+				any_country = {
+                    has_country_modifier = member_of_ncr
+                    alliance_with = FROM
+                }
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 25
+			}
+		}
+	}
+
+	ai_will_do = {
+		# AI will stop after 12 members
+        NOT = {
+            calc_true_if = {
+                amount = 12
+                all_country = {
+                    has_country_modifier = member_of_ncr
+                }
+            }
+        }
+	}
+}
+
+#---------------------------------------
+# Kick - NCR
+#---------------------------------------
+# ROOT - Faction Leader
+kick_from_ncr = {
+	category = alliance
+	
+	alert_index = 3
+	alert_tooltip = kick_from_ncr_tooltip
+	require_acceptance = no
+    
+	is_visible = {
+		has_country_modifier = head_of_ncr
+        FROM = {
+			has_country_modifier = member_of_ncr
+		}
+	}
+	is_allowed = {
+		has_country_modifier = head_of_ncr
+		FROM = {
+			has_country_modifier = member_of_ncr
+		}
+	}
+	on_accept = {
+		FROM = {
+            remove_country_modifier = member_of_ncr
+            country_event = { id = fallout_faction_system.10 }
+        }
+        
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+			name = INV_BASE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1000
+			}
+		}
+	}
+
+	ai_will_do = {
+        OR = {
+            # AI will kick if the leader's opinion of them is very low
+            NOT = {
+                has_opinion = {
+                    who = FROM
+                    value = -150
+                }
+            }
+            # Target is a subject to a non-member overlord
+            FROM = {
+				is_subject = yes
+				overlord = {
+					NOT = { has_country_modifier = member_of_ncr }
+				}
+			}
+        }
+	}
+}
+
+#---------------------------------------
+# Leave - NCR
+#---------------------------------------
+# ROOT - Potential Member
+leave_the_ncr = {
+	category = alliance
+	
+	alert_index = 3
+	alert_tooltip = leave_the_ncr_tooltip
+	require_acceptance = no
+    
+	is_visible = {
+        has_country_modifier = member_of_ncr
+        FROM = { 
+            has_country_modifier = head_of_ncr
+        }
+	}
+	is_allowed = {
+		has_country_modifier = member_of_ncr
+        FROM = { 
+            has_country_modifier = head_of_ncr
+        }
+	}
+	on_accept = {
+		remove_country_modifier = member_of_ncr
+        FROM = {
+            country_event = { id = fallout_faction_system.11 }
+        }
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+			name = INV_BASE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1000
+			}
+		}
+	}
+
+	ai_will_do = {
+        OR = {
+            # AI will leave if opinion of leader is very low
+            NOT = {
+                has_opinion = {
+                    who = FROM
+                    value = -180
+                }
+            }
+            # AI is a subject to a non-member overlord
+            AND = {
+                is_subject = yes
+                overlord = {
+                    NOT = { has_country_modifier = member_of_ncr }
+                }
+            }
+        }
+	}
+}
+
+#---------------------------------------
+# Call to War - Faction
+#---------------------------------------
+# ROOT - Faction Leader
+call_to_war_faction = {
+	category = alliance
+	
+	alert_index = 3
+	alert_tooltip = call_to_war_faction_tooltip
+	require_acceptance = yes
+    
+	is_visible = {
+        NOT = { has_country_modifier = recent_faction_interaction }
+        
+        is_at_war = yes
+        FROM = { 
+            NOT = { is_at_war = yes }
+        }
+        
+        # NCR
+        if = {
+            limit = {
+                has_country_modifier = head_of_ncr
+            }
+            
+            FROM = { 
+                has_country_modifier = member_of_ncr
+            }
+        }
+        # Otherwise block usage
+        else = {
+            always = no
+        }
+	}
+	is_allowed = {
+        NOT = { has_country_modifier = recent_faction_interaction }
+		
+        is_at_war = yes
+        FROM = { 
+            NOT = { is_at_war = yes }
+        }
+	}
+	on_accept = {
+        add_country_modifier = {
+            name = recent_faction_interaction
+            duration = 365
+        }
+        
+        hidden_effect = {
+            save_event_target_as = caller
+            FROM = {
+                save_event_target_as = receiver
+            }
+            
+            # Scope to the leader of the opposing nation at war with ROOT
+            random_war_enemy_country = {
+                limit = {
+                    OR = {
+                        is_in_war = {
+                            attacker_leader = THIS
+                            participants = ROOT
+                        }
+                        is_in_war = {
+                            defender_leader = THIS
+                            participants = ROOT
+                        }
+                    }
+                }
+                
+                country_event = { id = fallout_war_assist.1 days = 1 }
+            }
+        }
+	}
+	on_decline = { 
+        add_country_modifier = {
+            name = recent_faction_interaction
+            duration = 365
+        }
+        add_prestige = -10
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+			name = INV_BASE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 100
+			}
+		}
+		add_entry = {
+			name = INV_ROOTPRESTIGE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = prestige
+			}
+			subtract_variable = { which = ai_value value = 25 }
+			divide_variable = { which = ai_value value = 2 }
+		}
+        add_entry = {
+            name = AI_TRUST_TOWARDS_ROOT
+            export_to_variable = {
+                variable_name = ai_value
+                value = trust
+                who = FROM
+                with = ROOT
+            }			
+            subtract_variable = { 
+                which = ai_value
+                value = 50
+            }
+            #1 trust = +4 ai points
+            multiply_variable = {
+                which = ai_value
+                value = 0.4
+            }
+        }
+		add_entry = {
+			name = INV_OPINION
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+		}
+        add_entry = {
+			name = INV_FACTION_LOSING
+			limit = {
+				NOT = { war_score = -20 }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 100
+			}
+		}
+        add_entry = {
+            name = attitude_friendly_DIPLO_ATTITUDE_TT
+            limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_friendly } } }
+            export_to_variable = { variable_name = ai_value value = 1 }
+            multiply_variable = { which = ai_value value = 25 }
+        }
+	}
+
+	ai_will_do = {
+        # These AI will call in members, or any if they are losing badly
+        OR = {
+            personality = ai_militarist
+            personality = ai_balanced
+            NOT = { war_score = -50 }
+        }
+	}
+}
+
+#---------------------------------------
+# Request Aid - Faction
+#---------------------------------------
+# ROOT - Member
+request_aid_faction = {
+	category = alliance
+	
+	alert_index = 3
+	alert_tooltip = call_to_war_faction_tooltip
+	require_acceptance = yes
+    
+	is_visible = {
+        NOT = { has_country_modifier = recent_faction_interaction }
+        
+        is_at_war = yes
+        FROM = {
+            NOT = { is_at_war = yes }
+        }
+        
+        # NCR
+        if = {
+            limit = {
+                NOT = { has_country_modifier = head_of_ncr }
+                has_country_modifier = member_of_ncr
+            }
+            
+            FROM = { 
+                has_country_modifier = member_of_ncr
+            }
+        }
+        # Otherwise block usage
+        else = {
+            always = no
+        }
+	}
+	is_allowed = {
+        NOT = { has_country_modifier = recent_faction_interaction }
+		
+        is_at_war = yes
+        FROM = {
+            NOT = { is_at_war = yes }
+        }
+	}
+	on_accept = {
+        add_country_modifier = {
+            name = recent_faction_interaction
+            duration = 365
+        }
+        
+        hidden_effect = {
+            save_event_target_as = caller
+            FROM = {
+                save_event_target_as = receiver
+            }
+            
+            # Scope to the leader of the opposing nation at war with ROOT
+            random_war_enemy_country = {
+                limit = {
+                    OR = {
+                        is_in_war = {
+                            attacker_leader = THIS
+                            participants = ROOT
+                        }
+                        is_in_war = {
+                            defender_leader = THIS
+                            participants = ROOT
+                        }
+                    }
+                }
+                
+                country_event = { id = fallout_war_assist.1 days = 1 }
+            }
+        }
+	}
+	on_decline = { 
+        add_country_modifier = {
+            name = recent_faction_interaction
+            duration = 365
+        }
+        add_prestige = -10
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+			name = INV_BASE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -10
+			}
+		}
+		add_entry = {
+			name = INV_ROOTPRESTIGE
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = prestige
+			}
+			subtract_variable = { which = ai_value value = 25 }
+			divide_variable = { which = ai_value value = 2 }
+		}
+        add_entry = {
+            name = AI_TRUST_TOWARDS_ROOT
+            export_to_variable = {
+                variable_name = ai_value
+                value = trust
+                who = FROM
+                with = ROOT
+            }			
+            subtract_variable = { 
+                which = ai_value
+                value = 50
+            }
+            #1 trust = +4 ai points
+            multiply_variable = {
+                which = ai_value
+                value = 0.4
+            }
+        }
+		add_entry = {
+			name = INV_OPINION
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			subtract_variable = { which = ai_value value = 25 }
+		}
+        add_entry = {
+			name = INV_FACTION_LOSING
+			limit = {
+				NOT = { war_score = -20 }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 100
+			}
+		}
+        add_entry = {
+			name = INV_FACTION_LEADER
+			limit = {
+				FROM = { 
+                    OR = {
+                        has_country_modifier = head_of_ncr
+                    }
+                }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 100
+			}
+		}
+        add_entry = {
+            name = attitude_friendly_DIPLO_ATTITUDE_TT
+            limit = { FROM = { ai_attitude = { who = ROOT attitude = attitude_friendly } } }
+            export_to_variable = { variable_name = ai_value value = 1 }
+            multiply_variable = { which = ai_value value = 25 }
+        }
+	}
+
+	ai_will_do = {
+        # These AI will call in members, or any if they are losing badly
+        OR = {
+            personality = ai_militarist
+            personality = ai_balanced
+            NOT = { war_score = -50 }
+        }
+	}
+}

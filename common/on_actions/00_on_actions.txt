@@ -92,7 +92,21 @@ on_peace_recipient = {
 # country
 # root = winning country, from = loser country
 on_war_won = {
-
+    # NCR - NCR Authority
+    if = {
+        limit = {
+            has_government_mechanic = ncr_authority_mechanic
+            has_country_flag = war_support_faction_leader
+        }
+        
+        add_government_power = {
+            mechanic_type = ncr_authority_mechanic
+            power_type = ncr_authority
+            value = 20
+        }
+        
+        clr_country_flag = war_support_faction_leader
+    }
 }
 
 # country
@@ -801,7 +815,34 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
-    
+    #------------------------------
+    # NCR - NCR Authority
+    #------------------------------
+    update_faction_modifier = {
+        FACTION = ncr
+        FACTION_MODIFIER_FLAG = ncr_authority_frontier_diplomacy
+        MODIFIER = frontier_diplomacy
+    }
+    update_faction_modifier = {
+        FACTION = ncr
+        FACTION_MODIFIER_FLAG = ncr_authority_law_and_order
+        MODIFIER = law_and_order
+    }
+    update_faction_modifier = {
+        FACTION = ncr
+        FACTION_MODIFIER_FLAG = ncr_authority_government_support
+        MODIFIER = government_support
+    }
+    update_faction_modifier = {
+        FACTION = ncr
+        FACTION_MODIFIER_FLAG = ncr_authority_common_aspirations
+        MODIFIER = common_aspirations
+    }
+    update_faction_modifier = {
+        FACTION = ncr
+        FACTION_MODIFIER_FLAG = ncr_authority_virtues_of_democracy
+        MODIFIER = virtues_of_democracy
+    }
 }
 
 on_yearly_pulse = {

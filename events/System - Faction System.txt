@@ -1,0 +1,230 @@
+namespace = fallout_faction_system
+
+#-------------------------------------------
+# Kick
+#-------------------------------------------
+# Kicked from the NCR
+country_event = {
+	id = fallout_faction_system.10
+	title = fallout_faction_system.10.title
+	desc = fallout_faction_system.10.desc
+	picture = NCR_STATUE_eventPicture
+    
+    is_triggered_only = yes
+
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+	option = {
+		name = fallout_faction_system.10.option.a
+		
+        add_prestige = -10
+	}
+}
+
+# [From.GetName] left the NCR
+country_event = {
+	id = fallout_faction_system.11
+	title = fallout_faction_system.11.title
+	desc = fallout_faction_system.11.desc
+	picture = NCR_STATUE_eventPicture
+    
+    is_triggered_only = yes
+
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+	option = {
+		name = fallout_faction_system.11.option.a
+		
+        add_prestige = -10
+	}
+}
+
+#-------------------------------------
+# War Support
+#-------------------------------------
+# War Support - Add flag for war win
+country_event = {
+	id = fallout_faction_system.20
+	title = fallout_faction_system.20.title
+	desc = fallout_faction_system.20.desc
+	picture = NCR_STATUE_eventPicture
+	
+    hidden = yes
+    
+	trigger = {
+        NOT = { has_country_flag = war_support_faction_leader }
+        has_country_modifier = head_of_ncr
+        has_government_mechanic = ncr_authority_mechanic
+        is_at_war = yes
+      
+        any_country = {
+            has_country_modifier = member_of_ncr
+            
+            OR = {
+                is_in_war = {
+                    attackers = THIS
+                    attackers = ROOT
+                }
+                is_in_war = {
+                    defenders = THIS
+                    defenders = ROOT
+                }
+            }
+        }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = war_support_faction_leader
+        }
+    }
+	
+	option = {
+		name = fallout_faction_system.20.option.a
+	}
+}
+
+# Relations - Add power based on very high relations withmembers
+country_event = {
+	id = fallout_faction_system.21
+	title = fallout_faction_system.21.title
+	desc = fallout_faction_system.21.desc
+	picture = NCR_STATUE_eventPicture
+	
+    hidden = yes
+    
+	trigger = {
+        has_government_mechanic = ncr_authority_mechanic
+        has_country_modifier = head_of_ncr
+        
+        any_country = {
+            has_country_modifier = member_of_ncr
+            has_opinion = {
+                who = ROOT
+                value = 180
+            }
+        }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+    
+    immediate = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_government_mechanic = ncr_authority_mechanic
+                }
+                add_government_power = {
+                    mechanic_type = ncr_authority_mechanic
+                    power_type = ncr_authority
+                    value = 5
+                }
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_faction_system.21.option.a
+	}
+}
+
+
+#-------------------------------------------
+# Unification
+#-------------------------------------------
+# Unification of the NCR
+country_event = {
+	id = fallout_faction_system.100
+	title = fallout_faction_system.100.title
+	desc = fallout_faction_system.100.desc
+	picture = NCR_STATUE_eventPicture
+    
+    is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1		
+	}
+    
+    immediate = {
+        hidden_effect = {
+            set_global_flag = global_unified_the_ncr
+            set_country_flag = country_unified_the_ncr
+        }
+    }
+    
+	option = {
+		name = fallout_faction_system.100.option.a
+		
+        custom_tooltip = NCR_MEMBERS_ANNEXED_TT
+                
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_country_modifier = member_of_ncr
+                    has_opinion = {
+                        who = ROOT
+                        value = 0
+                    }
+                    ai = yes
+                }
+                
+                ROOT = {
+                    inherit = PREV
+                }
+            }
+        }
+	}
+    option = {
+		name = fallout_faction_system.100.option.b
+		
+        custom_tooltip = NCR_MEMBERS_VASSALIZED_TT
+                
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_country_modifier = member_of_ncr
+                    has_opinion = {
+                        who = ROOT
+                        value = 0
+                    }
+                    ai = yes
+                }
+                
+                ROOT = {
+                    create_subject = {
+                        subject_type = hegemonic_vassal
+                        subject = PREV
+                    }
+                }
+            }
+        }
+	}
+    
+    after = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_country_modifier = head_of_ncr
+                }
+                remove_country_modifier = head_of_ncr
+            }
+            
+            every_country = {
+                limit = {
+                    has_country_modifier = member_of_ncr
+                }
+                remove_country_modifier = member_of_ncr
+            }
+        }
+    }
+}
