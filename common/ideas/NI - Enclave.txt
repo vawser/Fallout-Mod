@@ -1,8 +1,8 @@
 # Enclave
 ENC_ideas = {
     start = {
-        land_morale = 0.1
-        defensiveness = 0.1
+        land_morale_constant = 0.5
+        discipline = 0.05
     }
     
     bonus = {
@@ -16,11 +16,11 @@ ENC_ideas = {
     
     # Shining City on a Hill
     enc_idea_1 = {
-        core_creation = -0.1
+        core_creation = -0.2
     }
     # Enclave Bunkers
     enc_idea_2 = {
-        defensiveness = 0.33
+        garrison_size = 0.33
      }
     # Purity of Humankind
     enc_idea_3 = {
@@ -29,19 +29,19 @@ ENC_ideas = {
      }
     # Bill of Rights
     enc_idea_4 = {
-        global_unrest = -1
+        global_unrest = -2
      }
     # Empire of Liberty
     enc_idea_5 = {
-        global_tax_modifier = 0.1
+        global_tax_modifier = 0.2
      }
     # Lessons of Valley Forge
     enc_idea_6 = {
-        discipline = 0.05
+        infantry_power = 0.15
      }
     # Workshop of the World
     enc_idea_7 = {
-        production_efficiency = 0.1
+        production_efficiency = 0.2
      }
 }
 

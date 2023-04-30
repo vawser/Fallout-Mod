@@ -1,0 +1,46 @@
+banditos_ideas = {
+    start = {
+        global_regiment_cost = -0.1
+        war_exhaustion = -0.03
+    }
+    bonus = {
+        morale_damage = 0.2
+    }
+    
+    trigger = {
+        tag = BAJ
+    }
+    free = yes
+    
+    # Wild Wasteland
+    banditos_ideas_1 = {
+        own_territory_dice_roll_bonus = 1
+    }
+    # Gun Running
+    banditos_ideas_2 = {
+        mil_tech_cost_modifier = -0.05
+        free_mil_policy = 1
+    }
+    # Desert Ranger Rivalry
+    banditos_ideas_3 = {
+        army_tradition_decay = -0.01
+    } 
+    # Drug Mules
+    banditos_ideas_4 = {
+        min_autonomy_in_territories = -0.1
+    }
+    # Hive of Scum and Villainy
+    banditos_ideas_5 = {
+        mil_advisor_cost = -0.15
+    }
+    # Merciless Executions
+    banditos_ideas_6 = {
+       years_of_nationalism = -5
+    }
+    # Treasure Hunters
+    banditos_ideas_7 = {
+        privateer_efficiency = 0.33
+        gold_depletion_chance_modifier = -0.15
+    }
+}
+

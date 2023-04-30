@@ -4,7 +4,7 @@ interaction = {
 	cooldown_months = 60
 
     trigger = {
-        crown_land_share = 0.1
+        crown_land_share = 10
         NOT = { num_of_rebel_armies = 1 }
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		hidden_trigger = { has_any_estates = yes }
@@ -14,11 +14,13 @@ interaction = {
         
         custom_tooltip = ESTATES_SALE_OF_TITLES_DESC
         give_estate_land_share_gigantic = { estate = all }
+        
         add_estate_loyalty = {
             estate = all
             loyalty = 10
             short = yes
         }
+        
 		if = {
 			limit = {
 				has_country_flag = recent_land_distribution
@@ -29,6 +31,15 @@ interaction = {
     }
 	ai_will_do = {
 		factor = 25
+        
+        modifier = {
+			factor = 0
+			NOT = { crown_land_share = 40 }
+		}
+        modifier = {
+			factor = 0.5
+            NOT = { crown_land_share = 50 }
+        }
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
@@ -115,8 +126,8 @@ interaction = {
 	cooldown_months = 60
 
     trigger = {
-        NOT = { has_any_active_estate_agenda = yes }
 		hidden_trigger = { has_any_estates = yes }
+        NOT = { has_any_active_estate_agenda = yes }
 		NOT = { has_government_attribute = blocked_call_diet }
     }
 
@@ -328,7 +339,7 @@ interaction = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0
 			NOT = {
 				estate_loyalty = {
 					estate = all
@@ -337,35 +348,12 @@ interaction = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 40
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 35 # Estate is almost disloyal
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 30 # Estate is basically disloyal
-				}
-			}
-		}
-		modifier = {
 			factor = 0.75
 			NOT = { num_of_owned_areas = 2 }
+		}
+        modifier = {
+			factor = 0
+			NOT = { army_size_percentage = 0.8 }
 		}
 	}
 }
