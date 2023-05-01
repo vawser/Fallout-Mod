@@ -1,0 +1,2171 @@
+namespace = fallout_color_picker
+
+# Country Color
+country_event = {
+	id = fallout_color_picker.1
+	title = fallout_color_picker.1.title
+	desc = fallout_color_picker.1.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.1.option.restore
+        
+        restore_country_color = yes
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_white
+        
+        country_event = { id = fallout_color_picker.10 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_gray
+        
+        country_event = { id = fallout_color_picker.11 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_black
+        
+        country_event = { id = fallout_color_picker.12 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_brown
+        
+        country_event = { id = fallout_color_picker.13 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_red
+        
+        country_event = { id = fallout_color_picker.14 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_orange
+        
+        country_event = { id = fallout_color_picker.15 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_yellow
+        
+        country_event = { id = fallout_color_picker.16 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_green
+        
+        country_event = { id = fallout_color_picker.17 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_blue
+        
+        country_event = { id = fallout_color_picker.18 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_purples
+        
+        country_event = { id = fallout_color_picker.19 }
+	}
+    
+    option = {
+		name = fallout_color_picker.1.option.exit
+        
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+	}
+}
+
+# Whites
+country_event = {
+	id = fallout_color_picker.10
+	title = fallout_color_picker.10.title
+	desc = fallout_color_picker.10.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.10.option.white
+        
+        change_country_color = {
+            color = { 235 235 235 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.honeydew
+        
+        change_country_color = {
+            color = { 240 255 240 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.aliceblue
+        
+        change_country_color = {
+            color = { 240 248 255 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.ivory
+        
+        change_country_color = {
+            color = { 255 255 240 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.seashell
+        
+        change_country_color = {
+            color = { 255 245 238 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.champagne
+        
+        change_country_color = {
+            color = { 247 231 206 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.alabaster
+        
+        change_country_color = {
+            color = { 237 234 224 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.vanilla
+        
+        change_country_color = {
+            color = { 243 229 171 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.creme_white
+        
+        change_country_color = {
+            color = { 214 235 130 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.beige
+        
+        change_country_color = {
+            color = { 220 178 155 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.10.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Grays
+country_event = {
+	id = fallout_color_picker.11
+	title = fallout_color_picker.11.title
+	desc = fallout_color_picker.11.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.11.option.platinum
+        
+        change_country_color = {
+            color = { 229 228 226 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.light_gray
+        
+        change_country_color = {
+            color = { 211 211 211 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.silver
+        
+        change_country_color = {
+            color = { 192 192 192 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.gray
+        
+        change_country_color = {
+            color = { 128 128 128 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.nickel
+        
+        change_country_color = {
+            color = { 114 116 114 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.xanadu
+        
+        change_country_color = {
+            color = { 115 134 120 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.gray_green
+        
+        change_country_color = {
+            color = { 94 113 106 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.cadet_gray
+        
+        change_country_color = {
+            color = { 145 163 176 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.cinerous
+        
+        change_country_color = {
+            color = { 152 129 123 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.flat_silver
+        
+        change_country_color = {
+            color = { 137 135 136 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.11.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Blacks
+country_event = {
+	id = fallout_color_picker.12
+	title = fallout_color_picker.12.title
+	desc = fallout_color_picker.12.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.12.option.black
+        
+        change_country_color = {
+            color = { 40 40 40 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.onyx
+        
+        change_country_color = {
+            color = { 53 56 57 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.charcoal
+        
+        change_country_color = {
+            color = { 54 69 79 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.jet
+        
+        change_country_color = {
+            color = { 52 52 52 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.obsidian
+        
+        change_country_color = {
+            color = { 46 49 52 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.chrome_black
+        
+        change_country_color = {
+            color = { 27 42 52 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.ebony
+        
+        change_country_color = {
+            color = { 85 93 80 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.red_black
+        
+        change_country_color = {
+            color = { 61 12 2 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.gray_green
+        
+        change_country_color = {
+            color = { 21 64 56 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.dark_gray_blue
+        
+        change_country_color = {
+            color = { 18 67 84 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.12.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Browns
+country_event = {
+	id = fallout_color_picker.13
+	title = fallout_color_picker.13.title
+	desc = fallout_color_picker.13.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.13.option.brown
+        
+        change_country_color = {
+            color = { 64 40 22 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.gray_brown
+        
+        change_country_color = {
+            color = { 139 117 96 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.chocolate
+        
+        change_country_color = {
+            color = { 123 63 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.desert_sand
+        
+        change_country_color = {
+            color = { 237 201 175 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.light_brown
+        
+        change_country_color = {
+            color = { 105 68 62 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.tan
+        
+        change_country_color = {
+            color = { 210 180 140 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.wood_brown
+        
+        change_country_color = {
+            color = { 193 154 107 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.wenge
+        
+        change_country_color = {
+            color = { 100 84 82 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.dark_brown
+        
+        change_country_color = {
+            color = { 92 64 51 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.maroon
+        
+        change_country_color = {
+            color = { 80 0 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.13.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Reds
+country_event = {
+	id = fallout_color_picker.14
+	title = fallout_color_picker.14.title
+	desc = fallout_color_picker.14.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.14.option.red
+        
+        change_country_color = {
+            color = { 175 15 15 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.dark_red
+        
+        change_country_color = {
+            color = { 113 11 43 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.blood_red
+        
+        change_country_color = {
+            color = { 97 12 12 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.orcish_red
+        
+        change_country_color = {
+            color = { 136 79 101 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.crimson
+        
+        change_country_color = {
+            color = { 220 20 60 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.imperial_red
+        
+        change_country_color = {
+            color = { 237 41 57 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.vermillion
+        
+        change_country_color = {
+            color = { 227 66 52 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.scarlet
+        
+        change_country_color = {
+            color = { 255 36 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.rust
+        
+        change_country_color = {
+            color = { 179 16 4 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.ruby
+        
+        change_country_color = {
+            color = { 155 17 30 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.14.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Oranges
+country_event = {
+	id = fallout_color_picker.15
+	title = fallout_color_picker.15.title
+	desc = fallout_color_picker.15.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.15.option.orange
+        
+        change_country_color = {
+            color = { 188 90 27 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.true_orange
+        
+        change_country_color = {
+            color = { 255 75 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.bright_orange
+        
+        change_country_color = {
+            color = { 255 125 49 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.xanthous
+        
+        change_country_color = {
+            color = { 241 180 47 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.carrot
+        
+        change_country_color = {
+            color = { 237 145 33 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.coral
+        
+        change_country_color = {
+            color = { 255 127 80 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.saffron
+        
+        change_country_color = {
+            color = { 244 196 48 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.gorian_orange
+        
+        change_country_color = {
+            color = { 217 144 88 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.amber
+        
+        change_country_color = {
+            color = { 255 192 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.tigers_eye
+        
+        change_country_color = {
+            color = { 181 105 23 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.15.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Yellows
+country_event = {
+	id = fallout_color_picker.16
+	title = fallout_color_picker.16.title
+	desc = fallout_color_picker.16.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.16.option.yellow
+        
+        change_country_color = {
+            color = { 244 184 12 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.farraki_yellow
+        
+        change_country_color = {
+            color = { 232 206 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.xanthic
+        
+        change_country_color = {
+            color = { 238 237 9 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.lemon
+        
+        change_country_color = {
+            color = { 253 255 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.gold
+        
+        change_country_color = {
+            color = { 255 215 0 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.citrine
+        
+        change_country_color = {
+            color = { 228 208 10 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.yellow_diamond
+        
+        change_country_color = {
+            color = { 244 241 134 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.canary
+        
+        change_country_color = {
+            color = { 255 255 153 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.royal_yellow
+        
+        change_country_color = {
+            color = { 250 218 94 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.yellow_gray
+        
+        change_country_color = {
+            color = { 180 179 100 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.16.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Greens
+country_event = {
+	id = fallout_color_picker.17
+	title = fallout_color_picker.17.title
+	desc = fallout_color_picker.17.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.17.option.dark_green
+        
+        change_country_color = {
+            color = { 17 53 13 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.light_green
+        
+        change_country_color = {
+            color = { 46 114 55 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.deep_green
+        
+        change_country_color = {
+            color = { 73 147 29 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.blue_green
+        
+        change_country_color = {
+            color = { 47 172 74 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.jade
+        
+        change_country_color = {
+            color = { 0 163 108 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.lime
+        
+        change_country_color = {
+            color = { 50 205 50 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.malachite
+        
+        change_country_color = {
+            color = { 11 218 81 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.green_gray
+        
+        change_country_color = {
+            color = { 109 123 82 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.pale_teal
+        
+        change_country_color = {
+            color = { 77 207 157 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.turquoise
+        
+        change_country_color = {
+            color = { 50 173 192 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.17.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Blues
+country_event = {
+	id = fallout_color_picker.18
+	title = fallout_color_picker.18.title
+	desc = fallout_color_picker.18.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.18.option.teal
+        
+        change_country_color = {
+            color = { 18 179 113 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.sky_blue
+        
+        change_country_color = {
+            color = { 116 198 240 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.pale_blue
+        
+        change_country_color = {
+            color = { 46 110 176 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.gray_blue
+        
+        change_country_color = {
+            color = { 48 64 126 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.dark_blue
+        
+        change_country_color = {
+            color = { 32 30 65 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.faded_blue
+        
+        change_country_color = {
+            color = { 0 23 100 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.azure_blue
+        
+        change_country_color = {
+            color = { 30 30 128 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.imperial_blue
+        
+        change_country_color = {
+            color = { 0 35 149 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.ocean_blue
+        
+        change_country_color = {
+            color = { 36 107 206 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.nether_blue
+        
+        change_country_color = {
+            color = { 175 219 245 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.18.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+# Purples
+country_event = {
+	id = fallout_color_picker.19
+	title = fallout_color_picker.19.title
+	desc = fallout_color_picker.19.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.19.option.purple
+        
+        change_country_color = {
+            color = { 117 38 143 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.hot_pink
+        
+        change_country_color = {
+            color = { 221 81 172 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.light_purple
+        
+        change_country_color = {
+            color = { 132 108 193 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.pale_pink
+        
+        change_country_color = {
+            color = { 194 129 142 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.pink
+        
+        change_country_color = {
+            color = { 217 84 84 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.violet
+        
+        change_country_color = {
+            color = { 66 0 189 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.mauve
+        
+        change_country_color = {
+            color = { 224 176 255 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.royal_purple
+        
+        change_country_color = {
+            color = { 120 81 169 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.purpureus
+        
+        change_country_color = {
+            color = { 154 78 174 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.suramar_purple
+        
+        change_country_color = {
+            color = { 112 41 99 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.19.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+    }
+}
+
+#------------------------------
+# Subject Management
+#------------------------------
+# Country Color - For Subjects
+country_event = {
+	id = fallout_color_picker.100
+	title = fallout_color_picker.1.title
+	desc = fallout_color_picker.1.desc
+	picture = MIRROR_OF_DOOM_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.1.option.restore
+        
+        event_target:current_subject = {
+            restore_country_color = yes
+        }
+        
+        hidden_effect = {
+            country_event = { id = wwu_subject_management.1 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.1.option.copy_us
+        
+        event_target:current_subject = {
+            change_country_color = {
+                country = ROOT
+            }
+        }
+        
+        hidden_effect = {
+            country_event = { id = wwu_subject_management.1 }
+        }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_white
+        
+        country_event = { id = fallout_color_picker.110 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_gray
+        
+        country_event = { id = fallout_color_picker.111 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_black
+        
+        country_event = { id = fallout_color_picker.112 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_brown
+        
+        country_event = { id = fallout_color_picker.113 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_red
+        
+        country_event = { id = fallout_color_picker.114 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_orange
+        
+        country_event = { id = fallout_color_picker.115 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_yellow
+        
+        country_event = { id = fallout_color_picker.116 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_green
+        
+        country_event = { id = fallout_color_picker.117 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_blue
+        
+        country_event = { id = fallout_color_picker.118 }
+	}
+    option = {
+		name = fallout_color_picker.1.option.category_purples
+        
+        country_event = { id = fallout_color_picker.119 }
+	}
+    
+    option = {
+		name = fallout_color_picker.1.option.exit
+        
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.1 }
+        }
+	}
+}
+
+# Whites
+country_event = {
+	id = fallout_color_picker.110
+	title = fallout_color_picker.10.title
+	desc = fallout_color_picker.10.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.10.option.white
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 235 235 235 }
+        }
+        }
+    }
+    option = {
+		name = fallout_color_picker.10.option.honeydew
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 240 255 240 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.aliceblue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 240 248 255 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.ivory
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 255 240 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.seashell
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 245 238 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.champagne
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 247 231 206 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.alabaster
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 237 234 224 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.vanilla
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 243 229 171 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.creme_white
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 214 235 130 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.beige
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 220 178 155 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.10.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Grays
+country_event = {
+	id = fallout_color_picker.111
+	title = fallout_color_picker.11.title
+	desc = fallout_color_picker.11.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.11.option.platinum
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 229 228 226 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.light_gray
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 211 211 211 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.silver
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 192 192 192 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.gray
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 128 128 128 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.nickel
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 114 116 114 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.xanadu
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 115 134 120 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.gray_green
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 94 113 106 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.cadet_gray
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 145 163 176 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.cinerous
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 152 129 123 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.flat_silver
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 137 135 136 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.11.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Blacks
+country_event = {
+	id = fallout_color_picker.112
+	title = fallout_color_picker.12.title
+	desc = fallout_color_picker.12.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.12.option.black
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 40 40 40 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.onyx
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 53 56 57 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.charcoal
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 54 69 79 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.jet
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 52 52 52 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.obsidian
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 46 49 52 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.chrome_black
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 27 42 52 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.ebony
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 85 93 80 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.red_black
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 61 12 2 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.gray_green
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 21 64 56 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.dark_gray_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 18 67 84 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.12.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Browns
+country_event = {
+	id = fallout_color_picker.113
+	title = fallout_color_picker.13.title
+	desc = fallout_color_picker.13.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.13.option.brown
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 64 40 22 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.gray_brown
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 139 117 96 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.chocolate
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 123 63 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.desert_sand
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 237 201 175 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.light_brown
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 105 68 62 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.tan
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 210 180 140 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.wood_brown
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 193 154 107 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.wenge
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 100 84 82 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.dark_brown
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 92 64 51 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.maroon
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 80 0 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.13.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Reds
+country_event = {
+	id = fallout_color_picker.114
+	title = fallout_color_picker.14.title
+	desc = fallout_color_picker.14.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.14.option.red
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 175 15 15 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.dark_red
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 113 11 43 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.blood_red
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 97 12 12 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.orcish_red
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 136 79 101 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.crimson
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 220 20 60 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.imperial_red
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 237 41 57 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.vermillion
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 227 66 52 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.scarlet
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 36 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.rust
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 179 16 4 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.ruby
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 155 17 30 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.14.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Oranges
+country_event = {
+	id = fallout_color_picker.115
+	title = fallout_color_picker.15.title
+	desc = fallout_color_picker.15.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.15.option.orange
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 188 90 27 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.true_orange
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 75 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.bright_orange
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 125 49 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.xanthous
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 241 180 47 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.carrot
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 237 145 33 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.coral
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 127 80 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.saffron
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 244 196 48 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.gorian_orange
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 217 144 88 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.amber
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 192 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.tigers_eye
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 181 105 23 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.15.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Yellows
+country_event = {
+	id = fallout_color_picker.116
+	title = fallout_color_picker.16.title
+	desc = fallout_color_picker.16.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.16.option.yellow
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 244 184 12 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.farraki_yellow
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 232 206 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.xanthic
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 238 237 9 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.lemon
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 253 255 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.gold
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 215 0 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.citrine
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 228 208 10 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.yellow_diamond
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 244 241 134 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.canary
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 255 255 153 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.royal_yellow
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 250 218 94 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.yellow_gray
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 180 179 100 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.16.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Greens
+country_event = {
+	id = fallout_color_picker.117
+	title = fallout_color_picker.17.title
+	desc = fallout_color_picker.17.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.17.option.dark_green
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 17 53 13 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.light_green
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 46 114 55 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.deep_green
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 73 147 29 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.blue_green
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 47 172 74 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.jade
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 0 163 108 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.lime
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 50 205 50 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.malachite
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 11 218 81 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.green_gray
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 109 123 82 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.pale_teal
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 77 207 157 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.turquoise
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 50 173 192 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.17.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Blues
+country_event = {
+	id = fallout_color_picker.118
+	title = fallout_color_picker.18.title
+	desc = fallout_color_picker.18.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.18.option.teal
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 18 179 113 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.sky_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 116 198 240 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.pale_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 46 110 176 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.gray_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 48 64 126 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.dark_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 32 30 65 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.faded_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 0 23 100 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.azure_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 30 30 128 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.imperial_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 0 35 149 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.ocean_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 36 107 206 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.nether_blue
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 175 219 245 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.18.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
+
+# Purples
+country_event = {
+	id = fallout_color_picker.119
+	title = fallout_color_picker.19.title
+	desc = fallout_color_picker.19.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+		name = fallout_color_picker.19.option.purple
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 117 38 143 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.hot_pink
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 221 81 172 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.light_purple
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 132 108 193 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.pale_pink
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 194 129 142 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.pink
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 217 84 84 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.violet
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 66 0 189 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.mauve
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 224 176 255 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.royal_purple
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 120 81 169 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.purpureus
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 154 78 174 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.suramar_purple
+        
+        event_target:current_subject = {
+		change_country_color = {
+            color = { 112 41 99 }
+		}
+		}
+	}
+    option = {
+		name = fallout_color_picker.19.option.exit
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_color_picker.100 }
+        }
+    }
+}
