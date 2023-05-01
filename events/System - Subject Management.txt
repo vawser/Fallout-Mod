@@ -1,0 +1,1566 @@
+namespace = fallout_subject_management
+
+# This system does not support usage by the AI.
+
+#-------------------------
+# Adminstration of X
+#-------------------------
+country_event = {
+	id = fallout_subject_management.1
+	title = fallout_subject_management.1.title
+	desc = fallout_subject_management.1.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Subject Contract
+	option = {
+		name = fallout_subject_management.1.option.subject_contract
+        
+        # These types can't be changed to a different type.
+        trigger = {
+            event_target:current_subject = {
+                NOT = { is_subject_of_type = hegemonic_vassal }
+                NOT = { is_subject_of_type = client_vassal }
+                NOT = { is_subject_of_type = client_march }
+            }
+        }
+        
+        country_event = { id = fallout_subject_management.2 }
+	}
+    
+    # Subject Investment
+	option = {
+		name = fallout_subject_management.1.option.subject_investment
+        
+        country_event = { id = fallout_subject_management.3 }
+	}
+    
+    # Subject Assistance
+	option = {
+		name = fallout_subject_management.1.option.subject_assistance
+        
+        country_event = { id = fallout_subject_management.4 }
+	}
+    
+    # Subject Extraction
+	option = {
+		name = fallout_subject_management.1.option.subject_extraction
+        
+        country_event = { id = fallout_subject_management.5 }
+	}
+    
+    # Set National Color
+    option = {
+		name = fallout_subject_management.1.option.national_color
+        
+        country_event = { id = fallout_color_picker.100 }
+	}
+    
+    # Exit
+    option = {
+		name = fallout_subject_management.1.option.exit
+        
+	}
+}
+
+#-------------------------
+# Subject Contract
+#-------------------------
+country_event = {
+	id = fallout_subject_management.2
+	title = fallout_subject_management.2.title
+	desc = fallout_subject_management.2.desc
+	picture = GOV_RUINS_CLEAR_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Establish Vassal Contract - VALID
+	option = {
+		name = fallout_subject_management.2.option.make_vassal
+        
+        trigger = {
+            event_target:current_subject = {
+                OR = {
+                    is_subject_of_type = march
+                }
+            }
+            adm_power = 250
+        }
+        
+        add_adm_power = -250
+        
+        create_subject = {
+            subject_type = vassal
+            subject = event_target:current_subject
+        }
+        
+        event_target:current_subject = {
+            add_liberty_desire = 20
+            
+            if = {
+                limit  = {
+                    OR = {
+                        is_subject_of_type = march
+                    }
+                }
+                add_liberty_desire = 10
+            }
+        }
+        
+        
+	}
+    # Establish Vassal Contract - INVALID
+    option = {
+		name = fallout_subject_management.2.option.make_vassal.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                OR = {
+                    is_subject_of_type = march
+                }
+            }
+            NOT = { adm_power = 250 }
+        }
+        
+        custom_tooltip = MAKE_VASSAL_COST_INVALID_TT
+	}
+    
+   # Establish March Contract - VALID
+	option = {
+		name = fallout_subject_management.2.option.make_march
+        
+        trigger = {
+            event_target:current_subject = {
+                OR = {
+                    is_subject_of_type = vassal
+                }
+            }
+            adm_power = 250
+        }
+        
+        add_adm_power = -250
+        
+        create_subject = {
+            subject_type = march
+            subject = event_target:current_subject
+        }
+        
+        event_target:current_subject = {
+            add_liberty_desire = 15
+        }
+        
+        
+	}
+    # Establish March Contract - INVALID
+    option = {
+		name = fallout_subject_management.2.option.make_march.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                OR = {
+                    is_subject_of_type = vassal
+                }
+            }
+            NOT = { adm_power = 250 }
+        }
+        
+        custom_tooltip = MAKE_MARCH_COST_INVALID_TT
+	}
+   
+    # Establish Subjugation Contract - VALID
+	option = {
+		name = fallout_subject_management.2.option.make_hegemonic_vassal
+        
+        trigger = {
+            full_idea_group = fallout_subjugation_ideas
+            
+            event_target:current_subject = {
+                OR = {
+                    is_subject_of_type = vassal
+                    is_subject_of_type = march
+                }
+            }
+            adm_power = 250
+        }
+        
+        add_adm_power = -250
+        
+        create_subject = {
+            subject_type = hegemonic_vassal
+            subject = event_target:current_subject
+        }
+        
+        event_target:current_subject = {
+            add_liberty_desire = 10
+        }
+        
+        
+	}
+    # Establish Subjugation Contract - INVALID
+    option = {
+		name = fallout_subject_management.2.option.make_hegemonic_vassal.invalid
+        
+        trigger = {
+            full_idea_group = fallout_subjugation_ideas
+            
+            event_target:current_subject = {
+                OR = {
+                    is_subject_of_type = vassal
+                    is_subject_of_type = march
+                }
+            }
+            NOT = { adm_power = 250 }
+        }
+        
+        custom_tooltip = MAKE_VASSAL_COST_INVALID_TT
+	}
+    
+    # Return
+    option = {
+		name = fallout_subject_management.2.option.return
+        
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_subject_management.1 }
+        }
+    }
+}
+
+#-------------------------
+# Subject Investment
+#-------------------------
+country_event = {
+	id = fallout_subject_management.3
+	title = fallout_subject_management.3.title
+	desc = fallout_subject_management.3.desc
+	picture = DIAMOND_CITY_eventPicture
+	
+	is_triggered_only = yes
+    
+    #------------------
+    # Taxation
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.taxation
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = taxation
+                adm_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = taxation
+            adm_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.taxation.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = taxation
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = taxation
+                adm_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.taxation.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = taxation
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = taxation
+                adm_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.taxation.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = taxation
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = taxation
+            adm_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.taxation.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = taxation
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Production
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.production
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = production
+                dip_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = production
+            dip_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.production.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = production
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = production
+                dip_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.production.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = production
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = production
+                dip_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.production.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = production
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = production
+            dip_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.production.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = production
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Trade
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.trade
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = trade
+                dip_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = trade
+            dip_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.trade.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = trade
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = trade
+                dip_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.trade.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = trade
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = trade
+                dip_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.trade.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = trade
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = trade
+            dip_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.trade.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = trade
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Manufacturing
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.manufacturing
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = manufacturing
+                adm_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = manufacturing
+            adm_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.manufacturing.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = manufacturing
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = manufacturing
+                adm_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.manufacturing.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = manufacturing
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = manufacturing
+                adm_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.manufacturing.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = manufacturing
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = manufacturing
+            adm_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.manufacturing.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = manufacturing
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Military Recruitment
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.military_recruitment
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = military_recruitment
+                mil_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = military_recruitment
+            mil_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.military_recruitment.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = military_recruitment
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = military_recruitment
+                mil_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.military_recruitment.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = military_recruitment
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = military_recruitment
+                mil_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.military_recruitment.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = military_recruitment
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = military_recruitment
+            mil_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.military_recruitment.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = military_recruitment
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Naval Recruitment
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.naval_recruitment
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = naval_recruitment
+                dip_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = naval_recruitment
+            dip_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.naval_recruitment.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = naval_recruitment
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = naval_recruitment
+                dip_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.naval_recruitment.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = naval_recruitment
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = naval_recruitment
+                dip_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.naval_recruitment.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = naval_recruitment
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = naval_recruitment
+            dip_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.naval_recruitment.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = naval_recruitment
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Policing
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.policing
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = policing
+                mil_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = policing
+            mil_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.policing.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = policing
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = policing
+                mil_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.policing.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = policing
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = policing
+                mil_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.policing.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = policing
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = policing
+            mil_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.policing.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = policing
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Proselytisation
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.proselytisation
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = proselytisation
+                adm_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = proselytisation
+            adm_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.proselytisation.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = proselytisation
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = proselytisation
+                adm_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.proselytisation.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = proselytisation
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = proselytisation
+                adm_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.proselytisation.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = proselytisation
+                adm_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = proselytisation
+            adm_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.proselytisation.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = proselytisation
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Colonisation
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.colonisation
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = colonisation
+                dip_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = colonisation
+            dip_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.colonisation.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = colonisation
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = colonisation
+                dip_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.colonisation.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = colonisation
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = colonisation
+                dip_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.colonisation.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = colonisation
+                dip_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = colonisation
+            dip_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.colonisation.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = colonisation
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    #------------------
+    # Force Capacity
+    #------------------
+    # Purchase
+	option = {
+		name = fallout_subject_management.3.option.force_capacity
+        
+        trigger = {
+            subject_investment_valid_check = {
+                TYPE = force_capacity
+                mil_type = yes
+            }
+        }
+        conduct_subject_investment = {
+            TYPE = force_capacity
+            mil_type = yes
+        }
+	}
+    # Lack Gold
+    option = {
+		name = fallout_subject_management.3.option.force_capacity.invalid.gold_cost
+        
+        trigger = {
+            subject_investment_lack_gold_check = {
+                TYPE = force_capacity
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_gold = {
+            TYPE = force_capacity
+                mil_type = yes
+        }
+	}
+    # Lack Power
+    option = {
+		name = fallout_subject_management.3.option.force_capacity.invalid.power_cost
+        
+        trigger = {
+            subject_investment_lack_power_check = {
+                TYPE = force_capacity
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_power = {
+            TYPE = force_capacity
+                mil_type = yes
+        }
+	}
+    # Lack Gold and Power
+    option = {
+		name = fallout_subject_management.3.option.force_capacity.invalid.all_cost
+        
+        trigger = {
+            subject_investment_lack_all_check = {
+                TYPE = force_capacity
+                mil_type = yes
+            }
+        }
+        subject_investment_lack_all = {
+            TYPE = force_capacity
+            mil_type = yes
+        }
+	}
+    # At Max Tier
+    option = {
+		name = fallout_subject_management.3.option.force_capacity.invalid.max
+        
+        trigger = {
+            subject_investment_max_check = {
+                TYPE = force_capacity
+            }
+        }
+        custom_tooltip = SUBJECT_IMPROVEMENT_MAX_TT
+	}
+    
+    # Return
+    option = {
+		name = fallout_subject_management.3.option.return
+        
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_subject_management.1 }
+        }
+    }
+}
+
+#-------------------------
+# Subject Assistance
+#-------------------------
+country_event = {
+	id = fallout_subject_management.4
+	title = fallout_subject_management.4.title
+	desc = fallout_subject_management.4.desc
+	picture = DOC_MITCHELL_eventPicture
+	
+	is_triggered_only = yes
+
+    # Stability - VALID
+	option = {
+		name = fallout_subject_management.4.option.stability
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            adm_power = 100
+        }
+        
+        add_adm_power = -100
+        
+        event_target:current_subject = {
+            add_stability = 1
+            
+            add_country_modifier = {
+                name = subject_assist_cooldown
+                duration = 365
+            }
+            add_liberty_desire = -2
+        }
+        
+        custom_tooltip = SUBJECT_ASSIST_COOLDOWN_TT
+	}
+    # Stability - INVALID
+    option = {
+		name = fallout_subject_management.4.option.stability.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            NOT = { adm_power = 100 }
+        }
+        
+        custom_tooltip = STABILITY_ASSIST_LACK_TT
+	}
+    # Corruption - VALID
+	option = {
+		name = fallout_subject_management.4.option.corruption
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            years_of_income = 1
+        }
+        
+        add_years_of_income = -1
+        
+        event_target:current_subject = {
+            add_corruption = -5
+            
+            add_country_modifier = {
+                name = subject_assist_cooldown
+                duration = 365
+            }
+            add_liberty_desire = -2
+        }
+        
+        custom_tooltip = SUBJECT_ASSIST_COOLDOWN_TT
+	}
+    # Corruption - INVALID
+    option = {
+		name = fallout_subject_management.4.option.corruption.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            NOT = { years_of_income = 1 }
+        }
+        
+        custom_tooltip = CORRUPTION_ASSIST_LACK_TT
+	}
+    # Manpower - VALID
+	option = {
+		name = fallout_subject_management.4.option.manpower
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            manpower = 10
+        }
+        
+        add_manpower = -10
+        
+        event_target:current_subject = {
+            add_manpower = 10
+            
+            add_country_modifier = {
+                name = subject_assist_cooldown
+                duration = 365
+            }
+            add_liberty_desire = -2
+        }
+        
+        custom_tooltip = SUBJECT_ASSIST_COOLDOWN_TT
+	}
+    # Manpower - INVALID
+    option = {
+		name = fallout_subject_management.4.option.manpower.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            NOT = { manpower = 10 }
+        }
+        
+        custom_tooltip = MANPOWER_ASSIST_LACK_TT
+	}
+    # Sailors - VALID
+	option = {
+		name = fallout_subject_management.4.option.sailors
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            sailors = 1000
+        }
+        
+        add_sailors = -1000
+        
+        event_target:current_subject = {
+            add_sailors = 1000
+            
+            add_country_modifier = {
+                name = subject_assist_cooldown
+                duration = 365
+            }
+            add_liberty_desire = -2
+        }
+        
+        custom_tooltip = SUBJECT_ASSIST_COOLDOWN_TT
+	}
+    # Sailors - INVALID
+    option = {
+		name = fallout_subject_management.4.option.sailors.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+            NOT = { sailors = 1000 }
+        }
+        
+        custom_tooltip = SAILORS_ASSIST_LACK_TT
+	}
+    
+    # Return
+    option = {
+		name = fallout_subject_management.4.option.return
+        
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_subject_management.1 }
+        }
+    }
+}
+
+#-------------------------
+# Subject Extraction
+#-------------------------
+country_event = {
+	id = fallout_subject_management.5
+	title = fallout_subject_management.5.title
+	desc = fallout_subject_management.5.desc
+	picture = BOS_LAB_eventPicture
+	
+	is_triggered_only = yes
+
+    # Prestige - VALID
+	option = {
+		name = fallout_subject_management.5.option.prestige
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                prestige = 25
+            }
+        }
+        
+        if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 600
+                }
+            }
+            add_prestige = 20
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 400
+                }
+            }
+            add_prestige = 15
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 200
+                }
+            }
+            add_prestige = 10
+        }
+        else = {
+            add_prestige = 5
+        }
+        
+        event_target:current_subject = {
+            if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 600
+                    }
+                }
+                add_prestige = -20
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 400
+                    }
+                }
+                add_prestige = -15
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 200
+                    }
+                }
+                add_prestige = -10
+            }
+            else = {
+                add_prestige = -5
+            }
+            
+            add_country_modifier = {
+                name = subject_extract_cooldown
+                duration = 365
+            }
+            add_liberty_desire = 5
+        }
+        
+        custom_tooltip = SUBJECT_EXTRACT_COOLDOWN_TT
+	}
+    # Prestige - INVALID
+    option = {
+		name = fallout_subject_management.5.option.prestige.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                NOT = { prestige = 25 }
+            }
+        }
+        
+        custom_tooltip = PRESTIGE_EXTRACT_LACK_TT
+	}
+    # Army Tradition - VALID
+	option = {
+		name = fallout_subject_management.5.option.army_tradition
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                army_tradition = 10
+            }
+        }
+        
+        if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 600
+                }
+            }
+            add_army_tradition = 20
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 400
+                }
+            }
+            add_army_tradition = 15
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 200
+                }
+            }
+            add_army_tradition = 10
+        }
+        else = {
+            add_army_tradition = 5
+        }
+        
+        event_target:current_subject = {
+            if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 600
+                    }
+                }
+                add_army_tradition = -20
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 400
+                    }
+                }
+                add_army_tradition = -15
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 200
+                    }
+                }
+                add_army_tradition = -10
+            }
+            else = {
+                add_army_tradition = -5
+            }
+            
+            add_country_modifier = {
+                name = subject_extract_cooldown
+                duration = 365
+            }
+            add_liberty_desire = 5
+        }
+        
+        custom_tooltip = SUBJECT_EXTRACT_COOLDOWN_TT
+	}
+    # Army Tradition - INVALID
+    option = {
+		name = fallout_subject_management.5.option.army_tradition.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                NOT = { army_tradition = 10 }
+            }
+        }
+        
+        custom_tooltip = ARMY_TRADITION_EXTRACT_LACK_TT
+	}
+    # Manpower - VALID
+	option = {
+		name = fallout_subject_management.5.option.manpower
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                manpower = 5
+            }
+        }
+        
+        if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 600
+                }
+            }
+            add_manpower = 8
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 400
+                }
+            }
+            add_manpower = 6
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 200
+                }
+            }
+            add_manpower = 4
+        }
+        else = {
+            add_manpower = 2
+        }
+        
+        event_target:current_subject = {
+            if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 600
+                    }
+                }
+                add_manpower = -8
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 400
+                    }
+                }
+                add_manpower = -6
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 200
+                    }
+                }
+                add_manpower = -4
+            }
+            else = {
+                add_manpower = -2
+            }
+            
+            add_country_modifier = {
+                name = subject_extract_cooldown
+                duration = 365
+            }
+            add_liberty_desire = 5
+        }
+        
+        custom_tooltip = SUBJECT_EXTRACT_COOLDOWN_TT
+	}
+    # Manpower - INVALID
+    option = {
+		name = fallout_subject_management.5.option.army_tradition.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                NOT = { manpower = 5 }
+            }
+        }
+        
+        custom_tooltip = MANPOWER_EXTRACT_LACK_TT
+	}
+    # Sailors - VALID
+	option = {
+		name = fallout_subject_management.5.option.sailors
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                sailors = 500
+            }
+        }
+        
+        if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 600
+                }
+            }
+            add_sailors = 800
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 400
+                }
+            }
+            add_sailors = 600
+        }
+        else_if = {
+            limit = {
+                event_target:current_subject = {
+                    total_development = 200
+                }
+            }
+            add_sailors = 400
+        }
+        else = {
+            add_sailors = 200
+        }
+        
+        event_target:current_subject = {
+            if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 600
+                    }
+                }
+                add_sailors = -800
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 400
+                    }
+                }
+                add_sailors = -600
+            }
+            else_if = {
+                limit = {
+                    event_target:current_subject = {
+                        total_development = 200
+                    }
+                }
+                add_sailors = -400
+            }
+            else = {
+                add_sailors = -200
+            }
+            
+            add_country_modifier = {
+                name = subject_extract_cooldown
+                duration = 365
+            }
+            add_liberty_desire = 5
+        }
+        
+        custom_tooltip = SUBJECT_EXTRACT_COOLDOWN_TT
+	}
+    # Sailors - INVALID
+    option = {
+		name = fallout_subject_management.5.option.sailors.invalid
+        
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+                NOT = { sailors = 500 }
+            }
+        }
+        
+        custom_tooltip = SAILORS_EXTRACT_LACK_TT
+	}
+    
+    # Return
+    option = {
+		name = fallout_subject_management.5.option.return
+        
+	}
+    
+    after = {
+        hidden_effect = {
+            country_event = { id = fallout_subject_management.1 }
+        }
+    }
+}

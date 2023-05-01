@@ -1,0 +1,421 @@
+﻿l_english:
+ #-----------------------------------
+ # Diplomatic Action
+ #-----------------------------------
+ manage_subject: "Administrate Subject"
+ manage_subject_title: "Administrate Subject"
+ manage_subject_desc: "Administrate Subject will have the following effect:\n\nModify our relationship with §Y[From.GetName]§!."
+ manage_subject_tooltip: "Administrate our relationship with this subject."
+ manage_subject_dialog: "Administrate our relationship with this subject."
+ 
+ #-----------------------------------
+ # Events
+ #-----------------------------------
+ fallout_subject_management.1.title: "Adminstration of [current_subject.GetName]"
+ fallout_subject_management.1.desc: "Manage the intricacies of our subject relationship with [current_subject.GetName]."
+ fallout_subject_management.1.option.subject_contract: "Adjust [current_subject.GetName] Contract"
+ fallout_subject_management.1.option.subject_investment: "Invest in [current_subject.GetName]"
+ fallout_subject_management.1.option.subject_assistance: "Assist [current_subject.GetName]"
+ fallout_subject_management.1.option.subject_extraction: "Extract from [current_subject.GetName]"
+ fallout_subject_management.1.option.national_color: "Set National Color"
+ fallout_subject_management.1.option.exit: "Exit"
+ 
+ fallout_subject_management.2.title: "Subject Contract"
+ fallout_subject_management.2.desc: "You can change the subject contract [current_subject.GetName] is under here."
+ fallout_subject_management.2.option.make_vassal: "Shift to Vassal"
+ fallout_subject_management.2.option.make_vassal.invalid: "§gShift to Vassal§!"
+ fallout_subject_management.2.option.make_march: "Shift to March"
+ fallout_subject_management.2.option.make_march.invalid: "§gShift to March§!"
+ fallout_subject_management.2.option.make_hegemonic_vassal: "Shift to Hegemonic Vassal"
+ fallout_subject_management.2.option.make_hegemonic_vassal.invalid: "§gShift to Hegemonic Vassal§!"
+ fallout_subject_management.2.option.return: "Return"
+ 
+ fallout_subject_management.3.title: "Subject Investment"
+ fallout_subject_management.3.desc: "You can invest into [current_subject.GetName] here.\nTaxation - [Root.GetTaxationTier]\nProduction - [Root.GetProductionTier]\nTrade - [Root.GetTradeTier]\nManufacturing - [Root.GetManufacturingTier]\nMilitary Recruitment - [Root.GetMilitaryRecruitmentTier]\nNaval Recruitment - [Root.GetNavalRecruitmentTier]\nPolicing - [Root.GetPolicingTier]\nProselytisation - [Root.GetProselytisationTier]\nColonisation - [Root.GetColonisationTier]\nForce Capacity - [Root.GetForceCapacityTier]"
+ 
+ fallout_subject_management.3.option.taxation: "Improve Taxation"
+ fallout_subject_management.3.option.taxation.invalid.gold_cost: "§gImprove Taxation§!"
+ fallout_subject_management.3.option.taxation.invalid.power_cost: "§gImprove Taxation§!"
+ fallout_subject_management.3.option.taxation.invalid.all_cost: "§gImprove Taxation§!"
+ fallout_subject_management.3.option.taxation.invalid.max: "§GImprove Taxation§!"
+ 
+ fallout_subject_management.3.option.production: "Improve Production"
+ fallout_subject_management.3.option.production.invalid.gold_cost: "§gImprove Production§!"
+ fallout_subject_management.3.option.production.invalid.power_cost: "§gImprove Production§!"
+ fallout_subject_management.3.option.production.invalid.all_cost: "§gImprove Production§!"
+ fallout_subject_management.3.option.production.invalid.max: "§GImprove Production§!"
+ 
+ fallout_subject_management.3.option.trade: "Improve Trade"
+ fallout_subject_management.3.option.trade.invalid.gold_cost: "§gImprove Trade§!"
+ fallout_subject_management.3.option.trade.invalid.power_cost: "§gImprove Trade§!"
+ fallout_subject_management.3.option.trade.invalid.all_cost: "§gImprove Trade§!"
+ fallout_subject_management.3.option.trade.invalid.max: "§GImprove Trade§!"
+ 
+ fallout_subject_management.3.option.manufacturing: "Improve Manufacturing"
+ fallout_subject_management.3.option.manufacturing.invalid.gold_cost: "§gImprove Manufacturing§!"
+ fallout_subject_management.3.option.manufacturing.invalid.power_cost: "§gImprove Manufacturing§!"
+ fallout_subject_management.3.option.manufacturing.invalid.all_cost: "§gImprove Manufacturing§!"
+ fallout_subject_management.3.option.manufacturing.invalid.max: "§GImprove Manufacturing§!"
+ 
+ fallout_subject_management.3.option.military_recruitment: "Bolster Military Recruitment"
+ fallout_subject_management.3.option.military_recruitment.invalid.gold_cost: "§gBolster Military Recruitment§!"
+ fallout_subject_management.3.option.military_recruitment.invalid.power_cost: "§gBolster Military Recruitment§!"
+ fallout_subject_management.3.option.military_recruitment.invalid.all_cost: "§gBolster Military Recruitment§!"
+ fallout_subject_management.3.option.military_recruitment.invalid.max: "§GBolster Military Recruitment§!"
+ 
+ fallout_subject_management.3.option.naval_recruitment: "Bolster Naval Recruitment"
+ fallout_subject_management.3.option.naval_recruitment.invalid.gold_cost: "§gBolster Naval Recruitment§!"
+ fallout_subject_management.3.option.naval_recruitment.invalid.power_cost: "§gBolster Naval Recruitment§!"
+ fallout_subject_management.3.option.naval_recruitment.invalid.all_cost: "§gBolster Naval Recruitment§!"
+ fallout_subject_management.3.option.naval_recruitment.invalid.max: "§GBolster Naval Recruitment§!"
+ 
+ fallout_subject_management.3.option.policing: "Bolster Policing"
+ fallout_subject_management.3.option.policing.invalid.gold_cost: "§gBolster Policing§!"
+ fallout_subject_management.3.option.policing.invalid.power_cost: "§gBolster Policing§!"
+ fallout_subject_management.3.option.policing.invalid.all_cost: "§gBolster Policing§!"
+ fallout_subject_management.3.option.policing.invalid.max: "§GBolster Policing§!"
+ 
+ fallout_subject_management.3.option.proselytisation: "Encourage Proselytisation"
+ fallout_subject_management.3.option.proselytisation.invalid.gold_cost: "§gEncourage Proselytisation§!"
+ fallout_subject_management.3.option.proselytisation.invalid.power_cost: "§gEncourage Proselytisation§!"
+ fallout_subject_management.3.option.proselytisation.invalid.all_cost: "§gEncourage Proselytisation§!"
+ fallout_subject_management.3.option.proselytisation.invalid.max: "§GEncourage Proselytisation§!"
+ 
+ fallout_subject_management.3.option.colonisation: "Encourage Colonial Ventures"
+ fallout_subject_management.3.option.colonisation.invalid.gold_cost: "§gEncourage Colonial Ventures§!"
+ fallout_subject_management.3.option.colonisation.invalid.power_cost: "§gEncourage Colonial Ventures§!"
+ fallout_subject_management.3.option.colonisation.invalid.all_cost: "§gEncourage Colonial Ventures§!"
+ fallout_subject_management.3.option.colonisation.invalid.max: "§GEncourage Colonial Ventures§!"
+ 
+ fallout_subject_management.3.option.force_capacity: "Expand Force Capacity"
+ fallout_subject_management.3.option.force_capacity.invalid.gold_cost: "§gExpand Force Capacity§!"
+ fallout_subject_management.3.option.force_capacity.invalid.power_cost: "§gExpand Force Capacity§!"
+ fallout_subject_management.3.option.force_capacity.invalid.all_cost: "§gExpand Force Capacity§!"
+ fallout_subject_management.3.option.force_capacity.invalid.max: "§GExpand Force Capacity§!"
+ 
+ fallout_subject_management.3.option.return: "Return"
+ 
+ fallout_subject_management.4.title: "Subject Assistance"
+ fallout_subject_management.4.desc: "You can send assistance to our subject [current_subject.GetName] here.\n[Root.GetSubjectAssistCooldown]"
+ fallout_subject_management.4.option.stability: "Stabalize Realm"
+ fallout_subject_management.4.option.stability.invalid: "§gStabalize Realm§g"
+ fallout_subject_management.4.option.corruption: "Purge Corruption"
+ fallout_subject_management.4.option.corruption.invalid: "§gPurge Corruption§g"
+ fallout_subject_management.4.option.manpower: "Send Manpower"
+ fallout_subject_management.4.option.manpower.invalid: "§gSend Manpower§!"
+ fallout_subject_management.4.option.sailors: "Send Sailors"
+ fallout_subject_management.4.option.sailors.invalid: "§gSend Sailors§!"
+ fallout_subject_management.4.option.return: "Return"
+ 
+ fallout_subject_management.5.title: "Subject Extraction"
+ fallout_subject_management.5.desc: "You can extract resources from our subject [current_subject.GetName] here.\n[Root.GetSubjectExtractCooldown]"
+ fallout_subject_management.5.option.prestige: "Diminish Acclaim"
+ fallout_subject_management.5.option.prestige.invalid: "§gDiminish Acclaim§!"
+ fallout_subject_management.5.option.army_tradition: "Pinch Officers"
+ fallout_subject_management.5.option.army_tradition.invalid: "§gPinch Officers§!"
+ fallout_subject_management.5.option.manpower: "Demand Manpower"
+ fallout_subject_management.5.option.manpower.invalid: "§gDemand Manpower§!"
+ fallout_subject_management.5.option.sailors: "Demand Sailors"
+ fallout_subject_management.5.option.sailors.invalid: "§gDemand Sailors§!"
+ fallout_subject_management.5.option.return: "Return"
+ 
+ #-----------------------------------
+ # Modifiers
+ #-----------------------------------
+ subject_assist_cooldown: "Assisted by Overlord"
+ desc_subject_assist_cooldown: ""
+ 
+ subject_extract_cooldown: "Overlord Extracted Resources"
+ desc_subject_extract_cooldown: ""
+ 
+ # Taxation
+ subject_taxation_1: "Improvement: Taxation I"
+ desc_subject_taxation_1: ""
+ 
+ subject_taxation_2: "Improvement: Taxation II"
+ desc_subject_taxation_2: ""
+ 
+ subject_taxation_3: "Improvement: Taxation III"
+ desc_subject_taxation_3: ""
+ 
+ subject_taxation_4: "Improvement: Taxation IV"
+ desc_subject_taxation_4: ""
+ 
+ subject_taxation_5: "Improvement: Taxation V"
+ desc_subject_taxation_5: ""
+ 
+ # Productiion
+ subject_production_1: "Improvement: Production I"
+ desc_subject_production_1: ""
+ 
+ subject_production_2: "Improvement: Production II"
+ desc_subject_production_2: ""
+ 
+ subject_production_3: "Improvement: Production III"
+ desc_subject_production_3: ""
+ 
+ subject_production_4: "Improvement: Production IV"
+ desc_subject_production_4: ""
+ 
+ subject_production_5: "Improvement: Production V"
+ desc_subject_production_5: ""
+ 
+ # Trade
+ subject_trade_1: "Improvement: Trade I"
+ desc_subject_trade_1: ""
+ 
+ subject_trade_2: "Improvement: Trade II"
+ desc_subject_trade_2: ""
+ 
+ subject_trade_3: "Improvement: Trade III"
+ desc_subject_trade_3: ""
+ 
+ subject_trade_4: "Improvement: Trade IV"
+ desc_subject_trade_4: ""
+ 
+ subject_trade_5: "Improvement: Trade V"
+ desc_subject_trade_5: ""
+ 
+ # Manufacturing
+ subject_manufacturing_1: "Improvement: Manufacturing I"
+ desc_subject_manufacturing_1: ""
+ 
+ subject_manufacturing_2: "Improvement: Manufacturing II"
+ desc_subject_manufacturing_2: ""
+ 
+ subject_manufacturing_3: "Improvement: Manufacturing III"
+ desc_subject_manufacturing_3: ""
+ 
+ subject_manufacturing_4: "Improvement: Manufacturing IV"
+ desc_subject_manufacturing_4: ""
+ 
+ subject_manufacturing_5: "Improvement: Manufacturing V"
+ desc_subject_manufacturing_5: ""
+ 
+ # Military Recruitment
+ subject_military_recruitment_1: "Improvement: Military Recruitment I"
+ desc_subject_military_recruitment_1: ""
+ 
+ subject_military_recruitment_2: "Improvement: Military Recruitment II"
+ desc_subject_military_recruitment_2: ""
+ 
+ subject_military_recruitment_3: "Improvement: Military Recruitment III"
+ desc_subject_military_recruitment_3: ""
+ 
+ subject_military_recruitment_4: "Improvement: Military Recruitment IV"
+ desc_subject_military_recruitment_4: ""
+ 
+ subject_military_recruitment_5: "Improvement: Military Recruitment V"
+ desc_subject_military_recruitment_5: ""
+ 
+ # Naval Recruitment
+ subject_naval_recruitment_1: "Improvement: Naval Recruitment I"
+ desc_subject_naval_recruitment_1: ""
+ 
+ subject_naval_recruitment_2: "Improvement: Naval Recruitment II"
+ desc_subject_naval_recruitment_2: ""
+ 
+ subject_naval_recruitment_3: "Improvement: Naval Recruitment III"
+ desc_subject_naval_recruitment_3: ""
+ 
+ subject_naval_recruitment_4: "Improvement: Naval Recruitment IV"
+ desc_subject_naval_recruitment_4: ""
+ 
+ subject_naval_recruitment_5: "Improvement: Naval Recruitment V"
+ desc_subject_naval_recruitment_5: ""
+ 
+ # Policing
+ subject_policing_1: "Improvement: Policing I"
+ desc_subject_policing_1: ""
+ 
+ subject_policing_2: "Improvement: Policing II"
+ desc_subject_policing_2: ""
+ 
+ subject_policing_3: "Improvement: Policing III"
+ desc_subject_policing_3: ""
+ 
+ subject_policing_4: "Improvement: Policing IV"
+ desc_subject_policing_4: ""
+ 
+ subject_policing_5: "Improvement: Policing V"
+ desc_subject_policing_5: ""
+ 
+ # Proselytisation
+ subject_proselytisation_1: "Improvement: Proselytisation I"
+ desc_subject_proselytisation_1: ""
+ 
+ subject_proselytisation_2: "Improvement: Proselytisation II"
+ desc_subject_proselytisation_2: ""
+ 
+ subject_proselytisation_3: "Improvement: Proselytisation III"
+ desc_subject_proselytisation_3: ""
+ 
+ subject_proselytisation_4: "Improvement: Proselytisation IV"
+ desc_subject_proselytisation_4: ""
+ 
+ subject_proselytisation_5: "Improvement: Proselytisation V"
+ desc_subject_proselytisation_5: ""
+ 
+ # Colonisation
+ subject_colonisation_1: "Improvement: Colonisation I"
+ desc_subject_colonisation_1: ""
+ 
+ subject_colonisation_2: "Improvement: Colonisation II"
+ desc_subject_colonisation_2: ""
+ 
+ subject_colonisation_3: "Improvement: Colonisation III"
+ desc_subject_colonisation_3: ""
+ 
+ subject_colonisation_4: "Improvement: Colonisation IV"
+ desc_subject_colonisation_4: ""
+ 
+ subject_colonisation_5: "Improvement: Colonisation V"
+ desc_subject_colonisation_5: ""
+ 
+ # Force Capacity
+ subject_force_capacity_1: "Improvement: Force Capacity I"
+ desc_subject_force_capacity_1: ""
+ 
+ subject_force_capacity_2: "Improvement: Force Capacity II"
+ desc_subject_force_capacity_2: ""
+ 
+ subject_force_capacity_3: "Improvement: Force Capacity III"
+ desc_subject_force_capacity_3: ""
+ 
+ subject_force_capacity_4: "Improvement: Force Capacity IV"
+ desc_subject_force_capacity_4: ""
+ 
+ subject_force_capacity_5: "Improvement: Force Capacity V"
+ desc_subject_force_capacity_5: ""
+ 
+ #-----------------------------------
+ # Tooltips
+ #-----------------------------------
+ TAXATION_TIER_0: "None"
+ TAXATION_TIER_1: "§YTax Modifier:§! §G+10%§!"
+ TAXATION_TIER_2: "§YTax Modifier:§! §G+20%§!"
+ TAXATION_TIER_3: "§YTax Modifier:§! §G+30%§!"
+ TAXATION_TIER_4: "§YTax Modifier:§! §G+40%§!"
+ TAXATION_TIER_5: "§YTax Modifier:§! §G+50%§!"
+ 
+ PRODUCTION_TIER_0: "None"
+ PRODUCTION_TIER_1: "§YProduction Efficiency:§! §G+10%§!"
+ PRODUCTION_TIER_2: "§YProduction Efficiency:§! §G+20%§!"
+ PRODUCTION_TIER_3: "§YProduction Efficiency:§! §G+30%§!"
+ PRODUCTION_TIER_4: "§YProduction Efficiency:§! §G+40%§!"
+ PRODUCTION_TIER_5: "§YProduction Efficiency:§! §G+50%§!"
+ 
+ TRADE_TIER_0: "None"
+ TRADE_TIER_1: "§YTrade Efficiency:§! §G+10%§!"
+ TRADE_TIER_2: "§YTrade Efficiency:§! §G+20%§!"
+ TRADE_TIER_3: "§YTrade Efficiency:§! §G+30%§!"
+ TRADE_TIER_4: "§YTrade Efficiency:§! §G+40%§!"
+ TRADE_TIER_5: "§YTrade Efficiency:§! §G+50%§!"
+ 
+ MANUFACTURING_TIER_0: "None"
+ MANUFACTURING_TIER_1: "§YGoods Produced Modifier:§! §G+10%§!"
+ MANUFACTURING_TIER_2: "§YGoods Produced Modifier:§! §G+20%§!"
+ MANUFACTURING_TIER_3: "§YGoods Produced Modifier:§! §G+30%§!"
+ MANUFACTURING_TIER_4: "§YGoods Produced Modifier:§! §G+40%§!"
+ MANUFACTURING_TIER_5: "§YGoods Produced Modifier:§! §G+50%§!"
+ 
+ MILITARY_RECRUITMENT_TIER_0: "None"
+ MILITARY_RECRUITMENT_TIER_1: "§YManpower Modifier:§! §G+10%§!"
+ MILITARY_RECRUITMENT_TIER_2: "§YManpower Modifier:§! §G+20%§!"
+ MILITARY_RECRUITMENT_TIER_3: "§YManpower Modifier:§! §G+30%§!"
+ MILITARY_RECRUITMENT_TIER_4: "§YManpower Modifier:§! §G+40%§!"
+ MILITARY_RECRUITMENT_TIER_5: "§YManpower Modifier:§! §G+50%§!"
+ 
+ NAVAL_RECRUITMENT_TIER_0: "None"
+ NAVAL_RECRUITMENT_TIER_1: "§YSailors Modifier:§! §G+10%§!"
+ NAVAL_RECRUITMENT_TIER_2: "§YSailors Modifier:§! §G+20%§!"
+ NAVAL_RECRUITMENT_TIER_3: "§YSailors Modifier:§! §G+30%§!"
+ NAVAL_RECRUITMENT_TIER_4: "§YSailors Modifier:§! §G+40%§!"
+ NAVAL_RECRUITMENT_TIER_5: "§YSailors Modifier:§! §G+50%§!"
+ 
+ POLICING_TIER_0: "None"
+ POLICING_TIER_1: "§YNational Unrest:§! §G-1§!"
+ POLICING_TIER_2: "§YNational Unrest:§! §G-2§!"
+ POLICING_TIER_3: "§YNational Unrest:§! §G-3§!"
+ POLICING_TIER_4: "§YNational Unrest:§! §G-4§!"
+ POLICING_TIER_5: "§YNational Unrest:§! §G-5§!"
+ 
+ PROSELYTISATION_TIER_0: "None"
+ PROSELYTISATION_TIER_1: "§YMissionaries:§! §G+1§! and §YMissionary Strength:§! §G+1%§!"
+ PROSELYTISATION_TIER_2: "§YMissionaries:§! §G+1§! and §YMissionary Strength:§! §G+2%§!"
+ PROSELYTISATION_TIER_3: "§YMissionaries:§! §G+1§! and §YMissionary Strength:§! §G+3%§!"
+ PROSELYTISATION_TIER_4: "§YMissionaries:§! §G+1§! and §YMissionary Strength:§! §G+4%§!"
+ PROSELYTISATION_TIER_5: "§YMissionaries:§! §G+1§! and §YMissionary Strength:§! §G+5%§!"
+ 
+ COLONISATION_TIER_0: "None"
+ COLONISATION_TIER_1: "§YColonists:§! §G+1§! and §YColonial Growth:§! §G+10§!"
+ COLONISATION_TIER_2: "§YColonists:§! §G+1§! and §YColonial Growth:§! §G+20§!"
+ COLONISATION_TIER_3: "§YColonists:§! §G+1§! and §YColonial Growth:§! §G+30§!"
+ COLONISATION_TIER_4: "§YColonists:§! §G+1§! and §YColonial Growth:§! §G+40§!"
+ COLONISATION_TIER_5: "§YColonists:§! §G+1§! and §YColonial Growth:§! §G+50§!"
+ 
+ FORCE_CAPACITY_TIER_0: "None"
+ FORCE_CAPACITY_TIER_1: "§YLand and Naval Forcelimit:§! §G+5%§!"
+ FORCE_CAPACITY_TIER_2: "§YLand and Naval Forcelimit Modifier:§! §G+10%§!"
+ FORCE_CAPACITY_TIER_3: "§YLand and Naval Forcelimit Modifier:§! §G+15%§!"
+ FORCE_CAPACITY_TIER_4: "§YLand and Naval Forcelimit Modifier:§! §G+20%§!"
+ FORCE_CAPACITY_TIER_5: "§YLand and Naval Forcelimit Modifier:§! §G+25%§!"
+ 
+ PREIVEW_OF_EFFECT: "Below is a preview of the improvement effect:"
+ 
+ 
+ MAKE_VASSAL_COST_INVALID_TT: "You lack the §Y250§! Administrative Power required to change a subject's contract."
+ MAKE_MARCH_COST_INVALID_TT: "You lack the §Y250§! Administrative Power required to change a subject's contract."
+ MAKE_TRIBUTARY_COST_INVALID_TT: "You lack the §Y250§! Administrative Power required to change a subject's contract."
+ 
+ SUBJECT_IMPROVEMENT_MAX_TT: "This subject improvement has reached its maximum tier."
+ 
+ YOU_LACK_TIER_1_GOLD_TT: "You lack the §Y250§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_2_GOLD_TT: "You lack the §Y500§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_3_GOLD_TT: "You lack the §Y1000§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_4_GOLD_TT: "You lack the §Y2000§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_5_GOLD_TT: "You lack the §Y3000§! Ducats required to enact this improvement."
+ 
+ YOU_LACK_TIER_1_ADM_POWER_TT: "You lack the §Y50§! Administrative Power required to enact this improvement."
+ YOU_LACK_TIER_2_ADM_POWER_TT: "You lack the §Y100§! Administrative Power required to enact this improvement."
+ YOU_LACK_TIER_3_ADM_POWER_TT: "You lack the §Y150§! Administrative Power required to enact this improvement."
+ YOU_LACK_TIER_4_ADM_POWER_TT: "You lack the §Y200§! Administrative Power required to enact this improvement."
+ YOU_LACK_TIER_5_ADM_POWER_TT: "You lack the §Y250§! Administrative Power required to enact this improvement."
+ 
+ YOU_LACK_TIER_1_DIP_POWER_TT: "You lack the §Y50§! Diplomatic Power required to enact this improvement."
+ YOU_LACK_TIER_2_DIP_POWER_TT: "You lack the §Y100§! Diplomatic Power required to enact this improvement."
+ YOU_LACK_TIER_3_DIP_POWER_TT: "You lack the §Y150§! Diplomatic Power required to enact this improvement."
+ YOU_LACK_TIER_4_DIP_POWER_TT: "You lack the §Y200§! Diplomatic Power required to enact this improvement."
+ YOU_LACK_TIER_5_DIP_POWER_TT: "You lack the §Y250§! Diplomatic Power required to enact this improvement."
+ 
+ YOU_LACK_TIER_1_MIL_POWER_TT: "You lack the §Y50§! Military Power required to enact this improvement."
+ YOU_LACK_TIER_2_MIL_POWER_TT: "You lack the §Y100§! Military Power required to enact this improvement."
+ YOU_LACK_TIER_3_MIL_POWER_TT: "You lack the §Y150§! Military Power required to enact this improvement."
+ YOU_LACK_TIER_4_MIL_POWER_TT: "You lack the §Y200§! Military Power required to enact this improvement."
+ YOU_LACK_TIER_5_MIL_POWER_TT: "You lack the §Y250§! Military Power required to enact this improvement."
+ 
+ YOU_LACK_TIER_ALL_1_TT: "You lack the §Y50§! Power and §Y250§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_ALL_2_TT: "You lack the §Y100§! Power and §Y500§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_ALL_3_TT: "You lack the §Y150§! Power and §Y1000§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_ALL_4_TT: "You lack the §Y200§! Power and §Y2000§! Ducats required to enact this improvement."
+ YOU_LACK_TIER_ALL_5_TT: "You lack the §Y250§! Power and §Y3000§! Ducats required to enact this improvement."
+ 
+ STABILITY_ASSIST_LACK_TT: "You lack the §Y100§! Administrative Power required to use this action."
+ CORRUPTION_ASSIST_LACK_TT: "You lack the §Y1§! Year of Income required to use this action."
+ MANPOWER_ASSIST_LACK_TT: "You lack the §Y10,000§! Manpower required to use this action."
+ SAILORS_ASSIST_LACK_TT: "You lack the §Y1,000§! Sailors required to use this action."
+ 
+ SUBJECT_ASSIST_COOLDOWN_TT: "Subject Assistance can only occur once per year. Using this action will start this cooldown period."
+ SUBJECT_ASSIST_ALLOWED: "We are able to assist [current_subject.GetName]."
+ SUBJECT_ASSIST_BLOCKED: "We have recently assisted [current_subject.GetName], and as such we cannot help them for a short period."
+ 
+ PRESTIGE_EXTRACT_LACK_TT: "[current_subject.GetName] lacks the §Y25§! Prestige required to use this action."
+ ARMY_TRADITION_EXTRACT_LACK_TT: "[current_subject.GetName] lacks the §Y10§! Army Tradition required to use this action."
+ MANPOWER_EXTRACT_LACK_TT: "[current_subject.GetName] lacks the §Y5,000§! Manpower required to use this action."
+ SAILORS_EXTRACT_LACK_TT: "[current_subject.GetName] lacks the §Y500§! Sailors required to use this action."
+ 
+ SUBJECT_EXTRACT_COOLDOWN_TT: "Subject Extraction can only occur once per year. Using this action will start this cooldown period."
+ SUBJECT_EXTRACT_ALLOWED: "We are able to extract resources from [current_subject.GetName]."
+ SUBJECT_EXTRACT_BLOCKED: "We have recently extracted resources from [current_subject.GetName], and as such we cannot extract again for a short period."
+ 
+ 

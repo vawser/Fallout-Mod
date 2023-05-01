@@ -260,6 +260,18 @@ interaction = {
 	}
 	ai_will_do = {
 		factor = 25
+        
+        
+		modifier = {
+			factor = 0
+            
+			NOT = {
+				estate_loyalty = {
+					estate = all
+					loyalty = 55
+				}
+			}
+		}
 		modifier = {
 			factor = 0
 			crown_land_share = 30
@@ -335,15 +347,6 @@ interaction = {
 				had_country_flag = {
 					flag = recent_land_distribution
 					days = 5475
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 50
 				}
 			}
 		}

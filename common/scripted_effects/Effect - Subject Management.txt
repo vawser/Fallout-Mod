@@ -1,0 +1,511 @@
+conduct_subject_investment = {
+    if = {
+        limit = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_$TYPE$_1 }
+                NOT = { has_country_modifier = subject_$TYPE$_2 }
+                NOT = { has_country_modifier = subject_$TYPE$_3 }
+                NOT = { has_country_modifier = subject_$TYPE$_4 }
+                NOT = { has_country_modifier = subject_$TYPE$_5 }
+            }
+        }
+        add_treasury = -250
+        [[adm_type]
+        add_adm_power = -50
+        ]
+        [[dip_type]
+        add_dip_power = -50
+        ]
+        [[mil_type]
+        add_mil_power = -50
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_1
+            }
+        }
+        add_treasury = -500
+        [[adm_type]
+        add_adm_power = -100
+        ]
+        [[dip_type]
+        add_dip_power = -100
+        ]
+        [[mil_type]
+        add_mil_power = -100
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_2
+            }
+        }
+        add_treasury = -1000
+        [[adm_type]
+        add_adm_power = -150
+        ]
+        [[dip_type]
+        add_dip_power = -150
+        ]
+        [[mil_type]
+        add_mil_power = -150
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_3
+            }
+        }
+        add_treasury = -2000
+        [[adm_type]
+        add_adm_power = -200
+        ]
+        [[dip_type]
+        add_dip_power = -200
+        ]
+        [[mil_type]
+        add_mil_power = -200
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_4
+            }
+        }
+        add_treasury = -3000
+        [[adm_type]
+        add_adm_power = -250
+        ]
+        [[dip_type]
+        add_dip_power = -250
+        ]
+        [[mil_type]
+        add_mil_power = -250
+        ]
+    }
+    
+    event_target:current_subject = {
+        if = {
+            limit = {
+                NOT = { has_country_modifier = subject_$TYPE$_1 }
+                NOT = { has_country_modifier = subject_$TYPE$_2 }
+                NOT = { has_country_modifier = subject_$TYPE$_3 }
+                NOT = { has_country_modifier = subject_$TYPE$_4 }
+                NOT = { has_country_modifier = subject_$TYPE$_5 }
+            }
+            
+            add_country_modifier = {
+                name = subject_$TYPE$_1
+                duration = -1
+            }
+            
+            add_liberty_desire = -5
+        }
+        else_if = {
+            limit = {
+                has_country_modifier = subject_$TYPE$_1
+            }
+            
+            remove_country_modifier = subject_$TYPE$_1
+            add_country_modifier = {
+                name = subject_$TYPE$_2
+                duration = -1
+            }
+            
+            add_liberty_desire = -10
+        }
+        else_if = {
+            limit = {
+                has_country_modifier = subject_$TYPE$_2
+            }
+            
+            remove_country_modifier = subject_$TYPE$_2
+            add_country_modifier = {
+                name = subject_$TYPE$_3
+                duration = -1
+            }
+            
+            add_liberty_desire = -15
+        }
+        else_if = {
+            limit = {
+                has_country_modifier = subject_$TYPE$_3
+            }
+            
+            remove_country_modifier = subject_$TYPE$_3
+            add_country_modifier = {
+                name = subject_$TYPE$_4
+                duration = -1
+            }
+            
+            add_liberty_desire = -20
+        }
+        else_if = {
+            limit = {
+                has_country_modifier = subject_$TYPE$_4
+            }
+            
+            remove_country_modifier = subject_$TYPE$_4
+            add_country_modifier = {
+                name = subject_$TYPE$_5
+                duration = -1
+            }
+            
+            add_liberty_desire = -25
+        }
+    }
+}
+
+subject_investment_lack_gold = {
+    # Cost
+    if = {
+        limit = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_$TYPE$_1 }
+                NOT = { has_country_modifier = subject_$TYPE$_2 }
+                NOT = { has_country_modifier = subject_$TYPE$_3 }
+                NOT = { has_country_modifier = subject_$TYPE$_4 }
+                NOT = { has_country_modifier = subject_$TYPE$_5 }
+            }
+            NOT = { treasury = 250 }
+            [[adm_type]
+            adm_power = 50
+            ]
+            [[dip_type]
+            dip_power = 50
+            ]
+            [[mil_type]
+            mil_power = 50
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_1_GOLD_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_1
+            }
+            NOT = { treasury = 500 }
+            [[adm_type]
+            adm_power = 100
+            ]
+            [[dip_type]
+            dip_power = 100
+            ]
+            [[mil_type]
+            mil_power = 100
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_2_GOLD_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_2
+            }
+            NOT = { treasury = 1000 }
+            [[adm_type]
+            adm_power = 150
+            ]
+            [[dip_type]
+            dip_power = 150
+            ]
+            [[mil_type]
+            mil_power = 150
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_3_GOLD_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_3
+            }
+            NOT = { treasury = 2000 }
+            [[adm_type]
+            adm_power = 200
+            ]
+            [[dip_type]
+            dip_power = 200
+            ]
+            [[mil_type]
+            mil_power = 200
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_4_GOLD_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_4
+            }
+            NOT = { treasury = 3000 }
+            [[adm_type]
+            adm_power = 250
+            ]
+            [[dip_type]
+            dip_power = 250
+            ]
+            [[mil_type]
+            mil_power = 250
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_5_GOLD_TT
+    }
+}
+
+subject_investment_lack_power = {
+    # Cost
+    if = {
+        limit = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_$TYPE$_1 }
+                NOT = { has_country_modifier = subject_$TYPE$_2 }
+                NOT = { has_country_modifier = subject_$TYPE$_3 }
+                NOT = { has_country_modifier = subject_$TYPE$_4 }
+                NOT = { has_country_modifier = subject_$TYPE$_5 }
+            }
+            treasury = 250
+            [[adm_type]
+            NOT = { adm_power = 50 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 50 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 50 }
+            ]
+        }
+        
+        [[adm_type]
+        custom_tooltip = YOU_LACK_TIER_1_ADM_POWER_TT
+        ]
+        [[dip_type]
+        custom_tooltip = YOU_LACK_TIER_1_DIP_POWER_TT
+        ]
+        [[mil_type]
+        custom_tooltip = YOU_LACK_TIER_1_MIL_POWER_TT
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_1
+            }
+            treasury = 500
+            [[adm_type]
+            NOT = { adm_power = 100 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 100 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 100 }
+            ]
+        }
+        
+        [[adm_type]
+        custom_tooltip = YOU_LACK_TIER_2_ADM_POWER_TT
+        ]
+        [[dip_type]
+        custom_tooltip = YOU_LACK_TIER_2_DIP_POWER_TT
+        ]
+        [[mil_type]
+        custom_tooltip = YOU_LACK_TIER_2_MIL_POWER_TT
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_2
+            }
+            treasury = 1000
+            [[adm_type]
+            NOT = { adm_power = 150 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 150 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 150 }
+            ]
+        }
+        
+        [[adm_type]
+        custom_tooltip = YOU_LACK_TIER_3_ADM_POWER_TT
+        ]
+        [[dip_type]
+        custom_tooltip = YOU_LACK_TIER_3_DIP_POWER_TT
+        ]
+        [[mil_type]
+        custom_tooltip = YOU_LACK_TIER_3_MIL_POWER_TT
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_3
+            }
+            treasury = 2000
+            [[adm_type]
+            NOT = { adm_power = 200 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 200 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 200 }
+            ]
+        }
+        
+        [[adm_type]
+        custom_tooltip = YOU_LACK_TIER_4_ADM_POWER_TT
+        ]
+        [[dip_type]
+        custom_tooltip = YOU_LACK_TIER_4_DIP_POWER_TT
+        ]
+        [[mil_type]
+        custom_tooltip = YOU_LACK_TIER_4_MIL_POWER_TT
+        ]
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_4
+            }
+            treasury = 3000
+            [[adm_type]
+            NOT = { adm_power = 250 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 250 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 250 }
+            ]
+        }
+        
+        [[adm_type]
+        custom_tooltip = YOU_LACK_TIER_5_ADM_POWER_TT
+        ]
+        [[dip_type]
+        custom_tooltip = YOU_LACK_TIER_5_DIP_POWER_TT
+        ]
+        [[mil_type]
+        custom_tooltip = YOU_LACK_TIER_5_MIL_POWER_TT
+        ]
+    }
+}
+
+subject_investment_lack_all = {
+    # Cost
+    if = {
+        limit = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_$TYPE$_1 }
+                NOT = { has_country_modifier = subject_$TYPE$_2 }
+                NOT = { has_country_modifier = subject_$TYPE$_3 }
+                NOT = { has_country_modifier = subject_$TYPE$_4 }
+                NOT = { has_country_modifier = subject_$TYPE$_5 }
+            }
+            NOT = { treasury = 250 }
+            [[adm_type]
+            NOT = { adm_power = 50 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 50 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 50 }
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_ALL_1_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_1
+            }
+            NOT = { treasury = 500 }
+            [[adm_type]
+            NOT = { adm_power = 100 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 100 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 100 }
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_ALL_2_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_2
+            }
+            NOT = { treasury = 1000 }
+            [[adm_type]
+            NOT = { adm_power = 150 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 150 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 150 }
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_ALL_3_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_3
+            }
+            NOT = { treasury = 2000 }
+            [[adm_type]
+            NOT = { adm_power = 200 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 200 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 200 }
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_ALL_4_TT
+    }
+    else_if = {
+        limit = {
+            event_target:current_subject = {
+                has_country_modifier = subject_$TYPE$_4
+            }
+            NOT = { treasury = 3000 }
+            [[adm_type]
+            NOT = { adm_power = 250 }
+            ]
+            [[dip_type]
+            NOT = { dip_power = 250 }
+            ]
+            [[mil_type]
+            NOT = { mil_power = 250 }
+            ]
+        }
+        
+        custom_tooltip = YOU_LACK_TIER_ALL_5_TT
+    }
+}

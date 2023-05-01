@@ -1,0 +1,41 @@
+namespace = fallout_doctrine
+
+#-------------------------
+# Helper Events
+#-------------------------
+# These are to delay the kill_units effect so it doesn't occur in the same frame as the province controller change, which causes a CTD
+
+# Rebel Kill
+province_event = {
+	id = fallout_doctrine.1
+	title = fallout_doctrine.1.title
+	desc = fallout_doctrine.1.desc
+	picture = BOOMER_ANDERSON_SHELTER_eventPicture
+	
+    hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = fallout_doctrine.1.option.a
+    
+        kill_units = { 
+            who = REB
+        }
+    }
+}
+# Rebel Occupation Revert
+province_event = {
+	id = fallout_doctrine.2
+	title = fallout_doctrine.2.title
+	desc = fallout_doctrine.2.desc
+	picture = BOOMER_ANDERSON_SHELTER_eventPicture
+	
+    hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = fallout_doctrine.2.option.a
+    
+        change_controller = owner
+    }
+}

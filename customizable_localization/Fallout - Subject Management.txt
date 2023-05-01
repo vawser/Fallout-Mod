@@ -1,0 +1,605 @@
+#AVIALABLE CUSTOM LOCALISATION KEYS
+#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
+# To not display anything, you can use 'localisation_key = ""'
+# Please add one example sentence for each key.
+
+defined_text = {
+    name = GetTaxationTier
+	
+    text = {
+        localisation_key = TAXATION_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_taxation_1 }
+                NOT = { has_country_modifier = subject_taxation_2 }
+                NOT = { has_country_modifier = subject_taxation_3 }
+                NOT = { has_country_modifier = subject_taxation_4 }
+                NOT = { has_country_modifier = subject_taxation_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = TAXATION_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_taxation_1
+            }
+        }
+    }
+    text = {
+        localisation_key = TAXATION_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_taxation_2
+            }
+        }
+    }
+    text = {
+        localisation_key = TAXATION_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_taxation_3
+            }
+        }
+    }
+    text = {
+        localisation_key = TAXATION_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_taxation_4
+            }
+        }
+    }
+    text = {
+        localisation_key = TAXATION_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_taxation_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetProductionTier
+	
+    text = {
+        localisation_key = PRODUCTION_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_production_1 }
+                NOT = { has_country_modifier = subject_production_2 }
+                NOT = { has_country_modifier = subject_production_3 }
+                NOT = { has_country_modifier = subject_production_4 }
+                NOT = { has_country_modifier = subject_production_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = PRODUCTION_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_production_1
+            }
+        }
+    }
+    text = {
+        localisation_key = PRODUCTION_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_production_2
+            }
+        }
+    }
+    text = {
+        localisation_key = PRODUCTION_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_production_3
+            }
+        }
+    }
+    text = {
+        localisation_key = PRODUCTION_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_production_4
+            }
+        }
+    }
+    text = {
+        localisation_key = PRODUCTION_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_production_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetTradeTier
+	
+    text = {
+        localisation_key = TRADE_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_trade_1 }
+                NOT = { has_country_modifier = subject_trade_2 }
+                NOT = { has_country_modifier = subject_trade_3 }
+                NOT = { has_country_modifier = subject_trade_4 }
+                NOT = { has_country_modifier = subject_trade_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = TRADE_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_trade_1
+            }
+        }
+    }
+    text = {
+        localisation_key = TRADE_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_trade_2
+            }
+        }
+    }
+    text = {
+        localisation_key = TRADE_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_trade_3
+            }
+        }
+    }
+    text = {
+        localisation_key = TRADE_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_trade_4
+            }
+        }
+    }
+    text = {
+        localisation_key = TRADE_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_trade_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetManufacturingTier
+	
+    text = {
+        localisation_key = MANUFACTURING_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_manufacturing_1 }
+                NOT = { has_country_modifier = subject_manufacturing_2 }
+                NOT = { has_country_modifier = subject_manufacturing_3 }
+                NOT = { has_country_modifier = subject_manufacturing_4 }
+                NOT = { has_country_modifier = subject_manufacturing_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = MANUFACTURING_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_manufacturing_1
+            }
+        }
+    }
+    text = {
+        localisation_key = MANUFACTURING_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_manufacturing_2
+            }
+        }
+    }
+    text = {
+        localisation_key = MANUFACTURING_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_manufacturing_3
+            }
+        }
+    }
+    text = {
+        localisation_key = MANUFACTURING_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_manufacturing_4
+            }
+        }
+    }
+    text = {
+        localisation_key = MANUFACTURING_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_manufacturing_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetMilitaryRecruitmentTier
+	
+    text = {
+        localisation_key = MILITARY_RECRUITMENT_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_military_recruitment_1 }
+                NOT = { has_country_modifier = subject_military_recruitment_2 }
+                NOT = { has_country_modifier = subject_military_recruitment_3 }
+                NOT = { has_country_modifier = subject_military_recruitment_4 }
+                NOT = { has_country_modifier = subject_military_recruitment_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = MILITARY_RECRUITMENT_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_military_recruitment_1
+            }
+        }
+    }
+    text = {
+        localisation_key = MILITARY_RECRUITMENT_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_military_recruitment_2
+            }
+        }
+    }
+    text = {
+        localisation_key = MILITARY_RECRUITMENT_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_military_recruitment_3
+            }
+        }
+    }
+    text = {
+        localisation_key = MILITARY_RECRUITMENT_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_military_recruitment_4
+            }
+        }
+    }
+    text = {
+        localisation_key = MILITARY_RECRUITMENT_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_military_recruitment_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetNavalRecruitmentTier
+	
+    text = {
+        localisation_key = NAVAL_RECRUITMENT_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_naval_recruitment_1 }
+                NOT = { has_country_modifier = subject_naval_recruitment_2 }
+                NOT = { has_country_modifier = subject_naval_recruitment_3 }
+                NOT = { has_country_modifier = subject_naval_recruitment_4 }
+                NOT = { has_country_modifier = subject_naval_recruitment_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = NAVAL_RECRUITMENT_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_naval_recruitment_1
+            }
+        }
+    }
+    text = {
+        localisation_key = NAVAL_RECRUITMENT_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_naval_recruitment_2
+            }
+        }
+    }
+    text = {
+        localisation_key = NAVAL_RECRUITMENT_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_naval_recruitment_3
+            }
+        }
+    }
+    text = {
+        localisation_key = NAVAL_RECRUITMENT_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_naval_recruitment_4
+            }
+        }
+    }
+    text = {
+        localisation_key = NAVAL_RECRUITMENT_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_naval_recruitment_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetPolicingTier
+	
+    text = {
+        localisation_key = POLICING_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_policing_1 }
+                NOT = { has_country_modifier = subject_policing_2 }
+                NOT = { has_country_modifier = subject_policing_3 }
+                NOT = { has_country_modifier = subject_policing_4 }
+                NOT = { has_country_modifier = subject_policing_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = POLICING_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_policing_1
+            }
+        }
+    }
+    text = {
+        localisation_key = POLICING_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_policing_2
+            }
+        }
+    }
+    text = {
+        localisation_key = POLICING_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_policing_3
+            }
+        }
+    }
+    text = {
+        localisation_key = POLICING_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_policing_4
+            }
+        }
+    }
+    text = {
+        localisation_key = POLICING_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_policing_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetProselytisationTier
+	
+    text = {
+        localisation_key = PROSELYTISATION_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_proselytisation_1 }
+                NOT = { has_country_modifier = subject_proselytisation_2 }
+                NOT = { has_country_modifier = subject_proselytisation_3 }
+                NOT = { has_country_modifier = subject_proselytisation_4 }
+                NOT = { has_country_modifier = subject_proselytisation_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = PROSELYTISATION_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_proselytisation_1
+            }
+        }
+    }
+    text = {
+        localisation_key = PROSELYTISATION_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_proselytisation_2
+            }
+        }
+    }
+    text = {
+        localisation_key = PROSELYTISATION_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_proselytisation_3
+            }
+        }
+    }
+    text = {
+        localisation_key = PROSELYTISATION_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_proselytisation_4
+            }
+        }
+    }
+    text = {
+        localisation_key = PROSELYTISATION_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_proselytisation_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetColonisationTier
+	
+    text = {
+        localisation_key = COLONISATION_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_colonisation_1 }
+                NOT = { has_country_modifier = subject_colonisation_2 }
+                NOT = { has_country_modifier = subject_colonisation_3 }
+                NOT = { has_country_modifier = subject_colonisation_4 }
+                NOT = { has_country_modifier = subject_colonisation_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = COLONISATION_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_colonisation_1
+            }
+        }
+    }
+    text = {
+        localisation_key = COLONISATION_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_colonisation_2
+            }
+        }
+    }
+    text = {
+        localisation_key = COLONISATION_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_colonisation_3
+            }
+        }
+    }
+    text = {
+        localisation_key = COLONISATION_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_colonisation_4
+            }
+        }
+    }
+    text = {
+        localisation_key = COLONISATION_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_colonisation_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetForceCapacityTier
+	
+    text = {
+        localisation_key = FORCE_CAPACITY_TIER_0
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_force_capacity_1 }
+                NOT = { has_country_modifier = subject_force_capacity_2 }
+                NOT = { has_country_modifier = subject_force_capacity_3 }
+                NOT = { has_country_modifier = subject_force_capacity_4 }
+                NOT = { has_country_modifier = subject_force_capacity_5 }
+            }
+        }
+    }
+    text = {
+        localisation_key = FORCE_CAPACITY_TIER_1
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_force_capacity_1
+            }
+        }
+    }
+    text = {
+        localisation_key = FORCE_CAPACITY_TIER_2
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_force_capacity_2
+            }
+        }
+    }
+    text = {
+        localisation_key = FORCE_CAPACITY_TIER_3
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_force_capacity_3
+            }
+        }
+    }
+    text = {
+        localisation_key = FORCE_CAPACITY_TIER_4
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_force_capacity_4
+            }
+        }
+    }
+    text = {
+        localisation_key = FORCE_CAPACITY_TIER_5
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_force_capacity_5
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetSubjectAssistCooldown
+	
+    text = {
+        localisation_key = SUBJECT_ASSIST_ALLOWED
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_assist_cooldown }
+            }
+        }
+    }
+    text = {
+        localisation_key = SUBJECT_ASSIST_BLOCKED
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_assist_cooldown
+            }
+        }
+    }
+}
+defined_text = {
+    name = GetSubjectExtractCooldown
+	
+    text = {
+        localisation_key = SUBJECT_EXTRACT_ALLOWED
+        trigger = {
+            event_target:current_subject = {
+                NOT = { has_country_modifier = subject_extract_cooldown }
+            }
+        }
+    }
+    text = {
+        localisation_key = SUBJECT_EXTRACT_BLOCKED
+        trigger = {
+            event_target:current_subject = {
+                has_country_modifier = subject_extract_cooldown
+            }
+        }
+    }
+}
