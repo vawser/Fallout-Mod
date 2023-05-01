@@ -1,0 +1,527 @@
+namespace = fallout_status_report
+
+# Status Report
+country_event = {
+	id = fallout_status_report.1
+	title = fallout_status_report.1.title
+	desc = fallout_status_report.1.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    # Adjust National Color
+    option = {
+		name = fallout_status_report.1.option.change_national_color
+        
+        country_event = { id = fallout_color_picker.1 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    
+    # Invest in Head of State
+    option = {
+		name = fallout_status_report.1.option.ruler_investment
+        
+        if = {
+            limit = {
+                has_country_modifier = ruler_investment_cooldown
+            }
+            custom_tooltip = RULER_INVESTMENT_COOLDOWN_TT
+        }
+        else = {
+            country_event = { id = fallout_status_report.10 }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        ai = yes
+                    }
+                    add_country_modifier = {
+                        name = ai_ruler_investment_look_cooldown
+                        duration = 365
+                        hidden = yes
+                    }
+                }
+            }
+        }
+        
+        ai_chance = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { adm_power = 800 }
+                NOT = { dip_power = 800 }
+                NOT = { mil_power = 800 }
+            }
+            
+            modifier = {
+                factor = 0
+                
+                has_country_modifier = ai_ruler_investment_look_cooldown
+            }
+        }
+	}
+    
+    option = {
+		name = fallout_status_report.1.option.exit
+        
+        ai_chance = {
+            factor = 1
+        }
+	}
+}
+
+# Head of State Investment
+country_event = {
+	id = fallout_status_report.10
+	title = fallout_status_report.10.title
+	desc = fallout_status_report.10.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    # ADM
+    option = {
+		name = fallout_status_report.10.option.a
+        
+        trigger = {
+            NOT = { adm = 7 }
+            
+            if = {
+                limit = {
+                    adm = 0
+                    NOT = { adm = 1 }
+                }
+                
+                adm_power = 120
+            }
+            else_if = {
+                limit = {
+                    adm = 1
+                    NOT = { adm = 2 }
+                }
+                
+                adm_power = 240
+            }
+            else_if = {
+                limit = {
+                    adm = 2
+                    NOT = { adm = 3 }
+                }
+                
+                adm_power = 360
+            }
+            else_if = {
+                limit = {
+                    adm = 3
+                    NOT = { adm = 4 }
+                }
+                
+                adm_power = 480
+            }
+            else_if = {
+                limit = {
+                    adm = 4
+                    NOT = { adm = 5 }
+                }
+                
+                adm_power = 600
+            }
+            else_if = {
+                limit = {
+                    adm = 5
+                    NOT = { adm = 6 }
+                }
+                
+                adm_power = 720
+            }
+            else_if = {
+                limit = {
+                    adm = 6
+                    NOT = { adm = 7 }
+                }
+                
+                adm_power = 840
+            }
+        }
+        
+        if = {
+            limit = {
+                adm = 0
+                NOT = { adm = 1 }
+            }
+            
+            add_adm_power = -120
+            change_adm = 1
+        }
+        else_if = {
+            limit = {
+                adm = 1
+                NOT = { adm = 2 }
+            }
+            
+            add_adm_power = -240
+            change_adm = 1
+        }
+        else_if = {
+            limit = {
+                adm = 2
+                NOT = { adm = 3 }
+            }
+            
+            add_adm_power = -360
+            change_adm = 1
+        }
+        else_if = {
+            limit = {
+                adm = 3
+                NOT = { adm = 4 }
+            }
+            
+            add_adm_power = -480
+            change_adm = 1
+        }
+        else_if = {
+            limit = {
+                adm = 4
+                NOT = { adm = 5 }
+            }
+            
+            add_adm_power = -600
+            change_adm = 1
+        }
+        else_if = {
+            limit = {
+                adm = 5
+                NOT = { adm = 6 }
+            }
+            
+            add_adm_power = -720
+            change_adm = 1
+        }
+        else_if = {
+            limit = {
+                adm = 6
+                NOT = { adm = 7 }
+            }
+            
+            add_adm_power = -840
+            change_adm = 1
+        }
+        
+        custom_tooltip = RULER_INVESTMENT_DURATION_TT
+        hidden_effect = {
+            add_country_modifier = {
+                name = ruler_investment_cooldown
+                duration = 1800
+                hidden = yes
+            }
+        }
+        
+        ai_chance = {
+            factor = 1
+        }
+	}
+    
+    # DIP
+    option = {
+		name = fallout_status_report.10.option.b
+        
+        trigger = {
+            NOT = { dip = 7 }
+            
+            if = {
+                limit = {
+                    dip = 0
+                    NOT = { dip = 1 }
+                }
+                
+                dip_power = 120
+            }
+            else_if = {
+                limit = {
+                    dip = 1
+                    NOT = { dip = 2 }
+                }
+                
+                dip_power = 240
+            }
+            else_if = {
+                limit = {
+                    dip = 2
+                    NOT = { dip = 3 }
+                }
+                
+                dip_power = 360
+            }
+            else_if = {
+                limit = {
+                    dip = 3
+                    NOT = { dip = 4 }
+                }
+                
+                dip_power = 480
+            }
+            else_if = {
+                limit = {
+                    dip = 4
+                    NOT = { dip = 5 }
+                }
+                
+                dip_power = 600
+            }
+            else_if = {
+                limit = {
+                    dip = 5
+                    NOT = { dip = 6 }
+                }
+                
+                dip_power = 720
+            }
+            else_if = {
+                limit = {
+                    dip = 6
+                    NOT = { dip = 7 }
+                }
+                
+                dip_power = 840
+            }
+        }
+        
+        if = {
+            limit = {
+                dip = 0
+                NOT = { dip = 1 }
+            }
+            
+            add_dip_power = -120
+            change_dip = 1
+        }
+        else_if = {
+            limit = {
+                dip = 1
+                NOT = { dip = 2 }
+            }
+            
+            add_dip_power = -240
+            change_dip = 1
+        }
+        else_if = {
+            limit = {
+                dip = 2
+                NOT = { dip = 3 }
+            }
+            
+            add_dip_power = -360
+            change_dip = 1
+        }
+        else_if = {
+            limit = {
+                dip = 3
+                NOT = { dip = 4 }
+            }
+            
+            add_dip_power = -480
+            change_dip = 1
+        }
+        else_if = {
+            limit = {
+                dip = 4
+                NOT = { dip = 5 }
+            }
+            
+            add_dip_power = -600
+            change_dip = 1
+        }
+        else_if = {
+            limit = {
+                dip = 5
+                NOT = { dip = 6 }
+            }
+            
+            add_dip_power = -720
+            change_dip = 1
+        }
+        else_if = {
+            limit = {
+                dip = 6
+                NOT = { dip = 7 }
+            }
+            
+            add_dip_power = -840
+            change_dip = 1
+        }
+        
+        custom_tooltip = RULER_INVESTMENT_DURATION_TT
+        hidden_effect = {
+            add_country_modifier = {
+                name = ruler_investment_cooldown
+                duration = 1800
+                hidden = yes
+            }
+        }
+        
+        ai_chance = {
+            factor = 1
+        }
+	}
+    
+    # MIL
+    option = {
+		name = fallout_status_report.10.option.c
+        
+        trigger = {
+            NOT = { mil = 7 }
+            
+            if = {
+                limit = {
+                    mil = 0
+                    NOT = { mil = 1 }
+                }
+                
+                mil_power = 120
+            }
+            else_if = {
+                limit = {
+                    mil = 1
+                    NOT = { mil = 2 }
+                }
+                
+                mil_power = 240
+            }
+            else_if = {
+                limit = {
+                    mil = 2
+                    NOT = { mil = 3 }
+                }
+                
+                mil_power = 360
+            }
+            else_if = {
+                limit = {
+                    mil = 3
+                    NOT = { mil = 4 }
+                }
+                
+                mil_power = 480
+            }
+            else_if = {
+                limit = {
+                    mil = 4
+                    NOT = { mil = 5 }
+                }
+                
+                mil_power = 600
+            }
+            else_if = {
+                limit = {
+                    mil = 5
+                    NOT = { mil = 6 }
+                }
+                
+                mil_power = 720
+            }
+            else_if = {
+                limit = {
+                    mil = 6
+                    NOT = { mil = 7 }
+                }
+                
+                mil_power = 840
+            }
+        }
+        
+        if = {
+            limit = {
+                mil = 0
+                NOT = { mil = 1 }
+            }
+            
+            add_mil_power = -120
+            change_mil = 1
+        }
+        else_if = {
+            limit = {
+                mil = 1
+                NOT = { mil = 2 }
+            }
+            
+            add_mil_power = -240
+            change_mil = 1
+        }
+        else_if = {
+            limit = {
+                mil = 2
+                NOT = { mil = 3 }
+            }
+            
+            add_mil_power = -360
+            change_mil = 1
+        }
+        else_if = {
+            limit = {
+                mil = 3
+                NOT = { mil = 4 }
+            }
+            
+            add_mil_power = -480
+            change_mil = 1
+        }
+        else_if = {
+            limit = {
+                mil = 4
+                NOT = { mil = 5 }
+            }
+            
+            add_mil_power = -600
+            change_mil = 1
+        }
+        else_if = {
+            limit = {
+                mil = 5
+                NOT = { mil = 6 }
+            }
+            
+            add_mil_power = -720
+            change_mil = 1
+        }
+        else_if = {
+            limit = {
+                mil = 6
+                NOT = { mil = 7 }
+            }
+            
+            add_mil_power = -840
+            change_mil = 1
+        }
+        
+        custom_tooltip = RULER_INVESTMENT_DURATION_TT
+        hidden_effect = {
+            add_country_modifier = {
+                name = ruler_investment_cooldown
+                duration = 1800
+                hidden = yes
+            }
+        }
+        
+        ai_chance = {
+            factor = 1
+        }
+	}
+    
+    option = {
+		name = fallout_status_report.10.option.x
+        
+        ai_chance = {
+            factor = 1
+        }
+	}
+    
+    after = {
+        country_event = { id = fallout_status_report.1 }
+    }
+}
+

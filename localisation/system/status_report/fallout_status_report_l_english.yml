@@ -1,0 +1,81 @@
+﻿l_english:
+ #-----------------------------
+ # Modifiers
+ #-----------------------------
+ status_report_cooldown: "Status Report Cooldown"
+ desc_status_report_cooldown: ""
+ 
+ ruler_investment_cooldown: "Head of State Investment Cooldown"
+ desc_ruler_investment_cooldown: ""
+ 
+ ai_ruler_investment_look_cooldown: "AI Ruler Investment Look Cooldown"
+ desc_ai_ruler_investment_look_cooldown: ""
+ 
+ #-----------------------------
+ # Decisions
+ #-----------------------------
+ view_status_report_title: "View Status Report"
+ view_status_report_desc: "View the status report about our state: [Root.GetName]. Also allows for specific actions to be initiated that relate to our head of state: [Root.Monarch.GetTitle] [Root.Monarch.GetName]."
+ 
+ #-----------------------------
+ # Events
+ #-----------------------------
+ fallout_status_report.1.title: "Status Report: [Root.GetName]"
+ fallout_status_report.1.desc: "§YHead of State:§! [Root.Monarch.GetTitle] [Root.Monarch.GetName]\n§YLifespan:§! [Root.GetRulerLifeDurationType]\n§YAdministrative Prowess:§! [Root.GetRulerRank_ADM]\n§YDiplomatic Skill:§! [Root.GetRulerRank_DIP]\n§YMilitary Foresight:§! [Root.GetRulerRank_MIL]"
+ fallout_status_report.1.option.exit: "Exit"
+ fallout_status_report.1.option.change_national_color: "Adjust National Color"
+ fallout_status_report.1.option.ruler_investment: "Invest in Head of State"
+
+ fallout_status_report.10.title: "Status Report: Head of State Investment"
+ fallout_status_report.10.desc: "Divert resources towards mentoring [Root.Monarch.GetTitle] [Root.Monarch.GetName], in the hope that they become a better, more capable leader."
+ fallout_status_report.10.option.a: "Invest in their administrative skill"
+ fallout_status_report.10.option.b: "Invest in their diplomatic skill"
+ fallout_status_report.10.option.c: "Invest in their military skill"
+ fallout_status_report.10.option.x: "Exit"
+ 
+ RULER_INVESTMENT_DURATION_TT: "You will not be able to invest in your Head of State for §Y5§! years."
+ 
+ RULER_INVESTMENT_COOLDOWN_TT: "You have already recently invested in your Head of State. Resources must be replenished before you can do so again."
+
+ ADMINISTRATIVE_SKILL_NEED_1_TT: "You need §Y120§! ADM to improve the Administrative Skill of [Root.Monarch.GetName]."
+ ADMINISTRATIVE_SKILL_NEED_2_TT: "You need §Y240§! ADM to improve the Administrative Skill of [Root.Monarch.GetName]."
+ ADMINISTRATIVE_SKILL_NEED_3_TT: "You need §Y360§! ADM to improve the Administrative Skill of [Root.Monarch.GetName]."
+ ADMINISTRATIVE_SKILL_NEED_4_TT: "You need §Y480§! ADM to improve the Administrative Skill of [Root.Monarch.GetName]."
+ ADMINISTRATIVE_SKILL_NEED_5_TT: "You need §Y600§! ADM to improve the Administrative Skill of [Root.Monarch.GetName]."
+ ADMINISTRATIVE_SKILL_NEED_6_TT: "You need §Y720§! ADM to improve the Administrative Skill of [Root.Monarch.GetName]."
+ ADMINISTRATIVE_SKILL_NEED_7_TT: "You need §Y840§! ADM to improve the Administrative Skill of [Root.Monarch.GetName]."
+ 
+ DIPLOMATIC_SKILL_NEED_1_TT: "You need §Y120§! ADM to improve the Diplomatic Skill of [Root.Monarch.GetName]."
+ DIPLOMATIC_SKILL_NEED_2_TT: "You need §Y240§! ADM to improve the Diplomatic Skill of [Root.Monarch.GetName]."
+ DIPLOMATIC_SKILL_NEED_3_TT: "You need §Y360§! ADM to improve the Diplomatic Skill of [Root.Monarch.GetName]."
+ DIPLOMATIC_SKILL_NEED_4_TT: "You need §Y480§! ADM to improve the Diplomatic Skill of [Root.Monarch.GetName]."
+ DIPLOMATIC_SKILL_NEED_5_TT: "You need §Y600§! ADM to improve the Diplomatic Skill of [Root.Monarch.GetName]."
+ DIPLOMATIC_SKILL_NEED_6_TT: "You need §Y720§! ADM to improve the Diplomatic Skill of [Root.Monarch.GetName]."
+ DIPLOMATIC_SKILL_NEED_7_TT: "You need §Y840§! ADM to improve the Diplomatic Skill of [Root.Monarch.GetName]."
+ 
+ MILITARY_SKILL_NEED_1_TT: "You need §Y120§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
+ MILITARY_SKILL_NEED_2_TT: "You need §Y240§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
+ MILITARY_SKILL_NEED_3_TT: "You need §Y360§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
+ MILITARY_SKILL_NEED_4_TT: "You need §Y480§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
+ MILITARY_SKILL_NEED_5_TT: "You need §Y600§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
+ MILITARY_SKILL_NEED_6_TT: "You need §Y720§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
+ MILITARY_SKILL_NEED_7_TT: "You need §Y840§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
+ 
+ #-----------------------------
+ # Custom Strings
+ #-----------------------------
+ # The spaces are required to justify the text in the right location
+ portrait_spacer:   ""
+ 
+ immortal_life_text: "Immortal"
+ normal_life_text:   "Mortal"
+ 
+ STATUS_REPORT_TT: "View the status report about our state: [Root.GetName]."
+ 
+ ruler_skill_idiotic_text: "Idiotic"
+ ruler_skill_poor_text: "Poor"
+ ruler_skill_lacking_text: "Lacking"
+ ruler_skill_sufficient_text: "Sufficient"
+ ruler_skill_skilled_text: "Skilled"
+ ruler_skill_extraordinary_text: "Extraordinary"
+ ruler_skill_genius_text: "Genius"

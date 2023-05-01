@@ -1,0 +1,34 @@
+country_decisions = {
+	 view_status_report = {
+        color = { 98 101 105 }
+        
+        potential = {
+            always = yes
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+			custom_tooltip = STATUS_REPORT_TT
+            
+            hidden_effect = {
+                country_event = { id = fallout_status_report.1 }
+                
+                add_country_modifier = {
+                    name = status_report_cooldown
+                    duration = 3650
+                    hidden = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                has_country_modifier = status_report_cooldown
+            }
+        }
+    }
+}

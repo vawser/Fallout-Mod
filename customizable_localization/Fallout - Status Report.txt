@@ -1,0 +1,212 @@
+# Status Report - Internal Spacers
+defined_text = {
+    name = GetPortraitSpacer
+	random = no
+    text = {
+        localisation_key = portrait_spacer
+    }
+}
+
+# Status Report - Life Duration
+defined_text = {
+    name = GetRulerLifeDurationType
+	random = no
+    
+    text = {
+        localisation_key = immortal_life_text
+        
+        trigger = {
+            has_immortal_ruler = yes
+        }
+    }
+    text = {
+        localisation_key = normal_life_text
+        
+        trigger = {
+            NOT = { has_immortal_ruler = yes }
+        }
+    }
+}
+
+# Status Report - Administrative Skill
+defined_text = {
+    name = GetRulerRank_ADM
+	random = no
+    
+    text = {
+        localisation_key = ruler_skill_idiotic_text
+        
+        trigger = {
+            NOT = { adm = 1 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_poor_text
+        
+        trigger = {
+            adm = 1
+            NOT = { adm = 2 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_lacking_text
+        
+        trigger = {
+            adm = 2
+            NOT = { adm = 3 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_sufficient_text
+        
+        trigger = {
+            adm = 3
+            NOT = { adm = 4 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_skilled_text
+        
+        trigger = {
+            adm = 4
+            NOT = { adm = 5 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_extraordinary_text
+        
+        trigger = {
+            adm = 5
+            NOT = { adm = 6 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_genius_text
+        
+        trigger = {
+            adm = 6
+        }
+    }
+}
+
+# Status Report - Diplomatic Skill
+defined_text = {
+    name = GetRulerRank_DIP
+	random = no
+    
+    text = {
+        localisation_key = ruler_skill_idiotic_text
+        
+        trigger = {
+            NOT = { dip = 1 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_poor_text
+        
+        trigger = {
+            dip = 1
+            NOT = { dip = 2 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_lacking_text
+        
+        trigger = {
+            dip = 2
+            NOT = { dip = 3 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_sufficient_text
+        
+        trigger = {
+            dip = 3
+            NOT = { dip = 4 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_skilled_text
+        
+        trigger = {
+            dip = 4
+            NOT = { dip = 5 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_extraordinary_text
+        
+        trigger = {
+            dip = 5
+            NOT = { dip = 6 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_genius_text
+        
+        trigger = {
+            dip = 6
+        }
+    }
+}
+
+# Status Report - Military Skill
+defined_text = {
+    name = GetRulerRank_MIL
+	random = no
+    
+    text = {
+        localisation_key = ruler_skill_idiotic_text
+        
+        trigger = {
+            NOT = { mil = 1 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_poor_text
+        
+        trigger = {
+            mil = 1
+            NOT = { mil = 2 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_lacking_text
+        
+        trigger = {
+            mil = 2
+            NOT = { mil = 3 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_sufficient_text
+        
+        trigger = {
+            mil = 3
+            NOT = { mil = 4 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_skilled_text
+        
+        trigger = {
+            mil = 4
+            NOT = { mil = 5 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_extraordinary_text
+        
+        trigger = {
+            mil = 5
+            NOT = { mil = 6 }
+        }
+    }
+    text = {
+        localisation_key = ruler_skill_genius_text
+        
+        trigger = {
+            mil = 6
+        }
+    }
+}
