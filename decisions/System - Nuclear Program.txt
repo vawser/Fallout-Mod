@@ -14,6 +14,8 @@ country_decisions = {
             add_years_of_income = -3
             add_mil_power = -100
 			
+            custom_tooltip = NUKE_GENERATION_TT
+            
             add_country_modifier = {
                 name = nuclear_weapons_programme
                 duration = -1
@@ -21,7 +23,13 @@ country_decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { total_development = 1000 }
+            }
 		}
     }
 
@@ -30,17 +38,24 @@ country_decisions = {
             has_country_modifier = nuclear_weapons_programme
 		}
 		allow = {
-            mil_power = 100
+            mil_power = 25
 		}
 		
 		effect = {
-            add_mil_power = -100
-			
+            add_mil_power = -25
             remove_country_modifier = nuclear_weapons_programme
+            
+            custom_tooltip = NUKE_GENERATION_STOP_TT
 		}
 		
 		ai_will_do = {
-			factor = 0
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                total_development = 1000
+            }
 		}
     }
 }

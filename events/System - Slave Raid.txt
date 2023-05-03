@@ -1,0 +1,91 @@
+namespace = fallout_slave_raid
+
+# Slave Raid Known (victim)
+country_event = {
+	id = fallout_slave_raid.1
+	title = fallout_slave_raid.1.title
+	desc = fallout_slave_raid.1.desc
+    picture = RAIDERS_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_slave_raid.1.option.a
+        
+	}
+}
+
+# Slave Raid (raider)
+country_event = {
+	id = fallout_slave_raid.2
+	title = fallout_slave_raid.2.title
+	desc = fallout_slave_raid.2.desc
+    picture = ENCAMPMENT_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_slave_raid.2.option.a
+ 
+        if = {
+            limit = {
+                has_country_flag = random_seed_1
+            }
+            add_yearly_manpower = 0.2
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_2
+            }
+            add_yearly_manpower = 0.4
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_3
+            }
+            add_yearly_manpower = 0.6
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_4
+            }
+            add_yearly_manpower = 0.8
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_5
+            }
+            add_yearly_manpower = 1
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_6
+            }
+            add_yearly_manpower = 1.2
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_7
+            }
+            add_yearly_manpower = 1.4
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_8
+            }
+            add_yearly_manpower = 1.6
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_9
+            }
+            add_yearly_manpower = 1.8
+        }
+        else_if = {
+            limit = {
+                has_country_flag = random_seed_10
+            }
+            add_yearly_manpower = 2
+        }
+	}
+}

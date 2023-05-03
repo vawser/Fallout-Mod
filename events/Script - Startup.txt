@@ -52,6 +52,9 @@ country_event = {
         name = startup.1.option.a
 
         if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - Start startup" }
+        
+        # Nuclear Stockpile
+        set_variable = { which = nuke_stockpile value = 0 }
     }  
 }
 

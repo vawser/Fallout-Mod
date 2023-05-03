@@ -22,11 +22,6 @@
  return_to_overlord_dialog: "As the overlord of a subject, we can return to the overlord nation at any time."
  
  # --- Covert
- nuke: "Launch Nuclear Warhead"
- nuke_title: "Launch Nuclear Warhead"
- nuke_desc: "We will launch a nuclear warhead into the territory of [From.GetName], destroying one of their provinces."
- nuke_tooltip: "Nuke [From.GetName]"
- nuke_alert_tooltip: "Nuke [From.GetName]"
  
  establish_cult: "Establish Cult"
  establish_cult_title: "Establish Cult"
@@ -130,18 +125,6 @@
  diplomatic_actions.8.desc: "An assassin from [ass_killer.GetName] has attempted to kill our beloved [Root.Monarch.GetTitle] [Root.Monarch.GetName]. The assassin failed, and through torture we elicited the whereabots of who ordered the assassination."
  diplomatic_actions.8.option.a: "They will pay!"
  
- diplomatic_actions.9.title: "Slave Raid"
- diplomatic_actions.9.desc: "Slave Raid"
- diplomatic_actions.9.option.a: "Slave Raid"
- 
- diplomatic_actions.10.title: "Slave Raid by [slave_raider.GetName]"
- diplomatic_actions.10.desc: "Our poor citizens have been raided by dispicable slavers from [slave_raider.GetName]. They will not be forgotten."
- diplomatic_actions.10.option.a: "[slave_raider.GetName] will pay!"
- 
- diplomatic_actions.11.title: "Slave Haul"
- diplomatic_actions.11.desc: "The slavers have successfully captured slaves from [slaver_target.GetName]. Let's see how big their haul was."
- diplomatic_actions.11.option.a: "Wonderful..."
- 
  diplomatic_actions.20.title: "Disrupt Alliance"
  diplomatic_actions.20.desc: "We have targeted [disrupt_target.GetName]. It is time to select which ally of theirs will be victim to our disruption."
  diplomatic_actions.20.option.a: "Incite tensions between [disrupt_target.GetName] and [disrupted_ally.GetName]"
@@ -149,6 +132,16 @@
  diplomatic_actions.21.title: "Engineered Upset"
  diplomatic_actions.21.desc: "We have been victim to an unknown campaign of sabotage. These saboteurs habe sowed chaos between us and our ally, [disrupt_target.GetName]."
  diplomatic_actions.21.option.a: "Oh dear..."
+ 
+ # Slave Raid
+ fallout_slave_raid.1.title: "Target of a Slave Raid"
+ fallout_slave_raid.1.desc: "Our poor citizens have been raided by dispicable slavers from [slave_raid_aggressor.GetName]. They will not be forgotten."
+ fallout_slave_raid.1.option.a: "[slave_raid_aggressor.GetName] will pay!"
+ 
+ fallout_slave_raid.2.title: "Slave Haul"
+ fallout_slave_raid.2.desc: "The slavers have successfully captured slaves from [slave_raid_target.GetName]. Let's see how big their haul was."
+ fallout_slave_raid.2.option.a: "Wonderful..."
+ 
  
  #----------------------------------------------------------------------
  # Tooltip

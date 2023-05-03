@@ -1,0 +1,157 @@
+namespace = fallout_nuclear_program
+
+# Protests against Nuclear Armament
+country_event = {
+	id = fallout_nuclear_program.1
+	title = fallout_nuclear_program.1.title
+	desc = fallout_nuclear_program.1.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_modifier = nuclear_weapons_programme
+    }
+    
+	option = {
+		name = fallout_nuclear_program.1.option.a
+
+        add_stability = -1
+	}
+    option = {
+		name = fallout_nuclear_program.1.option.b
+
+        add_years_of_income = -1
+	}
+}
+
+# Nuclear Accident
+country_event = {
+	id = fallout_nuclear_program.2
+	title = fallout_nuclear_program.2.title
+	desc = fallout_nuclear_program.2.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_modifier = nuclear_weapons_programme
+    }
+    
+	option = {
+		name = fallout_nuclear_program.2.option.a
+
+        add_legitimacy = -10
+        add_horde_unity = -10
+        add_devotion = -10
+        add_republican_tradition = -10
+	}
+    option = {
+		name = fallout_nuclear_program.2.option.b
+
+        add_years_of_income = -1
+	}
+}
+
+# More Investment is Needed
+country_event = {
+	id = fallout_nuclear_program.3
+	title = fallout_nuclear_program.3.title
+	desc = fallout_nuclear_program.3.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_modifier = nuclear_weapons_programme
+    }
+    
+	option = {
+		name = fallout_nuclear_program.3.option.a
+
+        add_mil_power = -50
+	}
+    option = {
+		name = fallout_nuclear_program.3.option.b
+
+        add_country_modifier = {
+            name = angry_elites
+            duration = 730
+        }
+	}
+}
+
+# Lack of Scientists
+country_event = {
+	id = fallout_nuclear_program.4
+	title = fallout_nuclear_program.4.title
+	desc = fallout_nuclear_program.4.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_modifier = nuclear_weapons_programme
+    }
+    
+	option = {
+		name = fallout_nuclear_program.4.option.a
+
+        add_adm_power = -50
+	}
+    option = {
+		name = fallout_nuclear_program.54.option.b
+
+        add_years_of_income = -1
+	}
+}
+
+# Warhead Failure
+country_event = {
+	id = fallout_nuclear_program.5
+	title = fallout_nuclear_program.5.title
+	desc = fallout_nuclear_program.5.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_modifier = nuclear_weapons_programme
+    }
+    
+	option = {
+		name = fallout_nuclear_program.5.option.a
+
+        add_prestige = -15
+	}
+    option = {
+		name = fallout_nuclear_program.5.option.b
+
+        add_years_of_income = -1
+	}
+}
+
+# Nuclear Warhead
+country_event = {
+	id = fallout_nuclear_program.10
+	title = fallout_nuclear_program.10.title
+	desc = fallout_nuclear_program.10.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        has_country_modifier = nuclear_weapons_programme
+    }
+    
+	option = {
+		name = fallout_nuclear_program.10.option.a
+
+        change_variable = {
+            which = nuke_stockpile
+            value = 1
+        }
+        add_prestige = 10
+	}
+}
+

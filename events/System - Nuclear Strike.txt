@@ -1,0 +1,2075 @@
+namespace = fallout_nuclear_strike
+
+# Targeting Matrix
+country_event = {
+	id = fallout_nuclear_strike.1
+	title = fallout_nuclear_strike.1.title
+	desc = fallout_nuclear_strike.1.desc
+    picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            event_target:target_country = {
+                build_domain_selection_list = { 
+                    TAG = ROOT
+                }
+            }
+        }
+    }
+	
+    # Portal Options
+    option = {
+        name = fallout_nuclear_strike.1.option.1
+        goto = domain_option_1
+
+        trigger = {
+            has_country_flag = show_domain_option_1
+        }
+
+        hidden_effect = {
+            event_target:domain_option_1 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.2
+        goto = domain_option_2
+
+        trigger = {
+            has_country_flag = show_domain_option_2
+        }
+
+        hidden_effect = {
+            event_target:domain_option_2 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.3
+        goto = domain_option_3
+
+        trigger = {
+            has_country_flag = show_domain_option_3
+        }
+
+        hidden_effect = {
+            event_target:domain_option_3 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.4
+        goto = domain_option_4
+
+        trigger = {
+            has_country_flag = show_domain_option_4
+        }
+
+        hidden_effect = {
+            event_target:domain_option_4 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.5
+        goto = domain_option_5
+
+        trigger = {
+            has_country_flag = show_domain_option_5
+        }
+
+        hidden_effect = {
+            event_target:domain_option_5 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.6
+        goto = domain_option_6
+
+        trigger = {
+            has_country_flag = show_domain_option_6
+        }
+
+        hidden_effect = {
+            event_target:domain_option_6 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.7
+        goto = domain_option_7
+
+        trigger = {
+            has_country_flag = show_domain_option_7
+        }
+
+        hidden_effect = {
+            event_target:domain_option_7 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.8
+        goto = domain_option_8
+
+        trigger = {
+            has_country_flag = show_domain_option_8
+        }
+
+        hidden_effect = {
+            event_target:domain_option_8 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.9
+        goto = domain_option_9
+
+        trigger = {
+            has_country_flag = show_domain_option_9
+        }
+
+        hidden_effect = {
+            event_target:domain_option_9 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.10
+        goto = domain_option_10
+
+        trigger = {
+            has_country_flag = show_domain_option_10
+        }
+
+        hidden_effect = {
+            event_target:domain_option_10 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.11
+        goto = domain_option_11
+
+        trigger = {
+            has_country_flag = show_domain_option_11
+        }
+
+        hidden_effect = {
+            event_target:domain_option_11 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.12
+        goto = domain_option_12
+
+        trigger = {
+            has_country_flag = show_domain_option_12
+        }
+
+        hidden_effect = {
+            event_target:domain_option_12 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.13
+        goto = domain_option_13
+
+        trigger = {
+            has_country_flag = show_domain_option_13
+        }
+
+        hidden_effect = {
+            event_target:domain_option_13 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.14
+        goto = domain_option_14
+
+        trigger = {
+            has_country_flag = show_domain_option_14
+        }
+
+        hidden_effect = {
+            event_target:domain_option_14 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.15
+        goto = domain_option_15
+
+        trigger = {
+            has_country_flag = show_domain_option_15
+        }
+
+        hidden_effect = {
+            event_target:domain_option_15 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.16
+        goto = domain_option_16
+
+        trigger = {
+            has_country_flag = show_domain_option_16
+        }
+
+        hidden_effect = {
+            event_target:domain_option_16 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.17
+        goto = domain_option_17
+
+        trigger = {
+            has_country_flag = show_domain_option_17
+        }
+
+        hidden_effect = {
+            event_target:domain_option_17 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.18
+        goto = domain_option_18
+
+        trigger = {
+            has_country_flag = show_domain_option_18
+        }
+
+        hidden_effect = {
+            event_target:domain_option_18 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.19
+        goto = domain_option_19
+
+        trigger = {
+            has_country_flag = show_domain_option_19
+        }
+
+        hidden_effect = {
+            event_target:domain_option_19 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.20
+        goto = domain_option_20
+
+        trigger = {
+            has_country_flag = show_domain_option_20
+        }
+
+        hidden_effect = {
+            event_target:domain_option_20 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.21
+        goto = domain_option_21
+
+        trigger = {
+            has_country_flag = show_domain_option_21
+        }
+
+        hidden_effect = {
+            event_target:domain_option_21 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.22
+        goto = domain_option_22
+
+        trigger = {
+            has_country_flag = show_domain_option_22
+        }
+
+        hidden_effect = {
+            event_target:domain_option_22 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.23
+        goto = domain_option_23
+
+        trigger = {
+            has_country_flag = show_domain_option_23
+        }
+
+        hidden_effect = {
+            event_target:domain_option_23 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.24
+        goto = domain_option_24
+
+        trigger = {
+            has_country_flag = show_domain_option_24
+        }
+
+        hidden_effect = {
+            event_target:domain_option_24 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.25
+        goto = domain_option_25
+
+        trigger = {
+            has_country_flag = show_domain_option_25
+        }
+
+        hidden_effect = {
+            event_target:domain_option_25 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.26
+        goto = domain_option_26
+
+        trigger = {
+            has_country_flag = show_domain_option_26
+        }
+
+        hidden_effect = {
+            event_target:domain_option_26 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.27
+        goto = domain_option_27
+
+        trigger = {
+            has_country_flag = show_domain_option_27
+        }
+
+        hidden_effect = {
+            event_target:domain_option_27 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.28
+        goto = domain_option_28
+
+        trigger = {
+            has_country_flag = show_domain_option_28
+        }
+
+        hidden_effect = {
+            event_target:domain_option_28 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.29
+        goto = domain_option_29
+
+        trigger = {
+            has_country_flag = show_domain_option_29
+        }
+
+        hidden_effect = {
+            event_target:domain_option_29 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.30
+        goto = domain_option_30
+
+        trigger = {
+            has_country_flag = show_domain_option_30
+        }
+
+        hidden_effect = {
+            event_target:domain_option_30 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.31
+        goto = domain_option_31
+
+        trigger = {
+            has_country_flag = show_domain_option_31
+        }
+
+        hidden_effect = {
+            event_target:domain_option_31 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.32
+        goto = domain_option_32
+
+        trigger = {
+            has_country_flag = show_domain_option_32
+        }
+
+        hidden_effect = {
+            event_target:domain_option_32 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.33
+        goto = domain_option_33
+
+        trigger = {
+            has_country_flag = show_domain_option_33
+        }
+
+        hidden_effect = {
+            event_target:domain_option_33 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.34
+        goto = domain_option_34
+
+        trigger = {
+            has_country_flag = show_domain_option_34
+        }
+
+        hidden_effect = {
+            event_target:domain_option_34 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.35
+        goto = domain_option_35
+
+        trigger = {
+            has_country_flag = show_domain_option_35
+        }
+
+        hidden_effect = {
+            event_target:domain_option_35 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.36
+        goto = domain_option_36
+
+        trigger = {
+            has_country_flag = show_domain_option_36
+        }
+
+        hidden_effect = {
+            event_target:domain_option_36 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.37
+        goto = domain_option_37
+
+        trigger = {
+            has_country_flag = show_domain_option_37
+        }
+
+        hidden_effect = {
+            event_target:domain_option_37 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.38
+        goto = domain_option_38
+
+        trigger = {
+            has_country_flag = show_domain_option_38
+        }
+
+        hidden_effect = {
+            event_target:domain_option_38 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.39
+        goto = domain_option_39
+
+        trigger = {
+            has_country_flag = show_domain_option_39
+        }
+
+        hidden_effect = {
+            event_target:domain_option_39 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.40
+        goto = domain_option_40
+
+        trigger = {
+            has_country_flag = show_domain_option_40
+        }
+
+        hidden_effect = {
+            event_target:domain_option_40 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.41
+        goto = domain_option_41
+
+        trigger = {
+            has_country_flag = show_domain_option_41
+        }
+
+        hidden_effect = {
+            event_target:domain_option_41 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.42
+        goto = domain_option_42
+
+        trigger = {
+            has_country_flag = show_domain_option_42
+        }
+
+        hidden_effect = {
+            event_target:domain_option_42 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.43
+        goto = domain_option_43
+
+        trigger = {
+            has_country_flag = show_domain_option_43
+        }
+
+        hidden_effect = {
+            event_target:domain_option_43 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.44
+        goto = domain_option_44
+
+        trigger = {
+            has_country_flag = show_domain_option_44
+        }
+
+        hidden_effect = {
+            event_target:domain_option_44 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.45
+        goto = domain_option_45
+
+        trigger = {
+            has_country_flag = show_domain_option_45
+        }
+
+        hidden_effect = {
+            event_target:domain_option_45 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.46
+        goto = domain_option_46
+
+        trigger = {
+            has_country_flag = show_domain_option_46
+        }
+
+        hidden_effect = {
+            event_target:domain_option_46 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.47
+        goto = domain_option_47
+
+        trigger = {
+            has_country_flag = show_domain_option_47
+        }
+
+        hidden_effect = {
+            event_target:domain_option_47 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.48
+        goto = domain_option_48
+
+        trigger = {
+            has_country_flag = show_domain_option_48
+        }
+
+        hidden_effect = {
+            event_target:domain_option_48 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.49
+        goto = domain_option_49
+
+        trigger = {
+            has_country_flag = show_domain_option_49
+        }
+
+        hidden_effect = {
+            event_target:domain_option_49 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.50
+        goto = domain_option_50
+
+        trigger = {
+            has_country_flag = show_domain_option_50
+        }
+
+        hidden_effect = {
+            event_target:domain_option_50 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.51
+        goto = domain_option_51
+
+        trigger = {
+            has_country_flag = show_domain_option_51
+        }
+
+        hidden_effect = {
+            event_target:domain_option_51 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.52
+        goto = domain_option_52
+
+        trigger = {
+            has_country_flag = show_domain_option_52
+        }
+
+        hidden_effect = {
+            event_target:domain_option_52 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.53
+        goto = domain_option_53
+
+        trigger = {
+            has_country_flag = show_domain_option_53
+        }
+
+        hidden_effect = {
+            event_target:domain_option_53 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.54
+        goto = domain_option_54
+
+        trigger = {
+            has_country_flag = show_domain_option_54
+        }
+
+        hidden_effect = {
+            event_target:domain_option_54 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.55
+        goto = domain_option_55
+
+        trigger = {
+            has_country_flag = show_domain_option_55
+        }
+
+        hidden_effect = {
+            event_target:domain_option_55 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.56
+        goto = domain_option_56
+
+        trigger = {
+            has_country_flag = show_domain_option_56
+        }
+
+        hidden_effect = {
+            event_target:domain_option_56 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.57
+        goto = domain_option_57
+
+        trigger = {
+            has_country_flag = show_domain_option_57
+        }
+
+        hidden_effect = {
+            event_target:domain_option_57 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.58
+        goto = domain_option_58
+
+        trigger = {
+            has_country_flag = show_domain_option_58
+        }
+
+        hidden_effect = {
+            event_target:domain_option_58 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.59
+        goto = domain_option_59
+
+        trigger = {
+            has_country_flag = show_domain_option_59
+        }
+
+        hidden_effect = {
+            event_target:domain_option_59 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.60
+        goto = domain_option_60
+
+        trigger = {
+            has_country_flag = show_domain_option_60
+        }
+
+        hidden_effect = {
+            event_target:domain_option_60 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.61
+        goto = domain_option_61
+
+        trigger = {
+            has_country_flag = show_domain_option_61
+        }
+
+        hidden_effect = {
+            event_target:domain_option_61 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.62
+        goto = domain_option_62
+
+        trigger = {
+            has_country_flag = show_domain_option_62
+        }
+
+        hidden_effect = {
+            event_target:domain_option_62 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.63
+        goto = domain_option_63
+
+        trigger = {
+            has_country_flag = show_domain_option_63
+        }
+
+        hidden_effect = {
+            event_target:domain_option_63 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.64
+        goto = domain_option_64
+
+        trigger = {
+            has_country_flag = show_domain_option_64
+        }
+
+        hidden_effect = {
+            event_target:domain_option_64 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.65
+        goto = domain_option_65
+
+        trigger = {
+            has_country_flag = show_domain_option_65
+        }
+
+        hidden_effect = {
+            event_target:domain_option_65 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.66
+        goto = domain_option_66
+
+        trigger = {
+            has_country_flag = show_domain_option_66
+        }
+
+        hidden_effect = {
+            event_target:domain_option_66 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.67
+        goto = domain_option_67
+
+        trigger = {
+            has_country_flag = show_domain_option_67
+        }
+
+        hidden_effect = {
+            event_target:domain_option_67 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.68
+        goto = domain_option_68
+
+        trigger = {
+            has_country_flag = show_domain_option_68
+        }
+
+        hidden_effect = {
+            event_target:domain_option_68 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.69
+        goto = domain_option_69
+
+        trigger = {
+            has_country_flag = show_domain_option_69
+        }
+
+        hidden_effect = {
+            event_target:domain_option_69 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.70
+        goto = domain_option_70
+
+        trigger = {
+            has_country_flag = show_domain_option_70
+        }
+
+        hidden_effect = {
+            event_target:domain_option_70 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.71
+        goto = domain_option_71
+
+        trigger = {
+            has_country_flag = show_domain_option_71
+        }
+
+        hidden_effect = {
+            event_target:domain_option_71 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.72
+        goto = domain_option_72
+
+        trigger = {
+            has_country_flag = show_domain_option_72
+        }
+
+        hidden_effect = {
+            event_target:domain_option_72 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.73
+        goto = domain_option_73
+
+        trigger = {
+            has_country_flag = show_domain_option_73
+        }
+
+        hidden_effect = {
+            event_target:domain_option_73 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.74
+        goto = domain_option_74
+
+        trigger = {
+            has_country_flag = show_domain_option_74
+        }
+
+        hidden_effect = {
+            event_target:domain_option_74 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.75
+        goto = domain_option_75
+
+        trigger = {
+            has_country_flag = show_domain_option_75
+        }
+
+        hidden_effect = {
+            event_target:domain_option_75 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.76
+        goto = domain_option_76
+
+        trigger = {
+            has_country_flag = show_domain_option_76
+        }
+
+        hidden_effect = {
+            event_target:domain_option_76 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.77
+        goto = domain_option_77
+
+        trigger = {
+            has_country_flag = show_domain_option_77
+        }
+
+        hidden_effect = {
+            event_target:domain_option_77 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.78
+        goto = domain_option_78
+
+        trigger = {
+            has_country_flag = show_domain_option_78
+        }
+
+        hidden_effect = {
+            event_target:domain_option_78 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.79
+        goto = domain_option_79
+
+        trigger = {
+            has_country_flag = show_domain_option_79
+        }
+
+        hidden_effect = {
+            event_target:domain_option_79 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.80
+        goto = domain_option_80
+
+        trigger = {
+            has_country_flag = show_domain_option_80
+        }
+
+        hidden_effect = {
+            event_target:domain_option_80 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.81
+        goto = domain_option_81
+
+        trigger = {
+            has_country_flag = show_domain_option_81
+        }
+
+        hidden_effect = {
+            event_target:domain_option_81 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.82
+        goto = domain_option_82
+
+        trigger = {
+            has_country_flag = show_domain_option_82
+        }
+
+        hidden_effect = {
+            event_target:domain_option_82 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.83
+        goto = domain_option_83
+
+        trigger = {
+            has_country_flag = show_domain_option_83
+        }
+
+        hidden_effect = {
+            event_target:domain_option_83 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.84
+        goto = domain_option_84
+
+        trigger = {
+            has_country_flag = show_domain_option_84
+        }
+
+        hidden_effect = {
+            event_target:domain_option_84 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.85
+        goto = domain_option_85
+
+        trigger = {
+            has_country_flag = show_domain_option_85
+        }
+
+        hidden_effect = {
+            event_target:domain_option_85 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.86
+        goto = domain_option_86
+
+        trigger = {
+            has_country_flag = show_domain_option_86
+        }
+
+        hidden_effect = {
+            event_target:domain_option_86 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.87
+        goto = domain_option_87
+
+        trigger = {
+            has_country_flag = show_domain_option_87
+        }
+
+        hidden_effect = {
+            event_target:domain_option_87 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.88
+        goto = domain_option_88
+
+        trigger = {
+            has_country_flag = show_domain_option_88
+        }
+
+        hidden_effect = {
+            event_target:domain_option_88 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.89
+        goto = domain_option_89
+
+        trigger = {
+            has_country_flag = show_domain_option_89
+        }
+
+        hidden_effect = {
+            event_target:domain_option_89 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.90
+        goto = domain_option_90
+
+        trigger = {
+            has_country_flag = show_domain_option_90
+        }
+
+        hidden_effect = {
+            event_target:domain_option_90 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.91
+        goto = domain_option_91
+
+        trigger = {
+            has_country_flag = show_domain_option_91
+        }
+
+        hidden_effect = {
+            event_target:domain_option_91 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.92
+        goto = domain_option_92
+
+        trigger = {
+            has_country_flag = show_domain_option_92
+        }
+
+        hidden_effect = {
+            event_target:domain_option_92 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.93
+        goto = domain_option_93
+
+        trigger = {
+            has_country_flag = show_domain_option_93
+        }
+
+        hidden_effect = {
+            event_target:domain_option_93 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.94
+        goto = domain_option_94
+
+        trigger = {
+            has_country_flag = show_domain_option_94
+        }
+
+        hidden_effect = {
+            event_target:domain_option_94 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.95
+        goto = domain_option_95
+
+        trigger = {
+            has_country_flag = show_domain_option_95
+        }
+
+        hidden_effect = {
+            event_target:domain_option_95 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.96
+        goto = domain_option_96
+
+        trigger = {
+            has_country_flag = show_domain_option_96
+        }
+
+        hidden_effect = {
+            event_target:domain_option_96 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.97
+        goto = domain_option_97
+
+        trigger = {
+            has_country_flag = show_domain_option_97
+        }
+
+        hidden_effect = {
+            event_target:domain_option_97 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.98
+        goto = domain_option_98
+
+        trigger = {
+            has_country_flag = show_domain_option_98
+        }
+
+        hidden_effect = {
+            event_target:domain_option_98 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+    option = {
+        name = fallout_nuclear_strike.1.option.99
+        goto = domain_option_99
+
+        trigger = {
+            has_country_flag = show_domain_option_99
+        }
+
+        hidden_effect = {
+            event_target:domain_option_99 = {
+                save_event_target_as = selected_domain_province
+            }
+        }
+
+        custom_tooltip = SELECTED_THIS_PROVINCE_TT
+
+		ai_chance = {
+			factor = 10
+		}
+    }
+
+    # Exit
+	option = {
+		name = fallout_nuclear_strike.1.option.exit
+        
+        custom_tooltip = REROLL_SELECTION_TT
+        
+        hidden_effect = {
+            set_country_flag = ignore_primary_effect
+        }
+        
+        ai_chance = {
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                has_country_flag = show_domain_option_1
+            }
+		}
+	}
+    
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = ignore_primary_effect
+                    }
+                }
+                
+                apply_nuclear_strike_effect = yes
+            }
+            else = {
+                clr_country_flag = ignore_primary_effect
+            }
+            
+            reset_domain_options = yes
+            reset_domain_selection = yes
+            
+            event_target:target_country = {
+                reset_domain_selection = yes
+            }
+        }
+    }
+}
+
+# Nuked!
+country_event = {
+	id = fallout_nuclear_strike.2
+	title = fallout_nuclear_strike.2.title
+	desc = fallout_nuclear_strike.2.desc
+    picture = NUKE_MUSHROOM_eventPicture
+    
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_nuclear_strike.2.option.a
+        
+        add_stability = -1
+        
+        add_opinion = {
+            modifier = they_nuked_us
+            who = event_target:aggressor
+        }
+        
+        add_casus_belli = {
+            target = event_target:aggressor
+            type = cb_retribution
+            months = 120
+        }
+	}
+}

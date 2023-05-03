@@ -1,10 +1,10 @@
 #---------------------------------------
 # Launch Nuclear Warhead
 #---------------------------------------
-nuke = {
+launch_nuclear_warhead = {
 	category = covert
 	alert_index = 40
-	alert_tooltip = nuke_alert_tooltip
+	alert_tooltip = launch_nuclear_warhead_alert_tooltip
 	
 	require_acceptance = no
 	
@@ -16,25 +16,31 @@ nuke = {
 	}
     
 	is_allowed = {
+        NOT = { has_country_modifier = nuclear_strike_cooldown }
         check_variable = {
             which = nuke_stockpile
             value = 1
         }
 	}
 	on_accept = {
-        subtract_variable = {
-            which = nuke_stockpile
-            value = 1
+        hidden_effect = {
+            subtract_variable = {
+                which = nuke_stockpile
+                value = 1
+            }
+            add_country_modifier = {
+                name = nuclear_strike_cooldown
+                duration = 365
+                hidden = yes
+            }
         }
-        FROM = { country_event = { id = nukes.1 } }
-	}
-	on_decline = {
-        subtract_variable = {
-            which = nuke_stockpile
-            value = 1
+        
+        FROM = {
+            save_event_target_as = target_country
         }
-        FROM = { country_event = { id = nukes.1 } }
+        country_event = { id = fallout_nuclear_strike.1 }
 	}
+	on_decline = { }
 	
 	ai_acceptance = {
         add_entry = {
@@ -43,10 +49,9 @@ nuke = {
 		}
 	}
 	ai_will_do = {
-        always = yes
+        war_with = FROM
 	}
 }
-
 
 #---------------------------------------
 # Establish Cult
@@ -314,18 +319,45 @@ conduct_slave_raid = {
         }
 	}
 	on_accept = {
-        log = "Conduct Slave Raid used by [Root.GetName]"
         add_spy_network_in = { who = FROM value = -50 }
         
-        # Prevent overlay if different countries use the action at the same time.
-        every_country = {
-            clr_country_flag = sent_slave_raid
-            clr_country_flag = got_slave_raid
+        hidden_effect = {
+            clr_country_flag = slave_raid_discovered
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = random_seed_1
+                        has_country_flag = random_seed_2
+                        has_country_flag = random_seed_3
+                        has_country_flag = random_seed_4
+                        has_country_flag = random_seed_5
+                    }
+                }
+                set_country_flag = slave_raid_discovered
+                FROM = {
+                    add_opinion = {
+                        who = ROOT
+                        modifier = slaver
+                    }
+                }
+            }
+            
+            save_event_target_as = slave_raid_aggressor
+            FROM = {
+                save_event_target_as = slave_raid_target
+            }
         }
         
-        # Allow the event to be triggered
-        set_country_flag = sent_slave_raid
-        FROM = { set_country_flag = got_slave_raid }
+        if = {
+            limit = {
+                has_country_flag = slave_raid_discovered
+            }
+            country_event = { id = fallout_slave_raid.2 }
+            FROM = { country_event = { id = fallout_slave_raid.1 } }
+        }
+        else = {
+            country_event = { id = fallout_slave_raid.2 }
+        }
         
         FROM = {
             add_country_modifier = { 
@@ -334,27 +366,7 @@ conduct_slave_raid = {
             }
         }
 	}
-	on_decline =
-	{
-        add_spy_network_in = { who = FROM value = -50 }
-        
-        # Prevent overlay if different countries use the action at the same time.
-        every_country = {
-            clr_country_flag = sent_slave_raid
-            clr_country_flag = got_slave_raid
-        }
-        
-        # Allow the event to be triggered
-        set_country_flag = sent_slave_raid
-        FROM = { set_country_flag = got_slave_raid }
-        
-        FROM = {
-            add_country_modifier = { 
-                name = target_of_slave_raid
-                duration = 3650
-            }
-        }
-	}
+	on_decline = { }
 	
 	ai_acceptance = {
         add_entry = {
