@@ -109,8 +109,8 @@ NDiplomacy = {
 	PEACE_IMPACT_DIP_SCORE = 0.25,
 	PEACE_IMPACT_MIL_SCORE = 0.25,
 
-	AUTONOMY_WARSCORE_COST_MODIFIER = 0.25,			-- How much autonomy reduces score by (at 1, 50% autonomy = 50% reduction)
-	GREAT_PROJECT_WARSCORE_COST_MODIFIER = 0.25,	-- How much each great project multiplies a war score cost by (so 1 GP adds 33%, 2 add 66% etc)
+	AUTONOMY_WARSCORE_COST_MODIFIER = 0.33,			-- How much autonomy reduces score by (at 1, 50% autonomy = 50% reduction)
+	GREAT_PROJECT_WARSCORE_COST_MODIFIER = 0.33,	-- How much each great project multiplies a war score cost by (so 1 GP adds 33%, 2 add 66% etc)
 
 	NUM_POSSIBLE_RIVALS = 3,
 	RIVAL_PRESTIGE_BONUS = 0.25,
@@ -237,13 +237,13 @@ NDiplomacy = {
 	AE_PRIMITIVES = -0.75, -- less AE from primitives
 
 	-- Peace Option Effects, base values for the winner. The loser gets the inverse.
-	PO_DEMAND_PROVINCES_AE = 1.5, 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
-	PO_RETURN_CORES_AE = 0.5, 					-- (Per core, only applied if returning cores to vassals of winner)
-	PO_FORM_PU_AE = 0.125, 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
-	PO_CONCEDE_COLONIAL_AE = 0.35,
-	PO_BECOME_VASSAL_AE = 0.75, 					-- _DDEF_PO_BECOME_VASSAL_AE = 10, (Per development)
-	PO_FORCE_JOIN_EMPIRE_AE = 0.35, 					-- _DDEF_PO_BECOME_VASSAL_AE = 10, (Per development)
-	PO_TRANSFER_VASSAL_AE = 0.35,
+	PO_DEMAND_PROVINCES_AE = 0.6, 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
+	PO_RETURN_CORES_AE = 0.4, 					-- (Per core, only applied if returning cores to vassals of winner)
+	PO_FORM_PU_AE = 0.20, 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
+	PO_CONCEDE_COLONIAL_AE = 0.2,
+	PO_BECOME_VASSAL_AE = 0.5, 					-- _DDEF_PO_BECOME_VASSAL_AE = 10, (Per development)
+	PO_FORCE_JOIN_EMPIRE_AE = 0.2, 					-- _DDEF_PO_BECOME_VASSAL_AE = 10, (Per development)
+	PO_TRANSFER_VASSAL_AE = 0.3,
 	PO_ANNEX_PRESTIGE = 0.25, 						-- _DDEF_PO_ANNEX_PRESTIGE = 10, (No effect on loser :)
 	PO_DEMAND_PROVINCES_PRESTIGE = 0.25, 				-- _DDEF_PO_DEMAND_PROVINCES_PRESTIGE = 10, (Per development)
 	PO_PILLAGE_CAPITAL_PRESTIGE = 0, 				-- _DDEF_PO_PILLAGE_CAPITAL_PRESTIGE = 10, (Per development)
@@ -880,8 +880,8 @@ NCountry = {
 	GALLEY_INLAND_SEA_COAST_RATIO = 0.75, 			-- % of ports that need to be inland seas for galleys to be considered important
 	REBEL_BREAK_STABILITY_SET = 0,					-- Stability will be set to this value when rebels break country.
 	REBEL_BREAK_EXHAUSTION_SET = 0, 				-- Exhaustion will be set to this value when rebels break country.
-	REVOLT_SIZE_DEVELOPMENT_MULTIPLIER = 0.03,		-- Multiplied with the province's development
-	REVOLT_SIZE_BASE = 3,
+	REVOLT_SIZE_DEVELOPMENT_MULTIPLIER = 0.1,		-- Multiplied with the province's development
+	REVOLT_SIZE_BASE = 5,
 	REVOLT_TECH_IMPACT = 0.03, 			-- % each tech increases size of rebels by this percent.
 	REVOLT_TECH_MORALE = 0.01,			-- 1% per tech level
 
@@ -889,7 +889,7 @@ NCountry = {
 	REBEL_ARTILLERY_INCREASE_LEVEL_1_SIZE = 0.1,	-- The increase in artillery as fraction of total troops given to rebels
 	REBEL_ARTILLERY_INCREASE_LEVEL_2_TECH = 16,		-- Tech level at which REBEL_ARTILLERY_INCREASE_LEVEL_2_SIZE is applied
 	REBEL_ARTILLERY_INCREASE_LEVEL_2_SIZE = 0.15,	-- The increase in artillery as fraction of total troops given to rebels (does not stack with level 1)
-	MIGRATION_DEPLETION_TIME = 7200,				-- How many days a province needs to recover from migrants
+	MIGRATION_DEPLETION_TIME = 7300,				-- How many days a province needs to recover from migrants
 	BASE_TARIFF = 0.10,								-- Basic part of colonies income that goes to tariffs
 	TARIFF_INCREASE_STEP = 0.05,					-- Increase on each boost
 	TARIFF_LIBERTY_INCREASE = 1.0,					-- Liberty increase for each % tariffs
@@ -2044,8 +2044,8 @@ NAI = {
 	DIPLOMATIC_ACTION_CURRY_FAVORS_ALLIANCE_FACTOR = 4, 
 
 
-	INVADING_BRAVERY = 1.3,									-- If (defender strength) / (invader strength) > INVADING_BRAVERY, the AI won't attempt a naval invasion
-	INVADING_MAX_AWAY_RATIO = 1.7,							-- AI will never send more than this ratio to invade (Measured in strength)
+	INVADING_BRAVERY = 1.0,									-- If (defender strength) / (invader strength) > INVADING_BRAVERY, the AI won't attempt a naval invasion
+	INVADING_MAX_AWAY_RATIO = 0.45,							-- AI will never send more than this ratio to invade (Measured in strength)
 	INVASION_FLEET_DISTANCE_PENALTY = 0.2,					-- Lower number makes AI more likely to select ships far away for transports
 	INVASION_FLEET_MISSION_PENALTY = 1.0,					-- Lower number makes AI more likely to select ships for transports that are busy with missions
 	INVASION_HOME_FLEET_PENALTY = 3.0,						-- Multiplied by triangular travel distance, only for home fleets
@@ -2065,13 +2065,13 @@ NAI = {
 	ADVISOR_MIN_SKILL_RELUCTANT_FIRE = 2,						-- AI will be reuluctant to fire advisors with skill above this (due to prior investment)
 	ADVISOR_PROMOTION_AGE_CUTOFF = 61,							-- AI will not promote advisors above this age
 	FIRE_ADVISOR_LOAN_REQUIREMENT = 5,							-- AI will not fire advisors until it has this many loans
-	MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.2,					-- AI will only assign armies larger that this to a region
-	MAX_ARMIES_NEW_REGION_ASSIGN_ALGORITHM = 80,				-- Max. amount of armies to use in new region assignment algorithm (fall back to old one)
+	MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.10,					-- AI will only assign armies larger that this to a region
+	MAX_ARMIES_NEW_REGION_ASSIGN_ALGORITHM = 12,				-- Max. amount of armies to use in new region assignment algorithm (fall back to old one)
 	MAX_TASKS_NEW_REGION_ASSIGN_ALGORITHM = 100,				-- Max. amount of tasks to use in new region assignment algorithm (fall back to old one)
 	ELECTORAL_REFORMATION_CONVERT_TRESHOLD = 0.1,				-- How much of an electors development needs to be a reformed religion for it to try and reform
 	TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.0,				-- How many times the cost of the investment must be in the treasury to consider buying it
-	ASSIMILATION_INTEREST_AMOUNT_FACTOR = 200,					-- Influence on assimilation interest from number of provinces left to conquer
-	INVASION_ARMY_LOOKUP_INTERVAL_ON_FAILURE = 12,				-- If AI fails to find an army for an invasion it will try again in this number of days
+	ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10,					-- Influence on assimilation interest from number of provinces left to conquer
+	INVASION_ARMY_LOOKUP_INTERVAL_ON_FAILURE = 15,				-- If AI fails to find an army for an invasion it will try again in this number of days
 	CHARTER_COMPANY_BASE_RELUCTANCE = -50,						-- Base reluctance to giving away provinces in charter company diplo action
 	CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE_MULTIPLIER = 1.5,	-- How much development multiplied by to provide resistance
 	CHARTER_COMPANY_GREAT_PROJECT_VALUE_RELUCTANCE = 0.1,		-- Great Project value * this = reluctance
@@ -2088,10 +2088,10 @@ NAI = {
 	CHARTER_COMPANY_RIVAL_PENALTY = 1000,
 	WAR_WARSCORE_TO_JOIN = -100,								-- Minimum warscore for the AI to join a call for arms
 	WAR_MIN_WARSCORE_TO_JOIN = -25,								-- Starting warscore for the AI to join a call for arms
-	ARMY_DISTANCE_SCORE_IMPACT = 1.1,							-- Army <-> province distance impact on province evaluation
-	BORDER_DISTANCE_SCORE_IMPACT = 8.0,							-- Border <-> province distance impact on province evaluation
-	IMPORANT_PROVINCE_THRESHOLD = 0.035,							-- AI will try to defend provinces under threat worth more than this percentage of total development
-	REGION_PLANNING_HOMELAND_PRIORIZATION = 7.5,				-- Homeland priorization when assigning armies to regions (only applied when actually threatened)
+	ARMY_DISTANCE_SCORE_IMPACT = 0.5,							-- Army <-> province distance impact on province evaluation
+	BORDER_DISTANCE_SCORE_IMPACT = 3.0,							-- Border <-> province distance impact on province evaluation
+	IMPORANT_PROVINCE_THRESHOLD = 0.05,							-- AI will try to defend provinces under threat worth more than this percentage of total development
+	REGION_PLANNING_HOMELAND_PRIORIZATION = 5.1,				-- Homeland priorization when assigning armies to regions (only applied when actually threatened)
 	MISSIONARY_MAINTENANCE_SHARE = 0.2,							-- The most an AI will spend of its income on a missionary
 	BUY_INDULGENCE_BASE_AI_DESIRE = 0.5,						-- AI desire for buy indulgence if curia controller has negative opinion of it, multiplied by budget/cost
 	BUY_INDULGENCE_OPINION_AI_DESIRE_MULTIPLIER = -0.01,
