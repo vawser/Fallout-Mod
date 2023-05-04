@@ -13,11 +13,14 @@ country_event = {
 	
 	trigger = {
 		OR = {
-            has_government_attribute = tribal
+            government = tribal
             has_reform = legion_reform
         }
 		is_at_war = no
-		NOT = { religion_group = religion_group_christianity }
+		NOT = { religion = catholic }
+		NOT = { religion = baptist }
+		NOT = { religion = presbyterian }
+		NOT = { religion = mormon }
 		NOT = { had_recent_war = 2 }
 	}
 
@@ -52,7 +55,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-            has_government_attribute = tribal
+            government = tribal
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = PIT
@@ -103,7 +106,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-            has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 		}
 		is_at_war = yes
@@ -146,7 +149,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-            has_government_attribute = tribal
+            government = tribal
             has_reform = legion_reform
 		}
 	}
@@ -181,7 +184,10 @@ country_event = {
 		}
 		any_neighbor_country = {  
 			NOT = { has_opinion = { who = ROOT value = 50 } }
-			NOT = { religion_group = religion_group_christianity }
+			NOT = { religion = catholic }
+			NOT = { religion = baptist }
+			NOT = { religion = presbyterian }
+			NOT = { religion = mormon }
 			OR = {
 				NOT = { has_slavery_forbidden = yes	}
 				tag = GD1
@@ -190,7 +196,7 @@ country_event = {
                 has_reform = wolf_pack_reform
 			}
 			OR = {
-				has_government_attribute = tribal
+				government = tribal
                 has_reform = legion_reform
 				tag = GD1
 				tag = GD2
@@ -230,14 +236,14 @@ country_event = {
 
 	trigger = {
 		OR = {
-            has_government_attribute = tribal
+            government = tribal
             has_reform = legion_reform
 		}
         
 		any_neighbor_country = {  
 			has_opinion = { who = ROOT value = 0 }
 			OR = {
-                has_government_attribute = tribal
+                government = tribal
                 has_reform = legion_reform
             }
 		}
@@ -351,7 +357,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-            has_government_attribute = tribal
+            government = tribal
             has_reform = legion_reform
 			tag = GD1
 			tag = GD2
@@ -521,7 +527,10 @@ country_event = {
 				has_narcotics_allowed = yes # Drug Policy is unrestricted
 			}
 			NOT = { has_narcotics_forbidden = yes }
-			NOT = { religion_group = religion_group_christianity }
+			NOT = { religion = catholic }
+			NOT = { religion = baptist }
+			NOT = { religion = presbyterian }
+			NOT = { religion = mormon }
 		}
         
         ai_chance = { factor = 25 }
@@ -565,7 +574,7 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_government_attribute = tribal
+		government = tribal
 		NOT = { manpower_percentage = 0.5 }
 	}
 
@@ -595,11 +604,14 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 		}
 		NOT = { manpower_percentage = 0.5 }
-		NOT = { religion_group = religion_group_christianity }
+		NOT = { religion = catholic }
+		NOT = { religion = baptist }
+		NOT = { religion = presbyterian }
+		NOT = { religion = mormon }
 		is_at_war = no
 	}
 
@@ -636,7 +648,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 		}
 	}
@@ -681,7 +693,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 		}
 	}
@@ -723,7 +735,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 		}
 	}
@@ -762,7 +774,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 		}
 		has_heir = yes
@@ -799,10 +811,10 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 			religion = cult_of_mars
-            religion = tribalism
+            religion = survivalist
 			tag = PIT
 		}
 		NOT = {
@@ -844,7 +856,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = ENC
@@ -881,7 +893,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = MTM
@@ -923,7 +935,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = MTM
@@ -967,7 +979,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = tribal
+			government = tribal
             has_reform = legion_reform
 			religion = cult_of_mars
 			tag = ENC
@@ -1010,7 +1022,7 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-        has_government_attribute = tribal
+        government = tribal
 		legitimacy_equivalent = 100
 		is_at_war = yes	
 		NOT = {

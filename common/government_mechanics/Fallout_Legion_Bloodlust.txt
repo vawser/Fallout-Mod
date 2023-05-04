@@ -52,12 +52,12 @@ legion_bloodlust_mechanic = {
 			cooldown_years = 5
             
 			trigger = {
-                NOT = { has_country_modifier = legion_bloodlust_scorch_the_earth }
+                NOT = { has_country_modifier = bloodlust_scorch_the_earth }
 			}
             
 			effect = {
                 add_country_modifier = {
-                    name = legion_bloodlust_scorch_the_earth
+                    name = bloodlust_scorch_the_earth
                     duration = 1800
                 }
                 

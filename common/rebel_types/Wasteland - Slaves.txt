@@ -1,5 +1,7 @@
+#------------------------------------------------------
+# Slaves
+#------------------------------------------------------
 slave_rebels = {
-
 	color = { 120 100 170 }
 
 	area = nation_rebel_tag 			
@@ -106,9 +108,8 @@ slave_rebels = {
  		culture = REB
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "slave_rebels.txt - siege_won_effect - [Root.GetName]" }
-		add_nationalism = 10 # Add ten extra years of nationalism
-        add_local_autonomy = 100
+		add_nationalism = 10
+        add_local_autonomy = 25
 	}
 	
 	# Country scope
@@ -126,7 +127,6 @@ slave_rebels = {
 	
 	# Country scope
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "slave_rebels.txt - demands_enforced_effect - [Root.GetName]" }
 		add_prestige = -10	
         every_owned_province = {
             limit = {

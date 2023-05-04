@@ -1,8 +1,7 @@
-######################################################################
-# Nationalist rebels. Freedom!!!
-######################################################################
+#------------------------------------------------------
+# Separatists
+#------------------------------------------------------
 nationalist_rebels = {
-
 	color = { 25 180 25 }
 
 	area = nation_rebel_tag 			    # Stays within provinces of their rebel tag
@@ -10,7 +9,7 @@ nationalist_rebels = {
 	defection = nation_rebel_tag			# If the country seeks independence, defection specifies what type of provinces it wants.
 	independence = nation_rebel_tag 		# Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
 	defect_delay = 60				        # Can spontaneously declare independence after 60 months (earliest)
-	unit_transfer = yes				    # Units switch allegiance after enforcing demands.
+	unit_transfer = yes				        # Units switch allegiance after enforcing demands.
 	gfx_type = culture_province	
 	will_relocate = yes	
 	
@@ -149,7 +148,6 @@ nationalist_rebels = {
  		culture = REB
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "nationalist.txt - siege_won_effect - [Root.GetName]" }
 		if = {
 			limit = { NOT = { is_core = REB } }
 			add_core = REB
@@ -172,7 +170,13 @@ nationalist_rebels = {
 	
 	# Country scope
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "nationalist.txt - demands_enforced_effect - [Root.GetName]" }
+        hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		add_prestige = -10	
 		if = {
 			limit = {

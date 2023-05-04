@@ -80,63 +80,62 @@ force = {
 
 subsystem = {
 	
+	# values that can be curves or values, with or without variation
+	# always local time
+	
+	# fixed values, cannot be curves, cannot add variation
+	max_amount = X
+	
+	sort = "depth" 
+	#invert = yes
+	texture = {
+		shader = "ParticleAdditive"   #ParticleAdditive   #ParticleAlphaBlend 
+		file = "gfx/particles/TEXTURE.dds"   
+		#x = 2	
+		#y = 2	
+	}
+	
+	emitter_type = "TYPE ->" #"box" #"point" #"sphere"
+	sphere_emitter_radius = { 0 0 }
+	sphere_emitter_pitch = { 0 0 }
+	sphere_emitter_yaw = { 0 0 }
+	
+	box_emitter_x = { 0 0 }
+	box_emitter_y = { 0 0 }
+	box_emitter_z = { 0 0 }
+	
+	position 		= {	x = 0.0 y = 0.0 z = 0.0 }
+	emitter_yaw 	= { 0 0 }  
+	emitter_pitch 	= { 0 0 }	
+	
+	start = { 0 }				
+	duration = 1
+	emission = { 100 }
+	
+	velocity = { 0 }
+	velocity_pitch = { 0 0 }
+	velocity_yaw =  { 0 0 }
+	
+	rotation = { 0 0 }
 
-		# values that can be curves or values, with or without variation
-		# always local time
+	life = { 1 0 }
+	size = { 1 0 }
 		
-		# fixed values, cannot be curves, cannot add variation
-		max_amount = X
-		
-		sort = "depth" 
-		#invert = yes
-		texture = {
-			shader = "ParticleAdditive"   #ParticleAdditive   #ParticleAlphaBlend 
-			file = "gfx/particles/TEXTURE.dds"   
-			#x = 2	
-			#y = 2	
-		}
-		
-		emitter_type = "TYPE ->" #"box" #"point" #"sphere"
-		sphere_emitter_radius = { 0 0 }
-		sphere_emitter_pitch = { 0 0 }
-		sphere_emitter_yaw = { 0 0 }
-		
-		box_emitter_x = { 0 0 }
-		box_emitter_y = { 0 0 }
-		box_emitter_z = { 0 0 }
-		
-		position 		= {	x = 0.0 y = 0.0 z = 0.0 }
-		emitter_yaw 	= { 0 0 }  
-		emitter_pitch 	= { 0 0 }	
-		
-		start = { 0 }				
-		duration = 1
-		emission = { 100 }
-		
-		velocity = { 0 }
-		velocity_pitch = { 0 0 }
-		velocity_yaw =  { 0 0 }
-		
-		rotation = { 0 0 }
+	# values that can be curves or values, with or without variation
+	# 'spawn'/'system'/'particle' time is valid
 
-		life = { 1 0 }
-		size = { 1 0 }
-			
-		# values that can be curves or values, with or without variation
-		# 'spawn'/'system'/'particle' time is valid
+	color = { 
+		r = { 255 }
+		g = { 255 }
+		b = { 255 }
+		alpha = { 255 }
+	}
 
-		color = { 
-			r = { 255 }
-			g = { 255 }
-			b = { 255 }
-			alpha = { 255 }
-		}
+	force = {
+		type = "turbulence"
+		name = "chaos"
+		amount = 10.0
+	}
+}	
 
 
-
-
-
-		# Forces
-		force =
-	}	
-		

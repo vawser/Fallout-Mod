@@ -1,3 +1,6 @@
+#------------------------------------------------------
+# Baptist
+#------------------------------------------------------
 baptist_rebels = {
     color = { 85 128 138 }
     
@@ -6,7 +9,7 @@ baptist_rebels = {
 	religion = baptist
 	defection = religion			            # Defects to countries of their religion
 	defect_delay = 120				            # Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
-	independence = none				# Does not strive for independence
+	independence = none				            # Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes	
@@ -25,6 +28,7 @@ baptist_rebels = {
 	# Possible handle actions
 	handle_action_negotiate = yes
 	handle_action_send_missionary = yes		
+	handle_action_stability = no
 	
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
@@ -125,7 +129,6 @@ baptist_rebels = {
 		}
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_baptist.txt - siege_won_effect - [Root.GetName]" }
 		custom_tooltip = religious_rebels_seige_effect_tooltip
 		hidden_effect = {
 			if = {
@@ -159,11 +162,7 @@ baptist_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		OR = {
-			religion_group = religion_group_christianity
-			dominant_religion = baptist
-			government = theocracy
-		}
+		dominant_religion = baptist
 	}
 	
 	# Country scope
@@ -176,17 +175,16 @@ baptist_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_baptist.txt - demands_enforced_effect - [Root.GetName]" }
-		if = {
+        if = {
 			limit = {
-				NOT = { religion_group = religion_group_christianity }
+				NOT = { dominant_religion = baptist }
 			}
-			add_prestige = -40
+			add_prestige = -50
 			every_owned_province = {
 				limit = {
 					has_rebel_faction = REB
 				}
-				add_local_autonomy = 50
+				add_local_autonomy = 20
 			}
 		}
 		if = {

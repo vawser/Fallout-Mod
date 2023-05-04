@@ -2,11 +2,11 @@ country_decisions = {
 	assemble_a_raiding_party = {
 		potential = {
             is_humanlike_administration = yes
-			has_government_attribute = tribal
+			government = tribal
 			NOT = { has_country_modifier = assembled_raiding_party }
 		}
 		allow =  {
-            has_government_attribute = tribal
+            government = tribal
 			is_at_war = yes
             years_of_income = 0.1
 		}
@@ -31,15 +31,15 @@ country_decisions = {
 	construct_chem_lab = {
 		potential = {
             is_humanlike_administration = yes
-			has_government_attribute = tribal
+			government = tribal
 			NOT = { has_country_modifier = chem_lab }
-			NOT = {
-				tag = TWM
-				religion_group = religion_group_christianity
-			}
+			NOT = { tag = TWM }
+			NOT = { religion = catholic }
+			NOT = { religion = baptist }
+			NOT = { religion = presbyterian }
 		}
 		allow =  {
-            has_government_attribute = tribal
+            government = tribal
 			years_of_income = 1
 			has_narcotics_allowed = yes
 		}

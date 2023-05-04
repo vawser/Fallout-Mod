@@ -1,17 +1,15 @@
-######################################################################
-# "Anti Tax" rebels. The oppressed.
-######################################################################
+#------------------------------------------------------
+# Anti-Tax
+#------------------------------------------------------
 anti_tax_rebels = {
-	
 	color = { 40 140 210 }
 	
-	area = nation 					# Stays within the nation
+	area = nation                   # Stays within the nation
 	government = any
-	defection = none					# Will defect to the "best" alternative.
+	defection = none                # Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 120
 	gfx_type = culture_province
-	will_relocate = yes	
 	
 	resilient = no					# Disbands on retreat
 	reinforcing = no				# Does not receive reinforcements
@@ -35,7 +33,8 @@ anti_tax_rebels = {
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
 		factor = 2
-		modifier = {
+		
+        modifier = {
 			factor = 0.5
 			is_overseas = yes
 		}
@@ -51,7 +50,6 @@ anti_tax_rebels = {
 				war_exhaustion = 4
 			}
 		}
-
 		modifier = {
 			factor = 0.5
 			owner = {
@@ -90,7 +88,6 @@ anti_tax_rebels = {
  		NOT = { local_autonomy = 50 }
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "anti_tax.txt - siege_won_effect - [Root.GetName]" }
 		add_local_autonomy = 10	
 	}
 	
@@ -109,7 +106,13 @@ anti_tax_rebels = {
 	
 	# Country scope
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "anti_tax.txt - demands_enforced_effect - [Root.GetName]" }
+        hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		every_owned_province = {
 			limit = {
 				has_rebel_faction = REB

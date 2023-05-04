@@ -1,3 +1,6 @@
+#------------------------------------------------------
+# Lord of the Pitt
+#------------------------------------------------------
 lord_of_the_pitt_rebels = {
     color = { 110 44 160 }
     
@@ -6,7 +9,7 @@ lord_of_the_pitt_rebels = {
 	religion = lord_of_the_pitt
 	defection = religion			            # Defects to countries of their religion
 	defect_delay = 120				            # Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
-	independence = none				# Does not strive for independence
+	independence = none				            # Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes	
@@ -24,7 +27,9 @@ lord_of_the_pitt_rebels = {
 
 	# Possible handle actions
 	handle_action_negotiate = yes
-	handle_action_send_missionary = yes		
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes			
 	
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
@@ -153,10 +158,7 @@ lord_of_the_pitt_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		OR = {
-			religion_group = religion_group_postwar
-			dominant_religion = lord_of_the_pitt
-		}
+		dominant_religion = lord_of_the_pitt
 	}
 	
 	# Country scope
@@ -171,7 +173,7 @@ lord_of_the_pitt_rebels = {
 	demands_enforced_effect = {
 		if = {
 			limit = {
-				NOT = { religion_group = religion_group_postwar }
+				NOT = { dominant_religion = lord_of_the_pitt }
 			}
 			add_prestige = -50
 			every_owned_province = {

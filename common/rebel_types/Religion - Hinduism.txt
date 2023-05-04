@@ -1,3 +1,6 @@
+#------------------------------------------------------
+# Hinduism
+#------------------------------------------------------
 hinduism_rebels = {
     color = { 13 167 86 }
     
@@ -6,7 +9,7 @@ hinduism_rebels = {
 	religion = hinduism
 	defection = religion			            # Defects to countries of their religion
 	defect_delay = 120				            # Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
-	independence = none				# Does not strive for independence
+	independence = none				            # Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes	
@@ -127,7 +130,6 @@ hinduism_rebels = {
 		}
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_hinduism.txt - siege_won_effect - [Root.GetName]" }
 		custom_tooltip = religious_rebels_seige_effect_tooltip
 		hidden_effect = {
 			if = {
@@ -160,10 +162,7 @@ hinduism_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		OR = {
-			religion_group = religion_group_dharmics
-			dominant_religion = hinduism
-		}
+		dominant_religion = hinduism
 	}
 	
 	# Country scope
@@ -176,10 +175,9 @@ hinduism_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_hinduism.txt - demands_enforced_effect - [Root.GetName]" }
 		if = {
 			limit = {
-				NOT = { religion_group = religion_group_dharmics }
+				NOT = { dominant_religion = hinduism }
 			}
 			add_prestige = -50
 			every_owned_province = {

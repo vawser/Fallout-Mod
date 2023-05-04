@@ -104,7 +104,7 @@ royal_marriage = {
 			OR = {
 				AND = {
 					is_alien_administration = yes # Aliens can't breed with men
-					FROM = { is_alien_administration = yes # Aliens can breed with other aliens }
+					FROM = { is_alien_administration = yes } # Aliens can breed with other aliens 
 				}
 				AND = {
 					OR = {

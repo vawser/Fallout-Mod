@@ -861,7 +861,7 @@ pious_personality = {
 	}
 
 	allow = {
-		government = theocratic_government
+		government = theocracy
 	}
 	
 	chance = {
@@ -3536,7 +3536,7 @@ iron_crowned_personality = {
 
 peasant_revolt_leader_personality = {
 	
-	allow = { has_government_attribute = is_peasants_republic }
+	allow = { always = no }
 	morale_damage = 0.1
 	global_unrest = -1
 	nation_designer_cost = 30

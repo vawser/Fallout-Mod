@@ -771,7 +771,6 @@ cb_maya_expansion = {
 		is_religion_reformed = no
 		FROM = {
 			NOT = { is_subject_of = ROOT }
-			religion_group = pagan
 		}
 		is_neighbor_of = FROM
 	}
@@ -935,7 +934,6 @@ cb_world_crusade = {
 					cb_on_overseas = yes
 					always = no
 				}
-				FROM = { religion_group = pagan }
 			}
 		}
 		NOT = { religion_group = FROM }

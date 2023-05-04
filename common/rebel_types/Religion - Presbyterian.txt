@@ -1,6 +1,6 @@
-######################################################################
-# presbyterian rebels. Disgruntled fanatics.
-######################################################################
+#------------------------------------------------------
+# Presbyterian
+#------------------------------------------------------
 presbyterian_rebels = {
 
 	color = { 230 175 175 }
@@ -157,10 +157,7 @@ presbyterian_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		OR = {
-			religion_group = christian
-			dominant_religion = presbyterian
-		}
+		dominant_religion = presbyterian
 	}
 	
 	# Country scope
@@ -175,7 +172,7 @@ presbyterian_rebels = {
 	demands_enforced_effect = {
 		if = {
 			limit = {
-				NOT = { religion_group = christian }
+				NOT = { dominant_religion = presbyterian }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -201,17 +198,6 @@ presbyterian_rebels = {
 			}
 			change_religion = presbyterian
 			force_converted = yes
-		}
-		if = {
-			limit = {
-				NOT = { religion = presbyterian }
-				NOT = { dominant_religion = presbyterian }
-				religion_group = christian
-			}
-			add_country_modifier = {
-				name = "heretic_tolerance"
-				duration = 3650
-			}
 		}
 	}
 }

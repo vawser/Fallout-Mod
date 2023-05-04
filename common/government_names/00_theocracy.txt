@@ -25,33 +25,6 @@ gov_catholic_theocracy = {
 		religion = catholic
 	}
 }
-gov_orthodox_theocracy = {
-	rank = {
-		1 = FM_METROPOLIS
-		2 = FM_METROPOLIS
-		3 = FM_PATRIARCHATE
-	}
-	
-	ruler_male = {
-		1 = FM_BISHOP
-		2 = FM_ARCHBISHOP
-		3 = FM_PATRIARCH
-	}
-	
-	ruler_female = {
-		1 = FM_BISHOP
-		2 = FM_ARCHBISHOP
-		3 = FM_MATRIARCH
-	}
-	
-	trigger = {
-		has_reform = theocracy_reform
-		OR = {
-			religion = orthodox
-			religion = coptic
-		}
-	}
-}
 gov_protestant_theocracy = {
 	rank = {
 		1 = FM_THEOCRACY
@@ -74,7 +47,7 @@ gov_protestant_theocracy = {
 	trigger = {
 		has_reform = theocracy_reform
         OR = {
-            religion = protestant
+            religion = presbyterian
             religion = baptist
         }
 	}

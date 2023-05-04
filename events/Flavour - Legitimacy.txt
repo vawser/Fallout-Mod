@@ -10,8 +10,8 @@ country_event = {
     is_triggered_only = yes
     
 	trigger = {
-        has_government_attribute = monarchy
-        NOT = { has_government_attribute = tribal }
+        government = monarchy
+        NOT = { government = tribal }
 	}
 
     immediate = {
@@ -63,8 +63,8 @@ country_event = {
     is_triggered_only = yes
     
 	trigger = {
-        has_government_attribute = monarchy
-        NOT = { has_government_attribute = tribal }
+        government = monarchy
+        NOT = { government = tribal }
 	}
 
     immediate = {

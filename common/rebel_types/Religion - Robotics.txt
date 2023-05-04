@@ -1,12 +1,15 @@
+#------------------------------------------------------
+# Robotics
+#------------------------------------------------------
 robotics_rebels = {
 	color = { 42 226 15 }
     
-	area = nation				# Sticks to provinces of their nation
+	area = nation				    # Sticks to provinces of their nation
 	government = any
 	religion = robotics
-	defection = religion				# Defects to countries of their religion
+	defection = religion            # Defects to countries of their religion
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
-	independence = none			# Does not strive for independence
+	independence = none			    # Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes	
@@ -130,7 +133,6 @@ robotics_rebels = {
 		}
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_robotics.txt - siege_won_effect - [Root.GetName]" }
 		custom_tooltip = religious_rebels_seige_effect_tooltip
 		hidden_effect = {
 			if = {
@@ -163,10 +165,7 @@ robotics_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		OR = {
-			religion_group = religion_group_postwar
-			dominant_religion = robotics
-		}
+		dominant_religion = robotics
 	}
 	
 	# Country scope
@@ -179,10 +178,9 @@ robotics_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_robotics.txt - demands_enforced_effect - [Root.GetName]" }
 		if = {
 			limit = {
-				NOT = { religion_group = religion_group_postwar }
+				NOT = { dominant_religion = robotics }
 			}
 			add_prestige = -50
 			every_owned_province = {

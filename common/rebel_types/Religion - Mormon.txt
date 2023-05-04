@@ -1,3 +1,6 @@
+#------------------------------------------------------
+# Mormon
+#------------------------------------------------------
 mormon_rebels = {
     color = { 234 172 200 }
     
@@ -6,7 +9,7 @@ mormon_rebels = {
 	religion = mormon
 	defection = religion			            # Defects to countries of their religion
 	defect_delay = 120				            # Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
-	independence = none				# Does not strive for independence
+	independence = none				            # Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes	
@@ -127,7 +130,6 @@ mormon_rebels = {
 		}
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_mormon.txt - siege_won_effect - [Root.GetName]" }
 		custom_tooltip = religious_rebels_seige_effect_tooltip
 		hidden_effect = {
 			if = {
@@ -160,10 +162,7 @@ mormon_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		OR = {
-			religion_group = religion_group_christianity
-			dominant_religion = mormon
-		}
+		dominant_religion = mormon
 	}
 	
 	# Country scope
@@ -176,10 +175,9 @@ mormon_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_mormon.txt - demands_enforced_effect - [Root.GetName]" }
 		if = {
 			limit = {
-				NOT = { religion_group = religion_group_christianity }
+				NOT = { dominant_religion = mormon }
 			}
 			add_prestige = -50
 			every_owned_province = {

@@ -1,3 +1,6 @@
+#------------------------------------------------------
+# Taoism
+#------------------------------------------------------
 taoism_rebels = {
     color = { 58 220 57 }
     
@@ -127,7 +130,6 @@ taoism_rebels = {
 		}
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_taoism.txt - siege_won_effect - [Root.GetName]" }
 		custom_tooltip = religious_rebels_seige_effect_tooltip
 		hidden_effect = {
 			if = {
@@ -160,10 +162,7 @@ taoism_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		OR = {
-			religion_group = religion_group_eastern
-			dominant_religion = taoism
-		}
+		dominant_religion = taoism
 	}
 	
 	# Country scope
@@ -176,10 +175,9 @@ taoism_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "rebels_taoism.txt - demands_enforced_effect - [Root.GetName]" }
 		if = {
 			limit = {
-				NOT = { religion_group = religion_group_eastern }
+				NOT = { dominant_religion = taoism }
 			}
 			add_prestige = -50
 			every_owned_province = {

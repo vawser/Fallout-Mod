@@ -1,14 +1,20 @@
+#------------------------------------------------------
+# Bright Brotherhood
+#------------------------------------------------------
 rebels_bright_brotherhood = {
-
-	area = nation # Stays within the nation
-	government = theocracy
+    color = { 75 243 115 }
+    
+	area = nation 					            # Sticks to provinces of their nation
+	government = theocracy 				        # Desires Theocracy
 	religion = bright_brotherhood
-	defection = religion				# Prefers its religion
-	independence = none			# Does not strive for independence
-	unit_transfer = yes
-	gfx_type = ghoul_gfx	
-	
-	resilient = yes
+	defection = religion			            # Defects to countries of their religion
+	defect_delay = 120				            # Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				            # Does not strive for independence
+	unit_transfer = no
+	gfx_type = culture_province
+	will_relocate = yes	
+    
+	resilient = no
 	reinforcing = yes
 	general = yes
 	smart = yes
@@ -27,49 +33,59 @@ rebels_bright_brotherhood = {
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
 		factor = 1
-		modifier = {
-			factor = 2
-			culture_group = ghoul_group
-            owner = {
-                NOT = { culture_group = ghoul_group }
-            }
+		
+        modifier = {
+			factor = 0.5
+			is_overseas = yes
 		}
+        modifier = {
+			factor = 0.0
+			owner = { religion = ROOT }
+		}
+        modifier = {
+			factor = 5
+			owner = { NOT = { religion = ROOT } }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { religion = bright_brotherhood }
+		}
+		modifier = {
+			factor = 0.001
+			tolerance_to_this = 5
+		}
+		modifier = {
+			factor = 0.5
+			tolerance_to_this = 2
+		}
+		modifier = {
+			factor = 5.0
+			owner = { has_country_flag = religious_turmoil }
+		}		
 		modifier = {
 			factor = 2000
 			has_missionary = yes
 		}
-        		modifier = {
+		modifier = {
 			factor = 2
-			culture_group = ghoul_group
-           			owner = {
-                			culture_group = ghoul_group
-       			}
+			NOT = { tolerance_to_this = 1 }
 		}
 		modifier = {
-			factor = 0
-			owner = { tag = GHH }
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
 		}
 		modifier = {
-			factor = 0
-			OR = {
-				culture = hater
-				owner = { primary_culture = hater }
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				culture = culture_ghoul
-				religion = bright_brotherhood
-			}
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
 		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
-		modifier = {
-			factor = 0.1
+		
+        modifier = {
+			factor = 0.5
 			units_in_province = 1
 		}
 		modifier = {
@@ -77,8 +93,22 @@ rebels_bright_brotherhood = {
 			controlled_by = REB
 		}
 		modifier = {
-			factor = 10
-			is_capital = yes
+			factor = 0.0
+			religion = bright_brotherhood
+			owner = { religion = bright_brotherhood }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = bright_brotherhood }
+			any_neighbor_province = {
+	 			religion = bright_brotherhood
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = bright_brotherhood
 		}
 		modifier = {
 			factor = 1.5
@@ -92,13 +122,6 @@ rebels_bright_brotherhood = {
 			factor = 1.5
 			unrest = 6
 		}
-		modifier = {
-			factor = 10
-			culture_group = ghoul_group
-			owner = {
-				NOT = { culture_group = ghoul_group }
-		            }
-		}
 	}
  
  	# Province Scope
@@ -107,7 +130,6 @@ rebels_bright_brotherhood = {
  	}
 	
 	siege_won_effect = {
-		if = { limit = { has_global_flag = enable_common_logging } log = "rebels_bright_brotherhood.txt - siege_won_effect - [Root.GetName]" }
 		custom_tooltip = religious_rebels_seige_effect_tooltip
 		hidden_effect = {
 			if = {
@@ -141,8 +163,6 @@ rebels_bright_brotherhood = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = religion_group_pagan
-			religion_group = religion_group_atomic
 			culture_group = ghoul_group
 			dominant_religion = bright_brotherhood
 		}
@@ -158,16 +178,19 @@ rebels_bright_brotherhood = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
-		if = { limit = { has_global_flag = enable_common_logging } log = "rebels_bright_brotherhood.txt - demands_enforced_effect - [Root.GetName]" }
+        hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
-				NOT = {
-					religion_group = religion_group_pagan
-					religion_group = religion_group_atomic
-				}
+				NOT = { dominant_religion = bright_brotherhood }
 			}
-			add_prestige = -100
-			add_accepted_culture = ghoul
+            
+			add_prestige = -50
 			every_owned_province = {
 				limit = {
 					has_rebel_faction = REB
@@ -180,15 +203,15 @@ rebels_bright_brotherhood = {
 				NOT = { religion = bright_brotherhood }
 				OR = {
 					dominant_religion = bright_brotherhood
-					religion_group = religion_group_pagan
-					religion_group = religion_group_atomic
 					culture_group = ghoul_group
 				}
 			}
+            
 			change_religion = bright_brotherhood
 			force_converted = yes
 		}
+        
 		add_accepted_culture = ghoul
-        		add_stability = -3
+        add_stability = -1
 	}
 }

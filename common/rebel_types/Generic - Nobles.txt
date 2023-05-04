@@ -1,12 +1,11 @@
-######################################################################
-# Disgruntled nobles.
-######################################################################
+#------------------------------------------------------
+# Nobles
+#------------------------------------------------------
 noble_rebels = {
-
 	color = { 179 75 75 }
 
 	area = nation 					# Stays within the nation
-	government = any
+	government = monarchy
 	defection = none				# Does not defect
 	independence = none				# Does not strive for independence
 	unit_transfer = no
@@ -97,7 +96,6 @@ noble_rebels = {
 		NOT = { local_autonomy = 50 }
 	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "noble.txt - siege_won_effect - [Root.GetName]" }
 		add_local_autonomy = 10
 	}
 	
@@ -116,7 +114,13 @@ noble_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "noble.txt - demands_enforced_effect - [Root.GetName]" }
+        hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		every_owned_province = {
 			limit = {
 				has_rebel_faction = REB
@@ -125,5 +129,6 @@ noble_rebels = {
 		}	
 		add_prestige = -20
 		add_legitimacy = -20	
+		add_horde_unity = -20
 	}
 }

@@ -1,9 +1,7 @@
-
-######################################################################
-# Particularist rebels. Decentralizers.
-######################################################################
+#------------------------------------------------------
+# Particularists
+#------------------------------------------------------
 particularist_rebels = {
-	
 	color = { 120 195 120 }
 	
 	area = nation 					# Stays within the nation
@@ -59,8 +57,6 @@ particularist_rebels = {
 			factor = 0.8
 			religion = owner
 		}
-
-
 		modifier = {
 			factor = 1.25
 			owner = { 
@@ -103,6 +99,33 @@ particularist_rebels = {
 				government = tribal
 			}
 		}
+        modifier = {
+			factor = 3.0
+			owner = {
+				estate_territory = {
+					estate = estate_traders
+					territory = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			owner = {
+				estate_territory = {
+					estate = estate_traders
+					territory = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			owner = {
+				estate_territory = {
+					estate = estate_traders
+					territory = 40
+				}
+			}
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -139,8 +162,24 @@ particularist_rebels = {
  		NOT = { local_autonomy = 50 }
  	}
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "particularist.txt - siege_won_effect - [Root.GetName]" }
 		add_local_autonomy = 10	
+        owner = {
+			if = {
+				limit = { has_estate = estate_traders }
+				change_estate_land_share = {
+					estate = estate_traders
+					share = 10.0
+					province = ROOT
+				}
+			}
+			else = {
+				change_estate_land_share = {
+					estate = all
+					share = 10.0
+					province = ROOT
+				}
+			}
+		}
 	}	
 	
 	# Country scope
@@ -158,7 +197,13 @@ particularist_rebels = {
 	
 	# Country scope
 	demands_enforced_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "particularist.txt - demands_enforced_effect - [Root.GetName]" }
+        hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		every_owned_province = {
 			limit = {
 				has_rebel_faction = REB
@@ -166,5 +211,35 @@ particularist_rebels = {
 			add_local_autonomy = 30
 		}	
 		add_prestige = -20
+        if = {
+			limit = {
+				has_estate = estate_traders
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_traders
+						modifier = EST_VAL_SUCCESFUL_PARTICULARISTS
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_traders
+				duration = 5475
+				influence = 15
+				desc = EST_VAL_SUCCESFUL_PARTICULARISTS
+			}
+		}
+        if = {
+			limit = { has_estate = estate_traders }
+			change_estate_land_share = {
+				estate = estate_traders
+				share = 10.0
+			}
+		}
+        else = { # Fallback
+			change_estate_land_share = {
+				estate = all
+				share = 10.0
+			}
+		}
 	}
 }

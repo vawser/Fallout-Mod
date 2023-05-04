@@ -1,11 +1,15 @@
+#------------------------------------------------------
+# Mutant
+#------------------------------------------------------
 mutant_rebels = {
-
+    color = { 60 60 60 }
+    
 	area = nation 					# Stays within the nation
 	government = any			
 	defection = none				# Does not defect
 	independence = none				# Does not strive for independence
 	unit_transfer = yes
-	gfx_type = mutant_gfx
+	gfx_type = culture_province
 	
 	resilient = yes
 	reinforcing = yes
@@ -24,7 +28,6 @@ mutant_rebels = {
 	handle_action_build_core = yes
 	handle_action_send_missionary = yes		
 	
-	# The rebel type with the highest modifier for this province gets picked
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
 		factor = 1
@@ -86,13 +89,11 @@ mutant_rebels = {
  	}
 	
 	siege_won_effect = {
-        if = { limit = { has_global_flag = enable_common_logging } log = "raiders.txt - siege_won_effect - [Root.GetName]" }
 		add_province_modifier = {
 			name = damaged_population
 			duration = 3650
 		}
-		add_colonysize = -400
-        		add_devastation = 5
+        add_devastation = 20
 	}
 	
 	# Country scope
@@ -106,14 +107,16 @@ mutant_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "raiders_rebels_demand"
+	demands_description = "mutant_rebels_demand"
 	
 	# Country Scope
 	demands_enforced_effect = {
-		if = { limit = { has_global_flag = enable_common_logging } log = "raiders.txt - demands_enforced_effect - [Root.GetName]" }
 		add_prestige = -50
         add_stability = -2
         
-		damage_legitimacy_rebels = yes
+        add_country_modifier = {
+            name = damaged_population_global
+            duration = 3650
+        }
 	}
 }
