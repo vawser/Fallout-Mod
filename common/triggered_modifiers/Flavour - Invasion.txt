@@ -12,8 +12,6 @@ chinese_invasion_force = {
     naval_forcelimit = 30
 	global_manpower = 20.0
 	global_unrest = -5
-    colonists = 1
-    global_colonial_growth = 30
     
     country_admin_power = 2
     country_diplomatic_power = 2
@@ -34,12 +32,31 @@ zetan_invasion_force = {
     naval_forcelimit = 30
 	global_manpower = 60.0
 	global_unrest = -10
-    colonists = 3
-    global_colonial_growth = 50
     
     country_admin_power = 6
     country_diplomatic_power = 6
     country_military_power = 6
 }
 
-
+# Give colonisation bonuses until they reach a neighbor nation
+invasion_march = {
+    potential = {
+		OR = {
+            tag = CHI
+            tag = ZET
+        }
+        NOT = { num_of_cities = 20 } # Cap at 20 cities even if no neighbor is present
+	}
+	trigger = {
+		NOT = {
+            any_country = {
+                is_neighbor_of = ROOT
+            }
+        }
+	}
+    
+    colonists = 2
+    global_colonial_growth = 500
+    colony_cost_modifier = -0.9
+    colony_development_boost = 3
+}

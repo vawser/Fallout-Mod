@@ -237,7 +237,7 @@ NDiplomacy = {
 	AE_PRIMITIVES = -0.75, -- less AE from primitives
 
 	-- Peace Option Effects, base values for the winner. The loser gets the inverse.
-	PO_DEMAND_PROVINCES_AE = 0.6, 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
+	PO_DEMAND_PROVINCES_AE = 1.0, 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
 	PO_RETURN_CORES_AE = 0.4, 					-- (Per core, only applied if returning cores to vassals of winner)
 	PO_FORM_PU_AE = 0.20, 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
 	PO_CONCEDE_COLONIAL_AE = 0.2,
@@ -279,13 +279,13 @@ NDiplomacy = {
 	PO_END_RIVALRY_PRESTIGE = 5,
 
 	PEACE_COST_PRIMITIVE_NERF = 0.75,				-- war score cost multiplier vs primitives
-	PEACE_COST_DEMAND_PROVINCE = 0.8,					-- Demand a province (scales by province wealth, also used for annex)
+	PEACE_COST_DEMAND_PROVINCE = 1.0,					-- Demand a province (scales by province wealth, also used for annex)
 	PEACE_COST_CONCEDE_PROVINCE = 0.8,				-- Demand colonial area province concession.
 	PEACE_COST_BECOME_VASSAL = 0.8,					-- Vassalize a country (scales by province wealth)
 	PEACE_COST_PILLAGE_CAPITAL = 1,					-- Pillage a capital state's dev (scales by province wealth)
-	PEACE_COST_RETURN_CORE = 0.8,						-- Return a core (scales by province wealth)
-	PEACE_COST_REVOKE_CORE = 0.4,						-- Revoke a core (scales by province wealth)
-	PEACE_COST_RELEASE_ANNEXED = 0.8,					-- Release annexed nation (scales by province wealth)
+	PEACE_COST_RETURN_CORE = 0.5,						-- Return a core (scales by province wealth)
+	PEACE_COST_REVOKE_CORE = 0.25,						-- Revoke a core (scales by province wealth)
+	PEACE_COST_RELEASE_ANNEXED = 0.5,					-- Release annexed nation (scales by province wealth)
 	PEACE_COST_RELEASE_VASSAL = 0.4,					-- Release vassal (scales by province wealth)
 	PEACE_COST_REVOKE_ELECTOR = 60,					-- Revoke an elector title
 	PEACE_COST_UNION = 60, 							-- _DDEF_PEACE_COST_UNION_ Peace cost for forming a personal union
@@ -294,23 +294,23 @@ NDiplomacy = {
 	PEACE_COST_CONVERSION = 0.8,					-- scaled with countrysize for forced conversion in peace.
 	PEACE_COST_CONCEDE = 10, 						-- _DDEF_PEACE_COST_CONCEDE_ Base Peace cost for conceding defeat
 	PEACE_COST_GOLD_STEP = 5, 						-- _DDEF_PEACE_COST_GOLD_STEP_ Peace Cost for 1 loan size gold of giver
-	PEACE_COST_GOLD_MAX = 5,						-- Maximum loans of gold that can be demanded from giver in peace.
+	PEACE_COST_GOLD_MAX = 10,						-- Maximum loans of gold that can be demanded from giver in peace.
 	PEACE_COST_ANNUL = 10, 							-- _DDEF_PEACE_COST_ANNUL_ Peace cost for annulment of treaties
 	PEACE_COST_CHANGE_GOVERNMENT = 50, 				-- _Peace cost for changing government form
-	PEACE_COST_TRADE_POWER = 30, 					-- Peace cost for demanding trade power
-	PEACE_COST_STEER_TRADE = 60,					-- Peace cost for steering trade
-	PEACE_COST_INDEPENDANCE = 30, 					-- Peace cost for breaking free of union
+	PEACE_COST_TRADE_POWER = 25, 					-- Peace cost for demanding trade power
+	PEACE_COST_STEER_TRADE = 50,					-- Peace cost for steering trade
+	PEACE_COST_INDEPENDANCE = 20, 					-- Peace cost for breaking free of union
 	PEACE_COST_ENFORCED_FLEET_BASING_RIGHTS = 25,   -- Peace cost for enforced fleet basing righs
 	PEACE_COST_ENFORCED_MILITARY_ACCESS = 15,       -- Peace cost for enforced military access
 	PEACE_COST_WAR_REPARATIONS = 10,				-- Peace cost for war reparations
 	PEACE_COST_GIVE_UP_CLAIM = 20,					-- Peace cost for giving up all claims in a country
 	PEACE_COST_DISMANTLE_REVOLUTION = 100,
 	PEACE_COST_CHANGE_HRE_RELIGION = 100,
-	PEACE_COST_HUMILIATE_RIVAL = 40,
+	PEACE_COST_HUMILIATE_RIVAL = 25,
 	PEACE_COST_FORCE_MIGRATION = 50.0,
 	PEACE_COST_FORCE_OUT_COLONIZERS = 20.0,
 	PEACE_COST_ENFORCE_REBEL_DEMANDS = 50,
-	PEACE_COST_END_RIVALRY = 30,
+	PEACE_COST_END_RIVALRY = 25,
 	PEACE_COST_TAKE_MANDATE = 50,
 	PEACE_COST_SPREAD_REVOLUTION = 60,
 	MAX_PEACE_COST_TRIBUTARY_STATE = 80,
@@ -320,10 +320,10 @@ NDiplomacy = {
 	MAX_PEACE_TREATY_PRESTIGE = 100,
 	MAX_PEACE_TREATY_AE = 50,
 
-	PEACE_COST_DEMAND_NON_OCCUPIED_PROVINCE_MULT = 1.1,
+	PEACE_COST_DEMAND_NON_OCCUPIED_PROVINCE_MULT = 1.2,
 	PEACE_COST_DEMAND_CAPITAL_MULT = 1.2,
 
-	PO_TRADE_POWER_AMOUNT = 0.5,						-- Transfer 50% of trade power on peace option
+	PO_TRADE_POWER_AMOUNT = 0.8,						-- Transfer 50% of trade power on peace option
 	PO_HUMILIATE_PRESTIGE_HIT = 20,
 	PO_HUMILIATE_POWER_GAIN = 100,
 	PO_SPREAD_REVOLUTION_POWER_GAIN = 1.0,			-- Multiplied by the amount of development spread to

@@ -65,6 +65,30 @@ country_event = {
         }
 	}
     
+    # NCR View
+    option = {
+		name = fallout_status_report.1.option.ncr_view
+        
+        trigger = {
+            OR = {
+                any_country = {
+                    has_country_modifier = head_of_ncr
+                    has_country_modifier = member_of_ncr
+                }
+                AND = {
+                    has_country_modifier = head_of_ncr
+                    has_country_modifier = member_of_ncr
+                }
+            }
+        }
+        
+        country_event = { id = fallout_status_report.11 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    
     option = {
 		name = fallout_status_report.1.option.exit
         
@@ -525,3 +549,29 @@ country_event = {
     }
 }
 
+# NCR View
+country_event = {
+	id = fallout_status_report.11
+	title = fallout_status_report.11.title
+	desc = fallout_status_report.11.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            build_faction_roster = {
+                FACTION = ncr
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_status_report.11.option.x
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_status_report.1 }
+    }
+}

@@ -1,7 +1,4 @@
 country_decisions = {
-    # Add 'buy' menus for each caravan that a nation can open whilst they reside in their land
-    # Options will cost a massive amount of gold for permanant benefits
-
 	check_caravan_inventory = {
         color = { 98 101 105 }
         
@@ -10,6 +7,8 @@ country_decisions = {
             NOT = { has_country_flag = in_buy_menu }
 		}
 		allow = {
+            NOT = { has_country_modifier = caravan_cooldown }
+            
             capital_scope = {
                 any_province = {
                     region = PREV
@@ -19,7 +18,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			country_event = { id = caravans.20 }
+			country_event = { id = fallout_caravan_shop.1 }
 		}
 		
 		ai_will_do = {

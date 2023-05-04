@@ -9,8 +9,8 @@ country_event = {
 	
 	trigger = {
 		OR = {
-            tag = SHA
             tag = NCR
+            was_tag = NCR
         }
         NOT = { has_global_flag = ncr_focus }
 	}
@@ -56,8 +56,8 @@ country_event = {
 
 	trigger = {
 		OR = {
-            tag = SHA
             tag = NCR
+            was_tag = NCR
         }
 		owns_core_province = 266
         266 = { NOT = { has_province_modifier = building_ranger_unification_statue } }
@@ -148,8 +148,8 @@ country_event = {
 		name = ncr.4.option.a
 		trigger = { 	
             OR = {
-                tag = SHA
                 tag = NCR
+                was_tag = NCR
             }
 		    has_parliament = yes
 		}
@@ -175,8 +175,8 @@ country_event = {
 		name = ncr.4.option.a
 		trigger = { 		
             OR = {
-                tag = SHA
                 tag = NCR
+                was_tag = NCR
             }
             has_parliament = no
 		}

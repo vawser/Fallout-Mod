@@ -80,7 +80,7 @@ country_decisions = {
 		    years_of_income = 1
             custom_trigger_tooltip = {
                 tooltip = OWN_PROVINCE_SHADY_SANDS
-                1292 = {
+                1202 = {
                     country_or_subject_holds = ROOT
                 }
             }
@@ -111,18 +111,19 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
+            apply_regional_tag_cost = yes
+            add_postwar_regional_tag_bonus = yes
+            
 			change_tag = NCR
+            #apply_tag_switch_effect = yes
+            
             if = {
                 limit = {
                     NOT = { has_reform = ncr_reform }
                 }
                 add_government_reform = ncr_reform
             }
+            
 		}
 	}
 }

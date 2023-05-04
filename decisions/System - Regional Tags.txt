@@ -21,14 +21,21 @@ country_decisions = {
             region = washington_region
         }
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X10
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_oregon = {
@@ -55,14 +62,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X11
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_california = {
@@ -88,14 +102,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X12
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_nevada = {
@@ -121,14 +142,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X13
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_utah = {
@@ -154,14 +182,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X14
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_idaho = {
@@ -187,14 +222,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X15
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_montana = {
@@ -220,14 +262,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X16
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_wyoming = {
@@ -253,14 +302,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X17
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_baja_california = {
@@ -286,14 +342,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X18
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_arizona = {
@@ -320,14 +383,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X19
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_new_mexico = {
@@ -353,14 +423,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X20
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_colorado = {
@@ -386,14 +463,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X21
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_north_dakota = {
@@ -419,14 +503,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X22
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_south_dakota = {
@@ -452,14 +543,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X23
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_nebraska = {
@@ -485,14 +583,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X24
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_kansas = {
@@ -518,14 +623,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X25
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_missouri = {
@@ -551,14 +663,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X26
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_iowa = {
@@ -584,14 +703,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X27
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_kentucky = {
@@ -617,14 +743,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X28
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_west_virginia = {
@@ -650,14 +783,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X29
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_ohio = {
@@ -683,14 +823,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X30
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_indiana = {
@@ -716,14 +863,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X31
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_michigan = {
@@ -749,14 +903,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X32
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_minnesota = {
@@ -782,14 +943,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X33
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_wisconsin = {
@@ -815,14 +983,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X34
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_illinois = {
@@ -848,14 +1023,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X35
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_oklahoma = {
@@ -881,14 +1063,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X36
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_arkansas = {
@@ -914,14 +1103,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X37
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_texas = {
@@ -947,14 +1143,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X38
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_louisiana = {
@@ -980,14 +1183,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X39
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_mississippi = {
@@ -1013,14 +1223,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X40
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_alabama = {
@@ -1046,14 +1263,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X41
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_tennessee = {
@@ -1079,14 +1303,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X42
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_florida = {
@@ -1112,14 +1343,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X43
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_georgia = {
@@ -1145,14 +1383,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X44
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_south_carolina = {
@@ -1178,14 +1423,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X45
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_north_carolina = {
@@ -1211,14 +1463,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X46
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_virginia = {
@@ -1244,14 +1503,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X47
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_new_york = {
@@ -1277,14 +1543,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X48
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_new_jersey = {
@@ -1310,14 +1583,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X49
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_pennsylvania = {
@@ -1343,14 +1623,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X50
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_the_capital_wasteland = {
@@ -1376,19 +1663,22 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X51
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
 		}
-        
-        ai_will_do = {
-            factor = 0
-        }
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
+		}
 	}
     form_the_commonwealth = {
 		major = yes
@@ -1413,19 +1703,22 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X52
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
 		}
-        
-        ai_will_do = {
-            factor = 0
-        }
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
+		}
 	}
     form_british_columbia = {
 		major = yes
@@ -1450,14 +1743,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X53
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_alberta = {
@@ -1483,14 +1783,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X54
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_saskatchewan = {
@@ -1516,14 +1823,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X55
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_manitoba = {
@@ -1549,14 +1863,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X56
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_ontario = {
@@ -1582,14 +1903,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X57
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_quebec = {
@@ -1615,14 +1943,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X58
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_newfoundland_and_labrador = {
@@ -1648,14 +1983,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X59
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_new_brunswick = {
@@ -1681,14 +2023,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X60
-			#swap_free_idea_group = yes
+			#apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
     form_nova_scotia = {
@@ -1714,14 +2063,21 @@ country_decisions = {
 		}
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+			add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X61
-			#swap_free_idea_group = yes
+            #apply_tag_switch_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+            
+            # Only AI Wastelander nations should form these
+            modifier = {
+                factor = 0
+                
+                NOT = { technology_group = tech_wastelander}
+            }
 		}
 	}
 }

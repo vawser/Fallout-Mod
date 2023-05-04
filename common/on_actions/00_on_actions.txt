@@ -839,7 +839,7 @@ on_siege_lost_province =  {
     if = {
         limit = {
             FROM = {
-                has_country_modifier = legion_bloodlust_scorch_the_earth
+                has_country_modifier = bloodlust_scorch_the_earth
             }
         }
             
@@ -2275,6 +2275,9 @@ on_conquest = {
 }
 
 on_country_creation = {
+    # Default variables
+    set_default_variables = yes
+    
     events = {
         pop_setup.1     # Pop setup
     }

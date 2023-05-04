@@ -189,8 +189,14 @@ administration_synth = {
 	}
 
 	# Boons
+    administrative_efficiency = 0.05 # Synths are very efficient
+    same_culture_advisor_cost = -0.2 # Synths benefit from being computer analogs
+    discipline = 0.05 # Synths are very disciplined
     
     # Penalty
+    land_morale = -0.1 # Synths are vulnerable to hacking, lowering cohesion in combat
+    trade_efficiency = -0.2 # People don't trust synths
+    ae_impact = 0.2 # People don't trust synths
 }
 
 #-------------------------------------
@@ -205,8 +211,14 @@ administration_rodent = {
 	}
 
 	# Boons
+    missionaries = 1 # Belief in the renewal cult
+    land_attrition = -0.2 # Adapted to wasteland terrain
+    province_warscore_cost = -0.1 # People are willing to give up easier against rodents
     
     # Penalty
+    technology_cost = 0.2 # Rodents don't mesh well with technology
+    diplomatic_reputation = -3 # Few trust rodents
+    improve_relation_modifier = -0.2 # Few willing interact with rodents
 }
 
 #-------------------------------------
@@ -221,8 +233,14 @@ administration_beastlord = {
 	}
 
 	# Boons
+    warscore_from_battles_modifier = 0.2 # Animal command scares wastelanders
+    land_maintenance_modifier = -0.15 # Usage of commanded animals reduces costs
+    land_morale_constant = 0.5 # Psychic arrogance
     
     # Penalty
+    technology_cost = 0.2 # Little use for technology due to psychic abilities
+    development_cost = 0.2 # Care little for sustained living
+    improve_relation_modifier = -0.5 # Cannibalistic
 }
 
 #-------------------------------------

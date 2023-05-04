@@ -152,3 +152,162 @@ show_faction_modifier_leader = {
         custom_tooltip = FACTION_$MODIFIER$_TT
     }
 }
+
+#--------------------------
+# Roster
+#--------------------------
+build_faction_roster = {
+    every_country = {
+        limit = {
+            has_country_modifier = head_of_$FACTION$
+        }
+        save_event_target_as = faction_leader
+    }
+    
+    every_country = {
+        limit = {
+            has_country_modifier = member_of_$FACTION$
+        }
+        
+        if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_1 }
+            }
+            
+            save_event_target_as = faction_member_1
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_2 }
+            }
+            
+            save_event_target_as = faction_member_2
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_3 }
+            }
+            
+            save_event_target_as = faction_member_3
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_4 }
+            }
+            
+            save_event_target_as = faction_member_4
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_5 }
+            }
+            
+            save_event_target_as = faction_member_5
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_6 }
+            }
+            
+            save_event_target_as = faction_member_6
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_7 }
+            }
+            
+            save_event_target_as = faction_member_7
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_8 }
+            }
+            
+            save_event_target_as = faction_member_8
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_9 }
+            }
+            
+            save_event_target_as = faction_member_9
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_10 }
+            }
+            
+            save_event_target_as = faction_member_10
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_11 }
+            }
+            
+            save_event_target_as = faction_member_11
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_12 }
+            }
+            
+            save_event_target_as = faction_member_12
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_13 }
+            }
+            
+            save_event_target_as = faction_member_13
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_14 }
+            }
+            
+            save_event_target_as = faction_member_14
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_15 }
+            }
+            
+            save_event_target_as = faction_member_15
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_16 }
+            }
+            
+            save_event_target_as = faction_member_16
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_17 }
+            }
+            
+            save_event_target_as = faction_member_17
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_18 }
+            }
+            
+            save_event_target_as = faction_member_18
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_19 }
+            }
+            
+            save_event_target_as = faction_member_19
+        }
+        else_if = {
+            limit = {
+                NOT = { has_saved_event_target = faction_member_20 }
+            }
+            
+            save_event_target_as = faction_member_20
+        }
+    }
+}

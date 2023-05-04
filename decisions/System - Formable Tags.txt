@@ -1,5 +1,4 @@
 country_decisions = {
-
 	form_empire_of_the_legion = {
 		major = yes
 		potential = {
@@ -49,20 +48,25 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			west_coast_superregion = {
+            apply_regional_tag_cost = yes
+            add_postwar_regional_tag_bonus = yes
+            
+			change_tag = X01
+            #apply_tag_switch_effect = yes
+            
+			set_government_rank = 3
+            
+            west_coast_superregion = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			add_prestige = 25
-			change_tag = X01
-			set_government_rank = 3
+            
+            add_country_modifier = {
+                name = wasteland_conqueror
+                duration = -1
+            }
 		}
 	}
 	
@@ -101,20 +105,25 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			west_coast_superregion = {
+            apply_regional_tag_cost = yes
+            add_postwar_regional_tag_bonus = yes
+            
+			change_tag = X02
+            #apply_tag_switch_effect = yes
+            
+			set_government_rank = 3
+            
+            west_coast_superregion = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			add_prestige = 25
-			change_tag = X02
-			set_government_rank = 3
+            
+            add_country_modifier = {
+                name = wasteland_conqueror
+                duration = -1
+            }
 		}
 	}
 	
@@ -207,30 +216,24 @@ country_decisions = {
         }
 
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			west_coast_superregion = {
+            apply_regional_tag_cost = yes
+            add_postwar_regional_tag_bonus = yes
+            
+			change_tag = X03
+            #apply_tag_switch_effect = yes
+            
+			set_government_rank = 3
+            
+            west_coast_superregion = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			add_prestige = 25
-			change_tag = X03
-			set_government_rank = 3
             
-            if = {
-                limit = {
-                    NOT = { has_reform = ncr_reform }
-                }
-                change_government_effect = {
-                    TYPE = republic
-                    REFORM = ncr_reform
-                    LEGACY = ncr_legacy
-                }
+            add_country_modifier = {
+                name = wasteland_conqueror
+                duration = -1
             }
 		}
 	}
@@ -607,14 +610,18 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 100
-			set_government_rank = 3
+            apply_regional_tag_cost = yes
+            add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X04
+            #apply_tag_switch_effect = yes
+            
+			set_government_rank = 3
+            
+            add_country_modifier = {
+                name = old_world_reborn
+                duration = -1
+            }
 		}
 	}
 
@@ -650,24 +657,23 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 50
+            apply_regional_tag_cost = yes
+            add_postwar_regional_tag_bonus = yes
+            
 			change_tag = X06
-			change_religion = mormon
-			swap_free_idea_group = yes
+            apply_tag_switch_effect = yes
+            
+            set_government_rank = 3
+            
             if = {
                 limit = {
-                    NOT = { has_reform = theocracy_reform }
+                    NOT = { religion = mormon }
                 }
-                change_government_effect = {
-                    TYPE = theocracy
-                    REFORM = theocracy_reform
-                    LEGACY = theocracy_legacy
+                every_owned_province = {
+                    limit = { religion = ROOT }
+                    change_religion = mormon
                 }
+                change_religion = mormon
             }
 		}
 	}
@@ -727,15 +733,13 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+            add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X07
-			swap_free_idea_group = yes
-			set_government_rank = 3
+            apply_tag_switch_effect = yes
+            
+            set_government_rank = 3
 		}
 	}
     
@@ -822,15 +826,13 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+            add_prewar_regional_tag_bonus = yes
+            
 			change_tag = X08
-			swap_free_idea_group = yes
-			set_government_rank = 3
+            apply_tag_switch_effect = yes
+            
+            set_government_rank = 3
 		}
 	}
     
@@ -918,14 +920,11 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 100
+            apply_regional_tag_cost = yes
+            add_prewar_regional_tag_bonus = yes
+            
 			change_tag = CFD
-			set_government_rank = 3
+            apply_tag_switch_effect = yes
             
             change_primary_culture = confederate
             capital_scope = {

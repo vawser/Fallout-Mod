@@ -79,14 +79,14 @@ country_decisions = {
 		}
 		
 		effect = {
-            add_years_of_income = -1
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+            apply_regional_tag_cost = yes
+            add_postwar_regional_tag_bonus = yes
+            
 			change_tag = X05
+            #apply_tag_switch_effect = yes
+            
 			set_government_rank = 3
+            
             every_subject_country = {
                 limit = {
                     has_reform = brotherhood_reform

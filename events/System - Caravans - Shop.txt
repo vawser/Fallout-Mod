@@ -1,0 +1,1233 @@
+namespace = fallout_caravan_shop
+
+#---------------------------------
+# Shop
+#---------------------------------
+country_event = {
+	id = fallout_caravan_shop.1
+	title = fallout_caravan_shop.1.title
+	desc = fallout_caravan_shop.1.desc
+    picture = CRIMSON_CARAVAN_eventPicture
+	
+	is_triggered_only = yes
+	
+    trigger = {
+        NOT = { has_country_flag = in_buy_menu }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = in_buy_menu 
+        }
+    }
+    
+    #-----------------------------
+    # Combat Armour
+    #-----------------------------
+	option = {
+		name = fallout_caravan_shop.1.option.combat_armor.1
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_combat_armour_1 }
+            NOT = { has_country_modifier = mass_combat_armour_2 }
+            NOT = { has_country_modifier = mass_combat_armour_3 }
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            treasury = 2000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -2000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_armour
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.1.invalid
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_combat_armour_1 }
+            NOT = { has_country_modifier = mass_combat_armour_2 }
+            NOT = { has_country_modifier = mass_combat_armour_3 }
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            NOT = { treasury = 2000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_1_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.2
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_1
+            NOT = { has_country_modifier = mass_combat_armour_2 }
+            NOT = { has_country_modifier = mass_combat_armour_3 }
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            treasury = 4000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -4000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_armour
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.2.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_1
+            NOT = { has_country_modifier = mass_combat_armour_2 }
+            NOT = { has_country_modifier = mass_combat_armour_3 }
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_2_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.3
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_2
+            NOT = { has_country_modifier = mass_combat_armour_3 }
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            treasury = 6000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -6000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_armour
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.3.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_2
+            NOT = { has_country_modifier = mass_combat_armour_3 }
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_3_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.4
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_3
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            treasury = 8000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -8000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_armour
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.4.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_3
+            NOT = { has_country_modifier = mass_combat_armour_4 }
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            NOT = { treasury = 8000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_4_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.5
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_4
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            treasury = 10000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -10000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_armour
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_armor.5.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_armour_4
+            NOT = { has_country_modifier = mass_combat_armour_5 }
+            NOT = { treasury = 10000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_5_PURCHASE_COST
+	}
+    
+    #-----------------------------
+    # Ballistic Weaponry
+    #-----------------------------
+	option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.1
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_ballistic_weaponry_1 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_2 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_3 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            treasury = 2000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -2000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_ballistic_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.1.invalid
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_ballistic_weaponry_1 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_2 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_3 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            NOT = { treasury = 2000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_1_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.2
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_1
+            NOT = { has_country_modifier = mass_ballistic_weaponry_2 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_3 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            treasury = 4000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -4000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_ballistic_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.2.invalid
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_1
+            NOT = { has_country_modifier = mass_ballistic_weaponry_2 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_3 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_2_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.3
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_2
+            NOT = { has_country_modifier = mass_ballistic_weaponry_3 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            treasury = 6000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -6000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_ballistic_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.3.invalid
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_2
+            NOT = { has_country_modifier = mass_ballistic_weaponry_3 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_3_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.4
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_3
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            treasury = 8000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -8000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_ballistic_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.4.invalid
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_3
+            NOT = { has_country_modifier = mass_ballistic_weaponry_4 }
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            NOT = { treasury = 8000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_4_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.5
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_4
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            treasury = 10000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -10000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_ballistic_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.ballistic_weaponry.5.invalid
+        
+        trigger = {
+            has_country_modifier = mass_ballistic_weaponry_4
+            NOT = { has_country_modifier = mass_ballistic_weaponry_5 }
+            NOT = { treasury = 10000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_5_PURCHASE_COST
+	}
+    
+    #-----------------------------
+    # Laser Weaponry
+    #-----------------------------
+	option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.1
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_laser_weaponry_1 }
+            NOT = { has_country_modifier = mass_laser_weaponry_2 }
+            NOT = { has_country_modifier = mass_laser_weaponry_3 }
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            treasury = 2000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -2000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_laser_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.1.invalid
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_laser_weaponry_1 }
+            NOT = { has_country_modifier = mass_laser_weaponry_2 }
+            NOT = { has_country_modifier = mass_laser_weaponry_3 }
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            NOT = { treasury = 2000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_1_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.2
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_1
+            NOT = { has_country_modifier = mass_laser_weaponry_2 }
+            NOT = { has_country_modifier = mass_laser_weaponry_3 }
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            treasury = 4000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -4000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_laser_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.2.invalid
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_1
+            NOT = { has_country_modifier = mass_laser_weaponry_2 }
+            NOT = { has_country_modifier = mass_laser_weaponry_3 }
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_2_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.3
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_2
+            NOT = { has_country_modifier = mass_laser_weaponry_3 }
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            treasury = 6000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -6000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_laser_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.3.invalid
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_2
+            NOT = { has_country_modifier = mass_laser_weaponry_3 }
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_3_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.4
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_3
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            treasury = 8000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -8000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_laser_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.4.invalid
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_3
+            NOT = { has_country_modifier = mass_laser_weaponry_4 }
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            NOT = { treasury = 8000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_4_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.5
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_4
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            treasury = 10000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -10000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_laser_weaponry
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.laser_weaponry.5.invalid
+        
+        trigger = {
+            has_country_modifier = mass_laser_weaponry_4
+            NOT = { has_country_modifier = mass_laser_weaponry_5 }
+            NOT = { treasury = 10000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_5_PURCHASE_COST
+	}
+    
+    #-----------------------------
+    # Medical Supplies
+    #-----------------------------
+	option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.1
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_medical_supplies_1 }
+            NOT = { has_country_modifier = mass_medical_supplies_2 }
+            NOT = { has_country_modifier = mass_medical_supplies_3 }
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            treasury = 2000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -2000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_medical_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.1.invalid
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_medical_supplies_1 }
+            NOT = { has_country_modifier = mass_medical_supplies_2 }
+            NOT = { has_country_modifier = mass_medical_supplies_3 }
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            NOT = { treasury = 2000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_1_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.2
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_1
+            NOT = { has_country_modifier = mass_medical_supplies_2 }
+            NOT = { has_country_modifier = mass_medical_supplies_3 }
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            treasury = 4000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -4000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_medical_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.2.invalid
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_1
+            NOT = { has_country_modifier = mass_medical_supplies_2 }
+            NOT = { has_country_modifier = mass_medical_supplies_3 }
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_2_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.3
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_2
+            NOT = { has_country_modifier = mass_medical_supplies_3 }
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            treasury = 6000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -6000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_medical_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.3.invalid
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_2
+            NOT = { has_country_modifier = mass_medical_supplies_3 }
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_3_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.4
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_3
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            treasury = 8000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -8000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_medical_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.4.invalid
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_3
+            NOT = { has_country_modifier = mass_medical_supplies_4 }
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            NOT = { treasury = 8000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_4_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.5
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_4
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            treasury = 10000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -10000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_medical_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.medical_supplies.5.invalid
+        
+        trigger = {
+            has_country_modifier = mass_medical_supplies_4
+            NOT = { has_country_modifier = mass_medical_supplies_5 }
+            NOT = { treasury = 10000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_5_PURCHASE_COST
+	}
+    
+    #-----------------------------
+    # Argicultural Supplies
+    #-----------------------------
+	option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.1
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_agricultural_supplies_1 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_2 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_3 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            treasury = 2000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -2000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_agricultural_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.1.invalid
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_agricultural_supplies_1 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_2 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_3 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            NOT = { treasury = 2000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_1_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.2
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_1
+            NOT = { has_country_modifier = mass_agricultural_supplies_2 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_3 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            treasury = 4000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -4000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_agricultural_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.2.invalid
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_1
+            NOT = { has_country_modifier = mass_agricultural_supplies_2 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_3 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_2_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.3
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_2
+            NOT = { has_country_modifier = mass_agricultural_supplies_3 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            treasury = 6000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -6000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_agricultural_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.3.invalid
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_2
+            NOT = { has_country_modifier = mass_agricultural_supplies_3 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_3_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.4
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_3
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            treasury = 8000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -8000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_agricultural_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.4.invalid
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_3
+            NOT = { has_country_modifier = mass_agricultural_supplies_4 }
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            NOT = { treasury = 8000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_4_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.5
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_4
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            treasury = 10000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -10000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_agricultural_supplies
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.argicultural_supplies.5.invalid
+        
+        trigger = {
+            has_country_modifier = mass_agricultural_supplies_4
+            NOT = { has_country_modifier = mass_agricultural_supplies_5 }
+            NOT = { treasury = 10000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_5_PURCHASE_COST
+	}
+    
+    #-----------------------------
+    # Fission Cells
+    #-----------------------------
+	option = {
+		name = fallout_caravan_shop.1.option.fission_cells.1
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_fission_cells_1 }
+            NOT = { has_country_modifier = mass_fission_cells_2 }
+            NOT = { has_country_modifier = mass_fission_cells_3 }
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            treasury = 2000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -2000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_fission_cells
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.1.invalid
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_fission_cells_1 }
+            NOT = { has_country_modifier = mass_fission_cells_2 }
+            NOT = { has_country_modifier = mass_fission_cells_3 }
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            NOT = { treasury = 2000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_1_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.2
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_1
+            NOT = { has_country_modifier = mass_fission_cells_2 }
+            NOT = { has_country_modifier = mass_fission_cells_3 }
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            treasury = 4000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -4000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_fission_cells
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.2.invalid
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_1
+            NOT = { has_country_modifier = mass_fission_cells_2 }
+            NOT = { has_country_modifier = mass_fission_cells_3 }
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_2_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.3
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_2
+            NOT = { has_country_modifier = mass_fission_cells_3 }
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            treasury = 6000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -6000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_fission_cells
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.3.invalid
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_2
+            NOT = { has_country_modifier = mass_fission_cells_3 }
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_3_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.4
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_3
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            treasury = 8000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -8000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_fission_cells
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.4.invalid
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_3
+            NOT = { has_country_modifier = mass_fission_cells_4 }
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            NOT = { treasury = 8000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_4_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.5
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_4
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            treasury = 10000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -10000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_fission_cells
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.fission_cells.5.invalid
+        
+        trigger = {
+            has_country_modifier = mass_fission_cells_4
+            NOT = { has_country_modifier = mass_fission_cells_5 }
+            NOT = { treasury = 10000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_5_PURCHASE_COST
+	}
+    
+    #-----------------------------
+    # Combat Pipboys
+    #-----------------------------
+	option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.1
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_combat_pipboys_1 }
+            NOT = { has_country_modifier = mass_combat_pipboys_2 }
+            NOT = { has_country_modifier = mass_combat_pipboys_3 }
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            treasury = 2000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -2000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_pipboys
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.1.invalid
+        
+        trigger = {
+            NOT = { has_country_modifier = mass_combat_pipboys_1 }
+            NOT = { has_country_modifier = mass_combat_pipboys_2 }
+            NOT = { has_country_modifier = mass_combat_pipboys_3 }
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            NOT = { treasury = 2000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_1_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.2
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_1
+            NOT = { has_country_modifier = mass_combat_pipboys_2 }
+            NOT = { has_country_modifier = mass_combat_pipboys_3 }
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            treasury = 4000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -4000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_pipboys
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.2.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_1
+            NOT = { has_country_modifier = mass_combat_pipboys_2 }
+            NOT = { has_country_modifier = mass_combat_pipboys_3 }
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_2_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.3
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_2
+            NOT = { has_country_modifier = mass_combat_pipboys_3 }
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            treasury = 6000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -6000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_pipboys
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.3.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_2
+            NOT = { has_country_modifier = mass_combat_pipboys_3 }
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            NOT = { treasury = 4000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_3_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.4
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_3
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            treasury = 8000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -8000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_pipboys
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.4.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_3
+            NOT = { has_country_modifier = mass_combat_pipboys_4 }
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            NOT = { treasury = 8000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_4_PURCHASE_COST
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.5
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_4
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            treasury = 10000
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        add_treasury = -10000
+        
+        apply_caravan_modifier = {
+            MODIFIER = mass_combat_pipboys
+        }
+	}
+    option = {
+		name = fallout_caravan_shop.1.option.combat_pipboys.5.invalid
+        
+        trigger = {
+            has_country_modifier = mass_combat_pipboys_4
+            NOT = { has_country_modifier = mass_combat_pipboys_5 }
+            NOT = { treasury = 10000 }
+        }
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+        
+        custom_tooltip = TIER_5_PURCHASE_COST
+	}
+    
+    option = {
+		name = fallout_caravan_shop.1.option.exit
+        
+        hidden_effect = { clr_country_flag = in_buy_menu }
+	}
+}

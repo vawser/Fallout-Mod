@@ -1,0 +1,84 @@
+apply_caravan_modifier = {
+    add_country_modifier = {
+        name = caravan_cooldown
+        duration = 1800
+        hidden = yes
+    }
+    
+    if = {
+        limit = {
+            NOT = { has_country_modifier = $MODIFIER$_1 }
+            NOT = { has_country_modifier = $MODIFIER$_2 }
+            NOT = { has_country_modifier = $MODIFIER$_3 }
+            NOT = { has_country_modifier = $MODIFIER$_4 }
+            NOT = { has_country_modifier = $MODIFIER$_5 }
+        }
+        
+        add_country_modifier = {
+            name =  $MODIFIER$_1
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { has_country_modifier = $MODIFIER$_2 }
+            NOT = { has_country_modifier = $MODIFIER$_3 }
+            NOT = { has_country_modifier = $MODIFIER$_4 }
+            NOT = { has_country_modifier = $MODIFIER$_5 }
+            has_country_modifier = $MODIFIER$_1
+        }
+        
+        hidden_effect = {
+            remove_country_modifier = $MODIFIER$_1
+        }
+        add_country_modifier = {
+            name =  $MODIFIER$_2
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { has_country_modifier = $MODIFIER$_3 }
+            NOT = { has_country_modifier = $MODIFIER$_4 }
+            NOT = { has_country_modifier = $MODIFIER$_5 }
+            has_country_modifier = $MODIFIER$_2
+        }
+        
+        hidden_effect = {
+            remove_country_modifier = $MODIFIER$_2
+        }
+        add_country_modifier = {
+            name =  $MODIFIER$_3
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { has_country_modifier = $MODIFIER$_4 }
+            NOT = { has_country_modifier = $MODIFIER$_5 }
+            has_country_modifier = $MODIFIER$_3
+        }
+        
+        hidden_effect = {
+            remove_country_modifier = $MODIFIER$_3
+        }
+        add_country_modifier = {
+            name =  $MODIFIER$_4
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            NOT = { has_country_modifier = $MODIFIER$_5 }
+            has_country_modifier = $MODIFIER$_4
+        }
+        
+        hidden_effect = {
+            remove_country_modifier = $MODIFIER$_4
+        }
+        add_country_modifier = {
+            name =  $MODIFIER$_5
+            duration = -1
+        }
+    }
+}

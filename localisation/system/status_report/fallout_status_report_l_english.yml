@@ -21,10 +21,11 @@
  # Events
  #-----------------------------
  fallout_status_report.1.title: "Status Report: [Root.GetName]"
- fallout_status_report.1.desc: "§YHead of State:§! [Root.Monarch.GetTitle] [Root.Monarch.GetName]\n§YLifespan:§! [Root.GetRulerLifeDurationType]\n§YAdministrative Prowess:§! [Root.GetRulerRank_ADM]\n§YDiplomatic Skill:§! [Root.GetRulerRank_DIP]\n§YMilitary Foresight:§! [Root.GetRulerRank_MIL]\n§YNuclear Stockpile:§! [Root.nuke_stockpile.GetValue]"
+ fallout_status_report.1.desc: "§YHead of State:§! [Root.Monarch.GetTitle] [Root.Monarch.GetName]\n§YLifespan:§! [Root.GetRulerLifeDurationType]\n§YAdministrative Prowess:§! [Root.GetRulerRank_ADM]\n§YDiplomatic Skill:§! [Root.GetRulerRank_DIP]\n§YMilitary Foresight:§! [Root.GetRulerRank_MIL]\n[Root.GetNuclearStockpile]"
  fallout_status_report.1.option.exit: "Exit"
  fallout_status_report.1.option.change_national_color: "Adjust National Color"
  fallout_status_report.1.option.ruler_investment: "Invest in Head of State"
+ fallout_status_report.1.option.ncr_view: "Compile Report on the NCR"
 
  fallout_status_report.10.title: "Status Report: Head of State Investment"
  fallout_status_report.10.desc: "Divert resources towards mentoring [Root.Monarch.GetTitle] [Root.Monarch.GetName], in the hope that they become a better, more capable leader."
@@ -61,6 +62,10 @@
  MILITARY_SKILL_NEED_6_TT: "You need §Y720§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
  MILITARY_SKILL_NEED_7_TT: "You need §Y840§! ADM to improve the Military Skill of [Root.Monarch.GetName]."
  
+ fallout_status_report.11.title: "Status Report: New California Republic"
+ fallout_status_report.11.desc: "The current head of the NCR is: @[faction_leader.GetTag] [faction_leader.GetName]\n\nThe current members of the §YNCR§! are:\n[Root.GetFactionMember_1][Root.GetFactionMember_2][Root.GetFactionMember_3][Root.GetFactionMember_4][Root.GetFactionMember_5][Root.GetFactionMember_6][Root.GetFactionMember_7][Root.GetFactionMember_8][Root.GetFactionMember_9][Root.GetFactionMember_10][Root.GetFactionMember_11][Root.GetFactionMember_12][Root.GetFactionMember_13][Root.GetFactionMember_14][Root.GetFactionMember_15][Root.GetFactionMember_16][Root.GetFactionMember_17][Root.GetFactionMember_18][Root.GetFactionMember_19][Root.GetFactionMember_20][Root.GetFactionMember_Max]"
+ fallout_status_report.11.option.x: "Exit"
+ 
  #-----------------------------
  # Custom Strings
  #-----------------------------
@@ -79,3 +84,29 @@
  ruler_skill_skilled_text: "Skilled"
  ruler_skill_extraordinary_text: "Extraordinary"
  ruler_skill_genius_text: "Genius"
+ 
+ nuke_stockpile_count: "§YNuclear Stockpile:§! [Root.nuke_stockpile.GetValue]"
+ nuke_stockpile_blank: ""
+ 
+ FACTION_MEMBER_1: "@[faction_member_1.GetTag] [faction_member_1.GetName]\n"
+ FACTION_MEMBER_2: "@[faction_member_2.GetTag] [faction_member_2.GetName]\n"
+ FACTION_MEMBER_3: "@[faction_member_3.GetTag] [faction_member_3.GetName]\n"
+ FACTION_MEMBER_4: "@[faction_member_4.GetTag] [faction_member_4.GetName]\n"
+ FACTION_MEMBER_5: "@[faction_member_5.GetTag] [faction_member_5.GetName]\n"
+ FACTION_MEMBER_6: "@[faction_member_6.GetTag] [faction_member_6.GetName]\n"
+ FACTION_MEMBER_7: "@[faction_member_7.GetTag] [faction_member_7.GetName]\n"
+ FACTION_MEMBER_8: "@[faction_member_8.GetTag] [faction_member_8.GetName]\n"
+ FACTION_MEMBER_9: "@[faction_member_9.GetTag] [faction_member_9.GetName]\n"
+ FACTION_MEMBER_10: "@[faction_member_10.GetTag] [faction_member_10.GetName]\n"
+ FACTION_MEMBER_11: "@[faction_member_11.GetTag] [faction_member_11.GetName]\n"
+ FACTION_MEMBER_12: "@[faction_member_12.GetTag] [faction_member_12.GetName]\n"
+ FACTION_MEMBER_13: "@[faction_member_13.GetTag] [faction_member_13.GetName]\n"
+ FACTION_MEMBER_14: "@[faction_member_14.GetTag] [faction_member_14.GetName]\n"
+ FACTION_MEMBER_15: "@[faction_member_15.GetTag] [faction_member_15.GetName]\n"
+ FACTION_MEMBER_16: "@[faction_member_16.GetTag] [faction_member_16.GetName]\n"
+ FACTION_MEMBER_17: "@[faction_member_17.GetTag] [faction_member_17.GetName]\n"
+ FACTION_MEMBER_18: "@[faction_member_18.GetTag] [faction_member_18.GetName]\n"
+ FACTION_MEMBER_19: "@[faction_member_19.GetTag] [faction_member_19.GetName]\n"
+ FACTION_MEMBER_20: "@[faction_member_20.GetTag] [faction_member_20.GetName]\n"
+ FACTION_MEMBER_EXCEEDS_LIMIT: "and more..."
+ FACTION_MEMBER_BLANK: ""
