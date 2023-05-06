@@ -35,6 +35,12 @@ raider_thrill_mechanic = {
             
 			ai_chance = {
 				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    manpower_percentage = 0.5
+                }
 			}
 		}
         raider_thrill_purge_the_meek = {
@@ -50,6 +56,12 @@ raider_thrill_mechanic = {
             
 			ai_chance = {
 				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    NOT = { corruption = 10 }
+                }
 			}
 		}
         raider_thrill_conscript_veterans = {
@@ -73,6 +85,12 @@ raider_thrill_mechanic = {
             
 			ai_chance = {
 				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    army_size_percentage = 0.8
+                }
 			}
 		}
 	}

@@ -805,6 +805,7 @@ war = {
     monthly_communal_harmony = -1.0
     monthly_legion_bloodlust = 0.25
     monthly_raider_thrill = 0.25
+    monthly_mutation = 0.25
 }
 
 peace = {
@@ -2051,8 +2052,11 @@ tercio_regiment = {
     fire_damage_received = -0.2
 }
 
+# Behemoth
 musketeer_regiment = {
-	fire_damage = 0.15
+	infantry_power = 0.25
+    shock_damage_received = -0.25
+    fire_damage_received = -0.25
 }
 
 samurai_regiment = {

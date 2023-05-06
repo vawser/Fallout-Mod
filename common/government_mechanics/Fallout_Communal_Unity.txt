@@ -42,16 +42,16 @@ communal_harmony_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
                 
 				modifier = {
-					factor = 100
+					factor = 10
                     
 					rebel_progress_at_least = { value = 80 }
 				}
                 
 				modifier = {
-					factor = 100
+					factor = 10
                     
 					rebel_progress_at_least = { value = 30 }
                     
@@ -86,7 +86,13 @@ communal_harmony_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    treasury = 1000
+                }
 			}
 		}
         
@@ -109,7 +115,13 @@ communal_harmony_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    NOT = { is_at_war = yes }
+                }
 			}
 		}
 	}

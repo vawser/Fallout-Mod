@@ -40,7 +40,13 @@ legion_bloodlust_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    manpower_percentage = 0.8
+                }
 			}
 		}
 		
@@ -65,7 +71,13 @@ legion_bloodlust_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+                
+                 modifier = {
+                    factor = 0
+                    
+                    NOT = { is_at_war= yes }
+                }
 			}
 		}
         
@@ -99,7 +111,7 @@ legion_bloodlust_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 0
 			}
 		}
 	}

@@ -42,7 +42,15 @@ tribal_unity_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    NOT = { adm_power = 300 }
+                    NOT = { dip_power = 300 }
+                    NOT = { mil_power = 300 }
+                }
 			}
 		}
 		
@@ -100,7 +108,13 @@ tribal_unity_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    total_development = 500
+                }
 			}
 		}
         
@@ -129,7 +143,13 @@ tribal_unity_mechanic = {
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    army_size_percentage = 0.8
+                }
 			}
 		}
 	}

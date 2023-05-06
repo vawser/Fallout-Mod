@@ -371,6 +371,23 @@ on_battle_lost_province = {
             }
         }
     }
+    
+    # Mutation - Add power on battle win
+    if = {
+        limit = {
+            FROM = {
+                has_government_mechanic = mutation_mechanic
+            }
+        }
+        
+        FROM = {
+            add_government_power = {
+                mechanic_type = mutation_mechanic
+                power_type = mutation
+                value = 5
+            }
+        }
+    }
 }
 
 # country

@@ -1,0 +1,91 @@
+mutation_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Cradle of Civilization"
+	}
+
+	powers = {
+		mutation = {
+			max = 100
+			reset_on_new_ruler = yes
+			base_monthly_growth = 1.0
+		}
+	}
+	
+	interactions = {
+		mutation_fev_rage = {
+			icon = GFX_mutation_ability_1
+			cost_type = mutation
+			cost = 30
+            
+			trigger = {
+                NOT = { has_country_modifier = mutation_fev_rage_mod }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = mutation_fev_rage_mod
+                    duration = 700
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    NOT = { is_at_war = yes }
+                }
+			}
+		}
+        mutation_enforce_discipline = {
+			icon = GFX_mutation_ability_2
+			cost_type = mutation
+			cost = 30
+            
+			trigger = {
+                NOT = { has_country_modifier = mutation_enforce_discipline_mod }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = mutation_enforce_discipline_mod
+                    duration = 700
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+                modifier = {
+                    factor = 0
+                    
+                    NOT = { is_at_war = yes }
+                }
+			}
+		}
+        mutation_beckon_behemoths = {
+			icon = GFX_mutation_ability_3
+			cost_type = mutation
+			cost = 50
+            
+			effect = {
+				capital_scope = {
+                    musketeer_infantry = ROOT
+                    musketeer_infantry = ROOT
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+                
+                modifier = {
+                    factor = 0
+                    
+                    army_size_percentage = 0.8
+                }
+			}
+		}
+	}
+}

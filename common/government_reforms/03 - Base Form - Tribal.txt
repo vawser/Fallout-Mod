@@ -157,6 +157,16 @@ super_mutant_reform = {
         max_absolutism = 10
     }
     
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            mutation_mechanic
+        }
+    }
+    
     custom_attributes = {
         autocratic_succession = yes
 		locked_government_type = yes
