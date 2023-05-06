@@ -172,6 +172,26 @@
  - Added "Scorch the Earth" action: costs 30 Bloodlust, grants looting speed bonus and causes all occupations of enemy provinces to instantly apply 25 devastation.
  - Added "Trial by Combat" action: costs 50 Bloodlust, requires 2 generals. 1 General will die, but a new general will be generated with 100 tradition.
  
+ - Generates 1 Psychic Power per month.
+ - Added "Radroach Domination": costs 50 Psychic Power, applies land_attrition = -0.25 for 5 years.
+ - Added "Radscorpion Domination": costs 50 Psychic Power, applies shock_damage = 0.2 for 5 years.
+ - Added "Wasp Domination": costs 50 Psychic Power, applies morale_damage = 0.2 for 5 years.
+ - Added "Brahmin Domination": costs 50 Psychic Power, applies global_supply_limit_modifier = 0.25 for 5 years.
+ - Added "Wolf Domination": costs 50 Psychic Power, applies infantry_power = 0.1 for 5 years.
+ - Added "Mole-rat Domination": costs 50 Psychic Power, applies siege_ability = 0.2 for 5 years.
+ 
+- Added "Patriotic Spirit" government mechanic to Enclave government form.
+ - Generates 0.1 Patriotic Spirit per month.
+ - 1.0 is gained at 100 Prestige. 0.25 is gained per positive staiblity.
+ - 0.1 is lost whilst at peace. 0.2 is lost at max war exhaustion. 1.0 is lost at 100 corruption. 0.25 is lost per negative stability.
+  - Grants the following at 100 Patriotic Spirit:
+    land_morale = 0.1
+    naval_morale = 0.1
+    administrative_efficiency = 0.1
+ - Added "Cleansing Fire" action: costs 30 Patriotic Spirit, applies global_monthly_devastation = -0.1 and global_prosperity_growth = 0.1 for 5 years.
+ - Added "Spur Advancement" action: costs 50 Patriotic Spirit, adds 100 ADM, DIP and MIL power.
+ - Added "Close Ranks" action: costs 40 Patriotic Spirit, applies defensiveness = 1.0 and recover_army_morale_speed = 0.25 for 5 years.
+ 
 # Faction 
 - Added a pseudo-faction mechanic for the NCR. 
  - Members will have the "Member of the NCR" modifier.
@@ -222,16 +242,4 @@
 
 - Add NI Sets for all nations
 
-- Beastslords:
- - Added government reform and mechanic based around their ability to command various creatures
-  - Psychic Strength is the currency
-  - Spend it for various bonuses based on:
-   - Giant Cockroach
-   - Giant Radscorpion
-   - Giant Wasp
-   - Komodo Dragon
-   - Brahmin
-   - Dogs
-   - Wolves
-   - Giants Rats
-   
+patriotic_spirit

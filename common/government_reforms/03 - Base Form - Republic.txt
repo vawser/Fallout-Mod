@@ -192,6 +192,16 @@ enclave_reform = {
         max_absolutism = 20
     }
     
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            patriotic_spirit_mechanic
+        }
+    }
+    
     custom_attributes = {
         standard_election = yes
 		locked_government_type = yes

@@ -109,6 +109,22 @@ on_war_won = {
         
         clr_country_flag = war_support_faction_leader
     }
+    
+    # Patriotic Spirit
+    if = {
+        limit = {
+            has_government_mechanic = patriotic_spirit_mechanic
+            FROM = {
+                is_tainted_country = yes
+            }
+        }
+        
+        add_government_power = {
+            mechanic_type = patriotic_spirit_mechanic
+            power_type = patriotic_spirit
+            value = 25
+        }
+    }
 }
 
 # country

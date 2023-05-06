@@ -1,0 +1,87 @@
+patriotic_spirit_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Cradle of Civilization"
+	}
+
+	powers = {
+		patriotic_spirit = {
+			max = 100
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0.1
+			
+			scaled_modifier = {
+				modifier = {
+					land_morale = 0.1
+                    naval_morale = 0.1
+                    administrative_efficiency = 0.1
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		patriotic_spirit_cleansing_fire = {
+			icon = GFX_patriotic_spirit_ability_1
+			cost_type = patriotic_spirit
+			cost = 30
+            
+			cooldown_years = 5
+            
+			trigger = {
+                NOT = { has_country_modifier = patriotic_spirit_cleansing_fire_mod }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = patriotic_spirit_cleansing_fire_mod
+                    duration = 1800
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        patriotic_spirit_spur_advancement = {
+			icon = GFX_patriotic_spirit_ability_2
+			cost_type = patriotic_spirit
+			cost = 50
+            
+			cooldown_years = 5
+            
+			effect = {
+                add_adm_power = 100
+                add_dip_power = 100
+                add_mil_power = 100
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+		patriotic_spirit_close_ranks = {
+			icon = GFX_patriotic_spirit_ability_3
+			cost_type = patriotic_spirit
+			cost = 40
+            
+			cooldown_years = 5
+            
+			trigger = {
+                NOT = { has_country_modifier = patriotic_spirit_close_ranks_mod }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = patriotic_spirit_close_ranks_mod
+                    duration = 1800
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+	}
+}

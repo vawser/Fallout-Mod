@@ -673,6 +673,7 @@ positive_stability = {
     monthly_tribal_unity = 1.0
     monthly_communal_harmony = 1.0
     monthly_psychic_domain = 0.25
+    monthly_patriotic_spirit = 0.25
 
 	# Estates
     bureaucrats_loyalty_modifier = 0.05
@@ -707,6 +708,7 @@ negative_stability = {
     monthly_tribal_unity = -1.0
     monthly_communal_harmony = -1.0
     monthly_psychic_domain = -0.25
+    monthly_patriotic_spirit = -0.25
     
     # Estates
     bureaucrats_loyalty_modifier = 0.05
@@ -815,6 +817,7 @@ peace = {
     monthly_tribal_unity = 0.5
     monthly_communal_harmony = 0.5
     monthly_legion_bloodlust = -0.25
+    monthly_patriotic_spirit = -0.1
 }
 
 unconditional_surrender = {
@@ -841,6 +844,7 @@ war_exhaustion = {
     # Government
 	monthly_tribal_unity = -0.2
     monthly_communal_harmony = -0.2
+    monthly_patriotic_spirit = -0.2
 }
 
 doom = {
@@ -1099,6 +1103,9 @@ corruption = {
 	global_spy_defence = -1
 	all_power_cost = 1.0
     global_autonomy = 0.25
+    
+    # Government
+    monthly_patriotic_spirit = -1.0
 	
     # Estates
 	bureaucrats_loyalty_modifier = 0.1
@@ -1188,6 +1195,7 @@ prestige = {
     # Government
     monthly_tribal_unity = 1.0
     monthly_communal_harmony = 1.0
+    monthly_patriotic_spirit = 1.0
     
     # Estates
 	bureaucrats_loyalty_modifier = 0.1

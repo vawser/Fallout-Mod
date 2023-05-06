@@ -14,113 +14,130 @@ psychic_domain_mechanic = {
 	}
 	
 	interactions = {
-		psychic_domain_promote_open_discussion = {
+		psychic_domain_cockroach_domination = {
+            gui = six_slots_interaction_gui
 			icon = GFX_psychic_domain_ability_1
 			cost_type = psychic_domain
 			cost = 50
             
-			cooldown_years = 10
-            
 			trigger = {
-                NOT = { has_country_modifier = psychic_domain_open_discussion }
+                NOT = { has_country_modifier = psychic_cockroach_domination }
 			}
             
 			effect = {
 				add_country_modifier = {
-                    name = psychic_domain_open_discussion
-                    duration = 3650
+                    name = psychic_cockroach_domination
+                    duration = 1800
                 }
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
 			}
 		}
-		
-        psychic_domain_establish_tribal_connections = {
+		psychic_domain_radscorpion_domination = {
+            gui = six_slots_interaction_gui
 			icon = GFX_psychic_domain_ability_2
 			cost_type = psychic_domain
-			cost = 30
-            
-			cooldown_years = 5
+			cost = 50
             
 			trigger = {
-                # Any friendly neighbor
-                any_known_country = {
-                    is_neighbor_of = ROOT
-                    has_opinion = {
-                        who = ROOT
-                        value = 0
-                    }
-                }
+                NOT = { has_country_modifier = psychic_radscorpion_domination }
 			}
             
 			effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            any_known_country = {
-                                is_neighbor_of = ROOT
-                                has_opinion = {
-                                    who = ROOT
-                                    value = 0
-                                }
-                            }
-                        }
-                    }
-                    custom_tooltip = GAIN_OPINION_BOOST_IN_FRIENDLY_NEIGHBOR_TT
-                }
-                
-                # Up to 3 random known friendly neighbors gain an opinion boost
-				random_known_country = {
-                    limit = {
-                        is_neighbor_of = ROOT
-                        has_opinion = {
-                            who = ROOT
-                            value = 0
-                        }
-                    }
-                    type = random
-                    amount = 3
-                    
-                    add_opinion = {
-                        who = ROOT
-                        modifier = psychic_domain_tribal_connections
-                    }
+				add_country_modifier = {
+                    name = psychic_radscorpion_domination
+                    duration = 1800
                 }
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
 			}
 		}
-        
-		psychic_domain_prepare_for_war = {
+		psychic_domain_wasp_domination = {
+            gui = six_slots_interaction_gui
 			icon = GFX_psychic_domain_ability_3
 			cost_type = psychic_domain
 			cost = 50
             
-			cooldown_years = 5
-            
 			trigger = {
-				capital_scope = {
-                    controlled_by = ROOT
-                }
+                NOT = { has_country_modifier = psychic_wasp_domination }
 			}
             
 			effect = {
-				capital_scope = {
-					add_unit_construction = {
-						type = infantry
-						amount = 5
-						speed = 0.0
-						cost = 0
-					}
-				}
+				add_country_modifier = {
+                    name = psychic_wasp_domination
+                    duration = 1800
+                }
 			}
             
 			ai_chance = {
-				factor = 10
+				factor = 1
+			}
+		}
+		psychic_domain_brahmin_domination = {
+            gui = six_slots_interaction_gui
+			icon = GFX_psychic_domain_ability_4
+			cost_type = psychic_domain
+			cost = 50
+            
+			trigger = {
+                NOT = { has_country_modifier = psychic_brahmin_domination }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = psychic_brahmin_domination
+                    duration = 1800
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+		psychic_domain_wolf_domination = {
+            gui = six_slots_interaction_gui
+			icon = GFX_psychic_domain_ability_5
+			cost_type = psychic_domain
+			cost = 50
+            
+			trigger = {
+                NOT = { has_country_modifier = psychic_wolf_domination }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = psychic_wolf_domination
+                    duration = 1800
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+		psychic_domain_rat_domination = {
+            gui = six_slots_interaction_gui
+			icon = GFX_psychic_domain_ability_6
+			cost_type = psychic_domain
+			cost = 50
+            
+			trigger = {
+                NOT = { has_country_modifier = psychic_rat_domination }
+			}
+            
+			effect = {
+				add_country_modifier = {
+                    name = psychic_rat_domination
+                    duration = 1800
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
 			}
 		}
 	}
