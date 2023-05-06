@@ -1,0 +1,93 @@
+namespace = fallout_assassination
+
+# Assassination - Victim (known)
+country_event = {
+	id = fallout_assassination.1
+	title = fallout_assassination.1.title
+	desc = fallout_assassination.1.desc
+    picture = CONFRONTATION_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_assassination.1.option.a
+        
+        kill_ruler = yes
+	}
+}
+
+# Assassination - Victim (unknown)
+country_event = {
+	id = fallout_assassination.2
+	title = fallout_assassination.2.title
+	desc = fallout_assassination.2.desc
+    picture = CONFRONTATION_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_assassination.2.option.a
+        
+        kill_ruler = yes
+	}
+}
+
+# Assassination - Kill - Aggressor (known)
+country_event = {
+	id = fallout_assassination.3
+	title = fallout_assassination.3.title
+	desc = fallout_assassination.3.desc
+    picture = TERMINAL_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_assassination.3.option.a
+        
+	}
+}
+
+# Assassination - Kill - Aggressor (unknown)
+country_event = {
+	id = fallout_assassination.4
+	title = fallout_assassination.4.title
+	desc = fallout_assassination.4.desc
+    picture = TERMINAL_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_assassination.4.option.a
+        
+	}
+}
+
+# Assassination - Failure - Aggressor (known)
+country_event = {
+	id = fallout_assassination.5
+	title = fallout_assassination.5.title
+	desc = fallout_assassination.5.desc
+    picture = TERMINAL_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_assassination.5.option.a
+        
+	}
+}
+
+# Assassination - Failure - Aggressor (unknown)
+country_event = {
+	id = fallout_assassination.6
+	title = fallout_assassination.6.title
+	desc = fallout_assassination.6.desc
+    picture = TERMINAL_eventPicture
+
+    is_triggered_only = yes
+    
+	option = {
+		name = fallout_assassination.6.option.a
+        
+	}
+}

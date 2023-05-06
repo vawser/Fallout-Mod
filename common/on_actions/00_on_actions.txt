@@ -1,5 +1,7 @@
 # country
 on_startup = {
+    update_random_seed = yes
+    
 	emperor = {
 		save_global_event_target_as = Emperor
 	}
@@ -1449,33 +1451,7 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
-    #------------------------------
-    # Random Seed
-    #------------------------------
-    # Set random flags for randomisation in fixed seed locations
-    clr_country_flag = random_seed_1
-    clr_country_flag = random_seed_2
-    clr_country_flag = random_seed_3
-    clr_country_flag = random_seed_4
-    clr_country_flag = random_seed_5
-    clr_country_flag = random_seed_6
-    clr_country_flag = random_seed_7
-    clr_country_flag = random_seed_8
-    clr_country_flag = random_seed_9
-    clr_country_flag = random_seed_10
-    
-    random_list = {
-        1 = { set_country_flag = random_seed_1 }
-        1 = { set_country_flag = random_seed_2 }
-        1 = { set_country_flag = random_seed_3 }
-        1 = { set_country_flag = random_seed_4 }
-        1 = { set_country_flag = random_seed_5 }
-        1 = { set_country_flag = random_seed_6 }
-        1 = { set_country_flag = random_seed_7 }
-        1 = { set_country_flag = random_seed_8 }
-        1 = { set_country_flag = random_seed_9 }
-        1 = { set_country_flag = random_seed_10 }
-    }
+    update_random_seed = yes
     
     #------------------------------
     # NCR - NCR Authority

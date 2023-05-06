@@ -54,6 +54,171 @@ launch_nuclear_warhead = {
 }
 
 #---------------------------------------
+# Assassinate Leader
+#---------------------------------------
+assassinate_leader = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = assassinate_leader_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+        NOT = { has_country_modifier = recently_sent_assassins }
+        #has_idea = fallout_espionage_ideas_5
+		is_neighbor_of = FROM
+        FROM = { has_regency = no }
+	}
+    
+	is_allowed = {
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_ASSASSINATION
+            FROM = { NOT = { has_country_modifier = target_of_assassination } }
+        }
+        is_neighbor_of = FROM
+        has_spy_network_in = {
+            who = FROM
+            value = 80
+        }
+	}
+	on_accept = {
+        add_spy_network_in = { 
+            who = FROM 
+            value = -80
+        }
+        
+        hidden_effect = {
+            clr_country_flag = assassination_outcome_1
+            clr_country_flag = assassination_outcome_2
+            clr_country_flag = assassination_outcome_3
+            clr_country_flag = assassination_outcome_4
+            
+            # Kill, Known
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = random_seed_1
+                        has_country_flag = random_seed_2
+                    }
+                }
+                set_country_flag = assassination_outcome_1
+                FROM = {
+                    add_opinion = {
+                        who = ROOT
+                        modifier = assassination
+                    }
+                }
+            }
+            # Kill, Unknown
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = random_seed_3
+                        has_country_flag = random_seed_4
+                    }
+                }
+                set_country_flag = assassination_outcome_2
+            }
+            # Failure, Known
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = random_seed_5
+                        has_country_flag = random_seed_6
+                        has_country_flag = random_seed_7
+                    }
+                }
+                set_country_flag = assassination_outcome_3
+                FROM = {
+                    add_opinion = {
+                        who = ROOT
+                        modifier = assassination
+                    }
+                }
+            }
+            # Failure, Unknown
+            if = {
+                limit = {
+                    OR = {
+                        has_country_flag = random_seed_8
+                        has_country_flag = random_seed_9
+                        has_country_flag = random_seed_10
+                    }
+                }
+                set_country_flag = assassination_outcome_4
+            }
+            
+            save_event_target_as = assassin_aggressor
+            FROM = {
+                save_event_target_as = assassin_target
+            }
+        }
+        
+        if = {
+            limit = {
+                has_country_flag = assassination_outcome_1
+            }
+            
+            country_event = { id = fallout_assassination.3 }
+            FROM = { country_event = { id = fallout_assassination.1 days = 1 } }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = assassination_outcome_2
+            }
+            
+            country_event = { id = fallout_assassination.4 }
+            FROM = { country_event = { id = fallout_assassination.2 days = 1 } }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = assassination_outcome_3
+            }
+            
+            country_event = { id = fallout_assassination.5 }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = assassination_outcome_4
+            }
+            
+            country_event = { id = fallout_assassination.6 }
+        }
+        
+        hidden_effect = {
+            add_country_modifier = {
+                name = recently_sent_assassins
+                duration = 365
+            }
+            FROM = {
+                add_country_modifier = { 
+                    name = target_of_assassination
+                    duration = 3650
+                }
+            }
+        }
+	}
+	on_decline = { }
+	
+	ai_acceptance = {
+        add_entry = {
+			name = BASE
+			set_variable = { which = ai_value value = 1000 }
+		}
+	}
+	ai_will_do = {
+        # Only AI Great Powers should disrupt each other with this
+		is_great_power = yes
+        FROM = {
+            is_great_power = yes
+            ai = yes
+        }
+	}
+}
+
+
+#---------------------------------------
 # Establish Cult
 #---------------------------------------
 establish_cult = {
@@ -205,83 +370,6 @@ spread_propaganda_action = {
 	}
 }
 
-# random, and random_list don't use a properly random seed in this file, so the results never change. 
-# The country flags mean an event will fire with a properly random seed, which is then used for the randomisation.
-#---------------------------------------
-# Assassinate Leader
-#---------------------------------------
-assassinate_leader = {
-	category = covert
-	
-	alert_index = 40
-	alert_tooltip = assassinate_leader_tooltip
-	
-	require_acceptance = no
-	
-	is_visible = {
-        has_idea = fallout_espionage_ideas_5
-		is_neighbor_of = FROM
-        FROM = { has_regency = no }
-        NOT = { has_country_flag = sent_assassin }
-        custom_trigger_tooltip = {
-            tooltip = NOT_TARGET_OF_ESPIONAGE
-            FROM = { NOT = { has_country_modifier = target_of_espionage } }
-        }
-	}
-    
-	is_allowed = {
-        is_neighbor_of = FROM
-        has_spy_network_in = {
-            who = FROM
-            value = 100
-        }
-        custom_trigger_tooltip = {
-            tooltip = NOT_TARGET_OF_ESPIONAGE
-            FROM = { NOT = { has_country_modifier = target_of_espionage } }
-        }
-	}
-	on_accept = {
-        log = "Assassinate Leader used by [Root.GetName]"
-        add_spy_network_in = { who = FROM value = -100 }
-        
-        set_country_flag = sent_assassin
-        
-        FROM = { 
-            set_country_flag = being_assassinated
-            
-            add_country_modifier = { 
-                name = target_of_espionage
-                duration = 3650
-            }
-        }
-	}
-	on_decline =
-	{
-        add_spy_network_in = { who = FROM value = -100 }
-        
-        set_country_flag = sent_assassin
-        
-        FROM = { 
-            set_country_flag = being_assassinated
-            
-            add_country_modifier = { 
-                name = target_of_espionage
-                duration = 3650
-            }
-        }
-	}
-	
-	ai_acceptance = {
-        add_entry = {
-			name = BASE
-			set_variable = { which = ai_value value = 1000 }
-		}
-	}
-	ai_will_do = {
-		always = yes
-	}
-}
-
 #---------------------------------------
 # Conduct Slave Raid
 #---------------------------------------
@@ -294,32 +382,27 @@ conduct_slave_raid = {
 	require_acceptance = no
 	
 	is_visible = {
-		is_neighbor_of = FROM
+        NOT = { has_country_modifier = recently_sent_slavers }
         has_slavery_allowed = yes
-        FROM = {
-            any_owned_province = {
-                NOT = { has_province_modifier = slave_raid }
-            }
-        }
+		is_neighbor_of = FROM
+	}
+    
+	is_allowed = {
         custom_trigger_tooltip = {
             tooltip = NOT_TARGET_OF_SLAVE_RAID
             FROM = { NOT = { has_country_modifier = target_of_slave_raid } }
         }
-	}
-    
-	is_allowed = {
         is_neighbor_of = FROM
         has_spy_network_in = {
             who = FROM
             value = 50
         }
-        custom_trigger_tooltip = {
-            tooltip = NOT_TARGET_OF_SLAVE_RAID
-            FROM = { NOT = { has_country_modifier = target_of_slave_raid } }
-        }
 	}
 	on_accept = {
-        add_spy_network_in = { who = FROM value = -50 }
+        add_spy_network_in = { 
+            who = FROM 
+            value = -50
+        }
         
         hidden_effect = {
             clr_country_flag = slave_raid_discovered
@@ -359,10 +442,16 @@ conduct_slave_raid = {
             country_event = { id = fallout_slave_raid.2 }
         }
         
-        FROM = {
-            add_country_modifier = { 
-                name = target_of_slave_raid
-                duration = 3650
+        hidden_effect = {
+            add_country_modifier = {
+                name = recently_sent_slavers
+                duration = 365
+            }
+            FROM = {
+                add_country_modifier = { 
+                    name = target_of_slave_raid
+                    duration = 3650
+                }
             }
         }
 	}

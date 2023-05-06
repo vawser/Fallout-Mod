@@ -1,0 +1,113 @@
+administrative_hegemon = {
+	allow = {
+		NOT = { has_country_modifier = lost_hegemony }
+		is_great_power = yes
+        
+        num_of_cities = 100
+        
+        calc_true_if = {
+            amount = 5
+            
+            all_owned_province = {
+                development = 30
+            }
+        }
+	}
+	
+	base = {
+		expand_administration_cost = -0.25
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		global_prosperity_growth = 0.2
+        overextension_impact_modifier = -0.5
+	}
+	
+	max = {
+		governing_capacity_modifier = 0.25
+	}
+}
+
+mercantile_hegemon = {
+	allow = {
+		NOT = { has_country_modifier = lost_hegemony }
+		is_great_power = yes
+        
+		monthly_income = 200
+        trade_income_percentage = 0.5
+        num_of_merchants = 6
+	}
+	
+	base = {
+		trade_steering = 0.25
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		global_trade_power = 0.25
+        global_trade_goods_size_modifier = 0.2
+	}
+	
+	max = {
+		development_cost_modifier = -0.2
+	}
+}
+
+religious_hegemon = {
+	allow = {
+		NOT = { has_country_modifier = lost_hegemony }
+		is_great_power = yes
+        
+        calc_true_if = {
+            amount = 100
+            
+            all_owned_province = {
+                religion = ROOT
+            }
+        }
+	}
+	
+	base = {
+		years_of_nationalism = -10
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		missionaries = 4
+        missionary_maintenance_cost = -0.25
+	}
+	
+	max = {
+		warscore_cost_vs_other_religion = -0.33
+	}
+}
+
+cultural_hegemon = {
+	allow = {
+		NOT = { has_country_modifier = lost_hegemony }
+		is_great_power = yes
+        
+        calc_true_if = {
+            amount = 100
+            
+            all_province = {
+                culture = ROOT
+            }
+        }
+	}
+	
+	base = {
+		min_autonomy_in_territories = -0.2
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		culture_conversion_cost = -0.25
+        culture_conversion_time = -0.25
+	}
+	
+	max = {
+		core_creation = -0.25
+	}
+}

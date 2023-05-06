@@ -22,6 +22,11 @@
  return_to_overlord_dialog: "As the overlord of a subject, we can return to the overlord nation at any time."
  
  # --- Covert
+ assassinate_leader: "Assassinate Leader"
+ assassinate_leader_title: "Assassinate Leader"
+ assassinate_leader_desc: "Assassinate Leader will reduce the size of our §Y[From.GetName]§! Spy Network by §R80.0§! and have the following effect:\n\nWe will gain the opportunity to kill §Y[From.Monarch.GetTitle] [From.Monarch.GetName]§!. However, if discovered §Y[From.GetName]§!'s opinion of us will drop by §R200§!."
+ assassinate_leader_tooltip: "Attempt to assassinate the leader of §Y[From.GetName]§!." 
+ assassinate_leader_dialog: "Attempt to assassinate the leader of §Y[From.GetName]§!." 
  
  establish_cult: "Establish Cult"
  establish_cult_title: "Establish Cult"
@@ -35,17 +40,11 @@
  spread_propaganda_action_tooltip: "Spread propaganda in §Y[From.GetName]§!, changing one of their provinces to §Y[Root.Culture.GetName]§!." 
  spread_propaganda_action_alert_tooltip: "Spread Propaganda"
  
- assassinate_leader: "Assassinate Leader"
- assassinate_leader_title: "Assassinate Leader"
- assassinate_leader_desc: "Attempt to assassinate [From.Monarch.GetName], the [From.Monarch.GetTitle] of §Y[From.GetName]§!.\n\nIf discovered, [From.GetName] will gain the §YAssassination§! opinion modifier against you." 
- assassinate_leader_tooltip: "Attempt to assassinate [From.Monarch.GetName], the [From.Monarch.GetTitle] of §Y[From.GetName]§!.\n\nIf discovered, [From.GetName] will gain the §YAssassination§! opinion modifier against you." 
- assassinate_leader_alert_tooltip: "Assassinate Leader"
- 
  conduct_slave_raid: "Conduct Slave Raid"
  conduct_slave_raid_title: "Conduct Slave Raid"
- conduct_slave_raid_desc: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves. [From.GetName] will gain the §YSlaver§! opinion modifier against you if they discover you conducted the raid." 
- conduct_slave_raid_tooltip: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves. [From.GetName] will gain the §YSlaver§! opinion modifier against you if they discover you conducted the raid." 
- conduct_slave_raid_alert_tooltip: "Conduct Slave Raid"
+ conduct_slave_raid_desc: "Conduct Slave Raid will reduce the size of our §Y[From.GetName]§! Spy Network by §R50.0§! and have the following effect:\n\nWe will gain between §G0.2§! to §G2§! Yearly Manpower. However, if discovered §Y[From.GetName]§!'s opinion of us will drop by §R25§!." 
+ conduct_slave_raid_tooltip: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves." 
+ conduct_slave_raid_dialog: "Attempt to kidnap people from §Y[From.GetName]§! and turn them into slaves." 
 
  disrupt_alliance: "Disrupt Alliance"
  disrupt_alliance_title: "Disrupt Alliance"
@@ -77,6 +76,18 @@
  alliance_disrupted: "Alliance Disrupted"
  
  #----------------------------------------------------------------------
+ # Event Modifiers
+ #----------------------------------------------------------------------
+ target_of_assassination: "Recently a target of a Ruler Assassination"
+ desc_target_of_assassination: ""
+ 
+ recently_sent_assassins: "Recently sent Assassins"
+ desc_recently_sent_assassins: ""
+ 
+ recently_sent_slavers: "Recently sent Slavers"
+ desc_recently_sent_slavers: ""
+ 
+ #----------------------------------------------------------------------
  # Tooltips
  #----------------------------------------------------------------------
  INV_OPINION: "Opinion"
@@ -89,6 +100,10 @@
  INV_FACTION_LOSING: "Faction Leader is losing"
  INV_SAME_CULTURE_GROUP: "Same Culture Group"
  INV_ACCEPTED_CULTURE: "Accepted Culture"
+ 
+ NOT_TARGET_OF_ESPIONAGE: "[From.GetName] not been recently targeted by an Espionage action."
+ NOT_TARGET_OF_SLAVE_RAID: "[From.GetName] not been recently targeted by a Slave Raid action."
+ NOT_TARGET_OF_ASSASSINATION: "[From.GetName] not been recently targeted by an Assassination action."
  
  #----------------------------------------------------------------------
  # Events
@@ -142,6 +157,30 @@
  fallout_slave_raid.2.desc: "The slavers have successfully captured slaves from [slave_raid_target.GetName]. Let's see how big their haul was."
  fallout_slave_raid.2.option.a: "Wonderful..."
  
+ # Assassination
+ fallout_assassination.1.title: "Assassination of [Root.Monarch.GetTitle] [Root.Monarch.GetName]"
+ fallout_assassination.1.desc: "The foul leaders of [assassin_aggressor.GetName] has sent assassins into our territory, hoping to strike down [Root.Monarch.GetTitle] [Root.Monarch.GetName]. Unfortunately, they have been successful. However, we have clear proof that it is them."
+ fallout_assassination.1.option.a: "Grr..."
+ 
+ fallout_assassination.2.title: "Assassination of [Root.Monarch.GetTitle] [Root.Monarch.GetName]"
+ fallout_assassination.2.desc: "The foul leaders of an unknown nation have sent assassins into our territory, hoping to strike down [Root.Monarch.GetTitle] [Root.Monarch.GetName]. Unfortunately, they have been successful."
+ fallout_assassination.2.option.a: "Grr..."
+ 
+ fallout_assassination.3.title: "Assassination of [assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName]"
+ fallout_assassination.3.desc: "Our attempted assassination against [assassin_target.GetName] has been successful, and [assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName] is dead. Unfortunately, our assassins were discovered and linked to us by [assassin_target.GetName]."
+ fallout_assassination.3.option.a: "Hurrah!"
+ 
+ fallout_assassination.4.title: "Assassination of [assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName]"
+ fallout_assassination.4.desc: "Our attempted assassination against [assassin_target.GetName] has been successful, and [assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName] is dead."
+ fallout_assassination.4.option.a: "Hurrah!"
+ 
+ fallout_assassination.5.title: "[assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName] Lives"
+ fallout_assassination.5.desc: "Our attempted assassination against [assassin_target.GetName] has not been successful, and [assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName] remains alive. Unfortunately, our assassins were also discovered and linked to us by [assassin_target.GetName]."
+ fallout_assassination.5.option.a: "Grr..."
+ 
+ fallout_assassination.6.title: "[assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName] Lives"
+ fallout_assassination.6.desc: "Our attempted assassination against [assassin_target.GetName] has not been successful, and [assassin_target.Monarch.GetTitle] [assassin_target.Monarch.GetName] remains alive."
+ fallout_assassination.6.option.a: "Grr..."
  
  #----------------------------------------------------------------------
  # Tooltip
