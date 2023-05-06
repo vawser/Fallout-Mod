@@ -804,6 +804,7 @@ war = {
     monthly_tribal_unity = -1.0
     monthly_communal_harmony = -1.0
     monthly_legion_bloodlust = 0.25
+    monthly_raider_thrill = 0.25
 }
 
 peace = {
@@ -817,7 +818,9 @@ peace = {
     monthly_tribal_unity = 0.5
     monthly_communal_harmony = 0.5
     monthly_legion_bloodlust = -0.25
+    monthly_raider_thrill = -0.25
     monthly_patriotic_spirit = -0.1
+    
 }
 
 unconditional_surrender = {
@@ -897,6 +900,7 @@ army_tradition = {
     
     # Government
     monthly_legion_bloodlust = 0.05
+    monthly_raider_thrill = 0.05
     
     # Estates
 	officers_loyalty_modifier = 0.1
@@ -1374,6 +1378,7 @@ streltsy_modifier = {
 cossacks_modifier = {
 }
 
+# Veteran
 tercio_modifier = {
 }
 
@@ -2040,8 +2045,10 @@ streltsy_regiment = {
 	fire_damage_received = -0.1
 }
 
+# Veteran
 tercio_regiment = {
-	shock_damage_received = -0.3
+	shock_damage_received = -0.2
+    fire_damage_received = -0.2
 }
 
 musketeer_regiment = {

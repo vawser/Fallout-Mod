@@ -1,0 +1,79 @@
+raider_thrill_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Cradle of Civilization"
+	}
+
+	powers = {
+		raider_thrill = {
+			max = 100
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0.0
+			
+			scaled_modifier = {
+				modifier = {
+					loot_amount = 1.0
+                    land_morale = 0.1
+                    hostile_attrition = 3.0
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		raider_thrill_inspire_soldiers = {
+			icon = GFX_raider_thrill_ability_1
+			cost_type = raider_thrill
+			cost = 30
+            
+			cooldown_years = 1
+            
+			effect = {
+				add_yearly_manpower = 3.0
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        raider_thrill_purge_the_meek = {
+			icon = GFX_raider_thrill_ability_2
+			cost_type = raider_thrill
+			cost = 20
+            
+			cooldown_years = 1
+            
+			effect = {
+				add_corruption = -2
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        raider_thrill_conscript_veterans = {
+			icon = GFX_raider_thrill_ability_3
+			cost_type = raider_thrill
+			cost = 40
+            
+			cooldown_years = 1
+            
+            trigger = {
+                has_dlc = "Domination"
+            }
+            
+			effect = {
+				capital_scope = {
+                    tercio_infantry = ROOT
+                    tercio_infantry = ROOT
+                    tercio_infantry = ROOT
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+	}
+}

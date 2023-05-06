@@ -354,6 +354,23 @@ on_battle_lost_province = {
             }
         }
     }
+    
+    # Thrill - Add power on battle win
+    if = {
+        limit = {
+            FROM = {
+                has_government_mechanic = raider_thrill_mechanic
+            }
+        }
+        
+        FROM = {
+            add_government_power = {
+                mechanic_type = raider_thrill_mechanic
+                power_type = raider_thrill
+                value = 5
+            }
+        }
+    }
 }
 
 # country

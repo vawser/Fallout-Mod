@@ -172,13 +172,14 @@
  - Added "Scorch the Earth" action: costs 30 Bloodlust, grants looting speed bonus and causes all occupations of enemy provinces to instantly apply 25 devastation.
  - Added "Trial by Combat" action: costs 50 Bloodlust, requires 2 generals. 1 General will die, but a new general will be generated with 100 tradition.
  
+- Added "Psychic Power" government mechanic to Beastlords government form.
  - Generates 1 Psychic Power per month.
- - Added "Radroach Domination": costs 50 Psychic Power, applies land_attrition = -0.25 for 5 years.
- - Added "Radscorpion Domination": costs 50 Psychic Power, applies shock_damage = 0.2 for 5 years.
- - Added "Wasp Domination": costs 50 Psychic Power, applies morale_damage = 0.2 for 5 years.
- - Added "Brahmin Domination": costs 50 Psychic Power, applies global_supply_limit_modifier = 0.25 for 5 years.
- - Added "Wolf Domination": costs 50 Psychic Power, applies infantry_power = 0.1 for 5 years.
- - Added "Mole-rat Domination": costs 50 Psychic Power, applies siege_ability = 0.2 for 5 years.
+ - Added "Radroach Domination" action: costs 50 Psychic Power, applies land_attrition = -0.25 for 5 years.
+ - Added "Radscorpion Domination" action: costs 50 Psychic Power, applies shock_damage = 0.2 for 5 years.
+ - Added "Wasp Domination" action: costs 50 Psychic Power, applies morale_damage = 0.2 for 5 years.
+ - Added "Brahmin Domination" action: costs 50 Psychic Power, applies global_supply_limit_modifier = 0.25 for 5 years.
+ - Added "Wolf Domination" action: costs 50 Psychic Power, applies infantry_power = 0.1 for 5 years.
+ - Added "Mole-rat Domination" action: costs 50 Psychic Power, applies siege_ability = 0.2 for 5 years.
  
 - Added "Patriotic Spirit" government mechanic to Enclave government form.
  - Generates 0.1 Patriotic Spirit per month.
@@ -191,6 +192,14 @@
  - Added "Cleansing Fire" action: costs 30 Patriotic Spirit, applies global_monthly_devastation = -0.1 and global_prosperity_growth = 0.1 for 5 years.
  - Added "Spur Advancement" action: costs 50 Patriotic Spirit, adds 100 ADM, DIP and MIL power.
  - Added "Close Ranks" action: costs 40 Patriotic Spirit, applies defensiveness = 1.0 and recover_army_morale_speed = 0.25 for 5 years.
+ 
+ - Added "Thrill" government mechanic to Raider government form.
+ - Gain Thrill via war and army tradition.
+ - Lose Thrill via peace.
+ - Added "Inspire Soldiers" action: costs 30 Thrill, gain 3.0 yearly manpower.
+ - Added "Purge the Meek" action: costs 20 Thrill, reduce corruption by 2
+ - Added "Conscript Veterans" action: costs 40 Thrill, spawn 3 "Raider Veterans" special units in the capital.
+ 
  
 # Faction 
 - Added a pseudo-faction mechanic for the NCR. 
@@ -242,4 +251,3 @@
 
 - Add NI Sets for all nations
 
-patriotic_spirit

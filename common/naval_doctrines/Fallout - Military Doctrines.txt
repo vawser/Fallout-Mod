@@ -1,6 +1,16 @@
 doctrine_sow_terror = {
 	can_select = {
 		mil_power = 100
+        
+        # Only Great Power AI should take this
+        if = {
+            limit = {
+                ai = yes
+            }
+            
+            total_development = 500
+            is_great_power = yes
+        }
 	}
 	
 	country_modifier = {
@@ -15,6 +25,15 @@ doctrine_sow_terror = {
 doctrine_coup_de_grace = {
 	can_select = {
 		mil_power = 100
+        
+        # AI should never take this
+        if = {
+            limit = {
+                ai = yes
+            }
+            
+            always = no
+        }
 	}
 	
 	country_modifier = {
@@ -29,6 +48,16 @@ doctrine_coup_de_grace = {
 doctrine_rebel_bribery = {
 	can_select = {
 		mil_power = 100
+        
+        # Only Great Power AI should take this
+        if = {
+            limit = {
+                ai = yes
+            }
+            
+            total_development = 500
+            is_great_power = yes
+        }
 	}
 	
 	country_modifier = {
@@ -43,6 +72,16 @@ doctrine_rebel_bribery = {
 doctrine_rebel_corruption = {
 	can_select = {
 		mil_power = 100
+        
+        # Only Great Power AI should take this
+        if = {
+            limit = {
+                ai = yes
+            }
+            
+            total_development = 500
+            is_great_power = yes
+        }
 	}
 	
 	country_modifier = {
@@ -57,6 +96,16 @@ doctrine_rebel_corruption = {
 doctrine_rebel_garrison = {
 	can_select = {
 		mil_power = 100
+        
+        # Only Great Power AI should take this
+        if = {
+            limit = {
+                ai = yes
+            }
+            
+            total_development = 500
+            is_great_power = yes
+        }
 	}
 	
 	country_modifier = {

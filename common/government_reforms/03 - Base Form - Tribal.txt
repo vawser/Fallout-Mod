@@ -108,6 +108,16 @@ raider_reform = {
         max_absolutism = 20
     }
     
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            raider_thrill_mechanic
+        }
+    }
+    
     custom_attributes = {
         autocratic_succession = yes
 	}
