@@ -1,11 +1,11 @@
-namespace = diplomatic_actions
+namespace = fallout_disrupt_alliance
 
 # Disrupt Alliance
 country_event = {
-	id = diplomatic_actions.20
-	title = diplomatic_actions.20.title
-    desc = diplomatic_actions.20.desc
-	picture = DEADLY_POISON_eventPicture
+	id = fallout_disrupt_alliance.1
+	title = fallout_disrupt_alliance.1.title
+    desc = fallout_disrupt_alliance.1.desc
+	picture = TERMINAL_eventPicture
 
     is_triggered_only = yes
     
@@ -14,20 +14,20 @@ country_event = {
 	}
 
 	option = {
-		name = diplomatic_actions.20.option.a
+		name = fallout_disrupt_alliance.1.option.a
         
         event_target:disrupted_ally = {
-            country_event = { id = diplomatic_actions.21 }
+            country_event = { id = fallout_disrupt_alliance.2 }
         }
 	}
 }
 
 # Engineered Upset
 country_event = {
-	id = diplomatic_actions.21
-	title = diplomatic_actions.21.title
-    desc = diplomatic_actions.21.desc
-	picture = DEADLY_POISON_eventPicture
+	id = fallout_disrupt_alliance.2
+	title = fallout_disrupt_alliance.2.title
+    desc = fallout_disrupt_alliance.2.desc
+	picture = TERMINAL_eventPicture
 
     is_triggered_only = yes
 
@@ -36,7 +36,7 @@ country_event = {
 	}
 
 	option = {
-		name = diplomatic_actions.21.option.a
+		name = fallout_disrupt_alliance.2.option.a
 		
         event_target:disrupt_target = {
             add_opinion = {

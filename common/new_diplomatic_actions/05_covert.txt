@@ -66,8 +66,7 @@ assassinate_leader = {
 	
 	is_visible = {
         NOT = { has_country_modifier = recently_sent_assassins }
-        #has_idea = fallout_espionage_ideas_5
-		is_neighbor_of = FROM
+        has_idea = fallout_espionage_ideas_5
         FROM = { has_regency = no }
 	}
     
@@ -76,7 +75,6 @@ assassinate_leader = {
             tooltip = NOT_TARGET_OF_ASSASSINATION
             FROM = { NOT = { has_country_modifier = target_of_assassination } }
         }
-        is_neighbor_of = FROM
         has_spy_network_in = {
             who = FROM
             value = 80
@@ -190,6 +188,7 @@ assassinate_leader = {
             add_country_modifier = {
                 name = recently_sent_assassins
                 duration = 365
+                hidden = yes
             }
             FROM = {
                 add_country_modifier = { 
@@ -210,6 +209,7 @@ assassinate_leader = {
 	ai_will_do = {
         # Only AI Great Powers should disrupt each other with this
 		is_great_power = yes
+		is_neighbor_of = FROM
         FROM = {
             is_great_power = yes
             ai = yes
@@ -219,17 +219,18 @@ assassinate_leader = {
 
 
 #---------------------------------------
-# Establish Cult
+# Spread Religious Propaganda
 #---------------------------------------
-establish_cult = {
+spread_religious_propaganda_action = {
 	category = covert
 	
 	alert_index = 40
-	alert_tooltip = establish_cult_alert_tooltip
+	alert_tooltip = spread_religious_propaganda_action_alert_tooltip
 	
 	require_acceptance = no
 	
 	is_visible = {
+        NOT = { has_country_modifier = recently_sent_religious_propaganda }
         has_idea = fallout_propaganda_ideas_7
 		FROM = {
             NOT = { religion = ROOT }
@@ -238,49 +239,47 @@ establish_cult = {
                 is_capital = no
             }
 		}
-        custom_trigger_tooltip = {
-            tooltip = NOT_TARGET_OF_ESPIONAGE
-            FROM = { NOT = { has_country_modifier = target_of_espionage } }
-        }
 	}
     
 	is_allowed = {
-        is_neighbor_of = FROM
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_RELIGIOUS_PROPAGANDA
+            FROM = { NOT = { has_country_modifier = target_of_religious_propaganda } }
+        }
         has_spy_network_in = {
             who = FROM
-            value = 100
-        }
-        custom_trigger_tooltip = {
-            tooltip = NOT_TARGET_OF_ESPIONAGE
-            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+            value = 30
         }
 	}
 	on_accept = {
-        log = "Establish Cult used by [Root.GetName]"
-        add_spy_network_in = { who = FROM value = -100 }
-		FROM = {
-            random_owned_province = {
-                change_religion = ROOT
+        add_spy_network_in = { 
+            who = FROM 
+            value = -30
+        }
+        
+        hidden_effect = {
+            FROM = {
+                save_event_target_as = target_country
             }
-            add_country_modifier = { 
-                name = target_of_espionage
-                duration = 1800
+        }
+        
+        country_event = { id = fallout_religious_propaganda.1 }
+        
+		hidden_effect = {
+            add_country_modifier = {
+                name = recently_sent_religious_propaganda
+                duration = 365
+                hidden = yes
+            }
+            FROM = {
+                add_country_modifier = { 
+                    name = target_of_religious_propaganda
+                    duration = 1800
+                }
             }
         }
 	}
-	on_decline =
-	{
-        add_spy_network_in = { who = FROM value = -100 }
-        FROM = {
-            random_owned_province = {
-                change_religion = ROOT
-            }
-            add_country_modifier = { 
-                name = target_of_espionage
-                duration = 1800
-            }
-        }
-	}
+	on_decline = { }
 	
 	ai_acceptance = {
         add_entry = {
@@ -289,22 +288,29 @@ establish_cult = {
 		}
 	}
 	ai_will_do = {
-		always = yes
+		# Only AI Great Powers should disrupt each other with this
+		is_great_power = yes
+		is_neighbor_of = FROM
+        FROM = {
+            is_great_power = yes
+            ai = yes
+        }
 	}
 }
 
 #---------------------------------------
-# Spread Propaganda
+# Spread Cultural Propaganda
 #---------------------------------------
-spread_propaganda_action = {
+spread_cultural_propaganda_action = {
 	category = covert
 	
 	alert_index = 40
-	alert_tooltip = spread_propaganda_action_tooltip
+	alert_tooltip = spread_cultural_propaganda_action_tooltip
 	
 	require_acceptance = no
 	
 	is_visible = {
+        NOT = { has_country_modifier = recently_sent_cultural_propaganda }
         has_idea = fallout_propaganda_ideas_1
 		FROM = {
             NOT = { primary_culture = ROOT }
@@ -313,49 +319,47 @@ spread_propaganda_action = {
                 is_capital = no
             }
 		}
-        custom_trigger_tooltip = {
-            tooltip = NOT_TARGET_OF_ESPIONAGE
-            FROM = { NOT = { has_country_modifier = target_of_espionage } }
-        }
 	}
     
 	is_allowed = {
-        is_neighbor_of = FROM
+        custom_trigger_tooltip = {
+            tooltip = NOT_TARGET_OF_CULTURAL_PROPAGANDA
+            FROM = { NOT = { has_country_modifier = recently_sent_cultural_propaganda } }
+        }
         has_spy_network_in = {
             who = FROM
-            value = 50
-        }
-        custom_trigger_tooltip = {
-            tooltip = NOT_TARGET_OF_ESPIONAGE
-            FROM = { NOT = { has_country_modifier = target_of_espionage } }
+            value = 30
         }
 	}
 	on_accept = {
-        log = "Spread Propaganda used by [Root.GetName]"
-        add_spy_network_in = { who = FROM value = -50 }
-		FROM = {
-            random_owned_province = {
-                change_culture = ROOT
+        add_spy_network_in = { 
+            who = FROM 
+            value = -30
+        }
+        
+		 hidden_effect = {
+            FROM = {
+                save_event_target_as = target_country
             }
-            add_country_modifier = { 
-                name = target_of_espionage
-                duration = 1800
+        }
+        
+        country_event = { id = fallout_cultural_propaganda.1 }
+        
+		hidden_effect = {
+            add_country_modifier = {
+                name = recently_sent_cultural_propaganda
+                duration = 365
+                hidden = yes
+            }
+            FROM = {
+                add_country_modifier = { 
+                    name = target_of_cultural_propaganda
+                    duration = 1800
+                }
             }
         }
 	}
-	on_decline =
-	{
-        add_spy_network_in = { who = FROM value = -50 }
-        FROM = {
-            random_owned_province = {
-                change_culture = ROOT
-            }
-            add_country_modifier = { 
-                name = target_of_espionage
-                duration = 1800
-            }
-        }
-	}
+	on_decline = { }
 	
 	ai_acceptance = {
         add_entry = {
@@ -364,7 +368,11 @@ spread_propaganda_action = {
 		}
 	}
 	ai_will_do = {
-		FROM = {
+		# Only AI Great Powers should disrupt each other with this
+		is_great_power = yes
+		is_neighbor_of = FROM
+        FROM = {
+            is_great_power = yes
             ai = yes
         }
 	}
@@ -464,7 +472,13 @@ conduct_slave_raid = {
 		}
 	}
 	ai_will_do = {
-		always = yes
+		# Only AI Great Powers should disrupt each other with this
+		is_great_power = yes
+		is_neighbor_of = FROM
+        FROM = {
+            is_great_power = yes
+            ai = yes
+        }
 	}
 }
 
@@ -503,13 +517,6 @@ disrupt_alliance = {
 		}
 	}
 	on_accept = {
-        hidden_effect = {
-            if = { 
-                limit = { has_global_flag = enable_diplomacy_logging }
-                log = "DEBUG - [Root.GetName], [From.GetName] - disrupt_alliance"
-            }
-        }
-        
 		add_spy_network_in = {
 			who = FROM
 			value = -50
@@ -533,7 +540,7 @@ disrupt_alliance = {
             }
         }
         
-        country_event = { id = diplomatic_actions.20 }
+        country_event = { id = fallout_disrupt_alliance.1 }
 	}
 	on_decline = { 
 	}
@@ -711,7 +718,13 @@ provoke_rebels = {
 	}
 
 	ai_will_do = {
-        always = no
+        # Only AI Great Powers should disrupt each other with this
+		is_great_power = yes
+		is_neighbor_of = FROM
+        FROM = {
+            is_great_power = yes
+            ai = yes
+        }
 	}
 }
 
@@ -885,7 +898,13 @@ provoke_pretenders = {
 	}
 
 	ai_will_do = {
-        always = no
+        # Only AI Great Powers should disrupt each other with this
+		is_great_power = yes
+		is_neighbor_of = FROM
+        FROM = {
+            is_great_power = yes
+            ai = yes
+        }
 	}
 }
 

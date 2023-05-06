@@ -255,8 +255,14 @@ administration_alien = {
 	}
 
 	# Boons
+    yearly_corruption = -0.1 # Incorruptible
+    administrative_efficiency = 0.1 # Alien technology
+    envoy_travel_time = -0.5 # Teleportation technology
     
     # Penalty
+    diplomatic_reputation = -5 # Aliens are repulsive to all
+    improve_relation_modifier = -0.25 # Aliens are repulsive to all
+    global_manpower_modifier = -0.25 # Limited population
 }
 
 #-------------------------------------
@@ -271,8 +277,14 @@ administration_deathclaw = {
 	}
 
 	# Boons
+    country_military_power = 1 # Natural military leaders
+    unjustified_demands = -0.2 # Others are terrified of deathclaws
+    land_maintenance_modifier = -0.25 # Ready made for war
     
     # Penalty
+    advisor_cost = 0.25 # Limited number of intelligent deathclaws
+    development_cost = 0.2 # Not fit to develop settlements well
+    years_of_nationalism = 5 # Others will not accept deathclaw control
 }
 
 #-------------------------------------
@@ -287,8 +299,14 @@ administration_fungal = {
 	}
 
 	# Boons
+    culture_conversion_cost = -0.2 # Fungal conversion is very effective
+    manpower_recovery_speed = 0.2 # Fungal soldiers easily grown
+    manpower_in_own_culture_provinces = 1.0 # Fungal soldiers easily grown
     
     # Penalty
+    trade_efficiency = -0.15 # Fungal spores impair quality of goods
+    production_efficiency = -0.15 # Fungal spores impair machinery
+    governing_capacity_modifier = -0.2 # Ill-suited for wide administration
 }
 
 #-------------------------------------
@@ -303,8 +321,14 @@ administration_dwarf = {
 	}
 
 	# Boons
+    production_efficiency = 0.15 # Shunned, dwarves often turn to industrial professions
+    caravan_power = 0.15 # Shunned, dwarves often compensate by becoming traders
+    trade_efficiency = 0.15 # Shunned, dwarves often compensate by becoming traders
     
     # Penalty
+    prestige_decay = 0.01 # Few consider dwarves their equal
+    global_manpower_modifier = -0.2 # Dwarves are mutants, and so cannot easily reproduce
+    spy_offence = -0.15 # Dwarves tend to be very noticable
 }
 
 #-------------------------------------
@@ -319,8 +343,14 @@ administration_legion = {
 	}
 
 	# Boons
+    infantry_cost = -0.2 # Legion subsumes all
+    global_autonomy = -0.05 # Legion surpresses local identity
+    min_autonomy_in_territories = -0.25 # Legion surpresses local identity
     
     # Penalty
+    advisor_cost = 0.25 # Few are willing to risk their heads to advise the Caesar
+    production_efficiency = -0.2 # Little care is given to industry
+    adm_tech_cost_modifier = 0.25 # Few care for administration progress in the Legion
 }
 
 #-------------------------------------
@@ -335,12 +365,14 @@ administration_bos = {
 	}
 
 	# Boons
-    army_tradition = 1.0                # Military training is regularly undergone
-    administrative_efficiency = 0.05    # BOS benefit from technology when it comes to administration
+    army_tradition = 1.0 # Military training is regularly undergone
+    yearly_corruption = -0.05 # BOS self-audit often
+    harsh_treatment_cost = -0.25 # BOS are brutal to those that threaten their goals
     
     # Penalty
-    reform_progress_growth = -0.25      # BOS are not reformers
-    governing_capacity_modifier = -0.1  # BOS lack the ability to project power well
+    reform_progress_growth = -0.1 # BOS are not reformers
+    governing_capacity_modifier = -0.2 # BOS lack the ability to administrate wide territory
+    development_cost = 0.25 # BOS do not care about developing settlements
 }
 
 #-------------------------------------
@@ -355,8 +387,14 @@ administration_coa = {
 	}
 
 	# Boons
+    global_colonial_growth = 10 # Suited to the wasteland
+    land_attrition = -0.2 # Power of the Atom protects
+    tolerance_own = 1 # Absolute belief
     
     # Penalty
+    global_unrest = 1 # Inherently unstable
+    stability_cost_modifier = 0.2 # Inherently unstable
+    advisor_cost = 0.25 # Few will risk being irradiated to advise ruler
 }
 
 #-------------------------------------
@@ -371,8 +409,14 @@ administration_vault = {
 	}
 
 	# Boons
+    reform_progress_growth = 0.1 # Pressure cooker environment breeds innovation
+    idea_cost = -0.1 # Pressure cooker environment breeds innovation
+    improve_relation_modifier = 0.1 # Old World values help diplomatic outreach
     
     # Penalty
+    yearly_corruption = 0.03 # Inherently vulnerable to corruption
+    advisor_pool = -1 # Limited pool of advisors
+    global_trade_goods_size_modifier = -0.05 # Limited industrial space
 }
 
 #-------------------------------------
@@ -387,8 +431,14 @@ administration_institute = {
 	}
 
 	# Boons
+    free_policy = 1 # Institute is on the cutting edge
+    yearly_innovativeness = 1.0 # Institute is on the cutting edge
+    diplomatic_annexation_cost = -0.25 # Institute can infiltrate subjects via Synths
     
     # Penalty
+    governing_capacity_modifier = -0.2 # Institute struggles to hold vast territory
+    global_trade_power = -0.2 # Institute is not open to trade
+    province_warscore_cost = 0.2 # Institute struggles to exert power at a distance
 }
 
 #-------------------------------------
@@ -425,6 +475,12 @@ administration_shi = {
 	}
 
 	# Boons
+    reform_progress_growth = 0.25 # Shi are keen scientists
+    idea_cost = -0.2 # Shi are keen scientists
+    advisor_cost = -0.1 # Head Advisor is a official placement
     
     # Penalty
+    governing_capacity_modifier = -0.2 # Shi struggles to hold vast territory
+    build_cost = 0.25 # Shi struggle to employ labor
+    years_of_nationalism = 5 # Shi struggle to integrate external territory
 }

@@ -1,0 +1,11 @@
+apply_cultural_propaganda_effect = {
+    save_event_target_as = aggressor
+    
+    event_target:selected_domain_province = {
+        owner = {
+            country_event = { id = fallout_cultural_propaganda.2 days = 1 }
+        }
+    }
+}
+
+

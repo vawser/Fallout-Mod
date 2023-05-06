@@ -1,0 +1,1992 @@
+reset_domain_selection = {
+    every_owned_province = {
+        clr_province_flag = selected_domain_province
+    }
+}
+
+reset_domain_options = {
+    clr_country_flag = show_domain_option_1
+    clr_country_flag = show_domain_option_2
+    clr_country_flag = show_domain_option_3
+    clr_country_flag = show_domain_option_4
+    clr_country_flag = show_domain_option_5
+    clr_country_flag = show_domain_option_6
+    clr_country_flag = show_domain_option_7
+    clr_country_flag = show_domain_option_8
+    clr_country_flag = show_domain_option_9
+    clr_country_flag = show_domain_option_10
+    clr_country_flag = show_domain_option_11
+    clr_country_flag = show_domain_option_12
+    clr_country_flag = show_domain_option_13
+    clr_country_flag = show_domain_option_14
+    clr_country_flag = show_domain_option_15
+    clr_country_flag = show_domain_option_16
+    clr_country_flag = show_domain_option_17
+    clr_country_flag = show_domain_option_18
+    clr_country_flag = show_domain_option_19
+    clr_country_flag = show_domain_option_20
+    clr_country_flag = show_domain_option_21
+    clr_country_flag = show_domain_option_22
+    clr_country_flag = show_domain_option_23
+    clr_country_flag = show_domain_option_24
+    clr_country_flag = show_domain_option_25
+    clr_country_flag = show_domain_option_26
+    clr_country_flag = show_domain_option_27
+    clr_country_flag = show_domain_option_28
+    clr_country_flag = show_domain_option_29
+    clr_country_flag = show_domain_option_30
+    clr_country_flag = show_domain_option_31
+    clr_country_flag = show_domain_option_32
+    clr_country_flag = show_domain_option_33
+    clr_country_flag = show_domain_option_34
+    clr_country_flag = show_domain_option_35
+    clr_country_flag = show_domain_option_36
+    clr_country_flag = show_domain_option_37
+    clr_country_flag = show_domain_option_38
+    clr_country_flag = show_domain_option_39
+    clr_country_flag = show_domain_option_40
+    clr_country_flag = show_domain_option_41
+    clr_country_flag = show_domain_option_42
+    clr_country_flag = show_domain_option_43
+    clr_country_flag = show_domain_option_44
+    clr_country_flag = show_domain_option_45
+    clr_country_flag = show_domain_option_46
+    clr_country_flag = show_domain_option_47
+    clr_country_flag = show_domain_option_48
+    clr_country_flag = show_domain_option_49
+    clr_country_flag = show_domain_option_50
+    clr_country_flag = show_domain_option_51
+    clr_country_flag = show_domain_option_52
+    clr_country_flag = show_domain_option_53
+    clr_country_flag = show_domain_option_54
+    clr_country_flag = show_domain_option_55
+    clr_country_flag = show_domain_option_56
+    clr_country_flag = show_domain_option_57
+    clr_country_flag = show_domain_option_58
+    clr_country_flag = show_domain_option_59
+    clr_country_flag = show_domain_option_60
+    clr_country_flag = show_domain_option_61
+    clr_country_flag = show_domain_option_62
+    clr_country_flag = show_domain_option_63
+    clr_country_flag = show_domain_option_64
+    clr_country_flag = show_domain_option_65
+    clr_country_flag = show_domain_option_66
+    clr_country_flag = show_domain_option_67
+    clr_country_flag = show_domain_option_68
+    clr_country_flag = show_domain_option_69
+    clr_country_flag = show_domain_option_70
+    clr_country_flag = show_domain_option_71
+    clr_country_flag = show_domain_option_72
+    clr_country_flag = show_domain_option_73
+    clr_country_flag = show_domain_option_74
+    clr_country_flag = show_domain_option_75
+    clr_country_flag = show_domain_option_76
+    clr_country_flag = show_domain_option_77
+    clr_country_flag = show_domain_option_78
+    clr_country_flag = show_domain_option_79
+    clr_country_flag = show_domain_option_80
+    clr_country_flag = show_domain_option_81
+    clr_country_flag = show_domain_option_82
+    clr_country_flag = show_domain_option_83
+    clr_country_flag = show_domain_option_84
+    clr_country_flag = show_domain_option_85
+    clr_country_flag = show_domain_option_86
+    clr_country_flag = show_domain_option_87
+    clr_country_flag = show_domain_option_88
+    clr_country_flag = show_domain_option_89
+    clr_country_flag = show_domain_option_90
+    clr_country_flag = show_domain_option_91
+    clr_country_flag = show_domain_option_92
+    clr_country_flag = show_domain_option_93
+    clr_country_flag = show_domain_option_94
+    clr_country_flag = show_domain_option_95
+    clr_country_flag = show_domain_option_96
+    clr_country_flag = show_domain_option_97
+    clr_country_flag = show_domain_option_98
+    clr_country_flag = show_domain_option_99
+}
+
+# Called upon the target tag
+build_domain_selection_list = {
+    if = {
+        limit = {
+			num_of_cities = 1
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_1
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_1 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 2
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_2
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_2 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 3
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_3
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_3 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 4
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_4
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_4 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 5
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_5
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_5 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 6
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_6
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_6 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 7
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_7
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_7 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 8
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_8
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_8 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 9
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_9
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_9 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 10
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_10
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_10 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 11
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_11
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_11 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 12
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_12
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_12 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 13
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_13
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_13 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 14
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_14
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_14 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 15
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_15
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_15 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 16
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_16
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_16 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 17
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_17
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_17 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 18
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_18
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_18 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 19
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_19
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_19 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 20
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_20
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_20 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 21
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_21
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_21 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 22
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_22
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_22 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 23
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_23
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_23 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 24
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_24
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_24 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 25
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_25
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_25 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 26
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_26
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_26 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 27
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_27
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_27 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 28
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_28
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_28 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 29
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_29
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_29 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 30
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_30
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_30 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 31
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_31
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_31 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 32
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_32
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_32 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 33
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_33
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_33 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 34
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_34
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_34 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 35
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_35
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_35 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 36
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_36
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_36 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 37
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_37
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_37 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 38
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_38
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_38 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 39
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_39
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_39 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 40
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_40
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_40 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 41
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_41
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_41 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 42
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_42
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_42 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 43
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_43
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_43 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 44
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_44
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_44 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 45
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_45
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_45 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 46
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_46
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_46 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 47
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_47
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_47 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 48
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_48
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_48 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 49
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_49
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_49 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 50
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_50
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_50 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 51
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_51
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_51 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 52
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_52
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_52 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 53
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_53
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_53 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 54
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_54
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_54 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 55
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_55
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_55 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 56
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_56
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_56 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 57
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_57
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_57 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 58
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_58
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_58 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 59
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_59
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_59 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 60
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_60
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_60 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 61
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_61
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_61 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 62
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_62
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_62 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 63
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_63
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_63 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 64
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_64
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_64 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 65
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_65
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_65 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 66
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_66
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_66 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 67
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_67
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_67 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 68
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_68
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_68 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 69
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_69
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_69 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 70
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_70
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_70 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 71
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_71
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_71 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 72
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_72
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_72 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 73
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_73
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_73 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 74
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_74
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_74 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 75
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_75
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_75 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 76
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_76
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_76 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 77
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_77
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_77 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 78
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_78
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_78 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 79
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_79
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_79 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 80
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_80
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_80 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 81
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_81
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_81 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 82
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_82
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_82 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 83
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_83
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_83 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 84
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_84
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_84 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 85
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_85
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_85 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 86
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_86
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_86 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 87
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_87
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_87 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 88
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_88
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_88 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 89
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_89
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_89 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 90
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_90
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_90 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 91
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_91
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_91 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 92
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_92
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_92 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 93
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_93
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_93 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 94
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_94
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_94 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 95
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_95
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_95 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 96
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_96
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_96 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 97
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_97
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_97 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 98
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_98
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_98 }
+    }
+    if = {
+        limit = {
+			num_of_cities = 99
+            any_owned_province = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+        }
+        random_owned_province = {
+            limit = {
+                is_capital = no
+				NOT = { has_province_flag = selected_domain_province }
+            }
+            save_event_target_as = domain_option_99
+            set_province_flag = selected_domain_province
+        }
+
+        $TAG$ = { set_country_flag = show_domain_option_99 }
+    }
+}

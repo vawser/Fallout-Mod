@@ -278,3 +278,43 @@ great_khan_reform = {
     
 	ai = { factor = 0 }
 }
+
+# Beastlord
+beastlord_reform = {
+    icon                        = "radscorpion"
+    legacy_equivalent           = beastlord_legacy
+    valid_for_new_country       = yes 
+    allow_normal_conversion     = yes 
+	allow_convert               = yes
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    
+    modifiers = {
+        own_territory_dice_roll_bonus = 1
+        reinforce_cost_modifier = -0.1
+        
+        governing_capacity = -100
+        
+        max_absolutism = 10
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            psychic_domain_mechanic
+        }
+    }
+    
+    custom_attributes = {
+		tribal_succession = yes
+	}
+    
+    potential = {
+        NOT = { has_government_attribute = locked_government_type }
+    }
+    
+	ai = { factor = 1 }
+}
