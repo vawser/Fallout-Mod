@@ -1,0 +1,242 @@
+# General
+- Updated for 1.35.
+
+# Bookmark
+- Changed the setting of the mod to now be 'Wild Wasteland', a custom scenario inspired from the end of New Vegas, where it is imagined that the Courier manages to let off two nuclear bombs within the borders of the NCR and Caesar's Legion. The bookmark is set in 2290.
+
+# Countries
+- Added the following countries:
+ - Whitebraid
+ - Scorched Hand
+ - Blackrot
+ - Woodstock
+ - Eden
+ - Red Stingers
+ - Kalissa
+ - Radbite
+ - Church of Nuka
+ - The Nashers
+ - Fort Knox
+ - The Fusion
+ - Kokomoro
+ - Elkheart
+ - Aberration
+ - The Lawless
+ - Red Dirt
+ - Furystone
+ - Casktooth
+ - Railspike
+ - Golden Wolves
+ - Freedom
+ - Arcjet
+ - Four Leaf
+ - Wildwood
+ - Crater
+ - Jackels
+ - Motorboys
+ - Lasso
+ - Fremontia
+ - Boulder Dome
+ - Confederation of Soot
+ - Tul Gator
+ - Zark
+ - Yokmuth
+ - Haven
+ - Killred
+ - Rustworth
+ - Shattered Eye
+ - New Frankfurt
+ - Bothi
+ - Windmore
+ - Rustbucket
+
+# History
+- Changed the province history to fit the new bookmark.
+
+# National Ideas
+- Added NI set for: 
+ - Banditos
+ - Wildwood
+
+# Ages
+- Chinese Incursion now occurs if any country grows by 1000 development (or more).
+- Zetan Assault now occurs if any country grows by 2000 development (or more).
+
+# Religions
+- Adjusted all of the modifier bonuses for religions.
+- Added new icons for all religions that follow a consistent style.
+- Removed some religions that did not fit the Fallout world (i.e. Ibadi, etc).
+
+# Ideagroups
+- Replaced "Tolerance" ideas with "Citizenship" ideas (as Tolerance and Harmony were too similar).
+- Moved "Subjugation" ideas to DIP.
+- Replaced "Naval Organisation" ideas with "Naval" ideas.
+- Replaced "Naval Tactics" ideas with "Piracy" ideas.
+- Removed "Naval Leadership" ideas.
+
+# Goods
+- The price of all trade goods now varies in a controlled, but random fashion. Each year one good will get a swing, varying between -50% to +50%.
+- These price swings last 3 years.
+
+# Hegemons
+- Changed the hegemons to:
+ - Administrative: requires 100 owned provinces, and 5 provinces with 30+ development.
+ - Mercantile: requires 200 monthly income, with 50% coming from trade, and 6+ merchants.
+ - Religious: requires 100 owned provinces with owner religion.
+ - Cultural: requires 100 owned provinces with owner culture.
+
+# Diplomatic Actions
+- "Launch Nuclear Warhead" is now more descriptive in what it does in the diplomatic action screen.
+- "Launch Nuclear Warhead" now allows you to select the specific province to nuke (although for countries with more than 99 provinces, the selection will only be a subset of the total possibilities).
+- "Launch Nuclear Warhead" now adds AE in all non-allied nations against the aggressor.
+- "Launch Nuclear Warhead" now has a 365 cooldown between each strike.
+
+- "Conduct Slave Raid" is now better designed, allowing for it to occur in a more flexible manner (i.e. not locked to one instance at any one time). 
+- "Conduct Slave Raid" gives more manpower in general.
+
+- "Assassiniate Leader" is now better designed, allowing for it to occur in a more flexible manner (i.e. not locked to one instance at any one time). 
+- "Establish Cult" now allows you select which enemy province to convert to your religion. It is now called "Spread Religious Propaganda".
+- "Spread Propaganda" now allows you select which enemy province to convert to your culture. It is now called "Spread Cultural Propaganda".
+
+# Doctrines
+- Added "Doctrines", making use of the Naval Doctrine system, although you don't need to have sailors or a navy to select them anymore.
+- You can select from 5 doctrines, but only one can be active at any one time:
+ - Sow Terror: occupying an enemy province will also occupy all of its neighbors (if owned by the war enemy). This will drain 10 MIL power, and won't occur if the MIL power is not available.
+ - Coup de Grace: occupying the enemy capital will cause all enemy provinces to be occupied. This will drain 100 to 400 MIL power (based on enemy development), and will not occur if the MIL power is not available.
+ - Local Bribery: rebel occupations will be automatically resolved, but 1 to 2 years of income will be drained based on the size of the rebel army.
+ - Local Permissiveness: rebel occupations will be automatically resolved, but 0.2 to 1 corruption will be added based on the size of the rebel army.
+ - Local Garrisons: rebel occupations will be automatically resolved, but 5000 to 10000 manpower will be drained based on the size of the rebel army.
+ 
+# Subject Management
+- Added "Administrate Subject" diplomatic action, allowing the following mechanic:
+ - Added the ability to administrate subjcts, allowing you to:
+  - Change the subject type (i.e. switch a Vassal to a March).
+  - Invest in the subject, giving them permenanet bonuses (i.e. +10% Forcelimit).
+  - Assist the subject, giving them one-time benefits (i.e. +1 stability).
+  - Extract from the subject, giving you one-time benefits (i.e. +2000 manpower) but raising liberty desire in the subject.
+  - Set Nationa Color: allows you to change the country color of the subject.
+- Added "Control Subject" diplomatic action, allowing you to switch to your subject tag.
+- Added "Return to Overlord" diplomatic action, allowing you to switch to your overlord tag.
+
+# Government
+- Overhauled the 'succession' mechanics so they are handled in a consistent way across all governments.
+ - Monarchies, theocracies and tribals all select a new ruler on the former ruler's death.
+  - Note: none of these use heirs anymore.
+ - Republics use the traditional election mechanics.
+
+- Added "NCR Authority" government mechanic for NCR government form.
+ - Generate NCR Authority by assisting NCR members in wars and using the Bequeath Gold, Sailors and Manpower diplomatic actions with them.
+ - Added "Frontier Diplomacy" action: all NCR members gain diplomatic_reputation, can be stacked 3 times up to diplomatic_reputation = 3
+ - Added "Law and Order" action: all NCR members gain global_unrest, can be stacked 3 times up to global_unrest = -3
+ - Added "Government Support" action: all NCR members gain global_tax_income and diplomatic_upkeep, can be stacked 3 times up to global_tax_income = 18 and diplomatic_upkeep = 3
+ - Added "Common Aspirations" action: all NCR members gain reform_progress_growth, can be stacked 3 times up to reform_progress_growth = 0.1
+ - Added "Virtues of Democracy" action: all NCR members gain ae_impact, can be stacked 3 times up to ae_impact = -0.15
+ - Added "Unify the NCR" action: requires all othes actions to be 'completed'. Allows the leader of the NCR (the NCR tag by default) to choose whether the annex or the vassalize all current NCR faction members (with > 0 relations).
+ 
+- Added "Casino" government mechanic for New Vegas government form.
+ - Generates 1 Chip per month.
+ - Added "Play the Cards" action: costs 60 Chips, randomly gives a modifier for 5 years themed on the card suits. 
+ - Added "Play the Slots" action: costs 60 Chips, randomly gives caps, from 1 cap all the way to 1000 caps.
+ - Added "Play the Dice" action: costs 60 Chips, randomly gives a one-time benefit (like adm_power, stability, etc).
+
+- Added "Communal Unity" government mechanic for Commune government form.
+ - Communal Harmony is generated by being at peace, but lost whilst at war.
+  - Grants the following at 100 Communal Harmony:
+    global_autonomy = -0.1
+    global_unrest = -5
+    stability_cost_modifier = -0.25
+    min_autonomy_in_territories = -0.2
+ - Added "Quell Discord" action: costs 50 Communal Harmony, reduces all rebel progress by 50.
+ - Added "Request Assistance" action: costs 50 Communal Harmony, gain 0.25 years of income for each ally possessed.
+ - Added "Prepare Ambushes" action: costs 50 Communal Harmony, gain +1 combat die roll in own territory for 5 years.
+ 
+- Added "Tribal Unity" government mechanic for Tribe government form.
+- Tribal Unity is generated by being at peace, but lost whilst at war.
+  - Grants the following at 100 Tribal Unity:
+    production_efficiency = 0.15
+    development_cost = -0.1
+    global_unrest = -4
+ - Added "Promote Open Discussion" action: costs 50 Tribal Unity, adds -10% idea_cost for 10 years.
+ - Added "Establish Tribal Connections" action: costs 30 Tribal Unity, adds +50 opinion towards us in up to 3 neighboring tribal nations.
+ - Added "Prepare for War" action: costs 50 Tribal Unity, instantly build 5 infantry.
+ 
+- Added "Bloodlust" government mechanic for Caesar's Legion government form.
+ - Bloodlust is generated by being at war, but lost whilst at peace.
+  - Grants the following at 100 Bloodlust:
+    infantry_power = 0.2
+    war_exhaustion = -0.1
+    siege_ability = 0.2
+    ae_impact = 0.25
+ - Added "Call to Arms" action: costs 30 Bloodlust, grants 3.0 yearly manpower
+ - Added "Scorch the Earth" action: costs 30 Bloodlust, grants looting speed bonus and causes all occupations of enemy provinces to instantly apply 25 devastation.
+ - Added "Trial by Combat" action: costs 50 Bloodlust, requires 2 generals. 1 General will die, but a new general will be generated with 100 tradition.
+ 
+- Added "Psychic Power" government mechanic to Beastlords government form.
+ - Generates 1 Psychic Power per month.
+ - Added "Radroach Domination" action: costs 50 Psychic Power, applies land_attrition = -0.25 for 5 years.
+ - Added "Radscorpion Domination" action: costs 50 Psychic Power, applies shock_damage = 0.2 for 5 years.
+ - Added "Wasp Domination" action: costs 50 Psychic Power, applies morale_damage = 0.2 for 5 years.
+ - Added "Brahmin Domination" action: costs 50 Psychic Power, applies global_supply_limit_modifier = 0.25 for 5 years.
+ - Added "Wolf Domination" action: costs 50 Psychic Power, applies infantry_power = 0.1 for 5 years.
+ - Added "Mole-rat Domination" action: costs 50 Psychic Power, applies siege_ability = 0.2 for 5 years.
+ 
+- Added "Patriotic Spirit" government mechanic to Enclave government form.
+ - Generates 0.1 Patriotic Spirit per month.
+ - 1.0 is gained at 100 Prestige. 0.25 is gained per positive staiblity.
+ - 0.1 is lost whilst at peace. 0.2 is lost at max war exhaustion. 1.0 is lost at 100 corruption. 0.25 is lost per negative stability.
+  - Grants the following at 100 Patriotic Spirit:
+    land_morale = 0.1
+    naval_morale = 0.1
+    administrative_efficiency = 0.1
+ - Added "Cleansing Fire" action: costs 30 Patriotic Spirit, applies global_monthly_devastation = -0.1 and global_prosperity_growth = 0.1 for 5 years.
+ - Added "Spur Advancement" action: costs 50 Patriotic Spirit, adds 100 ADM, DIP and MIL power.
+ - Added "Close Ranks" action: costs 40 Patriotic Spirit, applies defensiveness = 1.0 and recover_army_morale_speed = 0.25 for 5 years.
+ 
+ - Added "Thrill" government mechanic to Raider government form.
+ - Gain Thrill via war and army tradition.
+ - Lose Thrill via peace.
+ - Added "Inspire Soldiers" action: costs 30 Thrill, gain 3.0 yearly manpower.
+ - Added "Purge the Meek" action: costs 20 Thrill, reduce corruption by 2
+ - Added "Conscript Veterans" action: costs 40 Thrill, spawn 3 "Veteran" special units in the capital.
+ 
+ - Added "Mutation" government mechanic to Super Mutant government form.
+ - Gain Mutation via war, battles, and passively.
+ - Added "FEV Rage" action: costs 30 Mutation, land_morale_constant = 1.0 for 2 years.
+ - Added "Enforce Discipline" action: costs 30 Mutation, discipline = 0.05 and global_unrest = 1 for 2 years.
+ - Added "Beckon the Behemoths" action: costs 50 Mutation, spawn 2 "Behemoth" special units in the capital.
+ 
+# Faction 
+- Added a pseudo-faction mechanic for the NCR. 
+ - Members will have the "Member of the NCR" modifier.
+ - The Leader will have the "Head of the NCR" modifier. (Fixed to the NCR).
+ 
+- The Faction Leader can invite members to, and kick members from the faction.
+- Faction members can call on the leader or other members to help them in wars without requiring an explicit alliance.
+- Viable countries may ask the Faction leader to join the faction.
+ 
+# Ruler
+- Ruler death should now occur in a more controlled fashion. It is 1% chance of death per year by default, with that chance rising based on age and other modifiers.
+- Immortal ruler growth/regression should now occur in a more controlled fashion.
+
+# Status Report
+- Added the "Status Report" decision, which opens up a menu that allows you to:
+ - Adjust National Color: this allows you to change the country color of your country.
+ - Invest in the Head of State: this allows you to spend ADM/DIP/MIL power to improve the respective skill of your current ruler.
+ - Compile Report on the NCR: view the current leader and members of the NCR faction.
+- The Status report will also display the number of nuclear warheads currently ready to use.
+
+# Caravans
+- The caravan shop now supports 5 tiers of modifiers:
+ - Tier 1: 2000 caps
+ - Tier 2: 4000 caps
+ - Tier 3: 6000 caps
+ - Tier 4: 8000 caps
+ - Tier 5: 10000 caps
+- Deathray item is now Combat Pipboys, granting land_morale.
+
+# Subjects
+- Added the "Hegemonic Vassal" subject type: similar to the Vassal type, but without the cost of a diplomatic upkeep slot and with lower base liberty desire.
+ - Unlocked for usage via the Subjugation ideagroup.
+
+# Bugfixes
+- Fixed numerous small issues that were noticed during the process of updating to 1.35.
