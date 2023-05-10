@@ -167,39 +167,39 @@ country_decisions = {
     }
     
     # Start Scavenger Hunt
-    start_scavenger_hunt = {
-		potential = {
-            is_humanlike_administration = yes
-            always = no # TODO
-            has_scavenging_allowed = yes
-            NOT = { has_country_flag = trigger_scavenging_event }
-		}
-		allow = {
-            NOT = { has_country_modifier = scavenging_cooldown }
-            years_of_income = 0.5
-		}
+    # start_scavenger_hunt = {
+		# potential = {
+            # is_humanlike_administration = yes
+            # always = no # TODO
+            # has_scavenging_allowed = yes
+            # NOT = { has_country_flag = trigger_scavenging_event }
+		# }
+		# allow = {
+            # NOT = { has_country_modifier = scavenging_cooldown }
+            # years_of_income = 0.5
+		# }
 		
-		effect = {
-            add_country_modifier = {
-                name = scavenging_cooldown
-                duration = 3650
-                hidden = yes
-            }
+		# effect = {
+            # add_country_modifier = {
+                # name = scavenging_cooldown
+                # duration = 3650
+                # hidden = yes
+            # }
             
-            add_years_of_income = -0.5
+            # add_years_of_income = -0.5
             
-            tooltip = {
-                country_event = { id = scavenging.1 }
-            }
-            hidden_effect = {
-                set_country_flag = trigger_scavenging_event
-            }
-		}
+            # tooltip = {
+                # country_event = { id = scavenging.1 }
+            # }
+            # hidden_effect = {
+                # set_country_flag = trigger_scavenging_event
+            # }
+		# }
 		
-		ai_will_do = {
-			factor = 0
-		}
-	}
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
     
     # Search for Lost Texts
     search_for_lost_texts = {

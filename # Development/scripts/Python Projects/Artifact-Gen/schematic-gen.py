@@ -3,7 +3,7 @@ import sys
 import xylozi_common as com
 
 """
-Generate Artifact releated script for the WWU artifact system
+Generate Artifact releated script for the Fallout scavenging system
 """
 
 def getScriptPath():
@@ -36,25 +36,6 @@ def build_custom_localization(name):
 
     template = "template_custom_localization_" + name + ".txt"
     output_name = "output_custom_localization_" + name + ".txt"
-
-    input_list = com.get_csv_list("input.txt", ";")
-    template_file = com.get_file_as_string(template)
-
-    outputFile = open(output_name, "wt")
-
-    for entry in input_list:
-        new_entry = template_file.format(artifact=entry[0])
-        new_entry = new_entry.replace("[", "{")
-        new_entry = new_entry.replace("]", "}")
-        outputFile.write(new_entry)
-
-    outputFile.close()
-
-def build_icons():
-    os.chdir(getScriptPath())
-
-    template = "template_gfx_icon.txt"
-    output_name = "output_gfx_icon.txt"
 
     input_list = com.get_csv_list("input.txt", ";")
     template_file = com.get_file_as_string(template)
@@ -170,9 +151,6 @@ def build_specific_reward_list(event_id):
 
 def main():
     event_id = 75
-
-    # GFX
-    build_icons()
 
     # Custom Localization
     build_custom_localization("name")

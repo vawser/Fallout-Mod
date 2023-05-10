@@ -1,0 +1,94 @@
+namespace = fallout_schematic_report
+
+# Schematic Report
+country_event = {
+	id = fallout_schematic_report.1
+	title = fallout_schematic_report.1.title
+	desc = fallout_schematic_report.1.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.weapon
+		
+        country_event = { id = fallout_schematic_report.2 }
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.armor
+		
+        country_event = { id = fallout_schematic_report.3 }
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.vehicle
+		
+        country_event = { id = fallout_schematic_report.4 }
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.energy
+		
+        country_event = { id = fallout_schematic_report.5 }
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.medical
+		
+        country_event = { id = fallout_schematic_report.6 }
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.robotic
+		
+        country_event = { id = fallout_schematic_report.7 }
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.utility
+		
+        country_event = { id = fallout_schematic_report.8 }
+	}
+    
+    option = {
+		name = fallout_schematic_report.1.option.return
+		
+        hidden_effect = {
+            country_event = { id = fallout_status_report.1 }
+        }
+	}
+}
+
+# Weapon Schematics
+country_event = {
+	id = fallout_schematic_report.2
+	title = fallout_schematic_report.2.title
+	desc = fallout_schematic_report.2.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            save_schematic_location = { schematic = minigun }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_report.2.option.return
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_schematic_report.1 }
+    }
+}

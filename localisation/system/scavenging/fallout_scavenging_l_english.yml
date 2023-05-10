@@ -1,0 +1,808 @@
+﻿l_english:
+ #----------------------------------------------
+ # Decisions
+ #----------------------------------------------
+ start_scavenging_expedition_title: "Start Scavenging Expedition"
+ start_scavenging_expedition_desc: "The wasteland is littered with pre-war technology, lost to the Great War. Let us scavenging in search for remnants and relics of such technology, and use it to derive schematics from which our nation can benefit."
+ 
+ #----------------------------------------------
+ # Events
+ #----------------------------------------------
+ # Schematic Report
+ fallout_schematic_report.1.title: "Schematic Report"
+ fallout_schematic_report.1.desc: "View the current holder of various schematics."
+ fallout_schematic_report.1.option.exit: "Exit"
+ fallout_schematic_report.1.option.weapon: "Weapon Schematics"
+ fallout_schematic_report.1.option.armor: "Armor Schematics"
+ fallout_schematic_report.1.option.vehicle: "Vehicle Schematics"
+ fallout_schematic_report.1.option.energy: "Energy Schematics"
+ fallout_schematic_report.1.option.medical: "Medical Schematics"
+ fallout_schematic_report.1.option.robotic: "Robotic Schematics"
+ fallout_schematic_report.1.option.utility: "Utility Schematics"
+ 
+ fallout_schematic_report.2.title: "Weapon Schematics"
+ fallout_schematic_report.2.desc: "The following schematics are considered weapons.\n§YMinigun§!: [GetOwner_minigun]"
+ fallout_schematic_report.2.option.return: "Return"
+ 
+ SCHEMATIC_NO_OWNER: "Not held by any nation."
+ SCHEMATIC_OWNER_minigun: "@[current_owner_minigun.GetTag] [current_owner_minigun.GetName]"
+ 
+ # Scavenging Progress Report
+ fallout_scavenging_report.1.title: "Scavenging Progress Report"
+ fallout_scavenging_report.1.desc: "Our scavenging expedition is hard at work, scouring the wasteland for viable technological relics and artifacts. If so desired, we may send additional resources to them to speed up progress, or we can call off the expedition if the recurring costs become punitive.\n\nCurrent Expedition Progress: §Y[This.expedition_progress.GetValue]/[This.expedition_progress_cap.GetValue]§!"
+ fallout_scavenging_report.1.option.exit: "Exit"
+ fallout_scavenging_report.1.option.advance_expedition: "Advance Expedition"
+ fallout_scavenging_report.1.option.advance_expedition.lack_gold: "§gAdvance Expedition§!"
+ fallout_scavenging_report.1.option.advance_expedition.cooldown: "§gAdvance Expedition§!"
+ fallout_scavenging_report.1.option.cancel_expedition: "Cancel Expedition"
+ 
+ # Scavenging Expedition
+ fallout_scavenging.1.title: "Expedition Focus"
+ fallout_scavenging.1.desc: "Our scavengers are ready to begin their expedition. Let us direct them to sites that likely possess the exact schematic we wish to find. However, doing this will increase the initial cost of the expedition, and will the overall expedition will take much longer to complete."
+ fallout_scavenging.1.option.random: "Look for any schematic"
+ fallout_scavenging.1.option.weapon: "Look for a weapon schematic"
+ fallout_scavenging.1.option.armor: "Look for a armor schematic"
+ fallout_scavenging.1.option.vehicle: "Look for a vehicle schematic"
+ fallout_scavenging.1.option.energy: "Look for a energy schematic"
+ fallout_scavenging.1.option.medical: "Look for a medical schematic"
+ fallout_scavenging.1.option.robotic: "Look for a robotic schematic"
+ fallout_scavenging.1.option.utility: "Look for a utility schematic"
+ 
+ fallout_scavenging.2.title: "Expedition Focus: Weapon"
+ fallout_scavenging.2.desc: "Select the specific weapon schematic you wish to look for."
+ fallout_scavenging.2.option.return: "Return"
+ fallout_scavenging.2.option.minigun: "Look for the Minigun schematic"
+ fallout_scavenging.2.option.flamer: "Look for the Flamer schematic"
+ fallout_scavenging.2.option.incinerator: "Look for the Incinerator schematic"
+ fallout_scavenging.2.option.laser_pistol: "Look for the Laser Pistol schematic"
+ fallout_scavenging.2.option.laser_rifle: "Look for the Laser Rifle schematic"
+ fallout_scavenging.2.option.laser_assisted_electrical_rifle: "Look for the LAER schematic"
+ fallout_scavenging.2.option.gatling_laser: "Look for the Gatling Laser schematic"
+ fallout_scavenging.2.option.recharger_rifle: "Look for the Recharger Rifle schematic"
+ fallout_scavenging.2.option.plasma_rifle: "Look for the Plasma Rifle schematic"
+ fallout_scavenging.2.option.plasma_caster: "Look for the Plasma Caster schematic"
+ fallout_scavenging.2.option.tesla_cannon: "Look for the Tesla Cannon schematic"
+ fallout_scavenging.2.option.magnetic_rail_cannon: "Look for the Magnetic Rail Cannon schematic"
+
+ fallout_scavenging.3.title: "Expedition Focus: Armor"
+ fallout_scavenging.3.desc: "Select the specific armor schematic you wish to look for."
+ fallout_scavenging.3.option.return: "Return"
+ fallout_scavenging.3.option.t45_power_armor: "Look for the T-45 Power Armor schematic"
+ fallout_scavenging.3.option.t51_power_armor: "Look for the T-51 Power Armor schematic"
+ fallout_scavenging.3.option.t60_power_armor: "Look for the T-60 Power Armor schematic"
+ fallout_scavenging.3.option.t65_power_armor: "Look for the T-65 Power Armor schematic"
+ fallout_scavenging.3.option.x01_power_armor: "Look for the X-01 Power Armor schematic"
+ fallout_scavenging.3.option.tesla_power_armor: "Look for the Tesla Power Armor schematic"
+ fallout_scavenging.3.option.hellfire_power_armor: "Look for the Hellfire Power Armor schematic"
+ 
+ fallout_scavenging.4.title: "Expedition Focus: Vehicle"
+ fallout_scavenging.4.desc: "Select the specific vehicle schematic you wish to look for."
+ fallout_scavenging.4.option.return: "Return"
+ fallout_scavenging.4.option.chryslus_corvega: "Look for the Chryslus Corvega schematic"
+ fallout_scavenging.4.option.highwayman: "Look for the Highwayman schematic"
+ fallout_scavenging.4.option.f80_fighter_jet: "Look for the F-80 Fighter Jet schematic"
+ fallout_scavenging.4.option.transport_vertibird: "Look for the Transport Vertibird schematic"
+ fallout_scavenging.4.option.combat_vertibird: "Look for the Combat Vertibird schematic"
+ fallout_scavenging.4.option.steam_powered_truck: "Look for the Steam-powered Truck schematic"
+ 
+ fallout_scavenging.5.title: "Expedition Focus: Energy"
+ fallout_scavenging.5.desc: "Select the specific energy schematic you wish to look for."
+ fallout_scavenging.5.option.return: "Return"
+ fallout_scavenging.5.option.fusion_cell: "Look for the Fusion Cell schematic"
+ fallout_scavenging.5.option.fusion_core: "Look for the Fusion Core schematic"
+ fallout_scavenging.5.option.microfusion_cell: "Look for the Microfusion Cell schematic"
+ fallout_scavenging.5.option.microfusion_breeder: "Look for the Microfusion Breeder schematic"
+ fallout_scavenging.5.option.beryllium_agitator: "Look for the Beryllium Agitator schematic"
+ fallout_scavenging.5.option.verdant_air_turbine: "Look for the Verdant-Air Turbine schematic"
+ fallout_scavenging.5.option.helios_solar_generator: "Look for the HELIOS Solar Generator schematic"
+ 
+ fallout_scavenging.6.title: "Expedition Focus: Medical"
+ fallout_scavenging.6.desc: "Select the specific medical schematic you wish to look for."
+ fallout_scavenging.6.option.return: "Return"
+ fallout_scavenging.6.option.stimpak: "Look for the Stimpak schematic"
+ fallout_scavenging.6.option.auto_doc: "Look for the Auto-Doc schematic"
+ fallout_scavenging.6.option.buffout: "Look for the Buffout schematic"
+ fallout_scavenging.6.option.mentats: "Look for the Mentats schematic"
+ fallout_scavenging.6.option.psycho: "Look for the Psycho schematic"
+ fallout_scavenging.6.option.jet: "Look for the Jet schematic"
+ 
+ fallout_scavenging.7.title: "Expedition Focus: Robotic"
+ fallout_scavenging.7.desc: "Select the specific robotics schematic you wish to look for."
+ fallout_scavenging.7.option.return: "Return"
+ fallout_scavenging.7.option.protectron: "Look for the Protectron schematic"
+ fallout_scavenging.7.option.mister_handy: "Look for the Mister Handy schematic"
+ fallout_scavenging.7.option.assaultron: "Look for the Assaultron schematic"
+ fallout_scavenging.7.option.eyebot: "Look for the Eyebot schematic"
+ fallout_scavenging.7.option.mister_gutsy: "Look for the Mister Gutsy schematic"
+ fallout_scavenging.7.option.robobrain: "Look for the Robo-brain schematic"
+ fallout_scavenging.7.option.securitron: "Look for the Securitron schematic"
+ fallout_scavenging.7.option.sentry_bot: "Look for the Sentry Bot schematic"
+ 
+ fallout_scavenging.8.title: "Expedition Focus: Utility"
+ fallout_scavenging.8.desc: "Select the specific utility schematic you wish to look for."
+ fallout_scavenging.8.option.return: "Return"
+ fallout_scavenging.8.option.stealth_boy: "Look for the Stealth Boy schematic"
+ fallout_scavenging.8.option.base_replicator_unit: "Look for Base Replicator Unit schematic"
+ fallout_scavenging.8.option.hologram: "Look for the Hologram schematic"
+ fallout_scavenging.8.option.molecular_relay: "Look for the Molecular Relay schematic"
+ 
+ fallout_scavenging.10.title: "Opportunists"
+ fallout_scavenging.10.desc: "Our scavengers have been hard at work. Recently successes have led them to a promising ruin. However, local raiders have begun to demand payment, or they will force our scavengers to stop. Without an adequate resolution, the expedition may be in jeopardy."
+ fallout_scavenging.10.option.a: "Pay off the raiders"
+ fallout_scavenging.10.option.b: "Guard the scavengers"
+ fallout_scavenging.10.option.c: "Call their bluff"
+ 
+ fallout_scavenging.11.title: "Expedition in Jeopardy"
+ fallout_scavenging.11.desc: "Our scavengers have been hard at work. However, local tribals have begun to demand that the expedition is stopped. Without an adequate resolution, the expedition may be in jeopardy."
+ fallout_scavenging.11.option.a: "Resolve the situation quickly"
+ fallout_scavenging.11.option.b: "Attempt to negotiate an agreement"
+ fallout_scavenging.11.option.c: "Pause the expedition"
+ 
+ fallout_scavenging.12.title: "Scavenger Fumbles"
+ fallout_scavenging.12.desc: "Our scavengers have been hard at work. But one of the team has fumbled during the expedition and caused damage to the local tribal camp. The nearby tribals have insisted that the expedition fixes their mistake before resuming the expedition."
+ fallout_scavenging.12.option.a: "Continue the expedition"
+ fallout_scavenging.12.option.b: "Attempt to compensate the tribals"
+ fallout_scavenging.12.option.c: "Fix the well immediately"
+ 
+ fallout_scavenging.13.title: "Local Complaints"
+ fallout_scavenging.13.desc: "Our scavengers have been hard at work. But local wastelands have begin complaining about the disruption the expedition is causing, the noise of the scavengers, and numerous other trifling matters. They insist that the expedition is restricted to set hours during the day."
+ fallout_scavenging.13.option.a: "Ignore their demands"
+ fallout_scavenging.13.option.b: "Negotiate a scavenging timetable"
+ fallout_scavenging.13.option.c: "Move the expedition elsewhere"
+ 
+ fallout_scavenging.14.title: "Expedition Breakthrough"
+ fallout_scavenging.14.desc: "Our scavengers have been hard at work and have recently uncovered promising ruins. Let us hope this brings us closer to a good find."
+ fallout_scavenging.14.option.a: "Excellent work!"
+ 
+ fallout_scavenging.15.title: "Expedition Success!"
+ fallout_scavenging.15.desc: "Our scavengers have been hard at work and have recently uncovered very promising signs of a discovery. Let us hope this brings us closer to a good find."
+ fallout_scavenging.15.option.a: "Excellent work!"
+ 
+ fallout_scavenging.16.title: "Brotherhood Shakedown"
+ fallout_scavenging.16.desc: "A group of paladins from the Brotherhood of Steel have taken notice of our scavengers. They demand that we sell them the technology our team has found, or face their wrath. Submission to these bullies would enrage some of the more hotheaded scavengers within the expedition however."
+ fallout_scavenging.16.option.a: "Refuse their offer"
+ fallout_scavenging.16.option.b: "Sell them valuable finds"
+ 
+ fallout_scavenging.17.title: "Deathclaw!"
+ fallout_scavenging.17.desc: "Our scavengers have become victims to a local deathclaw. Although many survived, they have requested additional men, otherwise they will be forced to change site and lose all current progress."
+ fallout_scavenging.18.option.a: "Send them more men"
+ fallout_scavenging.18.option.b: "It is time to move on"
+ 
+ fallout_scavenging.18.title: "Corrupt Scavenger"
+ fallout_scavenging.18.desc: "Rumours have it that a member of our expedition is corrupt, and has made shady arrangements on the side. Without swift action, others may follow suit, but such action would necessitate the pausing of the expedition."
+ fallout_scavenging.18.option.a: "Let bygones be bygones"
+ fallout_scavenging.18.option.b: "Purge the corrupt scavenger"
+ 
+ fallout_scavenging.100.title: "Expedition Reward"
+ fallout_scavenging.100.desc: ""
+ fallout_scavenging.100.option.a: "OK"
+ 
+ fallout_scavenging.101.title: "Expedition Failure"
+ fallout_scavenging.101.desc: "Mistakes and calamity have beset our expedition since it started. The latest failure has caused a fatal drop in morale, and the expedition has broken up, returning home."
+ fallout_scavenging.101.option.a: "Blasted wasteland!"
+ 
+ # Schematics
+ fallout_schematic.1.title: "Schematic: Fusion Cell"
+ fallout_schematic.1.desc: "Fusion cells are typically used by laser-based energy weapons. A fusion cell nearly resembles an electric battery with positive and negative symbols, directional arrows, and a warning label on the side."
+ fallout_schematic.1.option.a: "Excellent find!"
+ 
+ fallout_schematic.2.title: "Schematic: Fusion Core"
+ fallout_schematic.2.desc: "Standardized fusion cores are a high-grade, long-term nuclear battery used for military and commercial applications before the Great War. Used by civilians to power a multitude of devices, from automobiles, to generators, the military instead used them for warfare, supplying power armor and some Gatling laser models with energy."
+ fallout_schematic.2.option.a: "Excellent find!"
+ 
+ fallout_schematic.3.title: "Schematic: Microfusion Cell"
+ fallout_schematic.3.desc: "The microfusion cell, a medium-sized energy production unit, is a self-contained fusion plant used as ammunition for energy weapons."
+ fallout_schematic.3.option.a: "Excellent find!"
+ 
+ fallout_schematic.4.title: "Schematic: Microfusion Breeder"
+ fallout_schematic.4.desc: "The microfusion breeder cell, a medium-sized energy production unit, is a self-contained fusion plant used as ammunition for energy weapons. It possesses the unique ability to recharge itself."
+ fallout_schematic.4.option.a: "Excellent find!"
+ 
+ fallout_schematic.5.title: "Schematic: Beryllium Agitator"
+ fallout_schematic.5.desc: "The beryllium agitator is a pre-War project that was being developed by the Mass Fusion facility. The beryllium agitator is able to generate a considerable amount of energy."
+ fallout_schematic.5.option.a: "Excellent find!"
+ 
+ fallout_schematic.6.title: "Schematic: Verdant-Air Turbine"
+ fallout_schematic.6.desc: "A project overseen by GDA Fusion. The Verdant-Air turbine effeciently converts wind power into electricity."
+ fallout_schematic.6.option.a: "Excellent find!"
+ 
+ fallout_schematic.7.title: "Schematic: HELIOS Solar Generator"
+ fallout_schematic.7.desc: "A photovoltaic array and generator, developed by HELIOS and used to generate electricity from the power of the sun."
+ fallout_schematic.7.option.a: "Excellent find!"
+ 
+ fallout_schematic.8.title: "Schematic: Chryslus Corvega"
+ fallout_schematic.8.desc: "DESCRIPTION HERE"
+ fallout_schematic.8.option.a: "Excellent find!"
+ 
+ fallout_schematic.9.title: "Schematic: Highwayman"
+ fallout_schematic.9.desc: "DESCRIPTION HERE"
+ fallout_schematic.9.option.a: "Excellent find!"
+ 
+ fallout_schematic.10.title: "Schematic: F-80 Fighter Jet"
+ fallout_schematic.10.desc: "DESCRIPTION HERE"
+ fallout_schematic.10.option.a: "Excellent find!"
+ 
+ fallout_schematic.11.title: "Schematic: Transport Vertibird"
+ fallout_schematic.11.desc: "DESCRIPTION HERE"
+ fallout_schematic.11.option.a: "Excellent find!"
+ 
+ fallout_schematic.12.title: "Schematic: Combat Vertibird"
+ fallout_schematic.12.desc: "DESCRIPTION HERE"
+ fallout_schematic.12.option.a: "Excellent find!"
+ 
+ fallout_schematic.13.title: "Schematic: Steam-powered Truck"
+ fallout_schematic.13.desc: "DESCRIPTION HERE"
+ fallout_schematic.13.option.a: "Excellent find!"
+ 
+ fallout_schematic.14.title: "Schematic: Minigun"
+ fallout_schematic.14.desc: "DESCRIPTION HERE"
+ fallout_schematic.14.option.a: "Excellent find!"
+ 
+ fallout_schematic.15.title: "Schematic: Flamer"
+ fallout_schematic.15.desc: "DESCRIPTION HERE"
+ fallout_schematic.15.option.a: "Excellent find!"
+ 
+ fallout_schematic.16.title: "Schematic: Incinerator"
+ fallout_schematic.16.desc: "DESCRIPTION HERE"
+ fallout_schematic.16.option.a: "Excellent find!"
+ 
+ fallout_schematic.17.title: "Schematic: Laser Pistol"
+ fallout_schematic.17.desc: "DESCRIPTION HERE"
+ fallout_schematic.17.option.a: "Excellent find!"
+ 
+ fallout_schematic.18.title: "Schematic: Laser Rifle"
+ fallout_schematic.18.desc: "DESCRIPTION HERE"
+ fallout_schematic.18.option.a: "Excellent find!"
+ 
+ fallout_schematic.19.title: "Schematic: LAER"
+ fallout_schematic.19.desc: "DESCRIPTION HERE"
+ fallout_schematic.19.option.a: "Excellent find!"
+ 
+ fallout_schematic.20.title: "Schematic: Gatling Laser"
+ fallout_schematic.20.desc: "DESCRIPTION HERE"
+ fallout_schematic.20.option.a: "Excellent find!"
+ 
+ fallout_schematic.21.title: "Schematic: Recharger Rifle"
+ fallout_schematic.21.desc: "DESCRIPTION HERE"
+ fallout_schematic.21.option.a: "Excellent find!"
+ 
+ fallout_schematic.22.title: "Schematic: Plasma Rifle"
+ fallout_schematic.22.desc: "DESCRIPTION HERE"
+ fallout_schematic.22.option.a: "Excellent find!"
+ 
+ fallout_schematic.23.title: "Schematic: Plasma Caster"
+ fallout_schematic.23.desc: "DESCRIPTION HERE"
+ fallout_schematic.23.option.a: "Excellent find!"
+ 
+ fallout_schematic.24.title: "Schematic: Tesla Cannon"
+ fallout_schematic.24.desc: "DESCRIPTION HERE"
+ fallout_schematic.24.option.a: "Excellent find!"
+ 
+ fallout_schematic.25.title: "Schematic: Magnetic Rail Cannon"
+ fallout_schematic.25.desc: "DESCRIPTION HERE"
+ fallout_schematic.25.option.a: "Excellent find!"
+ 
+ fallout_schematic.26.title: "Schematic: T-51 Power Armor"
+ fallout_schematic.26.desc: "DESCRIPTION HERE"
+ fallout_schematic.26.option.a: "Excellent find!"
+ 
+ fallout_schematic.27.title: "Schematic: T-45 Power Armor"
+ fallout_schematic.27.desc: "DESCRIPTION HERE"
+ fallout_schematic.27.option.a: "Excellent find!"
+ 
+ fallout_schematic.28.title: "Schematic: T-60 Power Armor"
+ fallout_schematic.28.desc: "DESCRIPTION HERE"
+ fallout_schematic.28.option.a: "Excellent find!"
+ 
+ fallout_schematic.29.title: "Schematic: T-65 Power Armor"
+ fallout_schematic.29.desc: "DESCRIPTION HERE"
+ fallout_schematic.29.option.a: "Excellent find!"
+ 
+ fallout_schematic.30.title: "Schematic: X-01 Power Armor"
+ fallout_schematic.30.desc: "DESCRIPTION HERE"
+ fallout_schematic.30.option.a: "Excellent find!"
+ 
+ fallout_schematic.31.title: "Schematic: Tesla Power Armor"
+ fallout_schematic.31.desc: "DESCRIPTION HERE"
+ fallout_schematic.31.option.a: "Excellent find!"
+ 
+ fallout_schematic.32.title: "Schematic: Hellfire Power Armor"
+ fallout_schematic.32.desc: "DESCRIPTION HERE"
+ fallout_schematic.32.option.a: "Excellent find!"
+ 
+ fallout_schematic.33.title: "Schematic: Stimpak"
+ fallout_schematic.33.desc: "DESCRIPTION HERE"
+ fallout_schematic.33.option.a: "Excellent find!"
+ 
+ fallout_schematic.34.title: "Schematic: Auto-Doc"
+ fallout_schematic.34.desc: "DESCRIPTION HERE"
+ fallout_schematic.34.option.a: "Excellent find!"
+ 
+ fallout_schematic.35.title: "Schematic: Buffout"
+ fallout_schematic.35.desc: "DESCRIPTION HERE"
+ fallout_schematic.35.option.a: "Excellent find!"
+ 
+ fallout_schematic.36.title: "Schematic: Mentats"
+ fallout_schematic.36.desc: "DESCRIPTION HERE"
+ fallout_schematic.36.option.a: "Excellent find!"
+ 
+ fallout_schematic.37.title: "Schematic: Psycho"
+ fallout_schematic.37.desc: "DESCRIPTION HERE"
+ fallout_schematic.37.option.a: "Excellent find!"
+ 
+ fallout_schematic.38.title: "Schematic: Jet"
+ fallout_schematic.38.desc: "DESCRIPTION HERE"
+ fallout_schematic.38.option.a: "Excellent find!"
+ 
+ fallout_schematic.39.title: "Schematic: Protectron"
+ fallout_schematic.39.desc: "DESCRIPTION HERE"
+ fallout_schematic.39.option.a: "Excellent find!"
+ 
+ fallout_schematic.40.title: "Schematic: Mister Handy"
+ fallout_schematic.40.desc: "DESCRIPTION HERE"
+ fallout_schematic.40.option.a: "Excellent find!"
+ 
+ fallout_schematic.41.title: "Schematic: Assaultron"
+ fallout_schematic.41.desc: "DESCRIPTION HERE"
+ fallout_schematic.41.option.a: "Excellent find!"
+ 
+ fallout_schematic.42.title: "Schematic: Eyebot"
+ fallout_schematic.42.desc: "DESCRIPTION HERE"
+ fallout_schematic.42.option.a: "Excellent find!"
+ 
+ fallout_schematic.43.title: "Schematic: Mister Gutsy"
+ fallout_schematic.43.desc: "DESCRIPTION HERE"
+ fallout_schematic.43.option.a: "Excellent find!"
+ 
+ fallout_schematic.44.title: "Schematic: Robo-brain"
+ fallout_schematic.44.desc: "DESCRIPTION HERE"
+ fallout_schematic.44.option.a: "Excellent find!"
+ 
+ fallout_schematic.45.title: "Schematic: Securitron"
+ fallout_schematic.45.desc: "DESCRIPTION HERE"
+ fallout_schematic.45.option.a: "Excellent find!"
+ 
+ fallout_schematic.46.title: "Schematic: Sentry Bot"
+ fallout_schematic.46.desc: "DESCRIPTION HERE"
+ fallout_schematic.46.option.a: "Excellent find!"
+ 
+ fallout_schematic.47.title: "Schematic: Stealth Boy"
+ fallout_schematic.47.desc: "DESCRIPTION HERE"
+ fallout_schematic.47.option.a: "Excellent find!"
+
+ fallout_schematic.48.title: "Schematic: Base Replicator Unit"
+ fallout_schematic.48.desc: "DESCRIPTION HERE"
+ fallout_schematic.48.option.a: "Excellent find!"
+ 
+ fallout_schematic.49.title: "Schematic: Hologram"
+ fallout_schematic.49.desc: "DESCRIPTION HERE"
+ fallout_schematic.49.option.a: "Excellent find!"
+ 
+ fallout_schematic.50.title: "Schematic: Molecular Relay"
+ fallout_schematic.50.desc: "DESCRIPTION HERE"
+ fallout_schematic.50.option.a: "Excellent find!"
+ 
+ fallout_schematic.100.title: "Minor Find: Pipe Pistols"
+ fallout_schematic.100.desc: "A stash of pipe pistols, worn but still usable. They can be easily sold for a few bottlecaps."
+ fallout_schematic.100.option.a: "Oh well, at least they can be sold for caps"
+ 
+ fallout_schematic.101.title: "Minor Find: Ballistic Guns"
+ fallout_schematic.101.desc: "A stash of assault rifles, pistols and more. They appear to be surplus military weapons from the Great War. They can be easily sold for a fair amount of bottlecaps."
+ fallout_schematic.101.option.a: "Oh well, at least they can be sold for caps"
+ 
+ fallout_schematic.102.title: "Minor Find: Radiation Suits"
+ fallout_schematic.102.desc: "A stash of radiation suits. Useful for wastelanders that need to be around radiation for any length of time. They can be easily sold for a decent amount of bottlecaps."
+ fallout_schematic.102.option.a: "Oh well, at least they can be sold for caps"
+ 
+ fallout_schematic.103.title: "Minor Find: Bottlecap Stash"
+ fallout_schematic.103.desc: "A stash of bottlecaps. Clearly a nest egg left by an unfortunate soul. Oh well, these caps are ours now."
+ fallout_schematic.103.option.a: "Finders keepers!"
+ 
+ fallout_schematic.104.title: "Minor Find: Fission Batteries"
+ fallout_schematic.104.desc: "A stash of fission batteries. Very useful in powering pre-war robots and vehicles, which make extensive use of such batteries. They can be easily sold for a significant amount of bottlecaps."
+ fallout_schematic.104.option.a: "Oh well, at least they can be sold for caps"
+ 
+ fallout_schematic.105.title: "Minor Find: Combat Armor"
+ fallout_schematic.105.desc: "A stash of combat armor. Protection against weaponry is always in demand across the wasteland. They can be easily sold for a large amount of bottle caps."
+ fallout_schematic.105.option.a: "Oh well, at least they can be sold for caps"
+ 
+ fallout_schematic.106.title: "Minor Find: Riot Gear"
+ fallout_schematic.106.desc: "A stash of riot gear. Protection against the elements and the hazards of the wasteland is always in demand. They can be easily sold for a massive amount of bottle caps."
+ fallout_schematic.106.option.a: "Oh well, at least they can be sold for caps"
+ 
+ #----------------------------------------------
+ # Tooltips
+ #----------------------------------------------
+ HAS_NOT_STARTED_SCAVENGING_EXPEDITION: "Has not started §YScavenging Expedition§!."
+ HAS_ANY_SCHEMATIC: "Has any schematic in their possession."
+ SCAVENGING_EXPEDITION_ACTION_COOLDOWN_TT: "We will not be able to use Advance Expedition for §Y365§! days."
+ ADVANCE_EXPEDITION_LACK_TT: "We do not have enough ducats to afford this action."
+ ADVANCE_EXPEDITION_USED_TT: "We have already used Advance Expedition within the last §Y365§! days."
+ 
+ ADVANCE_EXPEDITION_1_TT: "Progress on the expedition will advance by §Y1§!.\nCurrent Expedition Progress: §Y[This.expedition_progress.GetValue]/[This.expedition_progress_cap.GetValue]§!"
+ ADVANCE_EXPEDITION_3_TT: "Progress on the expedition will advance by §Y3§!.\nCurrent Expedition Progress: §Y[This.expedition_progress.GetValue]/[This.expedition_progress_cap.GetValue]§!"
+ REDUCE_EXPEDITION_1_TT: "Progress on the expedition will reduce by §Y1§!.\nCurrent Expedition Progress: §Y[This.expedition_progress.GetValue]/[This.expedition_progress_cap.GetValue]§!\n\nIf expedition progress drops to or below §Y0§!, the expedition will end."
+ RESET_EXPEDITION_TT: "Progress on the expedition will be set to §Y0§!.\nCurrent Expedition Progress: §Y[This.expedition_progress.GetValue]/[This.expedition_progress_cap.GetValue]§!"
+ CURRENT_EXPEDITION_PROGRESS: "Current Expedition Progress: §Y[This.expedition_progress.GetValue]/[This.expedition_progress_cap.GetValue]§!"
+ 
+ SCHEMATIC_FOCUS_EFFECT: "Looking for a specific schematic will greatly increase the chance we find it, but will narrow the potential finds to only itself and minor stashes."
+ 
+ # Focus
+ SCHEMATIC_FOCUS_random: "Look for any schematic."
+ SCHEMATIC_FOCUS_fusion_cell: "Look for the §YFusion Cell§! schematic."
+ SCHEMATIC_FOCUS_fusion_core: "Look for the §YFusion Core§! schematic."
+ SCHEMATIC_FOCUS_microfusion_cell: "Look for the §YMicrofusion Cell§! schematic."
+ SCHEMATIC_FOCUS_microfusion_breeder: "Look for the §YMicrofusion Breeder§! schematic."
+ SCHEMATIC_FOCUS_beryllium_agitator: "Look for the §YBeryllium Agitator§! schematic."
+ SCHEMATIC_FOCUS_verdant_air_turbine: "Look for the §YVerdant-Air Turbine§! schematic."
+ SCHEMATIC_FOCUS_helios_solar_generator: "Look for the §YHELIOS Solar Generator§! schematic."
+ SCHEMATIC_FOCUS_chryslus_corvega: "Look for the §YChryslus Corvega§! schematic."
+ SCHEMATIC_FOCUS_highwayman: "Look for the §YHighwayman§! schematic."
+ SCHEMATIC_FOCUS_f80_fighter_jet: "Look for the §YF-80 Fighter Jet§! schematic."
+ SCHEMATIC_FOCUS_transport_vertibird: "Look for the §YTransport Vertibird§! schematic."
+ SCHEMATIC_FOCUS_combat_vertibird: "Look for the §YCombat Vertibird§! schematic."
+ SCHEMATIC_FOCUS_steam_powered_truck: "Look for the §YSteam-powered Truck§! schematic."
+ SCHEMATIC_FOCUS_minigun: "Look for the §YMinigun§! schematic."
+ SCHEMATIC_FOCUS_flamer: "Look for the §YFlamer§! schematic."
+ SCHEMATIC_FOCUS_incinerator: "Look for the §YIncinerator§! schematic."
+ SCHEMATIC_FOCUS_laser_pistol: "Look for the §YLaser Pistol§! schematic."
+ SCHEMATIC_FOCUS_laser_rifle: "Look for the §YLaser Rifle§! schematic."
+ SCHEMATIC_FOCUS_laser_assisted_electrical_rifle: "Look for the §YLAER§! schematic."
+ SCHEMATIC_FOCUS_gatling_laser: "Look for the §YGatling Laser§! schematic."
+ SCHEMATIC_FOCUS_recharger_rifle: "Look for the §YRecharger Rifle§! schematic."
+ SCHEMATIC_FOCUS_plasma_rifle: "Look for the §YPlasma Rifle§! schematic."
+ SCHEMATIC_FOCUS_plasma_caster: "Look for the §YPlasma Caster§! schematic."
+ SCHEMATIC_FOCUS_tesla_cannon: "Look for the §YTesla Cannon§! schematic."
+ SCHEMATIC_FOCUS_magnetic_rail_cannon: "Look for the §YMagnetic Rail Cannon§! schematic."
+ SCHEMATIC_FOCUS_t51_power_armor: "Look for the §YT-51 Power Armor§! schematic."
+ SCHEMATIC_FOCUS_t45_power_armor: "Look for the §YT-45 Power Armor§! schematic."
+ SCHEMATIC_FOCUS_t60_power_armor: "Look for the §YT-60 Power Armor§! schematic."
+ SCHEMATIC_FOCUS_t65_power_armor: "Look for the §YT-65 Power Armor§! schematic."
+ SCHEMATIC_FOCUS_x01_power_armor: "Look for the §YX-01 Power Armor§! schematic."
+ SCHEMATIC_FOCUS_tesla_power_armor: "Look for the §YTesla Power Armor§! schematic."
+ SCHEMATIC_FOCUS_hellfire_power_armor: "Look for the §YHellfire Power Armor§! schematic."
+ SCHEMATIC_FOCUS_stimpak: "Look for the §YStimpak§! schematic."
+ SCHEMATIC_FOCUS_auto_doc: "Look for the §YAuto-Doc§! schematic."
+ SCHEMATIC_FOCUS_buffout: "Look for the §YBuffout§! schematic."
+ SCHEMATIC_FOCUS_mentats: "Look for the §YMentats§! schematic."
+ SCHEMATIC_FOCUS_psycho: "Look for the §YPsycho§! schematic."
+ SCHEMATIC_FOCUS_jet: "Look for the §YJet§! schematic."
+ SCHEMATIC_FOCUS_protectron: "Look for the §YProtectron§! schematic."
+ SCHEMATIC_FOCUS_mister_handy: "Look for the §YMister Handy§! schematic."
+ SCHEMATIC_FOCUS_assaultron: "Look for the §YAssaultron§! schematic."
+ SCHEMATIC_FOCUS_eyebot: "Look for the §YEyebot§! schematic."
+ SCHEMATIC_FOCUS_mister_gutsy: "Look for the §YMister Gutsy§! schematic."
+ SCHEMATIC_FOCUS_robobrain: "Look for the §YRobo-brain§! schematic."
+ SCHEMATIC_FOCUS_securitron: "Look for the §YSecuritron§! schematic."
+ SCHEMATIC_FOCUS_sentry_bot: "Look for the §YSentry Bot§! schematic."
+ SCHEMATIC_FOCUS_stealth_boy: "Look for the §YStealth Boy§! schematic."
+ SCHEMATIC_FOCUS_base_replicator_unit: "Look for the §YBase Replicator Unit§! schematic."
+ SCHEMATIC_FOCUS_hologram: "Look for the §YHologram§! schematic."
+ SCHEMATIC_FOCUS_molecular_relay: "Look for the §YMolecular Relay§! schematic."
+ 
+ # Unlock
+ UNLOCK_schematic_fusion_cell: "You have gained the §YFusion Cell§! schematic."
+ UNLOCK_schematic_fusion_core: "You have gained the §YFusion Core§! schematic."
+ UNLOCK_schematic_microfusion_cell: "You have gained the §YMicrofusion Cell§! schematic."
+ UNLOCK_schematic_microfusion_breeder: "You have gained the §YMicrofusion Breeder§! schematic."
+ UNLOCK_schematic_beryllium_agitator: "You have gained the §YBeryllium Agitator§! schematic."
+ UNLOCK_schematic_verdant_air_turbine: "You have gained the §YVerdant-Air Turbine§! schematic."
+ UNLOCK_schematic_helios_solar_generator: "You have gained the §YHELIOS Solar Generator§! schematic."
+ UNLOCK_schematic_chryslus_corvega: "You have gained the §YChryslus Corvega§! schematic."
+ UNLOCK_schematic_highwayman: "You have gained the §YHighwayman§! schematic."
+ UNLOCK_schematic_f80_fighter_jet: "You have gained the §YF-80 Fighter Jet§! schematic."
+ UNLOCK_schematic_transport_vertibird: "You have gained the §YTransport Vertibird§! schematic."
+ UNLOCK_schematic_combat_vertibird: "You have gained the §YCombat Vertibird§! schematic."
+ UNLOCK_schematic_steam_powered_truck: "You have gained the §YSteam-powered Truck§! schematic."
+ UNLOCK_schematic_minigun: "You have gained the §YMinigun§! schematic."
+ UNLOCK_schematic_flamer: "You have gained the §YFlamer§! schematic."
+ UNLOCK_schematic_incinerator: "You have gained the §YIncinerator§! schematic."
+ UNLOCK_schematic_laser_pistol: "You have gained the §YLaser Pistol§! schematic."
+ UNLOCK_schematic_laser_rifle: "You have gained the §YLaser Rifle§! schematic."
+ UNLOCK_schematic_laser_assisted_electrical_rifle: "You have gained the §YLAER§! schematic."
+ UNLOCK_schematic_gatling_laser: "You have gained the §YGatling Laser§! schematic."
+ UNLOCK_schematic_recharger_rifle: "You have gained the §YRecharger Rifle§! schematic."
+ UNLOCK_schematic_plasma_rifle: "You have gained the §YPlasma Rifle§! schematic."
+ UNLOCK_schematic_plasma_caster: "You have gained the §YPlasma Caster§! schematic."
+ UNLOCK_schematic_tesla_cannon: "You have gained the §YTesla Cannon§! schematic."
+ UNLOCK_schematic_magnetic_rail_cannon: "You have gained the §YMagnetic Rail Cannon§! schematic."
+ UNLOCK_schematic_t51_power_armor: "You have gained the §YT-51 Power Armor§! schematic."
+ UNLOCK_schematic_t45_power_armor: "You have gained the §YT-45 Power Armor§! schematic."
+ UNLOCK_schematic_t60_power_armor: "You have gained the §YT-60 Power Armor§! schematic."
+ UNLOCK_schematic_t65_power_armor: "You have gained the §YT-65 Power Armor§! schematic."
+ UNLOCK_schematic_x01_power_armor: "You have gained the §YX-01 Power Armor§! schematic."
+ UNLOCK_schematic_tesla_power_armor: "You have gained the §YTesla Power Armor§! schematic."
+ UNLOCK_schematic_hellfire_power_armor: "You have gained the §YHellfire Power Armor§! schematic."
+ UNLOCK_schematic_stimpak: "You have gained the §YStimpak§! schematic."
+ UNLOCK_schematic_auto_doc: "You have gained the §YAuto-Doc§! schematic."
+ UNLOCK_schematic_buffout: "You have gained the §YBuffout§! schematic."
+ UNLOCK_schematic_mentats: "You have gained the §YMentats§! schematic."
+ UNLOCK_schematic_psycho: "You have gained the §YPsycho§! schematic."
+ UNLOCK_schematic_jet: "You have gained the §YJet§! schematic."
+ UNLOCK_schematic_protectron: "You have gained the §YProtectron§! schematic."
+ UNLOCK_schematic_mister_handy: "You have gained the §YMister Handy§! schematic."
+ UNLOCK_schematic_assaultron: "You have gained the §YAssaultron§! schematic."
+ UNLOCK_schematic_eyebot: "You have gained the §YEyebot§! schematic."
+ UNLOCK_schematic_mister_gutsy: "You have gained the §YMister Gutsy§! schematic."
+ UNLOCK_schematic_robobrain: "You have gained the §YRobo-brain§! schematic."
+ UNLOCK_schematic_securitron: "You have gained the §YSecuritron§! schematic."
+ UNLOCK_schematic_sentry_bot: "You have gained the §YSentry Bot§! schematic."
+ UNLOCK_schematic_stealth_boy: "You have gained the §YStealth Boy§! schematic."
+ UNLOCK_schematic_base_replicator_unit: "You have gained the §YBase Replicator Unit§! schematic."
+ UNLOCK_schematic_hologram: "You have gained the §YHologram§! schematic."
+ UNLOCK_schematic_molecular_relay: "You have gained the §YMolecular Relay§! schematic."
+ 
+ # Discovery
+ NOT_DISCOVERED_fusion_cell: "§YFusion Cell§! schematic has not been discovered yet."
+ NOT_DISCOVERED_fusion_core: "§YFusion Core§! schematic has not been discovered yet."
+ NOT_DISCOVERED_microfusion_cell: "§YMicrofusion Cell§! schematic has not been discovered yet."
+ NOT_DISCOVERED_microfusion_breeder: "§YMicrofusion Breeder§! schematic has not been discovered yet."
+ NOT_DISCOVERED_beryllium_agitator: "§YBeryllium Agitator§! schematic has not been discovered yet."
+ NOT_DISCOVERED_verdant_air_turbine: "§YVerdant-Air Turbine§! schematic has not been discovered yet."
+ NOT_DISCOVERED_helios_solar_generator: "§YHELIOS Solar Generator§! schematic has not been discovered yet."
+ NOT_DISCOVERED_chryslus_corvega: "§YChryslus Corvega§! schematic has not been discovered yet."
+ NOT_DISCOVERED_highwayman: "§YHighwayman§! schematic has not been discovered yet."
+ NOT_DISCOVERED_f80_fighter_jet: "§YF-80 Fighter Jet§! schematic has not been discovered yet."
+ NOT_DISCOVERED_transport_vertibird: "§YTransport Vertibird§! schematic has not been discovered yet."
+ NOT_DISCOVERED_combat_vertibird: "§YCombat Vertibird§! schematic has not been discovered yet."
+ NOT_DISCOVERED_steam_powered_truck: "§YSteam-powered Truck§! schematic has not been discovered yet."
+ NOT_DISCOVERED_minigun: "§YMinigun§! schematic has not been discovered yet."
+ NOT_DISCOVERED_flamer: "§YFlamer§! schematic has not been discovered yet."
+ NOT_DISCOVERED_incinerator: "§YIncinerator§! schematic has not been discovered yet."
+ NOT_DISCOVERED_laser_pistol: "§YLaser Pistol§! schematic has not been discovered yet."
+ NOT_DISCOVERED_laser_rifle: "§YLaser Rifle§! schematic has not been discovered yet."
+ NOT_DISCOVERED_laser_assisted_electrical_rifle: "§YLAER§! schematic has not been discovered yet."
+ NOT_DISCOVERED_gatling_laser: "§YGatling Laser§! schematic has not been discovered yet."
+ NOT_DISCOVERED_recharger_rifle: "§YRecharger Rifle§! schematic has not been discovered yet."
+ NOT_DISCOVERED_plasma_rifle: "§YPlasma Rifle§! schematic has not been discovered yet."
+ NOT_DISCOVERED_plasma_caster: "§YPlasma Caster§! schematic has not been discovered yet."
+ NOT_DISCOVERED_tesla_cannon: "§YTesla Cannon§! schematic has not been discovered yet."
+ NOT_DISCOVERED_magnetic_rail_cannon: "§YMagnetic Rail Cannon§! schematic has not been discovered yet."
+ NOT_DISCOVERED_t51_power_armor: "§YT-51 Power Armor§! schematic has not been discovered yet."
+ NOT_DISCOVERED_t45_power_armor: "§YT-45 Power Armor§! schematic has not been discovered yet."
+ NOT_DISCOVERED_t60_power_armor: "§YT-60 Power Armor§! schematic has not been discovered yet."
+ NOT_DISCOVERED_t65_power_armor: "§YT-65 Power Armor§! schematic has not been discovered yet."
+ NOT_DISCOVERED_x01_power_armor: "§YX-01 Power Armor§! schematic has not been discovered yet."
+ NOT_DISCOVERED_tesla_power_armor: "§YTesla Power Armor§! schematic has not been discovered yet."
+ NOT_DISCOVERED_hellfire_power_armor: "§YHellfire Power Armor§! schematic has not been discovered yet."
+ NOT_DISCOVERED_stimpak: "§YStimpak§! schematic has not been discovered yet."
+ NOT_DISCOVERED_auto_doc: "§YAuto-Doc§! schematic has not been discovered yet."
+ NOT_DISCOVERED_buffout: "§YBuffout§! schematic has not been discovered yet."
+ NOT_DISCOVERED_mentats: "§YMentats§! schematic has not been discovered yet."
+ NOT_DISCOVERED_psycho: "§YPsycho§! schematic has not been discovered yet."
+ NOT_DISCOVERED_jet: "§YJet§! schematic has not been discovered yet."
+ NOT_DISCOVERED_protectron: "§YProtectron§! schematic has not been discovered yet."
+ NOT_DISCOVERED_mister_handy: "§YMister Handy§! schematic has not been discovered yet."
+ NOT_DISCOVERED_assaultron: "§YAssaultron§! schematic has not been discovered yet."
+ NOT_DISCOVERED_eyebot: "§YEyebot§! schematic has not been discovered yet."
+ NOT_DISCOVERED_mister_gutsy: "§YMister Gutsy§! schematic has not been discovered yet."
+ NOT_DISCOVERED_robobrain: "§YRobo-brain§! schematic has not been discovered yet."
+ NOT_DISCOVERED_securitron: "§YSecuritron§! schematic has not been discovered yet."
+ NOT_DISCOVERED_sentry_bot: "§YSentry Bot§! schematic has not been discovered yet."
+ NOT_DISCOVERED_stealth_boy: "§YStealth Boy§! schematic has not been discovered yet."
+ NOT_DISCOVERED_base_replicator_unit: "§YBase Replicator Unit§! schematic has not been discovered yet."
+ NOT_DISCOVERED_hologram: "§YHologram§! schematic has not been discovered yet."
+ NOT_DISCOVERED_molecular_relay: "§YMolecular Relay§! schematic has not been discovered yet."
+ 
+ # Steal
+ STEAL_ARTIFACT_fusion_cell: "Steal the §YFusion Cell§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_fusion_core: "Steal the §YFusion Core§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_microfusion_cell: "Steal the §YMicrofusion Cell§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_microfusion_breeder: "Steal the §YMicrofusion Breeder§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_beryllium_agitator: "Steal the §YBeryllium Agitator§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_verdant_air_turbine: "Steal the §YVerdant-Air Turbine§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_helios_solar_generator: "Steal the §YHELIOS Solar Generator§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_chryslus_corvega: "Steal the §YChryslus Corvega§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_highwayman: "Steal the §YHighwayman§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_f80_fighter_jet: "Steal the §YF-80 Fighter Jet§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_transport_vertibird: "Steal the §YTransport Vertibird§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_combat_vertibird: "Steal the §YCombat Vertibird§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_steam_powered_truck: "Steal the §YSteam-powered Truck§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_minigun: "Steal the §YMinigun§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_flamer: "Steal the §YFlamer§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_incinerator: "Steal the §YIncinerator§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_laser_pistol: "Steal the §YLaser Pistol§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_laser_rifle: "Steal the §YLaser Rifle§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_laser_assisted_electrical_rifle: "Steal the §YLAER§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_gatling_laser: "Steal the §YGatling Laser§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_recharger_rifle: "Steal the §YRecharger Rifle§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_plasma_rifle: "Steal the §YPlasma Rifle§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_plasma_caster: "Steal the §YPlasma Caster§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_tesla_cannon: "Steal the §YTesla Cannon§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_magnetic_rail_cannon: "Steal the §YMagnetic Rail Cannon§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_t51_power_armor: "Steal the §YT-51 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_t45_power_armor: "Steal the §YT-45 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_t60_power_armor: "Steal the §YT-60 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_t65_power_armor: "Steal the §YT-65 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_x01_power_armor: "Steal the §YX-01 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_tesla_power_armor: "Steal the §YTesla Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_hellfire_power_armor: "Steal the §YHellfire Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_stimpak: "Steal the §YStimpak§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_auto_doc: "Steal the §YAuto-Doc§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_buffout: "Steal the §YBuffout§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_mentats: "Steal the §YMentats§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_psycho: "Steal the §YPsycho§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_jet: "Steal the §YJet§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_protectron: "Steal the §YProtectron§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_mister_handy: "Steal the §YMister Handy§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_assaultron: "Steal the §YAssaultron§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_eyebot: "Steal the §YEyebot§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_mister_gutsy: "Steal the §YMister Gutsy§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_robobrain: "Steal the §YRobo-brain§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_securitron: "Steal the §YSecuritron§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_sentry_bot: "Steal the §YSentry Bot§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_stealth_boy: "Steal the §YStealth Boy§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_base_replicator_unit: "Steal the §YBase Replicator Unit§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_hologram: "Steal the §YHologram§! schematic from [schematic_heist_target.GetName]."
+ STEAL_ARTIFACT_molecular_relay: "Steal the §YMolecular Relay§! schematic from [schematic_heist_target.GetName]."
+ 
+ #----------------------------------------------
+ # Modifiers
+ #----------------------------------------------
+ scavenging_expedition_cooldown: "Scavenging Expedition Cooldown"
+ desc_scavenging_expedition_cooldown: ""
+ 
+ scavenging_expedition_status_action_cooldown: "Scavenging Expedition: Advance Expedition Cooldown"
+ desc_scavenging_expedition_status_action_cooldown: ""
+
+ # Schematics
+ schematic_fusion_core: "Fusion Core"
+ desc_schematic_fusion_core: ""
+ 
+ schematic_microfusion_cell: "Microfusion Cell"
+ desc_schematic_microfusion_cell: ""
+
+ schematic_microfusion_breeder: "Microfusion Breeder"
+ desc_schematic_microfusion_breeder: ""
+ 
+ schematic_beryllium_agitator: "Beryllium Agitator"
+ desc_schematic_beryllium_agitator: ""
+ 
+ schematic_verdant_air_turbine: "Verdant-Air Turbine"
+ desc_schematic_verdant_air_turbine: ""
+ 
+ schematic_helios_solar_generator: "HELIOS Solar Generator"
+ desc_schematic_helios_solar_generator: ""
+ 
+ schematic_chryslus_corvega: "Chryslus Corvega"
+ desc_schematic_chryslus_corvega: ""
+ 
+ schematic_highwayman: "Highwayman"
+ desc_schematic_highwayman: ""
+ 
+ schematic_f80_fighter_jet: "F-80 Fighter Jet"
+ desc_schematic_f80_fighter_jet: ""
+ 
+ schematic_transport_vertibird: "Transport Vertibird"
+ desc_schematic_transport_vertibird: ""
+ 
+ schematic_combat_vertibird: "Combat Vertibird"
+ desc_schematic_combat_vertibird: ""
+ 
+ schematic_steam_powered_truck: "Steam-powered Truck"
+ desc_schematic_steam_powered_truck: ""
+ 
+ schematic_minigun: "Minigun"
+ desc_schematic_minigun: ""
+ 
+ schematic_flamer: "Flamer"
+ desc_schematic_flamer: ""
+ 
+ schematic_incinerator: "Incinerator"
+ desc_schematic_incinerator: ""
+ 
+ schematic_laser_pistol: "Laser Pistol"
+ desc_schematic_laser_pistol: ""
+ 
+ schematic_laser_rifle: "Laser Rifle"
+ desc_schematic_laser_rifle: ""
+ 
+ schematic_laser_assisted_electrical_rifle: "LAER"
+ desc_schematic_laser_assisted_electrical_rifle: ""
+ 
+ schematic_gatling_laser: "Gatling Laser"
+ desc_schematic_gatling_laser: ""
+ 
+ schematic_recharger_rifle: "Recharger Rifle"
+ desc_schematic_recharger_rifle: ""
+ 
+ schematic_plasma_rifle: "Plasma Rifle"
+ desc_schematic_plasma_rifle: ""
+
+ schematic_plasma_caster: "Plasma Caster"
+ desc_schematic_plasma_caster: ""
+
+ schematic_tesla_cannon: "Tesla Cannon"
+ desc_schematic_tesla_cannon: ""
+ 
+ schematic_magnetic_rail_cannon: "Magnetic Rail Cannon"
+ desc_schematic_magnetic_rail_cannon: ""
+ 
+ schematic_t51_power_armor: "T-51 Power Armor"
+ desc_schematic_t51_power_armor: ""
+ 
+ schematic_t45_power_armor: "T-45 Power Armor"
+ desc_schematic_t45_power_armor: ""
+ 
+ schematic_t60_power_armor: "T-60 Power Armor"
+ desc_schematic_t60_power_armor: ""
+
+ schematic_t65_power_armor: "T-65 Power Armor"
+ desc_schematic_t65_power_armor: ""
+
+ schematic_x01_power_armor: "X-01 Power Armor"
+ desc_schematic_x01_power_armor: ""
+ 
+ schematic_tesla_power_armor: "Tesla Power Armor"
+ desc_schematic_tesla_power_armor: ""
+
+ schematic_hellfire_power_armor: "Hellfire Power Armor"
+ desc_schematic_hellfire_power_armor: ""
+ 
+ schematic_stimpak: "Stimpak"
+ desc_schematic_stimpak: ""
+
+ schematic_auto_doc: "Auto-Doc"
+ desc_schematic_auto_doc: ""
+ 
+ schematic_buffout: "Buffout"
+ desc_schematic_buffout: ""
+ 
+ schematic_mentats: "Mentats"
+ desc_schematic_mentats: ""
+
+ schematic_psycho: "Psycho"
+ desc_schematic_psycho: ""
+
+ schematic_jet: "Jet"
+ desc_schematic_jet: ""
+ 
+ schematic_protectron: "Protectron"
+ desc_schematic_protectron: ""
+ 
+ schematic_mister_handy: "Mister Handy"
+ desc_schematic_mister_handy: ""
+ 
+ schematic_assaultron: "Assaultron"
+ desc_schematic_assaultron: ""
+ 
+ schematic_eyebot: "Eyebot"
+ desc_schematic_eyebot: ""
+
+ schematic_mister_gutsy: "Mister Gutsy"
+ desc_schematic_mister_gutsy: ""
+ 
+ schematic_robobrain: "Robo-brain"
+ desc_schematic_robobrain: ""
+ 
+ schematic_securitron: "Securitron"
+ desc_schematic_securitron: ""
+ 
+ schematic_sentry_bot: "Sentry Bot"
+ desc_schematic_sentry_bot: ""
+ 
+ schematic_stealth_boy: "Stealth Boy"
+ desc_schematic_stealth_boy: ""
+
+ schematic_base_replicator_unit: "Base Replicator Unit"
+ desc_schematic_base_replicator_unit: ""
+ 
+ schematic_hologram: "Hologram"
+ desc_schematic_hologram: ""
+ 
+ schematic_molecular_relay: "Molecular Relay"
+ desc_schematic_molecular_relay: ""
+ 
+ #----------------------------------------------
+ # Variables
+ #----------------------------------------------
+ expedition_progress: "Expedition Progress"
+ expedition_progress_cap: "Expedition Progress Goal"
+ 
+ stash_pipe_pistols: "Pipe Pistols Found"
+ stash_ballistic_guns: "Ballistic Guns Found"
+ stash_radiation_suits: "Radiation Suits Found"
+ stash_bottlecaps: "Bottlecap Stashes Found"
+ stash_fission_batteries: "Fission Batteries Found"
+ stash_combat_armor: "Combat Armor Found"
+ stash_riot_gear: "Riot Gear Found"

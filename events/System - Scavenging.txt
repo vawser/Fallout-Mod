@@ -1,28 +1,1477 @@
-namespace = scavenging
+namespace = fallout_scavenging
 
+# Expedition Focus
 country_event = {
-	id = scavenging.1
-	title = scavenging.1.title
-	desc = scavenging.1.desc
-	picture = BOOMER_ANDERSON_SHELTER_eventPicture
+	id = fallout_scavenging.1
+	title = fallout_scavenging.1.title
+	desc = fallout_scavenging.1.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
 	
-	trigger = {
-        has_country_flag = trigger_scavenging_event
+    immediate = {
+        clear_schematic_focus = yes
     }
     
-    immediate = {
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.1.option.random
+		
+		custom_tooltip = SCHEMATIC_FOCUS_random
         hidden_effect = {
-            clr_country_flag = trigger_scavenging_event
+            set_country_flag = schematic_focus_random
+            start_scavenging_expedition = yes
         }
+        
+        ai_chance = {
+            factor = 1
+        }
+	}
+    option = {
+		name = fallout_scavenging.1.option.weapon
+		
+        # Only show if the player can afford the focus
+        trigger = {
+            has_schematic_focus_cost = yes
+        }
+        
+        country_event = { id = fallout_scavenging.2 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_scavenging.1.option.armor
+		
+        # Only show if the player can afford the focus
+        trigger = {
+            has_schematic_focus_cost = yes
+        }
+        
+        country_event = { id = fallout_scavenging.3 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_scavenging.1.option.vehicle
+		
+        # Only show if the player can afford the focus
+        trigger = {
+            has_schematic_focus_cost = yes
+        }
+        
+        country_event = { id = fallout_scavenging.4 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_scavenging.1.option.energy
+		
+        # Only show if the player can afford the focus
+        trigger = {
+            has_schematic_focus_cost = yes
+        }
+        
+        country_event = { id = fallout_scavenging.5 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_scavenging.1.option.medical
+		
+        # Only show if the player can afford the focus
+        trigger = {
+            has_schematic_focus_cost = yes
+        }
+        
+        country_event = { id = fallout_scavenging.6 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_scavenging.1.option.robotic
+		
+        # Only show if the player can afford the focus
+        trigger = {
+            has_schematic_focus_cost = yes
+        }
+        
+        country_event = { id = fallout_scavenging.7 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_scavenging.1.option.utility
+		
+        # Only show if the player can afford the focus
+        trigger = {
+            has_schematic_focus_cost = yes
+        }
+        
+        country_event = { id = fallout_scavenging.8 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+}
+
+# Schematic Focus: Weapon
+country_event = {
+	id = fallout_scavenging.2
+	title = fallout_scavenging.2.title
+	desc = fallout_scavenging.2.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
+	
+    immediate = {
+        clear_schematic_focus = yes
+    }
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    option = {
+		name = fallout_scavenging.2.option.minigun
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_minigun }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_minigun
+        hidden_effect = {
+            set_country_flag = schematic_focus_minigun
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.flamer
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_flamer }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_flamer
+        hidden_effect = {
+            set_country_flag = schematic_focus_flamer
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.incinerator
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_incinerator }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_incinerator
+        hidden_effect = {
+            set_country_flag = schematic_focus_incinerator
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.laser_pistol
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_laser_pistol }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_laser_pistol
+        hidden_effect = {
+            set_country_flag = schematic_focus_laser_pistol
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.laser_rifle
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_laser_rifle }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_laser_rifle
+        hidden_effect = {
+            set_country_flag = schematic_focus_laser_rifle
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.laser_assisted_electrical_rifle
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_laser_assisted_electrical_rifle }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_laser_assisted_electrical_rifle
+        hidden_effect = {
+            set_country_flag = schematic_focus_laser_assisted_electrical_rifle
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.gatling_laser
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_gatling_laser }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_gatling_laser
+        hidden_effect = {
+            set_country_flag = schematic_focus_gatling_laser
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.recharger_rifle
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_recharger_rifle }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_recharger_rifle
+        hidden_effect = {
+            set_country_flag = schematic_focus_recharger_rifle
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.plasma_rifle
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_plasma_rifle }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_plasma_rifle
+        hidden_effect = {
+            set_country_flag = schematic_focus_plasma_rifle
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.plasma_caster
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_plasma_caster }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_plasma_caster
+        hidden_effect = {
+            set_country_flag = schematic_focus_plasma_caster
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.tesla_cannon
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_tesla_cannon }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_tesla_cannon
+        hidden_effect = {
+            set_country_flag = schematic_focus_tesla_cannon
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.2.option.magnetic_rail_cannon
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_magnetic_rail_cannon }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_magnetic_rail_cannon
+        hidden_effect = {
+            set_country_flag = schematic_focus_magnetic_rail_cannon
+            start_scavenging_expedition = yes
+        }
+	}
+    
+    option = {
+		name = fallout_scavenging.2.option.return
+		
+		hidden_effect = {
+            country_event = { id = fallout_scavenging.1 }
+        }
+	}
+}
+
+# Schematic Focus: Armor
+country_event = {
+	id = fallout_scavenging.3
+	title = fallout_scavenging.3.title
+	desc = fallout_scavenging.3.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
+	
+    immediate = {
+        clear_schematic_focus = yes
+    }
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    option = {
+		name = fallout_scavenging.3.option.t45_power_armor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_t45_power_armor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_t45_power_armor
+        hidden_effect = {
+            set_country_flag = schematic_focus_t45_power_armor
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.3.option.t51_power_armor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_t51_power_armor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_t51_power_armor
+        hidden_effect = {
+            set_country_flag = schematic_focus_t51_power_armor
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.3.option.t60_power_armor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_t60_power_armor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_t60_power_armor
+        hidden_effect = {
+            set_country_flag = schematic_focus_t60_power_armor
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.3.option.t65_power_armor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_t65_power_armor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_t65_power_armor
+        hidden_effect = {
+            set_country_flag = schematic_focus_t65_power_armor
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.3.option.x01_power_armor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_x01_power_armor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_x01_power_armor
+        hidden_effect = {
+            set_country_flag = schematic_focus_x01_power_armor
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.3.option.tesla_power_armor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_tesla_power_armor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_tesla_power_armor
+        hidden_effect = {
+            set_country_flag = schematic_focus_tesla_power_armor
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.3.option.hellfire_power_armor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_hellfire_power_armor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_hellfire_power_armor
+        hidden_effect = {
+            set_country_flag = schematic_focus_hellfire_power_armor
+            start_scavenging_expedition = yes
+        }
+	}
+    
+    option = {
+		name = fallout_scavenging.3.option.return
+		
+		hidden_effect = {
+            country_event = { id = fallout_scavenging.1 }
+        }
+	}
+}
+
+# Schematic Focus: Vehicle
+country_event = {
+	id = fallout_scavenging.4
+	title = fallout_scavenging.4.title
+	desc = fallout_scavenging.4.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
+	
+    immediate = {
+        clear_schematic_focus = yes
+    }
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    option = {
+		name = fallout_scavenging.4.option.chryslus_corvega
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_chryslus_corvega }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_chryslus_corvega
+        hidden_effect = {
+            set_country_flag = schematic_focus_chryslus_corvega
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.highwayman
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_highwayman }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_highwayman
+        hidden_effect = {
+            set_country_flag = schematic_focus_highwayman
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.f80_fighter_jet
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_f80_fighter_jet }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_f80_fighter_jet
+        hidden_effect = {
+            set_country_flag = schematic_focus_f80_fighter_jet
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.transport_vertibird
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_transport_vertibird }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_transport_vertibird
+        hidden_effect = {
+            set_country_flag = schematic_focus_transport_vertibird
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.combat_vertibird
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_combat_vertibird }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_combat_vertibird
+        hidden_effect = {
+            set_country_flag = schematic_focus_combat_vertibird
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.steam_powered_truck
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_steam_powered_truck }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_steam_powered_truck
+        hidden_effect = {
+            set_country_flag = schematic_focus_steam_powered_truck
+            start_scavenging_expedition = yes
+        }
+	}
+    
+    option = {
+		name = fallout_scavenging.4.option.return
+		
+		hidden_effect = {
+            country_event = { id = fallout_scavenging.1 }
+        }
+	}
+}
+
+# Schematic Focus: Energy
+country_event = {
+	id = fallout_scavenging.5
+	title = fallout_scavenging.5.title
+	desc = fallout_scavenging.5.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
+	
+    immediate = {
+        clear_schematic_focus = yes
+    }
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    option = {
+		name = fallout_scavenging.5.option.fusion_cell
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_fusion_cell }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_fusion_cell
+        hidden_effect = {
+            set_country_flag = schematic_focus_fusion_cell
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.5.option.fusion_core
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_fusion_core }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_fusion_core
+        hidden_effect = {
+            set_country_flag = schematic_focus_fusion_core
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.5.option.microfusion_cell
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_microfusion_cell }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_microfusion_cell
+        hidden_effect = {
+            set_country_flag = schematic_focus_microfusion_cell
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.5.option.microfusion_breeder
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_microfusion_breeder }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_microfusion_breeder
+        hidden_effect = {
+            set_country_flag = schematic_focus_microfusion_breeder
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.5.option.beryllium_agitator
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_beryllium_agitator }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_beryllium_agitator
+        hidden_effect = {
+            set_country_flag = schematic_focus_beryllium_agitator
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.5.option.verdant_air_turbine
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_verdant_air_turbine }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_verdant_air_turbine
+        hidden_effect = {
+            set_country_flag = schematic_focus_verdant_air_turbine
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.5.option.helios_solar_generator
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_helios_solar_generator }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_helios_solar_generator
+        hidden_effect = {
+            set_country_flag = schematic_focus_helios_solar_generator
+            start_scavenging_expedition = yes
+        }
+	}
+    
+    option = {
+		name = fallout_scavenging.5.option.return
+		
+		hidden_effect = {
+            country_event = { id = fallout_scavenging.1 }
+        }
+	}
+}
+
+# Schematic Focus: Medical
+country_event = {
+	id = fallout_scavenging.6
+	title = fallout_scavenging.6.title
+	desc = fallout_scavenging.6.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
+	
+    immediate = {
+        clear_schematic_focus = yes
+    }
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    option = {
+		name = fallout_scavenging.6.option.stimpak
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_stimpak }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_stimpak
+        hidden_effect = {
+            set_country_flag = schematic_focus_stimpak
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.6.option.auto_doc
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_auto_doc }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_auto_doc
+        hidden_effect = {
+            set_country_flag = schematic_focus_auto_doc
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.6.option.buffout
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_buffout }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_buffout
+        hidden_effect = {
+            set_country_flag = schematic_focus_buffout
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.6.option.mentats
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_mentats }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_mentats
+        hidden_effect = {
+            set_country_flag = schematic_focus_mentats
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.6.option.psycho
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_psycho }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_psycho
+        hidden_effect = {
+            set_country_flag = schematic_focus_psycho
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.6.option.jet
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_jet }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_jet
+        hidden_effect = {
+            set_country_flag = schematic_focus_jet
+            start_scavenging_expedition = yes
+        }
+	}
+    
+    option = {
+		name = fallout_scavenging.6.option.return
+		
+		hidden_effect = {
+            country_event = { id = fallout_scavenging.1 }
+        }
+	}
+}
+
+# Schematic Focus: Robotic
+country_event = {
+	id = fallout_scavenging.7
+	title = fallout_scavenging.7.title
+	desc = fallout_scavenging.7.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
+	
+    immediate = {
+        clear_schematic_focus = yes
+    }
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    option = {
+		name = fallout_scavenging.7.option.protectron
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_protectron }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_protectron
+        hidden_effect = {
+            set_country_flag = schematic_focus_protectron
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.7.option.mister_handy
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_mister_handy }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_mister_handy
+        hidden_effect = {
+            set_country_flag = schematic_focus_mister_handy
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.7.option.assaultron
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_assaultron }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_assaultron
+        hidden_effect = {
+            set_country_flag = schematic_focus_assaultron
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.7.option.eyebot
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_eyebot }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_eyebot
+        hidden_effect = {
+            set_country_flag = schematic_focus_eyebot
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.7.option.mister_gutsy
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_mister_gutsy }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_mister_gutsy
+        hidden_effect = {
+            set_country_flag = schematic_focus_mister_gutsy
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.7.option.robobrain
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_robobrain }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_robobrain
+        hidden_effect = {
+            set_country_flag = schematic_focus_robobrain
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.7.option.securitron
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_securitron }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_securitron
+        hidden_effect = {
+            set_country_flag = schematic_focus_securitron
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.7.option.sentry_bot
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_sentry_bot }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_sentry_bot
+        hidden_effect = {
+            set_country_flag = schematic_focus_sentry_bot
+            start_scavenging_expedition = yes
+        }
+	}
+    
+    option = {
+		name = fallout_scavenging.7.option.return
+		
+		hidden_effect = {
+            country_event = { id = fallout_scavenging.1 }
+        }
+	}
+}
+
+# Schematic Focus: Utility
+country_event = {
+	id = fallout_scavenging.8
+	title = fallout_scavenging.8.title
+	desc = fallout_scavenging.8.desc
+	picture = SCAVENGERS_eventPicture
+    
+	is_triggered_only = yes
+	
+    immediate = {
+        clear_schematic_focus = yes
+    }
+    
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    option = {
+		name = fallout_scavenging.8.option.stealth_boy
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_stealth_boy }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_stealth_boy
+        hidden_effect = {
+            set_country_flag = schematic_focus_stealth_boy
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.8.option.base_replicator_unit
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_base_replicator_unit }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_base_replicator_unit
+        hidden_effect = {
+            set_country_flag = schematic_focus_base_replicator_unit
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.8.option.hologram
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_hologram }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_hologram
+        hidden_effect = {
+            set_country_flag = schematic_focus_hologram
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.8.option.molecular_relay
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_molecular_relay }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_molecular_relay
+        hidden_effect = {
+            set_country_flag = schematic_focus_molecular_relay
+            start_scavenging_expedition = yes
+        }
+	}
+    
+    option = {
+		name = fallout_scavenging.8.option.return
+		
+		hidden_effect = {
+            country_event = { id = fallout_scavenging.1 }
+        }
+	}
+}
+
+# Opportunists
+country_event = {
+	id = fallout_scavenging.10
+	title = fallout_scavenging.10.title
+	desc = fallout_scavenging.10.desc
+	picture = CONFRONTATION_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
     }
 
-    mean_time_to_happen = {
-		months = 1 
+	mean_time_to_happen = {
+		days = 1
 	}
     
 	option = {
-		name = scavenging.1.option.a
+		name = fallout_scavenging.10.option.a
+		
+        add_years_of_income = -0.25
+		advance_expedition_progress = yes
+	}
+    option = {
+		name = fallout_scavenging.10.option.b
+		
+        add_yearly_manpower = -0.25
+		advance_expedition_progress = yes
+	}
+    option = {
+		name = fallout_scavenging.10.option.c
+		
+        random = {
+            chance = 50
+            
+            reduce_expedition_progress = yes
+        }
+	}
+}
 
+# Expedition in Jeopardy
+country_event = {
+	id = fallout_scavenging.11
+	title = fallout_scavenging.11.title
+	desc = fallout_scavenging.11.desc
+	picture = ENCAMPMENT_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.11.option.a
+		
+		advance_expedition_progress = yes
+        
+        add_adm_power = -25
+	}
+    option = {
+		name = fallout_scavenging.11.option.b
+		
+        random_list = {
+            50 = { advance_expedition_progress = yes }
+            50 = { reduce_expedition_progress = yes }
+        }
+        
+        add_dip_power = -5
+	}
+    option = {
+		name = fallout_scavenging.11.option.c
+		
+		reduce_expedition_progress = yes
+	}
+}
+
+# Scavenger Fumbles
+country_event = {
+	id = fallout_scavenging.12
+	title = fallout_scavenging.12.title
+	desc = fallout_scavenging.12.desc
+	picture = NCR_RANGER_CAMP_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.12.option.a
+		
+		advance_expedition_progress = yes
+        
+        add_prestige = -10
+	}
+    option = {
+		name = fallout_scavenging.12.option.b
+		
+        add_prestige = -2
+	}
+    option = {
+		name = fallout_scavenging.12.option.c
+		
+        add_prestige = 5
+		reduce_expedition_progress = yes
+	}
+}
+
+# Local Complaints
+country_event = {
+	id = fallout_scavenging.13
+	title = fallout_scavenging.13.title
+	desc = fallout_scavenging.13.desc
+	picture = NIPTON_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.13.option.a
+		
+		advance_expedition_progress = yes
+        
+        add_dip_power = -25
+	}
+    option = {
+		name = fallout_scavenging.13.option.b
+		
+        add_adm_power = -5
+	}
+    option = {
+		name = fallout_scavenging.13.option.c
+		
+		reduce_expedition_progress = yes
+	}
+}
+
+# Expedition Breakthrough
+country_event = {
+	id = fallout_scavenging.14
+	title = fallout_scavenging.14.title
+	desc = fallout_scavenging.14.desc
+	picture = SATELLITE_ARRAY_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.14.option.a
+		
+		advance_expedition_progress = yes
+        
+	}
+}
+
+# Expedition Success!
+country_event = {
+	id = fallout_scavenging.15
+	title = fallout_scavenging.15.title
+	desc = fallout_scavenging.15.desc
+	picture = SATELLITE_ARRAY_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.15.option.a
+		
+		advance_expedition_progress_massively = yes 
+	}
+}
+
+# Brotherhood Shakedown
+country_event = {
+	id = fallout_scavenging.16
+	title = fallout_scavenging.16.title
+	desc = fallout_scavenging.16.desc
+	picture = BOS_PATROL_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+        NOT = { technology_group = tech_bos } # Wouldn't shakedown themselves
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.16.option.a
+		
+		advance_expedition_progress = yes
+	}
+    option = {
+		name = fallout_scavenging.16.option.b
+		
+        add_years_of_income = 0.25
+        
+		reduce_expedition_progress = yes
+	}
+}
+
+# Deathclaw!
+country_event = {
+	id = fallout_scavenging.17
+	title = fallout_scavenging.17.title
+	desc = fallout_scavenging.17.desc
+	picture = GLOWING_SEA_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.17.option.a
+		
+		add_yearly_manpower = -0.25
+	}
+    option = {
+		name = fallout_scavenging.17.option.b
+		
+		reset_expedition = yes
+	}
+}
+
+# Corrupt Scavenger
+country_event = {
+	id = fallout_scavenging.18
+	title = fallout_scavenging.18.title
+	desc = fallout_scavenging.18.desc
+	picture = DIXON_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.18.option.a
+		
+		advance_expedition_progress = yes
+        
+        add_corruption = 1
+	}
+    option = {
+		name = fallout_scavenging.18.option.b
+		
+		reduce_expedition_progress = yes
+        
+        add_corruption = -1
+	}
+}
+
+# Expedition Reward
+country_event = {
+	id = fallout_scavenging.100
+	title = fallout_scavenging.100.title
+	desc = fallout_scavenging.100.desc
+	picture = TERMINAL_eventPicture
+    
+    is_triggered_only = yes
+    hidden = yes
+    
+    trigger = {
+        has_country_flag = scavenging_expedition_begins
+        
+        check_variable = {
+            which = expedition_progress
+            which = expedition_progress_cap
+        }
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+            clr_country_flag = scavenging_expedition_begins
+            clr_country_flag = scavenging_expedition_active
+            set_variable = {
+                which = expedition_progress
+                value = 0
+            }
+        }
+	}
+	
+	option = {
+		name = fallout_scavenging.100.option.a
+		
+        reward_schematic = yes
+	}
+}
+
+# Expedition Failed
+country_event = {
+	id = fallout_scavenging.101
+	title = fallout_scavenging.101.title
+	desc = fallout_scavenging.101.desc
+	picture = CHURCH_MISTY_INSIDE_eventPicture
+    
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.101.option.a
         
 	}
 }

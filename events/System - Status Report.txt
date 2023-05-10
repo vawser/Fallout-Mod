@@ -89,6 +89,33 @@ country_event = {
         }
 	}
     
+    # Schematic View
+    option = {
+		name = fallout_status_report.1.option.schematic_view
+        
+        country_event = { id = fallout_schematic_report.1 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    
+    # Scavenging View
+    option = {
+		name = fallout_status_report.1.option.scavenging_view
+        
+        trigger = {
+            has_country_flag = scavenging_expedition_active
+        }
+        
+        country_event = { id = fallout_scavenging_report.1 }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    
+    
     option = {
 		name = fallout_status_report.1.option.exit
         

@@ -1,0 +1,152 @@
+#-----------------------------------
+# Core
+#-----------------------------------
+set_scavenging_variables = {
+    set_variable = { which = stash_pipe_pistols         value = 0 }
+    set_variable = { which = stash_ballistic_guns       value = 0 }
+    set_variable = { which = stash_radiation_suits      value = 0 }
+    set_variable = { which = stash_bottlecaps           value = 0 }
+    set_variable = { which = stash_fission_batteries    value = 0 }
+    set_variable = { which = stash_combat_armor         value = 0 }
+    set_variable = { which = stash_riot_gear            value = 0 }
+}
+
+#-----------------------------------
+# Scavenging System
+#-----------------------------------
+start_scavenging_expedition = {
+    hidden_effect = {
+        set_country_flag = scavenging_expedition_begins
+        set_country_flag = scavenging_expedition_active
+        
+        set_variable = {
+            which = expedition_progress
+            value = 0
+        }
+        set_variable = {
+            which = expedition_progress_cap
+            value = 6
+        }
+        
+        # If a specific focus is chosen, make the expedition harder
+        if = {
+            limit = {
+                NOT = { has_country_flag = schematic_focus_random }
+            }
+            
+            set_variable = {
+                which = expedition_progress_cap
+                value = 20
+            }
+        }
+        
+        # Conditional Modifiers
+        if = {
+            limit = { 
+                has_reform = scavenging_encourged_reform
+            }
+            
+            subtract_variable = {
+                which = expedition_progress_cap
+                value = 2
+            }
+        }
+    }
+}
+
+advance_expedition_progress = {
+    custom_tooltip = ADVANCE_EXPEDITION_1_TT
+    
+    hidden_effect = {
+        change_variable = {
+            which = expedition_progress
+            value = 1
+        }
+        
+        if = {
+            limit = {
+                check_variable = {
+                    which = expedition_progress
+                    which = expedition_progress_cap
+                }
+            }
+            set_variable = {
+                which = expedition_progress
+                which = expedition_progress_cap
+            }
+        }
+    }
+}
+
+advance_expedition_progress_massively = {
+    custom_tooltip = ADVANCE_EXPEDITION_3_TT
+    
+    hidden_effect = {
+        change_variable = {
+            which = expedition_progress
+            value = 3
+        }
+        
+        if = {
+            limit = {
+                check_variable = {
+                    which = expedition_progress
+                    which = expedition_progress_cap
+                }
+            }
+            set_variable = {
+                which = expedition_progress
+                which = expedition_progress_cap
+            }
+        }
+    }
+}
+
+reduce_expedition_progress = {
+    custom_tooltip = REDUCE_EXPEDITION_1_TT
+    
+    hidden_effect = {
+        subtract_variable = {
+            which = expedition_progress
+            value = 1
+        }
+ 
+        if = {
+            limit = {
+                NOT = { 
+                    check_variable = {
+                        which = expedition_progress
+                        value = 0
+                    }
+                }
+            }
+            
+            # End the expedition if it is reduced to 0
+            end_scavenging_expedition = yes
+        }
+    }
+}
+
+reset_expedition = {
+    custom_tooltip = RESET_EXPEDITION_TT
+    
+    hidden_effect = {
+        set_variable = {
+            which = expedition_progress
+            value = 0
+        }
+    }
+}
+
+end_scavenging_expedition = {
+    country_event = { id = fallout_scavenging.101 }
+    
+    hidden_effect = {   
+        clr_country_flag = scavenging_expedition_begins
+        clr_country_flag = scavenging_expedition_active
+        set_variable = {
+            which = expedition_progress
+            value = 0
+        }
+    }
+}

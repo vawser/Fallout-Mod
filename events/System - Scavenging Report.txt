@@ -1,0 +1,70 @@
+namespace = fallout_scavenging_report
+
+# Scavenging Progress Report
+country_event = {
+	id = fallout_scavenging_report.1
+	title = fallout_scavenging_report.1.title
+	desc = fallout_scavenging_report.1.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    option = {
+		name = fallout_scavenging_report.1.option.advance_expedition
+		
+        trigger = {
+            NOT = { has_country_modifier = scavenging_expedition_status_action_cooldown }
+            years_of_income = 1.0
+        }
+        
+        add_years_of_income = -1.0
+        advance_expedition_progress = yes
+        
+        custom_tooltip = SCAVENGING_EXPEDITION_ACTION_COOLDOWN_TT
+        hidden_effect = {
+            add_country_modifier = {
+                name = scavenging_expedition_status_action_cooldown
+                duration = 365
+            }
+        }
+	}
+    option = {
+		name = fallout_scavenging_report.1.option.advance_expedition.lack_gold
+		
+        trigger = {
+            NOT = { has_country_modifier = scavenging_expedition_status_action_cooldown }
+            NOT = { years_of_income = 1.0 }
+        }
+        
+        custom_tooltip = ADVANCE_EXPEDITION_LACK_TT
+	}
+    option = {
+		name = fallout_scavenging_report.1.option.advance_expedition.cooldown
+		
+        trigger = {
+            has_country_modifier = scavenging_expedition_status_action_cooldown
+        }
+        
+        custom_tooltip = ADVANCE_EXPEDITION_USED_TT
+	}
+    
+    option = {
+		name = fallout_scavenging_report.1.option.cancel_expedition
+		
+        end_scavenging_expedition = yes
+	}
+    
+    option = {
+		name = fallout_scavenging_report.1.option.exit
+		
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_status_report.1 }
+    }
+}

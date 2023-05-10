@@ -1,0 +1,66 @@
+country_decisions = {
+	start_scavenging_expedition = {
+        color = { 98 101 105 }
+        
+        potential = {
+            NOT = { has_country_flag = scavenging_expedition_active }
+            NOT = { has_country_modifier = scavenging_expedition_cooldown }
+        }
+        allow = {
+            custom_trigger_tooltip = {
+                tooltip = HAS_NOT_STARTED_SCAVENGING_EXPEDITION
+                NOT = { has_country_flag = scavenging_expedition_active }
+            }
+            
+            adm_power = 50
+            dip_power = 50
+            mil_power = 50
+        }
+        effect = {
+			add_adm_power = -50
+            add_dip_power = -50
+            add_mil_power = -50
+            
+            country_event = { id = fallout_scavenging.1 }
+            
+            hidden_effect = {
+                set_country_flag = scavenging_expedition_active
+                add_country_modifier = {
+                    name = scavenging_expedition_cooldown
+                    duration = 1800
+                    hidden = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                # Stop after 3 schematics
+                calc_true_if = {
+                    amount = 3
+                    
+                    has_any_schematic = yes
+                }
+            }
+            
+			modifier = {
+				factor = 0
+				
+                NOT = { adm_power = 600 }
+			}
+            modifier = {
+				factor = 0
+				
+                NOT = { dip_power = 600 }
+			}
+            modifier = {
+				factor = 0
+				
+                NOT = { mil_power = 600 }
+			}
+        }
+    }
+}
