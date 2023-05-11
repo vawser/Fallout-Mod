@@ -1,0 +1,49 @@
+COA_ideas = {
+    start = {
+        warscore_cost_vs_other_religion = -0.15
+        missionary_maintenance_cost = -0.2
+    }
+    bonus = {
+        land_maintenance_modifier = -0.15
+    }
+    
+    trigger = {
+        OR = {
+            tag = COA
+            religion = atomic_worship
+        }
+    }
+    free = yes
+    
+    # Radiation is Life
+    COA_idea_1 = {
+        stability_cost_modifier = -0.2
+    }
+    # Confessionals
+    COA_idea_2 = {
+        global_autonomy = -0.03
+    }
+    # The Divine Bomb
+    COA_idea_3 = {
+        missionaries = 1
+        global_missionary_strength = 0.02
+    }
+    # Irradiated Shrines
+    COA_idea_4 = {
+        tolerance_own = 2
+    }
+    # Glow of Atom
+    COA_idea_5 = {
+        hostile_attrition = 3
+    }
+    # Rad Adaptation
+    COA_idea_6 = {
+        colonists = 1
+        colonist_placement_chance = 0.05
+    }
+    # Power of Atom
+    COA_idea_7 = {
+        infantry_power = 0.1
+    }
+}
+

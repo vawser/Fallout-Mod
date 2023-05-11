@@ -2516,7 +2516,16 @@ on_slacken_stop = {
 }
 
 on_colony_finished = { #ROOT - Province
-	
+	if = {
+        limit = {
+            owner = {
+                has_idea = fallout_exploration_ideas_7
+            }
+        }
+            
+        change_culture = owner
+        change_religion = owner
+    }
 }
 
 on_advisor_hired = { #ROOT - Country
