@@ -80,11 +80,228 @@ country_event = {
     immediate = {
         hidden_effect = {
             save_schematic_location = { schematic = minigun }
+            save_schematic_location = { schematic = flamer }
+            save_schematic_location = { schematic = incinerator }
+            save_schematic_location = { schematic = laser_pistol }
+            save_schematic_location = { schematic = laser_rifle }
+            save_schematic_location = { schematic = laser_assisted_electrical_rifle }
+            save_schematic_location = { schematic = gatling_laser }
+            save_schematic_location = { schematic = recharger_rifle }
+            save_schematic_location = { schematic = plasma_rifle }
+            save_schematic_location = { schematic = plasma_caster }
+            save_schematic_location = { schematic = tesla_cannon }
+            save_schematic_location = { schematic = magnetic_rail_cannon }
         }
     }
     
     option = {
 		name = fallout_schematic_report.2.option.return
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_schematic_report.1 }
+    }
+}
+
+# Armor Schematics
+country_event = {
+	id = fallout_schematic_report.3
+	title = fallout_schematic_report.3.title
+	desc = fallout_schematic_report.3.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            save_schematic_location = { schematic = t51_power_armor }
+            save_schematic_location = { schematic = t45_power_armor }
+            save_schematic_location = { schematic = t60_power_armor }
+            save_schematic_location = { schematic = t65_power_armor }
+            save_schematic_location = { schematic = x01_power_armor }
+            save_schematic_location = { schematic = tesla_power_armor }
+            save_schematic_location = { schematic = hellfire_power_armor }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_report.3.option.return
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_schematic_report.1 }
+    }
+}
+
+# Vehicle Schematics
+country_event = {
+	id = fallout_schematic_report.4
+	title = fallout_schematic_report.4.title
+	desc = fallout_schematic_report.4.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            save_schematic_location = { schematic = chryslus_corvega }
+            save_schematic_location = { schematic = highwayman }
+            save_schematic_location = { schematic = f80_fighter_jet }
+            save_schematic_location = { schematic = transport_vertibird }
+            save_schematic_location = { schematic = combat_vertibird }
+            save_schematic_location = { schematic = steam_powered_truck }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_report.4.option.return
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_schematic_report.1 }
+    }
+}
+
+# Energy Schematics
+country_event = {
+	id = fallout_schematic_report.5
+	title = fallout_schematic_report.5.title
+	desc = fallout_schematic_report.5.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            save_schematic_location = { schematic = fusion_cell }
+            save_schematic_location = { schematic = fusion_core }
+            save_schematic_location = { schematic = microfusion_cell }
+            save_schematic_location = { schematic = microfusion_breeder }
+            save_schematic_location = { schematic = beryllium_agitator }
+            save_schematic_location = { schematic = verdant_air_turbine }
+            save_schematic_location = { schematic = helios_solar_generator }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_report.5.option.return
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_schematic_report.1 }
+    }
+}
+
+# Medical Schematics
+country_event = {
+	id = fallout_schematic_report.6
+	title = fallout_schematic_report.6.title
+	desc = fallout_schematic_report.6.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            save_schematic_location = { schematic = stimpak }
+            save_schematic_location = { schematic = auto_doc }
+            save_schematic_location = { schematic = buffout }
+            save_schematic_location = { schematic = mentats }
+            save_schematic_location = { schematic = psycho }
+            save_schematic_location = { schematic = jet }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_report.6.option.return
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_schematic_report.1 }
+    }
+}
+
+# Robotic Schematics
+country_event = {
+	id = fallout_schematic_report.7
+	title = fallout_schematic_report.7.title
+	desc = fallout_schematic_report.7.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            save_schematic_location = { schematic = protectron }
+            save_schematic_location = { schematic = mister_handy }
+            save_schematic_location = { schematic = assaultron }
+            save_schematic_location = { schematic = eyebot }
+            save_schematic_location = { schematic = mister_gutsy }
+            save_schematic_location = { schematic = robobrain }
+            save_schematic_location = { schematic = securitron }
+            save_schematic_location = { schematic = sentry_bot }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_report.7.option.return
+        
+	}
+    
+    after = {
+        country_event = { id = fallout_schematic_report.1 }
+    }
+}
+
+# Utility Schematics
+country_event = {
+	id = fallout_schematic_report.8
+	title = fallout_schematic_report.8.title
+	desc = fallout_schematic_report.8.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            save_schematic_location = { schematic = stealth_boy }
+            save_schematic_location = { schematic = base_replicator_unit }
+            save_schematic_location = { schematic = hologram }
+            save_schematic_location = { schematic = molecular_relay }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_report.8.option.return
         
 	}
     

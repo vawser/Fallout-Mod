@@ -599,6 +599,7 @@ country_event = {
 	}
     
     after = {
-        country_event = { id = fallout_status_report.1 }
+        # Close event so the faction event targets are cleared, otherwise the member list will add each member twice, etc.
+        #country_event = { id = fallout_status_report.1 }
     }
 }
