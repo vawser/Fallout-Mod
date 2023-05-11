@@ -991,3 +991,58 @@ manipulate_opinion = {
         always = no
 	}
 }
+
+#---------------------------------------
+# Steal Schematic
+#---------------------------------------
+steal_schematic = {
+	category = covert
+	
+	alert_index = 40
+	alert_tooltip = steal_schematic_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {
+        # Only allow 1 heist at any one time
+        NOT = {
+            any_country = {
+                has_country_flag = schematic_heist_active 
+            }
+        }
+        FROM = {
+            has_any_schematic = yes
+        }
+	}
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+        FROM = {
+            has_any_schematic = yes
+        }
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -50
+		}
+		hidden_effect = {
+            set_country_flag = schematic_heist_active
+            FROM = {
+                set_country_flag = schematic_heist_target
+            }
+        }
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+        # Only AI BOS should use this as they are the main hoarders of technology
+        technology_group = tech_bos
+	}
+}

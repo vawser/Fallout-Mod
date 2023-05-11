@@ -1,0 +1,400 @@
+﻿l_english:
+ #----------------------------------------------
+ # Diplomatic Action
+ #----------------------------------------------
+ steal_schematic: "Steal Schematic"
+ steal_schematic_title: "Steal Schematic"
+ steal_schematic_desc: "Steal Schematic will reduce the size of our §Y[From.GetName]§! Spy Network by §R50.0§! and have the following effect:\n\nThe event §Y'Heist Begins!'§! happens for §Y[From.GetName]§!. We will gain the chance to steal a schematic owned by §Y[From.GetName]§! from them."
+ steal_schematic_tooltip: "We will steal a schematic from them."
+ steal_schematic_dialog: "We will steal a schematic from them."
+ 
+ #----------------------------------------------
+ # Peace Term
+ #----------------------------------------------
+ po_steal_schematic: "Steal Schematic"
+ PEACE_po_steal_schematic: "Steal Schematic"
+ CB_ALLOWED_po_steal_schematic: "Steal Schematic"
+ po_steal_schematic_desc: "We will be able to steal §G1§! schematic from [From.GetName]."
+ 
+ STEAL_SCHEMATIC_TT: "We will be able to steal §G1§! schematic from [From.GetName]."
+ 
+ #----------------------------------------------
+ # Events
+ #----------------------------------------------
+ fallout_schematic_heist.1.title: "Heist Begins"
+ fallout_schematic_heist.1.desc: "We have started our operation to raid the schematic library of [schematic_heist_target.GetName]. How shall we approach the library?"
+ fallout_schematic_heist.1.option.a: "Quickly. Speed is of the essence."
+ fallout_schematic_heist.1.option.b: "Methodically. We must ensure we do not get caught."
+ 
+ HEIST_TYPE_QUICK: "We will attempt this heist in a §YQuick§! fashion."
+ HEIST_TYPE_METHODICAL: "We will attempt this heist in a §YMethodical§! fashion."
+ 
+ heist_type_quick: "Heist Type: Quick"
+ heist_type_methodical: "Heist Type: Methodical"
+ 
+ fallout_schematic_heist.2.title: "Target of Heist"
+ fallout_schematic_heist.2.desc: "Our spymasters have warned us that an enemy nation is planning an schematic heist, and will attempt to steal one of our valuable schematics. Although we do not know their plan of attack, we can take measures to reduce the chance of their success."
+ fallout_schematic_heist.2.option.a: "Guards in every corridor, sentries on every wall"
+ fallout_schematic_heist.2.option.b: "Increase frequency of patrols near schematic library"
+ fallout_schematic_heist.2.option.c: "Leave things as they are"
+ 
+ HEIST_DEFENCE_MAX: "We will defend our schematic library with §YMaximum§! additional effort."
+ HEIST_DEFENCE_MED: "We will defend our schematic library with §YSignificant§! additional effort."
+ HEIST_DEFENCE_MIN: "We will defend our schematic library with no additional effort."
+ 
+ heist_defence_max: "Heist Defence: Maximum"
+ heist_defence_med: "Heist Defence: Significant"
+ heist_defence_min: "Heist Defence: Minimum"
+ 
+ fallout_schematic_heist.3.title: "The Heist"
+ fallout_schematic_heist.3.desc: "Our spies have managed to infiltrate the nation of [schematic_heist_target.GetName]. Let us see how their operation pans out."
+ fallout_schematic_heist.3.option.a: "Let's see..."
+ 
+ HEIST_RESULT: "Let us see how our heist goes:"
+ 
+ fallout_schematic_heist.4.title: "Heist Thwarted"
+ fallout_schematic_heist.4.desc: "Our spies have been thwarted by the defence networks in [schematic_heist_target.GetName]. Luckily they were not discovered, but the heist itself was a failure."
+ fallout_schematic_heist.4.option.a: "Oh well..."
+ 
+ fallout_schematic_heist.5.title: "Heist Exposed!"
+ fallout_schematic_heist.5.desc: "Our spies have been thwarted by the defence networks in [schematic_heist_target.GetName]. Unluckily they were discovered during the act, and have been executed. This is a sad day for all in [Root.GetName]."
+ fallout_schematic_heist.5.option.a: "Those fiends!"
+ 
+ fallout_schematic_heist.6.title: "Heist Exposed!"
+ fallout_schematic_heist.6.desc: "Our spies have thwarted an attempt to steal an artifact by [schematic_heist_raider.GetName]. Luckily we were able to capture the enemy spies and have executed them as due course."
+ fallout_schematic_heist.6.option.a: "Those fiends!"
+
+ fallout_schematic_heist.8.title: "Stolen Schematic"
+ fallout_schematic_heist.8.desc: "We have raided the schematic library of [schematic_heist_target.GetName]. Let us lay claim to one of the schematics before reinforcements arrive."
+ fallout_schematic_heist.8.option.minigun: "Steal the Minigun schematic"
+ fallout_schematic_heist.8.option.flamer: "Steal the Flamer schematic"
+ fallout_schematic_heist.8.option.incinerator: "Steal the Incinerator schematic"
+ fallout_schematic_heist.8.option.laser_pistol: "Steal the Laser Pistol schematic"
+ fallout_schematic_heist.8.option.laser_rifle: "Steal the Laser Rifle schematic"
+ fallout_schematic_heist.8.option.laer: "Steal the LAER schematic"
+ fallout_schematic_heist.8.option.gatling_laser: "Steal the Gatling Laser schematic"
+ fallout_schematic_heist.8.option.recharger_rifle: "Steal the Recharger Rifle schematic"
+ fallout_schematic_heist.8.option.plasma_rifle: "Steal the Plasma Rifle schematic"
+ fallout_schematic_heist.8.option.plasma_caster: "Steal the Plasma Caster schematic"
+ fallout_schematic_heist.8.option.tesla_cannon: "Steal the Tesla Cannon schematic"
+ fallout_schematic_heist.8.option.magnetic_rail_cannon: "Steal the Magnetic Rail Cannon schematic"
+ fallout_schematic_heist.8.option.t45_power_armor: "Steal the T-45 Power Armor schematic"
+ fallout_schematic_heist.8.option.t51_power_armor: "Steal the T-51 Power Armor schematic"
+ fallout_schematic_heist.8.option.t60_power_armor: "Steal the T-60 Power Armor schematic"
+ fallout_schematic_heist.8.option.t65_power_armor: "Steal the T-65 Power Armor schematic"
+ fallout_schematic_heist.8.option.x01_power_armor: "Steal the X-01 Power Armor schematic"
+ fallout_schematic_heist.8.option.tesla_power_armor: "Steal the Tesla Power Armor schematic"
+ fallout_schematic_heist.8.option.hellfire_power_armor: "Steal the Hellfire Power Armor schematic"
+ fallout_schematic_heist.8.option.atomic_v8: "Steal the Atomic V-8 schematic"
+ fallout_schematic_heist.8.option.usaf_tank: "Steal the Pre-war Tank schematic"
+ fallout_schematic_heist.8.option.megaloader: "Steal the Megaloader schematic"
+ fallout_schematic_heist.8.option.tugboat: "Steal the Tugboat schematic"
+ fallout_schematic_heist.8.option.vertibird: "Steal the Vertibird schematic"
+ fallout_schematic_heist.8.option.truck: "Steal the Truck schematic"
+ fallout_schematic_heist.8.option.forklift: "Steal the Forklift schematic"
+ fallout_schematic_heist.8.option.apc: "Steal the APC schematic"
+ fallout_schematic_heist.8.option.tractor: "Steal the Tractor schematic"
+ fallout_schematic_heist.8.option.fusion_cell: "Steal the Fusion Cell schematic"
+ fallout_schematic_heist.8.option.fusion_core: "Steal the Fusion Core schematic"
+ fallout_schematic_heist.8.option.microfusion_cell: "Steal the Microfusion Cell schematic"
+ fallout_schematic_heist.8.option.plasma_cartridge: "Steal the Plasma Cartridge schematic"
+ fallout_schematic_heist.8.option.poseidon_ultracite_generator: "Steal the Poseidon Ultracite Generator schematic"
+ fallout_schematic_heist.8.option.verdant_air_turbine: "Steal the Verdant-Air Turbine schematic"
+ fallout_schematic_heist.8.option.helios_solar_generator: "Steal the HELIOS Solar Generator schematic"
+ fallout_schematic_heist.8.option.stimpak: "Steal the Stimpak schematic"
+ fallout_schematic_heist.8.option.auto_doc: "Steal the Auto-Doc schematic"
+ fallout_schematic_heist.8.option.buffout: "Steal the Buffout schematic"
+ fallout_schematic_heist.8.option.mentats: "Steal the Mentats schematic"
+ fallout_schematic_heist.8.option.psycho: "Steal the Psycho schematic"
+ fallout_schematic_heist.8.option.jet: "Steal the Jet schematic"
+ fallout_schematic_heist.8.option.protectron: "Steal the Protectron schematic"
+ fallout_schematic_heist.8.option.mister_handy: "Steal the Mister Handy schematic"
+ fallout_schematic_heist.8.option.assaultron: "Steal the Assaultron schematic"
+ fallout_schematic_heist.8.option.eyebot: "Steal the Eyebot schematic"
+ fallout_schematic_heist.8.option.mister_gutsy: "Steal the Mister Gutsy schematic"
+ fallout_schematic_heist.8.option.robobrain: "Steal the Robo-brain schematic"
+ fallout_schematic_heist.8.option.securitron: "Steal the Securitron schematic"
+ fallout_schematic_heist.8.option.sentry_bot: "Steal the Sentry Bot schematic"
+ fallout_schematic_heist.8.option.stealth_boy: "Steal the Stealth Boy schematic"
+ fallout_schematic_heist.8.option.base_replicator_unit: "Look for Base Replicator Unit schematic"
+ fallout_schematic_heist.8.option.hologram: "Steal the Hologram schematic"
+ fallout_schematic_heist.8.option.molecular_relay: "Steal the Molecular Relay schematic"
+ 
+ #----------------------------------------------
+ # Tooltips
+ #----------------------------------------------
+ STEAL_schematic_fusion_cell: "Steal the §YFusion Cell§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_fusion_core: "Steal the §YFusion Core§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_microfusion_cell: "Steal the §YMicrofusion Cell§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_plasma_cartridge: "Steal the §YPlasma Cartridge§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_poseidon_ultracite_generator: "Steal the §YPoseidon Ultracite Generator§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_verdant_air_turbine: "Steal the §YVerdant-Air Turbine§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_helios_solar_generator: "Steal the §YHELIOS Solar Generator§! schematic from [schematic_heist_target.GetName]."
+ 
+ STEAL_schematic_atomic_v8: "Steal the §YAtomic V-8§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_usaf_tank: "Steal the §YPre-war Tank§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_megaloader: "Steal the §YMegaloader§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_tugboat: "Steal the §YTugboat§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_vertibird: "Steal the §YVertibird§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_truck: "Steal the §YTruck§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_forklift: "Steal the §YForklift§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_apc: "Steal the §YAPC§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_tractor: "Steal the §YTractor§! schematic from [schematic_heist_target.GetName]."
+ 
+ STEAL_schematic_minigun: "Steal the §YMinigun§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_flamer: "Steal the §YFlamer§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_incinerator: "Steal the §YIncinerator§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_laser_pistol: "Steal the §YLaser Pistol§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_laser_rifle: "Steal the §YLaser Rifle§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_laer: "Steal the §YLAER§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_gatling_laser: "Steal the §YGatling Laser§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_recharger_rifle: "Steal the §YRecharger Rifle§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_plasma_rifle: "Steal the §YPlasma Rifle§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_plasma_caster: "Steal the §YPlasma Caster§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_tesla_cannon: "Steal the §YTesla Cannon§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_magnetic_rail_cannon: "Steal the §YMagnetic Rail Cannon§! schematic from [schematic_heist_target.GetName]."
+ 
+ STEAL_schematic_t51_power_armor: "Steal the §YT-51 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_t45_power_armor: "Steal the §YT-45 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_t60_power_armor: "Steal the §YT-60 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_t65_power_armor: "Steal the §YT-65 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_x01_power_armor: "Steal the §YX-01 Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_tesla_power_armor: "Steal the §YTesla Power Armor§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_hellfire_power_armor: "Steal the §YHellfire Power Armor§! schematic from [schematic_heist_target.GetName]."
+ 
+ STEAL_schematic_stimpak: "Steal the §YStimpak§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_auto_doc: "Steal the §YAuto-Doc§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_buffout: "Steal the §YBuffout§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_mentats: "Steal the §YMentats§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_psycho: "Steal the §YPsycho§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_jet: "Steal the §YJet§! schematic from [schematic_heist_target.GetName]."
+ 
+ STEAL_schematic_protectron: "Steal the §YProtectron§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_mister_handy: "Steal the §YMister Handy§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_assaultron: "Steal the §YAssaultron§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_eyebot: "Steal the §YEyebot§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_mister_gutsy: "Steal the §YMister Gutsy§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_robobrain: "Steal the §YRobo-brain§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_securitron: "Steal the §YSecuritron§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_sentry_bot: "Steal the §YSentry Bot§! schematic from [schematic_heist_target.GetName]."
+ 
+ STEAL_schematic_stealth_boy: "Steal the §YStealth Boy§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_base_replicator_unit: "Steal the §YBase Replicator Unit§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_hologram: "Steal the §YHologram§! schematic from [schematic_heist_target.GetName]."
+ STEAL_schematic_molecular_relay: "Steal the §YMolecular Relay§! schematic from [schematic_heist_target.GetName]."
+ 
+ #----------------------------------------------
+ # Schematic Loss
+ #----------------------------------------------
+ fallout_schematic_loss.1.title: "Loss of Schematic: Fusion Cell"
+ fallout_schematic_loss.1.desc: "Fusion cells are typically used by laser-based energy weapons. A fusion cell nearly resembles an electric battery with positive and negative symbols, directional arrows, and a warning label on the side."
+ fallout_schematic_loss.1.option.a: "Curses..."
+ 
+ fallout_schematic_loss.2.title: "Loss of Schematic: Fusion Core"
+ fallout_schematic_loss.2.desc: "Standardized fusion cores are a high-grade, long-term nuclear battery used for military and commercial applications before the Great War. Used by civilians to power a multitude of devices, from automobiles, to generators, the military instead used them for warfare, supplying power armor and some Gatling laser models with energy."
+ fallout_schematic_loss.2.option.a: "Curses..."
+ 
+ fallout_schematic_loss.3.title: "Loss of Schematic: Microfusion Cell"
+ fallout_schematic_loss.3.desc: "The microfusion cell, a medium-sized energy production unit, is a self-contained fusion plant used as ammunition for energy weapons."
+ fallout_schematic_loss.3.option.a: "Curses..."
+ 
+ fallout_schematic_loss.4.title: "Loss of Schematic: Plasma Cartridge"
+ fallout_schematic_loss.4.desc: "A plasma cartridge, normally used to power plasma weaponry. The small, green container is filled with plasma that can be readily converted into energy."
+ fallout_schematic_loss.4.option.a: "Curses..."
+ 
+ fallout_schematic_loss.5.title: "Loss of Schematic: Poseidon Ultracite Generator"
+ fallout_schematic_loss.5.desc: "A coal power plant generator retro-fitted to instead burn ultracite. Originally used in the Appalachias by Poseidon Energy after acquring a coal power plant owned by Atomic Mining Services."
+ fallout_schematic_loss.5.option.a: "Curses..."
+ 
+ fallout_schematic_loss.6.title: "Loss of Schematic: Verdant-Air Turbine"
+ fallout_schematic_loss.6.desc: "The result of a project overseen by GDA Fusion, the Verdant-Air Turbine is a wind turbine that is used to generate electricity in the post-apocalyptic wasteland."
+ fallout_schematic_loss.6.option.a: "Curses..."
+ 
+ fallout_schematic_loss.7.title: "Loss of Schematic: HELIOS Solar Generator"
+ fallout_schematic_loss.7.desc: "The result of a project overseen by Poseidon Energy, the HELIOS Solar Generator is a large, powerful solar generator that is capable of producing vast amounts of energy for use in the post-apocalyptic wasteland."
+ fallout_schematic_loss.7.option.a: "Curses..."
+ 
+ fallout_schematic_loss.8.title: "Loss of Schematic: Atomic V-8"
+ fallout_schematic_loss.8.desc: "A Corvega brand vehicle that utilizes a fusion engine. One of the common cars used by citizens of the United States before the Great War."
+ fallout_schematic_loss.8.option.a: "Curses..."
+ 
+ fallout_schematic_loss.9.title: "Loss of Schematic: Pre-war Tank"
+ fallout_schematic_loss.9.desc: "A type of heavy duty tank utilized by the United States Armed Forces before the Great War."
+ fallout_schematic_loss.9.option.a: "Curses..."
+ 
+ fallout_schematic_loss.10.title: "Loss of Schematic: Megaloader"
+ fallout_schematic_loss.10.desc: "The multipurpose utility vehicle system, or megaloader, was designed to be the perfect construction vehicle. With a modular design and the ability to accept a broad range of arm attachments, the megaloader could be adapted to suit any job."
+ fallout_schematic_loss.10.option.a: "Curses..."
+ 
+ fallout_schematic_loss.11.title: "Loss of Schematic: Tugboat"
+ fallout_schematic_loss.11.desc: "A tugboat is a small, watercraft vessel used for transportation and scavenging in the post-apocalyptic wasteland. These boats can be found floating along the coasts of the irradiated waters of the wasteland."
+ fallout_schematic_loss.11.option.a: "Curses..."
+ 
+ fallout_schematic_loss.12.title: "Loss of Schematic: Vertibird"
+ fallout_schematic_loss.12.desc: "A vertibird is a helicopter-like aircraft originally used by the pre-war military and now, the Enclave and the Brotherhood. These aircraft are equipped with powerful armaments and are a formidable force in the skies of the wasteland."
+ fallout_schematic_loss.12.option.a: "Curses..."
+ 
+ fallout_schematic_loss.13.title: "Loss of Schematic: Truck"
+ fallout_schematic_loss.13.desc: "A truck is a common mode of transportation in the wasteland, used for carrying goods and supplies across the wasteland. These vehicles can range from small, makeshift trucks to larger, military-grade transports that are armored and heavily armed."
+ fallout_schematic_loss.13.option.a: "Curses..."
+ 
+ fallout_schematic_loss.14.title: "Loss of Schematic: Minigun"
+ fallout_schematic_loss.14.desc: "A minigun is a powerful, rapid-fire weapon that is commonly used by the military. It is a handheld weapon that fires multiple rounds per second, making it incredibly deadly against both people and creatures in the wasteland."
+ fallout_schematic_loss.14.option.a: "Curses..."
+ 
+ fallout_schematic_loss.15.title: "Loss of Schematic: Flamer"
+ fallout_schematic_loss.15.desc: "A flamer is a weapon that projects a stream of fire, making it an ideal weapon for close-range combat. It is used primarily by the Brotherhood of Steel and other heavily-armed factions across the wasteland."
+ fallout_schematic_loss.15.option.a: "Curses..."
+ 
+ fallout_schematic_loss.16.title: "Loss of Schematic: Incinerator"
+ fallout_schematic_loss.16.desc: "An incinerator is a weapon that fires explosive, incendiary projectiles, making it a deadly weapon against both people and creatures in the wasteland. It is primarily used by the Brotherhood of Steel and other heavily-armed factions across the wasteland."
+ fallout_schematic_loss.16.option.a: "Curses..."
+ 
+ fallout_schematic_loss.17.title: "Loss of Schematic: Laser Pistol"
+ fallout_schematic_loss.17.desc: "The laser pistol is a futuristic weapon that fires a beam of light that deals energy damage to its target. It was developed during the Resource Wars as a means of conserving ballistic ammunition."
+ fallout_schematic_loss.17.option.a: "Curses..."
+ 
+ fallout_schematic_loss.18.title: "Loss of Schematic: Laser Rifle"
+ fallout_schematic_loss.18.desc: "The laser rifle is a more powerful version of the laser pistol, firing a more concentrated beam of energy that deals higher damage to its target. It was developed during the Resource Wars as a means of conserving ballistic ammunition."
+ fallout_schematic_loss.18.option.a: "Curses..."
+ 
+ fallout_schematic_loss.19.title: "Loss of Schematic: LAER"
+ fallout_schematic_loss.19.desc: "The LAER is a weapon that fires a powerful laser beam that can be charged up for greater damage. It was developed by the scientists of Big Mountain, although it was never truly integrated into the military before the Great War."
+ fallout_schematic_loss.19.option.a: "Curses..."
+ 
+ fallout_schematic_loss.20.title: "Loss of Schematic: Gatling Laser"
+ fallout_schematic_loss.20.desc: "The gatling laser is a powerful, rapid-fire weapon that fires a continuous beam of energy. The sustained stream of fire means enemies are quickly suppressed."
+ fallout_schematic_loss.20.option.a: "Curses..."
+ 
+ fallout_schematic_loss.21.title: "Loss of Schematic: Recharger Rifle"
+ fallout_schematic_loss.21.desc: "The recharger rifle is a weapon that uses energy cells to recharge its own energy reserves, allowing it to fire endlessly without reloading."
+ fallout_schematic_loss.21.option.a: "Curses..."
+ 
+ fallout_schematic_loss.22.title: "Loss of Schematic: Plasma Rifle"
+ fallout_schematic_loss.22.desc: "The plasma rifle is a futuristic weapon that fires plasma energy bolts that explode on impact, dealing significant damage to its target."
+ fallout_schematic_loss.22.option.a: "Curses..."
+ 
+ fallout_schematic_loss.23.title: "Loss of Schematic: Plasma Caster"
+ fallout_schematic_loss.23.desc: "The plasma caster is a more powerful version of the plasma rifle, firing a larger plasma bolt that deals higher damage to its target."
+ fallout_schematic_loss.23.option.a: "Curses..."
+ 
+ fallout_schematic_loss.24.title: "Loss of Schematic: Tesla Cannon"
+ fallout_schematic_loss.24.desc: "The tesla cannon is a powerful energy weapon that fires bolts of lightning, dealing significant damage to its target."
+ fallout_schematic_loss.24.option.a: "Curses..."
+ 
+ fallout_schematic_loss.25.title: "Loss of Schematic: Magnetic Rail Cannon"
+ fallout_schematic_loss.25.desc: "The magnetic rail Ccnnon is a heavy weapon that fires magnetically-accelerated slugs at its target, dealing massive damage upon impact."
+ fallout_schematic_loss.25.option.a: "Curses..."
+ 
+ fallout_schematic_loss.26.title: "Loss of Schematic: T-51 Power Armor"
+ fallout_schematic_loss.26.desc: "T-51 Power Armor is a highly advanced suit of power armor that was developed by the United States military before the Great War. It is a rare and valuable resource in the post-apocalyptic wasteland and is known for its exceptional durability and protective capabilities."
+ fallout_schematic_loss.26.option.a: "Curses..."
+ 
+ fallout_schematic_loss.27.title: "Loss of Schematic: T-45 Power Armor"
+ fallout_schematic_loss.27.desc: "T-45 Power Armor is an early model of power armor that was also developed by the United States military before the Great War. It is less advanced than the T-51, but is still highly effective in combat."
+ fallout_schematic_loss.27.option.a: "Curses..."
+ 
+ fallout_schematic_loss.28.title: "Loss of Schematic: T-60 Power Armor"
+ fallout_schematic_loss.28.desc: "T-60 Power Armor is a more advanced model of power armor that was developed by the Brotherhood of Steel in the Capital Wasteland. It is highly durable and provides exceptional protection, making it a valuable resource in the post-apocalyptic wasteland."
+ fallout_schematic_loss.28.option.a: "Curses..."
+ 
+ fallout_schematic_loss.29.title: "Loss of Schematic: T-65 Power Armor"
+ fallout_schematic_loss.29.desc: "T-65 Power Armor is the most advanced model of power armor, and was developed by the Brotherhood of Steel in Boston. It is highly sought after throughout the wasteland, and is known for its exceptional durability and protective capabilities."
+ fallout_schematic_loss.29.option.a: "Curses..."
+ 
+ fallout_schematic_loss.30.title: "Loss of Schematic: X-01 Power Armor"
+ fallout_schematic_loss.30.desc: "X-01 Power Armor is an experimental suit of power armor that was developed by the Enclave, a secretive organization that survived the Great War. It is highly advanced and provides exceptional protection."
+ fallout_schematic_loss.30.option.a: "Curses..."
+ 
+ fallout_schematic_loss.31.title: "Loss of Schematic: Tesla Power Armor"
+ fallout_schematic_loss.31.desc: "Tesla Power Armor is a unique variant of power armor that was developed by the Enclave. It is equipped with Tesla Coils that can electrocute enemies in close proximity, making it a valuable resource for those looking to gain an edge in combat."
+ fallout_schematic_loss.31.option.a: "Curses..."
+ 
+ fallout_schematic_loss.32.title: "Loss of Schematic: Hellfire Power Armor"
+ fallout_schematic_loss.32.desc: "Hellfire Power Armor is an advanced variant of power armor that was developed by the Enclave. It is highly durable and provides exceptional protection, making it a valuable resource for those looking to gain an edge in combat."
+ fallout_schematic_loss.32.option.a: "Curses..."
+ 
+ fallout_schematic_loss.33.title: "Loss of Schematic: Stimpak"
+ fallout_schematic_loss.33.desc: "A stimpak is a valuable medical resource in the post-apocalyptic wasteland. It is a pre-war syringe that is filled with a special medication that can quickly heal injuries."
+ fallout_schematic_loss.33.option.a: "Curses..."
+ 
+ fallout_schematic_loss.34.title: "Loss of Schematic: Auto-Doc"
+ fallout_schematic_loss.34.desc: "The Auto-Doc is a highly advanced medical device that is used to treat injuries and illnesses. It is commonly found in medical facilities and is a valuable resource for those looking to resolve disease and injury quickly."
+ fallout_schematic_loss.34.option.a: "Curses..."
+ 
+ fallout_schematic_loss.35.title: "Loss of Schematic: Buffout"
+ fallout_schematic_loss.35.desc: "Buffout is a performance-enhancing drug that is commonly used throughout the post-apocalyptic wasteland. It provides a temporary boost to strength and endurance."
+ fallout_schematic_loss.35.option.a: "Curses..."
+ 
+ fallout_schematic_loss.36.title: "Loss of Schematic: Mentats"
+ fallout_schematic_loss.36.desc: "Mentats are a type of drug that is commonly used by scientists to enhance mental abilities. They provide a temporary boost to intelligence and perception, making them a valuable resource when looking to gain an edge in strategic planning and decision-making."
+ fallout_schematic_loss.36.option.a: "Curses..."
+ 
+ fallout_schematic_loss.37.title: "Loss of Schematic: Psycho"
+ fallout_schematic_loss.37.desc: "Psycho is a powerful, addictive drug that is commonly used throughout the wasteland to enhance combat capabilities. It provides a temporary boost to pain threshold, allowing for truly bestial performance in combat."
+ fallout_schematic_loss.37.option.a: "Curses..."
+ 
+ fallout_schematic_loss.38.title: "Loss of Schematic: Jet"
+ fallout_schematic_loss.38.desc: "Jet is a highly addictive drug that is commonly used to enhance movement and reaction time. It provides a temporary boost to agility and perception, making it a valuable resource for those looking to gain an edge in combat and exploration."
+ fallout_schematic_loss.38.option.a: "Curses..."
+ 
+ fallout_schematic_loss.39.title: "Loss of Schematic: Protectron"
+ fallout_schematic_loss.39.desc: "A protectron is a type of robotic security unit was originally designed to provide security for businesses and government facilities, but have since been repurposed for use in the post-apocalyptic wasteland."
+ fallout_schematic_loss.39.option.a: "Curses..."
+ 
+ fallout_schematic_loss.40.title: "Loss of Schematic: Mister Handy"
+ fallout_schematic_loss.40.desc: "Mister Handy is a type of domestic robot that was popular before the Great War. They were designed to perform a variety of household tasks, including cleaning and cooking, but have since been repurposed for use in the post-apocalyptic wasteland."
+ fallout_schematic_loss.40.option.a: "Curses..."
+ 
+ fallout_schematic_loss.41.title: "Loss of Schematic: Assaultron"
+ fallout_schematic_loss.41.desc: "An assaultron is a highly advanced combat robot that was developed by the military before the Great War. It is equipped with powerful energy weapons and is highly agile, making it a formidable opponent in combat."
+ fallout_schematic_loss.41.option.a: "Curses..."
+ 
+ fallout_schematic_loss.42.title: "Loss of Schematic: Eyebot"
+ fallout_schematic_loss.42.desc: "An eyebot is a type of reconnaissance drone that is commonly used to gather information and provide reconnaissance. They are equipped with cameras and sensors, and are capable of flying over long distances."
+ fallout_schematic_loss.42.option.a: "Curses..."
+ 
+ fallout_schematic_loss.43.title: "Loss of Schematic: Mister Gutsy"
+ fallout_schematic_loss.43.desc: "Mister Gutsy is a combat robot that was developed by the military before the Great War. It is equipped with a variety of weapons, including machine guns and flamethrowers, and is highly effective in combat."
+ fallout_schematic_loss.43.option.a: "Curses..."
+ 
+ fallout_schematic_loss.44.title: "Loss of Schematic: Robo-brain"
+ fallout_schematic_loss.44.desc: "A robo-brain is a type of robotic hybrid that combines a human brain with a robotic body. They were originally developed by the military before the Great War as part of an effort to create advanced robotic soldiers."
+ fallout_schematic_loss.44.option.a: "Curses..."
+ 
+ fallout_schematic_loss.45.title: "Loss of Schematic: Securitron"
+ fallout_schematic_loss.45.desc: "A securitron is a type of security robot that was developed by Mr House to protect the Strip. They are equipped with powerful weapons and advanced security systems, making them highly effective at providing security."
+ fallout_schematic_loss.45.option.a: "Curses..."
+ 
+ fallout_schematic_loss.46.title: "Loss of Schematic: Sentry Bot"
+ fallout_schematic_loss.46.desc: "A sentry bot is a highly advanced combat robot was used to defend military compounds before the Great War. It is equipped with a variety of weapons, including miniguns and missiles, and is highly effective in combat."
+ fallout_schematic_loss.46.option.a: "Curses..."
+ 
+ fallout_schematic_loss.47.title: "Loss of Schematic: Stealth Boy"
+ fallout_schematic_loss.47.desc: "The Stealth Boy is a personal device that provides the user with temporary invisibility, making them undetectable by most enemies. It was originally developed by the military before the Great War for use in espionage and reconnaissance missions."
+ fallout_schematic_loss.47.option.a: "Curses..."
+
+ fallout_schematic_loss.48.title: "Loss of Schematic: Base Replicator Unit"
+ fallout_schematic_loss.48.desc: "A base replicator unit is a type of advanced manufacturing machine that is capable of producing a wide range of items. They are commonly used by in G.E.C.K modules to produce weapons, armor, and other items, and are highly valued for their versatility."
+ fallout_schematic_loss.48.option.a: "Curses..."
+ 
+ fallout_schematic_loss.49.title: "Loss of Schematic: Hologram"
+ fallout_schematic_loss.49.desc: "A hologram is a type of advanced projection technology that is commonly used for entertainment and communication purposes. They are capable of creating highly realistic images and can be used to project a wide range of information."
+ fallout_schematic_loss.49.option.a: "Curses..."
+ 
+ fallout_schematic_loss.50.title: "Loss of Schematic: Molecular Relay"
+ fallout_schematic_loss.50.desc: "The Molecular Relay is a type of teleportation technology developed by the Institute to transport people and goods over long distances. They are highly advanced and can transport objects and people across vast distances with ease."
+ fallout_schematic_loss.50.option.a: "Curses..."
+ 
+ fallout_schematic_loss.51.title: "Loss of Schematic: Forklift"
+ fallout_schematic_loss.51.desc: "A forklift is a type of heavy machinery that is commonly used to move heavy objects and materials. They are typically used in factories and warehouses."
+ fallout_schematic_loss.51.option.a: "Curses..."
+ 
+ fallout_schematic_loss.52.title: "Loss of Schematic: APC"
+ fallout_schematic_loss.52.desc: "An armored personnel carrier is a type of military vehicle that is commonly used for transportation and combat purposes. They are heavily armored and can carry troops and equipment across the wasteland with relative ease."
+ fallout_schematic_loss.52.option.a: "Curses..."
+ 
+ fallout_schematic_loss.53.title: "Loss of Schematic: Tractor"
+ fallout_schematic_loss.53.desc: "A tractor is a type of farming equipment that is commonly used to cultivate crops and clear land. They are typically found on farms and in rural areas throughout the wasteland, and are a vital tool for survivors looking to establish a sustainable food source."
+ fallout_schematic_loss.53.option.a: "Curses..."
+ 

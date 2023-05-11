@@ -1,0 +1,1262 @@
+namespace = fallout_schematic_heist
+
+#--------------------------------------------
+# Heist Begins
+#--------------------------------------------
+# ROOT - Country conducting the heist
+# Selects which type of heist will be taken
+
+# Heist Begins
+country_event = {
+    id = fallout_schematic_heist.1
+    title = fallout_schematic_heist.1.title
+    desc = fallout_schematic_heist.1.desc
+    picture = LIBERTALIA_eventPicture
+
+    trigger = {
+        has_country_flag = schematic_heist_active
+        NOT = { has_country_flag = schematic_heist_complete }
+        NOT = { has_country_flag = schematic_heist_setup_raider }
+        any_country = {
+            has_country_flag = schematic_heist_target
+        }
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {   
+            set_country_flag = schematic_heist_setup_raider
+            
+            every_country = {
+                limit = {
+                    has_country_flag = schematic_heist_target
+                }
+                save_event_target_as = schematic_heist_target
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_heist.1.option.a
+        
+        custom_tooltip = HEIST_TYPE_QUICK
+        hidden_effect = {
+            set_country_flag = heist_type_quick
+        }
+        
+        ai_chance = {
+            factor = 25
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.1.option.b
+        
+        custom_tooltip = HEIST_TYPE_METHODICAL
+        hidden_effect = {
+            set_country_flag = heist_type_methodical
+        }
+        
+        ai_chance = {
+            factor = 75
+        }
+	}
+    
+    after = {
+        hidden_effect = {
+            event_target:schematic_heist_target = {
+                country_event = { id = fallout_schematic_heist.2 days = 7 }
+            }
+        }
+    }
+}
+
+#--------------------------------------------
+# Target of Heist
+#--------------------------------------------
+# ROOT - Country target of the heist
+# Selects which type of heist defence will be taken
+
+country_event = {
+	id = fallout_schematic_heist.2
+	title = fallout_schematic_heist.2.title
+	desc = fallout_schematic_heist.2.desc
+	picture = HOWITIZER_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        has_country_flag = schematic_heist_target
+        NOT = { has_country_flag = schematic_heist_setup_target }
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = schematic_heist_setup_target 
+
+            every_country = {
+                limit = {
+                    has_country_flag = schematic_heist_active
+                }
+                save_event_target_as = schematic_heist_raider
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_heist.2.option.a
+        
+        custom_tooltip = HEIST_DEFENCE_MAX
+        hidden_effect = {
+            set_country_flag = heist_defence_max
+        }
+        
+        add_mil_power = -200
+        
+        ai_chance = {
+            factor = 25
+            
+            modifier = {
+                factor = 0
+               
+                NOT = { mil_power = 400 }
+            }
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.2.option.b
+        
+        custom_tooltip = HEIST_DEFENCE_MED
+        hidden_effect = {
+            set_country_flag = heist_defence_med
+        }
+        
+        add_mil_power = -100
+        
+        ai_chance = {
+            factor = 25
+            
+            modifier = {
+                factor = 0
+               
+                NOT = { mil_power = 200 }
+            }
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.2.option.c
+        
+        custom_tooltip = HEIST_DEFENCE_MIN
+        hidden_effect = {
+            set_country_flag = heist_defence_min
+        }
+        
+        ai_chance = {
+            factor = 50
+            
+            modifier = {
+                factor = 0.5
+               
+                mil_power = 400
+            }
+        }
+	}
+    after = {
+        hidden_effect = {
+            event_target:schematic_heist_raider = {
+                country_event = { id = fallout_schematic_heist.3 days = 7 }
+            }
+        }
+    }
+}
+
+#--------------------------------------------
+# The Heist
+#--------------------------------------------
+# ROOT - Country conducting the heist
+# Roll the outcome of the heist
+
+country_event = {
+	id = fallout_schematic_heist.3
+	title = fallout_schematic_heist.3.title
+	desc = fallout_schematic_heist.3.desc
+	picture = CONFRONTATION_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        has_country_flag = schematic_heist_active
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_country_flag = schematic_heist_target
+                }
+                save_event_target_as = schematic_heist_target
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_heist.3.option.a
+        
+        custom_tooltip = HEIST_RESULT
+        
+        # Quick -> Max
+        if = {
+            limit = {
+                has_country_flag = heist_type_quick
+                event_target:schematic_heist_target = {
+                    has_country_flag = heist_defence_max
+                }
+            }
+            
+            random_list = {
+                # Thwarted
+                30 = { 
+                    country_event = { id = fallout_schematic_heist.4 days = 7 } 
+                }
+                # Exposed
+                60 = { 
+                    country_event = { id = fallout_schematic_heist.5 days = 7 } 
+                    
+                    event_target:schematic_heist_target = {
+                        country_event = { id = fallout_schematic_heist.6 } # Show immediately so schematic_heist_target isn't cleared before it shows
+                    }
+                }
+                # Steal
+                10 = { 
+                    hidden_effect = { 
+                        set_country_flag = schematic_heist_complete
+                    }
+                    tooltip = { country_event = { id = fallout_schematic_heist.8 days = 7 } }
+                }
+            }
+        }
+        # Quick -> Med
+        else_if = {
+            limit = {
+                has_country_flag = heist_type_quick
+                event_target:schematic_heist_target = {
+                    has_country_flag = heist_defence_med
+                }
+            }
+            
+            random_list = {
+                # Thwarted
+                30 = { 
+                    country_event = { id = fallout_schematic_heist.4 days = 7 } 
+                }
+                # Exposed
+                50 = { 
+                    country_event = { id = fallout_schematic_heist.5 days = 7 } 
+                    
+                    event_target:schematic_heist_target = {
+                        country_event = { id = fallout_schematic_heist.6 } # Show immediately so schematic_heist_target isn't cleared before it shows
+                    }
+                }
+                # Steal
+                20 = { 
+                    hidden_effect = { 
+                        set_country_flag = schematic_heist_complete
+                    }
+                    tooltip = { country_event = { id = fallout_schematic_heist.8 days = 7 } }
+                }
+            }
+        }
+        # Quick -> Min
+        else_if = {
+            limit = {
+                has_country_flag = heist_type_quick
+                event_target:schematic_heist_target = {
+                    has_country_flag = heist_defence_min
+                }
+            }
+            
+            random_list = {
+                # Thwarted
+                5 = { 
+                    country_event = { id = fallout_schematic_heist.4 days = 7 } 
+                }
+                # Exposed
+                5 = { 
+                    country_event = { id = fallout_schematic_heist.5 days = 7 } 
+                    
+                    event_target:schematic_heist_target = {
+                        country_event = { id = fallout_schematic_heist.6 } # Show immediately so schematic_heist_target isn't cleared before it shows
+                    }
+                }
+                # Steal
+                90 = { 
+                    hidden_effect = { 
+                        set_country_flag = schematic_heist_complete
+                    }
+                    tooltip = { country_event = { id = fallout_schematic_heist.8 days = 7 } }
+                }
+            }
+        }
+        # Methodical -> Max
+        else_if = {
+            limit = {
+                has_country_flag = heist_type_methodical
+                event_target:schematic_heist_target = {
+                    has_country_flag = heist_defence_max
+                }
+            }
+            
+            random_list = {
+                # Thwarted
+                50 = { 
+                    country_event = { id = fallout_schematic_heist.4 days = 7 } 
+                }
+                # Exposed
+                30 = { 
+                    country_event = { id = fallout_schematic_heist.5 days = 7 } 
+                    
+                    event_target:schematic_heist_target = {
+                        country_event = { id = fallout_schematic_heist.6 } # Show immediately so schematic_heist_target isn't cleared before it shows
+                    }
+                }
+                # Steal
+                20 = { 
+                    hidden_effect = { 
+                        set_country_flag = schematic_heist_complete
+                    }
+                    tooltip = { country_event = { id = fallout_schematic_heist.8 days = 7 } }
+                }
+            }
+        }
+        # Methodical -> Med
+        else_if = {
+            limit = {
+                has_country_flag = heist_type_methodical
+                event_target:schematic_heist_target = {
+                    has_country_flag = heist_defence_med
+                }
+            }
+            
+            random_list = {
+                # Thwarted
+                30 = { 
+                    country_event = { id = fallout_schematic_heist.4 days = 7 } 
+                }
+                # Exposed
+                20 = { 
+                    country_event = { id = fallout_schematic_heist.5 days = 7 } 
+                    
+                    event_target:schematic_heist_target = {
+                        country_event = { id = fallout_schematic_heist.6 } # Show immediately so schematic_heist_target isn't cleared before it shows
+                    }
+                }
+                # Steal
+                50 = { 
+                    hidden_effect = { 
+                        set_country_flag = schematic_heist_complete
+                    }
+                    tooltip = { country_event = { id = fallout_schematic_heist.8 days = 7 } }
+                }
+            }
+        }
+        # Methodical -> Min
+        else_if = {
+            limit = {
+                has_country_flag = heist_type_methodical
+                event_target:schematic_heist_target = {
+                    has_country_flag = heist_defence_min
+                }
+            }
+            
+            random_list = {
+                # Thwarted
+                20 = { 
+                    country_event = { id = fallout_schematic_heist.4 days = 7 } 
+                }
+                # Exposed
+                10 = { 
+                    country_event = { id = fallout_schematic_heist.5 days = 7 } 
+                    
+                    event_target:schematic_heist_target = {
+                        country_event = { id = fallout_schematic_heist.6 } # Show immediately so schematic_heist_target isn't cleared before it shows
+                    }
+                }
+                # Steal
+                70 = { 
+                    hidden_effect = { 
+                        set_country_flag = schematic_heist_complete
+                    }
+                    tooltip = { country_event = { id = fallout_schematic_heist.8 days = 7 } }
+                }
+            }
+        }
+	}
+}
+
+#--------------------------------------------
+# Heist Thwarted
+#--------------------------------------------
+# ROOT - Country conducting the heist
+# Heist fails but not discovered
+
+country_event = {
+	id = fallout_schematic_heist.4
+	title = fallout_schematic_heist.4.title
+	desc = fallout_schematic_heist.4.desc
+	picture = CONFRONTATION_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        has_country_flag = schematic_heist_active
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {   
+            reset_heist__raider = yes
+            
+            every_country = {
+                limit = {
+                    has_country_flag = schematic_heist_target
+                }
+                save_event_target_as = schematic_heist_target
+                
+                reset_heist__target = yes
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_heist.4.option.a
+        
+        add_prestige = -10
+	}
+}
+
+#--------------------------------------------
+# Heist Exposed
+#--------------------------------------------
+# ROOT - Country conducting the heist
+# Heist fails and is discovered
+
+country_event = {
+	id = fallout_schematic_heist.5
+	title = fallout_schematic_heist.5.title
+	desc = fallout_schematic_heist.5.desc
+	picture = CONFRONTATION_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        has_country_flag = schematic_heist_active
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {   
+            reset_heist__raider = yes
+            
+            every_country = {
+                limit = {
+                    has_country_flag = schematic_heist_target
+                }
+                save_event_target_as = schematic_heist_target
+                
+                reset_heist__target = yes
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_heist.5.option.a
+        
+        add_prestige = -25
+	}
+}
+
+#--------------------------------------------
+# Heist Exposed
+#--------------------------------------------
+# ROOT - Country target of the heist
+# Heist is exposed.
+
+country_event = {
+	id = fallout_schematic_heist.6
+	title = fallout_schematic_heist.6.title
+	desc = fallout_schematic_heist.6.desc
+	picture = CONFRONTATION_eventPicture
+	
+    is_triggered_only = yes
+    
+	trigger = {
+        has_country_flag = schematic_heist_target
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {   
+            every_country = {
+                limit = {
+                    has_country_flag = schematic_heist_raider
+                }
+                save_event_target_as = schematic_heist_raider
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_heist.6.option.a
+        
+        add_prestige = 25
+	}
+}
+
+#--------------------------------------------
+# Vault Loot
+#--------------------------------------------
+# ROOT - Country conducting the heist
+# Heist is successful, allow selection of schematic
+
+country_event = {
+	id = fallout_schematic_heist.8
+	title = fallout_schematic_heist.8.title
+	desc = fallout_schematic_heist.8.desc
+	picture = SCHEMATIC_eventPicture
+	
+	trigger = {
+        has_country_flag = schematic_heist_active
+        has_country_flag = schematic_heist_complete
+        any_country = {
+            has_country_flag = schematic_heist_target
+        }
+    }
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            reset_heist__raider = yes
+            
+            every_country = {
+                limit = {
+                    has_country_flag = schematic_heist_target
+                }
+                save_event_target_as = schematic_heist_target
+                
+                reset_heist__target = yes
+            }
+        }
+    }
+    
+    option = {
+		name = fallout_schematic_heist.8.option.minigun
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_minigun
+            }
+        }
+        
+        steal_schematic = {
+            schematic = minigun
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.flamer
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_flamer
+            }
+        }
+        
+        steal_schematic = {
+            schematic = flamer
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.incinerator
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_incinerator
+            }
+        }
+        
+        steal_schematic = {
+            schematic = incinerator
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.laser_pistol
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_laser_pistol
+            }
+        }
+        
+        steal_schematic = {
+            schematic = laser_pistol
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.laser_rifle
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_laser_rifle
+            }
+        }
+        
+        steal_schematic = {
+            schematic = laser_rifle
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.laer
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_laer
+            }
+        }
+        
+        steal_schematic = {
+            schematic = laer
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.gatling_laser
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_gatling_laser
+            }
+        }
+        
+        steal_schematic = {
+            schematic = gatling_laser
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.recharger_rifle
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_recharger_rifle
+            }
+        }
+        
+        steal_schematic = {
+            schematic = recharger_rifle
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.plasma_rifle
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_plasma_rifle
+            }
+        }
+        
+        steal_schematic = {
+            schematic = plasma_rifle
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.plasma_caster
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_plasma_caster
+            }
+        }
+        
+        steal_schematic = {
+            schematic = plasma_caster
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.tesla_cannon
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_tesla_cannon
+            }
+        }
+        
+        steal_schematic = {
+            schematic = tesla_cannon
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.magnetic_rail_cannon
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_magnetic_rail_cannon
+            }
+        }
+        
+        steal_schematic = {
+            schematic = magnetic_rail_cannon
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.t51_power_armor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_t51_power_armor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = t51_power_armor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.t45_power_armor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_t45_power_armor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = t45_power_armor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.t60_power_armor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_t60_power_armor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = t60_power_armor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.t65_power_armor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_t65_power_armor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = t65_power_armor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.x01_power_armor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_x01_power_armor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = x01_power_armor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.tesla_power_armor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_tesla_power_armor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = tesla_power_armor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.hellfire_power_armor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_hellfire_power_armor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = hellfire_power_armor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.fusion_cell
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_fusion_cell
+            }
+        }
+        
+        steal_schematic = {
+            schematic = fusion_cell
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.fusion_core
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_fusion_core
+            }
+        }
+        
+        steal_schematic = {
+            schematic = fusion_core
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.microfusion_cell
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_microfusion_cell
+            }
+        }
+        
+        steal_schematic = {
+            schematic = microfusion_cell
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.plasma_cartridge
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_plasma_cartridge
+            }
+        }
+        
+        steal_schematic = {
+            schematic = plasma_cartridge
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.poseidon_ultracite_generator
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_poseidon_ultracite_generator
+            }
+        }
+        
+        steal_schematic = {
+            schematic = poseidon_ultracite_generator
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.verdant_air_turbine
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_verdant_air_turbine
+            }
+        }
+        
+        steal_schematic = {
+            schematic = verdant_air_turbine
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.helios_solar_generator
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_helios_solar_generator
+            }
+        }
+        
+        steal_schematic = {
+            schematic = helios_solar_generator
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.atomic_v8
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_atomic_v8
+            }
+        }
+        
+        steal_schematic = {
+            schematic = atomic_v8
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.usaf_tank
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_usaf_tank
+            }
+        }
+        
+        steal_schematic = {
+            schematic = usaf_tank
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.megaloader
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_megaloader
+            }
+        }
+        
+        steal_schematic = {
+            schematic = megaloader
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.tugboat
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_tugboat
+            }
+        }
+        
+        steal_schematic = {
+            schematic = tugboat
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.vertibird
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_vertibird
+            }
+        }
+        
+        steal_schematic = {
+            schematic = vertibird
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.truck
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_truck
+            }
+        }
+        
+        steal_schematic = {
+            schematic = truck
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.forklift
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_forklift
+            }
+        }
+        
+        steal_schematic = {
+            schematic = forklift
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.apc
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_apc
+            }
+        }
+        
+        steal_schematic = {
+            schematic = apc
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.tractor
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_tractor
+            }
+        }
+        
+        steal_schematic = {
+            schematic = tractor
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.stimpak
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_stimpak
+            }
+        }
+        
+        steal_schematic = {
+            schematic = stimpak
+        }
+	}
+    option = {
+		name = fallout_schematic_heist.8.option.auto_doc
+        
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_auto_doc
+            }
+        }
+        
+        steal_schematic = {
+            schematic = auto_doc
+        }
+	}
+    option = {
+        name = fallout_schematic_heist.8.option.buffout
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_buffout
+            }
+        }
+        
+        steal_schematic = {
+            schematic = buffout
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.mentats
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_mentats
+            }
+        }
+
+        steal_schematic = {
+            schematic = mentats
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.psycho
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_psycho
+            }
+        }
+
+        steal_schematic = {
+            schematic = psycho
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.jet
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_jet
+            }
+        }
+
+        steal_schematic = {
+            schematic = jet
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.protectron
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_protectron
+            }
+        }
+
+        steal_schematic = {
+            schematic = protectron
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.mister_handy
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_mister_handy
+            }
+        }
+
+        steal_schematic = {
+            schematic = mister_handy
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.assaultron
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_assaultron
+            }
+        }
+
+        steal_schematic = {
+            schematic = assaultron
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.eyebot
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_eyebot
+            }
+        }
+
+        steal_schematic = {
+            schematic = eyebot
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.mister_gutsy
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_mister_gutsy
+            }
+        }
+
+        steal_schematic = {
+            schematic = mister_gutsy
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.robobrain
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_robobrain
+            }
+        }
+
+        steal_schematic = {
+            schematic = robobrain
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.securitron
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_securitron
+            }
+        }
+
+        steal_schematic = {
+            schematic = securitron
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.sentry_bot
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_sentry_bot
+            }
+        }
+
+        steal_schematic = {
+            schematic = sentry_bot
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.stealth_boy
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_stealth_boy
+            }
+        }
+
+        steal_schematic = {
+            schematic = stealth_boy
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.base_replicator_unit
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_base_replicator_unit
+            }
+        }
+
+        steal_schematic = {
+            schematic = base_replicator_unit
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.hologram
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_hologram
+            }
+        }
+
+        steal_schematic = {
+            schematic = hologram
+        }
+    }
+    option = {
+        name = fallout_schematic_heist.8.option.molecular_relay
+
+        trigger = {
+            event_target:schematic_heist_target = {
+                has_country_flag = schematic_molecular_relay
+            }
+        }
+
+        steal_schematic = {
+            schematic = molecular_relay
+        }
+    }
+}

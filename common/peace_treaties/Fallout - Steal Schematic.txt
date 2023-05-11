@@ -1,0 +1,57 @@
+#-------------------------------
+# Steal Artifact
+#-------------------------------
+po_steal_schematic = {
+	category = 6
+	power_projection = humiliated_rival 
+	power_cost_base = 1.0
+	prestige_base = 1.0
+	ae_base = 1.0
+    
+	warscore_cost = {
+		all_provinces = 0.0
+		no_provinces = 30.0
+		owner_keeps = 0.0
+		conquered = 0.0
+		returned_core = 0.0
+		released_nation = 0.0
+		cancelled_subject = 0.0
+		concede_colonial_region = 0.0
+	}
+	warscore_cap = 30.0
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = no
+	
+	is_visible = {
+		FROM = {
+            has_any_schematic = yes
+        }
+	}
+	is_allowed = {
+        # ROOT is the attacker, FROM is the defender
+        offensive_war_with = FROM
+        
+        FROM = {
+            has_any_schematic = yes
+        }
+	}
+	effect = {
+        custom_tooltip = STEAL_SCHEMATIC_TT
+        
+        hidden_effect = {
+            set_country_flag = schematic_heist_active
+            set_country_flag = schematic_heist_complete
+            FROM = {
+                set_country_flag = schematic_heist_target
+            }
+        }
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+	}
+}
+
