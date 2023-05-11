@@ -1,0 +1,109 @@
+#---------------------------------------
+# Teleport Army
+#---------------------------------------
+teleport_army = {
+	category = influence
+	
+	alert_index = 40
+	alert_tooltip = teleport_army_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {
+        # Limitations
+        has_country_modifier = schematic_molecular_relay
+	}
+	is_allowed = {
+        # Only available whilst at war with target
+        war_with = FROM
+
+        # Teleport checks so the event is valid
+        any_owned_province = {
+            num_of_units_in_province = {
+                who = ROOT
+                amount = 1
+            }
+        }
+        FROM = {
+            any_owned_province = {
+                NOT = {
+                    num_of_units_in_province = {
+                        who = PREV
+                        amount = 1
+                    }
+                }
+            }
+        }
+        
+        mil_power = 50
+	}
+	on_accept = {
+        add_mil_power = -50
+        
+        FROM = {
+            save_event_target_as = hostile_country
+        }
+        
+        country_event = { id = fallout_molecular_relocation.1 }
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {     
+        always = no
+	}
+}
+
+#---------------------------------------
+# Recall Army
+#---------------------------------------
+recall_army = {
+	category = influence
+	
+	alert_index = 40
+	alert_tooltip = recall_army_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {
+        # Limitations
+        has_country_modifier = schematic_molecular_relay
+	}
+	is_allowed = {
+        # Any units owned by us that are in foreign territory
+        FROM = {
+            any_owned_province = {
+                units_in_province = ROOT
+            }
+        }
+        mil_power = 20
+	}
+	on_accept = {
+        add_mil_power = -20
+        
+        FROM = {
+            random_owned_province = {
+                limit = {
+                    units_in_province = ROOT
+                }
+                save_event_target_as = chosen_start_portal
+            }
+        }
+        capital_scope = {
+            save_event_target_as = chosen_end_portal
+        }
+        teleport_unit_with_any_amount = yes
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}

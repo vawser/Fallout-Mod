@@ -19,7 +19,10 @@ country_event = {
 		
         modifier = {
             factor = 0.5
-            has_ruler_modifier = autodoc
+            OR = {
+                has_ruler_modifier = autodoc
+                has_country_modifier = schematic_auto_doc
+            }
         }
         modifier = {
             factor = 1.1

@@ -31,6 +31,43 @@ country_event = {
         }
 	}
     option = {
+		name = fallout_scavenging.1.option.focus_lack_cost
+		
+        trigger = {
+            NOT = { has_schematic_focus_cost = yes }
+        }
+        
+        # Primitive
+        if = {
+            limit = {
+                is_primitive_scavenger = yes
+            }
+            
+            custom_tooltip = SCHEMATIC_FOCUS_LACK_COST_PRIMITIVE
+        }
+        # Urban State
+        else_if = {
+            limit = {
+                is_urban_scavenger = yes
+            }
+            
+            custom_tooltip = SCHEMATIC_FOCUS_LACK_COST_URBAN
+        }
+        # Scientific State
+        else = {
+            custom_tooltip = SCHEMATIC_FOCUS_LACK_COST_SCIENTIFIC
+        }
+        
+        hidden_effect = {
+            country_event = { id = fallout_scavenging.200 }
+        }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    
+    option = {
 		name = fallout_scavenging.1.option.weapon
 		
         # Only show if the player can afford the focus
@@ -228,18 +265,18 @@ country_event = {
         }
 	}
     option = {
-		name = fallout_scavenging.2.option.laser_assisted_electrical_rifle
+		name = fallout_scavenging.2.option.laer
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_laser_assisted_electrical_rifle }
+            NOT = { has_global_flag = discovered_schematic_laer }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_laser_assisted_electrical_rifle
+		custom_tooltip = SCHEMATIC_FOCUS_laer
         hidden_effect = {
-            set_country_flag = schematic_focus_laser_assisted_electrical_rifle
+            set_country_flag = schematic_focus_laer
             start_scavenging_expedition = yes
         }
 	}
@@ -506,98 +543,146 @@ country_event = {
 	}
 	
     option = {
-		name = fallout_scavenging.4.option.chryslus_corvega
+		name = fallout_scavenging.4.option.atomic_v8
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_chryslus_corvega }
+            NOT = { has_global_flag = discovered_schematic_atomic_v8 }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_chryslus_corvega
+		custom_tooltip = SCHEMATIC_FOCUS_atomic_v8
         hidden_effect = {
-            set_country_flag = schematic_focus_chryslus_corvega
+            set_country_flag = schematic_focus_atomic_v8
             start_scavenging_expedition = yes
         }
 	}
     option = {
-		name = fallout_scavenging.4.option.highwayman
+		name = fallout_scavenging.4.option.usaf_tank
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_highwayman }
+            NOT = { has_global_flag = discovered_schematic_usaf_tank }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_highwayman
+		custom_tooltip = SCHEMATIC_FOCUS_usaf_tank
         hidden_effect = {
-            set_country_flag = schematic_focus_highwayman
+            set_country_flag = schematic_focus_usaf_tank
             start_scavenging_expedition = yes
         }
 	}
     option = {
-		name = fallout_scavenging.4.option.f80_fighter_jet
+		name = fallout_scavenging.4.option.megaloader
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_f80_fighter_jet }
+            NOT = { has_global_flag = discovered_schematic_megaloader }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_f80_fighter_jet
+		custom_tooltip = SCHEMATIC_FOCUS_megaloader
         hidden_effect = {
-            set_country_flag = schematic_focus_f80_fighter_jet
+            set_country_flag = schematic_focus_megaloader
             start_scavenging_expedition = yes
         }
 	}
     option = {
-		name = fallout_scavenging.4.option.transport_vertibird
+		name = fallout_scavenging.4.option.tugboat
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_transport_vertibird }
+            NOT = { has_global_flag = discovered_schematic_tugboat }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_transport_vertibird
+		custom_tooltip = SCHEMATIC_FOCUS_tugboat
         hidden_effect = {
-            set_country_flag = schematic_focus_transport_vertibird
+            set_country_flag = schematic_focus_tugboat
             start_scavenging_expedition = yes
         }
 	}
     option = {
-		name = fallout_scavenging.4.option.combat_vertibird
+		name = fallout_scavenging.4.option.vertibird
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_combat_vertibird }
+            NOT = { has_global_flag = discovered_schematic_vertibird }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_combat_vertibird
+		custom_tooltip = SCHEMATIC_FOCUS_vertibird
         hidden_effect = {
-            set_country_flag = schematic_focus_combat_vertibird
+            set_country_flag = schematic_focus_vertibird
             start_scavenging_expedition = yes
         }
 	}
     option = {
-		name = fallout_scavenging.4.option.steam_powered_truck
+		name = fallout_scavenging.4.option.truck
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_steam_powered_truck }
+            NOT = { has_global_flag = discovered_schematic_truck }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_steam_powered_truck
+		custom_tooltip = SCHEMATIC_FOCUS_truck
         hidden_effect = {
-            set_country_flag = schematic_focus_steam_powered_truck
+            set_country_flag = schematic_focus_truck
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.forklift
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_forklift }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_forklift
+        hidden_effect = {
+            set_country_flag = schematic_focus_forklift
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.apc
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_apc }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_apc
+        hidden_effect = {
+            set_country_flag = schematic_focus_apc
+            start_scavenging_expedition = yes
+        }
+	}
+    option = {
+		name = fallout_scavenging.4.option.tractor
+		
+        trigger = {
+            NOT = { has_global_flag = discovered_schematic_tractor }
+            has_schematic_focus_cost = yes
+        }
+        
+        schematic_focus_cost = yes
+        
+		custom_tooltip = SCHEMATIC_FOCUS_tractor
+        hidden_effect = {
+            set_country_flag = schematic_focus_tractor
             start_scavenging_expedition = yes
         }
 	}
@@ -677,34 +762,34 @@ country_event = {
         }
 	}
     option = {
-		name = fallout_scavenging.5.option.microfusion_breeder
+		name = fallout_scavenging.5.option.plasma_cartridge
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_microfusion_breeder }
+            NOT = { has_global_flag = discovered_schematic_plasma_cartridge }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_microfusion_breeder
+		custom_tooltip = SCHEMATIC_FOCUS_plasma_cartridge
         hidden_effect = {
-            set_country_flag = schematic_focus_microfusion_breeder
+            set_country_flag = schematic_focus_plasma_cartridge
             start_scavenging_expedition = yes
         }
 	}
     option = {
-		name = fallout_scavenging.5.option.beryllium_agitator
+		name = fallout_scavenging.5.option.poseidon_ultracite_generator
 		
         trigger = {
-            NOT = { has_global_flag = discovered_schematic_beryllium_agitator }
+            NOT = { has_global_flag = discovered_schematic_poseidon_ultracite_generator }
             has_schematic_focus_cost = yes
         }
         
         schematic_focus_cost = yes
         
-		custom_tooltip = SCHEMATIC_FOCUS_beryllium_agitator
+		custom_tooltip = SCHEMATIC_FOCUS_poseidon_ultracite_generator
         hidden_effect = {
-            set_country_flag = schematic_focus_beryllium_agitator
+            set_country_flag = schematic_focus_poseidon_ultracite_generator
             start_scavenging_expedition = yes
         }
 	}
@@ -1473,5 +1558,26 @@ country_event = {
 	option = {
 		name = fallout_scavenging.101.option.a
         
+	}
+}
+
+# Loop Event
+country_event = {
+	id = fallout_scavenging.200
+	title = fallout_scavenging.200.title
+	desc = fallout_scavenging.200.desc
+	picture = CHURCH_MISTY_INSIDE_eventPicture
+    
+    hidden = yes
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = fallout_scavenging.200.option.a
+        
+        country_event = { id = fallout_scavenging.1 }
 	}
 }

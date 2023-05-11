@@ -3,20 +3,22 @@
 #----------------------------------------------
 entity = {
 	name = "robot_gfx_INFANTRY_1"
-	pdxmesh = "american_soldier"
-	
-	state = { name = "idle" 		animation = "idle" }
-	state = { name = "walk" 		animation = "walk" }
-	state = { name = "attack"		animation = "attack" }
-
-	attach = { 
-		Right_Hand_node = "american_rifle_weapon_righthand" 
-        Left_Hand_node = "american_rifle_weapon_lefthand"
-        Root_node_2 = "american_rifle_weapon_righthand"
-	}
-    
-    scale = 2.5
-    version = 1
+    pdxmesh = "securitron_soldier"
+		
+    default_state = "idle"
+    state = { 
+        name = "idle"				
+        animation = "idle" 				
+    }
+    state = { 
+        name = "move"				
+        animation = "move" 				
+    }
+    state = { 
+        name = "attack"				
+        animation = "idle" 				
+    }
+    scale = 2
 }
 
 #----------------------------------------------

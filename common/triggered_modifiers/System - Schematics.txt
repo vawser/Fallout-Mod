@@ -10,7 +10,7 @@ schematic_minigun = {
         has_country_flag = schematic_minigun
     }
     
-    
+    fire_damage = 0.05
 }
 schematic_flamer = {
 	potential = {
@@ -20,7 +20,7 @@ schematic_flamer = {
         has_country_flag = schematic_flamer
     }
     
-    
+    shock_damage = 0.05
 }
 schematic_incinerator = {
 	potential = {
@@ -30,7 +30,7 @@ schematic_incinerator = {
         has_country_flag = schematic_incinerator
     }
     
-    
+   shock_damage = 0.05
 }
 schematic_laser_pistol = {
 	potential = {
@@ -40,7 +40,7 @@ schematic_laser_pistol = {
         has_country_flag = schematic_laser_pistol
     }
     
-    
+    fire_damage = 0.05
 }
 schematic_laser_rifle = {
 	potential = {
@@ -50,17 +50,17 @@ schematic_laser_rifle = {
         has_country_flag = schematic_laser_rifle
     }
     
-    
+    fire_damage = 0.05
 }
-schematic_laser_assisted_electrical_rifle = {
+schematic_laer = {
 	potential = {
-        has_country_flag = schematic_laser_assisted_electrical_rifle
+        has_country_flag = schematic_laer
     }
     trigger = {
-        has_country_flag = schematic_laser_assisted_electrical_rifle
+        has_country_flag = schematic_laer
     }
     
-    
+    fire_damage = 0.05
 }
 schematic_gatling_laser = {
 	potential = {
@@ -70,7 +70,7 @@ schematic_gatling_laser = {
         has_country_flag = schematic_gatling_laser
     }
     
-    
+    morale_damage = 0.05
 }
 schematic_recharger_rifle = {
 	potential = {
@@ -80,7 +80,7 @@ schematic_recharger_rifle = {
         has_country_flag = schematic_recharger_rifle
     }
     
-    
+    morale_damage = 0.05
 }
 schematic_plasma_rifle = {
 	potential = {
@@ -90,7 +90,7 @@ schematic_plasma_rifle = {
         has_country_flag = schematic_plasma_rifle
     }
     
-    
+    shock_damage = 0.05
 }
 schematic_plasma_caster = {
 	potential = {
@@ -100,7 +100,7 @@ schematic_plasma_caster = {
         has_country_flag = schematic_plasma_caster
     }
     
-    
+    shock_damage = 0.05
 }
 schematic_tesla_cannon = {
 	potential = {
@@ -110,7 +110,7 @@ schematic_tesla_cannon = {
         has_country_flag = schematic_tesla_cannon
     }
     
-    
+    siege_ability = 0.05
 }
 schematic_magnetic_rail_cannon = {
 	potential = {
@@ -120,7 +120,7 @@ schematic_magnetic_rail_cannon = {
         has_country_flag = schematic_magnetic_rail_cannon
     }
     
-    
+    siege_ability = 0.05
 }
 
 # Armor
@@ -132,7 +132,8 @@ schematic_t45_power_armor = {
         has_country_flag = schematic_t45_power_armor
     }
     
-    
+    fire_damage_received = -0.02
+    shock_damage_received = -0.02
 }
 schematic_t51_power_armor = {
 	potential = {
@@ -142,7 +143,8 @@ schematic_t51_power_armor = {
         has_country_flag = schematic_t51_power_armor
     }
     
-    
+    fire_damage_received = -0.03
+    shock_damage_received = -0.03
 }
 schematic_t60_power_armor = {
 	potential = {
@@ -152,7 +154,8 @@ schematic_t60_power_armor = {
         has_country_flag = schematic_t60_power_armor
     }
     
-    
+    fire_damage_received = -0.05
+    shock_damage_received = -0.05
 }
 schematic_t65_power_armor = {
 	potential = {
@@ -162,7 +165,9 @@ schematic_t65_power_armor = {
         has_country_flag = schematic_t65_power_armor
     }
     
-    
+    fire_damage_received = -0.05
+    shock_damage_received = -0.05
+    morale_damage_received = -0.05
 }
 schematic_x01_power_armor = {
 	potential = {
@@ -172,7 +177,9 @@ schematic_x01_power_armor = {
         has_country_flag = schematic_x01_power_armor
     }
     
-    
+    fire_damage_received = -0.05
+    shock_damage_received = -0.05
+    infantry_power = 0.05
 }
 schematic_tesla_power_armor = {
 	potential = {
@@ -182,7 +189,9 @@ schematic_tesla_power_armor = {
         has_country_flag = schematic_tesla_power_armor
     }
     
-    
+    fire_damage_received = -0.05
+    shock_damage_received = -0.05
+    shock_damage = 0.05
 }
 schematic_hellfire_power_armor = {
 	potential = {
@@ -192,69 +201,100 @@ schematic_hellfire_power_armor = {
         has_country_flag = schematic_hellfire_power_armor
     }
     
-    
+    fire_damage_received = -0.1
+    shock_damage_received = -0.1
 }
 
 # Vehicle
-schematic_chryslus_corvega = {
+schematic_atomic_v8 = {
 	potential = {
-        has_country_flag = schematic_chryslus_corvega
+        has_country_flag = schematic_atomic_v8
     }
     trigger = {
-        has_country_flag = schematic_chryslus_corvega
+        has_country_flag = schematic_atomic_v8
     }
     
-    
+    movement_speed = 0.1
 }
-schematic_highwayman = {
+schematic_usaf_tank = {
 	potential = {
-        has_country_flag = schematic_highwayman
+        has_country_flag = schematic_usaf_tank
     }
     trigger = {
-        has_country_flag = schematic_highwayman
+        has_country_flag = schematic_usaf_tank
     }
     
-    
+    artillery_levels_available_vs_fort = 3
 }
-schematic_f80_fighter_jet = {
+schematic_megaloader = {
 	potential = {
-        has_country_flag = schematic_f80_fighter_jet
+        has_country_flag = schematic_megaloader
     }
     trigger = {
-        has_country_flag = schematic_f80_fighter_jet
+        has_country_flag = schematic_megaloader
     }
     
-    
+    build_cost = -0.1
 }
-schematic_transport_vertibird = {
+schematic_tugboat = {
 	potential = {
-        has_country_flag = schematic_transport_vertibird
+        has_country_flag = schematic_tugboat
     }
     trigger = {
-        has_country_flag = schematic_transport_vertibird
+        has_country_flag = schematic_tugboat
     }
     
-    
+    global_ship_cost = -0.1
 }
-schematic_combat_vertibird = {
+schematic_vertibird = {
 	potential = {
-        has_country_flag = schematic_combat_vertibird
+        has_country_flag = schematic_vertibird
     }
     trigger = {
-        has_country_flag = schematic_combat_vertibird
+        has_country_flag = schematic_vertibird
     }
     
-    
+    land_maintenance_modifier = -0.1
 }
-schematic_steam_powered_truck = {
+schematic_truck = {
 	potential = {
-        has_country_flag = schematic_steam_powered_truck
+        has_country_flag = schematic_truck
     }
     trigger = {
-        has_country_flag = schematic_steam_powered_truck
+        has_country_flag = schematic_truck
     }
     
+    global_trade_power = 0.1
+}
+schematic_forklift = {
+	potential = {
+        has_country_flag = schematic_forklift
+    }
+    trigger = {
+        has_country_flag = schematic_forklift
+    }
     
+    production_efficiency = 0.1
+}
+schematic_apc = {
+	potential = {
+        has_country_flag = schematic_apc
+    }
+    trigger = {
+        has_country_flag = schematic_apc
+    }
+    
+    land_attrition = -0.1
+}
+schematic_tractor = {
+	potential = {
+        has_country_flag = schematic_tractor
+    }
+    trigger = {
+        has_country_flag = schematic_tractor
+    }
+    
+    global_trade_goods_size_modifier = 0.05
 }
 
 # Energy
@@ -266,7 +306,7 @@ schematic_fusion_cell = {
         has_country_flag = schematic_fusion_cell
     }
     
-    
+    reinforce_cost_modifier = -0.1
 }
 schematic_fusion_core = {
 	potential = {
@@ -276,7 +316,7 @@ schematic_fusion_core = {
         has_country_flag = schematic_fusion_core
     }
     
-    
+    global_regiment_cost = -0.1
 }
 schematic_microfusion_cell = {
 	potential = {
@@ -286,27 +326,27 @@ schematic_microfusion_cell = {
         has_country_flag = schematic_microfusion_cell
     }
     
-    
+    reinforce_cost_modifier = -0.1
 }
-schematic_microfusion_breeder = {
+schematic_plasma_cartridge = {
 	potential = {
-        has_country_flag = schematic_microfusion_breeder
+        has_country_flag = schematic_plasma_cartridge
     }
     trigger = {
-        has_country_flag = schematic_microfusion_breeder
+        has_country_flag = schematic_plasma_cartridge
     }
     
-    
+    artillery_barrage_cost = -0.25
 }
-schematic_beryllium_agitator = {
+schematic_poseidon_ultracite_generator = {
 	potential = {
-        has_country_flag = schematic_beryllium_agitator
+        has_country_flag = schematic_poseidon_ultracite_generator
     }
     trigger = {
-        has_country_flag = schematic_beryllium_agitator
+        has_country_flag = schematic_poseidon_ultracite_generator
     }
     
-    
+    development_cost_modifier = -0.05
 }
 schematic_verdant_air_turbine = {
 	potential = {
@@ -316,7 +356,7 @@ schematic_verdant_air_turbine = {
         has_country_flag = schematic_verdant_air_turbine
     }
     
-    
+    development_cost_modifier = -0.05
 }
 schematic_helios_solar_generator = {
 	potential = {
@@ -326,7 +366,7 @@ schematic_helios_solar_generator = {
         has_country_flag = schematic_helios_solar_generator
     }
     
-    
+    development_cost_modifier = -0.05
 }
 
 # Medical
@@ -338,7 +378,7 @@ schematic_stimpak = {
         has_country_flag = schematic_stimpak
     }
     
-    
+    manpower_recovery_speed = 0.05
 }
 schematic_auto_doc = {
 	potential = {
@@ -348,7 +388,8 @@ schematic_auto_doc = {
         has_country_flag = schematic_auto_doc
     }
     
-    
+    global_unrest = -1
+    # Adds modifier to Ruler death factor
 }
 schematic_buffout = {
 	potential = {
@@ -358,7 +399,7 @@ schematic_buffout = {
         has_country_flag = schematic_buffout
     }
     
-    
+    global_manpower_modifier = 0.05
 }
 schematic_mentats = {
 	potential = {
@@ -368,7 +409,7 @@ schematic_mentats = {
         has_country_flag = schematic_mentats
     }
     
-    
+    idea_cost = -0.05
 }
 schematic_psycho = {
 	potential = {
@@ -378,7 +419,7 @@ schematic_psycho = {
         has_country_flag = schematic_psycho
     }
     
-    
+    war_exhaustion = -0.03
 }
 schematic_jet = {
 	potential = {
@@ -388,7 +429,7 @@ schematic_jet = {
         has_country_flag = schematic_jet
     }
     
-    
+    military_tactics = 0.25
 }
 
 # Robotic
@@ -400,7 +441,7 @@ schematic_protectron = {
         has_country_flag = schematic_protectron
     }
     
-    
+    years_of_nationalism = -5
 }
 schematic_mister_handy = {
 	potential = {
@@ -410,7 +451,7 @@ schematic_mister_handy = {
         has_country_flag = schematic_mister_handy
     }
     
-    
+    stability_cost_modifier = -0.1
 }
 schematic_assaultron = {
 	potential = {
@@ -420,7 +461,7 @@ schematic_assaultron = {
         has_country_flag = schematic_assaultron
     }
     
-    
+    own_territory_dice_roll_bonus = 1
 }
 schematic_eyebot = {
 	potential = {
@@ -430,7 +471,7 @@ schematic_eyebot = {
         has_country_flag = schematic_eyebot
     }
     
-    
+    spy_offence = 0.2
 }
 schematic_mister_gutsy = {
 	potential = {
@@ -440,7 +481,7 @@ schematic_mister_gutsy = {
         has_country_flag = schematic_mister_gutsy
     }
     
-    
+    infantry_power = 0.05
 }
 schematic_robobrain = {
 	potential = {
@@ -450,7 +491,7 @@ schematic_robobrain = {
         has_country_flag = schematic_robobrain
     }
     
-    
+    army_tradition_decay = -0.01
 }
 schematic_securitron = {
 	potential = {
@@ -460,7 +501,7 @@ schematic_securitron = {
         has_country_flag = schematic_securitron
     }
     
-    
+    global_spy_defence = 0.2
 }
 schematic_sentry_bot = {
 	potential = {
@@ -470,7 +511,8 @@ schematic_sentry_bot = {
         has_country_flag = schematic_sentry_bot
     }
     
-    
+    hostile_attrition = 2
+    max_hostile_attrition = 2
 }
 
 # Utility
@@ -482,7 +524,7 @@ schematic_stealth_boy = {
         has_country_flag = schematic_stealth_boy
     }
     
-    
+    spy_action_cost_modifier = -0.25
 }
 schematic_base_replicator_unit = {
 	potential = {
@@ -492,7 +534,7 @@ schematic_base_replicator_unit = {
         has_country_flag = schematic_base_replicator_unit
     }
     
-    
+    all_power_cost = -0.05
 }
 schematic_hologram = {
 	potential = {
@@ -502,7 +544,7 @@ schematic_hologram = {
         has_country_flag = schematic_hologram
     }
     
-    
+    ae_impact = -0.05
 }
 schematic_molecular_relay = {
 	potential = {
@@ -512,5 +554,5 @@ schematic_molecular_relay = {
         has_country_flag = schematic_molecular_relay
     }
     
-    
+    overextension_impact_modifier = -0.1
 }

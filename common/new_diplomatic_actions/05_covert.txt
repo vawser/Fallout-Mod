@@ -49,7 +49,12 @@ launch_nuclear_warhead = {
 		}
 	}
 	ai_will_do = {
-        war_with = FROM
+        # AI will only use it against other AI
+        FROM = {
+            ai = yes
+        }
+        
+        # Note: AI doesn't use diplo actions when at war.
 	}
 }
 

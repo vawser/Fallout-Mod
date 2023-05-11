@@ -33,12 +33,19 @@ country_decisions = {
         ai_will_do = {
             factor = 1
             
+            # Only Great Powers should use this
             modifier = {
                 factor = 0
                 
-                # Stop after 3 schematics
+                NOT = { is_great_power = yes }
+            }
+            
+            # Stop after 2 schematics
+            modifier = {
+                factor = 0
+                
                 calc_true_if = {
-                    amount = 3
+                    amount = 2
                     
                     has_any_schematic = yes
                 }
