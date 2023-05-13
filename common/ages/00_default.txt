@@ -11,70 +11,69 @@ great_war_aftermath = {
     objectives = { } 
     
     abilities = {
-        ab_army_tradition = {
+        gwa_wasteland_administration = {
             modifier = {
-                army_tradition = 1
+                administrative_efficiency = 0.05
             }
             ai_will_do = { factor = 1 }
         }
-        ab_war_exhaustion = {
+        gwa_territorial_government = {
             modifier = {
-                war_exhaustion = -0.1
+                governing_capacity_modifier = 0.1
             }
             ai_will_do = { factor = 1 }
         }
-        ab_improve_relation_modifier = {
+        gwa_political_propaganda = {
             modifier = {
-                improve_relation_modifier = 0.15
+                all_estate_loyalty_equilibrium = 0.1
             }
             ai_will_do = { factor = 1 }
         }
-        ab_inflation_reduction = {
+        gwa_warhawk_rhetoric = {
             modifier = {
-                inflation_reduction = 0.1
+                province_warscore_cost = -0.1
             }
             ai_will_do = { factor = 1 }
         }
-        ab_yearly_corruption = {
+        gwa_wasteland_diplomacy = {
             modifier = {
-                yearly_corruption = -0.05
+                improve_relation_modifier = 0.1
             }
             ai_will_do = { factor = 1 }
         }
-        ab_years_of_nationalism = {
+        gwa_naval_ambition = {
             modifier = {
-                years_of_nationalism = -5
+                navy_tradition = 1.0
             }
             ai_will_do = { factor = 1 }
         }
-        ab_global_colonial_growth = {
+        gwa_military_ambition = {
             modifier = {
-                global_colonial_growth = 5
+                army_tradition = 1.0
             }
             ai_will_do = { factor = 1 }
         }
-        ab_global_trade_goods_size_modifier = {
+        gwa_additional_diplomats = {
             modifier = {
-                global_trade_goods_size_modifier = 0.15
+                diplomats = 1
             }
             ai_will_do = { factor = 1 }
         }
-        ab_advisor_cost = {
+        gwa_additional_missionaries = {
             modifier = {
-                advisor_cost = -0.2
+                missionaries = 1
             }
             ai_will_do = { factor = 1 }
         }
-        ab_settlement_frontier = {
+        gwa_additional_merchants = {
+            modifier = {
+                merchants = 1
+            }
+            ai_will_do = { factor = 1 }
+        }
+        gwa_additional_settlers = {
             modifier = {
                 colonists = 1
-                colonist_placement_chance = 0.05
-            }
-            ai_will_do = { factor = 1 }
-        }
-        ab_coring_distance = {
-            modifier = {
-                ignore_coring_distance = yes
             }
             ai_will_do = { factor = 1 }
         }
@@ -112,70 +111,69 @@ chinese_incursion = {
     objectives = { } 
     
     abilities = {
-        ab_army_tradition = {
+        chi_wasteland_administration = {
             modifier = {
-                army_tradition = 1
+                administrative_efficiency = 0.075
             }
             ai_will_do = { factor = 1 }
         }
-        ab_war_exhaustion = {
+        chi_territorial_government = {
             modifier = {
-                war_exhaustion = -0.1
+                governing_capacity_modifier = 0.15
             }
             ai_will_do = { factor = 1 }
         }
-        ab_improve_relation_modifier = {
+        chi_political_propaganda = {
+            modifier = {
+                all_estate_loyalty_equilibrium = 0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        chi_warhawk_rhetoric = {
+            modifier = {
+                province_warscore_cost = -0.15
+            }
+            ai_will_do = { factor = 1 }
+        }
+        chi_wasteland_diplomacy = {
             modifier = {
                 improve_relation_modifier = 0.15
             }
             ai_will_do = { factor = 1 }
         }
-        ab_inflation_reduction = {
+        chi_naval_ambition = {
             modifier = {
-                inflation_reduction = 0.1
+                navy_tradition = 1.5
             }
             ai_will_do = { factor = 1 }
         }
-        ab_yearly_corruption = {
+        chi_military_ambition = {
             modifier = {
-                yearly_corruption = -0.05
+                army_tradition = 1.5
             }
             ai_will_do = { factor = 1 }
         }
-        ab_years_of_nationalism = {
+        chi_additional_diplomats = {
             modifier = {
-                years_of_nationalism = -5
+                diplomats = 2
             }
             ai_will_do = { factor = 1 }
         }
-        ab_global_colonial_growth = {
+        chi_additional_missionaries = {
             modifier = {
-                global_colonial_growth = 5
+                missionaries = 2
             }
             ai_will_do = { factor = 1 }
         }
-        ab_global_trade_goods_size_modifier = {
+        chi_additional_merchants = {
             modifier = {
-                global_trade_goods_size_modifier = 0.15
+                merchants = 2
             }
             ai_will_do = { factor = 1 }
         }
-        ab_advisor_cost = {
+        chi_additional_settlers = {
             modifier = {
-                advisor_cost = -0.2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        ab_settlement_frontier = {
-            modifier = {
-                colonists = 1
-                colonist_placement_chance = 0.05
-            }
-            ai_will_do = { factor = 1 }
-        }
-        ab_coring_distance = {
-            modifier = {
-                ignore_coring_distance = yes
+                colonists = 2
             }
             ai_will_do = { factor = 1 }
         }
@@ -214,70 +212,69 @@ zetan_assault = {
     objectives = { } 
     
     abilities = {
-        ab_army_tradition = {
+        zet_wasteland_administration = {
             modifier = {
-                army_tradition = 1
+                administrative_efficiency = 0.1
             }
             ai_will_do = { factor = 1 }
         }
-        ab_war_exhaustion = {
+        zet_territorial_government = {
             modifier = {
-                war_exhaustion = -0.1
+                governing_capacity_modifier = 0.2
             }
             ai_will_do = { factor = 1 }
         }
-        ab_improve_relation_modifier = {
+        zet_political_propaganda = {
             modifier = {
-                improve_relation_modifier = 0.15
+                all_estate_loyalty_equilibrium = 0.2
             }
             ai_will_do = { factor = 1 }
         }
-        ab_inflation_reduction = {
+        zet_warhawk_rhetoric = {
             modifier = {
-                inflation_reduction = 0.1
+                province_warscore_cost = -0.2
             }
             ai_will_do = { factor = 1 }
         }
-        ab_yearly_corruption = {
+        zet_wasteland_diplomacy = {
             modifier = {
-                yearly_corruption = -0.05
+                improve_relation_modifier = 0.2
             }
             ai_will_do = { factor = 1 }
         }
-        ab_years_of_nationalism = {
+        zet_naval_ambition = {
             modifier = {
-                years_of_nationalism = -5
+                navy_tradition = 2.0
             }
             ai_will_do = { factor = 1 }
         }
-        ab_global_colonial_growth = {
+        zet_military_ambition = {
             modifier = {
-                global_colonial_growth = 5
+                army_tradition = 2.0
             }
             ai_will_do = { factor = 1 }
         }
-        ab_global_trade_goods_size_modifier = {
+        zet_additional_diplomats = {
             modifier = {
-                global_trade_goods_size_modifier = 0.15
+                diplomats = 3
             }
             ai_will_do = { factor = 1 }
         }
-        ab_advisor_cost = {
+        zet_additional_missionaries = {
             modifier = {
-                advisor_cost = -0.2
+                missionaries = 3
             }
             ai_will_do = { factor = 1 }
         }
-        ab_settlement_frontier = {
+        zet_additional_merchants = {
             modifier = {
-                colonists = 1
-                colonist_placement_chance = 0.05
+                merchants = 3
             }
             ai_will_do = { factor = 1 }
         }
-        ab_coring_distance = {
+        zet_additional_settlers = {
             modifier = {
-                ignore_coring_distance = yes
+                colonists = 3
             }
             ai_will_do = { factor = 1 }
         }
