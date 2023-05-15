@@ -1,0 +1,227 @@
+#--------------------------------------
+# Name
+#--------------------------------------
+fallout_enclave_core_column_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+    
+	potential = {
+		tag = ENC
+        NOT = { has_country_modifier = mission_purist_ideology }
+        NOT = { has_country_modifier = mission_reformist_ideology }
+	}
+    
+	has_country_shield = yes
+	
+	# fallout_mission = {
+		# icon = mission_usa_flag
+        # position = 1
+        
+		# required_missions = { }
+        
+		# trigger = {
+            
+		# }
+		# provinces_to_highlight = {
+            
+			# NOT = { owned_by = ROOT }
+		# }
+        
+		# effect = {
+			
+		# }
+	# }
+}
+
+fallout_enclave_core_column_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+    
+	potential = {
+		tag = ENC
+        NOT = { has_country_modifier = mission_purist_ideology }
+        NOT = { has_country_modifier = mission_reformist_ideology }
+	}
+    
+	has_country_shield = yes
+	
+	# fallout_mission = {
+		# icon = mission_usa_flag
+        # position = 1
+        
+		# required_missions = { }
+        
+		# trigger = {
+            
+		# }
+		# provinces_to_highlight = {
+            
+			# NOT = { owned_by = ROOT }
+		# }
+        
+		# effect = {
+			
+		# }
+	# }
+}
+
+fallout_enclave_core_column_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+    
+	potential = {
+		tag = ENC
+        NOT = { has_country_modifier = mission_purist_ideology }
+        NOT = { has_country_modifier = mission_reformist_ideology }
+	}
+    
+	has_country_shield = yes
+	
+	ENC_restore_the_washington_bunker = {
+		icon = mission_usa_flag
+        position = 1
+        
+		required_missions = { }
+        
+		trigger = {
+            owns_core_province = 1337
+            1337 = {
+                base_tax = 6
+                base_production = 6
+                base_manpower = 6
+                has_fort_building = yes
+            }
+		}
+		provinces_to_highlight = {
+            province_id = 1337
+		}
+        
+		effect = {
+			add_country_modifier = {
+                name = mission_restored_base_replicator_units
+                duration = -1
+            }
+		}
+	}
+    
+    ENC_secure_the_perimeter = {
+		icon = mission_army_barracks
+        position = 2
+        
+		required_missions = { 
+            ENC_restore_the_washington_bunker
+        }
+        
+		trigger = {
+            army_size_percentage = 1.0
+            manpower_percentage = 1.0
+            any_neighbor_country = {
+                has_spy_network_from = {
+                    who = ROOT
+                    value = 50
+                }
+            }
+		}
+		provinces_to_highlight = {
+            owner = {
+                is_neighbor_of = ROOT
+            }
+		}
+        
+		effect = {
+			washington_region = {
+                add_permanent_claim = ROOT
+            }
+		}
+	}
+    
+    ENC_enclave_restoration = {
+		icon = mission_enclave
+        position = 3
+        
+		required_missions = { 
+            ENC_secure_the_perimeter
+        }
+        
+		trigger = {
+            num_of_cities = 20
+		}
+		provinces_to_highlight = {
+            is_city = yes
+            NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			country_event = { id = fallout_mission_enclave.2 }
+		}
+	}
+}
+
+fallout_enclave_core_column_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+    
+	potential = {
+		tag = ENC
+        NOT = { has_country_modifier = mission_purist_ideology }
+        NOT = { has_country_modifier = mission_reformist_ideology }
+	}
+    
+	has_country_shield = yes
+	
+	# fallout_mission = {
+		# icon = mission_usa_flag
+        # position = 1
+        
+		# required_missions = { }
+        
+		# trigger = {
+            
+		# }
+		# provinces_to_highlight = {
+            
+			# NOT = { owned_by = ROOT }
+		# }
+        
+		# effect = {
+			
+		# }
+	# }
+}
+
+fallout_enclave_core_column_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+    
+	potential = {
+		tag = ENC
+        NOT = { has_country_modifier = mission_purist_ideology }
+        NOT = { has_country_modifier = mission_reformist_ideology }
+	}
+    
+	has_country_shield = yes
+	
+	# fallout_mission = {
+		# icon = mission_usa_flag
+        # position = 1
+        
+		# required_missions = { }
+        
+		# trigger = {
+            
+		# }
+		# provinces_to_highlight = {
+            
+			# NOT = { owned_by = ROOT }
+		# }
+        
+		# effect = {
+			
+		# }
+	# }
+}

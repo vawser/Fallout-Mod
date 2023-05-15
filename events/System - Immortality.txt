@@ -86,6 +86,10 @@ country_event = {
             limit = {
                 tag = NVG
             }
+            
+            hidden_effect = {
+                set_country_flag = skip_next_succession_event
+            }
             define_ruler = {
                 name = "Robert"
                 dynasty = "House"
@@ -99,6 +103,10 @@ country_event = {
             limit = {
                 tag = RNC
             }
+            
+            hidden_effect = {
+                set_country_flag = skip_next_succession_event
+            }
             define_ruler = {
                 name = "Brain"
                 dynasty = "Ra'at"
@@ -111,21 +119,6 @@ country_event = {
             add_ruler_personality = kind_hearted_personality
             add_ruler_personality = conqueror_personality
             add_ruler_personality = tolerant_personality
-        }
-        if = {
-            limit = {
-                tag = RNC
-            }
-            define_heir = {
-                name = "Zomak"
-                dynasty = "Ra'at"
-                adm = 5
-                dip = 5
-                mil = 5
-                culture = mole_rat
-            }
-            add_heir_personality = immortal_personality
-            add_heir_personality = tolerant_personality
         }
     }
 }

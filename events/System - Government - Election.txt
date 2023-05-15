@@ -13,6 +13,7 @@ country_event = {
     
     trigger = {
         has_government_attribute = standard_election
+        NOT = { has_country_modifier = mission_ncr_oligarchic_focus }
     }
 	
 	option = {

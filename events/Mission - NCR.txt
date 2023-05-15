@@ -1,0 +1,38 @@
+namespace = fallout_mission_ncr
+
+# Democracy in Crisis
+country_event = {
+	id = fallout_mission_ncr.1
+	title = fallout_mission_ncr.1.title
+	desc = fallout_mission_ncr.1.desc
+	picture = THE_BURNED_MAN_eventPicture
+	
+	is_triggered_only = yes
+    
+	option = {	
+		name = fallout_mission_ncr.1.option.a
+        
+        add_country_modifier = {
+            name = mission_ncr_democratic_focus
+            duration = -1
+        }
+        
+        ai_chance = {
+            factor = 80
+        }
+	}	
+    option = {	
+		name = fallout_mission_ncr.1.option.b
+        
+        add_country_modifier = {
+            name = mission_ncr_oligarchic_focus
+            duration = -1
+        }
+        
+        custom_tooltip = OLIGARHIC_NCR_TT
+        
+        ai_chance = {
+            factor = 20
+        }
+	}
+}

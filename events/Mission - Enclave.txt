@@ -1,0 +1,76 @@
+namespace = fallout_mission_enclave
+
+# The Last Bastion
+country_event = {
+	id = fallout_mission_enclave.1
+	title = fallout_mission_enclave.1.title
+	desc = fallout_mission_enclave.1.desc
+	picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+    
+    trigger = {
+        NOT = { has_country_flag = enclave_start_event }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = enclave_start_event
+        }
+    }
+    
+	option = {	
+		name = fallout_mission_enclave.1.option.a
+        
+        add_country_modifier = {
+            name = mission_patriotic_spirit
+            duration = 3650
+        }
+	}
+}
+
+# A Turning Point
+country_event = {
+	id = fallout_mission_enclave.2
+	title = fallout_mission_enclave.2.title
+	desc = fallout_mission_enclave.2.desc
+	picture = USA_FLAG_eventPicture
+	
+	is_triggered_only = yes
+    
+	option = {	
+		name = fallout_mission_enclave.2.option.a
+        
+        add_country_modifier = {
+            name = mission_purist_ideology
+            duration = -1
+        }
+        
+        custom_tooltip = ENCLAVE_PURIST_PATH_TT
+        
+        ai_chance = {
+            factor = 80
+        }
+	}
+    option = {	
+		name = fallout_mission_enclave.2.option.b
+        
+        add_stability = -3
+        
+        add_country_modifier = {
+            name = mission_reformist_ideology
+            duration = -1
+        }
+        
+        custom_tooltip = ENCLAVE_REFORMIST_PATH_TT
+        
+        ai_chance = {
+            factor = 20
+        }
+	}
+    
+    after = {
+        swap_non_generic_missions = yes
+    }
+}
+

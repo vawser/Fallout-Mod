@@ -1,19 +1,19 @@
 # #--------------------------------------
 # # Name
 # #--------------------------------------
-# fallout_ncr_column_1 = {
+# fallout_TEMPLATE_column_1 = {
 	# slot = 1
 	# generic = no
 	# ai = yes
     
 	# potential = {
-		# tag = NCR
+		# tag = TAG
 	# }
     
 	# has_country_shield = yes
 	
 	# fallout_mission = {
-		# icon = mission_big_mt_the_sink
+		# icon = mission_titan_spirits
         # position = 1
         
 		# required_missions = { }
@@ -32,19 +32,19 @@
 	# }
 # }
 
-# fallout_ncr_column_2 = {
+# fallout_TEMPLATE_column_2 = {
 	# slot = 2
 	# generic = no
 	# ai = yes
     
 	# potential = {
-		# tag = NCR
+		# tag = TAG
 	# }
     
 	# has_country_shield = yes
 	
 	# fallout_mission = {
-		# icon = mission_big_mt_the_sink
+		# icon = mission_titan_spirits
         # position = 1
         
 		# required_missions = { }
@@ -63,48 +63,19 @@
 	# }
 # }
 
-# fallout_ncr_column_3 = {
+# fallout_TEMPLATE_column_3 = {
 	# slot = 3
 	# generic = no
 	# ai = yes
     
 	# potential = {
-		# tag = NCR
-	# }
-    
-	# has_country_shield = yes
-	
-	# fallout_ncr_democracy_in_crisis = {
-		# icon = mission_usa_flag
-        # position = 1
-        
-		# required_missions = { }
-        
-		# trigger = {
-            # not_in_mission_cooldown = yes
-		# }
-        
-		# effect = {
-			# trigger_mission_cooldown = yes
-            
-            # country_event = { id = fallout_mission_ncr.1 days = 30 }
-		# }
-	# }
-# }
-
-# fallout_ncr_column_4 = {
-	# slot = 4
-	# generic = no
-	# ai = yes
-    
-	# potential = {
-		# tag = NCR
+		# tag = TAG
 	# }
     
 	# has_country_shield = yes
 	
 	# fallout_mission = {
-		# icon = mission_big_mt_the_sink
+		# icon = mission_titan_spirits
         # position = 1
         
 		# required_missions = { }
@@ -123,19 +94,50 @@
 	# }
 # }
 
-# fallout_ncr_column_5 = {
-	# slot = 5
+# fallout_TEMPLATE_column_4 = {
+	# slot = 4
 	# generic = no
 	# ai = yes
     
 	# potential = {
-		# tag = NCR
+		# tag = TAG
 	# }
     
 	# has_country_shield = yes
 	
 	# fallout_mission = {
-		# icon = mission_big_mt_the_sink
+		# icon = mission_titan_spirits
+        # position = 1
+        
+		# required_missions = { }
+        
+		# trigger = {
+            
+		# }
+		# provinces_to_highlight = {
+            
+			# NOT = { owned_by = ROOT }
+		# }
+        
+		# effect = {
+			
+		# }
+	# }
+# }
+
+# fallout_TEMPLATE_column_5 = {
+	# slot = 5
+	# generic = no
+	# ai = yes
+    
+	# potential = {
+		# tag = TAG
+	# }
+    
+	# has_country_shield = yes
+	
+	# fallout_mission = {
+		# icon = mission_titan_spirits
         # position = 1
         
 		# required_missions = { }

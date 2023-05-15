@@ -242,6 +242,9 @@ country_event = {
 	option = {	
 		name = big_mountain.5.option.a	
 		
+		hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
 		define_ruler = {
 			name = "Toaster"
 			dynasty = ""
@@ -250,9 +253,6 @@ country_event = {
 		    mil = 6			
 		}
         add_ruler_personality = immortal_personality
-		hidden_effect = {
-            set_country_flag = skip_next_succession_event
-        }
         
 		ai_chance = {
 		    factor = 0

@@ -27,6 +27,9 @@ country_event = {
 	option = {
 		name = brotherhood_of_steel_east.1.option.a
 
+		hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
         define_ruler = {
             name = "Arthur"
             dynasty = "Maxson"
@@ -34,9 +37,6 @@ country_event = {
             adm = 5
             dip = 4
             mil = 6
-        }
-        hidden_effect = {
-            set_country_flag = skip_next_succession_event
         }
         
         ai_chance = {

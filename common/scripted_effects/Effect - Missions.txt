@@ -51,3 +51,11 @@ execute_event_in_25_years = {
             
     custom_tooltip = TOOLTIP_MISSION_GRANTS_THIS_25
 }
+
+trigger_mission_cooldown = {
+    add_country_modifier = {
+        name = mission_cooldown
+        duration = 365
+        hidden = yes
+    }
+}

@@ -1,0 +1,17 @@
+has_manufactory_building = {
+    OR = {
+        has_building = fbs_labour_camp
+        has_building = fbs_military_factory
+        has_building = fbs_industrial_factory
+        has_building = fbs_commercial_factory
+        has_building = fbs_electronics_factory
+    }
+}
+
+has_fort_building = {
+    OR = {
+        has_building = fbs_fort_1
+        has_building = fbs_fort_2
+        has_building = fbs_fort_3
+    }
+}

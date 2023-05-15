@@ -87,6 +87,9 @@ country_event = {
         add_legitimacy = 100
         add_stability = 6
                 
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
         define_ruler = {
             name = "Overlord"
             dynasty = "Izzat"

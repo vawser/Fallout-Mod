@@ -14,7 +14,7 @@ add_army_professionalism = 0.6
 #--------------------------------
 # Laws and Policies
 #--------------------------------
-set_slavery_forbidden = yes
+set_slavery_allowed = yes
 set_gambling_forbidden = yes
 set_prostitution_forbidden = yes
 
@@ -23,6 +23,11 @@ set_scavenging_allowed = yes
 
 unlock_schematic = {
     schematic = hellfire_power_armor
+}
+
+add_country_modifier = {
+    name = mission_only_the_pure
+    duration = -1
 }
 
 #--------------------------------

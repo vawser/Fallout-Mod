@@ -38,6 +38,10 @@ country_event = {
 	
 	option = {
 		name = sloan.1.option.b
+        
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
 		define_ruler = {
 			name = "Jas"
 			dynasty = "Wilkins"
@@ -61,6 +65,10 @@ country_event = {
 	
 	option = {
 		name = sloan.1.option.c
+        
+        hidden_effect = {
+            set_country_flag = skip_next_succession_event
+        }
 		define_ruler = {
 			name = "Paul"
     		adm = 1
