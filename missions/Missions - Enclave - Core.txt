@@ -47,24 +47,34 @@ fallout_enclave_core_column_2 = {
     
 	has_country_shield = yes
 	
-	# fallout_mission = {
-		# icon = mission_usa_flag
-        # position = 1
+	ENC_quell_the_high_command = {
+		icon = mission_bos_cafeteria_head_1
+        position = 3
         
-		# required_missions = { }
+		required_missions = { 
+            ENC_secure_the_perimeter
+        }
         
-		# trigger = {
-            
-		# }
-		# provinces_to_highlight = {
-            
-			# NOT = { owned_by = ROOT }
-		# }
+		trigger = {
+            estate_loyalty = { 
+                estate = estate_bureaucrats
+                loyalty = 65
+                higher_than_influence = yes
+            }
+            estate_loyalty = { 
+                estate = estate_officers
+                loyalty = 65
+                higher_than_influence = yes
+            }
+		}
         
-		# effect = {
-			
-		# }
-	# }
+		effect = {
+			add_country_modifier = {
+                name = mission_loyalty_of_the_high_command
+                duration = 10950
+            }
+		}
+	}
 }
 
 fallout_enclave_core_column_3 = {
@@ -138,12 +148,49 @@ fallout_enclave_core_column_3 = {
 		}
 	}
     
-    ENC_enclave_restoration = {
-		icon = mission_enclave
+    ENC_replenish_the_population = {
+		icon = mission_hidden_bunker
         position = 3
         
 		required_missions = { 
             ENC_secure_the_perimeter
+        }
+        
+		trigger = {
+            calc_true_if = {
+                all_owned_province = {
+                    has_any_enclave_pop = yes
+                }
+                
+                amount = 10
+            }
+		}
+		provinces_to_highlight = {
+           owned_by = ROOT
+           NOT = { has_any_enclave_pop = yes }
+		}
+        
+		effect = {
+            custom_tooltip = ENCLAVE_POP_BOOST_TT
+            hidden_effect = {
+                every_owned_province = {
+                    limit = {
+                        has_any_enclave_pop = yes
+                    }
+                    upgrade_pop = { TYPE = enclave }
+                }
+            }
+		}
+	}
+    
+    ENC_enclave_restoration = {
+		icon = mission_enclave
+        position = 4
+        
+		required_missions = { 
+            ENC_quell_the_high_command
+            ENC_replenish_the_population
+            ENC_grease_the_engine_of_war
         }
         
 		trigger = {
@@ -173,24 +220,30 @@ fallout_enclave_core_column_4 = {
     
 	has_country_shield = yes
 	
-	# fallout_mission = {
-		# icon = mission_usa_flag
-        # position = 1
+	ENC_grease_the_engine_of_war = {
+		icon = mission_legion_fire
+        position = 3
         
-		# required_missions = { }
+		required_missions = { 
+            ENC_secure_the_perimeter
+        }
         
-		# trigger = {
-            
-		# }
-		# provinces_to_highlight = {
-            
-			# NOT = { owned_by = ROOT }
-		# }
+		trigger = {
+            custom_trigger_tooltip = {
+                tooltip = ENCLAVE_MISSION_WIN_WAR_TT
+                
+                has_country_flag = mission_enclave_war_win
+            }
+		}
         
-		# effect = {
-			
-		# }
-	# }
+		effect = {
+			add_country_modifier = {
+                name = mission_engine_of_war
+                duration = 10950
+            }
+		}
+	}
+    
 }
 
 fallout_enclave_core_column_5 = {

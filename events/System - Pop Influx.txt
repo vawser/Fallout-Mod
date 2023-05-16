@@ -36,7 +36,18 @@ province_event = {
 	picture = FREESIDE_eventPicture
 	
     is_triggered_only = yes
-
+    
+    trigger = {
+        owner = {
+            OR = {
+                is_raider_administration = yes
+                any_neighbor_country = {
+                    is_wastelander_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.1.option.a
     
@@ -53,6 +64,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_raider_administration = yes
+                any_neighbor_country = {
+                    is_raider_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.2.option.a
     
@@ -69,6 +91,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_tribal_administration = yes
+                any_neighbor_country = {
+                    is_tribal_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.3.option.a
     
@@ -85,6 +118,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_robot_administration = yes
+                any_neighbor_country = {
+                    is_robot_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.4.option.a
     
@@ -100,6 +144,17 @@ province_event = {
 	picture = FREESIDE_eventPicture
 	
     is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            OR = {
+                is_super_mutant_administration = yes
+                any_neighbor_country = {
+                    is_super_mutant_administration = yes
+                }
+            }
+        }
+    }
 
     option = {
 		name = pop_influx.5.option.a
@@ -117,6 +172,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_ghoul_administration = yes
+                any_neighbor_country = {
+                    is_ghoul_administration = yes
+                }
+            }
+        }
+    }
+
     option = {
 		name = pop_influx.6.option.a
     
@@ -132,6 +198,17 @@ province_event = {
 	picture = FREESIDE_eventPicture
 	
     is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            OR = {
+                is_swampfolk_administration = yes
+                any_neighbor_country = {
+                    is_swampfolk_administration = yes
+                }
+            }
+        }
+    }
 
     option = {
 		name = pop_influx.7.option.a
@@ -149,6 +226,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_synth_administration = yes
+                any_neighbor_country = {
+                    is_synth_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.8.option.a
     
@@ -165,6 +253,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_beastlord_administration = yes
+                any_neighbor_country = {
+                    is_beastlord_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.9.option.a
     
@@ -181,6 +280,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_beastlord_administration = yes
+                any_neighbor_country = {
+                    is_beastlord_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.10.option.a
     
@@ -197,6 +307,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_alien_administration = yes
+                any_neighbor_country = {
+                    is_alien_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.11.option.a
     
@@ -213,6 +334,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_deathclaw_administration = yes
+                any_neighbor_country = {
+                    is_deathclaw_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.12.option.a
     
@@ -229,6 +361,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_fungal_administration = yes
+                any_neighbor_country = {
+                    is_fungal_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.13.option.a
     
@@ -245,6 +388,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_dwarf_administration = yes
+                any_neighbor_country = {
+                    is_dwarf_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.14.option.a
     
@@ -261,6 +415,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_legion_administration = yes
+                any_neighbor_country = {
+                    is_legion_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.15.option.a
     
@@ -277,6 +442,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_bos_administration = yes
+                any_neighbor_country = {
+                    is_bos_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.16.option.a
     
@@ -292,6 +468,17 @@ province_event = {
 	picture = FREESIDE_eventPicture
 	
     is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            OR = {
+                is_coa_administration = yes
+                any_neighbor_country = {
+                    is_coa_administration = yes
+                }
+            }
+        }
+    }
 
     option = {
 		name = pop_influx.17.option.a
@@ -309,6 +496,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_vault_administration = yes
+                any_neighbor_country = {
+                    is_vault_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.18.option.a
     
@@ -325,6 +523,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_institute_administration = yes
+                any_neighbor_country = {
+                    is_institute_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.19.option.a
     
@@ -341,6 +550,17 @@ province_event = {
 	
     is_triggered_only = yes
 
+    trigger = {
+        owner = {
+            OR = {
+                is_enclave_administration = yes
+                any_neighbor_country = {
+                    is_enclave_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.20.option.a
     
@@ -356,7 +576,18 @@ province_event = {
 	picture = FREESIDE_eventPicture
 	
     is_triggered_only = yes
-
+    
+    trigger = {
+        owner = {
+            OR = {
+                is_shi_administration = yes
+                any_neighbor_country = {
+                    is_shi_administration = yes
+                }
+            }
+        }
+    }
+    
     option = {
 		name = pop_influx.21.option.a
     

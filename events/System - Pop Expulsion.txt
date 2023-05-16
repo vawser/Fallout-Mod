@@ -55,7 +55,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_wastelander_med
+                has_province_modifier = pop_wastelander_high
             }
             add_med_pop_wastelander = yes
         }
@@ -73,7 +73,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_wastelander_high }
                         }
-                        province_event = { id = pop_influx.1 }
+                        province_event = { id = pop_migration.1 }
                     }
                 }
             }
@@ -101,7 +101,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_raider_med
+                has_province_modifier = pop_raider_high
             }
             add_med_pop_raider = yes
         }
@@ -118,7 +118,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_raider_high }
                         }
-                        province_event = { id = pop_influx.2 }
+                        province_event = { id = pop_migration.2 }
                     }
                 }
             }
@@ -146,7 +146,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_tribal_med
+                has_province_modifier = pop_tribal_high
             }
             add_med_pop_tribal = yes
         }
@@ -164,7 +164,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_tribal_high }
                         }
-                        province_event = { id = pop_influx.3 }
+                        province_event = { id = pop_migration.3 }
                     }
                 }
             }
@@ -192,7 +192,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_robot_med
+                has_province_modifier = pop_robot_high
             }
             add_med_pop_robot = yes
         }
@@ -210,7 +210,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_robot_high }
                         }
-                        province_event = { id = pop_influx.4 }
+                        province_event = { id = pop_migration.4 }
                     }
                 }
             }
@@ -238,7 +238,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_super_mutant_med
+                has_province_modifier = pop_super_mutant_high
             }
             add_med_pop_super_mutant = yes
         }
@@ -256,7 +256,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_super_mutant_high }
                         }
-                        province_event = { id = pop_influx.5 }
+                        province_event = { id = pop_migration.5 }
                     }
                 }
             }
@@ -284,7 +284,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_ghoul_med
+                has_province_modifier = pop_ghoul_high
             }
             add_med_pop_ghoul = yes
         }
@@ -302,7 +302,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_ghoul_high }
                         }
-                        province_event = { id = pop_influx.6 }
+                        province_event = { id = pop_migration.6 }
                     }
                 }
             }
@@ -330,7 +330,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_swampfolk_med
+                has_province_modifier = pop_swampfolk_high
             }
             add_med_pop_swampfolk = yes
         }
@@ -348,7 +348,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_swampfolk_high }
                         }
-                        province_event = { id = pop_influx.7 }
+                        province_event = { id = pop_migration.7 }
                     }
                 }
             }
@@ -376,7 +376,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_synth_med
+                has_province_modifier = pop_synth_high
             }
             add_med_pop_synth = yes
         }
@@ -394,7 +394,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_synth_high }
                         }
-                        province_event = { id = pop_influx.8 }
+                        province_event = { id = pop_migration.8 }
                     }
                 }
             }
@@ -422,7 +422,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_rodent_med
+                has_province_modifier = pop_rodent_high
             }
             add_med_pop_rodent = yes
         }
@@ -440,7 +440,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_rodent_high }
                         }
-                        province_event = { id = pop_influx.9 }
+                        province_event = { id = pop_migration.9 }
                     }
                 }
             }
@@ -468,7 +468,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_beastlord_med
+                has_province_modifier = pop_beastlord_high
             }
             add_med_pop_beastlord = yes
         }
@@ -486,7 +486,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_beastlord_high }
                         }
-                        province_event = { id = pop_influx.10 }
+                        province_event = { id = pop_migration.10 }
                     }
                 }
             }
@@ -514,7 +514,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_alien_med
+                has_province_modifier = pop_alien_high
             }
             add_med_pop_alien = yes
         }
@@ -532,7 +532,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_alien_high }
                         }
-                        province_event = { id = pop_influx.11 }
+                        province_event = { id = pop_migration.11 }
                     }
                 }
             }
@@ -560,7 +560,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_deathclaw_med
+                has_province_modifier = pop_deathclaw_high
             }
             add_med_pop_deathclaw = yes
         }
@@ -578,7 +578,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_deathclaw_high }
                         }
-                        province_event = { id = pop_influx.12 }
+                        province_event = { id = pop_migration.12 }
                     }
                 }
             }
@@ -606,7 +606,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_fungal_med
+                has_province_modifier = pop_fungal_high
             }
             add_med_pop_fungal = yes
         }
@@ -624,7 +624,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_fungal_high }
                         }
-                        province_event = { id = pop_influx.13 }
+                        province_event = { id = pop_migration.13 }
                     }
                 }
             }
@@ -652,7 +652,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_dwarf_med
+                has_province_modifier = pop_dwarf_high
             }
             add_med_pop_dwarf = yes
         }
@@ -670,7 +670,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_dwarf_high }
                         }
-                        province_event = { id = pop_influx.14 }
+                        province_event = { id = pop_migration.14 }
                     }
                 }
             }
@@ -698,7 +698,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_legion_med
+                has_province_modifier = pop_legion_high
             }
             add_med_pop_legion = yes
         }
@@ -716,7 +716,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_legion_high }
                         }
-                        province_event = { id = pop_influx.15 }
+                        province_event = { id = pop_migration.15 }
                     }
                 }
             }
@@ -744,7 +744,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_bos_med
+                has_province_modifier = pop_bos_high
             }
             add_med_pop_bos = yes
         }
@@ -762,7 +762,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_bos_high }
                         }
-                        province_event = { id = pop_influx.16 }
+                        province_event = { id = pop_migration.16 }
                     }
                 }
             }
@@ -790,7 +790,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_coa_med
+                has_province_modifier = pop_coa_high
             }
             add_med_pop_coa = yes
         }
@@ -808,7 +808,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_coa_high }
                         }
-                        province_event = { id = pop_influx.17 }
+                        province_event = { id = pop_migration.17 }
                     }
                 }
             }
@@ -836,7 +836,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_vault_dweller_med
+                has_province_modifier = pop_vault_dweller_high
             }
             add_med_pop_vault_dweller = yes
         }
@@ -854,7 +854,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_vault_dweller_high }
                         }
-                        province_event = { id = pop_influx.18 }
+                        province_event = { id = pop_migration.18 }
                     }
                 }
             }
@@ -882,7 +882,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_institute_med
+                has_province_modifier = pop_institute_high
             }
             add_med_pop_institute = yes
         }
@@ -900,7 +900,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_institute_high }
                         }
-                        province_event = { id = pop_influx.19 }
+                        province_event = { id = pop_migration.19 }
                     }
                 }
             }
@@ -928,7 +928,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_enclave_med
+                has_province_modifier = pop_enclave_high
             }
             add_med_pop_enclave = yes
         }
@@ -946,7 +946,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_enclave_high }
                         }
-                        province_event = { id = pop_influx.20 }
+                        province_event = { id = pop_migration.20 }
                     }
                 }
             }
@@ -974,7 +974,7 @@ province_event = {
         }
         else_if = {
             limit = {
-                has_province_modifier = pop_shi_med
+                has_province_modifier = pop_shi_high
             }
             add_med_pop_shi = yes
         }
@@ -992,7 +992,7 @@ province_event = {
                         limit = {
                             NOT = { has_province_modifier = pop_shi_high }
                         }
-                        province_event = { id = pop_influx.21 }
+                        province_event = { id = pop_migration.21 }
                     }
                 }
             }

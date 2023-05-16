@@ -127,6 +127,15 @@ on_war_won = {
             value = 25
         }
     }
+    
+    if = {
+        limit = {
+            tag = ENC
+            NOT = { has_country_flag = mission_enclave_war_win }
+        }
+        
+        set_country_flag = mission_enclave_war_win
+    }
 }
 
 # country
@@ -1809,7 +1818,32 @@ on_five_year_pulse_2 = {
 }
 
 on_five_year_pulse_3 = {
-    
+    # Pop Influx - Free pop if ROOT has the pop administration or a friendly neighbor has it
+    random_owned_province = {
+        random_list = {
+            1 = { province_event = { id = pop_influx.1 } }
+            1 = { province_event = { id = pop_influx.2 } }
+            1 = { province_event = { id = pop_influx.3 } }
+            1 = { province_event = { id = pop_influx.4 } }
+            1 = { province_event = { id = pop_influx.5 } }
+            1 = { province_event = { id = pop_influx.6 } }
+            1 = { province_event = { id = pop_influx.7 } }
+            1 = { province_event = { id = pop_influx.8 } }
+            1 = { province_event = { id = pop_influx.9 } }
+            1 = { province_event = { id = pop_influx.10 } }
+            1 = { province_event = { id = pop_influx.11 } }
+            1 = { province_event = { id = pop_influx.12 } }
+            1 = { province_event = { id = pop_influx.13 } }
+            1 = { province_event = { id = pop_influx.14 } }
+            1 = { province_event = { id = pop_influx.15 } }
+            1 = { province_event = { id = pop_influx.16 } }
+            1 = { province_event = { id = pop_influx.17 } }
+            1 = { province_event = { id = pop_influx.18 } }
+            1 = { province_event = { id = pop_influx.19 } }
+            1 = { province_event = { id = pop_influx.20 } }
+            1 = { province_event = { id = pop_influx.21 } }
+        }
+    }
 }
 
 on_five_year_pulse_4 = {

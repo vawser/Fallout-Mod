@@ -1,0 +1,365 @@
+namespace = pop_migration
+
+#-------------------------------
+# Pop Types
+#-------------------------------
+# wastelander
+# raider
+# tribal
+# robot
+# super_mutant
+# ghoul
+# swampfolk
+# synth
+# rodent
+# beastlord
+# alien
+# deathclaw
+# fungal
+# dwarf
+# legion
+# bos
+# coa
+# vault_dweller
+# institute
+# enclave
+# shi
+
+#-------------------------------
+# Migration events
+#-------------------------------
+# Migration of Wastelanders
+province_event = {
+	id = pop_migration.1
+	title = pop_migration.1.title
+	desc = pop_migration.1.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+    
+    option = {
+		name = pop_migration.1.option.a
+    
+        upgrade_pop = { TYPE = wastelander }
+    }
+}
+
+# Migration of Raiders
+province_event = {
+	id = pop_migration.2
+	title = pop_migration.2.title
+	desc = pop_migration.2.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.2.option.a
+    
+        upgrade_pop = { TYPE = raider }
+    }
+}
+
+# Migration of Tribal
+province_event = {
+	id = pop_migration.3
+	title = pop_migration.3.title
+	desc = pop_migration.3.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.3.option.a
+    
+        upgrade_pop = { TYPE = tribal }
+    }
+}
+
+# Migration of Robots
+province_event = {
+	id = pop_migration.4
+	title = pop_migration.4.title
+	desc = pop_migration.4.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.4.option.a
+    
+        upgrade_pop = { TYPE = robot }
+    }
+}
+
+# Migration of Super Mutants
+province_event = {
+	id = pop_migration.5
+	title = pop_migration.5.title
+	desc = pop_migration.5.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+    
+    option = {
+		name = pop_migration.5.option.a
+    
+        upgrade_pop = { TYPE = super_mutant }
+    }
+}
+
+# Migration of Ghoul
+province_event = {
+	id = pop_migration.6
+	title = pop_migration.6.title
+	desc = pop_migration.6.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.6.option.a
+    
+        upgrade_pop = { TYPE = ghoul }
+    }
+}
+
+# Migration of Swampfolk
+province_event = {
+	id = pop_migration.7
+	title = pop_migration.7.title
+	desc = pop_migration.7.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.7.option.a
+    
+        upgrade_pop = { TYPE = swampfolk }
+    }
+}
+
+# Migration of Synths
+province_event = {
+	id = pop_migration.8
+	title = pop_migration.8.title
+	desc = pop_migration.8.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.8.option.a
+    
+        upgrade_pop = { TYPE = synth }
+    }
+}
+
+# Migration of Rodents
+province_event = {
+	id = pop_migration.9
+	title = pop_migration.9.title
+	desc = pop_migration.9.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.9.option.a
+    
+        upgrade_pop = { TYPE = rodent }
+    }
+}
+
+# Migration of Beastlords
+province_event = {
+	id = pop_migration.10
+	title = pop_migration.10.title
+	desc = pop_migration.10.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.10.option.a
+    
+        upgrade_pop = { TYPE = beastlord }
+    }
+}
+
+# Migration of Zetans
+province_event = {
+	id = pop_migration.11
+	title = pop_migration.11.title
+	desc = pop_migration.11.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.11.option.a
+    
+        upgrade_pop = { TYPE = alien }
+    }
+}
+
+# Migration of Deathclaws
+province_event = {
+	id = pop_migration.12
+	title = pop_migration.12.title
+	desc = pop_migration.12.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.12.option.a
+    
+        upgrade_pop = { TYPE = deathclaw }
+    }
+}
+
+# Migration of Spore Carriers
+province_event = {
+	id = pop_migration.13
+	title = pop_migration.13.title
+	desc = pop_migration.13.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.13.option.a
+    
+        upgrade_pop = { TYPE = fungal }
+    }
+}
+
+# Migration of Dwarfs
+province_event = {
+	id = pop_migration.14
+	title = pop_migration.14.title
+	desc = pop_migration.14.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.14.option.a
+    
+        upgrade_pop = { TYPE = dwarf }
+    }
+}
+
+# Migration of Legionaries
+province_event = {
+	id = pop_migration.15
+	title = pop_migration.15.title
+	desc = pop_migration.15.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.15.option.a
+    
+        upgrade_pop = { TYPE = legion }
+    }
+}
+
+# Migration of Paladins
+province_event = {
+	id = pop_migration.16
+	title = pop_migration.16.title
+	desc = pop_migration.16.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.16.option.a
+    
+        upgrade_pop = { TYPE = bos }
+    }
+}
+
+# Migration of Cultists
+province_event = {
+	id = pop_migration.17
+	title = pop_migration.17.title
+	desc = pop_migration.17.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.17.option.a
+    
+        upgrade_pop = { TYPE = coa }
+    }
+}
+
+# Migration of Vault Dwellers
+province_event = {
+	id = pop_migration.18
+	title = pop_migration.18.title
+	desc = pop_migration.18.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.18.option.a
+    
+        upgrade_pop = { TYPE = vault_dweller }
+    }
+}
+
+# Migration of Institute Staff
+province_event = {
+	id = pop_migration.19
+	title = pop_migration.19.title
+	desc = pop_migration.19.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.19.option.a
+    
+        upgrade_pop = { TYPE = institute }
+    }
+}
+
+# Migration of Enclave
+province_event = {
+	id = pop_migration.20
+	title = pop_migration.20.title
+	desc = pop_migration.20.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+
+    option = {
+		name = pop_migration.20.option.a
+    
+        upgrade_pop = { TYPE = enclave }
+    }
+}
+
+# Migration of Shi
+province_event = {
+	id = pop_migration.21
+	title = pop_migration.21.title
+	desc = pop_migration.21.desc
+	picture = FREESIDE_eventPicture
+	
+    is_triggered_only = yes
+    
+    option = {
+		name = pop_migration.21.option.a
+    
+        upgrade_pop = { TYPE = shi }
+    }
+}
