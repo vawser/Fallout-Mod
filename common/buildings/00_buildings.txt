@@ -701,11 +701,6 @@ pop_attraction = {
         NOT = { has_province_modifier = gain_pop }
         NOT = { has_province_modifier = expel_pop }
         NOT = { has_province_modifier = kill_pop }
-        OR = {
-            has_any_med_pop = yes
-            has_any_low_pop = yes
-            has_no_pops = yes
-        }
     }
     
     on_built = {

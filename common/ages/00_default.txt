@@ -11,72 +11,17 @@ great_war_aftermath = {
     objectives = { } 
     
     abilities = {
-        gwa_wasteland_administration = {
-            modifier = {
-                administrative_efficiency = 0.05
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_territorial_government = {
-            modifier = {
-                governing_capacity_modifier = 0.1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_political_propaganda = {
-            modifier = {
-                all_estate_loyalty_equilibrium = 0.1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_warhawk_rhetoric = {
-            modifier = {
-                province_warscore_cost = -0.1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_wasteland_diplomacy = {
-            modifier = {
-                improve_relation_modifier = 0.1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_naval_ambition = {
-            modifier = {
-                navy_tradition = 1.0
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_military_ambition = {
-            modifier = {
-                army_tradition = 1.0
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_additional_diplomats = {
-            modifier = {
-                diplomats = 1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_additional_missionaries = {
-            modifier = {
-                missionaries = 1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_additional_merchants = {
-            modifier = {
-                merchants = 1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        gwa_additional_settlers = {
-            modifier = {
-                colonists = 1
-            }
-            ai_will_do = { factor = 1 }
-        }
+        gwa_ability_1  = { effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_2  = { allow = { has_age_ability = gwa_ability_1 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_3  = { allow = { has_age_ability = gwa_ability_2 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_4  = { allow = { has_age_ability = gwa_ability_3 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_5  = { allow = { has_age_ability = gwa_ability_4 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_6  = { allow = { has_age_ability = gwa_ability_5 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_7  = { allow = { has_age_ability = gwa_ability_6 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_8  = { allow = { has_age_ability = gwa_ability_7 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_9  = { allow = { has_age_ability = gwa_ability_8 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_10 = { allow = { has_age_ability = gwa_ability_9 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        gwa_ability_11 = { allow = { has_age_ability = gwa_ability_10 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
     }
 }
 chinese_incursion = {
@@ -111,72 +56,17 @@ chinese_incursion = {
     objectives = { } 
     
     abilities = {
-        chi_wasteland_administration = {
-            modifier = {
-                administrative_efficiency = 0.075
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_territorial_government = {
-            modifier = {
-                governing_capacity_modifier = 0.15
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_political_propaganda = {
-            modifier = {
-                all_estate_loyalty_equilibrium = 0.15
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_warhawk_rhetoric = {
-            modifier = {
-                province_warscore_cost = -0.15
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_wasteland_diplomacy = {
-            modifier = {
-                improve_relation_modifier = 0.15
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_naval_ambition = {
-            modifier = {
-                navy_tradition = 1.5
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_military_ambition = {
-            modifier = {
-                army_tradition = 1.5
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_additional_diplomats = {
-            modifier = {
-                diplomats = 2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_additional_missionaries = {
-            modifier = {
-                missionaries = 2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_additional_merchants = {
-            modifier = {
-                merchants = 2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        chi_additional_settlers = {
-            modifier = {
-                colonists = 2
-            }
-            ai_will_do = { factor = 1 }
-        }
+        chi_ability_1  = { effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_2  = { allow = { has_age_ability = chi_ability_1 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_3  = { allow = { has_age_ability = chi_ability_2 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_4  = { allow = { has_age_ability = chi_ability_3 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_5  = { allow = { has_age_ability = chi_ability_4 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_6  = { allow = { has_age_ability = chi_ability_5 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_7  = { allow = { has_age_ability = chi_ability_6 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_8  = { allow = { has_age_ability = chi_ability_7 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_9  = { allow = { has_age_ability = chi_ability_8 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_10 = { allow = { has_age_ability = chi_ability_9 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        chi_ability_11 = { allow = { has_age_ability = chi_ability_10 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
     }
 }
 zetan_assault = {
@@ -212,71 +102,16 @@ zetan_assault = {
     objectives = { } 
     
     abilities = {
-        zet_wasteland_administration = {
-            modifier = {
-                administrative_efficiency = 0.1
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_territorial_government = {
-            modifier = {
-                governing_capacity_modifier = 0.2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_political_propaganda = {
-            modifier = {
-                all_estate_loyalty_equilibrium = 0.2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_warhawk_rhetoric = {
-            modifier = {
-                province_warscore_cost = -0.2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_wasteland_diplomacy = {
-            modifier = {
-                improve_relation_modifier = 0.2
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_naval_ambition = {
-            modifier = {
-                navy_tradition = 2.0
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_military_ambition = {
-            modifier = {
-                army_tradition = 2.0
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_additional_diplomats = {
-            modifier = {
-                diplomats = 3
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_additional_missionaries = {
-            modifier = {
-                missionaries = 3
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_additional_merchants = {
-            modifier = {
-                merchants = 3
-            }
-            ai_will_do = { factor = 1 }
-        }
-        zet_additional_settlers = {
-            modifier = {
-                colonists = 3
-            }
-            ai_will_do = { factor = 1 }
-        }
+        zet_ability_1  = { effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_2  = { allow = { has_age_ability = zet_ability_1 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_3  = { allow = { has_age_ability = zet_ability_2 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_4  = { allow = { has_age_ability = zet_ability_3 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_5  = { allow = { has_age_ability = zet_ability_4 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_6  = { allow = { has_age_ability = zet_ability_5 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_7  = { allow = { has_age_ability = zet_ability_6 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_8  = { allow = { has_age_ability = zet_ability_7 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_9  = { allow = { has_age_ability = zet_ability_8 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_10 = { allow = { has_age_ability = zet_ability_9 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
+        zet_ability_11 = { allow = { has_age_ability = zet_ability_10 } effect = { country_event = { id = fallout_age_bonus.100 } } ai_will_do = { factor = 1 } }
     }
 }

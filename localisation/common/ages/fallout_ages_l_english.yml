@@ -23,38 +23,733 @@
  #-------------------------------------
  # Abilities
  #-------------------------------------
- gwa_wasteland_administration: "Centralized Administration"
- gwa_territorial_government: "Territorial Governors"
- gwa_political_propaganda: "Political Propaganda"
- gwa_warhawk_rhetoric: "Warhawk Rhetoric"
- gwa_wasteland_diplomacy: "Wasteland Diplomacy"
- gwa_naval_ambition: "Naval Ambition"
- gwa_military_ambition: "Military Ambition"
- gwa_additional_diplomats: "Additional Diplomats"
- gwa_additional_missionaries: "Additional Missionaries"
- gwa_additional_merchants: "Additional Merchants"
- gwa_additional_settlers: "Additional Settlers"
+ gwa_ability_1: "Innovation I"
+ gwa_ability_2: "Innovation II"
+ gwa_ability_3: "Innovation III"
+ gwa_ability_4: "Innovation IV"
+ gwa_ability_5: "Innovation V"
+ gwa_ability_6: "Innovation VI"
+ gwa_ability_7: "Innovation VII"
+ gwa_ability_8: "Innovation VIII"
+ gwa_ability_9: "Innovation IX"
+ gwa_ability_10: "Innovation X"
+ gwa_ability_11: "Innovation XI"
  
- chi_wasteland_administration: "Centralized Administration"
- chi_territorial_government: "Territorial Governors"
- chi_political_propaganda: "Political Propaganda"
- chi_warhawk_rhetoric: "Warhawk Rhetoric"
- chi_wasteland_diplomacy: "Wasteland Diplomacy"
- chi_naval_ambition: "Naval Ambition"
- chi_military_ambition: "Military Ambition"
- chi_additional_diplomats: "Additional Diplomats"
- chi_additional_missionaries: "Additional Missionaries"
- chi_additional_merchants: "Additional Merchants"
- chi_additional_settlers: "Additional Settlers"
+ chi_ability_1: "Innovation I"
+ chi_ability_2: "Innovation II"
+ chi_ability_3: "Innovation III"
+ chi_ability_4: "Innovation IV"
+ chi_ability_5: "Innovation V"
+ chi_ability_6: "Innovation VI"
+ chi_ability_7: "Innovation VII"
+ chi_ability_8: "Innovation VIII"
+ chi_ability_9: "Innovation IX"
+ chi_ability_10: "Innovation X"
+ chi_ability_11: "Innovation XI"
  
- zet_wasteland_administration: "Centralized Administration"
- zet_territorial_government: "Territorial Governors"
- zet_political_propaganda: "Political Propaganda"
- zet_warhawk_rhetoric: "Warhawk Rhetoric"
- zet_wasteland_diplomacy: "Wasteland Diplomacy"
- zet_naval_ambition: "Naval Ambition"
- zet_military_ambition: "Military Ambition"
- zet_additional_diplomats: "Additional Diplomats"
- zet_additional_missionaries: "Additional Missionaries"
- zet_additional_merchants: "Additional Merchants"
- zet_additional_settlers: "Additional Settlers"
+ zet_ability_1: "Innovation I"
+ zet_ability_2: "Innovation II"
+ zet_ability_3: "Innovation III"
+ zet_ability_4: "Innovation IV"
+ zet_ability_5: "Innovation V"
+ zet_ability_6: "Innovation VI"
+ zet_ability_7: "Innovation VII"
+ zet_ability_8: "Innovation VIII"
+ zet_ability_9: "Innovation IX"
+ zet_ability_10: "Innovation X"
+ zet_ability_11: "Innovation XI"
+ 
+ #-----------------------------------
+ # Age Bonus Events
+ #-----------------------------------
+ fallout_age_bonus.102.title: "Return to Category List"
+ fallout_age_bonus.102.desc: ""
+ fallout_age_bonus.102.option.a: ""
+ 
+ fallout_age_bonus.100.title: "Wasteland Innovation"
+ fallout_age_bonus.100.desc: "You may select a innovation from the following categories.\nYou may only select one innovation from each category per age."
+ fallout_age_bonus.100.option.a: "Administrative"
+ fallout_age_bonus.100.option.b: "Court"
+ fallout_age_bonus.100.option.c: "Economic"
+ fallout_age_bonus.100.option.d: "Technology"
+ fallout_age_bonus.100.option.e: "Societal"
+ fallout_age_bonus.100.option.f: "Diplomatic"
+ fallout_age_bonus.100.option.g: "Espionage"
+ fallout_age_bonus.100.option.h: "Colonial"
+ fallout_age_bonus.100.option.i: "Army"
+ fallout_age_bonus.100.option.j: "Navy"
+ fallout_age_bonus.100.option.k: "Actions"
+ 
+ AGE_BONUS_CATEGORY_LIMIT_TT: "This category will be hidden until the next age."
+ 
+ fallout_age_bonus.1.title: "Innovation: Adminstrative"
+ fallout_age_bonus.1.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.1.option.age_bonus_core_creation: "Core Creation"
+ fallout_age_bonus.1.option.age_bonus_administrative_efficiency: "Administrative Efficiency"
+ fallout_age_bonus.1.option.age_bonus_max_absolutism: "Max Aboslutism"
+ fallout_age_bonus.1.option.age_bonus_governing_capacity_modifier: "Governing Capacity Modifier"
+ fallout_age_bonus.1.option.age_bonus_reform_progress_growth: "Reform Progress Growth"
+ fallout_age_bonus.1.option.age_bonus_global_monthly_devastation: "Global Monthly Devastation"
+ fallout_age_bonus.1.option.age_bonus_legitimacy: "Legitimacy"
+ fallout_age_bonus.1.option.age_bonus_overextension_impact_modifier: "Overextension Impact Modifier"
+ fallout_age_bonus.1.option.age_bonus_state_governing_cost: "State Governing Cost"
+ fallout_age_bonus.1.option.age_bonus_global_prosperity_growth: "Global Prosperity Growth"
+ fallout_age_bonus.1.option.age_bonus_ignore_coring_distance: "Ignore Coring Distance"
+ fallout_age_bonus.1.option.return: "Return"
+ 
+ fallout_age_bonus.2.title: "Innovation: Court"
+ fallout_age_bonus.2.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.2.option.age_bonus_yearly_corruption: "Yearly Corruption"
+ fallout_age_bonus.2.option.age_bonus_prestige_decay: "Prestige Decay"
+ fallout_age_bonus.2.option.age_bonus_all_estate_loyalty_equilibrium: "Estate Loyalty Equilibrium"
+ fallout_age_bonus.2.option.age_bonus_all_estate_possible_privileges: "Possible Estate Privileges"
+ fallout_age_bonus.2.option.age_bonus_estate_interaction_cooldown_modifier: "Estate Interaction Cooldown Modifier"
+ fallout_age_bonus.2.option.age_bonus_all_estate_influence_modifier: "Estate Influence Modifier"
+ fallout_age_bonus.2.option.age_bonus_adm_advisor_cost: "Administrative Advisor Cost"
+ fallout_age_bonus.2.option.age_bonus_dip_advisor_cost: "Diplomatic Advisor Cost"
+ fallout_age_bonus.2.option.age_bonus_mil_advisor_cost: "Military Advisor Cost"
+ fallout_age_bonus.2.option.age_bonus_advisor_pool: "Advisor Pool"
+ fallout_age_bonus.2.option.return: "Return"
+ 
+ fallout_age_bonus.3.title: "Innovation: Economic"
+ fallout_age_bonus.3.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.3.option.age_bonus_production_efficiency: "Production Efficiency"
+ fallout_age_bonus.3.option.age_bonus_development_cost: "Development Cost"
+ fallout_age_bonus.3.option.age_bonus_interest: "Loan Interest"
+ fallout_age_bonus.3.option.age_bonus_inflation_reduction: "Inflation Reduction"
+ fallout_age_bonus.3.option.age_bonus_global_trade_goods_size_modifier: "Global Trade Goods Size Modifier"
+ fallout_age_bonus.3.option.age_bonus_trade_efficiency: "Trade Efficiency"
+ fallout_age_bonus.3.option.age_bonus_global_trade_power: "Global Trade Power"
+ fallout_age_bonus.3.option.age_bonus_global_tax_modifier: "Global Tax Modifier"
+ fallout_age_bonus.3.option.age_bonus_trade_steering: "Trade Steering"
+ fallout_age_bonus.3.option.age_bonus_merchants: "Merchants"
+ fallout_age_bonus.3.option.age_bonus_global_allowed_num_of_buildings: "Allowed Number of Buildings"
+ fallout_age_bonus.3.option.age_bonus_global_allowed_num_of_manufactories: "Allowed Number of Manufactories"
+ fallout_age_bonus.3.option.age_bonus_build_cost: "Build Cost"
+ fallout_age_bonus.3.option.age_bonus_build_time: "Build Time"
+ fallout_age_bonus.3.option.age_bonus_global_ship_trade_power: "Ship Trade Power"
+ fallout_age_bonus.3.option.age_bonus_privateer_efficiency: "Privateer Efficiency"
+ fallout_age_bonus.3.option.age_bonus_state_maintenance_modifier: "State Maintenance Modifier"
+ fallout_age_bonus.3.option.age_bonus_free_concentrate_development: "Free Concentrate Development"
+ fallout_age_bonus.3.option.return: "Return"
+ 
+ fallout_age_bonus.4.title: "Innovation: Technology"
+ fallout_age_bonus.4.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.4.option.age_bonus_idea_cost: "Idea Cost"
+ fallout_age_bonus.4.option.age_bonus_adm_tech_cost_modifier: "Administrative Technology Cost Modifier"
+ fallout_age_bonus.4.option.age_bonus_dip_tech_cost_modifier: "Diplomatic Technology Cost Modifier"
+ fallout_age_bonus.4.option.age_bonus_mil_tech_cost_modifier: "Military Technology Cost Modifier"
+ fallout_age_bonus.4.option.age_bonus_free_adm_policy: "Free Administrative Policy"
+ fallout_age_bonus.4.option.age_bonus_free_dip_policy: "Free Diplomatic Policy"
+ fallout_age_bonus.4.option.age_bonus_free_mil_policy: "Free Military Policy"
+ fallout_age_bonus.4.option.age_bonus_yearly_innovativeness: "Yearly Innovativeness"
+ fallout_age_bonus.4.option.age_bonus_global_institution_spread: "Global Institution Spread"
+ fallout_age_bonus.4.option.age_bonus_possible_policy: "Possible Policy"
+ fallout_age_bonus.4.option.return: "Return"
+ 
+ fallout_age_bonus.5.title: "Innovation: Societal"
+ fallout_age_bonus.5.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.5.option.age_bonus_global_autonomy: "Global Autonomy"
+ fallout_age_bonus.5.option.age_bonus_years_of_nationalism: "Years of Nationalism"
+ fallout_age_bonus.5.option.age_bonus_min_autonomy_in_territories: "Minimum Autonomy in Territories"
+ fallout_age_bonus.5.option.age_bonus_global_unrest: "Global Unrest"
+ fallout_age_bonus.5.option.age_bonus_culture_conversion_cost: "Culture Conversion Cost"
+ fallout_age_bonus.5.option.age_bonus_num_accepted_cultures: "Number of Accepted Cultures"
+ fallout_age_bonus.5.option.age_bonus_stability_cost_modifier: "Stability Cost Modifier"
+ fallout_age_bonus.5.option.age_bonus_missionaries: "Missionaries"
+ fallout_age_bonus.5.option.age_bonus_global_missionary_strength: "Global Missionary Strength"
+ fallout_age_bonus.5.option.age_bonus_warscore_cost_vs_other_religion: "Warscore Cost vs. Other Religion"
+ fallout_age_bonus.5.option.age_bonus_religious_unity: "Religious Unity"
+ fallout_age_bonus.5.option.age_bonus_missionary_maintenance_cost: "Missionary Maintenance Cost"
+ fallout_age_bonus.5.option.age_bonus_tolerance_own: "Tolerance of Own Faith"
+ fallout_age_bonus.5.option.age_bonus_tolerance_heathen: "Tolerance of Heathens"
+ fallout_age_bonus.5.option.age_bonus_tolerance_heretic: "Tolerance of Heretics"
+ fallout_age_bonus.5.option.age_bonus_prestige_per_development_from_conversion: "Prestige per Development from Conversion"
+ fallout_age_bonus.5.option.age_bonus_papal_influence: "Fel Influence"
+ fallout_age_bonus.5.option.age_bonus_monthly_church_power: "Monthly Religious Power"
+ fallout_age_bonus.5.option.age_bonus_monthly_fervor_increase: "Monthly Fervor Increase"
+ fallout_age_bonus.5.option.age_bonus_yearly_harmony: "Yearly Harmony"
+ fallout_age_bonus.5.option.age_bonus_monthly_piety_gain: "Monthly Purity Gain"
+ fallout_age_bonus.5.option.age_bonus_monthly_piety_loss: "Monthly Purity Loss"
+ fallout_age_bonus.5.option.age_bonus_monthly_karma_gain: "Monthly Elemental Attunement Gain"
+ fallout_age_bonus.5.option.age_bonus_monthly_karma_loss: "Monthly Elemental Attunement Loss"
+ fallout_age_bonus.5.option.age_bonus_yearly_patriarch_authority: "Yearly Strength of Will"
+ fallout_age_bonus.5.option.return: "Return"
+ 
+ fallout_age_bonus.6.title: "Innovation: Diplomatic"
+ fallout_age_bonus.6.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.6.option.age_bonus_diplomatic_annexation_cost: "Diplomatic Annexation Cost"
+ fallout_age_bonus.6.option.age_bonus_province_warscore_cost: "Province Warscore Cost"
+ fallout_age_bonus.6.option.age_bonus_unjustified_demands: "Unjustified Demands"
+ fallout_age_bonus.6.option.age_bonus_ae_impact: "Aggressive Expansion Impact"
+ fallout_age_bonus.6.option.age_bonus_diplomats: "Diplomats"
+ fallout_age_bonus.6.option.age_bonus_diplomatic_reputation: "Diplomatic Reputation"
+ fallout_age_bonus.6.option.age_bonus_diplomatic_upkeep: "Diplomatic Relations"
+ fallout_age_bonus.6.option.age_bonus_improve_relation_modifier: "Improve Relations Modifier"
+ fallout_age_bonus.6.option.age_bonus_vassal_income: "Vassal Income"
+ fallout_age_bonus.6.option.age_bonus_reduced_liberty_desire: "Reduced Liberty Desire"
+ fallout_age_bonus.6.option.age_bonus_envoy_travel_time: "Envoy Travel Time"
+ fallout_age_bonus.6.option.age_bonus_reduced_stab_impacts: "Reduced Stability Loss"
+ fallout_age_bonus.6.option.return: "Return"
+ 
+ fallout_age_bonus.7.title: "Innovation: Espionage"
+ fallout_age_bonus.7.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.7.option.age_bonus_spy_offence: "Spy Offence"
+ fallout_age_bonus.7.option.age_bonus_global_spy_defence: "Spy Defence"
+ fallout_age_bonus.7.option.age_bonus_spy_action_cost_modifier: "Espionage Action Cost Modifier"
+ fallout_age_bonus.7.option.age_bonus_rebel_support_efficiency: "Rebel Support Efficiency"
+ fallout_age_bonus.7.option.age_bonus_global_rebel_suppression_efficiency: "Rebel Suppression Efficiency"
+ fallout_age_bonus.7.option.age_bonus_discovered_relations_impact: "Discovered Relations Impact"
+ fallout_age_bonus.7.option.age_bonus_can_chain_claim: "Can Chain Claims"
+ fallout_age_bonus.7.option.age_bonus_can_claim_states: "Can Claim States"
+ fallout_age_bonus.7.option.return: "Return"
+ 
+ fallout_age_bonus.8.title: "Innovation: Colonial"
+ fallout_age_bonus.8.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.8.option.age_bonus_colonists: "Colonists"
+ fallout_age_bonus.8.option.age_bonus_colonist_placement_chance: "Colonist Placement Chance"
+ fallout_age_bonus.8.option.age_bonus_global_colonial_growth: "Colonial Growth"
+ fallout_age_bonus.8.option.age_bonus_colony_cost_modifier: "Colony Cost Modifier"
+ fallout_age_bonus.8.option.age_bonus_colony_development_boost: "Colony Development Boost"
+ fallout_age_bonus.8.option.age_bonus_native_uprising_chance: "Native Uprising Chance"
+ fallout_age_bonus.8.option.age_bonus_native_assimilation: "Native Assimilation"
+ fallout_age_bonus.8.option.age_bonus_range: "Colonial Range"
+ fallout_age_bonus.8.option.age_bonus_global_tariffs: "Global Tariffs"
+ fallout_age_bonus.8.option.age_bonus_treasure_fleet_income: "Treasure Fleet Income"
+ fallout_age_bonus.8.option.age_bonus_idea_claim_colonies: "Claim Colonies"
+ fallout_age_bonus.8.option.age_bonus_may_establish_frontier: "May Establish Frontiers"
+ fallout_age_bonus.8.option.return: "Return"
+ 
+ fallout_age_bonus.9.title: "Innovation: Army"
+ fallout_age_bonus.9.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.9.option.age_bonus_army_tradition: "Army Tradition"
+ fallout_age_bonus.9.option.age_bonus_yearly_army_professionalism: "Yearly Army Professionalism"
+ fallout_age_bonus.9.option.age_bonus_general_cost: "General Cost"
+ fallout_age_bonus.9.option.age_bonus_global_regiment_cost: "Regiment Cost"
+ fallout_age_bonus.9.option.age_bonus_war_exhaustion: "War Exhaustion"
+ fallout_age_bonus.9.option.age_bonus_raze_power_gain: "Raze Power Gain"
+ fallout_age_bonus.9.option.age_bonus_reinforce_cost_modifier: "Reinforce Cost Modifier"
+ fallout_age_bonus.9.option.age_bonus_global_manpower_modifier: "Global Manpower Modifier"
+ fallout_age_bonus.9.option.age_bonus_manpower_recovery_speed: "Manpower Recovery Speed"
+ fallout_age_bonus.9.option.age_bonus_land_forcelimit_modifier: "Land Forcelimit Modifier"
+ fallout_age_bonus.9.option.age_bonus_land_maintenance_modifier: "Land Maintenance Modifier"
+ fallout_age_bonus.9.option.age_bonus_mercenary_cost: "Mercenary Cost"
+ fallout_age_bonus.9.option.age_bonus_merc_maintenance_modifier: "Mercenary Maintenance Modifier"
+ fallout_age_bonus.9.option.age_bonus_fort_maintenance_modifier: "Fort Maintenance Modifier"
+ fallout_age_bonus.9.option.age_bonus_loot_amount: "Loot Amount"
+ fallout_age_bonus.9.option.age_bonus_artillery_level_modifier: "Artillery Level Modifier"
+ fallout_age_bonus.9.option.age_bonus_own_territory_dice_roll_bonus: "Own Territory Dice Roll Bonus"
+ fallout_age_bonus.9.option.age_bonus_movement_speed: "Movement Speed"
+ fallout_age_bonus.9.option.age_bonus_defensiveness: "Defensiveness"
+ fallout_age_bonus.9.option.age_bonus_recover_army_morale_speed: "Army Morale Recovery Speed"
+ fallout_age_bonus.9.option.age_bonus_land_attrition: "Land Attrition"
+ fallout_age_bonus.9.option.age_bonus_global_supply_limit_modifier: "Global Supply Limit Modifier"
+ fallout_age_bonus.9.option.age_bonus_attack_bonus_in_capital_terrain: "Attack Bonus in Capital Terrain"
+ fallout_age_bonus.9.option.age_bonus_can_bypass_forts: "Can Bypass Forts"
+ fallout_age_bonus.9.option.return: "Return"
+ 
+ fallout_age_bonus.10.title: "Innovation: Navy"
+ fallout_age_bonus.10.desc: "Select which innovation you want to claim from the options below."
+ fallout_age_bonus.10.option.age_bonus_navy_tradition: "Navy Tradition"
+ fallout_age_bonus.10.option.age_bonus_global_ship_cost: "Global Ship Cost"
+ fallout_age_bonus.10.option.age_bonus_naval_forcelimit_modifier: "Naval Forcelimit Modifier"
+ fallout_age_bonus.10.option.age_bonus_naval_maintenance_modifier: "Naval Maintenance Modifier"
+ fallout_age_bonus.10.option.age_bonus_global_sailors_modifier: "Global Sailors Modifier"
+ fallout_age_bonus.10.option.age_bonus_sailor_maintenance_modifer: "Sailor Maintenance Modifier"
+ fallout_age_bonus.10.option.age_bonus_sailors_recovery_speed: "Sailor Recovery Speed"
+ fallout_age_bonus.10.option.age_bonus_admiral_cost: "Admiral Cost"
+ fallout_age_bonus.10.option.age_bonus_coast_raid_range: "Coastal Raid Range"
+ fallout_age_bonus.10.option.age_bonus_capture_ship_chance: "Capture Ship Chance"
+ fallout_age_bonus.10.option.age_bonus_own_coast_naval_combat_bonus: "Own Coast Naval Combat Bonus"
+ fallout_age_bonus.10.option.age_bonus_global_naval_engagement: "Global Naval Engagement"
+ fallout_age_bonus.10.option.age_bonus_recover_navy_morale_speed: "Naval Morale Recovery Speed"
+ fallout_age_bonus.10.option.age_bonus_blockade_efficiency: "Blockade Efficiency"
+ fallout_age_bonus.10.option.age_bonus_naval_attrition: "Naval Attrition"
+ fallout_age_bonus.10.option.age_bonus_global_naval_barrage_cost: "Naval Barrage Cost"
+ fallout_age_bonus.10.option.age_bonus_movement_speed_onto_off_boat_modifier: "Disembarkment Speed"
+ fallout_age_bonus.10.option.age_bonus_landing_penalty: "Landing Penalty"
+ fallout_age_bonus.10.option.age_bonus_global_ship_repair: "Global Ship Repair"
+ fallout_age_bonus.10.option.age_bonus_max_flagships: "Max Flagships"
+ fallout_age_bonus.10.option.age_bonus_may_perform_slave_raid: "May Perform Slave Raid"
+ fallout_age_bonus.10.option.age_bonus_sea_repair: "May Repair at Sea"
+ fallout_age_bonus.10.option.return: "Return"
+ 
+ fallout_age_bonus.11.title: "Innovation: Action"
+ fallout_age_bonus.11.desc: "Select which innovative action want to use from the options below."
+ fallout_age_bonus.11.option.golden_age: "Reset Golden Age"
+ fallout_age_bonus.11.option.inspire_ruler: "Inspire Ruler"
+ fallout_age_bonus.11.option.prestige: "Accrue Prestige"
+ fallout_age_bonus.11.option.army_tradition: "Accrue Army Tradition"
+ fallout_age_bonus.11.option.navy_tradition: "Accrue Navy Tradition"
+ fallout_age_bonus.11.option.cash: "Accrue Gold"
+ fallout_age_bonus.11.option.manpower: "Accrue Manpower"
+ fallout_age_bonus.11.option.return: "Return"
+ 
+ #----------------------------
+ # Modifiers
+ #----------------------------
+ # Administrative
+ age_bonus_core_creation: "Card: Core Creation"
+ desc_age_bonus_core_creation: ""
+ 
+ age_bonus_administrative_efficiency: "Card: Administrative Efficiency"
+ desc_age_bonus_administrative_efficiency: ""
+ 
+ age_bonus_max_absolutism: "Card: Max Absolutism"
+ desc_age_bonus_max_absolutism: ""
+ 
+ age_bonus_governing_capacity_modifier: "Card: Governing Capacity Modifier"
+ desc_age_bonus_governing_capacity_modifier: ""
+ 
+ age_bonus_reform_progress_growth: "Card: Reform Progress Growth"
+ desc_age_bonus_reform_progress_growth: ""
+ 
+ age_bonus_global_monthly_devastation: "Card: Global Monthly Devastation"
+ desc_age_bonus_global_monthly_devastation: ""
+ 
+ age_bonus_legitimacy: "Card: Legitimacy"
+ desc_age_bonus_legitimacy: ""
+ 
+ age_bonus_overextension_impact_modifier: "Card: Overextension Impact Modifier"
+ desc_age_bonus_overextension_impact_modifier: ""
+ 
+ age_bonus_state_governing_cost: "Card: State Governing Cost"
+ desc_age_bonus_state_governing_cost: ""
+ 
+ age_bonus_global_prosperity_growth: "Card: Global Prosperity Growth"
+ desc_age_bonus_global_prosperity_growth: ""
+ 
+ age_bonus_ignore_coring_distance: "Card: Ignore Coring Distance"
+ desc_age_bonus_ignore_coring_distance: ""
+ 
+ # Court
+ age_bonus_yearly_corruption: "Card: Yearly Corruption"
+ desc_age_bonus_yearly_corruption: ""
+ 
+ age_bonus_adm_advisor_cost: "Card: Administrative Advisor Cost"
+ desc_age_bonus_adm_advisor_cost: ""
+ 
+ age_bonus_prestige_decay: "Card: Prestige Decay"
+ desc_age_bonus_prestige_decay: ""
+ 
+ age_bonus_all_estate_loyalty_equilibrium: "Card: Estate Loyalty Equilibrium"
+ desc_age_bonus_all_estate_loyalty_equilibrium: ""
+ 
+ age_bonus_all_estate_possible_privileges: "Card: Possible Estate Privileges"
+ desc_age_bonus_all_estate_possible_privileges: ""
+ 
+ age_bonus_estate_interaction_cooldown_modifier: "Card: Estate Interaction Cooldown Modifier"
+ desc_age_bonus_estate_interaction_cooldown_modifier: ""
+ 
+ age_bonus_all_estate_influence_modifier: "Card: Estate Influence Modifier"
+ desc_age_bonus_all_estate_influence_modifier: ""
+ 
+ age_bonus_dip_advisor_cost: "Card: Diplomatic Advisor Cost"
+ desc_age_bonus_dip_advisor_cost: ""
+ 
+ age_bonus_mil_advisor_cost: "Card: Military Advisor Cost"
+ desc_age_bonus_mil_advisor_cost: ""
+ 
+ age_bonus_advisor_pool: "Card: Advisor Pool"
+ desc_age_bonus_advisor_pool: ""
+ 
+ # Economic
+ age_bonus_production_efficiency: "Card: Production Efficiency"
+ desc_age_bonus_production_efficiency: ""
+ 
+ age_bonus_development_cost: "Card: Development Cost"
+ desc_age_bonus_development_cost: ""
+ 
+ age_bonus_interest: "Card: Loan Interest"
+ desc_age_bonus_interest: ""
+ 
+ age_bonus_inflation_reduction: "Card: Inflation Reduction"
+ desc_age_bonus_inflation_reduction: ""
+ 
+ age_bonus_global_trade_goods_size_modifier: "Card: Global Trade Goods Size Modifier"
+ desc_age_bonus_global_trade_goods_size_modifier: ""
+ 
+ age_bonus_trade_efficiency: "Card: Trade Efficiency"
+ desc_age_bonus_trade_efficiency: ""
+ 
+ age_bonus_global_trade_power: "Card: Global Trade Power"
+ desc_age_bonus_global_trade_power: ""
+ 
+ age_bonus_global_tax_modifier: "Card: Global Tax Modifier"
+ desc_age_bonus_global_tax_modifier: ""
+ 
+ age_bonus_trade_steering: "Card: Trade Steering"
+ desc_age_bonus_trade_steering: ""
+ 
+ age_bonus_merchants: "Card: Merchants"
+ desc_age_bonus_merchants: ""
+ 
+ age_bonus_global_allowed_num_of_buildings: "Card: Allowed Number of Buildings"
+ desc_age_bonus_global_allowed_num_of_buildings: ""
+ 
+ age_bonus_global_allowed_num_of_manufactories: "Card: Allowed Number of Manufactories"
+ desc_age_bonus_global_allowed_num_of_manufactories: ""
+ 
+ age_bonus_build_cost: "Card: Build Cost"
+ desc_age_bonus_build_cost: ""
+ 
+ age_bonus_build_time: "Card: Build Time"
+ desc_age_bonus_build_time: ""
+ 
+ age_bonus_global_ship_trade_power: "Card: Ship Trade Power"
+ desc_age_bonus_global_ship_trade_power: ""
+ 
+ age_bonus_privateer_efficiency: "Card: Privateer Efficiency"
+ desc_age_bonus_privateer_efficiency: ""
+ 
+ age_bonus_state_maintenance_modifier: "Card: State Maintenance Modifier"
+ desc_age_bonus_state_maintenance_modifier: ""
+ 
+ age_bonus_free_concentrate_development: "Card: Free Concentrate Development"
+ desc_age_bonus_free_concentrate_development: ""
+ 
+ # Technology
+ age_bonus_idea_cost: "Card: Idea Cost"
+ desc_age_bonus_idea_cost: ""
+ 
+ age_bonus_adm_tech_cost_modifier: "Card: Administrative Technology Cost Modifier"
+ desc_age_bonus_adm_tech_cost_modifier: ""
+ 
+ age_bonus_dip_tech_cost_modifier: "Card: Diplomatic Technology Cost Modifier"
+ desc_age_bonus_dip_tech_cost_modifier: ""
+ 
+ age_bonus_mil_tech_cost_modifier: "Card: Military Technology Cost Modifier"
+ desc_age_bonus_mil_tech_cost_modifier: ""
+ 
+ age_bonus_free_adm_policy: "Card: Free Administrative Policy"
+ desc_age_bonus_free_adm_policy: ""
+ 
+ age_bonus_free_dip_policy: "Card: Free Diplomatic Policy"
+ desc_age_bonus_free_dip_policy: ""
+ 
+ age_bonus_free_mil_policy: "Card: Free Military Policy"
+ desc_age_bonus_free_mil_policy: ""
+ 
+ age_bonus_yearly_innovativeness: "Card: Yearly Innovativeness"
+ desc_age_bonus_yearly_innovativeness: ""
+ 
+ age_bonus_global_institution_spread: "Card: Global Institution Spread"
+ desc_age_bonus_global_institution_spread: ""
+ 
+ age_bonus_possible_policy: "Card: Possible Policy"
+ desc_age_bonus_possible_policy: ""
+ 
+ # Societal
+ age_bonus_global_autonomy: "Card: Global Autonomy"
+ desc_age_bonus_global_autonomy: ""
+ 
+ age_bonus_years_of_nationalism: "Card: Years of Nationalism"
+ desc_age_bonus_years_of_nationalism: ""
+ 
+ age_bonus_min_autonomy_in_territories: "Card: Minimum Autonomy in Territories"
+ desc_age_bonus_min_autonomy_in_territories: ""
+ 
+ age_bonus_global_unrest: "Card: Global Unrest"
+ desc_age_bonus_global_unrest: ""
+ 
+ age_bonus_culture_conversion_cost: "Card: Culture Conversion Cost"
+ desC_age_bonus_culture_conversion_cost: ""
+ 
+ age_bonus_num_accepted_cultures: "Card: Number of Accepted Cultures"
+ desc_age_bonus_num_accepted_cultures: ""
+ 
+ age_bonus_stability_cost_modifier: "Card: Stability Cost Modifier"
+ desc_age_bonus_stability_cost_modifier: ""
+ 
+ age_bonus_missionaries: "Card: Missionaries"
+ desc_age_bonus_missionaries: ""
+ 
+ age_bonus_global_missionary_strength: "Card: Global Missionary Strength"
+ desc_age_bonus_global_missionary_strength: ""
+ 
+ age_bonus_warscore_cost_vs_other_religion: "Card: Warscore Cost vs. Other Religion"
+ desc_age_bonus_warscore_cost_vs_other_religion: ""
+ 
+ age_bonus_religious_unity: "Card: Religious Unity"
+ desc_age_bonus_religious_unity: ""
+ 
+ age_bonus_missionary_maintenance_cost: "Card: Missionary Maintenance Cost"
+ desc_age_bonus_missionary_maintenance_cost: ""
+ 
+ age_bonus_tolerance_own: "Card: Tolerance of Own Faith"
+ desc_age_bonus_tolerance_own: ""
+ 
+ age_bonus_tolerance_heathen: "Card: Tolerance of Heathens"
+ desc_age_bonus_tolerance_heathen: ""
+ 
+ age_bonus_tolerance_heretic: "Card: Tolerance of Heretics"
+ desc_age_bonus_tolerance_heretic: ""
+ 
+ age_bonus_prestige_per_development_from_conversion: "Card: Prestige per Development from Conversion"
+ desc_age_bonus_prestige_per_development_from_conversion: ""
+ 
+ age_bonus_papal_influence: "Card: Fel Influence"
+ desc_age_bonus_papal_influence: ""
+ 
+ age_bonus_monthly_church_power: "Card: Monthly Religious Power"
+ desc_age_bonus_monthly_church_power: ""
+ 
+ age_bonus_monthly_fervor_increase: "Card: Monthly Fervor Increase"
+ desc_age_bonus_monthly_fervor_increase: ""
+ 
+ age_bonus_yearly_harmony: "Card: Yearly Harmony"
+ desc_age_bonus_yearly_harmony: ""
+ 
+ age_bonus_monthly_piety_gain: "Card: Monthly Purity Gain"
+ desc_age_bonus_monthly_piety_gain: ""
+ 
+ age_bonus_monthly_piety_loss: "Card: Monthly Purity Loss"
+ desc_age_bonus_monthly_piety_loss: ""
+ 
+ age_bonus_monthly_karma_gain: "Card: Monthly Elemental Attunement Gain"
+ desc_age_bonus_monthly_karma_gain: ""
+ 
+ age_bonus_monthly_karma_loss: "Card: Monthly Elemental Attunement Loss"
+ desc_age_bonus_monthly_karma_loss: ""
+ 
+ age_bonus_yearly_patriarch_authority: "Card: Yearly Strength of Will"
+ desc_age_bonus_yearly_patriarch_authority: ""
+ 
+ # Diplomatic
+ age_bonus_diplomatic_annexation_cost: "Card: Diplomatic Annexation Cost"
+ desc_age_bonus_diplomatic_annexation_cost: ""
+ 
+ age_bonus_province_warscore_cost: "Card: Province Warscore Cost"
+ desc_age_bonus_province_warscore_cost: ""
+ 
+ age_bonus_unjustified_demands: "Card: Unjustified Demands"
+ desc_age_bonus_unjustified_demands: ""
+ 
+ age_bonus_ae_impact: "Card: Aggressive Expansion Impact"
+ desc_age_bonus_ae_impact: ""
+ 
+ age_bonus_diplomats: "Card: Diplomats"
+ desc_age_bonus_diplomats: ""
+ 
+ age_bonus_diplomatic_reputation: "Card: Diplomatic Reputation"
+ desc_age_bonus_diplomatic_reputation: ""
+ 
+ age_bonus_diplomatic_upkeep: "Card: Diplomatic Relations"
+ desc_age_bonus_diplomatic_upkeep: ""
+ 
+ age_bonus_improve_relation_modifier: "Card: Improve Relations Modifier"
+ desc_age_bonus_improve_relation_modifier: ""
+ 
+ age_bonus_vassal_income: "Card: Vassal Income"
+ desc_age_bonus_vassal_income: ""
+ 
+ age_bonus_reduced_liberty_desire: "Card: Reduced Liberty Desire"
+ desc_age_bonus_reduced_liberty_desire: ""
+ 
+ age_bonus_envoy_travel_time: "Card: Envoy Travel Time"
+ desc_age_bonus_envoy_travel_time: ""
+ 
+ age_bonus_reduced_stab_impacts: "Card: Reduced Stability Loss"
+ desc_age_bonus_reduced_stab_impacts: ""
+ 
+ # Espionage
+ age_bonus_spy_offence: "Card: Spy Offence"
+ desc_age_bonus_spy_offence: ""
+ 
+ age_bonus_global_spy_defence: "Card: Spy Defence"
+ desc_age_bonus_global_spy_defence: ""
+ 
+ age_bonus_spy_action_cost_modifier: "Card: Espionage Action Cost Modifier"
+ desc_age_bonus_spy_action_cost_modifier: ""
+ 
+ age_bonus_rebel_support_efficiency: "Card: Rebel Support Efficiency"
+ desc_age_bonus_rebel_support_efficiency: ""
+ 
+ age_bonus_global_rebel_suppression_efficiency: "Card: Rebel Suppression Efficiency"
+ desc_age_bonus_global_rebel_suppression_efficiency: ""
+ 
+ age_bonus_discovered_relations_impact: "Card: Discovered Relations Impact"
+ desc_age_bonus_discovered_relations_impact: ""
+ 
+ age_bonus_can_chain_claim: "Card: Can Chain Claim"
+ desc_age_bonus_can_chain_claim: ""
+ 
+ age_bonus_can_claim_states: "Card: Can Claim States"
+ desc_age_bonus_can_claim_states: ""
+ 
+ # Colonial
+ age_bonus_colonists: "Card: Colonists"
+ desc_age_bonus_colonists: ""
+ 
+ age_bonus_colonist_placement_chance: "Card: Colonist Placement Chance"
+ desc_age_bonus_colonist_placement_chance: ""
+ 
+ age_bonus_global_colonial_growth: "Card: Colonial Growth"
+ desc_age_bonus_global_colonial_growth: ""
+ 
+ age_bonus_colony_cost_modifier: "Card: Colony Cost Modifier"
+ desc_age_bonus_colony_cost_modifier: ""
+ 
+ age_bonus_colony_development_boost: "Card: Colony Development Boost"
+ desc_age_bonus_colony_development_boost: ""
+ 
+ age_bonus_native_uprising_chance: "Card: Native Uprising Chance"
+ desc_age_bonus_native_uprising_chance: ""
+ 
+ age_bonus_native_assimilation: "Card: Native Assimilation"
+ desc_age_bonus_native_assimilation: ""
+ 
+ age_bonus_range: "Card: Colonial Range"
+ desc_age_bonus_range: ""
+ 
+ age_bonus_global_tariffs: "Card: Global Tariffs"
+ desc_age_bonus_global_tariffs: ""
+ 
+ age_bonus_treasure_fleet_income: "Card: Treasure Fleet Income"
+ desc_age_bonus_treasure_fleet_income: ""
+ 
+ age_bonus_idea_claim_colonies: "Card: Claim Colonies"
+ desc_age_bonus_idea_claim_colonies: ""
+ 
+ age_bonus_may_establish_frontier: "Card: May Establish Frontiers"
+ desc_age_bonus_may_establish_frontier: ""
+ 
+ # Military
+ age_bonus_army_tradition: "Card: Army Tradition"
+ desc_age_bonus_army_tradition: ""
+ 
+ age_bonus_yearly_army_professionalism: "Card: Yearly Army Professionalism"
+ desc_age_bonus_yearly_army_professionalism: ""
+ 
+ age_bonus_general_cost: "Card: General Cost"
+ desc_age_bonus_general_cost: ""
+ 
+ age_bonus_global_regiment_cost: "Card: Regiment Cost"
+ desc_age_bonus_global_regiment_cost: ""
+ 
+ age_bonus_war_exhaustion: "Card: War Exhaustion"
+ desc_age_bonus_war_exhaustion: ""
+ 
+ age_bonus_raze_power_gain: "Card: Raze Power Gain"
+ desc_age_bonus_raze_power_gain: ""
+ 
+ age_bonus_reinforce_cost_modifier: "Card: Reinforce Cost Modifier"
+ desc_age_bonus_reinforce_cost_modifier: ""
+ 
+ age_bonus_global_manpower_modifier: "Card: Global Manpower Modifier"
+ desc_age_bonus_global_manpower_modifier: ""
+ 
+ age_bonus_manpower_recovery_speed: "Card: Manpower Recovery Speed"
+ desc_age_bonus_manpower_recovery_speed: ""
+ 
+ age_bonus_land_forcelimit_modifier: "Card: Land Forcelimit Modifier"
+ desc_age_bonus_land_forcelimit_modifier: ""
+ 
+ age_bonus_land_maintenance_modifier: "Card: Land Maintenance Modifier"
+ desc_age_bonus_land_maintenance_modifier: ""
+ 
+ age_bonus_mercenary_cost: "Card: Mercenary Cost"
+ desc_age_bonus_mercenary_cost: ""
+ 
+ age_bonus_merc_maintenance_modifier: "Card: Mercenary Maintenance Modifier"
+ desc_age_bonus_merc_maintenance_modifier: ""
+ 
+ age_bonus_fort_maintenance_modifier: "Card: Fort Maintenance Modifier"
+ desc_age_bonus_fort_maintenance_modifier: ""
+ 
+ age_bonus_loot_amount: "Card: Loot Amount"
+ desc_age_bonus_loot_amount: ""
+ 
+ age_bonus_artillery_level_modifier: "Card: Artillery Level Modifier"
+ desc_age_bonus_artillery_level_modifier: ""
+ 
+ age_bonus_own_territory_dice_roll_bonus: "Card: Own Territory Dice Roll Bonus"
+ desc_age_bonus_own_territory_dice_roll_bonus: ""
+ 
+ age_bonus_movement_speed: "Card: Movement Speed"
+ desc_age_bonus_movement_speed: ""
+ 
+ age_bonus_defensiveness: "Card: Defensiveness"
+ desc_age_bonus_defensiveness: ""
+ 
+ age_bonus_recover_army_morale_speed: "Card: Army Morale Recovery Speed"
+ desc_age_bonus_recover_army_morale_speed: ""
+ 
+ age_bonus_land_attrition: "Card: Land Attrition"
+ desc_age_bonus_land_attrition: ""
+ 
+ age_bonus_global_supply_limit_modifier: "Card: Global Supply Limit Modifier"
+ desc_age_bonus_global_supply_limit_modifier: ""
+ 
+ age_bonus_attack_bonus_in_capital_terrain: "Card: Attack Bonus in Capital Terrain"
+ desc_age_bonus_attack_bonus_in_capital_terrain: ""
+ 
+ age_bonus_can_bypass_forts: "Card: Can Bypass Forts"
+ desc_age_bonus_can_bypass_forts: ""
+ 
+ # Naval
+ age_bonus_navy_tradition: "Card: Navy Tradition"
+ desc_age_bonus_navy_tradition: ""
+ 
+ age_bonus_global_ship_cost: "Card: Global Ship Cost"
+ desc_age_bonus_global_ship_cost: ""
+ 
+ age_bonus_naval_forcelimit_modifier: "Card: Naval Forcelimit Modifier"
+ desc_age_bonus_naval_forcelimit_modifier: ""
+ 
+ age_bonus_naval_maintenance_modifier: "Card: Naval Maintenance Modifier"
+ desc_age_bonus_naval_maintenance_modifier: ""
+ 
+ age_bonus_global_sailors_modifier: "Card: Global Sailors Modifier"
+ desc_age_bonus_global_sailors_modifier: ""
+ 
+ age_bonus_sailor_maintenance_modifer: "Card: Sailor Maintenance Modifier"
+ desc_age_bonus_sailor_maintenance_modifer: ""
+ 
+ age_bonus_sailors_recovery_speed: "Card: Sailor Recovery Speed"
+ desc_age_bonus_sailors_recovery_speed: ""
+ 
+ age_bonus_admiral_cost: "Card: Admiral Cost"
+ desc_age_bonus_admiral_cost: ""
+ 
+ age_bonus_coast_raid_range: "Card: Coastal Raid Range"
+ desc_age_bonus_coast_raid_range: ""
+ 
+ age_bonus_capture_ship_chance: "Card: Capture Ship Chance"
+ desc_age_bonus_capture_ship_chance: ""
+ 
+ age_bonus_own_coast_naval_combat_bonus: "Card: Own Coast Naval Combat Bonus"
+ desc_age_bonus_own_coast_naval_combat_bonus: ""
+ 
+ age_bonus_global_naval_engagement: "Card: Global Naval Engagement"
+ desc_age_bonus_global_naval_engagement: ""
+ 
+ age_bonus_recover_navy_morale_speed: "Card: Naval Morale Recovery Speed"
+ desc_age_bonus_recover_navy_morale_speed: ""
+ 
+ age_bonus_blockade_efficiency: "Card: Blockade Efficiency"
+ desc_age_bonus_blockade_efficiency: ""
+ 
+ age_bonus_naval_attrition: "Card: Naval Attrition"
+ desc_age_bonus_naval_attrition: ""
+ 
+ age_bonus_global_naval_barrage_cost: "Card: Naval Barrage Cost"
+ desc_age_bonus_global_naval_barrage_cost: ""
+ 
+ age_bonus_movement_speed_onto_off_boat_modifier: "Card: Disembarkment Speed"
+ desc_age_bonus_movement_speed_onto_off_boat_modifier: ""
+ 
+ age_bonus_landing_penalty: "Card: Landing Penalty"
+ desc_age_bonus_landing_penalty: ""
+ 
+ age_bonus_global_ship_repair: "Card: Global Ship Repair"
+ desc_age_bonus_global_ship_repair: ""
+ 
+ age_bonus_max_flagships: "Card: Max Flagships"
+ desc_age_bonus_max_flagships: ""
+ 
+ age_bonus_may_perform_slave_raid: "Card: May Perform Slave Raid"
+ desc_age_bonus_may_perform_slave_raid: ""
+ 
+ age_bonus_sea_repair: "Card: May Repair at Sea"
+ desc_age_bonus_sea_repair: ""

@@ -1,0 +1,3262 @@
+namespace = fallout_age_bonus
+
+# Age Bonus - Menu Selection
+country_event = {
+	id = fallout_age_bonus.100
+	title = fallout_age_bonus.100.title
+	desc = fallout_age_bonus.100.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    # Administrative
+	option = {
+		name = fallout_age_bonus.100.option.a
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_administrative }
+        }
+        
+        country_event = { id = fallout_age_bonus.1 }
+        
+        ai_chance = {
+            factor = 10
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_militarist
+            }
+        }
+	}
+    # Court
+    option = {
+		name = fallout_age_bonus.100.option.b
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_court }
+        }
+        
+        country_event = { id = fallout_age_bonus.2 }
+        
+        ai_chance = {
+            factor = 8
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_balanced
+            }
+        }
+	}
+    # Economic
+    option = {
+		name = fallout_age_bonus.100.option.c
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_economic }
+        }
+        
+        country_event = { id = fallout_age_bonus.3 }
+        
+        ai_chance = {
+            factor = 8
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_capitalist
+            }
+        }
+	}
+    # Technology
+    option = {
+		name = fallout_age_bonus.100.option.d
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_technology }
+        }
+        
+        country_event = { id = fallout_age_bonus.4 }
+        
+        ai_chance = {
+            factor = 8
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_balanced
+            }
+        }
+	}
+    # Societal
+    option = {
+		name = fallout_age_bonus.100.option.e
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_societal }
+        }
+        
+        country_event = { id = fallout_age_bonus.5 }
+        
+        ai_chance = {
+            factor = 6
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_balanced
+            }
+        }
+	}
+    # Diplomatic
+    option = {
+		name = fallout_age_bonus.100.option.f
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_diplomatic }
+        }
+        
+        country_event = { id = fallout_age_bonus.6 }
+        
+        ai_chance = {
+            factor = 8
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_diplomat
+            }
+        }
+	}
+    # Espionage
+    option = {
+		name = fallout_age_bonus.100.option.g
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_espionage }
+        }
+        
+        country_event = { id = fallout_age_bonus.7 }
+        
+        ai_chance = {
+            factor = 6
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_diplomat
+            }
+        }
+	}
+    # Colonial
+    option = {
+		name = fallout_age_bonus.100.option.h
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_colonial }
+        }
+        
+        country_event = { id = fallout_age_bonus.8 }
+        
+        ai_chance = {
+            factor = 6
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_colonialist
+            }
+            modifier = {
+                factor = 0
+                
+                NOT = { num_of_ports = 1 }
+            }
+            modifier = {
+                factor = 0
+                
+                NOT = { num_of_colonists = 1 }
+            }
+        }
+	}
+    # Army
+    option = {
+		name = fallout_age_bonus.100.option.i
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_army }
+        }
+        
+        country_event = { id = fallout_age_bonus.9 }
+        
+        ai_chance = {
+            factor = 8
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_militarist
+            }
+        }
+	}
+    # Navy
+    option = {
+		name = fallout_age_bonus.100.option.j
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_navy }
+        }
+        
+        country_event = { id = fallout_age_bonus.10 }
+        
+        ai_chance = {
+            factor = 6
+            
+            modifier = {
+                factor = 2
+                
+                personality = ai_militarist
+            }
+            modifier = {
+                factor = 0
+                
+                NOT = { num_of_ports = 1 }
+            }
+            modifier = {
+                factor = 2
+                
+                num_of_ports = 30
+            }
+        }
+	}
+    # Actions
+    option = {
+		name = fallout_age_bonus.100.option.k
+        
+        trigger = {
+            NOT = { has_country_flag = age_category_action }
+        }
+        
+        country_event = { id = fallout_age_bonus.11 }
+        
+        ai_chance = {
+            factor = 4
+        }
+	}
+}
+
+# Age Bonus - Menu Loop
+country_event = {
+	id = fallout_age_bonus.102
+	title = fallout_age_bonus.102.title
+	desc = fallout_age_bonus.102.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    hidden = yes
+    
+	option = {
+		name = fallout_age_bonus.102.option.a
+        
+        country_event = { id = fallout_age_bonus.100 }
+	}
+}
+
+# Age Bonus - Administration
+country_event = {
+	id = fallout_age_bonus.1
+	title = fallout_age_bonus.1.title
+	desc = fallout_age_bonus.1.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+	option = {
+		name = fallout_age_bonus.1.option.age_bonus_core_creation
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_core_creation }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_core_creation
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_administrative_efficiency
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_administrative_efficiency }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_administrative_efficiency
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_max_absolutism
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_max_absolutism }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_max_absolutism
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_governing_capacity_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_governing_capacity_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_governing_capacity_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_reform_progress_growth
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_reform_progress_growth }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_reform_progress_growth
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_global_monthly_devastation
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_monthly_devastation }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_monthly_devastation
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_legitimacy
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_legitimacy }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_legitimacy
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_overextension_impact_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_overextension_impact_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_overextension_impact_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_state_governing_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_state_governing_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_state_governing_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_global_prosperity_growth
+        
+        trigger = {
+            has_dlc = "Mandate of Heaven"
+            NOT = { has_country_modifier = age_bonus_global_prosperity_growth }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_prosperity_growth
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.age_bonus_ignore_coring_distance
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_ignore_coring_distance }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_ignore_coring_distance
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_administrative
+        }
+	}
+    option = {
+		name = fallout_age_bonus.1.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Court
+country_event = {
+	id = fallout_age_bonus.2
+	title = fallout_age_bonus.2.title
+	desc = fallout_age_bonus.2.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_yearly_corruption
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_yearly_corruption }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_yearly_corruption
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_prestige_decay
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_prestige_decay }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_prestige_decay
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_all_estate_loyalty_equilibrium
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_all_estate_loyalty_equilibrium }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_all_estate_loyalty_equilibrium
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_all_estate_possible_privileges
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_all_estate_possible_privileges }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_all_estate_possible_privileges
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_estate_interaction_cooldown_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_estate_interaction_cooldown_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_estate_interaction_cooldown_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_all_estate_influence_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_all_estate_influence_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_all_estate_influence_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_adm_advisor_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_adm_advisor_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_adm_advisor_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_dip_advisor_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_dip_advisor_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_dip_advisor_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_mil_advisor_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_mil_advisor_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_mil_advisor_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.age_bonus_advisor_pool
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_advisor_pool }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_advisor_pool
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_court
+        }
+	}
+    option = {
+		name = fallout_age_bonus.2.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Economic
+country_event = {
+	id = fallout_age_bonus.3
+	title = fallout_age_bonus.3.title
+	desc = fallout_age_bonus.3.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+	option = {
+		name = fallout_age_bonus.3.option.age_bonus_production_efficiency
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_production_efficiency }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_production_efficiency
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_development_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_development_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_development_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_interest
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_interest }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_interest
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_inflation_reduction
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_inflation_reduction }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_inflation_reduction
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_global_trade_goods_size_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_trade_goods_size_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_trade_goods_size_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_trade_efficiency
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_trade_efficiency }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_trade_efficiency
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_global_trade_power
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_trade_power }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_trade_power
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_global_tax_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_tax_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_tax_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_trade_steering
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_trade_steering }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_trade_steering
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_merchants
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_merchants }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_merchants
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_global_allowed_num_of_buildings
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_allowed_num_of_buildings }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_allowed_num_of_buildings
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_global_allowed_num_of_manufactories
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_allowed_num_of_manufactories }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_allowed_num_of_manufactories
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_build_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_build_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_build_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_build_time
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_build_time }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_build_time
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_global_ship_trade_power
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_ship_trade_power }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_ship_trade_power
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_privateer_efficiency
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_privateer_efficiency }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_privateer_efficiency
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_state_maintenance_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_state_maintenance_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_state_maintenance_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.age_bonus_free_concentrate_development
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_free_concentrate_development }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_free_concentrate_development
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_economic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.3.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Technology
+country_event = {
+	id = fallout_age_bonus.4
+	title = fallout_age_bonus.4.title
+	desc = fallout_age_bonus.4.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_idea_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_idea_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_idea_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_adm_tech_cost_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_adm_tech_cost_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_adm_tech_cost_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_dip_tech_cost_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_dip_tech_cost_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_dip_tech_cost_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_mil_tech_cost_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_mil_tech_cost_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_mil_tech_cost_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_free_adm_policy
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_free_adm_policy }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_free_adm_policy
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_free_dip_policy
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_free_dip_policy }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_free_dip_policy
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_free_mil_policy
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_free_mil_policy }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_free_mil_policy
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_yearly_innovativeness
+        
+        trigger = {
+            has_dlc = "Rule Britannia"
+            NOT = { has_country_modifier = age_bonus_yearly_innovativeness }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_yearly_innovativeness
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_global_institution_spread
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_institution_spread }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_institution_spread
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.age_bonus_possible_policy
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_possible_policy }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_possible_policy
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_technology
+        }
+	}
+    option = {
+		name = fallout_age_bonus.4.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Societal
+country_event = {
+	id = fallout_age_bonus.5
+	title = fallout_age_bonus.5.title
+	desc = fallout_age_bonus.5.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_global_autonomy
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_autonomy }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_autonomy
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_years_of_nationalism
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_years_of_nationalism }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_years_of_nationalism
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_min_autonomy_in_territories
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_min_autonomy_in_territories }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_min_autonomy_in_territories
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_global_unrest
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_unrest }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_unrest
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_culture_conversion_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_culture_conversion_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_culture_conversion_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_num_accepted_cultures
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_num_accepted_cultures }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_num_accepted_cultures
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_stability_cost_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_stability_cost_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_stability_cost_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_missionaries
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_missionaries }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_missionaries
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_global_missionary_strength
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_missionary_strength }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_missionary_strength
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_warscore_cost_vs_other_religion
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_warscore_cost_vs_other_religion }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_warscore_cost_vs_other_religion
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_religious_unity
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_religious_unity }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_religious_unity
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_missionary_maintenance_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_missionary_maintenance_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_missionary_maintenance_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_tolerance_own
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_tolerance_own }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_tolerance_own
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_tolerance_heathen
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_tolerance_heathen }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_tolerance_heathen
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_tolerance_heretic
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_tolerance_heretic }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_tolerance_heretic
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_prestige_per_development_from_conversion
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_prestige_per_development_from_conversion }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_prestige_per_development_from_conversion
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_papal_influence
+        
+        trigger = {
+            religion = fel
+            NOT = { has_country_modifier = age_bonus_papal_influence }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_papal_influence
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_monthly_church_power
+        
+        trigger = { 
+            uses_church_aspects = yes
+            NOT = { has_country_modifier = age_bonus_monthly_church_power }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_monthly_church_power
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_monthly_fervor_increase
+        
+        trigger = {
+            uses_fervor = yes
+            NOT = { has_country_modifier = age_bonus_monthly_fervor_increase }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_monthly_fervor_increase
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_yearly_harmony
+        
+        trigger = {
+            religion = dragon_aspects
+            NOT = { has_country_modifier = age_bonus_yearly_harmony }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_yearly_harmony
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_monthly_piety_gain
+        
+        trigger = {
+            uses_piety = yes
+            NOT = { has_country_modifier = age_bonus_monthly_piety_gain }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_monthly_piety_gain
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_monthly_piety_loss
+        
+        trigger = {
+            uses_piety = yes
+            NOT = { has_country_modifier = age_bonus_monthly_piety_loss }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_monthly_piety_loss
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_monthly_karma_gain
+        
+        trigger = {
+            uses_karma = yes
+            NOT = { has_country_modifier = age_bonus_monthly_karma_gain }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_monthly_karma_gain
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_monthly_karma_loss
+        
+        trigger = {
+            uses_karma = yes
+            NOT = { has_country_modifier = age_bonus_monthly_karma_loss }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_monthly_karma_loss
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+        
+        ai_chance = {
+            factor = 0
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.age_bonus_yearly_patriarch_authority
+        
+        trigger = {
+            uses_patriarch_authority = yes
+            NOT = { has_country_modifier = age_bonus_yearly_patriarch_authority }
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_societal
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_yearly_patriarch_authority
+            duration = -1
+        }
+	}
+    option = {
+		name = fallout_age_bonus.5.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Diplomatic
+country_event = {
+	id = fallout_age_bonus.6
+	title = fallout_age_bonus.6.title
+	desc = fallout_age_bonus.6.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+	option = {
+		name = fallout_age_bonus.6.option.age_bonus_diplomatic_annexation_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_diplomatic_annexation_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_diplomatic_annexation_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_province_warscore_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_province_warscore_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_province_warscore_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_unjustified_demands
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_unjustified_demands }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_unjustified_demands
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_ae_impact
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_ae_impact }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_ae_impact
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_diplomats
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_diplomats }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_diplomats
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_diplomatic_reputation
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_diplomatic_reputation }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_diplomatic_reputation
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_diplomatic_upkeep
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_diplomatic_upkeep }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_diplomatic_upkeep
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_improve_relation_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_improve_relation_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_improve_relation_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_vassal_income
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_vassal_income }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_vassal_income
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_reduced_liberty_desire
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_reduced_liberty_desire }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_reduced_liberty_desire
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_envoy_travel_time
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_envoy_travel_time }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_envoy_travel_time
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.age_bonus_reduced_stab_impacts
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_reduced_stab_impacts }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_reduced_stab_impacts
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_diplomatic
+        }
+	}
+    option = {
+		name = fallout_age_bonus.6.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Espionage
+country_event = {
+	id = fallout_age_bonus.7
+	title = fallout_age_bonus.7.title
+	desc = fallout_age_bonus.7.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+	option = {
+		name = fallout_age_bonus.7.option.age_bonus_spy_offence
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_spy_offence }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_spy_offence
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.age_bonus_global_spy_defence
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_spy_defence }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_spy_defence
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.age_bonus_spy_action_cost_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_spy_action_cost_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_spy_action_cost_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.age_bonus_rebel_support_efficiency
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_rebel_support_efficiency }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_rebel_support_efficiency
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.age_bonus_global_rebel_suppression_efficiency
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_rebel_suppression_efficiency }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_rebel_suppression_efficiency
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.age_bonus_discovered_relations_impact
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_discovered_relations_impact }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_discovered_relations_impact
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.age_bonus_can_chain_claim
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_can_chain_claim }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_can_chain_claim
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.age_bonus_can_claim_states
+        
+        trigger = {
+            has_dlc = "Third Rome"
+            NOT = { has_country_modifier = age_bonus_can_claim_states }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_can_claim_states
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_espionage
+        }
+	}
+    option = {
+		name = fallout_age_bonus.7.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Colonial
+country_event = {
+	id = fallout_age_bonus.8
+	title = fallout_age_bonus.8.title
+	desc = fallout_age_bonus.8.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_colonists
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_colonists }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_colonists
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_colonist_placement_chance
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_colonist_placement_chance }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_colonist_placement_chance
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_global_colonial_growth
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_colonial_growth }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_colonial_growth
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_colony_cost_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_colony_cost_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_colony_cost_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_colony_development_boost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_colony_development_boost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_colony_development_boost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_native_uprising_chance
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_native_uprising_chance }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_native_uprising_chance
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_native_assimilation
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_native_assimilation }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_native_assimilation
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_range
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_range }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_range
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_global_tariffs
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_tariffs }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_tariffs
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_treasure_fleet_income
+        
+        trigger = {
+            OR = {
+                has_dlc = "El Dorado"
+                has_dlc = "Golden Century"
+            }
+            NOT = { has_country_modifier = age_bonus_treasure_fleet_income }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_treasure_fleet_income
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_idea_claim_colonies
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_idea_claim_colonies }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_idea_claim_colonies
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.age_bonus_may_establish_frontier
+        
+        trigger = {
+            has_dlc = "Third Rome"
+            NOT = { has_country_modifier = age_bonus_may_establish_frontier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_may_establish_frontier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_colonial
+        }
+	}
+    option = {
+		name = fallout_age_bonus.8.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Army
+country_event = {
+	id = fallout_age_bonus.9
+	title = fallout_age_bonus.9.title
+	desc = fallout_age_bonus.9.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_army_tradition
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_army_tradition }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_army_tradition
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_yearly_army_professionalism
+        
+        trigger = {
+            has_dlc = "Cradle of Civilization"
+            NOT = { has_country_modifier = age_bonus_yearly_army_professionalism }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_yearly_army_professionalism
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_general_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_general_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_general_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_global_regiment_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_regiment_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_regiment_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_war_exhaustion
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_war_exhaustion }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_war_exhaustion
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_raze_power_gain
+        
+        trigger = {
+            has_government_attribute = raze_province
+            NOT = { has_country_modifier = age_bonus_raze_power_gain }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_raze_power_gain
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_reinforce_cost_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_reinforce_cost_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_reinforce_cost_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_global_manpower_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_manpower_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_manpower_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_manpower_recovery_speed
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_manpower_recovery_speed }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_manpower_recovery_speed
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_land_forcelimit_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_land_forcelimit_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_land_forcelimit_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_land_maintenance_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_land_maintenance_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_land_maintenance_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_mercenary_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_mercenary_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_mercenary_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_merc_maintenance_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_merc_maintenance_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_merc_maintenance_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_fort_maintenance_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_fort_maintenance_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_fort_maintenance_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_loot_amount
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_loot_amount }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_loot_amount
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_artillery_level_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_artillery_level_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_artillery_level_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_own_territory_dice_roll_bonus
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_own_territory_dice_roll_bonus }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_own_territory_dice_roll_bonus
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_movement_speed
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_movement_speed }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_movement_speed
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_defensiveness
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_defensiveness }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_defensiveness
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_recover_army_morale_speed
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_recover_army_morale_speed }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_recover_army_morale_speed
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_land_attrition
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_land_attrition }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_land_attrition
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_global_supply_limit_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_supply_limit_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_supply_limit_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_attack_bonus_in_capital_terrain
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_attack_bonus_in_capital_terrain }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_attack_bonus_in_capital_terrain
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.age_bonus_can_bypass_forts
+        
+        trigger = {
+            ai = no # AI should never be allowed to use this
+            NOT = { has_country_modifier = age_bonus_can_bypass_forts }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_can_bypass_forts
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_army
+        }
+	}
+    option = {
+		name = fallout_age_bonus.9.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Naval
+country_event = {
+	id = fallout_age_bonus.10
+	title = fallout_age_bonus.10.title
+	desc = fallout_age_bonus.10.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_navy_tradition
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_navy_tradition }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_navy_tradition
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_global_ship_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_ship_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_ship_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_naval_forcelimit_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_naval_forcelimit_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_naval_forcelimit_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_naval_maintenance_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_naval_maintenance_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_naval_maintenance_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_global_sailors_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_sailors_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_sailors_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_sailor_maintenance_modifer
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_sailor_maintenance_modifer }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_sailor_maintenance_modifer
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_sailors_recovery_speed
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_sailors_recovery_speed }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_sailors_recovery_speed
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_admiral_cost
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_admiral_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_admiral_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_coast_raid_range
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_coast_raid_range }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_coast_raid_range
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_capture_ship_chance
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_capture_ship_chance }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_capture_ship_chance
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_own_coast_naval_combat_bonus
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_own_coast_naval_combat_bonus }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_own_coast_naval_combat_bonus
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_global_naval_engagement
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_naval_engagement }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_naval_engagement
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_recover_navy_morale_speed
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_recover_navy_morale_speed }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_recover_navy_morale_speed
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_blockade_efficiency
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_blockade_efficiency }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_blockade_efficiency
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_naval_attrition
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_naval_attrition }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_naval_attrition
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_global_naval_barrage_cost
+        
+        trigger = {
+            has_dlc = "Golden Century"
+            NOT = { has_country_modifier = age_bonus_global_naval_barrage_cost }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_naval_barrage_cost
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_movement_speed_onto_off_boat_modifier
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_movement_speed_onto_off_boat_modifier }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_movement_speed_onto_off_boat_modifier
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_landing_penalty
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_landing_penalty }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_landing_penalty
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_global_ship_repair
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_global_ship_repair }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_global_ship_repair
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_max_flagships
+        
+        trigger = {
+            has_dlc = "Golden Century"
+            NOT = { has_country_modifier = age_bonus_max_flagships }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_max_flagships
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_may_perform_slave_raid
+        
+        trigger = {
+            OR = {
+                has_dlc = "Mare Nostrum"
+                has_dlc = "Lions of the North"
+                has_dlc = "Golden Century"
+            }
+            NOT = { has_country_modifier = age_bonus_may_perform_slave_raid }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_may_perform_slave_raid
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.age_bonus_sea_repair
+        
+        trigger = {
+            NOT = { has_country_modifier = age_bonus_sea_repair }
+        }
+        
+        add_country_modifier = {
+            name = age_bonus_sea_repair
+            duration = -1
+        }
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_navy
+        }
+	}
+    option = {
+		name = fallout_age_bonus.10.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}
+
+# Age Bonus - Actions
+country_event = {
+	id = fallout_age_bonus.11
+	title = fallout_age_bonus.11.title
+	desc = fallout_age_bonus.11.desc
+	picture = TERMINAL_eventPicture
+    
+	is_triggered_only = yes
+    
+    # Reset Golden Age
+	option = {
+		name = fallout_age_bonus.11.option.golden_age
+        
+        trigger = {
+            NOT = { has_country_flag = action_reset_golden_age }
+        }
+        
+        hidden_effect = {
+            set_country_flag = action_reset_golden_age 
+        }
+        
+        reset_golden_age = yes
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_action
+        }
+	}
+    
+    # Ruler Inspiration
+	option = {
+		name = fallout_age_bonus.11.option.inspire_ruler
+        
+        trigger = {
+            NOT = { has_country_flag = action_ruler_inspiration }
+        }
+        
+        hidden_effect = {
+            set_country_flag = action_ruler_inspiration
+        }
+        
+        change_adm = 1
+        change_dip = 1
+        change_mil = 1
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_action
+        }
+	}
+    
+    # Influx of Prestige
+	option = {
+		name = fallout_age_bonus.11.option.prestige
+        
+        trigger = {
+            NOT = { has_country_flag = action_prestige }
+        }
+        
+        hidden_effect = {
+            set_country_flag = action_prestige 
+        }
+        
+        add_prestige = 200
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_action
+        }
+	}
+    
+    # Influx of Military Acumen
+	option = {
+		name = fallout_age_bonus.11.option.army_tradition
+        
+        trigger = {
+            NOT = { has_country_flag = action_army_tradition }
+        }
+        
+        hidden_effect = {
+            set_country_flag = action_army_tradition 
+        }
+        
+        add_army_tradition = 100
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_action
+        }
+	}
+    
+    # Influx of Naval Acumen
+	option = {
+		name = fallout_age_bonus.11.option.navy_tradition
+        
+        trigger = {
+            NOT = { has_country_flag = action_navy_tradition }
+        }
+        
+        hidden_effect = {
+            set_country_flag = action_navy_tradition 
+        }
+        
+        add_navy_tradition = 100
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_action
+        }
+	}
+    
+    # Influx of Cash
+	option = {
+		name = fallout_age_bonus.11.option.cash
+        
+        trigger = {
+            NOT = { has_country_flag = action_cash }
+        }
+        
+        hidden_effect = {
+            set_country_flag = action_cash 
+        }
+        
+        add_treasury = 5000
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_action
+        }
+	}
+    
+    # Influx of Manpower
+	option = {
+		name = fallout_age_bonus.11.option.manpower
+        
+        trigger = {
+            NOT = { has_country_flag = action_manpower }
+        }
+        
+        hidden_effect = {
+            set_country_flag = action_manpower 
+        }
+        
+        add_manpower = 50
+        
+        custom_tooltip = AGE_BONUS_CATEGORY_LIMIT_TT
+        hidden_effect = {
+            set_country_flag = age_category_action
+        }
+	}
+    option = {
+		name = fallout_age_bonus.11.option.return
+        
+        # AI should not traverse
+        trigger = {
+            ai = no
+        }
+        
+        country_event = { id = fallout_age_bonus.102 }
+	}
+}

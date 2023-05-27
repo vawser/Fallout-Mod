@@ -2,8 +2,8 @@
 mission_only_the_pure = {
     prestige = 0.25
     
-    land_forcelimit_modifier = -0.5
-    global_manpower_modifier = -0.5
+    land_forcelimit_modifier = -0.33
+    global_manpower_modifier = -0.33
 }
 
 mission_patriotic_spirit = {
@@ -30,4 +30,39 @@ mission_reformist_ideology = {
 
 mission_loyalty_of_the_high_command = {
     all_estate_loyalty_equilibrium = 0.1
+}
+
+# Purist
+mission_purification_refinement = {
+    core_creation = -0.1
+}
+
+mission_enclave_skynet = {
+    all_power_cost = -0.05
+}
+
+mission_robco_technologies = {
+    technology_cost = -0.05
+    fire_damage = 0.1
+}
+
+mission_pure_american_democracy = {
+    republican_tradition = 1.0
+    monthly_patriotic_spirit = 1.0
+}
+
+mission_enclave_domination = {
+    administrative_efficiency = 0.05
+    global_unrest = -3
+}
+
+mission_tribal_purification = {
+    province_warscore_cost = -0.1
+    years_of_nationalism = -5
+}
+
+mission_enclave_hegemony = {
+    yearly_corruption = -0.05
+    administrative_efficiency = 0.05
+    max_absolutism = 25
 }

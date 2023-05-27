@@ -583,7 +583,69 @@ has_any_pop = {
 }
 
 has_no_pops = {
-    NOT = {
-        has_any_pop = yes
-    }
+    NOT = { has_province_modifier = pop_wastelander_high }
+    NOT = { has_province_modifier = pop_raider_high }
+    NOT = { has_province_modifier = pop_tribal_high }
+    NOT = { has_province_modifier = pop_robot_high }
+    NOT = { has_province_modifier = pop_super_mutant_high }
+    NOT = { has_province_modifier = pop_ghoul_high }
+    NOT = { has_province_modifier = pop_swampfolk_high }
+    NOT = { has_province_modifier = pop_synth_high }
+    NOT = { has_province_modifier = pop_rodent_high }
+    NOT = { has_province_modifier = pop_beastlord_high }
+    NOT = { has_province_modifier = pop_alien_high }
+    NOT = { has_province_modifier = pop_deathclaw_high }
+    NOT = { has_province_modifier = pop_fungal_high }
+    NOT = { has_province_modifier = pop_dwarf_high }
+    NOT = { has_province_modifier = pop_legion_high }
+    NOT = { has_province_modifier = pop_bos_high }
+    NOT = { has_province_modifier = pop_coa_high }
+    NOT = { has_province_modifier = pop_vault_dweller_high }
+    NOT = { has_province_modifier = pop_institute_high }
+    NOT = { has_province_modifier = pop_enclave_high }
+    NOT = { has_province_modifier = pop_shi_high }
+    
+    NOT = { has_province_modifier = pop_wastelander_med }
+    NOT = { has_province_modifier = pop_raider_med }
+    NOT = { has_province_modifier = pop_tribal_med }
+    NOT = { has_province_modifier = pop_robot_med }
+    NOT = { has_province_modifier = pop_super_mutant_med }
+    NOT = { has_province_modifier = pop_ghoul_med }
+    NOT = { has_province_modifier = pop_swampfolk_med }
+    NOT = { has_province_modifier = pop_synth_med }
+    NOT = { has_province_modifier = pop_rodent_med }
+    NOT = { has_province_modifier = pop_beastlord_med }
+    NOT = { has_province_modifier = pop_alien_med }
+    NOT = { has_province_modifier = pop_deathclaw_med }
+    NOT = { has_province_modifier = pop_fungal_med }
+    NOT = { has_province_modifier = pop_dwarf_med }
+    NOT = { has_province_modifier = pop_legion_med }
+    NOT = { has_province_modifier = pop_bos_med }
+    NOT = { has_province_modifier = pop_coa_med }
+    NOT = { has_province_modifier = pop_vault_dweller_med }
+    NOT = { has_province_modifier = pop_institute_med }
+    NOT = { has_province_modifier = pop_enclave_med }
+    NOT = { has_province_modifier = pop_shi_med }
+    
+    NOT = { has_province_modifier = pop_wastelander_low }
+    NOT = { has_province_modifier = pop_raider_low }
+    NOT = { has_province_modifier = pop_tribal_low }
+    NOT = { has_province_modifier = pop_robot_low }
+    NOT = { has_province_modifier = pop_super_mutant_low }
+    NOT = { has_province_modifier = pop_ghoul_low }
+    NOT = { has_province_modifier = pop_swampfolk_low }
+    NOT = { has_province_modifier = pop_synth_low }
+    NOT = { has_province_modifier = pop_rodent_low }
+    NOT = { has_province_modifier = pop_beastlord_low }
+    NOT = { has_province_modifier = pop_alien_low }
+    NOT = { has_province_modifier = pop_deathclaw_low }
+    NOT = { has_province_modifier = pop_fungal_low }
+    NOT = { has_province_modifier = pop_dwarf_low }
+    NOT = { has_province_modifier = pop_legion_low }
+    NOT = { has_province_modifier = pop_bos_low }
+    NOT = { has_province_modifier = pop_coa_low }
+    NOT = { has_province_modifier = pop_vault_dweller_low }
+    NOT = { has_province_modifier = pop_institute_low }
+    NOT = { has_province_modifier = pop_enclave_low }
+    NOT = { has_province_modifier = pop_shi_low }
 }

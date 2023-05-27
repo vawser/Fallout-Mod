@@ -1,3 +1,5 @@
+# Remove .git folder temporarily when uploading to Steam 
+
 #-----------------------------
 # Changelog
 #-----------------------------
@@ -6,6 +8,34 @@
 
 # Icons
 - Added proper icons for the government mechanic power modifiers.
+
+# Ages
+- The age abilities have been changed to a more dynamic system:
+ - Each ability is now a 'Innovation', which you unlock with splendor as normal.
+ - Once unlocked, the Innovation event will fire.
+ - Within this menu, you can browse 11 categories:
+  - Administrative
+  - Court
+  - Economic
+  - Technology
+  - Societal
+  - Diplomatic
+  - Espionage
+  - Colonial
+  - Army
+  - Navy
+  - Action
+ - Each category has an array of bonuses to select from. Once a bonus has been selected, the menu will close.
+ - For each age, only one bonus from each category can be selected, i.e. if you pick an Administrative bonus, the next unlock will not show the Administrative category in the menu.
+ - These bonuses will persist between ages however.
+
+# Balance
+- Increased the cost of Centers of Trade Tier 2 and 3.
+- Reduced the province_trade_power_value given by Centers of Trade Tier 2 and 3.
+- Reduced the debuffs BoS nations have to manpower.
+
+# Bugfixes
+- Fixed bad position data for some provinces.
 
 #-----------------------------
 # TODO
@@ -20,3 +50,7 @@
  - Enclave
 
 - Finish Enclave mission tree
+
+- Adjust tradenodes in the major lore locations
+- Add in some Fallout naval doctrines (remove current setup)
+- Add in WWU doctrine system

@@ -13,24 +13,118 @@ fallout_enclave_purist_column_1 = {
     
 	has_country_shield = yes
 	
-	# fallout_mission = {
-		# icon = mission_usa_flag
-        # position = 1
+	ENC_secure_the_west_coast = {
+		icon = mission_river
+        position = 1
         
-		# required_missions = { }
+		required_missions = { }
         
-		# trigger = {
-            
-		# }
-		# provinces_to_highlight = {
-            
-			# NOT = { owned_by = ROOT }
-		# }
+		trigger = {
+            calc_true_if = {
+                amount = 10
+                
+                all_owned_province = {
+                    OR = {
+                        region = washington_region
+                        region = oregon_region
+                    }
+                }
+            }
+		}
+		provinces_to_highlight = {
+            OR = {
+                region = washington_region
+                region = oregon_region
+            }
+			NOT = { owned_by = ROOT }
+		}
         
-		# effect = {
-			
-		# }
-	# }
+		effect = {
+			west_coast_superregion = {
+                add_claim = ROOT
+            }
+		}
+	}
+    
+    ENC_recover_the_navarro_archives = {
+		icon = mission_hidden_bunker
+        position = 2
+        
+		required_missions = { 
+            ENC_secure_the_west_coast
+        }
+        
+		trigger = {
+            owns_core_province = 871
+		}
+		provinces_to_highlight = {
+            province_id = 871
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			if = {
+                limit = {
+                    NOT = { has_global_flag = discovered_schematic_vertibird }
+                }
+                country_event = { id = fallout_schematic.12 }
+            }
+            else = {
+                hidden_effect = {
+                    random_country = {
+                        limit = {
+                            has_country_flag = schematic_vertibird
+                        }
+                        
+                        save_event_target_as = schematic_owner
+                    }
+                }
+                
+                event_target:schematic_owner = {
+                    add_spy_network_from = {
+                        who = ROOT
+                        value = 100
+                    }
+                }
+            }
+		}
+	}
+    
+    ENC_purify_the_cascadian_mountains = {
+		icon = mission_legion_fire
+        position = 4
+        
+		required_missions = { 
+            ENC_cleanse_the_wasteland
+        }
+        
+		trigger = {
+            washington_region = {
+                type = all
+                
+                owned_by = ROOT
+            }
+            oregon_region = {
+                type = all
+                
+                owned_by = ROOT
+            }
+		}
+		provinces_to_highlight = {
+            OR = {
+                region = washington_region
+                region = oregon_region
+            }
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			add_country_modifier = {
+                name = mission_purification_refinement
+                duration = -1
+            }
+		}
+	}
 }
 
 fallout_enclave_purist_column_2 = {
@@ -45,24 +139,61 @@ fallout_enclave_purist_column_2 = {
     
 	has_country_shield = yes
 	
-	# fallout_mission = {
-		# icon = mission_usa_flag
-        # position = 1
+	ENC_control_the_sierra_army_depot = {
+		icon = mission_factory
+        position = 2
         
-		# required_missions = { }
+		required_missions = { 
+            ENC_secure_the_west_coast
+        }
         
-		# trigger = {
+		trigger = {
+            owns_core_province = 1217
+		}
+		provinces_to_highlight = {
+            province_id = 1217
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			add_country_modifier = {
+                name = mission_enclave_skynet
+                duration = -1
+            }
+		}
+	}
+    
+    ENC_obliterate_mr_house = {
+		icon = mission_slot_machine
+        position = 4
+        
+		required_missions = { 
+            ENC_cleanse_the_wasteland
+        }
+        
+		trigger = {
+            owns_core_province = 1200
+            NOT = { exists = NVG }
+		}
+		provinces_to_highlight = {
+            OR = {
+                owned_by = NVG
+                province_id = 1200
+            }
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+            nevada_region = {
+                add_permanent_claim = ROOT
+            }
             
-		# }
-		# provinces_to_highlight = {
-            
-			# NOT = { owned_by = ROOT }
-		# }
-        
-		# effect = {
-			
-		# }
-	# }
+			add_country_modifier = {
+                name = mission_robco_technologies
+                duration = -1
+            }
+		}
+	}
 }
 
 fallout_enclave_purist_column_3 = {
@@ -77,24 +208,112 @@ fallout_enclave_purist_column_3 = {
     
 	has_country_shield = yes
 	
-	# fallout_mission = {
-		# icon = mission_usa_flag
-        # position = 1
+	ENC_cleanse_the_wasteland = {
+		icon = mission_usa_flag
+        position = 3
         
-		# required_missions = { }
+		required_missions = { 
+            ENC_control_the_sierra_army_depot
+            ENC_recover_the_navarro_archives
+            ENC_recover_the_chicago_archives
+            ENC_neutralize_the_midwest_brotherhood
+        }
         
-		# trigger = {
+		trigger = {
+            num_of_cities = 100
+		}
+        
+		effect = {
+			custom_tooltip = GAIN_ENCLAVE_CB_TT
+            hidden_effect = {
+                set_country_flag = enclave_purification_of_the_wasteland_cb
+            }
+		}
+	}
+    
+    ENC_destroy_the_false_republic = {
+		icon = mission_ncr_statue
+        position = 4
+        
+		required_missions = { 
+            ENC_cleanse_the_wasteland
+        }
+        
+		trigger = {
+            NOT = { exists = NCR }
+            owns_core_province = 1202
+            owns_core_province = 1207
+            owns_core_province = 1933
+		}
+		provinces_to_highlight = {
+            OR = {
+                owned_by = NCR
+                province_id = 1202
+                province_id = 1207
+                province_id = 1933
+            }
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			california_region = {
+                add_permanent_claim = ROOT
+            }
             
-		# }
-		# provinces_to_highlight = {
-            
-			# NOT = { owned_by = ROOT }
-		# }
+            add_country_modifier = {
+                name = mission_pure_american_democracy
+                duration = -1
+            }
+		}
+	}
+    
+    ENC_restore_america = {
+		icon = mission_enclave
+        position = 5
         
-		# effect = {
-			
-		# }
-	# }
+		required_missions = { 
+            ENC_purify_the_cascadian_mountains
+            ENC_obliterate_mr_house
+            ENC_destroy_the_false_republic
+            ENC_extinguish_the_roman_pretender
+            ENC_purify_the_rocky_mountains
+        }
+        
+		trigger = {
+            NOT = { exists = NCR }
+            NOT = { exists = CAE }
+            NOT = { exists = NVG }
+            num_of_cities = 250
+		}
+		provinces_to_highlight = {
+            OR = {
+                owned_by = NCR
+                owned_by = CAE
+                owned_by = NVG
+            }
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			west_coast_superregion = {
+                add_permanent_claim = ROOT
+            }
+            midwest_superregion = {
+                add_permanent_claim = ROOT
+            }
+            gulf_superregion = {
+                add_permanent_claim = ROOT
+            }
+            east_coast_superregion = {
+                add_permanent_claim = ROOT
+            }
+            
+            add_country_modifier = {
+                name = mission_enclave_hegemony
+                duration = -1
+            }
+		}
+	}
 }
 
 fallout_enclave_purist_column_4 = {
@@ -109,24 +328,100 @@ fallout_enclave_purist_column_4 = {
     
 	has_country_shield = yes
 	
-	# fallout_mission = {
-		# icon = mission_usa_flag
-        # position = 1
+	ENC_neutralize_the_midwest_brotherhood = {
+		icon = mission_bos_power_armour_head
+        position = 2
         
-		# required_missions = { }
+		required_missions = { 
+            ENC_push_into_the_great_plains
+        }
         
-		# trigger = {
+		trigger = {
+            NOT = { exists = BMW }
+            owns_core_province = 1233
+            owns_core_province = 1241
+            owns_core_province = 1248
+            owns_core_province = 890
+            owns_core_province = 1237
+		}
+		provinces_to_highlight = {
+            OR = {
+                owned_by = BMW
+                province_id = 1233
+                province_id = 1241
+                province_id = 1248
+                province_id = 890
+                province_id = 1237
+            }
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			if = {
+                limit = {
+                    NOT = { has_global_flag = discovered_schematic_t65_power_armor }
+                }
+                country_event = { id = fallout_schematic.29 }
+            }
+            else = {
+                hidden_effect = {
+                    random_country = {
+                        limit = {
+                            has_country_flag = schematic_t65_power_armor
+                        }
+                        
+                        save_event_target_as = schematic_owner
+                    }
+                }
+                
+                event_target:schematic_owner = {
+                    add_spy_network_from = {
+                        who = ROOT
+                        value = 100
+                    }
+                }
+            }
+		}
+	}
+    
+    ENC_extinguish_the_roman_pretender = {
+		icon = mission_legion_cross
+        position = 4
+        
+		required_missions = { 
+            ENC_cleanse_the_wasteland
+        }
+        
+		trigger = {
+            NOT = { exists = CAE }
+            owns_core_province = 879
+            owns_core_province = 256
+            owns_core_province = 130
+		}
+		provinces_to_highlight = {
+            OR = {
+                owned_by = CAE
+                province_id = 879
+                province_id = 256
+                province_id = 130
+            }
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			arizona_region = {
+                add_permanent_claim = ROOT
+            }
+            new_mexico_region = {
+                add_permanent_claim = ROOT
+            }
             
-		# }
-		# provinces_to_highlight = {
-            
-			# NOT = { owned_by = ROOT }
-		# }
-        
-		# effect = {
-			
-		# }
-	# }
+            add_country_modifier = {
+                name = mission_enclave_domination
+                duration = -1
+            }
+		}
+	}
 }
 
 fallout_enclave_purist_column_5 = {
@@ -141,22 +436,133 @@ fallout_enclave_purist_column_5 = {
     
 	has_country_shield = yes
 	
-	# fallout_mission = {
-		# icon = mission_usa_flag
-        # position = 1
+	ENC_push_into_the_great_plains = {
+		icon = mission_road
+        position = 1
         
-		# required_missions = { }
+		required_missions = { }
         
-		# trigger = {
+		trigger = {
+            calc_true_if = {
+                amount = 10
+                
+                all_owned_province = {
+                    superregion = midwest_superregion
+                }
+            }
+		}
+		provinces_to_highlight = {
+            superregion = midwest_superregion
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+            montana_region = {
+                add_claim = ROOT
+            }
+            wyoming_region = {
+                add_claim = ROOT
+            }
+			midwest_superregion = {
+                add_claim = ROOT
+            }
+		}
+	}
+    
+    ENC_recover_the_chicago_archives = {
+		icon = mission_hangers
+        position = 2
+        
+		required_missions = { 
+            ENC_push_into_the_great_plains
+        }
+        
+		trigger = {
+            owns_core_province = 1259
+		}
+		provinces_to_highlight = {
+            province_id = 1259
+			NOT = { owned_by = ROOT }
+		}
+        
+		effect = {
+			if = {
+                limit = {
+                    NOT = { has_global_flag = discovered_schematic_x01_power_armor }
+                }
+                country_event = { id = fallout_schematic.30 }
+            }
+            else = {
+                hidden_effect = {
+                    random_country = {
+                        limit = {
+                            has_country_flag = schematic_x01_power_armor
+                        }
+                        
+                        save_event_target_as = schematic_owner
+                    }
+                }
+                
+                event_target:schematic_owner = {
+                    add_spy_network_from = {
+                        who = ROOT
+                        value = 100
+                    }
+                }
+            }
+		}
+	}
+    
+    ENC_purify_the_rocky_mountains = {
+		icon = mission_raider_1
+        position = 4
+        
+		required_missions = { 
+            ENC_cleanse_the_wasteland
+        }
+        
+		trigger = {
+            idaho_region = {
+                type = all
+                
+                owned_by = ROOT
+            }
+            utah_region = {
+                type = all
+                
+                owned_by = ROOT
+            }
             
-		# }
-		# provinces_to_highlight = {
-            
-			# NOT = { owned_by = ROOT }
-		# }
+            calc_true_if = {
+                amount = 10
+                
+                all_owned_province = {
+                    region = wyoming_region
+                }
+            }
+            calc_true_if = {
+                amount = 10
+                
+                all_owned_province = {
+                    region = colorado_region
+                }
+            }
+		}
+		provinces_to_highlight = {
+            OR = {
+                region = idaho_region
+                region = utah_region
+                region = wyoming_region
+                region = colorado_region
+            }
+			NOT = { owned_by = ROOT }
+		}
         
-		# effect = {
-			
-		# }
-	# }
+		effect = {
+			add_country_modifier = {
+                name = mission_tribal_purification
+                duration = -1
+            }
+		}
+	}
 }

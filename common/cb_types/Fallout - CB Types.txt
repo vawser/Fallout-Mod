@@ -100,3 +100,13 @@ cb_distant_conquest = {
 	war_goal = take_capital_justified
 }
 
+cb_purification_of_the_wasteland = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_country_flag = enclave_purification_of_the_wasteland_cb
+        is_neighbor_of = FROM
+	}
+
+	war_goal = take_capital_barbarous
+}

@@ -2,111 +2,51 @@
 # Event
 #-------------------------------------
 cazador_attack = {
-    local_manpower_modifier = -0.5
-    local_production_efficiency = -0.5
-    local_tax_modifier = -0.5
-    local_colonial_growth = -10
-    local_monthly_devastation = 0.5
-    supply_limit_modifier = -0.1
+    min_local_autonomy = 75
 }
 
 coyote_attack = {
-    local_manpower_modifier = -0.25
-    local_production_efficiency = -0.25
-    local_tax_modifier = -0.25
-    local_colonial_growth = -5
-    local_monthly_devastation = 0.25
-    supply_limit_modifier = -0.05
+    min_local_autonomy = 25
 }
 
 deathclaw_attack = {
-    local_manpower_modifier = -0.5
-    local_production_efficiency = -0.5
-    local_tax_modifier = -0.5
-    local_colonial_growth = -10
-    local_monthly_devastation = 0.5
-    supply_limit_modifier = -0.1
+    min_local_autonomy = 75
 }
 
 trog_attack = {
-    local_manpower_modifier = -0.25
-    local_production_efficiency = -0.25
-    local_tax_modifier = -0.25
-    local_colonial_growth = -5
-    local_monthly_devastation = 0.25
-    supply_limit_modifier = -0.05
+    min_local_autonomy = 50
 }
 
 yao_guai_attack = {
-    local_manpower_modifier = -0.5
-    local_production_efficiency = -0.5
-    local_tax_modifier = -0.5
-    local_colonial_growth = -10
-    local_monthly_devastation = 0.5
-    supply_limit_modifier = -0.1
+    min_local_autonomy = 50
 }
 
 mole_rat_attack = {
-    local_manpower_modifier = -0.25
-    local_production_efficiency = -0.25
-    local_tax_modifier = -0.25
-    local_colonial_growth = -5
-    local_monthly_devastation = 0.25
-    supply_limit_modifier = -0.05
+    min_local_autonomy = 25
 }
 
 brahmin_attack = {
-    local_manpower_modifier = -0.25
-    local_production_efficiency = -0.25
-    local_tax_modifier = -0.25
-    local_colonial_growth = -5
-    local_monthly_devastation = 0.25
-    supply_limit_modifier = -0.05
+    min_local_autonomy = 25
 }
 
 centaur_attack = {
-    local_manpower_modifier = -0.25
-    local_production_efficiency = -0.25
-    local_tax_modifier = -0.25
-    local_colonial_growth = -5
-    local_monthly_devastation = 0.25
-    supply_limit_modifier = -0.05
+    min_local_autonomy = 50
 }
 
 bloatfly_attack = {
-    local_manpower_modifier = -0.25
-    local_production_efficiency = -0.25
-    local_tax_modifier = -0.25
-    local_colonial_growth = -5
-    local_monthly_devastation = 0.25
-    supply_limit_modifier = -0.05
+    min_local_autonomy = 25
 }
 
 giant_ant_attack = {
-    local_manpower_modifier = -0.5
-    local_production_efficiency = -0.5
-    local_tax_modifier = -0.5
-    local_colonial_growth = -10
-    local_monthly_devastation = 0.5
-    supply_limit_modifier = -0.1
+    min_local_autonomy = 50
 }
 
 radroach_attack = {
-    local_manpower_modifier = -0.25
-    local_production_efficiency = -0.25
-    local_tax_modifier = -0.25
-    local_colonial_growth = -5
-    local_monthly_devastation = 0.25
-    supply_limit_modifier = -0.05
+    min_local_autonomy = 25
 }
 
 radscorpion_attack = {
-    local_manpower_modifier = -0.5
-    local_production_efficiency = -0.5
-    local_tax_modifier = -0.5
-    local_colonial_growth = -10
-    local_monthly_devastation = 0.5
-    supply_limit_modifier = -0.1
+    min_local_autonomy = 50
 }
 
 bunker_outpost = {
@@ -132,7 +72,7 @@ munition_analysis = {
 }
 
 illicit_profits = {
-	local_tax_modifier = 1
+	local_tax_modifier = 1.0
 }
 
 illicit_dealings = {
@@ -203,16 +143,19 @@ discovery_engineers = {
 discovery_fungal_infestation = {
     local_development_cost = 1.0
     attrition = 1
+    max_attrition = 1
 }
 
 discovery_ghoul_infestation = {
     local_monthly_devastation = 0.05
     attrition = 1
+    max_attrition = 1
 }
 
 discovery_mole_rat_infestation = {
     trade_goods_size_modifier = -0.5
     attrition = 1
+    max_attrition = 1
 }
 
 discovery_low_level_radiation = {
@@ -225,7 +168,7 @@ discovery_poor_groundsoil = {
 }
 
 discovery_poor_access = {
-    local_hostile_movement_speed = -0.5
-    local_friendly_movement_speed = -0.5
+    local_hostile_movement_speed = -0.33
+    local_friendly_movement_speed = -0.33
 }
 
