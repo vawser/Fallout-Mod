@@ -11,7 +11,7 @@ country_event = {
     
 	trigger = {
 		tag = DED
-		NOT = { has_ruler_modifier = joshua_zion }
+		#NOT = { has_ruler_modifier = joshua_zion }
 	}
 	
 	immediate = {
@@ -19,15 +19,21 @@ country_event = {
         hidden_effect = {
             if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.1" }
         }
+ 		add_ruler_modifier = {
+            name = joshua_zion 
+            duration = -1
+        }		
     }
     
 	option = {	
 		name = zion.1.option.a	
-        
- 		add_ruler_modifier = {
-            name = joshua_zion 
-            duration = -1
-        }
+        #tooltip = < 
+		#	add_ruler_modifier = {
+		#		name = joshua_zion 
+		#		duration = -1
+		#	}
+		#>
+
 	}	
 }
 
@@ -292,6 +298,8 @@ country_event = {
 	option = {	
 		name = zion.8.option.b
         add_prestige = -5
+		set_country_flag = WLS_tribal_path
+		swap_non_generic_missions = yes
 		ai_chance = {
 			factor = 0
 		}
@@ -384,6 +392,8 @@ country_event = {
             type = cb_annex
             months = 100
         }
+		set_country_flag = WLS_caesar_path
+		swap_non_generic_missions = yes
 	}	
 }
 
@@ -405,7 +415,7 @@ country_event = {
 	option = {
 		name = zion.11.option.a
 		define_advisor = {
-            type = fm_disciplinarian 
+            type = fm_slaver  
 		    name = "Centurion Vegetius"
 		    skill = 2
             discount = yes
@@ -415,6 +425,8 @@ country_event = {
             type = cb_annex
             months = 100
         }
+		set_country_flag = WLS_caesar_path
+		swap_non_generic_missions = yes
 	}	
 } 
 
@@ -441,6 +453,8 @@ country_event = {
             type = cb_annex
             months = 100
         }
+		set_country_flag = WLS_caesar_path
+		swap_non_generic_missions = yes
 	}	
 } 
 
@@ -462,6 +476,8 @@ country_event = {
 	option = {
 		name = zion.13.option.a
 		add_stability = -1
+		set_country_flag = WLS_tribal_path
+		swap_non_generic_missions = yes
 	}	
 } 
 
@@ -662,5 +678,735 @@ country_event = {
 		1214 = {
 			add_base_production = 2
 		}
+	}	
+}
+
+# A Temple Dedication
+country_event = {
+	id = zion.19
+	title = zion.19.title
+	desc = zion.19.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.19" }
+        }
+    }
+    
+	option = { # A temple to Mars
+		name = zion.19.option.a
+		1425 = {
+			add_province_modifier = {
+				name = temple_to_mars_zio 
+				duration = -1
+			}		
+		}
+		add_stability = 1	
+	}	
+	
+	option = { # A temple to Caesar
+		name = zion.19.option.b
+		1425 = {
+			add_province_modifier = {
+				name = temple_to_caesar_zio 
+				duration = -1
+			}		
+		}		
+		add_country_modifier = {
+			name = "wls_loyal_to_caesar"
+			duration = 5475 #15 years
+		}
+	}	
+	
+	option = { # A temple to Lanius 
+		name = zion.19.option.c
+		1425 = {
+			add_province_modifier = {
+				name = temple_to_lanius_zio 
+				duration = -1
+			}		
+		}	
+		add_country_modifier = {
+			name = "wls_disciples_of_lanius"
+			duration = 5475 #15 years
+		}				
+	}	
+}
+
+# Yao Guai On The Heath 
+country_event = {
+	id = zion.20
+	title = zion.20.title
+	desc = zion.20.desc # Custom local maybe? 
+	picture = ZION_ROCKY_PASS_eventPicture #Change
+	
+	trigger = {
+		OR = {
+			owns = 111
+			owns = 1425
+			owns = 1254
+			owns = 1214
+			owns = 115
+			owns = 113
+			owns = 414
+			owns = 338
+			owns = 1406
+			owns = 1494
+		}
+		AND = {
+			OR = {
+				tag = DED
+				tag = WLS
+				tag = SOR 	
+			}
+			NOT = {
+				has_country_flag = yaoguai_attack
+			}
+		}
+		has_heir = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.20" }
+        }
+		set_country_flag = yaoguai_attack
+    }
+    
+	option = { # Guess that one was full of gecko
+		name = zion.20.option.a
+		trigger = {
+			heir_mil = 5
+		}
+		add_prestige = 5	
+		ai_chance = {
+			factor = 50
+		} 
+	}	
+	
+	option = { # Charge! 
+		name = zion.20.option.b
+		trigger = {
+			NOT = {
+				heir_mil = 5
+			}
+			
+		}
+		random_list = {
+			80 = {
+				kill_heir = {}
+			}
+			20 = {
+				change_heir_mil = 1	
+				add_prestige = 5	
+			}
+		}
+		ai_chance = {
+			factor = 25
+		} 		
+	}	
+	
+	option = { # Dont move a muscle 
+		name = zion.20.option.c
+		trigger = {
+			NOT = {
+				heir_mil = 5
+			}
+			
+		}
+		random_list = {
+			30 = {
+				kill_heir = {}
+			}
+			70 = {	
+				add_prestige = 2	
+			}
+		}
+		ai_chance = {
+			factor = 25
+		} 				
+	}	
+}
+
+# Follows Chalk dreams of civilization
+country_event = {
+	id = zion.21
+	title = zion.21.title
+	desc = zion.21.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = DED
+	}
+	
+	mean_time_to_happen = {
+		months = 34
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.21" }
+        }
+    }
+    
+	option = { # Foster his ambitions
+		name = zion.21.option.a
+		add_adm_power = 10
+		add_dip_power = 10			
+		add_corruption = 0.5
+		add_country_modifier = { 
+			name = follows_chalk_modifier
+			duration = -1  
+			#desc = FOLLOWSCHALK
+		}
+		hidden_effect = {
+			country_event = { id = zion.22 days = 2191 }
+		}
+		ai_chance = {
+			factor = 100
+		} 
+	}	
+	
+	option = { # Its a den of corruption and vice 
+		name = zion.21.option.b
+		define_advisor = {
+			type = fm_envoy 
+			name = "Follows-Chalk"
+			skill = 1
+			culture = dead_horse
+			religion = tribalism
+		}
+		
+	}	
+}
+
+country_event = { #Follows-Chalk Departs
+	id = zion.22
+	title = zion.22.title
+	desc = zion.22.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.22" }
+        }
+    }
+    
+	option = { # Farewell 
+		name = zion.22.option.a
+		remove_country_modifier = follows_chalk_modifier
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = NVG
+				}
+				random_list = {
+					95 = {
+						NVG = {
+							country_event = { id = zion.23 days = 28 }
+						}
+					}
+					5 = {
+						# Nothing - death or gone into the distance 
+					}
+				}
+			}
+		}
+	}	
+	
+}
+
+country_event = { #Follows-Chalk Visits New Vegas 
+	id = zion.23
+	title = zion.23.title
+	desc = zion.23.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.23" }
+        }
+    }
+    
+	option = { # An odd character...  
+		name = zion.23.option.a
+		add_treasury = 5
+		random_list = {
+			95 = {
+				SHI = {
+					country_event = { id = zion.23 days = 28 }
+				}
+			}
+			5 = {
+				# Nothing - death or gone into the distance 
+			}
+		}
+	}	
+	
+}
+
+country_event = { #A Tribal Approaches 
+	id = zion.24
+	title = zion.24.title
+	desc = zion.24.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.24" }
+        }
+    }
+    
+	option = { # An odd character...  
+		name = zion.24.option.a
+		add_treasury = 5
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = NRN
+				}
+				random_list = {
+					95 = {
+						NRN = {
+							country_event = { id = zion.25 days = 28 }
+						}
+					}
+					5 = {
+						# Nothing - death or gone into the distance 
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}   
+	}	
+	
+	option = { # He may stay 
+		name = zion.24.option.b
+		define_advisor = {
+			type = fm_envoy 
+			name = "Follows-Chalk"
+			skill = 1
+			culture = dead_horse
+			religion = tribalism
+		}
+		ai_chance = {
+			factor = 50
+		} 
+	}
+	
+	option = { # Let him study our 'thunder-birds'
+		name = zion.24.option.c
+		trigger =  {
+			OR = {
+				any_owned_province = {
+					has_province_modifier = pf_airport  
+					 
+				}
+				mil_tech = 5
+
+			}
+		}
+		add_country_modifier = { 
+			name = follows_chalk_modifier_shi
+			duration = 3200 
+			#desc = FOLLOWSCHALK
+		}
+		
+	}
+	
+	# Consider expanding with faction options 
+	
+}
+
+country_event = { #A Tribal Approaches 
+	id = zion.25
+	title = zion.25.title
+	desc = zion.25.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		#tag = DED
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.25" }
+        }
+    }
+    
+	option = { # An odd character...  
+		name = zion.25.option.a
+		#add_treasury = 5
+		add_faction_influence = {
+			faction = the_van_graffs 
+			influence = -5
+		}		
+		add_faction_influence = {
+			faction = the_bishops  
+			influence = 2
+		}		
+	}	
+	
+	option = { # We can offer directions.... 
+		name = zion.25.option.b
+		trigger = {
+			faction_in_power = the_wrights 
+		}
+		SHI = {
+			country_event = { id = zion.26 }
+		}
+		add_faction_influence = {
+			faction = the_van_graffs 
+			influence = -5
+		}	
+		ai_chance = {
+			factor = 100
+		}   
+	}
+	
+	option = { # Never mess with the Van Graffs! 
+		name = zion.25.option.c
+		trigger = {
+			faction_in_power = the_van_graffs   
+		}
+		# Text here
+		add_mil_power = 5
+		ai_chance = {
+			factor = 100
+		}   
+	}
+	
+}
+
+country_event = { #A tribals long journey 
+	id = zion.26
+	title = zion.26.title
+	desc = zion.26.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		#tag = DED
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.24" }
+        }
+    }
+    
+	option = { # The land of the Vault Dweller 
+		name = zion.26.option.a
+		trigger = {
+			exists = ARR
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = ARR
+				}
+				random_list = {
+					95 = {
+						ARR = {
+							country_event = { id = zion.27 days = 45 }
+						}
+					}
+					5 = {
+						# Nothing - death or gone into the distance 
+					}
+				}
+			}
+			#else_if = {
+			#	limit = {
+			#		ARR = { exists = no }
+			#	}
+			#}
+		}
+		ai_chance = {
+			factor = 25
+		} 		
+	}	
+	
+	option = { # There is a Robotic menace to the North who needs dealing with  
+		name = zion.26.option.b
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = SKY
+				}
+				random_list = {
+					95 = {
+						SKY = {
+							country_event = { id = zion.28 days = 45 }
+						}
+					}
+					5 = {
+						# Nothing - death or gone into the distance 
+					}
+				}
+			}
+			#else_if = {
+			#	limit = {
+			#		SKY = { exists = no }
+			#	}
+			#}
+		}
+		ai_chance = {
+			factor = 25
+		} 		
+	}
+	
+	#option = { # Rumours of a mysterious people to the East
+	#	name = zion.26.option.c
+	#	hidden_effect = {
+	#		if = {
+	#			limit = {
+	#				OR = {
+	#					exists = CIP
+	#					exists = DOH
+	#					exists = CAE
+	#					exists = BUC
+	#				}
+	#			}
+	#			random_list = {
+	#				50 = {
+	#					CIP = {
+	#						country_event = { id = zion.29 days = 120 }
+	#					}
+	#				}
+	#				20 = {
+	#					DOH = {
+	#						country_event = { id = zion.30 days = 120 }
+	#					}
+	#				}
+	#				20 = {
+	#					CAE = {
+	#						country_event = { id = zion.31 days = 120 }
+	#					}
+	#				}
+	#				5 = {
+	#					# Nothing - death or gone into the distance 
+	#				}
+	#				5 = {
+	#					BUC = {
+	#						country_event = { id = zion.32 days = 120 }
+	#					}
+	#				}
+	#			}
+	#		}
+	#		else_if = {
+	#			limit = {
+	#				OR = {
+	#					CIP = { exists = no }
+	#					DOH = { exists = no }
+	#					CAE = { exists = no }
+	#					BUC = { exists = no }
+	#				}
+	#			}
+	#		}
+	#	}
+	#	ai_chance = {
+	#		factor = 25
+	#	} 		
+	#}
+	
+	option = { # We have nothing to offer him 
+		name = zion.26.option.d
+		
+	}
+	
+}
+
+
+country_event = { #A tribals long journey 
+	id = zion.27
+	title = zion.27.title
+	desc = zion.27.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		#tag = DED
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.24" }
+        }
+    }
+    
+	option = { # He is welcome here 
+		name = zion.27.option.a
+		define_advisor = {
+			type = fm_envoy 
+			name = "Follows-Chalk"
+			skill = 1
+			culture = dead_horse
+			religion = tribalism
+		}
+	}	
+	
+    
+	option = { # He can continue his journey 
+		name = zion.27.option.b
+
+
+	}	
+	
+}
+
+
+country_event = { #Follows-Chalk Tribal Incursion
+	id = zion.28
+	title = zion.28.title
+	desc = zion.28.desc
+	picture = ZION_ROCKY_PASS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		#tag = DED
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.24" }
+        }
+    }
+    
+	option = { # Flesh is weak 
+		name = zion.28.option.a
+		# TEXT HERE 
+	}	
+	
+	option = { # He can continue his journey 
+		name = zion.27.option.b
+		# ADD MORE PATH LATER! 
+
+	}	
+	
+	option = { # Flesh vessel 
+		name = zion.27.option.c
+		# tooltip and effect
+
+	}
+	
+}
+
+country_event = { #War with the White Legs 
+	id = zion.33
+	title = zion.33.title
+	desc = zion.33.desc
+	picture = CONFRONTATION_eventPicture
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		tag = SOR
+		defensive_war_with = WLS 
+		WLS = {
+			OR = {
+				religion = tribalism
+				religion = cult_of_mars 
+			}
+		}
+	}
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.33" }
+        }
+    }
+    
+	option = { # Destroy the totems!
+		name = zion.33.option.a
+		add_mil_power = -50
+		add_manpower = -2	
+		WLS = {
+			add_country_modifier = { 
+				name = totem_wls
+				duration = 340  
+				#desc = PR_TOOLTIP
+			}			
+		}
+		hidden_effect = {
+			WLS = {
+				country_event = { id = zion.34 }
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}   
+	}	
+	
+	option = { # A waste of time 
+		name = zion.33.option.b
+		ai_chance = {
+			factor = 0
+		}   
+	}
+}
+
+
+country_event = { #Totems Destroyed 
+	id = zion.34
+	title = zion.34.title
+	desc = zion.34.desc
+	picture = CONFRONTATION_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - zion.34" }
+        }
+    }
+    
+	option = { # Stop wavering! 
+		name = zion.34.option.a
+		#tooltip = < 
+		#	add_country_modifier = { 
+		#		name = totem_wls
+		#		duration = 340  
+		#		#desc = PR_TOOLTIP
+		#	}
+		#>
+
 	}	
 }
