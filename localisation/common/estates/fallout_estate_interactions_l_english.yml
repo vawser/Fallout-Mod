@@ -1,0 +1,86 @@
+﻿l_english:
+ #-----------------------------------------
+ # Interactions
+ #-----------------------------------------
+ # Interactions
+ estate_action_beckon_the_council: "Beckon the Council"
+ estate_action_sale_of_allowances: "Sale of Allowances"
+ estate_action_seize_land: "Seize Land"
+ estate_action_seek_advisor: "Seek Advisor"
+ estate_action_cede_legitimacy: "Cede Legitimacy"
+ estate_action_cede_prestige: "Cede Prestige"
+ estate_action_postpone_reform: "Postpone Reform"
+ estate_action_overlook_corruption: "Overlook Corruption"
+ estate_action_rescind_taxation: "Rescind Taxation"
+ estate_action_curtail_influence: "Curtail Influence"
+ estate_action_execute_leader: "Execute Leader"
+ estate_action_extort_estates: "Extort the Influential"
+ 
+ #-----------------------------------------
+ # Modifiers
+ #-----------------------------------------
+ EST_VAL_CURTAIL_INFLUENCE: "Curtailed Influence: §Y$VAL$%§!"
+ EST_VAL_EXECUTED_LEADER: "Executed Leader: §Y$VAL$%§!"
+ EST_VAL_ESTATE_ADVISOR: "Found Advisor: §Y$VAL$%§!"
+ 
+ #-----------------------------------------
+ # Events
+ #-----------------------------------------
+ # Estate Agenda
+ estate_system.1.title: "Supremacy over Government"
+ estate_system.1.desc: ""
+ estate_system.1.a: "Force new agenda"
+ 
+ estate_system.2.name: "The Agenda of the Council"
+ estate_system.2.desc: "The Estates of [Root.GetName] have proposed agendas for the summoned Council. Favoring one of the Estates here could have large benefits in the long term.\n\n[Root.GetCachedAgendasFlavorText]"
+ estate_system.2.a: "The Proposal of the [Root.GetBureaucratsName]"
+ estate_system.2.b: "The Proposal of the [Root.GetTradersName]"
+ estate_system.2.c: "The Proposal of the [Root.GetOfficersName]"
+ estate_system.2.d: "The Proposal of the [Root.GetCitizensName]"
+ estate_system.2.e: "The Proposal of the [Root.GetTribalsName]"
+ 
+ estate_system.3.name: "Estate Statutory Rights"
+ estate_system.3.desc: "The Estates of [Root.GetName] have come forth offering a compromise to [Root.Monarch.GetTitle] [Root.Monarch.GetName] to solve the weak control that the [Root.GovernmentName] exercises over the land. In exchange for control, the Estates demand certain liberties..."
+ estate_system.3.a: "Honestly what did you expect when you sold out the entire country?"
+ estate_system.3.b: "Pfft we'll solve this ourselves..."
+ 
+ estate_system.10.title: "Sale of Allowances"
+ estate_system.10.desc: "When funds run low, we can sell regulatory allowances to those of influence within our estates. Which estate should we sell to?"
+ estate_system.10.option.estate_bureaucrats: "[Root.GetBureaucratsName]"
+ estate_system.10.option.estate_traders: "[Root.GetTradersName]"
+ estate_system.10.option.estate_officers: "[Root.GetOfficersName]"
+ estate_system.10.option.estate_citizens: "[Root.GetCitizensName]"
+ estate_system.10.option.estate_tribals: "[Root.GetTribalsName]"
+ estate_system.10.option.none: "None"
+ 
+ SELL_TITLES_TO_estate_bureaucrats: "We shall sell to the [Root.GetBureaucratsName]."
+ SELL_TITLES_TO_estate_traders: "We shall sell to the [Root.GetTradersName]."
+ SELL_TITLES_TO_estate_officers: "We shall sell to the [Root.GetOfficersName]."
+ SELL_TITLES_TO_estate_citizens: "We shall sell to the [Root.GetCitizensName]."
+ SELL_TITLES_TO_estate_tribals: "We shall sell to the [Root.GetTribalsName]."
+ SELL_TITLES_TO_none: "We shall sell to none of them."
+ 
+ estate_system.11.title: "Quantity of Allowances"
+ estate_system.11.desc: "Now we have chosen which estate to sell to, how much shall be raise from them?"
+ estate_system.11.option.a: "A small amount"
+ estate_system.11.option.b: "A medium amount"
+ estate_system.11.option.c: "A large amount"
+ estate_system.11.option.d: "A huge amount"
+ 
+ estate_system.20.title: "Land Seizure"
+ estate_system.20.desc: "Let us seize the land of our more powerful estates. Which estate should we seize from?"
+ estate_system.20.option.estate_bureaucrats: "[Root.GetBureaucratsName]"
+ estate_system.20.option.estate_traders: "[Root.GetTradersName]"
+ estate_system.20.option.estate_officers: "[Root.GetOfficersName]"
+ estate_system.20.option.estate_citizens: "[Root.GetCitizensName]"
+ estate_system.20.option.estate_tribals: "[Root.GetTribalsName]"
+ estate_system.20.option.none: "None"
+ 
+ estate_system.30.title: "Leader Execution"
+ estate_system.30.desc: "Let us execute the leader of one of our estates. Which estate shall we make an example of?"
+ estate_system.30.option.estate_bureaucrats: "[Root.GetBureaucratsName]"
+ estate_system.30.option.estate_traders: "[Root.GetTradersName]"
+ estate_system.30.option.estate_officers: "[Root.GetOfficersName]"
+ estate_system.30.option.estate_citizens: "[Root.GetCitizensName]"
+ estate_system.30.option.estate_tribals: "[Root.GetTribalsName]"
+ estate_system.30.option.none: "None"

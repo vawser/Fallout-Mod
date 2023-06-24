@@ -775,208 +775,60 @@ scaled_estate_land_share_reduce_effect = {
 	}
 }
 
-# Expects country scope
+seize_land_from_estate = {
+    change_estate_land_share = {
+        estate = $ESTATE$
+        share = -5
+    }
+    
+    add_estate_loyalty = {
+        estate = $ESTATE$
+        loyalty = -10
+        short = yes
+    }
+}
+
 seize_land_effect = {
 	hidden_effect = {
-		set_variable = {
-			which = seize_land_effect_variable
-			value = $scale$
-		}
-		while = {
-			limit = {
-				check_variable = {
-					which = seize_land_effect_variable
-					value = 1
-				}
-			}
-			change_variable = {
-				which = seize_land_effect_variable
-				value = -1
-			}
-			if = {
-				limit = {
-					any_owned_province = {
-						OR = {
-							is_in_capital_area = yes
-							is_state_core = root
-						}
-						is_capital = no
-						NOT = {
-							area_for_scope_province = {
-								owned_by = root
-								has_province_flag = seize_land_spawn_unrest_and_rebels
-							}
-						}
-						area_for_scope_province = {
-							any_neighbor_province = {
-								owned_by = root
-								has_province_flag = seize_land_spawn_unrest_and_rebels
-							}
-						}
-					}
-				}
-				random_owned_province = {
-					limit = {
-						OR = {
-							is_in_capital_area = yes
-							is_state_core = root
-						}
-						is_capital = no
-						NOT = {
-							area_for_scope_province = {
-								owned_by = root
-								has_province_flag = seize_land_spawn_unrest_and_rebels
-							}
-						}
-						area_for_scope_province = {
-							any_neighbor_province = {
-								owned_by = root
-								has_province_flag = seize_land_spawn_unrest_and_rebels
-							}
-						}
-						highest_supply_limit_in_area = yes
-					}
-					spawn_rebels_from_unhappy_estate = { size = 2 }
-					area = {
-						limit = {
-							owned_by = ROOT
-						}
-						set_province_flag = seize_land_spawn_unrest_and_rebels
-						add_named_unrest = { name = estate_land_seized value = 10 }
-					}
-				}
-			}
-			else = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							is_in_capital_area = yes
-							is_state_core = root
-						}
-						NOT = {
-							area_for_scope_province = {
-								owned_by = root
-								has_province_flag = seize_land_spawn_unrest_and_rebels
-							}
-						}
-						highest_supply_limit_in_area = yes
-					}
-					spawn_rebels_from_unhappy_estate = { size = 2 }
-					area = {
-						limit = {
-							owned_by = ROOT
-						}
-						set_province_flag = seize_land_spawn_unrest_and_rebels
-						add_named_unrest = { name = estate_land_seized value = 10 }
-					}
-				}
-			}
-		}
-		every_owned_province = {
-			limit = { has_province_flag = seize_land_spawn_unrest_and_rebels }
-			clr_province_flag = seize_land_spawn_unrest_and_rebels
-		}
+        spawn_rebels_from_unhappy_estate = { ESTATE = bureaucrats           SIZE = 1    REBEL = estate_bureaucrats_rebels           }
+        spawn_rebels_from_unhappy_estate = { ESTATE = traders               SIZE = 1    REBEL = estate_traders_rebels               }
+        spawn_rebels_from_unhappy_estate = { ESTATE = officers              SIZE = 1    REBEL = estate_officers_rebels              }
+        spawn_rebels_from_unhappy_estate = { ESTATE = citizens              SIZE = 1    REBEL = estate_citizens_rebels              }
+        spawn_rebels_from_unhappy_estate = { ESTATE = tribals               SIZE = 1    REBEL = estate_tribals_rebels               }
 	}
 }
 
 spawn_rebels_from_unhappy_estate = {
-	random_list = {
-		1 = {
-			trigger = {
-				owner = {
-					has_estate = estate_bureaucrats
+    random_owned_province = {
+        limit = {
+            is_in_capital_area = yes
+            NOT = { has_siege = yes } # i.e. rebels are not present
+        }
+        
+        if = {
+            limit = {
+                owner = {
+                    has_estate = estate_$ESTATE$
 					NOT = {
 						estate_loyalty = {
-							estate = estate_bureaucrats
+							estate = estate_$ESTATE$
 							loyalty = 30
 						}
 					}
-				}
-			}
-			spawn_rebels = {
-				type = anti_tax_rebels
-				size = $size$
-				estate = estate_bureaucrats
-				as_if_faction = yes
-			}
-		}
-		1 = {
-			trigger = {
-				owner = {
-					has_estate = estate_traders
-					NOT = {
-						estate_loyalty = {
-							estate = estate_traders
-							loyalty = 30
-						}
-					}
-				}
-			}
-			spawn_rebels = {
-				type = particularist_rebels
-				size = $size$
-				estate = estate_traders
-				as_if_faction = yes
-			}
-		}
-        1 = {
-			trigger = {
-				owner = {
-					has_estate = estate_officers
-					NOT = {
-						estate_loyalty = {
-							estate = estate_officers
-							loyalty = 30
-						}
-					}
-				}
-			}
-			spawn_rebels = {
-                type = noble_rebels
-                size = $size$
-                estate = estate_officers
-                as_if_faction = yes
+                }
             }
-		}
-        1 = {
-			trigger = {
-				owner = {
-					has_estate = estate_citizens
-					NOT = {
-						estate_loyalty = {
-							estate = estate_citizens
-							loyalty = 30
-						}
-					}
-				}
+            
+            add_named_unrest = { 
+                name = estate_land_seized 
+                value = 10 
+            }  
+            
+            spawn_rebels = {
+				type = $REBEL$
+				size = $SIZE$
 			}
-			spawn_rebels = {
-                type = anti_tax_rebels
-                size = $size$
-                estate = estate_citizens
-                as_if_faction = yes
-            }
-		}
-		1 = {
-			trigger = {
-				owner = {
-					has_estate = estate_tribals
-					NOT = {
-						estate_loyalty = {
-							estate = estate_tribals
-							loyalty = 30
-						}
-					}
-				}
-			}
-			spawn_rebels = {
-				type = pretender_rebels
-				size = $size$
-				estate = estate_tribals
-				as_if_faction = yes
-			}
-		}
-	}
+        }
+    }
 }
 
 pick_random_estate_if_present = {
@@ -1252,4 +1104,100 @@ spawn_rebels_seize_land_switch = {
 		10 = { custom_tooltip = estate_seize_land_interaction_tooltip_10 seize_land_effect = { scale = 2 } }
 		1 = { custom_tooltip = estate_seize_land_interaction_tooltip_1 seize_land_effect = { scale = 1 } }
 	}
+}
+
+sell_titles_amount_small = {
+    if = {
+        limit = {
+            has_country_flag = sell_titles_to_$ESTATE$
+        }
+        change_estate_land_share = {
+            estate = $ESTATE$
+            share = 5
+        }
+        add_years_of_estate_land_income = 0.5
+    }
+}
+sell_titles_amount_medium = {
+    if = {
+        limit = {
+            has_country_flag = sell_titles_to_$ESTATE$
+        }
+        change_estate_land_share = {
+            estate = $ESTATE$
+            share = 10
+        }
+        add_years_of_estate_land_income = 0.75
+    }
+}
+sell_titles_amount_large = {
+    if = {
+        limit = {
+            has_country_flag = sell_titles_to_$ESTATE$
+        }
+        change_estate_land_share = {
+            estate = $ESTATE$
+            share = 15
+        }
+        add_years_of_estate_land_income = 1.0
+    }
+}
+sell_titles_amount_huge = {
+    if = {
+        limit = {
+            has_country_flag = sell_titles_to_$ESTATE$
+        }
+        change_estate_land_share = {
+            estate = $ESTATE$
+            share = 20
+        }
+        add_years_of_estate_land_income = 1.25
+    }
+}
+
+execute_estate_leader = {
+    add_stability = -1
+    add_estate_influence_modifier = {
+        estate = $ESTATE$
+        desc = EST_VAL_EXECUTED_LEADER
+        duration = 7300
+        influence = -25
+        short = yes
+    }
+    add_estate_loyalty = {
+        estate = $ESTATE$
+        loyalty = -25
+        short = yes
+    }
+    
+    random_owned_province = {
+        limit = {
+            is_in_capital_area = yes
+            NOT = { has_siege = yes } # i.e. rebels are not present
+        }
+        
+        if = {
+            limit = {
+                owner = {
+                    has_estate = $ESTATE$
+					NOT = {
+						estate_loyalty = {
+							estate = $ESTATE$
+							loyalty = 30
+						}
+					}
+                }
+            }
+            
+            add_named_unrest = { 
+                name = estate_land_seized 
+                value = 10 
+            }  
+            
+            spawn_rebels = {
+				type = $ESTATE$_rebels
+				size = 1
+			}
+        }
+    }
 }

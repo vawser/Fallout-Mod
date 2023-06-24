@@ -8,6 +8,16 @@ has_any_estates = {
 	}
 }
 
+has_agenda_estates = {
+	OR = {
+		has_estate = estate_bureaucrats
+		has_estate = estate_traders
+		has_estate = estate_officers
+		has_estate = estate_citizens
+		has_estate = estate_tribals
+	}
+}
+
 # Used to determine if the country is strong enough to force 
 # out the rest of the estates for actions that would have them
 # removed.

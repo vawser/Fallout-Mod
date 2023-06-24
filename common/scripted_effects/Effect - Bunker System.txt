@@ -1,0 +1,270 @@
+# Effects
+setup_bunker_province = {
+    custom_tooltip = SETUP_BUNKER_TT
+    
+    hidden_effect = {
+        if = {
+            limit = {
+                owner = { is_valid_bunker_race = yes }
+            }
+            add_province_triggered_modifier = badly_managed_bunker
+            add_province_triggered_modifier = bunker_depth_level_0
+            add_province_triggered_modifier = bunker_depth_level_1
+            add_province_triggered_modifier = bunker_depth_level_2
+            add_province_triggered_modifier = bunker_depth_level_3
+            add_province_triggered_modifier = bunker_depth_level_4
+            add_province_triggered_modifier = bunker_depth_level_5
+            add_province_triggered_modifier = bunker_depth_level_6
+            add_province_triggered_modifier = bunker_depth_level_7
+            add_province_triggered_modifier = bunker_depth_level_8
+            add_province_triggered_modifier = bunker_depth_level_9
+            add_province_triggered_modifier = bunker_depth_level_10
+        }
+    }
+}
+
+setup_bunker_depth_levels = {
+    hidden_effect = {
+        if = {
+            limit = {
+                owner = { is_valid_bunker_race = yes }
+            }
+            if = {
+                limit = {
+                    development = 5
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 1
+                }
+            }
+            if = {
+                limit = {
+                    development = 10
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 2
+                }
+            }
+            if = {
+                limit = {
+                    development = 15
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 3
+                }
+            }
+            if = {
+                limit = {
+                    development = 20
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 4
+                }
+            }
+            if = {
+                limit = {
+                    development = 25
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 5
+                }
+            }
+            if = {
+                limit = {
+                    development = 30
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 6
+                }
+            }
+            if = {
+                limit = {
+                    development = 35
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 7
+                }
+            }
+            if = {
+                limit = {
+                    development = 40
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 8
+                }
+            }
+            if = {
+                limit = {
+                    development = 45
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 9
+                }
+            }
+            if = {
+                limit = {
+                    development = 50
+                }
+                set_variable = {
+                    which = province_bunker_level
+                    value = 10
+                }
+            }
+        }
+    }
+}
+
+# Reduce depth irrespective of development - i.e. the cost to fix is the price of deving once
+downgrade_bunker_status = {
+    custom_tooltip = BUNKER_DEPTH_LOSS_TT
+    
+    hidden_effect = {
+        if = {
+            limit = {
+                owner = { is_valid_bunker_race = yes }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = province_bunker_level
+                        value = 1
+                    }
+                }
+                subtract_variable = {
+                    which = province_bunker_level
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+update_bunker_status = {
+    if = {
+        limit = {
+            owner = { is_valid_bunker_race = yes }
+        }
+        # Hold Level Increase
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        is_bunker_level_0 = yes
+                        development = 5
+                    }
+                    AND = {
+                        is_bunker_level_1 = yes
+                        development = 10
+                    }
+                    AND = {
+                        is_bunker_level_2 = yes
+                        development = 15
+                    }
+                    AND = {
+                        is_bunker_level_3 = yes
+                        development = 20
+                    }
+                    AND = {
+                        is_bunker_level_4 = yes
+                        development = 25
+                    }
+                    AND = {
+                        is_bunker_level_5 = yes
+                        development = 30
+                    }
+                    AND = {
+                        is_bunker_level_6 = yes
+                        development = 35
+                    }
+                    AND = {
+                        is_bunker_level_7 = yes
+                        development = 40
+                    }
+                    AND = {
+                        NOT = { has_province_modifier = bunker_is_finished }
+                        is_bunker_level_8 = yes
+                        development = 45
+                    }
+                    AND = {
+                        NOT = { has_province_modifier = bunker_is_finished }
+                        is_bunker_level_9 = yes
+                        development = 50
+                    }
+                }
+            }
+            
+            change_variable = {
+                which = province_bunker_level
+                value = 1
+            }
+        }
+    }
+}
+
+assess_bunker_status = {
+    if = {
+        limit = {
+            owner = { is_valid_bunker_race = yes }
+        }
+        # Hold Level Decrease
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        is_bunker_level_1 = yes
+                        NOT = { development = 5 }
+                    }
+                    AND = {
+                        is_bunker_level_2 = yes
+                        NOT = { development = 10 }
+                    }
+                    AND = {
+                        is_bunker_level_3 = yes
+                        NOT = { development = 15 }
+                    }
+                    AND = {
+                        is_bunker_level_4 = yes
+                        NOT = { development = 20 }
+                    }
+                    AND = {
+                        is_bunker_level_5 = yes
+                        NOT = { development = 25 }
+                    }
+                    AND = {
+                        is_bunker_level_6 = yes
+                        NOT = { development = 30 }
+                    }
+                    AND = {
+                        is_bunker_level_7 = yes
+                        NOT = { development = 35 }
+                    }
+                    AND = {
+                        is_bunker_level_8 = yes
+                        NOT = { development = 40 }
+                    }
+                    AND = {
+                        is_bunker_level_9 = yes
+                        NOT = { development = 45 }
+                    }
+                    AND = {
+                        is_bunker_level_10 = yes
+                        NOT = { development = 50 }
+                    }
+                }
+            }
+            subtract_variable = {
+                which = province_bunker_level
+                value = 1
+            }
+        }
+    }
+}

@@ -1,0 +1,567 @@
+namespace = fallout_bunker_system
+
+#--------------------------------------------------
+# System
+#--------------------------------------------------
+# Bunker Setup - Game Start
+country_event = {
+	id = fallout_bunker_system.100
+	title = fallout_bunker_system.100.title
+	desc = fallout_bunker_system.100.desc
+	picture = TERMINAL_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+    
+	trigger = {
+		NOT = { has_global_flag = setup_bunker_provinces }
+	}
+    
+    immediate = {
+        hidden_effect = {
+            set_global_flag = setup_bunker_provinces
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.100.option.a
+		
+        # General
+        every_country = {
+            limit = {
+                is_valid_bunker_race = yes
+            }
+            
+            capital_scope = {
+                setup_bunker_province = yes
+                setup_bunker_depth_levels = yes
+            }
+            
+            # every_owned_province = {
+                # limit = {
+                    # is_pre_existing_bunker = yes
+                # }
+                
+                # setup_bunker_province = yes
+                # setup_bunker_depth_levels = yes
+            # }
+        }
+	}
+}
+
+# Hold Setup - Valid Hold nation missing Hold in capital
+country_event = {
+	id = fallout_bunker_system.101
+	title = fallout_bunker_system.101.title
+	desc = fallout_bunker_system.101.desc
+	picture = BOS_BUNKER_ENTRANCE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+        is_valid_bunker_race = yes
+        
+		capital_scope = {
+            NOT = { is_bunker_province = yes }
+        }
+	}
+    
+    immediate = {
+        hidden_effect = {
+            capital_scope = {
+                save_event_target_as = capital_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.101.option.a
+		
+        capital_scope = {
+            setup_bunker_province = yes
+        }
+	}
+}
+
+# Hold Setup - Random Hold in valid province
+country_event = {
+	id = fallout_bunker_system.102
+	title = fallout_bunker_system.102.title
+	desc = fallout_bunker_system.102.desc
+	picture = BOS_BUNKER_ENTRANCE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+        is_valid_bunker_race = yes
+        any_owned_province = {
+            NOT = { is_bunker_province = yes }
+        }
+	}
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.102.option.a
+		
+        event_target:target_province = {
+            setup_bunker_province = yes
+        }
+	}
+}
+
+# Hold Setup - Downgrade Hold Level if development drops
+country_event = {
+	id = fallout_bunker_system.110
+	title = fallout_bunker_system.110.title
+	desc = fallout_bunker_system.110.desc
+	picture = BOS_BUNKER_ENTRANCE_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+    
+	trigger = {
+        is_valid_bunker_race = yes
+    }
+	
+	option = {
+		name = fallout_bunker_system.110.option.a
+		
+        every_owned_province = {
+            limit = {
+                is_bunker_province = yes
+            }
+            
+            assess_bunker_status = yes
+        }
+	}
+}
+
+#--------------------------------------------------
+# Flavour
+#--------------------------------------------------
+# --- Generic ---
+# Destruction in [target_province.GetName]
+country_event = {
+	id = fallout_bunker_system.10
+	title = fallout_bunker_system.10.title
+	desc = fallout_bunker_system.10.desc
+	picture = BOS_PATROL_eventPicture
+	goto = target_province
+    
+	is_triggered_only = yes
+    
+	trigger = {
+        any_owned_province = {
+            is_bunker_province = yes
+            devastation = 1
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_bunker_province = yes
+                }
+                
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.10.option.a
+		
+        add_years_of_income = -1.0
+        
+        event_target:target_province = {
+            add_devastation = -5
+        }
+	}
+    option = {
+		name = fallout_bunker_system.10.option.a
+		
+        trigger = {
+            OR = {
+                base_tax = 2
+                base_production = 2
+                base_manpower = 2 
+            }
+        }
+        
+        add_years_of_income = -0.1
+        
+        event_target:target_province = {
+            add_devastation = -1
+            
+            random_list = {
+                33 = { 
+                    trigger = {
+                        base_tax = 2
+                    }
+                    add_base_tax = -1
+                }
+                33 = { 
+                    trigger = {
+                        base_production = 2
+                    }
+                    add_base_production = -1
+                }
+                33 = { 
+                    trigger = {
+                        base_manpower = 2
+                    }
+                    add_base_manpower = -1
+                }
+            }
+        }
+	}
+    option = {
+		name = fallout_bunker_system.10.option.b
+		
+        event_target:target_province = {
+            if = {
+                limit = {
+                    base_tax = 3
+                }
+                
+                add_base_tax = -2
+            }
+            else = {
+                set_base_tax = 1
+            }
+            
+            if = {
+                limit = {
+                    base_production = 3
+                }
+                
+                add_base_production = -2
+            }
+            else = {
+                set_base_production = 1
+            }
+            
+            if = {
+                limit = {
+                    base_manpower = 3
+                }
+                
+                add_base_manpower = -2
+            }
+            else = {
+                set_base_manpower = 1
+            }
+        }
+	}
+}
+
+# Explosive Exploration
+country_event = {
+	id = fallout_bunker_system.11
+	title = fallout_bunker_system.11.title
+	desc = fallout_bunker_system.11.desc
+	picture = NUKE_MUSHROOM_eventPicture
+	goto = target_province
+    
+	is_triggered_only = yes
+    
+	trigger = {
+        any_owned_province = {
+            is_bunker_province = yes
+            NOT = { is_bunker_level_10 = yes }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_bunker_province = yes
+                    NOT = { is_bunker_level_10 = yes }
+                }
+                
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.11.option.a
+		
+        event_target:target_province = {
+            random_list = {
+                50 = {
+                    add_province_modifier = {
+                        name = bunker_improvements
+                        duration = 3650
+                    }
+                }
+                50 = {
+                    downgrade_bunker_status = yes
+                }
+            }
+        }
+	}
+    option = {
+		name = fallout_bunker_system.11.option.b
+		
+        event_target:target_province = {
+            add_base_production = 1
+        }
+	}
+}
+
+# Pre-war Machinery
+country_event = {
+	id = fallout_bunker_system.12
+	title = fallout_bunker_system.12.title
+	desc = fallout_bunker_system.12.desc
+	picture = BIG_MT_THE_SINK_eventPicture
+	goto = target_province
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        any_owned_province = {
+            is_bunker_province = yes
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_bunker_province = yes
+                }
+                
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.12.option.a
+		
+        event_target:target_province = {
+            add_province_modifier = {
+                name = bunker_prewar_machinery
+                duration = 3650
+            }
+        }
+	}
+    option = {
+		name = fallout_bunker_system.12.option.b
+		
+        event_target:target_province = {
+            add_base_tax = 1
+        }
+	}
+}
+
+# Citizens Flee [target_province.GetName]
+country_event = {
+	id = fallout_bunker_system.13
+	title = fallout_bunker_system.13.title
+	desc = fallout_bunker_system.13.desc
+	picture = CONFRONTATION_eventPicture
+	goto = target_province
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        any_owned_province = {
+            is_bunker_province = yes
+            devastation = 20
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_bunker_province = yes
+                }
+                
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.13.option.a
+		
+        event_target:target_province = {
+            downgrade_bunker_status = yes
+        }
+	}
+}
+
+# Vicious Punishment in [target_province.GetName]
+country_event = {
+	id = fallout_bunker_system.14
+	title = fallout_bunker_system.14.title
+	desc = fallout_bunker_system.14.desc
+	picture = PRISONERS_eventPicture
+	goto = target_province
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        any_owned_province = {
+            is_bunker_province = yes
+            unrest = 3
+            NOT = { has_province_modifier = bunker_vicious_enforcers }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_bunker_province = yes
+                    unrest = 3
+                    NOT = { has_province_modifier = bunker_vicious_enforcers }
+                }
+                
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.14.option.a
+		
+        add_mil_power = -50
+        event_target:target_province = {
+            add_province_modifier = {
+                name = bunker_vicious_enforcers
+                duration = 3650
+            }
+        }
+	}
+	
+	option = {
+		name = fallout_bunker_system.14.option.b
+		
+        event_target:target_province = {
+            add_devastation = 1
+        }
+	}
+}
+
+# We Dug Too Deep
+country_event = {
+	id = fallout_bunker_system.15
+	title = fallout_bunker_system.15.title
+	desc = fallout_bunker_system.15.desc
+	picture = VAULT_ENTRANCE_CLEAR_eventPicture
+	goto = target_province
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        any_owned_province = {
+            is_bunker_province = yes
+            OR = {
+                is_bunker_level_8 = yes
+                is_bunker_level_9 = yes
+                is_bunker_level_10 = yes
+            }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_bunker_province = yes
+                    OR = {
+                        is_bunker_level_8 = yes
+                        is_bunker_level_9 = yes
+                    }
+                }
+                
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.15.option.a
+		
+        event_target:target_province = {
+            add_province_modifier = {
+                name = bunker_we_must_dig
+                duration = -1
+            }
+        }
+	}
+	
+	option = {
+		name = fallout_bunker_system.15.option.b
+		
+        custom_tooltip = HOLD_CANNOT_BE_IMPROVED_TT
+        
+        event_target:target_province = {
+            add_province_modifier = {
+                name = bunker_is_finished
+                duration = -1
+            }
+        }
+	}
+}
+
+# The Beast Below
+country_event = {
+	id = fallout_bunker_system.16
+	title = fallout_bunker_system.16.title
+	desc = fallout_bunker_system.16.desc
+	picture = GLOWING_SEA_eventPicture
+	goto = target_province
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        any_owned_province = {
+            is_bunker_province = yes
+            has_province_modifier = bunker_we_must_dig
+            NOT = { has_province_modifier = bunker_beast_below }
+        }
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    is_bunker_province = yes
+                    has_province_modifier = bunker_we_must_dig
+                    NOT = { has_province_modifier = bunker_beast_below }
+                }
+                
+                save_event_target_as = target_province
+            }
+        }
+    }
+	
+	option = {
+		name = fallout_bunker_system.16.option.a
+		
+        event_target:target_province = {
+            add_devastation = 100
+            
+            add_province_modifier = { 
+                name = bunker_beast_below
+                duration = 7300
+            }
+        }
+	}
+}
+

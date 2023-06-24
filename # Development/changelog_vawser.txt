@@ -32,6 +32,57 @@
 # Ideagroups
 - Radiation Adaptability (the ability to colonise Nuked provinces) is now gained either by completing Settlement or Expansion ideagroups.
 
+# Estates
+- Changed the visual look of the estate actions.
+
+- Changed the following actions:
+ - Sales of Titles: now lets you select which estate to sell to, and the amount to get (more ducats = more land given)
+ - Land Seizure: now lets you select which estate to seize from. The exception privileges have been removed.
+
+- Added the following actions:
+ - Guild Recruitment: lets you establish one of the unlockable guilds. Has a 50 year cooldown.
+ - Seek Advisor: lets you add one of the advisor types. Has a 5 year cooldown.
+ - Cede Legitimacy: lose legitimacy (or equivalent) and boost estate loyalty. Has a 3 year cooldown.
+ - Cede Prestige: lose prestige and boost estate loyalty. Has a 3 year cooldown.
+ - Postpone Reform: lose government reform progress and boost estate loyalty. Has a 3 year cooldown.
+ - Overlook Corruption: gain corruption and boost estate loyalty. Has a 3 year cooldown.
+ - Rescind Taxation: lose ducats and boost estate loyalty. Has a 3 year cooldown.
+ - Curtail Influence: reduce estate influence and loyalty by 15. Has a 5 year cooldown.
+ - Execute Leader: reduce estate influence and loyalty by 25. Has a 5 year cooldown.
+ 
+# Doctrines
+- Implemented the full doctrine system.
+ - It is now found in the Status Report menu.
+ - There are 3 types of doctrines: Siege, Homeland and Insurrection.
+ - The non-standard doctrines require various ideagroups to unlock.
+ 
+ - Siege:
+  - Standard: normal behavior
+  - Sow Terror: adjacent provinces are captured on siege win.
+  - Slash and Burn: +50 devastation is applied to the province on siege win.
+  - Enslave the Remnants: +manpower on siege win.
+  - Purify and Cleanse: change province culture and religion to ROOT on siege win.
+  - Fungal Conversion: same as Purify and Cleanse, but cheaper in terms of MIL power.
+ 
+ - Homeland:
+  - Resignation: normal behavior
+  - Martyrdom: enemy nation loses manpower on siege win against us.
+  - Sabotage: enemy nation loses ducats on siege win against us.
+  - Slander: enemy nation loses prestige on siege win against us.
+  
+ - Insurrection:
+  - Conflict: normal behavior
+  - Bribery: lose ducats on rebel siege win, but automatically destroy them.
+  - Corruption: gain corruption on rebel siege win, but automatically destroy them.
+  - Garrison: lose manpower on rebel siege win, but automatically destroy them.
+  
+# Bunker System
+- Added a bunker system for the Brotherhood of Steel and Enclave.
+- If a nation is one of the valid bunker races, their capital will automatically be a Underground Bunker.
+- Other provinces may become Underground Bunker if they are owned by a valid bunker race.
+- Holds start at Depth Level 0, and can be expanded to reach Depth Level 10. Each level provides benefits, with a small penalty to state maintenance.
+- Holds are improved via development primarily. The Depth Level will change at the following breakpoints: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50
+
 # Balance
 - Increased the cost of Centers of Trade Tier 2 and 3.
 - Reduced the province_trade_power_value given by Centers of Trade Tier 2 and 3.
@@ -39,8 +90,14 @@
 - Reduced the power of 'Nuked' province modifier from Nuclear Strikes massively, it is now only a small debuff.
 - Reduced the strength of the Zeta invasion.
 
+# Pops
+- Increased the potency of the Pop benefits.
+- Adjusted the pop penalities so High pop now removes the penalty.
+- High Pop now applies an additional benefit.
+
 # Bugfixes
 - Fixed bad position data for some provinces.
+
 
 #-----------------------------
 # TODO
@@ -56,6 +113,5 @@
 
 - Finish Enclave mission tree
 
-- Adjust tradenodes in the major lore locations
 - Add in some Fallout naval doctrines (remove current setup)
 - Add in WWU doctrine system

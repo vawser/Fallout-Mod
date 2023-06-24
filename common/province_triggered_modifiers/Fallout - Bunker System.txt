@@ -1,0 +1,340 @@
+# Province Triggered modifiers are here.
+# These are added to provinces through the add_province_triggered_modifier effect
+#
+# Effects are fully scriptable here.
+
+#-------------------------------------
+# Hold Core
+#-------------------------------------
+badly_managed_bunker = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_invalid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    local_tax_modifier = -0.5
+    local_production_efficiency = -0.5
+    local_manpower_modifier = -0.5
+}
+
+#-------------------------------------
+# Hold Levels
+#-------------------------------------
+bunker_depth_level_0 = {
+	potential = {
+        is_bunker_level_0 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.05
+    local_tax_modifier = 0.05
+    local_missionary_strength = 0.005
+    local_defensiveness = 0.05
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.05
+}
+
+bunker_depth_level_1 = {
+	potential = {
+        is_bunker_level_1 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.1
+    local_tax_modifier = 0.1
+    local_missionary_strength = 0.01
+    local_defensiveness = 0.1
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.1
+}
+
+bunker_depth_level_2 = {
+	potential = {
+        is_bunker_level_2 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.2
+    local_tax_modifier = 0.2
+    local_missionary_strength = 0.02
+    local_defensiveness = 0.2
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.2
+}
+
+bunker_depth_level_3 = {
+	potential = {
+        is_bunker_level_3 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.3
+    local_tax_modifier = 0.3
+    local_missionary_strength = 0.03
+    local_defensiveness = 0.3
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.3
+}
+
+bunker_depth_level_4 = {
+	potential = {
+        is_bunker_level_4 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.4
+    local_tax_modifier = 0.4
+    local_missionary_strength = 0.04
+    local_defensiveness = 0.4
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.4
+}
+
+bunker_depth_level_5 = {
+	potential = {
+        is_bunker_level_5 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.5
+    local_tax_modifier = 0.5
+    local_missionary_strength = 0.05
+    local_defensiveness = 0.5
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.5
+}
+
+bunker_depth_level_6 = {
+	potential = {
+        is_bunker_level_6 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.6
+    local_tax_modifier = 0.6
+    local_missionary_strength = 0.06
+    local_defensiveness = 0.6
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.6
+}
+
+bunker_depth_level_7 = {
+	potential = {
+        is_bunker_level_7 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.7
+    local_tax_modifier = 0.7
+    local_missionary_strength = 0.07
+    local_defensiveness = 0.7
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.7
+}
+
+bunker_depth_level_8 = {
+	potential = {
+        is_bunker_level_8 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.8
+    local_tax_modifier = 0.8
+    local_missionary_strength = 0.08
+    local_defensiveness = 0.8
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.8
+}
+
+bunker_depth_level_9 = {
+	potential = {
+        is_bunker_level_9 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 0.9
+    local_tax_modifier = 0.9
+    local_missionary_strength = 0.09
+    local_defensiveness = 0.9
+   
+    # Penalties
+    local_state_maintenance_modifier = 0.9
+}
+
+bunker_depth_level_10 = {
+	potential = {
+        is_bunker_level_10 = yes
+	}
+
+	trigger = {
+        is_valid_bunker_race = yes
+	}
+
+	on_activation = {
+    
+	}
+	
+	on_deactivation = {
+    
+	}
+    
+    # Benefits
+    local_development_cost = -0.5
+    trade_goods_size = 1.0
+    local_tax_modifier = 1.0
+    local_missionary_strength = 0.1
+    local_defensiveness = 1.0
+   
+    # Penalties
+    local_state_maintenance_modifier = 1.0
+}

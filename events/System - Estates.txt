@@ -307,3 +307,281 @@ country_event = {
 	}
 }
 
+# Sale of Allowances - Menu
+country_event = {
+	id = estate_system.10
+	title = estate_system.10.title
+	desc = estate_system.10.desc
+	picture = FREESIDE_eventPicture
+
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = sell_titles_to_estate_bureaucrats
+            clr_country_flag = sell_titles_to_estate_traders
+            clr_country_flag = sell_titles_to_estate_officers
+            clr_country_flag = sell_titles_to_estate_citizens
+            clr_country_flag = sell_titles_to_estate_tribals
+        }
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = estate_system.10.option.estate_bureaucrats
+        
+        trigger = {
+            has_estate = estate_bureaucrats
+        }
+        
+        custom_tooltip = SELL_TITLES_TO_estate_bureaucrats
+        hidden_effect = {
+            set_country_flag = sell_titles_to_estate_bureaucrats
+        }
+        country_event = { id = estate_system.11 }
+	}
+    option = {
+		name = estate_system.10.option.estate_traders
+        
+        trigger = {
+            has_estate = estate_traders
+        }
+        
+        custom_tooltip = SELL_TITLES_TO_estate_traders
+        hidden_effect = {
+            set_country_flag = sell_titles_to_estate_traders
+        }
+        country_event = { id = estate_system.11 }
+	}
+    option = {
+		name = estate_system.10.option.estate_officers
+        
+        trigger = {
+            has_estate = estate_officers
+        }
+        
+        custom_tooltip = SELL_TITLES_TO_estate_officers
+        hidden_effect = {
+            set_country_flag = sell_titles_to_estate_officers
+        }
+        country_event = { id = estate_system.11 }
+	}
+    option = {
+		name = estate_system.10.option.estate_citizens
+        
+        trigger = {
+            has_estate = estate_citizens
+        }
+        
+        custom_tooltip = SELL_TITLES_TO_estate_citizens
+        hidden_effect = {
+            set_country_flag = sell_titles_to_estate_citizens
+        }
+        country_event = { id = estate_system.11 }
+	}
+    option = {
+		name = estate_system.10.option.estate_tribals
+        
+        trigger = {
+            has_estate = estate_tribals
+        }
+        
+        custom_tooltip = SELL_TITLES_TO_estate_tribals
+        hidden_effect = {
+            set_country_flag = sell_titles_to_estate_tribals
+        }
+        country_event = { id = estate_system.11 }
+	}
+}
+
+# Quantity of Allowances
+country_event = {
+	id = estate_system.11
+	title = estate_system.11.title
+	desc = estate_system.11.desc
+	picture = TERMINAL_eventPicture
+
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = estate_system.11.option.a
+        
+        sell_titles_amount_small = { ESTATE = estate_bureaucrats }
+        sell_titles_amount_small = { ESTATE = estate_traders }
+        sell_titles_amount_small = { ESTATE = estate_officers }
+        sell_titles_amount_small = { ESTATE = estate_citizens }
+        sell_titles_amount_small = { ESTATE = estate_tribals }
+	}
+    option = {
+		name = estate_system.11.option.b
+        
+        sell_titles_amount_medium = { ESTATE = estate_bureaucrats }
+        sell_titles_amount_medium = { ESTATE = estate_traders }
+        sell_titles_amount_medium = { ESTATE = estate_officers }
+        sell_titles_amount_medium = { ESTATE = estate_citizens }
+        sell_titles_amount_medium = { ESTATE = estate_tribals }
+	}
+    option = {
+		name = estate_system.11.option.c
+        
+        sell_titles_amount_large = { ESTATE = estate_bureaucrats }
+        sell_titles_amount_large = { ESTATE = estate_traders }
+        sell_titles_amount_large = { ESTATE = estate_officers }
+        sell_titles_amount_large = { ESTATE = estate_citizens }
+        sell_titles_amount_large = { ESTATE = estate_tribals }
+	}
+    option = {
+		name = estate_system.11.option.d
+        
+        sell_titles_amount_huge = { ESTATE = estate_bureaucrats }
+        sell_titles_amount_huge = { ESTATE = estate_traders }
+        sell_titles_amount_huge = { ESTATE = estate_officers }
+        sell_titles_amount_huge = { ESTATE = estate_citizens }
+        sell_titles_amount_huge = { ESTATE = estate_tribals }
+	}
+}
+
+# Seize Land - Menu
+country_event = {
+	id = estate_system.20
+	title = estate_system.20.title
+	desc = estate_system.20.desc
+	picture = NCR_CAMP_eventPicture
+
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = estate_system.20.option.estate_bureaucrats
+        
+        trigger = {
+            has_estate = estate_bureaucrats
+        }
+        
+        seize_land_from_estate = { ESTATE = estate_bureaucrats }
+        custom_tooltip = seize_land_rebels_tt
+		seize_land_effect = yes
+	}
+    option = {
+		name = estate_system.20.option.estate_traders
+        
+        trigger = {
+            has_estate = estate_traders
+        }
+        
+        seize_land_from_estate = { ESTATE = estate_traders }
+        custom_tooltip = seize_land_rebels_tt
+		seize_land_effect = yes
+	}
+    option = {
+		name = estate_system.20.option.estate_officers
+        
+        trigger = {
+            has_estate = estate_officers
+        }
+        
+        seize_land_from_estate = { ESTATE = estate_officers }
+        custom_tooltip = seize_land_rebels_tt
+		seize_land_effect = yes
+	}
+    option = {
+		name = estate_system.20.option.estate_citizens
+        
+        trigger = {
+            has_estate = estate_citizens
+        }
+        
+        seize_land_from_estate = { ESTATE = estate_citizens }
+        custom_tooltip = seize_land_rebels_tt
+		seize_land_effect = yes
+	}
+    option = {
+		name = estate_system.20.option.estate_tribals
+        
+        trigger = {
+            has_estate = estate_tribals
+        }
+        
+        seize_land_from_estate = { ESTATE = estate_tribals }
+        custom_tooltip = seize_land_rebels_tt
+		seize_land_effect = yes
+	}
+    option = {
+		name = estate_system.20.option.none
+        
+	}
+}
+
+# Execute Leader - Menu
+country_event = {
+	id = estate_system.30
+	title = estate_system.30.title
+	desc = estate_system.30.desc
+	picture = LEGION_CROSS_eventPicture
+
+    is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = estate_system.30.option.estate_bureaucrats
+        
+        trigger = {
+            has_estate = estate_bureaucrats
+        }
+        
+        execute_estate_leader = { ESTATE = estate_bureaucrats }
+	}
+    option = {
+		name = estate_system.30.option.estate_traders
+        
+        trigger = {
+            has_estate = estate_traders
+        }
+        
+        execute_estate_leader = { ESTATE = estate_traders }
+	}
+    option = {
+		name = estate_system.30.option.estate_officers
+        
+        trigger = {
+            has_estate = estate_officers
+        }
+        
+        execute_estate_leader = { ESTATE = estate_officers }
+	}
+    option = {
+		name = estate_system.30.option.estate_citizens
+        
+        trigger = {
+            has_estate = estate_citizens
+        }
+        
+        execute_estate_leader = { ESTATE = estate_citizens }
+	}
+    option = {
+		name = estate_system.30.option.estate_tribals
+        
+        trigger = {
+            has_estate = estate_tribals
+        }
+        
+        execute_estate_leader = { ESTATE = estate_tribals }
+	}
+    option = {
+		name = estate_system.30.option.none
+        
+	}
+}

@@ -1,0 +1,460 @@
+namespace = fallout_advisor_select
+
+#-----------------------------------
+# Seek Advisor
+#-----------------------------------
+country_event = {
+	id = fallout_advisor_select.10
+	title = fallout_advisor_select.10.title
+	desc = fallout_advisor_select.10.desc
+	picture = VAULT_OFFICE_eventPicture
+
+	is_triggered_only = yes
+    
+    # Administrative
+	option = {
+		name = fallout_advisor_select.10.option.a
+		
+        country_event = { id = fallout_advisor_select.11 }
+	}
+    
+    # Diplomatic
+	option = {
+		name = fallout_advisor_select.10.option.b
+		
+        country_event = { id = fallout_advisor_select.12 }
+	}
+    
+    # Military
+	option = {
+		name = fallout_advisor_select.10.option.c
+		
+        country_event = { id = fallout_advisor_select.13 }
+	}
+    
+    # Exit
+    option = {
+		name = fallout_advisor_select.option.exit
+        
+    }
+}
+
+# Administrative
+country_event = {
+	id = fallout_advisor_select.11
+	title = fallout_advisor_select.11.title
+	desc = fallout_advisor_select.11.desc
+	picture = TERMINAL_eventPicture
+
+	is_triggered_only = yes
+    
+	option = {
+		name = fallout_advisor_select.11.option.fm_administrator
+		
+        define_advisor = {
+            type = fm_administrator
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_treasurer
+		
+        define_advisor = {
+            type = fm_treasurer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_researcher
+		
+        define_advisor = {
+            type = fm_researcher
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_inquisitor
+		
+        define_advisor = {
+            type = fm_inquisitor
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_orator
+		
+        define_advisor = {
+            type = fm_orator
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_bureaucrat
+		
+        define_advisor = {
+            type = fm_bureaucrat
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_architect
+		
+        define_advisor = {
+            type = fm_architect
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_artist
+		
+        define_advisor = {
+            type = fm_artist
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_farmer
+		
+        define_advisor = {
+            type = fm_farmer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_evangelist
+		
+        define_advisor = {
+            type = fm_evangelist
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_theologian
+		
+        define_advisor = {
+            type = fm_theologian
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_mayor
+		
+        define_advisor = {
+            type = fm_mayor
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_chemist
+		
+        define_advisor = {
+            type = fm_chemist
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_physicist
+		
+        define_advisor = {
+            type = fm_physicist
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.11.option.fm_biologist
+		
+        define_advisor = {
+            type = fm_biologist
+            skill = 1
+        }
+	}
+    
+    # Exit
+    option = {
+		name = fallout_advisor_select.option.return
+        
+        country_event = { id = fallout_advisor_select.10 }
+    }
+}
+
+# Diplomatic
+country_event = {
+	id = fallout_advisor_select.12
+	title = fallout_advisor_select.12.title
+	desc = fallout_advisor_select.12.desc
+	picture = TERMINAL_eventPicture
+
+	is_triggered_only = yes
+    
+	option = {
+		name = fallout_advisor_select.12.option.fm_spymaster
+		
+        define_advisor = {
+            type = fm_spymaster
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_trader
+		
+        define_advisor = {
+            type = fm_trader
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_diplomat
+		
+        define_advisor = {
+            type = fm_diplomat
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_proclaimer
+		
+        define_advisor = {
+            type = fm_proclaimer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_naval_officer
+		
+        define_advisor = {
+            type = fm_naval_officer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_cartographer
+		
+        define_advisor = {
+            type = fm_cartographer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_interpreter
+		
+        define_advisor = {
+            type = fm_interpreter
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_settler
+		
+        define_advisor = {
+            type = fm_settler
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_navigator
+		
+        define_advisor = {
+            type = fm_navigator
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_mariner
+		
+        define_advisor = {
+            type = fm_mariner
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_governor
+		
+        define_advisor = {
+            type = fm_governor
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_broker
+		
+        define_advisor = {
+            type = fm_broker
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_trafficker
+		
+        define_advisor = {
+            type = fm_trafficker
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_marshal
+		
+        define_advisor = {
+            type = fm_marshal
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.12.option.fm_envoy
+		
+        define_advisor = {
+            type = fm_envoy
+            skill = 1
+        }
+	}
+    
+    # Exit
+    option = {
+		name = fallout_advisor_select.option.return
+        
+        country_event = { id = fallout_advisor_select.10 }
+    }
+}
+
+# Military
+country_event = {
+	id = fallout_advisor_select.13
+	title = fallout_advisor_select.13.title
+	desc = fallout_advisor_select.13.desc
+	picture = TERMINAL_eventPicture
+
+	is_triggered_only = yes
+    
+    option = {
+		name = fallout_advisor_select.13.option.fm_army_officer
+		
+        define_advisor = {
+            type = fm_army_officer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_recruitmaster
+		
+        define_advisor = {
+            type = fm_recruitmaster
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_disciplinarian
+		
+        define_advisor = {
+            type = fm_disciplinarian
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_commandant
+		
+        define_advisor = {
+            type = fm_commandant
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_logistician
+		
+        define_advisor = {
+            type = fm_logistician
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_mechanic
+		
+        define_advisor = {
+            type = fm_mechanic
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_comms_officer
+		
+        define_advisor = {
+            type = fm_comms_officer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_crewman
+		
+        define_advisor = {
+            type = fm_crewman
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_mechanical_engineer
+		
+        define_advisor = {
+            type = fm_mechanical_engineer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_surveyor
+		
+        define_advisor = {
+            type = fm_surveyor
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_fabricator
+		
+        define_advisor = {
+            type = fm_fabricator
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_armourer
+		
+        define_advisor = {
+            type = fm_armourer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_corps_officer
+		
+        define_advisor = {
+            type = fm_corps_officer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_platoon_officer
+		
+        define_advisor = {
+            type = fm_platoon_officer
+            skill = 1
+        }
+	}
+    option = {
+		name = fallout_advisor_select.13.option.fm_slaver
+		
+        trigger = {
+            NOT = { has_slavery_forbidden = yes }
+        }
+        
+        define_advisor = {
+            type = fm_slaver
+            skill = 1
+        }
+	}
+
+    # Exit
+    option = {
+		name = fallout_advisor_select.option.return
+        
+        country_event = { id = fallout_advisor_select.10 }
+    }
+}
+
+

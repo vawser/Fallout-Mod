@@ -1,0 +1,109 @@
+#AVIALABLE CUSTOM LOCALISATION KEYS
+#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
+# To not display anything, you can use 'localisation_key = ""'
+# Please add one example sentence for each key.
+
+defined_text = {
+    name = GetSiegeDoctrine
+	
+    text = {
+        localisation_key = SIEGE_DOCTRINE_STANDARD
+        trigger = {
+            has_country_flag = siege_type_1
+        }
+    }
+    text = {
+        localisation_key = SIEGE_DOCTRINE_SOW_TERROR
+        trigger = {
+            has_country_flag = siege_type_2
+        }
+    }
+    text = {
+        localisation_key = SIEGE_DOCTRINE_SLASH_AND_BURN
+        trigger = {
+            has_country_flag = siege_type_3
+        }
+    }
+    text = {
+        localisation_key = SIEGE_DOCTRINE_COUP_DE_GRACE
+        trigger = {
+            has_country_flag = siege_type_4
+        }
+    }
+    text = {
+        localisation_key = SIEGE_DOCTRINE_ENSLAVE_THE_REMNANTS
+        trigger = {
+            has_country_flag = siege_type_5
+        }
+    }
+    text = {
+        localisation_key = SIEGE_DOCTRINE_PURIFY_AND_CLEANSE
+        trigger = {
+            has_country_flag = siege_type_6
+        }
+    }
+    text = {
+        localisation_key = SIEGE_DOCTRINE_FUNGAL_CONVERSION
+        trigger = {
+            has_country_flag = siege_type_7
+        }
+    }
+}
+
+defined_text = {
+    name = GetHomelandDoctrine
+	
+    text = {
+        localisation_key = HOMELAND_DOCTRINE_RESIGNATION
+        trigger = {
+            has_country_flag = homeland_type_1
+        }
+    }
+    text = {
+        localisation_key = HOMELAND_DOCTRINE_MARTYRDOM
+        trigger = {
+            has_country_flag = homeland_type_2
+        }
+    }
+    text = {
+        localisation_key = HOMELAND_DOCTRINE_SABOTAGE
+        trigger = {
+            has_country_flag = homeland_type_3
+        }
+    }
+    text = {
+        localisation_key = HOMELAND_DOCTRINE_SLANDER
+        trigger = {
+            has_country_flag = homeland_type_4
+        }
+    }
+}
+
+defined_text = {
+    name = GetRebelDoctrine
+	
+    text = {
+        localisation_key = REBEL_DOCTRINE_CONFLICT
+        trigger = {
+            has_country_flag = rebel_doctrine_type_1
+        }
+    }
+    text = {
+        localisation_key = REBEL_DOCTRINE_BRIBERY
+        trigger = {
+            has_country_flag = rebel_doctrine_type_2
+        }
+    }
+    text = {
+        localisation_key = REBEL_DOCTRINE_CORRUPTION
+        trigger = {
+            has_country_flag = rebel_doctrine_type_3
+        }
+    }
+    text = {
+        localisation_key = REBEL_DOCTRINE_GARRISON
+        trigger = {
+            has_country_flag = rebel_doctrine_type_4
+        }
+    }
+}

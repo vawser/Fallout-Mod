@@ -1,0 +1,154 @@
+# Triggers
+is_pre_existing_bunker = {
+    
+}
+    
+is_valid_bunker_race = {
+    OR = {
+        culture_group = brotherhood_group
+        culture_group = enclave_group
+    }
+}
+
+is_invalid_bunker_race = {
+    NOT = { culture_group = brotherhood_group }
+    NOT = { culture_group = enclave_group }
+}
+
+is_bunker_province = {
+    has_province_modifier = bunker_depth_level_0
+}
+
+# Hold Levels
+is_bunker_level_0 = {
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 1
+        }
+    }
+}
+
+is_bunker_level_1 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 1
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 2
+        }
+    }
+}
+
+is_bunker_level_2 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 2
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 3
+        }
+    }
+}
+
+is_bunker_level_3 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 3
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 4
+        }
+    }
+}
+
+is_bunker_level_4 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 4
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 5
+        }
+    }
+}
+
+is_bunker_level_5 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 5
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 6
+        }
+    }
+}
+
+is_bunker_level_6 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 6
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 7
+        }
+    }
+}
+
+is_bunker_level_7 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 7
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 8
+        }
+    }
+}
+
+is_bunker_level_8 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 8
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 9
+        }
+    }
+}
+
+is_bunker_level_9 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 9
+    }
+    NOT = {
+        check_variable = {
+            which = province_bunker_level
+            value = 10
+        }
+    }
+}
+
+is_bunker_level_10 = {
+    check_variable = {
+        which = province_bunker_level
+        value = 10
+    }
+}

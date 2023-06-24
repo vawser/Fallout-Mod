@@ -1,0 +1,945 @@
+#---------------------------------
+# Siege Doctrine
+#---------------------------------
+clear_siege_doctrine_flags = {
+    clr_country_flag = siege_type_1
+    clr_country_flag = siege_type_2
+    clr_country_flag = siege_type_3
+    clr_country_flag = siege_type_4
+    clr_country_flag = siege_type_5
+    clr_country_flag = siege_type_6
+    clr_country_flag = siege_type_7
+}
+
+siege_doctrine_effect = {
+    # Siege Doctrine: Sow Terror
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = siege_type_2
+            }
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    mil_power = 10
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -10
+            }
+        
+            every_neighbor_province = {
+                limit = {   
+                    # Only affect war enemies
+                    owner = {
+                        war_with = FROM
+                    }
+                    NOT = { fort_level = 1 }
+                    NOT = { controlled_by = FROM }
+                    controlled_by = owner # Affect only those owner still controls
+                }
+                
+                change_controller = FROM
+            }
+        }
+    }
+    # Siege Doctrine: Slash and Burn
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = siege_type_3
+            }
+            NOT = { owned_by = FROM } # Stop any issues where FROM re-sieges there own province, and applies devastation
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    mil_power = 10
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -10
+            }
+        
+            add_devastation = 50
+        }
+    }
+    # Siege Doctrine: Coup de Grace
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = siege_type_4
+            }
+            is_capital = yes # Enemy capital
+            NOT = { owned_by = FROM } # Stop any issues where FROM re-sieges their own capital
+            
+            # Don't apply to OPM capitals
+            owner = {
+                num_of_cities = 2
+            }
+        }
+        
+        if = {
+            limit = {
+                if = {
+                    limit = {
+                        owner = {
+                            NOT = { total_development = 200 }
+                        }
+                    }
+                    FROM = {
+                        mil_power = 200
+                    }
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            total_development = 200
+                            NOT = { total_development = 400 }
+                        }
+                    }
+                    FROM = {
+                        mil_power = 400
+                    }
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            total_development = 400
+                            NOT = { total_development = 600 }
+                        }
+                    }
+                    FROM = {
+                        mil_power = 600
+                    }
+                }
+                else_if = {
+                    limit = {
+                        owner = {
+                            total_development = 600
+                        }
+                    }
+                    FROM = {
+                        mil_power = 800
+                    }
+                }
+            }
+        
+            # MIL Power cost
+            if = {
+                limit = {
+                    owner = {
+                        NOT = { total_development = 200 }
+                    }
+                }
+                
+                FROM = {
+                    add_mil_power = -200
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        total_development = 200
+                        NOT = { total_development = 400 }
+                    }
+                }
+                
+                FROM = {
+                    add_mil_power = -400
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        total_development = 400
+                        NOT = { total_development = 600 }
+                    }
+                }
+                
+                FROM = {
+                    add_mil_power = -600
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        total_development = 600
+                    }
+                }
+                
+                FROM = {
+                    add_mil_power = -800
+                }
+            }
+            
+            # All enemy provinces in their capital area become ours
+            owner = {
+                every_owned_province = {
+                    limit = {
+                        is_in_capital_area = yes
+                        controlled_by = owner # Affect only those owner still controls
+                    }
+                    
+                    change_controller = FROM
+                }
+            }
+        }
+    }
+    # Siege Doctrine: Enslave the Remnants
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = siege_type_5
+            }
+            NOT = { owned_by = FROM } # Stop any issues where FROM re-sieges there own province, and applies devastation
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    mil_power = 10
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -10
+            }
+            
+            # Cascade, add manpower for each breakpoint
+            if = {
+                limit = {
+                    development = 3
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 6
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 9
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 12
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 15
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 18
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 21
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 24
+                }
+                
+                FROM = { add_manpower = 0.25 }
+            }
+            if = {
+                limit = {
+                    development = 27
+                }
+                
+                FROM = { add_manpower = 0.5 }
+            }
+            if = {
+                limit = {
+                    development = 30
+                }
+                
+                FROM = { add_manpower = 0.5 }
+            }
+        }
+    }
+    # Siege Doctrine: Purify and Cleanse
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = siege_type_6
+            }
+            NOT = { owned_by = FROM } # Stop any issues where FROM re-sieges there own province, and applies devastation
+        }
+        
+        if = {
+            limit = {
+                is_capital = no
+                NOT = { development = 10 }
+                FROM = {
+                    mil_power = 50
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -50
+            }
+        
+            change_culture = FROM
+            change_religion = FROM
+            add_devastation = 25
+        }
+    }
+    # Siege Doctrine: Fungal Conversion
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = siege_type_7
+            }
+            NOT = { owned_by = FROM } # Stop any issues where FROM re-sieges there own province, and applies devastation
+        }
+        
+        if = {
+            limit = {
+                is_capital = no
+                FROM = {
+                    mil_power = 10
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -10
+            }
+        
+            change_culture = FROM
+            change_religion = FROM
+            add_devastation = 25
+        }
+    }
+}
+
+#---------------------------------
+# Homeland Doctrine
+#---------------------------------
+clear_homeland_doctrine_flags = {
+    clr_country_flag = homeland_type_1
+    clr_country_flag = homeland_type_2
+    clr_country_flag = homeland_type_3
+    clr_country_flag = homeland_type_4
+}
+
+homeland_doctrine_effect = {
+    # Martyrdom
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = homeland_type_2
+            }
+            # Don't trigger for self-sieges
+            controller = {
+                NOT = { tag = FROM }
+            }
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    mil_power = 5
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -5
+            }
+        
+            controller = {
+                add_manpower = -1
+            }
+        }
+    }
+    # Sabotage
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = homeland_type_3
+            }
+            # Don't trigger for self-sieges
+            controller = {
+                NOT = { tag = FROM }
+            }
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    mil_power = 5
+                }
+                controller = {
+                    treasury = 25
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -5
+            }
+        
+            controller = {
+                add_treasury = -25
+            }
+        }
+    }
+    # Slander
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = homeland_type_4
+            }
+            # Don't trigger for self-sieges
+            controller = {
+                NOT = { tag = FROM }
+            }
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    mil_power = 5
+                }
+            }
+            
+            FROM = {
+                add_mil_power = -5
+            }
+        
+            controller = {
+                add_prestige = -5
+            }
+        }
+    }
+}
+
+#---------------------------------
+# Insurrection Doctrine
+#---------------------------------
+clear_rebel_doctrine_flags = {
+    clr_country_flag = rebel_doctrine_type_1
+    clr_country_flag = rebel_doctrine_type_2
+    clr_country_flag = rebel_doctrine_type_3
+    clr_country_flag = rebel_doctrine_type_4
+}
+
+rebel_doctrine_effect = {
+    # Bribery
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = rebel_doctrine_type_2
+            }
+            # Only trigger for rebels
+            controller = {
+                tag = REB
+            }
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    years_of_income = 0.1
+                }
+                
+                # Cascading, scales the cost based on rebel stack size
+                if = {
+                    limit = {
+                        units_in_province = 5
+                    }
+                    FROM = {
+                        years_of_income = 0.15
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 10
+                    }
+                    FROM = {
+                        years_of_income = 0.2
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 15
+                    }
+                    FROM = {
+                        years_of_income = 0.25
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 20
+                    }
+                    FROM = {
+                        years_of_income = 0.3
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 25
+                    }
+                    FROM = {
+                        years_of_income = 0.35
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 30
+                    }
+                    FROM = {
+                        years_of_income = 0.4
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 35
+                    }
+                    FROM = {
+                        years_of_income = 0.45
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 40
+                    }
+                    FROM = {
+                        years_of_income = 0.5
+                    }
+                }
+            }
+            
+            FROM = {
+                add_years_of_income = -0.1
+            }
+            # Cascading, scales the cost based on rebel stack size
+            if = {
+                limit = {
+                    units_in_province = 5
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 10
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 15
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 20
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 25
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 30
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 35
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 40
+                }
+                FROM = {
+                    add_years_of_income = -0.1
+                }
+            }
+            
+            # Kill them
+            province_event = { id = fallout_doctrine.50 days = 1 }
+            province_event = { id = fallout_doctrine.51 days = 1 }
+            
+        }
+    }
+    # Corruption
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = rebel_doctrine_type_3
+            }
+            # Only trigger for rebels
+            controller = {
+                tag = REB
+            }
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    NOT = { corruption = 24.8 }
+                }
+                # Cascading, scales the cost based on rebel stack size
+                if = {
+                    limit = {
+                        units_in_province = 5
+                    }
+                    FROM = {
+                        NOT = { corruption = 24.7 }
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 10
+                    }
+                    FROM = {
+                        NOT = { corruption = 24.6 }
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 15
+                    }
+                    FROM = {
+                        NOT = { corruption = 24.5 }
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 20
+                    }
+                    FROM = {
+                        NOT = { corruption = 24.4 }
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 25
+                    }
+                    FROM = {
+                        NOT = { corruption = 24.3 }
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 30
+                    }
+                    FROM = {
+                        NOT = { corruption = 24.2 }
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 35
+                    }
+                    FROM = {
+                        NOT = { corruption = 24.1 }
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 40
+                    }
+                    FROM = {
+                        NOT = { corruption = 24 }
+                    }
+                }
+            }
+            
+            FROM = {
+                add_corruption = 0.2
+            }
+            # Cascading, scales the cost based on rebel stack size
+            if = {
+                limit = {
+                    units_in_province = 5
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 10
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 15
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 20
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 25
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 30
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 35
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 40
+                }
+                FROM = {
+                    add_corruption = 0.1
+                }
+            }
+            
+            # Kill them
+            province_event = { id = fallout_doctrine.50 days = 1 }
+            province_event = { id = fallout_doctrine.51 days = 1 }
+            
+        }
+    }
+    # Garrison
+    if = {
+        limit = {
+            FROM = {
+                has_country_flag = rebel_doctrine_type_4
+            }
+            # Only trigger for rebels
+            controller = {
+                tag = REB
+            }
+        }
+        
+        if = {
+            limit = {
+                FROM = {
+                    manpower = 1
+                }
+                # Cascading, scales the cost based on rebel stack size
+                if = {
+                    limit = {
+                        units_in_province = 5
+                    }
+                    FROM = {
+                        manpower = 2
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 10
+                    }
+                    FROM = {
+                        manpower = 3
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 15
+                    }
+                    FROM = {
+                        manpower = 3
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 20
+                    }
+                    FROM = {
+                        manpower = 4
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 25
+                    }
+                    FROM = {
+                        manpower = 5
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 30
+                    }
+                    FROM = {
+                        manpower = 6
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 35
+                    }
+                    FROM = {
+                        manpower = 7
+                    }
+                }
+                if = {
+                    limit = {
+                        units_in_province = 40
+                    }
+                    FROM = {
+                        manpower = 8
+                    }
+                }
+            }
+            
+            FROM = {
+                add_manpower = -1.0
+            }
+            # Cascading, scales the cost based on rebel stack size
+            if = {
+                limit = {
+                    units_in_province = 5
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 10
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 15
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 20
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 25
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 30
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 35
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            if = {
+                limit = {
+                    units_in_province = 40
+                }
+                FROM = {
+                    add_manpower = -1
+                }
+            }
+            
+            # Kill them
+            province_event = { id = fallout_doctrine.50 days = 1 }
+            province_event = { id = fallout_doctrine.51 days = 1 }
+            
+        }
+    }
+}
+
+#-----------------------------------
+# On Actions
+#-----------------------------------
+# ROOT = Winning Country, FROM = Losing Country
+doctrine_on_war_won_effect = {   
+    # Doctrine Notification Reset
+    country_event = { id = fallout_doctrine.99 days = 3 }
+    
+    FROM = {
+        # Doctrine Notification Reset
+        country_event = { id = fallout_doctrine.99 days = 3 }
+    }
+}

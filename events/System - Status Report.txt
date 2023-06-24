@@ -47,7 +47,7 @@ country_event = {
         }
         
         ai_chance = {
-            factor = 1
+            factor = 5
             
             modifier = {
                 factor = 0
@@ -115,6 +115,16 @@ country_event = {
         }
 	}
     
+    # Doctrine View
+    option = {
+		name = fallout_status_report.1.option.doctrine_view
+        
+        country_event = { id = fallout_doctrine.1 }
+        
+        ai_chance = {
+            factor = 5
+        }
+	}
     
     option = {
 		name = fallout_status_report.1.option.exit
