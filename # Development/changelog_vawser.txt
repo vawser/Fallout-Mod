@@ -3,6 +3,79 @@
 #-----------------------------
 # Changelog
 #-----------------------------
+# Models
+- Adjusted some models to no longer use animations to fix some animation glitches.
+- Restored the unique NCR, Legion and Fallout US truck models.
+- Added new models:
+ - Brahmin
+ - Centaur
+
+# Balance
+- Reduced the strength of the Chinese Remnants and Zeta invasion modifiers.
+- Added -200 opinion debuff for Zeta so all nations dislike them automatically.
+
+# Nuclear Strike
+- Nuking a province no longer removes ownership, it simply kills units and adds a harsh debuff to the province and the surrounding area.
+
+# History
+- Caesar's Legion now gains "Arise from the Ashes" buff for 50 years from game start, giving them manpower_recovery_speed and global_manpower_modifier.
+- New Vegas now hains "Limited Securitron" debuff at game start, reducing global_manpower_modifier and manpower_recovery_speed heavily. 
+
+# Decisions
+- "Open the Securitron Bunker" now removes the "Limited Securitron" debuff.
+- Added "Salvage Securitron Parts" decision for New Vegas whilst they have the "Limited Securitron" debuff, allowing them to spend MIL power to gain manpower.
+
+# Modifiers
+- Changed "Badly Managed Bunker" debuff to instead raise local_development_cost.
+
+# Brotherhood of Steel
+- The choice between Original and Facist directive can now be switched, although switching to one after the initial selection will cause upset within the nation.
+- There is an internal cooldown of 30 years between changes.
+ 
+- Added four tiers of Recruitment Standard: Extreme, High, Medium and Low. 
+ - Extreme: 
+    discipline = 0.1
+    global_manpower_modifier = -0.33
+    land_forcelimit_modifier = -0.33
+    manpower_recovery_speed = -0.33
+ - High
+    discipline = 0.05
+    global_manpower_modifier = -0.25
+    land_forcelimit_modifier = -0.25
+    manpower_recovery_speed = -0.25
+ - Medium
+    discipline = 0.025
+    global_manpower_modifier = -0.1
+    land_forcelimit_modifier = -0.1
+    manpower_recovery_speed = -0.1
+ - Low
+    global_manpower_modifier = 0.05
+    land_forcelimit_modifier = 0.05
+    manpower_recovery_speed = 0.05
+- You can lower the Recruitment Standard by upsetting the Old Guard, causing stability loss and unrest. 
+- You can raise the Recruitment Standard by expelling outsiders, costing manpower.
+- There is an internal cooldown of 30 years between changes, either raising or lowering.
+
+# Enclave
+- Added a Purity Standard system similar to the Brotherhood of Steel Recruitment Standard.
+
+# Tactical Doctrines
+- Added 5 'tactical' doctrines, using the Naval Doctrine feature.
+ - Grand Battle Plan
+ - Mobile Warfare
+ - Superior Firepower
+ - Mass Assault
+ - Defence in Depth
+
+# New Vegas
+- Added "Empty Casinos" event that applies a tax debuff if New Vegas is at war with the NCR.
+
+# Buildings
+- Split the old Armory building modifiers between Barrack and Military Camp buildings.
+
+# Bugfix
+- Removed usage of the Armory building.
+- Added blockade to the ship units.
 
 #-----------------------------
 # TODO
@@ -16,6 +89,3 @@
  - New Vegas
  - Enclave
 
-- Finish Enclave mission tree
-
-- Add in some Fallout naval doctrines (remove current setup)

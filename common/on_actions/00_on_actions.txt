@@ -1005,6 +1005,34 @@ on_yearly_pulse = {
         randomise_goods_price = yes
     }
     
+    # Add "Aliens!" opinion debuff
+    if = {
+        limit = {
+            tag = ZET
+        }
+        
+        every_country = {
+            limit = {
+                NOT = {
+                    has_opinion_modifier = {
+                        modifier = aliens
+                        who = ZET
+                    }
+                }
+            }
+            add_opinion = {
+                who = ZET
+                modifier = aliens
+            }
+            ZET = {
+                add_opinion = {
+                    who = PREV
+                    modifier = aliens
+                }
+            }
+        }
+    }
+    
     random_events = {
         100 = fallout_scavenging.10
         100 = fallout_scavenging.11

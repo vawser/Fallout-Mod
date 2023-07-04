@@ -158,6 +158,8 @@ country_event = {
 	is_triggered_only = yes
     
 	trigger = {
+        is_valid_bunker_race = yes
+        
         any_owned_province = {
             is_bunker_province = yes
             devastation = 1
@@ -274,6 +276,8 @@ country_event = {
 	is_triggered_only = yes
     
 	trigger = {
+        is_valid_bunker_race = yes
+        
         any_owned_province = {
             is_bunker_province = yes
             NOT = { is_bunker_level_10 = yes }
@@ -329,7 +333,9 @@ country_event = {
 	
 	is_triggered_only = yes
     
-	trigger = {
+	trigger = { 
+        is_valid_bunker_race = yes
+        
         any_owned_province = {
             is_bunker_province = yes
         }
@@ -377,6 +383,8 @@ country_event = {
 	is_triggered_only = yes
     
 	trigger = {
+        is_valid_bunker_race = yes
+        
         any_owned_province = {
             is_bunker_province = yes
             devastation = 20
@@ -415,6 +423,8 @@ country_event = {
 	is_triggered_only = yes
     
 	trigger = {
+        is_valid_bunker_race = yes
+        
         any_owned_province = {
             is_bunker_province = yes
             unrest = 3
@@ -468,6 +478,8 @@ country_event = {
 	is_triggered_only = yes
     
 	trigger = {
+        is_valid_bunker_race = yes
+        
         any_owned_province = {
             is_bunker_province = yes
             OR = {
@@ -530,6 +542,8 @@ country_event = {
 	is_triggered_only = yes
     
 	trigger = {
+        is_valid_bunker_race = yes
+        
         any_owned_province = {
             is_bunker_province = yes
             has_province_modifier = bunker_we_must_dig

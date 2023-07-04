@@ -7,7 +7,7 @@ chinese_invasion_force = {
 		tag = CHI
 	}
 
-	global_tax_income = 300
+	global_tax_income = 200
 	land_forcelimit	= 10
     naval_forcelimit = 10
 	global_manpower = 10.0
@@ -27,15 +27,15 @@ zetan_invasion_force = {
 		tag = ZET
 	}
 
-	global_tax_income = 400
+	global_tax_income = 300
 	land_forcelimit	= 20
     naval_forcelimit = 20
 	global_manpower = 20.0
 	global_unrest = -5
     
-    country_admin_power = 2
-    country_diplomatic_power = 2
-    country_military_power = 2
+    country_admin_power = 1
+    country_diplomatic_power = 1
+    country_military_power = 1
 }
 
 # Give colonisation bonuses until they reach a neighbor nation
@@ -45,32 +45,29 @@ invasion_spread_china = {
         NOT = { num_of_cities = 20 } # Cap at 20 cities even if no neighbor is present
 	}
 	trigger = {
-		NOT = {
-            any_country = {
-                is_neighbor_of = ROOT
-            }
-        }
+		tag = CHI
+        NOT = { num_of_cities = 20 } # Cap at 20 cities even if no neighbor is present
 	}
     
     colonists = 2
-    global_colonial_growth = 500
-    colony_cost_modifier = -0.9
-    colony_development_boost = 3
+    global_colonial_growth = 100
+    colony_cost_modifier = -0.8
+    colony_development_boost = 1
 }
 
 # Give colonisation bonuses
 invasion_spread_zetan = {
     potential = {
 		tag = ZET
-        NOT = { num_of_cities = 50 }
+        NOT = { num_of_cities = 30 }
 	}
 	trigger = {
 		tag = ZET
-        NOT = { num_of_cities = 50 }
+        NOT = { num_of_cities = 30 }
 	}
     
     colonists = 2
-    global_colonial_growth = 500
-    colony_cost_modifier = -0.9
-    colony_development_boost = 3
+    global_colonial_growth = 200
+    colony_cost_modifier = -0.8
+    colony_development_boost = 1
 }

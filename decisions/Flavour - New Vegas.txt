@@ -17,6 +17,8 @@ country_decisions = {
             
             add_years_of_income = -2
             
+            remove_country_modifier = limited_securitrons
+            
 			add_country_modifier = {
                 name = securitron_bunker
                 duration = -1
@@ -24,6 +26,37 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+    
+    salvage_securitron_parts = {
+		potential = {
+            tag = NVG
+            has_country_modifier = limited_securitrons
+		}
+		allow =  {
+            NOT = { manpower_percentage = 1.0 }
+            mil_power = 100
+		}
+	  	effect = {
+            add_mil_power = -100
+            
+            add_manpower = 5
+		}
+		ai_will_do = {
+			factor = 1
+            
+            modifier = {
+                factor = 0
+                
+                manpower_percentage = 0.75
+            }
+            
+            modifier = {
+                factor = 0
+                
+                NOT = { mil_power = 300 }
+            }
 		}
 	}
     

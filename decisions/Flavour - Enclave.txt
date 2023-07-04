@@ -1,0 +1,153 @@
+country_decisions = {
+    # "Lower Purity Standards
+    lower_purity_standards = {
+		potential = {	
+			tag = ENC
+            NOT = { has_country_modifier = purity_standard_cooldown }
+            OR = {
+                has_country_modifier = purity_standard_extreme
+                has_country_modifier = purity_standard_high
+                has_country_modifier = purity_standard_medium
+            }
+		}
+		allow =  {
+			OR = {
+                has_country_modifier = purity_standard_extreme
+                has_country_modifier = purity_standard_high
+                has_country_modifier = purity_standard_medium
+            }
+            stability = 1
+		}
+	  	effect = {
+            hidden_effect = {
+                add_country_modifier = {
+                    name = purity_standard_cooldown
+                    duration = 10950
+                    hidden = yes
+                }
+            }
+            
+            add_stability = -1
+			add_country_modifier = { 
+				name = enclave_disgruntled_elites
+				duration = 3650
+			}
+            capital_scope = {
+                noble_rebels = 3
+            }
+            
+            # Extreme -> High
+            if = {
+                limit = {
+                    has_country_modifier = purity_standard_extreme
+                }
+                
+                remove_country_modifier = purity_standard_extreme
+                add_country_modifier = {
+                    name = purity_standard_high
+                    duration = -1
+                }
+            }
+            # High -> Medium
+            else_if = {
+                limit = {
+                    has_country_modifier = purity_standard_high
+                }
+                
+                remove_country_modifier = purity_standard_high
+                add_country_modifier = {
+                    name = purity_standard_medium
+                    duration = -1
+                }
+            }
+            # Medium -> Low
+            else_if = {
+                limit = {
+                    has_country_modifier = purity_standard_medium
+                }
+                
+                remove_country_modifier = purity_standard_medium
+                add_country_modifier = {
+                    name = purity_standard_low
+                    duration = -1
+                }
+            }
+            
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+    
+    # Raise Purity Standards
+    raise_purity_standards = {
+		potential = {	
+			tag = ENC
+            NOT = { has_country_modifier = purity_standard_cooldown }
+            OR = {
+                has_country_modifier = purity_standard_high
+                has_country_modifier = purity_standard_medium
+                has_country_modifier = purity_standard_low
+            }
+		}
+		allow =  {
+			OR = {
+                has_country_modifier = purity_standard_high
+                has_country_modifier = purity_standard_medium
+                has_country_modifier = purity_standard_low
+            }
+            manpower = 10
+		}
+	  	effect = {
+            hidden_effect = {
+                add_country_modifier = {
+                    name = purity_standard_cooldown
+                    duration = 10950
+                    hidden = yes
+                }
+            }
+            add_manpower = -10
+            
+            # High -> Extreme
+            if = {
+                limit = {
+                    has_country_modifier = purity_standard_high
+                }
+                
+                remove_country_modifier = purity_standard_high
+                add_country_modifier = {
+                    name = purity_standard_extreme
+                    duration = -1
+                }
+            }
+            # Medium -> High
+            else_if = {
+                limit = {
+                    has_country_modifier = purity_standard_medium
+                }
+                
+                remove_country_modifier = purity_standard_medium
+                add_country_modifier = {
+                    name = purity_standard_high
+                    duration = -1
+                }
+            }
+            # Low -> Medium
+            else_if = {
+                limit = {
+                    has_country_modifier = purity_standard_low
+                }
+                
+                remove_country_modifier = purity_standard_low
+                add_country_modifier = {
+                    name = purity_standard_low
+                    duration = -1
+                }
+            }
+            
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -3,7 +3,7 @@
 #----------------------------------------------
 entity = {
 	name = "shi_gfx_INFANTRY_1"
-	pdxmesh = "chinese_soldier"
+	pdxmesh = "japanese_soldier"
 	
 	state = { name = "idle" 		animation = "idle" }
 	state = { name = "walk" 		animation = "walk" }
@@ -23,22 +23,7 @@ entity = {
 #----------------------------------------------
 entity = {
     name = "shi_gfx_CAVALRY_1"
-    pdxmesh = "US_motorized_mesh"
-		
-    default_state = "idle"
-    state = { 
-        name = "idle"				
-        animation = "idle" 				
-    }
-    state = { 
-        name = "move"				
-        animation = "move" 				
-    }
-    state = { 
-        name = "attack"				
-        animation = "idle" 				
-    }
-    scale = 1
+    pdxmesh = "american_truck_mesh"
 }
     
 

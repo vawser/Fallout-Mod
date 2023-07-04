@@ -157,6 +157,7 @@ fbs_military_camp = {
 	
 	modifier = {
 		local_manpower_modifier = 0.5
+		local_regiment_cost = -0.33
 	}
 	
 	ai_will_do = {
@@ -170,28 +171,6 @@ fbs_barracks = {
 	
 	modifier = {
 		land_forcelimit = 2
-	}
-
-	ai_will_do = {
-		factor = 1
-        
-        modifier = {
-			factor = 105 # Little above build cost
-			FROM = { army_size_percentage = 0.95 }
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
-	}
-}
-
-fbs_armory = {
-    cost = 100
-	time = 12
-	
-	modifier = {
-		local_regiment_cost = -0.33
         regiment_recruit_speed = -0.33
 	}
 
@@ -199,7 +178,7 @@ fbs_armory = {
 		factor = 1
         
         modifier = {
-			factor = 205 # Little above build cost
+			factor = 105 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
 		}
 		modifier = {

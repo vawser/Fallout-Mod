@@ -1,0 +1,58 @@
+objectTypes = {
+    #-----------------------------------------------------
+    # General
+    #-----------------------------------------------------
+	pdxmesh = {
+		name = "fallout_empty_mesh"
+		file = "gfx/models/empty.mesh"
+		scale = 1.0
+	}
+    
+    #-----------------------------------------------------
+    # Replacements
+    #-----------------------------------------------------
+	pdxmesh = {
+		name = "construction_building"
+		file = "gfx/models/buildings/factory/factory.mesh"
+	}
+	pdxmesh = {
+		name = "construction_military"
+        file = "gfx/models/units/infantry/american_soldier/american_soldier.mesh"		
+		
+		animation = { id = "idle"		type = "GER_infantry_jumping_jacks_animation" }
+
+		scale = 0.25
+	}
+	pdxmesh = {
+		name = "construction_navalmilitary"
+		file = "gfx/models/units/infantry/american_soldier/american_soldier.mesh"		
+		
+		animation = { id = "idle"		type = "GER_infantry_jumping_jacks_animation" }
+
+		scale = 0.25
+	}
+	pdxmesh = {
+		name = "construction_colony"
+		file = "gfx/models/buildings/factory/factory.mesh"
+	}
+	pdxmesh = {
+		name = "siege_howitzer_mesh"
+		file = "gfx/models/units/artillery/howitzer/howitzer.mesh"
+		
+		animation = { id = "idle"  		type = "howitzer_attack_animation" }
+	}
+	
+    #-----------------------------------------------------
+    # Ambient Objects
+    #-----------------------------------------------------
+    pdxmesh = {
+        name = "mesh_lucky38"
+        file = "gfx/models/world/lucky_38/lucky_38.mesh" 
+        scale = 0.25
+    }
+    pdxmesh = {
+        name = "mesh_hooverdam"
+        file = "gfx/models/world/hoover_dam/hoover_dam.mesh" 
+        scale = 0.25
+    } 
+}

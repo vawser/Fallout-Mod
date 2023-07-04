@@ -33,12 +33,14 @@ apply_nuclear_strike_effect = {
             country_event = { id = fallout_nuclear_strike.2 days = 1 }
         }
         
-        kill_units = { }
-        decolonize = yes
-        
-        add_permanent_province_modifier = {
-            name = nuked_province
-            duration = 18250
+        area = {
+            kill_units = { }
+            #decolonize = yes
+            
+            add_permanent_province_modifier = {
+                name = nuked_province
+                duration = 18250
+            }
         }
     }
 }

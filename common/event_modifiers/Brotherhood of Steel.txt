@@ -20,11 +20,47 @@ brotherhood_fascist_directive = {
 	adm_tech_cost_modifier = 0.25
 }
 
-lifted_recruitment_restrictions = {
-    global_regiment_cost = -0.05
-    global_regiment_recruit_speed = -0.05
-}
-
 brotherhood_unrest = {
     global_unrest = 10
+}
+
+directive_selection_cooldown = { }
+
+recruitment_standard_cooldown = { }
+
+recruitment_standard_extreme = { 
+    # Bonus
+    discipline = 0.1
+
+    # Penalty
+    global_manpower_modifier = -0.33
+    land_forcelimit_modifier = -0.33
+    manpower_recovery_speed = -0.33
+}
+
+recruitment_standard_high = {
+    # Bonus
+    discipline = 0.05
+
+    # Penalty
+    global_manpower_modifier = -0.25
+    land_forcelimit_modifier = -0.25
+    manpower_recovery_speed = -0.25
+}
+
+recruitment_standard_medium = {
+    # Bonus
+    discipline = 0.025
+
+    # Penalty
+    global_manpower_modifier = -0.1
+    land_forcelimit_modifier = -0.1
+    manpower_recovery_speed = -0.1
+}
+
+recruitment_standard_low = {
+    # Bonus
+    global_manpower_modifier = 0.05
+    land_forcelimit_modifier = 0.05
+    manpower_recovery_speed = 0.05
 }
