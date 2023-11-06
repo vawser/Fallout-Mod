@@ -108,5 +108,5 @@ tags={
 	"Alternative History"
 }
 version="1.0"
-supported_version="1.36.*"
+supported_version="1.36.0"
 remote_file_id="2973202821"
