@@ -17,6 +17,7 @@ manage_subject = {
                 is_subject_of_type = client_march
                 is_subject_of_type = client_vassal
                 is_subject_of_type = hegemonic_vassal
+                is_subject_of_type = legionary_vassal
             }
         }
 	}
@@ -42,6 +43,138 @@ manage_subject = {
 	}
 	ai_will_do = {
         always = no
+	}
+}
+
+#---------------------------------------
+# Annex Subject
+#---------------------------------------
+# For custom subject_types
+annex_subject = {
+	category = relation
+	alert_index = 3
+	alert_tooltip = annex_subject_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+        FROM = { 
+            is_subject_of = ROOT
+            OR = {
+                is_subject_of_type = legionary_vassal
+            }
+        }
+	}
+    
+	is_allowed = {
+        NOT = { has_country_modifier = annex_subject_cooldown }
+    
+        FROM = {
+            has_opinion = {
+                who = ROOT
+                value = 190
+            }
+        }
+    
+        if = {
+            limit = {
+                FROM = {
+                    NOT = { total_development = 100 }
+                }
+            }
+            dip_power = 200
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    total_development = 100
+                    NOT = { total_development = 200 }
+                }
+            }
+            dip_power = 400
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    total_development = 200
+                    NOT = { total_development = 300 }
+                }
+            }
+            dip_power = 600
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    total_development = 300
+                    NOT = { total_development = 400 }
+                }
+            }
+            dip_power = 800
+        }
+        else
+        {
+            custom_trigger_tooltip = {
+                tooltip = SUBJECT_IS_TOO_LARGE_TT
+                always = yes
+            }
+        }
+	}
+	on_accept = {
+        if = {
+            limit = {
+                FROM = {
+                    NOT = { total_development = 100 }
+                }
+            }
+            add_dip_power = -200
+            inherit = FROM 
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    total_development = 100
+                    NOT = { total_development = 200 }
+                }
+            }
+            add_dip_power = -400
+            inherit = FROM 
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    total_development = 200
+                    NOT = { total_development = 300 }
+                }
+            }
+            add_dip_power = -600
+            inherit = FROM 
+        }
+        else_if = {
+            limit = {
+                FROM = {
+                    total_development = 300
+                    NOT = { total_development = 400 }
+                }
+            }
+            add_dip_power = -800
+            inherit = FROM 
+        }
+        
+        add_country_modifier = {
+            name = annex_subject_cooldown
+            duration = 1800
+        }
+	}
+    
+	on_decline = {
+        
+	}
+	
+	ai_acceptance = {
+        
+	}
+	ai_will_do = {
+        always = yes
 	}
 }
 
@@ -384,5 +517,45 @@ bequeath_soliders = {
 	}
 	ai_will_do = {
         always = no
+	}
+}
+
+#---------------------------------------
+# Call to War
+#---------------------------------------
+call_to_war = {
+	category = relation
+	alert_index = 3
+	alert_tooltip = call_to_war_tooltip
+	
+	require_acceptance = no
+	
+	is_visible = {
+        is_subject_of_type = legionary_vassal
+	}
+    
+	is_allowed = {
+        mil_power = 200
+	}
+	on_accept = {
+        add_mil_power = -200
+        
+        hidden_effect = {
+            save_event_target_as = call_to_war_subject
+        }
+        
+        FROM = { country_event = { id = fallout_call_to_war.1 days = 1 } }
+	}
+    
+	on_decline = {
+        
+	}
+	
+	ai_acceptance = {
+        
+	}
+	ai_will_do = {
+        war_exhaustion = 5
+        mil_power = 250
 	}
 }

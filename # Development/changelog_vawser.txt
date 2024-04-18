@@ -13,6 +13,11 @@
 # Balance
 - Reduced the strength of the Chinese Remnants and Zeta invasion modifiers.
 - Added -200 opinion debuff for Zeta so all nations dislike them automatically.
+- Increased the cost of starting a Frontier colony.
+- Reduced the speed of Frontier colonisation.
+
+# Centres of Trade
+- Changed Centre of Trade assignment back to the vanilla model: only assigned to provinces that have a notable trade presence.
 
 # Nuclear Strike
 - Nuking a province no longer removes ownership, it simply kills units and adds a harsh debuff to the province and the surrounding area.
@@ -73,6 +78,22 @@
 # Buildings
 - Split the old Armory building modifiers between Barrack and Military Camp buildings.
 
+# History
+- Adjusted province development: mainly reducing development in the capital provinces of non-important nations.
+- Adjusted Centre of Trade assignements.
+
+# Subject Types
+- Added "Legionary Vassal" for Caesar's Legion:
+ - Each vassal gives Caesar's Legion +1% Land Morale.
+ - The vassals themselves gain +20% global manpower modifier and manpower recovery speed.
+ 
+# Peace Terms
+- Added "Enforce Legionary Vassalage" peace term, usable by Caesar's Legion on tribals.
+
+# Diplomatic Actions
+- Added "Annex Subject" action: allows the annexation of custom subject types (currently only Legionary Vassals).
+- Added "Call to War" action: allows Legionary Vassals to call upon the Caesar's Legion to assist them in their own wars.
+
 # Bugfix
 - Removed usage of the Armory building.
 - Added blockade to the ship units.
@@ -88,4 +109,6 @@
  - Caesar's Legion
  - New Vegas
  - Enclave
+
+center_of_trade = 1
 

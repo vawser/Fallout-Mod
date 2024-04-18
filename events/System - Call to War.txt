@@ -1,0 +1,52 @@
+namespace = fallout_call_to_war
+
+#--------------------------------------------
+# Call to War
+#--------------------------------------------
+country_event = {
+    id = fallout_call_to_war.1
+    title = fallout_call_to_war.1.title
+    desc = fallout_call_to_war.1.desc
+    picture = CONFRONTATION_eventPicture
+
+    is_triggered_only = yes
+    
+    mean_time_to_happen = {
+		days = 1
+	}
+    
+    option = {
+		name = fallout_call_to_war.1.option.a
+        
+        join_all_offensive_wars_of = event_target:call_to_war_subject
+        join_all_defensive_wars_of = event_target:call_to_war_subject
+        
+        ai_chance = {
+            factor = 90
+        }
+	}
+    option = {
+		name = fallout_call_to_war.1.option.b
+        
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = legionary_vassal
+            }
+            
+            add_liberty_desire = 10
+        }
+        
+        ai_chance = {
+            factor = 10
+            
+            modifier = {
+                factor = 0
+                
+                has_opinion = {
+                    who = event_target:call_to_war_subject
+                    value = 100
+                }
+            }
+        }
+	}
+}
