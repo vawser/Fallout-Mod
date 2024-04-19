@@ -1,288 +1,316 @@
-#--------------------------------------
-# Name
-#--------------------------------------
-fallout_caesars_legion_column_1 = {
-	slot = 1
-	generic = no
-	ai = yes
+# #--------------------------------------
+# # Name
+# #--------------------------------------
+# fallout_caesars_legion_column_1 = {
+	# slot = 1
+	# generic = no
+	# ai = yes
     
-	potential = {
-		tag = CAE
-	}
+	# potential = {
+		# tag = CAE
+	# }
     
-	has_country_shield = yes
+	# has_country_shield = yes
 	
-	# Reinforcement in the Mojave
-    fallout_reinforcement_in_the_mojave = {
-		icon = mission_usa_flag
-        position = 3
+	# # Reinforcement in the Mojave
+    # CAE_reinforcement_in_the_mojave = {
+		# icon = mission_usa_flag
+        # position = 3
         
-		required_missions = { 
-            fallout_home_of_the_legion
-        }
+		# required_missions = { 
+            # CAE_home_of_the_legion
+        # }
         
-		trigger = {
-            num_of_provinces_owned_or_owned_by_subjects_with = {
-                value = 10
+		# trigger = {
+            # num_of_provinces_owned_or_owned_by_subjects_with = {
+                # value = 10
                 
-                region = nevada_region
+                # region = nevada_region
                 
-                OR = {
-                    has_fort_building = yes
-                    has_building = fbs_military_camp
-                    has_building = fbs_barracks
-                }
-            }
-		}
-		provinces_to_highlight = {
-            region = nevada_region
-			NOT = { country_or_subject_holds = ROOT }
-		}
+                # OR = {
+                    # has_fort_building = yes
+                    # has_building = fbs_military_camp
+                    # has_building = fbs_barracks
+                # }
+            # }
+		# }
+		# provinces_to_highlight = {
+            # region = nevada_region
+            # country_or_subject_holds = ROOT
+		# }
         
-		effect = {
+		# effect = {
 			
-		}
-	}
-}
+		# }
+	# }
+# }
 
-fallout_caesars_legion_column_2 = {
-	slot = 2
-	generic = no
-	ai = yes
+# fallout_caesars_legion_column_2 = {
+	# slot = 2
+	# generic = no
+	# ai = yes
     
-	potential = {
-		tag = CAE
-	}
+	# potential = {
+		# tag = CAE
+	# }
     
-	has_country_shield = yes
+	# has_country_shield = yes
 	
-	# Oust the Scum
-    fallout_oust_the_scum = {
-		icon = mission_usa_flag
-        position = 3
+	# # Oust the Scum
+    # CAE_oust_the_scum = {
+		# icon = mission_usa_flag
+        # position = 3
         
-		required_missions = { 
-            fallout_home_of_the_legion
-        }
+		# required_missions = { 
+            # CAE_home_of_the_legion
+        # }
         
-		trigger = {
-            palo_verde_area = {
-                type = all
+		# trigger = {
+            # palo_verde_area = {
+                # type = all
                 
-                country_or_subject_holds = ROOT
-            }
-            bloomfield_area = {
-                type = all
+                # country_or_subject_holds = ROOT
+            # }
+            # bloomfield_area = {
+                # type = all
                 
-                country_or_subject_holds = ROOT
-            }
-            goffs_area = {
-                type = all
+                # country_or_subject_holds = ROOT
+            # }
+            # goffs_area = {
+                # type = all
                 
-                country_or_subject_holds = ROOT
-            }
-		}
-		provinces_to_highlight = {
-            OR = {
-                area = palo_verde_area
-                area = bloomfield_area
-                area = goffs_area
-            }
-			NOT = { country_or_subject_holds = ROOT }
-		}
+                # country_or_subject_holds = ROOT
+            # }
+		# }
+		# provinces_to_highlight = {
+            # OR = {
+                # area = palo_verde_area
+                # area = bloomfield_area
+                # area = goffs_area
+            # }
+			# NOT = { country_or_subject_holds = ROOT }
+		# }
         
-		effect = {
+		# effect = {
 			
-		}
-	}
-}
+		# }
+	# }
+    
+    # # 
+# }
 
-fallout_caesars_legion_column_3 = {
-	slot = 3
-	generic = no
-	ai = yes
+# fallout_caesars_legion_column_3 = {
+	# slot = 3
+	# generic = no
+	# ai = yes
     
-	potential = {
-		tag = CAE
-	}
+	# potential = {
+		# tag = CAE
+	# }
     
-	has_country_shield = yes
+	# has_country_shield = yes
 	
-    # Prepare the Legionnaires
-	fallout_prepare_the_legionnaires = {
-		icon = mission_legion_camp
-        position = 1
+    # # Prepare the Legionnaires
+	# CAE_prepare_the_legionnaires = {
+		# icon = mission_legion_camp
+        # position = 1
         
-		required_missions = { }
+		# required_missions = { }
         
-		trigger = {
-            army_size_percentage = 0.9
-            manpower_percentage = 0.9
-		}
+		# trigger = {
+            # army_size_percentage = 0.9
+            # manpower_percentage = 0.9
+		# }
         
-		effect = {
-			add_mil_power = 100
-		}
-	}
+		# effect = {
+			# add_mil_power = 100
+		# }
+	# }
     
-    # Home of the Legion
-    fallout_home_of_the_legion = {
-		icon = mission_usa_flag
-        position = 2
+    # # Home of the Legion
+    # CAE_home_of_the_legion = {
+		# icon = mission_usa_flag
+        # position = 2
         
-		required_missions = { 
-            fallout_prepare_the_legions
-        }
+		# required_missions = { 
+            # CAE_prepare_the_legions
+        # }
         
-		trigger = {
-            arizona_region = {
-                type = all
+		# trigger = {
+            # arizona_region = {
+                # type = all
                 
-                country_or_subject_holds = ROOT
-            }
-		}
-		provinces_to_highlight = {
-            region = arizona_region
-			NOT = { country_or_subject_holds = ROOT }
-		}
+                # country_or_subject_holds = ROOT
+            # }
+		# }
+		# provinces_to_highlight = {
+            # region = arizona_region
+			# NOT = { country_or_subject_holds = ROOT }
+		# }
         
-		effect = {
+		# effect = {
 			
-		}
-	}
+		# }
+	# }
     
-    # Assault on New Vegas
-    fallout_assault_on_new_vegas = {
-		icon = mission_usa_flag
-        position = 3
+    # # Assault on New Vegas
+    # CAE_assault_on_new_vegas = {
+		# icon = mission_usa_flag
+        # position = 3
         
-		required_missions = { 
-            fallout_home_of_the_legion
-        }
+		# required_missions = { 
+            # CAE_home_of_the_legion
+        # }
         
-		trigger = {
-            if = {
-                limit = {
-                    exists = NVG
-                }
-                war_with = NVG
-            }
-            else = {
-                new_vegas_area = {
-                    type = all
-                    country_or_subject_holds = ROOT
-                }
-            }
-		}
-		provinces_to_highlight = {
-            if = {
-                limit = {
-                    exists = NVG
-                }
-                all_province = {
-                    owned_by = NVG
-                }
-            }
-            else = {
-                area = new_vegas_area
-                NOT = { country_or_subject_holds = ROOT }
-            }
-		}
+		# trigger = {
+            # if = {
+                # limit = {
+                    # exists = NVG
+                # }
+                # war_with = NVG
+            # }
+            # else = {
+                # new_vegas_area = {
+                    # type = all
+                    # country_or_subject_holds = ROOT
+                # }
+            # }
+		# }
+		# provinces_to_highlight = {
+            # if = {
+                # limit = {
+                    # exists = NVG
+                # }
+                # all_province = {
+                    # owned_by = NVG
+                # }
+            # }
+            # else = {
+                # area = new_vegas_area
+                # NOT = { country_or_subject_holds = ROOT }
+            # }
+		# }
         
-		effect = {
+		# effect = {
 			
-		}
-	}
-}
+		# }
+	# }
+    
+    # # Exploit Hoover Dam
+    # CAE_exploit_hoover_dam = {
+		# icon = mission_usa_flag
+        # position = 4
+        
+		# required_missions = { 
+            # CAE_assault_on_new_vegas
+        # }
+        
+		# trigger = {
+            # 267 = {
+                # owned_by = ROOT
+            # }
+		# }
+		# provinces_to_highlight = {
+            # province_id = 267
+            # NOT = { country_or_subject_holds = ROOT }
+		# }
+        
+		# effect = {
+			
+		# }
+	# }
+    
+    
+# }
 
-fallout_caesars_legion_column_4 = {
-	slot = 4
-	generic = no
-	ai = yes
+# fallout_caesars_legion_column_4 = {
+	# slot = 4
+	# generic = no
+	# ai = yes
     
-	potential = {
-		tag = CAE
-	}
+	# potential = {
+		# tag = CAE
+	# }
     
-	has_country_shield = yes
+	# has_country_shield = yes
 	
-	# Secure the South
-    fallout_secure_the_south = {
-		icon = mission_usa_flag
-        position = 3
+	# # Secure the South
+    # CAE_secure_the_south = {
+		# icon = mission_usa_flag
+        # position = 3
         
-		required_missions = { 
-            fallout_home_of_the_legion
-        }
+		# required_missions = { 
+            # CAE_home_of_the_legion
+        # }
         
-		trigger = {
-            el_medio_area = {
-                type = all
+		# trigger = {
+            # el_medio_area = {
+                # type = all
                 
-                country_or_subject_holds = ROOT
-            }
-            caborca_area = {
-                type = all
+                # country_or_subject_holds = ROOT
+            # }
+            # caborca_area = {
+                # type = all
                 
-                country_or_subject_holds = ROOT
-            }
-		}
-		provinces_to_highlight = {
-            OR = {
-                area = el_medio_area
-                area = caborca_area
-            }
-			NOT = { country_or_subject_holds = ROOT }
-		}
+                # country_or_subject_holds = ROOT
+            # }
+		# }
+		# provinces_to_highlight = {
+            # OR = {
+                # area = el_medio_area
+                # area = caborca_area
+            # }
+			# NOT = { country_or_subject_holds = ROOT }
+		# }
         
-		effect = {
+		# effect = {
 			
-		}
-	}
-}
+		# }
+	# }
+# }
 
-fallout_caesars_legion_column_5 = {
-	slot = 5
-	generic = no
-	ai = yes
+# fallout_caesars_legion_column_5 = {
+	# slot = 5
+	# generic = no
+	# ai = yes
     
-	potential = {
-		tag = CAE
-	}
+	# potential = {
+		# tag = CAE
+	# }
     
-	has_country_shield = yes
+	# has_country_shield = yes
 	
-	# Bolster the Eastern Flank
-    fallout_bolster_the_eastern_flank = {
-		icon = mission_usa_flag
-        position = 3
+	# # Bolster the Eastern Flank
+    # CAE_bolster_the_eastern_flank = {
+		# icon = mission_usa_flag
+        # position = 3
         
-		required_missions = { 
-            fallout_home_of_the_legion
-        }
+		# required_missions = { 
+            # CAE_home_of_the_legion
+        # }
         
-		trigger = {
-            num_of_provinces_owned_or_owned_by_subjects_with = {
-                value = 5
+		# trigger = {
+            # num_of_provinces_owned_or_owned_by_subjects_with = {
+                # value = 5
                 
-                OR = {
-                    region = new_mexico_region
-                    region = colorado_region
-                }
+                # OR = {
+                    # region = new_mexico_region
+                    # region = colorado_region
+                # }
                 
-                has_fort_building = yes
-            }
-		}
-		provinces_to_highlight = {
-            OR = {
-                region = new_mexico_region
-                region = colorado_region
-            }
-			NOT = { country_or_subject_holds = ROOT }
-		}
+                # has_fort_building = yes
+            # }
+		# }
+		# provinces_to_highlight = {
+            # OR = {
+                # region = new_mexico_region
+                # region = colorado_region
+            # }
+            # country_or_subject_holds = ROOT
+		# }
         
-		effect = {
+		# effect = {
 			
-		}
-	}
-}
+		# }
+	# }
+# }
