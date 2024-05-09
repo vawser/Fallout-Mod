@@ -3,3 +3,189 @@
 #
 # Effects are fully scriptable here.
 
+mungo_town = {
+	potential = {
+		exists = BIG
+		exists = LLL
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			tag = BIG
+		}
+		exists = LLL
+		#NOT = {
+		#	war_with = LLL
+		#}
+	}
+
+	local_development_cost_modifier = -0.10
+	local_monthly_devastation = 0.2
+	global_colonial_growth = 5	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+ncr_reserve = {
+	potential = {
+		exists = NCR
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			tag = NCR
+		}
+	}
+	trade_goods_size = 0.5	
+	inflation_action_cost = -0.15
+	inflation_reduction = 0.1	
+	local_gold_depletion_chance_modifier = -0.4	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+
+cae_dog_retinue = {
+	potential = {
+		exists = CAE
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			tag = CAE
+		}
+	}
+	infantry_shock = 1	
+	
+	#Province scope
+	on_activation = {
+		# The Dog City of Denver
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+cae_yuma_base = {
+	potential = {
+		exists = CAE
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			tag = CAE
+		}
+	}
+	artillery_power = 0.05	
+	
+	#Province scope
+	on_activation = {
+		# The Yuma Military Base
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+cae_arizona_university = {
+	potential = {
+		exists = CAE
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			tag = CAE
+		}
+	}
+	infantry_cost = -0.10	
+	
+	#Province scope
+	on_activation = {
+		# The Yuma Military Base
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+cae_currency_hub = {
+	potential = {
+		exists = CAE
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			tag = CAE
+		}
+	}
+	inflation_reduction = -0.1		
+	
+	#Province scope
+	on_activation = {
+		# Legionary Currency? 
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+flatwood_robotic = {
+	potential = {
+		#culture = robot
+		#religion = robotic
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		culture = robot
+		religion = robotics 
+	}
+	trade_goods_size = 0.5
+	allowed_num_of_buildings = 1	
+	
+	#Province scope
+	on_activation = {
+		
+	}
+	
+	on_deactivation = {
+	
+	}
+}

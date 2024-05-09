@@ -1,17 +1,23 @@
+is_city = no
 
-owner = RPC
-controller = RPC
-add_core = RPC
-is_city = yes
-
-base_tax = 2
-base_production = 2
-base_manpower = 3
+base_tax = 1
+base_production = 1
+base_manpower = 2
 
 culture = ripclaw
 religion = survivalist
 
 hre = no
-
+center_of_trade = 1
 trade_goods = weaponry
 
+2290.1.1 = {
+    owner = RPC
+    controller = RPC
+    add_core = RPC
+    trade_goods = weaponry
+    is_city = yes
+    base_tax = 2
+    base_production = 2
+    base_manpower = 3
+}

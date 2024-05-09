@@ -1,0 +1,45 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = monarchy
+add_government_reform = ncr_state_reform
+technology_group = tech_ncr
+religion = secular
+primary_culture = follower
+capital = 425
+
+
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+set_slavery_forbidden = yes
+set_gambling_allowed = yes
+set_prostitution_allowed = yes
+
+set_narcotics_allowed = yes
+set_scavenging_allowed = yes
+
+#--------------------------------
+# Relationships
+#--------------------------------
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "Tim"
+		dynasty = "Nesbit"
+		birth_date = 2234.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+    
+    add_country_modifier = {
+        name = member_of_ncr
+        duration = -1
+    }
+}
+

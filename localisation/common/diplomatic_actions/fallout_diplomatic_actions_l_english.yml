@@ -3,21 +3,6 @@
  # Actions
  #-------------------------------------
  # --- Relation
- manage_subject: "Administrate Subject"
- manage_subject_title: "Administrate Subject"
- manage_subject_desc: "Administrate Subject will have the following effect:\n\nModify our relationship with §Y[From.GetName]§!."
- manage_subject_tooltip: "Administrate our relationship with this subject."
- manage_subject_dialog: "Administrate our relationship with this subject."
- 
- annex_subject: "Annex Subject"
- annex_subject_title: "Annex Subject"
- annex_subject_desc: "Annex Subject will have the following effect:\n\nEnd our subjugation of §Y[From.GetName]§! and annex their land as our own."
- annex_subject_tooltip: "Let us annex §Y[From.GetName]§!."
- annex_subject_dialog: "Let us annex §Y[From.GetName]§!."
- 
- annex_subject_cooldown: "Annexation Fatigue"
- desc_annex_subject_cooldown: "We have recently annexed a subject, and will not be able to muster the administrative capacity to annex another for some time."
- 
  abandon_subject: "Abandon Subject"
  abandon_subject_title: "Abandon Subject"
  abandon_subject_desc: "Abandon Subject will have the following effect:\n\nAbandon our subjugation of §Y[From.GetName]§!."
@@ -35,12 +20,6 @@
  return_to_overlord_desc: "Return to Overlord will have the following effect:\n\nSwitch player control to §Y[From.GetName]§!."
  return_to_overlord_tooltip: "As the overlord of a subject, we can return to the overlord nation at any time."
  return_to_overlord_dialog: "As the overlord of a subject, we can return to the overlord nation at any time."
- 
- call_to_war: "Call to War"
- call_to_war_title: "Call to War"
- call_to_war_desc: "Call to War will have the following effect:\n\n§Y[From.GetName]§! will be given the option to join our current war."
- call_to_war_tooltip: "Let call §Y[From.GetName]§! into our war."
- call_to_war_dialog: "Let call §Y[From.GetName]§! into our war."
  
  # --- Covert
  assassinate_leader: "Assassinate Leader"
@@ -403,9 +382,3 @@
  fallout_cultural_propaganda.2.title: "Cultural Propaganda"
  fallout_cultural_propaganda.2.desc: "Cultural propaganda sent by [aggressor.GetName] has convinced some of our citizens to follow [aggressor.Culture.GetName]."
  fallout_cultural_propaganda.2.option.a: "..."
- 
- # Call to War
- fallout_call_to_war.1.title: "Call to War!"
- fallout_call_to_war.1.desc: "One of our subjects, [call_to_war_subject.GetName], has called upon us to assist them in a war. We do not have to accept, but refusal will most certainly anger them."
- fallout_call_to_war.1.option.a: "To war!"
- fallout_call_to_war.1.option.b: "No thanks."

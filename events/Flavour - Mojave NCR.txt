@@ -1,0 +1,59 @@
+namespace = mojave_ncr
+
+# Aftermath of the Battle for Hoover Dam
+country_event = {
+	id = mojave_ncr.1
+	title = mojave_ncr.1.title
+	desc = mojave_ncr.1.desc
+    picture = DESERT_TRUCKSTOP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		tag = CAM
+		start_date = 2290.1.1 #Wild Wasteland
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] -  mojave_ncr.1" }
+        }
+    }
+    
+    #mean_time_to_happen = {
+	#	days = 1
+    #}
+    
+	# We will remain loyal to the NCR
+	option = {
+		name = mojave_ncr.1.option.a
+		tooltip = {
+			add_province_modifier = { 
+				name = brok_uranium_shortage
+				duration = -1  
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = { # Favour the Rangers
+		name = mojave_ncr.1.option.b
+		override_country_name = MOJAVE_RANGERS
+		# CHANGE FLAG
+		# RELATIONS
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = { # This desert makes you wish for a nuclear winter
+		name = mojave_ncr.1.option.c
+		# RELEASE STATES
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+}

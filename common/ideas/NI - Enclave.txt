@@ -10,7 +10,10 @@ ENC_ideas = {
     }
     
     trigger = {
-        tag = ENC
+	OR = {
+        	tag = ENC
+		tag = AEN
+	}
     }
     free = yes
     

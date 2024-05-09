@@ -1,23 +1,35 @@
 # set_variable = { which = province_id value = 65  }
 
-owner = ST1
-controller = ST1
-add_core = ST1
+owner = SAC
+controller = SAC
 add_core = SAC
 is_city = yes
 
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 4
+base_production = 3
+base_manpower = 2
 
-culture = super_mutant 
-religion = survivalist
+culture = sac_town
+religion = secular
 
 hre = no # hre = yes
-
+center_of_trade = 1
 trade_goods = munitions
 
+2282.1.1 = {
+    owner = NCR
+    controller = NCR
+    add_core = NCR
+}
 
-
-
+2290.1.1 = {
+    owner = ST1
+    controller = ST1
+    add_core = ST1
+    culture = super_mutant 
+    religion = survivalist
+    base_tax = 1
+    base_production = 1
+    base_manpower = 1
+}
 

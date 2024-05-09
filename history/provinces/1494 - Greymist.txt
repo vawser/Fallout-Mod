@@ -1,8 +1,5 @@
 
-owner = SCB
-controller = SCB
-add_core = SCB
-is_city = yes
+is_city = no
 
 base_tax = 2
 base_production = 1
@@ -12,10 +9,16 @@ culture = scorpion_bite
 religion = survivalist
 
 hre = no
+center_of_trade = 1
+trade_goods = unknown
 
-trade_goods = drugs
-
-
+2290.1.1 = {
+    owner = SCB
+    controller = SCB
+    add_core = SCB
+    is_city = yes
+    trade_goods = drugs
+}
 
 
 

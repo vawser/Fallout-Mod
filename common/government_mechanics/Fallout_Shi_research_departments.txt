@@ -1,0 +1,97 @@
+
+ shi_research_department_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		has_dlc = "Domination"
+	}
+	powers = {
+		fallout_shi_research_initiative = {
+			max = 100
+			min = 0
+			reset_on_new_ruler = no
+			base_monthly_growth = 0.35
+			#development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					innovativeness_gain = 0.25
+					monthly_reform_progress_modifier = 0.1	
+				}
+			}
+		}
+	}
+
+	interactions = {
+		shi_chemical_research_project = {
+			icon = GFX_shi_chemical_research_project_icon
+			cost_type = fallout_shi_research_initiative
+			cost = 100
+            
+			cooldown_years = 20
+			
+			trigger = {
+                has_country_modifier = chemistry_and_mechanics_researchers_head_advisor  
+			}
+            
+			effect = {
+				country_event = {
+                    id = shi.23
+                }		
+			}
+            
+			ai_chance = {
+				factor = 1
+                
+                #modifier = {
+                #    factor = 0
+                #    
+                #    manpower_percentage = 0.8
+                #}
+			}
+		}
+		
+        shi_xeno_research_project = {
+			icon = GFX_shi_xeno_research_project_icon
+			cost_type = fallout_shi_research_initiative
+			cost = 100
+            
+			cooldown_years = 20
+            
+			trigger = {
+                has_country_modifier = xeno_and_botany_researchers_head_advisor 
+			}
+            
+			effect = {
+                country_event = {
+                    id = shi.24
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+        
+		shi_med_research_project = {
+			icon = GFX_shi_med_research_project_icon
+			cost_type = fallout_shi_research_initiative
+			cost = 100
+            
+			cooldown_years = 20
+            
+			trigger = {
+                has_country_modifier = medical_and_fev_researchers_head_advisor   
+			}
+            
+			effect = {
+                country_event = {
+                    id = shi.25
+                }
+			}
+            
+			ai_chance = {
+				factor = 1
+			}
+		}
+	}
+}

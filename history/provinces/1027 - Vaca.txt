@@ -1,8 +1,7 @@
 # set_variable = { which = province_id value = 68  }
 
-owner = HUB
-controller = HUB
-add_core = HUB
+owner = VLJ
+controller = VLJ
 add_core = VLJ
 is_city = yes
 
@@ -10,13 +9,27 @@ base_tax = 1
 base_production = 2
 base_manpower = 2
 
-culture = hubologist
-religion = hubology
+culture = vallejo
+religion = secular
 
 hre = no # hre = yes
-
+center_of_trade = 1
 trade_goods = food
 
+
+2282.1.1 = {
+    owner = NCR
+    controller = NCR
+    add_core = NCR
+}
+
+2290.1.1 = {
+    owner = HUB
+    controller = HUB
+    add_core = HUB
+    culture = hubologist
+    religion = hubology
+}
 
 
 

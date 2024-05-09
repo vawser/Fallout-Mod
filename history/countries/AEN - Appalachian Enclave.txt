@@ -1,0 +1,51 @@
+#--------------------------------
+# Nation
+#--------------------------------
+government = republic
+add_government_reform = enclave_reform #CHANGE
+technology_group = tech_enclave
+religion = american_restorationists
+primary_culture = enclave
+capital = 2110
+
+add_army_tradition = 40
+add_army_professionalism = 0.6
+
+#--------------------------------
+# Laws and Policies
+#--------------------------------
+set_slavery_allowed = yes
+set_gambling_forbidden = yes
+set_prostitution_forbidden = yes
+
+set_narcotics_forbidden = yes
+set_scavenging_allowed = yes
+
+unlock_schematic = {
+    schematic = hellfire_power_armor
+}
+
+#add_country_modifier = {
+#    name = mission_only_the_pure
+#    duration = -1
+#}
+
+#--------------------------------
+# Relationships
+#--------------------------------
+
+#--------------------------------
+# History
+#--------------------------------
+2282.1.1 = {
+	monarch = {
+		name = "MODUS"
+		dynasty = "Governing intelligence"
+		culture = robot
+		adm = 6
+		dip = 3
+		mil = 6
+	}
+    clear_scripted_personalities = yes
+    add_ruler_personality = immortal_personality
+}

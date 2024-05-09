@@ -24,9 +24,22 @@ entity = {
 #----------------------------------------------
 entity = {
     name = "ncr_gfx_CAVALRY_1"
-    #pdxmesh = "ncr_truck_mesh"
-    
-    pdxmesh = "deathclaw"
+    pdxmesh = "ncr_truck_mesh"
+		
+    default_state = "idle"
+    state = { 
+        name = "idle"				
+        animation = "idle" 				
+    }
+    state = { 
+        name = "move"				
+        animation = "move" 				
+    }
+    state = { 
+        name = "attack"				
+        animation = "idle" 				
+    }
+    scale = 1
 }
     
 

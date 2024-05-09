@@ -1,0 +1,426 @@
+#These are Generic missions, available to all tags that don't have an override.
+#Below are mission series, within them are the actual missions.
+
+#---------------------------------------------------
+# White Legs
+wls_missions_4_dummy = {
+	slot = 4
+    
+	ai = yes
+    has_country_shield = yes
+    
+	potential = {
+        tag = WLS
+		NOT = {
+			OR = {
+				has_country_flag = WLS_caesar_path
+				has_country_flag = WLS_tribal_path
+			}
+		}
+	}
+
+	wls_missions_4_dummy_mission_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		required_missions = {  }
+		provinces_to_highlight = {}
+		trigger = {
+			always = no
+		}
+	}
+}
+
+wls_missions_4_caesar = {
+	slot = 4
+    
+	ai = yes
+    has_country_shield = yes
+    
+	potential = {
+        tag = WLS
+		has_country_flag = WLS_caesar_path
+	}
+	wls_embracing_caesars_religion = {
+		icon = mission_legion_cross 
+		required_missions = {  }
+        
+		trigger = { 
+			religion = cult_of_mars  
+        }
+		effect = {
+			add_country_modifier = {
+				name = "wls_cult_of_mars"
+				duration = 5475 #15 years
+			}			
+		}
+	}
+	
+	wls_temple_dedication = {
+		icon = mission_legion_camp #CHANGE
+		required_missions = { wls_embracing_caesars_religion }
+        
+		trigger = { 
+			owns_core_province = 1425
+			num_of_provinces_in_states = 5
+        }
+		effect = {
+			country_event = { 
+				id = zion.19
+			}		
+		}
+	}
+	
+	wls_legionary_organization = {
+		icon = mission_legion_camp
+		required_missions = { wls_temple_dedication }
+        
+		trigger = { 
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				army_professionalism = 0.25
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_dlc = "Cradle of Civilization"
+					}
+					army_tradition = 45
+				}	
+			}
+			NOT = {
+				war_with = CAE
+			}
+			reverse_has_opinion = {
+				who = CAE
+				value = 45
+			}		
+        }
+		effect = {
+			# Unlock legion troops? 		
+		}
+	}
+	
+	wls_joining_the_legion = {
+		icon = mission_legion_fire
+		required_missions = { wls_legionary_organization }
+        
+		trigger = { 
+			exists = CAE
+			is_at_war = no
+			reverse_has_opinion = {
+				who = CAE
+				value = 80
+			}			
+			
+        }
+		effect = {
+			CAE = {
+				create_march = WLS
+			}
+			add_army_tradition = 10	
+			add_dip_power = 100	
+			add_mil_power = 100	
+			add_adm_power = 100	
+			if = {
+				limit = {
+					tech_difference = 3
+				}
+				add_mil_tech = 1	
+			}
+		}
+	}
+}
+
+wls_missions_4_tribal = {
+	slot = 4
+    
+	ai = yes
+    has_country_shield = yes
+    
+	potential = {
+        tag = WLS
+		has_country_flag = WLS_tribal_path
+		
+	}
+	wls_war_camps = {
+		icon = mission_legion_camp
+		required_missions = { }
+        
+		trigger = { 
+			fbs_military_camp = 2  
+			NOT = { has_country_modifier = totem_wls }
+        }
+		effect = {
+			add_army_tradition = 5
+			add_manpower = 2	
+			every_province = {
+				limit = {
+					area = zion_area 
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT 
+			}
+		}
+	}
+	
+	wls_cut_off_dreadlocks = {
+		icon = mission_night_sky
+		required_missions = { wls_war_camps }
+        
+		trigger = { 
+			NOT = {
+				has_matching_religion = cult_of_mars  
+			}
+			OR = {
+				CAE = {
+					has_opinion_modifier = {
+						who = WLS
+						modifier = insulted 
+					}				
+				}
+				CAE = {
+					has_opinion_modifier = {
+						who = WLS
+						modifier = scornfully_insulted  
+					}				
+				}	
+				NOT = { exists = CAE }
+			}
+        }
+		effect = {
+			remove_historical_friend = CAE	
+			if = {
+				limit = {
+					has_estate = estate_tribals
+				}
+				add_estate_loyalty = {
+					estate = estate_tribals 
+					loyalty = 10
+				}
+			}
+			add_stability = 1	
+		}
+	}
+	
+	
+	wls_stoke_superstitions = {
+		icon = mission_government_ruins # NEED NEW IMAGE
+		required_missions = { wls_cut_off_dreadlocks }
+        
+		trigger = { 
+			any_owned_province = {
+				not = {
+					religion = ROOT
+				}
+			}
+        }
+		effect = {
+			add_country_modifier = {
+				name = wls_stoked_superstition
+				duration = 4554
+			}					
+		}
+	}
+	
+	wls_salt_zion = {
+		icon = mission_legion_camp
+		required_missions = { wls_stoke_superstitions }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1254	
+				province_id = 1214
+				province_id = 111
+				province_id = 1425
+			}
+		}
+        
+		trigger = { 
+			owns_core_province = 1254
+			owns_core_province = 1214
+			owns_core_province = 111
+			owns_core_province = 1425
+        }
+		effect = {
+			#add_country_modifier = {
+			#	name = wls_salt_on_zions_wounds
+			#	duration = 5001
+			#}		
+			1254 = {
+				add_devastation = 10		
+				add_base_manpower = 1	
+				set_local_autonomy = 0	
+				remove_core = DED
+				remove_core = SOR
+				remove_province_modifier = zion_canyon
+			}
+			1214 = {
+				add_devastation = 10		
+				add_base_manpower = 1	
+				set_local_autonomy = 0	
+				remove_core = DED
+				remove_core = SOR
+				remove_province_modifier = zion_canyon
+			}
+			1425 = {
+				add_devastation = 10		
+				add_base_manpower = 1	
+				set_local_autonomy = 0	
+				remove_core = DED
+				remove_core = SOR
+				remove_province_modifier = zion_canyon
+			}
+			111 = {	
+				add_base_manpower = 2	
+				set_local_autonomy = 0	
+				remove_core = DED
+				remove_core = SOR
+				remove_province_modifier = zion_canyon
+			}
+			add_prestige = 20	
+			add_mil_power = 45
+		}
+	}
+	
+	wls_returning_to_great_salt_city = {
+		icon = mission_legion_camp
+		required_missions = { wls_salt_zion }
+		
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1252
+				province_id = 1286
+				province_id = 132
+				province_id = 341
+				province_id = 104
+				province_id = 99
+				province_id = 52
+			}
+		}
+        
+		trigger = { 
+			owns_core_province = 1252
+			owns_core_province = 1286
+			owns_core_province = 132
+			owns_core_province = 341
+			owns_core_province = 104
+			owns_core_province = 99
+			owns_core_province = 52
+        }
+		effect = {
+			add_country_modifier = {
+				name = wls_great_salt_warriors
+				duration = -1
+			}		
+		}
+	}
+	
+	#wls_returning_to_great_salt_city = {
+	#	icon = mission_legion_camp
+	#	required_missions = {  }
+    #    
+	#	trigger = { 
+	#		owns_core_province = 105
+    #    }
+	#	effect = {
+	#		add_country_modifier = {
+	#			name = wls_eighties_bikes
+	#			duration = 4554
+	#		}		
+	#		# UNLOCK EIGHTIES MECHANICS? 
+	#	}
+	#}
+}
+
+wls_missions_5 = {
+	slot = 5
+    
+	ai = yes
+    has_country_shield = yes
+    
+	potential = {
+        tag = WLS
+	}
+	
+	
+	wls_grasp_zion = {
+		icon = mission_zion
+		required_missions = {  }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1254
+				province_id = 1425
+				province_id = 1214
+				province_id = 111
+			}
+		}
+		
+		trigger = { 
+			owns_core_province = 1254
+			owns_core_province = 1425
+			owns_core_province = 1214
+			owns_core_province = 111
+        }
+		effect = {
+			add_country_modifier = {
+				name = "wls_bounties_of_zion"
+				duration = 5475 #15 years
+			}		
+			random_owned_province = {
+				limit = {
+					has_empty_adjacent_province = yes
+				}
+				random_empty_neighbor_province = { # if = { } maybe? 
+					create_colony = 200
+				}
+			}
+		}
+	}
+	
+	wls_crush_caliente = {
+		icon = mission_rubble_1
+		required_missions = { wls_grasp_zion }
+		
+		trigger = { 
+			owns_core_province = 560
+			NOT = {
+				exists = CLI 
+			}
+        }
+		effect = {
+			add_army_tradition = 6
+			add_war_exhaustion = -1
+		}
+	}
+	
+	wls_destroying_canaans_legacy = {
+		icon = mission_legion_skeleton
+		required_missions = { wls_crush_caliente }
+		
+		trigger = { 
+			owns_core_province = 1406
+			NOT = {
+				OR = {
+					exists = SOR
+					exists = DED
+					exists = X06 
+					#all_country = {
+					#	religion = mormon 
+					#}
+				}
+			}
+        }
+		effect = {
+			add_army_tradition = 6
+			add_war_exhaustion = -1
+			add_mil_power = 100	
+		}
+	}
+
+}

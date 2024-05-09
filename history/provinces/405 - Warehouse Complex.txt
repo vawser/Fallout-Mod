@@ -1,18 +1,28 @@
 # set_variable = { which = province_id value = 405  }
 
-add_core = FOA
-owner = FOA
-controller = FOA
+add_core = BLD
+owner = BLD
+controller = BLD
 is_city = yes
 
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 2
+base_production = 2
+base_manpower = 5
 
 culture = follower
 religion = secular
 
 trade_goods = munitions
 hre = no # hre = yes
+center_of_trade = 1
 
+2282.1.1 = {
+    owner = NCR
+    controller = NCR
+    add_core = NCR
+}
 
+2290.1.1 = {
+    owner = BLD
+    controller = BLD
+}

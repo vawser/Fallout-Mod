@@ -4,14 +4,28 @@ controller = TWH
 add_core = TWH
 
 is_city = yes
-base_tax = 2
-base_production = 2
-base_manpower = 2
+base_tax = 5
+base_production = 5
+base_manpower = 3
 
 culture = twisted_hair
 religion = animism
 
 trade_goods = food
 hre = no
+center_of_trade = 1
 
+2282.1.1 = {
+    owner = CAE
+    controller = CAE
+    add_core = CAE
+    culture = legionary
+    religion = cult_of_mars
+}
 
+2290.1.1 = {
+    owner = TWH
+    controller = TWH
+    culture = twisted_hair
+    religion = animism
+}

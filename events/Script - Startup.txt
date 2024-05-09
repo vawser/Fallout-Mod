@@ -55,46 +55,6 @@ country_event = {
         
         set_default_variables = yes
         set_scavenging_variables = yes
-        
-        # Brotherhood of Steel
-        if = {
-            limit = {
-                technology_group = tech_bos
-            }
-            
-            random_list = {
-                33 = {
-                    add_country_modifier = {
-                        name = recruitment_standard_extreme
-                        duration = -1
-                    }
-                }
-                33 = {
-                    add_country_modifier = {
-                        name = recruitment_standard_high
-                        duration = -1
-                    }
-                }
-                33 = {
-                    add_country_modifier = {
-                        name = recruitment_standard_medium
-                        duration = -1
-                    }
-                }
-            }
-        }
-        
-        # Enclave
-        if = {
-            limit = {
-                tag = ENC
-            }
-            
-            add_country_modifier = {
-                name = purity_standard_extreme
-                duration = -1
-            }
-        }
     }  
 }
 

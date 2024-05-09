@@ -1,0 +1,80 @@
+namespace = religion_unity
+
+country_event = { #Remnants of the Children of the Cathedral
+	id = religion_unity.1
+	title = religion_unity.1.title
+	desc = religion_unity.1.desc
+	picture = DESERT_TRUCKSTOP_eventPicture
+	
+	is_triggered_only = yes
+
+    trigger = {
+        
+    }
+    
+	option = { # Welcome them
+		name = religion_unity.1.option.a
+		add_church_power = 30
+		#add_tribal_allegiance = -3
+		random_owned_province = {
+			limit = {
+				religion = unity
+				NOT = {
+					is_capital = yes
+				}
+			}
+			change_culture = children_of_the_cathedral
+			add_province_modifier = { 
+				name = unity_children_settlement
+				duration = 3000 
+			}
+			add_nationalism = 10	
+		}
+    }
+	
+	option = { # Send them to the vats! 
+		name = religion_unity.1.option.b
+		add_church_power = -20
+		#add_tribal_allegiance = 3		
+
+    }
+	
+	option = { # We are the remnants of the Masters Army, not the church
+		name = religion_unity.1.option.c
+		add_church_power = -20
+		#add_tribal_allegiance = 3		
+
+    }
+	
+	option = { # Direct them to the Hart settlement 
+		name = religion_unity.1.option.d
+		add_church_power = 3
+
+    }
+}
+
+country_event = { #Unity Initiation 
+	id = religion_unity.2
+	title = religion_unity.2.title
+	desc = religion_unity.2.desc
+	picture = CHURCH_MISTY_INSIDE_eventPicture
+	
+	is_triggered_only = yes
+
+    trigger = {
+        
+    }
+    
+	option = { # Tighten Standards
+		name = religion_unity.2.option.a
+		add_church_power = 10
+
+    }
+	
+	option = { # Slacken Standards
+		name = religion_unity.2.option.b
+		add_church_power = -20
+		#add_tribal_allegiance = 3		
+
+    }
+}

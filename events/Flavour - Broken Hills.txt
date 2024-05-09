@@ -1,0 +1,53 @@
+namespace = brokenhills
+
+# Decline Of Broken Hills 
+country_event = {
+	id = brokenhills.1
+	title = brokenhills.1.title
+	desc = brokenhills.1.desc
+    picture = DESERT_TRUCKSTOP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		tag = BOK
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] -  brokenhills.1" }
+        }
+    }
+    
+    #mean_time_to_happen = {
+	#	days = 1
+    #}
+    
+	# We just need to dig deeper!
+	option = {
+		name = brokenhills.1.option.a
+		tooltip = {
+			add_province_modifier = { 
+				name = brok_uranium_shortage
+				duration = -1  
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = { # Our mining days are over, we need to diversify!
+		name = brokenhills.1.option.b
+		tooltip = {
+			add_province_modifier = { 
+				name = brok_uranium_shortage
+				duration = -1  
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+}

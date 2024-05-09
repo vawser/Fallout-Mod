@@ -1,0 +1,51 @@
+# Mothman
+mothman_ideas = {
+    start = {
+        core_creation = -0.05		
+	land_forcelimit_modifier = 0.1
+    }
+    
+    bonus = {
+        warscore_cost_vs_other_religion = -0.25	
+    }
+    
+    trigger = {
+		OR = {
+			tag = MMC
+			#tag = KER #FOR FUTURE MOTHMAN STATES
+		}
+    }
+    free = yes
+    
+    # Sermons
+    mothman_idea_1 = {
+        global_missionary_strength = 0.025	
+    }
+    # Visions and Revelations
+    mothman_idea_2 = {
+        devotion = 1
+	reform_progress_growth = 0.1		
+    }
+    # Mothman Equinox
+    mothman_idea_3 = {
+        global_prosperity_growth = 0.1	
+	tolerance_own = 1	
+    }
+    # Religious Fervor 
+    mothman_idea_4 = {
+        land_morale = 0.10	
+    }
+    # Living Mothmen 
+    mothman_idea_5 = {
+        morale_damage = 0.025	
+    }
+    # Wilderness Connections
+    mothman_idea_6 = {
+        land_attrition = -0.10	
+    }
+    # Vine Manipulation
+    mothman_idea_7 = {
+        hostile_attrition = 1	
+    }
+}
+

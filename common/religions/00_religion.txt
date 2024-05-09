@@ -354,6 +354,35 @@ religion_group_postwar = {
         
 		heretic = { HERETIC }
 	}
+	
+	vaultdweller = {
+		color = { 204 76 76 } #CHANGE? 
+		icon = 25 #CHANGE 
+		allowed_conversion = { #CONSIDER CHANGING 
+			american_restorationists
+		}
+		country = {
+			general_cost = -0.2	
+			adm_tech_cost_modifier = -0.05	
+		}
+		country_as_secondary = {
+			adm_tech_cost_modifier = -0.025
+		}
+		on_convert = {
+			add_prestige = -100
+			add_stability = -1
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { HERETIC }
+		
+		uses_karma = yes
+	
+	}
+	
     
     crusade_name = HOLY_WAR
 }
@@ -410,7 +439,48 @@ religion_group_atomic = {
         
 		heretic = { HERETIC }
 	}
+    
+    #-------------------------------------
+    # Unity
+    #-------------------------------------	
+    unity = {
+		color = { 0.241 0.453 0.282 } #Change
+		icon = 6 #Change 
+		
+		country = { 
+			institution_spread_from_true_faith = 0.1	
+            manpower_in_own_culture_provinces = 0.15	
+		}
+        country_as_secondary = {
+            manpower_in_own_culture_provinces = 0.10	
+        }
+        province = {
+            local_hostile_attrition = 1
+            local_missionary_strength = -0.02
+        }
+        
+		uses_anglican_power = yes	
+		aspects = {
+			unity_fev_uplift
+			unity_encourage_mutant_settlement
+			unity_recruit_children_of_the_cathedral
+			unity_pure_vaultdweller_uplift
+			unity_egalitarian_society
+		}
+		aspects_name = UNITY_ASPECTS
+        
+        on_convert = {
+			change_religion = unity
+			add_prestige = -100
 
+			add_country_modifier = {
+				name = "fm_conversion_zeal"
+				duration = 3650
+			}			
+		}
+        
+		heretic = { HERETIC }
+	}
     #-------------------------------------
     # Bright Brotherhood
     #-------------------------------------
