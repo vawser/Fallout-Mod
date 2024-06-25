@@ -910,7 +910,8 @@ country_event = {
 	}
 }
 
-#"Reaserch Funding" 
+#"Research Project - Chemistry and Mechanics Researchers" 
+## The scientists representing the Chemistry and Mechanics researchers have assemble a portfolio of projects to choose from which require funding.  
 country_event = {
 	id = shi.23
 	title = shi.23.title
@@ -933,7 +934,7 @@ country_event = {
 		name = shi.23.option.a
 		trigger = {
 			NOT = {
-				has_country_flag = shi_polymeric_armour
+				has_country_flag = shi_polymeric_armour_trigger
 			}	
 		}
 		add_country_modifier = {
@@ -941,7 +942,7 @@ country_event = {
     		duration = -1
 		}	
 		add_treasury = -45
-		set_country_flag = shi_polymeric_armour
+		set_country_flag = shi_polymeric_armour_trigger
 	}
 	
 	option = {		# Prioritise administrative technology
@@ -976,7 +977,8 @@ country_event = {
 	
 }
 
-#"Reaserch Funding" 
+#"Research Project - Xeno and Botany Researchers" 
+## The scientists representing the Xeno and Botany researchers have assemble a portfolio of projects to choose from which require funding.  
 country_event = {
 	id = shi.24
 	title = shi.24.title
@@ -1040,7 +1042,8 @@ country_event = {
 	
 }
 
-#"Reaserch Funding" 
+#"Research Project - Medical and FEV Researchers" 
+## The scientists representing the Medical and FEV researchers have assemble a portfolio of projects to choose from which require funding. 
 country_event = {
 	id = shi.25
 	title = shi.25.title
@@ -1059,20 +1062,20 @@ country_event = {
         }
     }
     
-	option = {		#Finalise Polymeric Combat Armour designs
-		name = shi.25.option.a
-		trigger = {
-			NOT = {
-				has_country_flag = shi_polymeric_armour
-			}	
-		}
-		add_country_modifier = {
-    		name = shi_polymeric_combat_armour
-    		duration = -1
-		}	
-		add_treasury = -45
-		set_country_flag = shi_polymeric_armour
-	}
+	#option = {		#CHANGE
+	#	name = shi.25.option.a
+	#	trigger = {
+	#		NOT = {
+	#			has_country_flag = shi_polymeric_armour
+	#		}	
+	#	}
+	#	add_country_modifier = {
+    #		name = shi_polymeric_combat_armour
+    #		duration = -1
+	#	}	
+	#	add_treasury = -45
+	#	set_country_flag = shi_polymeric_armour
+	#}
 	
 	option = {		# Prioritise administrative technology
 		name = shi.25.option.b
