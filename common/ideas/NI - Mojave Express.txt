@@ -1,0 +1,40 @@
+mojave_ideas = {
+    start = {
+		cavalry_power = 0.10	
+		development_cost = -0.1		
+    }
+    bonus = {
+		caravan_power = 0.2	
+    }
+    
+    trigger = {
+        tag = MOJ
+    }
+    free = yes
+    
+    mojave_idea_1 = { # The Courier
+		leader_land_shock = 1	
+		leader_land_fire = 1	
+    }
+    mojave_idea_2 = { # Mail #RENAME
+		envoy_travel_time = -0.2	
+		
+    }
+    mojave_idea_3 = { # Courier Hire
+		diplomats = 1	
+    }
+    mojave_idea_4 = { # Package Delivery
+		global_supply_limit_modifier = 0.15
+    }
+    mojave_idea_5 = { # Diverse Transactions
+		trade_efficiency = 0.1		
+    }
+    mojave_idea_6 = { # Swift Delivery 
+		movement_speed = 0.10		
+    }
+    mojave_idea_7 = { #Branch Offices
+		improve_relation_modifier = 0.1
+		center_of_trade_upgrade_cost = -0.15	
+    }
+}
+

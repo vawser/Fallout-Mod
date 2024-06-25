@@ -1,53 +1,32 @@
 objectTypes = {
-    #----------------------------------------------
-    # Infantry
-    #----------------------------------------------
-    # HOI
     pdxmesh = {
-		name = "american_soldier"
-		file = "gfx/models/units/infantry/american_soldier/american_soldier.mesh"		
-		
-
-		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
-		animation = { id = "idle"		type = "GER_infantry_rifle_idle_animation" }
-		animation = { id = "walk"		type = "GER_infantry_rifle_moving_animation" }
-		animation = { id = "death"		type = "GER_infantry_rifle_death_animation" }
-		animation = { id = "retreat"	type = "GER_infantry_rifle_retreat_animation" }	
-		
-		scale = 0.5
-	}
-    pdxmesh = {
-		name = "japanese_soldier"
-		file = "gfx/models/units/infantry/japanese_soldier/japanese_soldier.mesh"		
-		
-
-		animation = { id = "attack"		type = "GER_infantry_rifle_attack_animation" }
-		animation = { id = "idle"		type = "GER_infantry_rifle_idle_animation" }
-		animation = { id = "walk"		type = "GER_infantry_rifle_moving_animation" }
-		animation = { id = "death"		type = "GER_infantry_rifle_death_animation" }
-		animation = { id = "retreat"	type = "GER_infantry_rifle_retreat_animation" }	
-		
-		scale = 0.5
+		name = "pipe_rifle_mesh"
+		file = "gfx/models/units/pipe_rifle.mesh"
 	}
     
     pdxmesh = {
-		name = "russian_soldier"
-		file = "gfx/models/units/infantry/russian_soldier/russian_soldier.mesh"		
-		
-
-		animation = { id = "attack"		type = "GER_infantry_rifle_attack_animation" }
-		animation = { id = "idle"		type = "GER_infantry_rifle_idle_animation" }
-		animation = { id = "walk"		type = "GER_infantry_rifle_moving_animation" }
-		animation = { id = "death"		type = "GER_infantry_rifle_death_animation" }
-		animation = { id = "retreat"	type = "GER_infantry_rifle_retreat_animation" }	
-		
-		scale = 0.5
+		name = "laser_rifle_mesh"
+		file = "gfx/models/units/laserrifle.mesh"
 	}
     
-    # Fallout
+    pdxmesh = {
+		name = "laser_musket_mesh"
+		file = "gfx/models/units/laser_musket.mesh"
+	}
+    
+    pdxmesh = {
+		name = "institute_rifle_mesh"
+		file = "gfx/models/units/institute_rifle.mesh"
+	}
+    
+    pdxmesh = {
+		name = "sniper_rifle_mesh"
+		file = "gfx/models/units/NCR_infantry_weapon_rifle.mesh"
+	}
+
     pdxmesh = {
 		name = "wasteland_soldier"
-		file = "gfx/models/units/infantry/wastelander_soldier/wastelander_soldier.mesh"		
+		file = "gfx/models/units/wasteland_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -61,7 +40,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "boomer_soldier"
-		file = "gfx/models/units/infantry/boomer_soldier/boomer_soldier.mesh"		
+		file = "gfx/models/units/boomer_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -75,7 +54,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "brotherhood_soldier"
-		file = "gfx/models/units/infantry/brotherhood_of_steel_soldier/brotherhood_of_steel_soldier.mesh"		
+		file = "gfx/models/units/brotherhood.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -89,7 +68,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "legion_soldier"
-		file = "gfx/models/units/infantry/legionary_soldier/legionary_soldier.mesh"		
+		file = "gfx/models/units/CAE_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -103,7 +82,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "diamond_city_soldier"
-		file = "gfx/models/units/infantry/diamond_city_soldier/diamond_city_soldier.mesh"		
+		file = "gfx/models/units/diamondcity_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -117,7 +96,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "enclave_soldier"
-		file = "gfx/models/units/infantry/enclave_soldier/enclave_soldier.mesh"		
+		file = "gfx/models/units/enclave_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -131,7 +110,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "gunner_soldier"
-		file = "gfx/models/units/infantry/gunner_soldier/gunner_soldier.mesh"		
+		file = "gfx/models/units/gunner_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -145,7 +124,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "institute_soldier"
-		file = "gfx/models/units/infantry/institute_soldier/institute_soldier.mesh"		
+		file = "gfx/models/units/institute_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -159,7 +138,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "kings_soldier"
-		file = "gfx/models/units/infantry/king_gang_soldier/king_gang_soldier.mesh"		
+		file = "gfx/models/units/kings_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -173,7 +152,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "minutemen_soldier"
-		file = "gfx/models/units/infantry/minuteman_soldier/minuteman_soldier.mesh"		
+		file = "gfx/models/units/minutemen_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -187,7 +166,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "ncr_soldier"
-		file = "gfx/models/units/infantry/ncr_soldier/ncr_soldier.mesh"		
+		file = "gfx/models/units/NCR_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -201,7 +180,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "powder_gang_soldier"
-		file = "gfx/models/units/infantry/powder_gang_soldier/powder_gang_soldier.mesh"		
+		file = "gfx/models/units/powder_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -215,7 +194,7 @@ objectTypes = {
     
     pdxmesh = {
 		name = "raider_soldier"
-		file = "gfx/models/units/infantry/raider_soldier/raider_soldier.mesh"		
+		file = "gfx/models/units/raider_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -228,8 +207,20 @@ objectTypes = {
 	}
     
     pdxmesh = {
+		name = "securitron_soldier"
+		file = "gfx/models/units/securitron.mesh"		
+		
+        # Not sure what animations you used for the securitron
+		#animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		#animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+		#animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
+		
+		scale = 0.5
+	}
+    
+    pdxmesh = {
 		name = "super_mutant_soldier"
-		file = "gfx/models/units/infantry/super_mutant/super_mutant.mesh"		
+		file = "gfx/models/units/supermutant.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -243,7 +234,55 @@ objectTypes = {
     
     pdxmesh = {
 		name = "vault_dweller_soldier"
-		file = "gfx/models/units/infantry/vault_tec_soldier/vault_tec_soldier.mesh"		
+		file = "gfx/models/units/vault_infantry.mesh"		
+		
+
+		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
+		animation = { id = "idle"		type = "GER_infantry_rifle_idle_animation" }
+		animation = { id = "walk"		type = "GER_infantry_rifle_moving_animation" }
+		animation = { id = "death"		type = "GER_infantry_rifle_death_animation" }
+		animation = { id = "retreat"	type = "GER_infantry_rifle_retreat_animation" }	
+		
+		scale = 0.5
+	}
+    
+    # Disabled the new models for now until the joint issue is fixed
+    pdxmesh = {
+		name = "army_truck_mesh"
+		file = "gfx/models/units/US_mechanized_01.mesh"
+        #file = "gfx/models/units/armytruck.mesh"
+		
+		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+		animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
+	}
+    
+    pdxmesh = {
+		name = "legion_truck_mesh"
+		file = "gfx/models/units/US_mechanized_01.mesh"
+        #file = "gfx/models/units/legiontruck.mesh"
+		
+		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+		animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
+	}
+    
+    pdxmesh = {
+		name = "ncr_truck_mesh"
+		file = "gfx/models/units/US_mechanized_01.mesh"
+        #file = "gfx/models/units/ncr_truck.mesh"
+		
+		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+		animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
+	}
+    
+    #----------------------------------------------
+    # Infantry
+    #----------------------------------------------
+    pdxmesh = {
+		name = "american_soldier"
+		file = "gfx/models/units/USA_infantry.mesh"		
 		
 
 		animation = { id = "attack"		type = "USA_infantry_rifle_attack_animation" }
@@ -256,44 +295,80 @@ objectTypes = {
 	}
 
     pdxmesh = {
-		name = "securitron_soldier"
-		file = "gfx/models/units/infantry/securitron/securitron.mesh"		
+		name = "american_rifle_mesh"
+		file = "gfx/models/units/USA_infantry_weapon_rifle.mesh"
 	}
+    
     pdxmesh = {
-		name = "brahmin"
-		file = "gfx/models/units/infantry/brahmin/brahmin.mesh"		
+		name = "chinese_soldier"
+		file = "gfx/models/units/JAP_infantry.mesh"		
+		
+
+		animation = { id = "attack"		type = "GER_infantry_rifle_attack_animation" }
+		animation = { id = "idle"		type = "GER_infantry_rifle_idle_animation" }
+		animation = { id = "walk"		type = "GER_infantry_rifle_moving_animation" }
+		animation = { id = "death"		type = "GER_infantry_rifle_death_animation" }
+		animation = { id = "retreat"	type = "GER_infantry_rifle_retreat_animation" }	
+		
+		scale = 0.5
 	}
+    
     pdxmesh = {
-		name = "centaur"
-		file = "gfx/models/units/infantry/centaur/centaur.mesh"		
+		name = "chinese_rifle_mesh"
+		file = "gfx/models/units/JAP_infantry_weapon_arisaka_rifle.mesh"
 	}
+
     pdxmesh = {
-		name = "deathclaw"
-		file = "gfx/models/units/infantry/deathclaw/deathclaw.mesh"		
+		name = "soviet_soldier"
+		file = "gfx/models/units/SOV_infantry.mesh"		
+		
+
+		animation = { id = "attack"		type = "GER_infantry_rifle_attack_animation" }
+		animation = { id = "idle"		type = "GER_infantry_rifle_idle_animation" }
+		animation = { id = "walk"		type = "GER_infantry_rifle_moving_animation" }
+		animation = { id = "death"		type = "GER_infantry_rifle_death_animation" }
+		animation = { id = "retreat"	type = "GER_infantry_rifle_retreat_animation" }	
+		
+		scale = 0.5
+	}
+
+    pdxmesh = {
+		name = "ppsh_mesh"
+		file = "gfx/models/units/SOV_infantry_weapon_PPSh_mg.mesh"
+	}
+    
+    pdxmesh = {
+		name = "tokarev_mesh"
+		file = "gfx/models/units/SOV_infantry_weapon_tokarev_rifle.mesh"
 	}
     
     #----------------------------------------------
     # Vehicles
     #----------------------------------------------
     pdxmesh = {
-		name = "american_truck_mesh"
-		file = "gfx/models/units/vehicles/american_truck/american_truck_static.mesh"
+		name = "motorized_frame_mesh"
+		file = "gfx/models/units/motorized_frame.mesh"
+		
+		animation = { id = "idle"			type = "motorized_frame_idle_animation" }
+		animation = { id = "move"			type = "motorized_frame_move_animation" }
+		animation = { id = "attack"			type = "motorized_frame_attack_animation" }
 	}
+    
     pdxmesh = {
-		name = "american_tank_mesh"
-		file = "gfx/models/units/vehicles/american_tank/american_tank_static.mesh"
+		name = "US_mechanized_mesh"
+		file = "gfx/models/units/US_mechanized_01.mesh"
+		
+		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+		animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
 	}
+    
     pdxmesh = {
-		name = "army_truck_mesh"
-		file = "gfx/models/units/vehicles/army_truck/army_truck_static.mesh"
-	}
-    pdxmesh = {
-		name = "legion_truck_mesh"
-		file = "gfx/models/units/vehicles/legionary_truck/legionary_truck_static.mesh"
-	}
-    pdxmesh = {
-		name = "ncr_truck_mesh"
-		file = "gfx/models/units/vehicles/ncr_truck/ncr_truck_static.mesh"
+		name = "US_motorized_mesh"
+		file = "gfx/models/units/US_motorized_01.mesh"
+		
+		animation = { id = "idle"			type = "US_motorized_01_idle_animation" }
+		animation = { id = "move"			type = "US_motorized_01_move_animation" }
 	}
     
     #----------------------------------------------
@@ -301,7 +376,7 @@ objectTypes = {
     #----------------------------------------------
     pdxmesh = {
 		name = "unit_howitzer_mesh"
-		file = "gfx/models/units/artillery/howitzer/howitzer.mesh"
+		file = "gfx/models/units/howitzer.mesh"
 		
 		animation = { id = "idle"  			type = "howitzer_idle_animation" }
 		animation = { id = "move"  			type = "howitzer_moving_animation" }
@@ -310,7 +385,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "frame_howitzer_mesh"
-		file = "gfx/models/units/artillery/howitzer_frame/artillery_frame.mesh"
+		file = "gfx/models/units/artillery_frame.mesh"
 		
 		animation = { id = "idle"  			type = "howitzer_frame_idle_animation" }
 		animation = { id = "move"  			type = "howitzer_frame_moving_animation" }
@@ -320,9 +395,12 @@ objectTypes = {
     #----------------------------------------------
     # Ships
     #----------------------------------------------
+    ####
+	# BATTLESHIP
+	####
 	pdxmesh = {
 		name = "generic_battleship_mesh"
-		file = "gfx/models/units/ships/battleship/generic_battleship.mesh"
+		file = "gfx/models/units/generic_battleship.mesh"
 		
 		animation = { id = "idle"			type = "generic_battleship_idle_animation" }
         animation = { id = "walk"	        type = "generic_battleship_idle_animation" }
@@ -330,9 +408,12 @@ objectTypes = {
         scale = 1
 	}
 	
+	####
+	# CARRIER
+	####
 	pdxmesh = {
 		name = "generic_carrier_mesh"
-		file = "gfx/models/units/ships/carrier/generic_carrier.mesh"
+		file = "gfx/models/units/generic_carrier.mesh"
 		
 		animation = { id = "idle"			type = "generic_carrier_idle_animation" }
         animation = { id = "walk"	        type = "generic_carrier_idle_animation" }
@@ -340,9 +421,12 @@ objectTypes = {
         scale = 1
 	}
 	
+	####
+	# DESTROYER
+	####
 	pdxmesh = {
 		name = "generic_destroyer_mesh"
-		file = "gfx/models/units/ships/destroyer/generic_destroyer.mesh"
+		file = "gfx/models/units/generic_destroyer.mesh"
 		
 		animation = { id = "idle"			type = "generic_destroyer_idle_animation" }
         animation = { id = "walk"	        type = "generic_destroyer_idle_animation" }
@@ -350,13 +434,17 @@ objectTypes = {
         scale = 1
 	}
 	
+	####
+	# FREIGHTER
+	####
 	pdxmesh = {
 		name = "generic_freighter_mesh"
-		file = "gfx/models/units/ships/freighter/generic_freighter.mesh"
+		file = "gfx/models/units/generic_freighter.mesh"
 		
 		animation = { id = "idle"			type = "generic_freighter_idle_animation" }
         animation = { id = "walk"	        type = "generic_freighter_idle_animation" }
         animation = { id = "attack"	        type = "generic_freighter_idle_animation" }
         scale = 1
 	}
+
 }

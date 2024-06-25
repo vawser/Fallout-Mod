@@ -1,9 +1,6 @@
 # set_variable = { which = province_id value = 3028  }
 
-add_core = GUN
-owner = GUN
-controller = GUN
-is_city = yes
+is_city = no
 
 base_tax = 2
 base_production = 1
@@ -13,9 +10,15 @@ culture = gunner
 religion = survivalist
 
 hre = no
-
+center_of_trade = 1
 trade_goods = unknown
 
+2290.1.1 = {
+    owner = GUN
+    controller = GUN
+    add_core = GUN
+    is_city = yes
+}
 
 
 

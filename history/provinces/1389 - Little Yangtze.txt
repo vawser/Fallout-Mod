@@ -1,9 +1,6 @@
 # set_variable = { which = province_id value = 4016  }
 
-is_city = yes
-add_core = FBZ
-owner = FBZ
-controller = FBZ
+is_city = no
 
 base_tax = 2
 base_production = 1
@@ -13,7 +10,7 @@ culture = robot
 religion = robotics
 
 hre = no
-
+center_of_trade = 1
 trade_goods = unknown
 
 2000.1.1 = {
@@ -21,4 +18,11 @@ trade_goods = unknown
 		name = pf_science_facility
 		duration = -1 
 	}
+}
+
+2290.1.1 = {
+	add_core = FBZ
+        owner = FBZ
+        controller = FBZ
+        is_city = yes
 }

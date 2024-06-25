@@ -1,0 +1,14 @@
+# Exacting Recruitment Standards
+# Simulate the closed nature of the BoS Chapters, which would significantly reduce their manpower pool.
+exacting_recruitment_standards = {
+	potential = {
+		technology_group = tech_bos
+	}
+	trigger = {
+		NOT = { has_country_modifier = lifted_recruitment_restrictions }
+	}
+
+    global_manpower_modifier = -0.1
+    land_forcelimit_modifier = -0.1
+}
+

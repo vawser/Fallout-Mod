@@ -2,17 +2,19 @@ namespace = legion_ruler
 
 # Brain Tumour
 country_event = {
-	id = legion_ruler.1
-	title = legion_ruler.1.title
-	desc = legion_ruler.1.desc
+	id = legion_ruler.2
+	title = legion_ruler.2.title
+	desc = legion_ruler.2.desc
 	picture = AUTO_DOC_eventPicture
 	
-    is_triggered_only = yes
-    
     trigger = {
         NOT = { has_ruler_modifier = brain_tumour }
         has_ruler_modifier = son_of_mars
         NOT = { has_global_flag = caesar_brain_tumour }
+    }
+    
+    mean_time_to_happen = {
+		months = 12
     }
     
     immediate = {
@@ -24,40 +26,28 @@ country_event = {
     }
     
 	option = {
-		name = legion_ruler.1.option.a
+		name = legion_ruler.2.option.a
 		
 		add_ruler_modifier = {
             name = brain_tumour
             duration = -1
-        }
-        
-        ai_chance = {
-            factor = 100
-        }
-	}
-    
-	option = {
-		name = legion_ruler.1.option.b
-		
-        add_years_of_income = -10
-        
-        ai_chance = {
-            factor = 0
         }
 	}
 }
 
 # Caesar succumbs...
 country_event = {
-	id = legion_ruler.2
-	title = legion_ruler.2.title
-	desc = legion_ruler.2.desc
+	id = legion_ruler.3
+	title = legion_ruler.3.title
+	desc = legion_ruler.3.desc
 	picture = CAESAR_TENT_eventPicture
 	
-    is_triggered_only = yes
-    
     trigger = {
         has_ruler_modifier = brain_tumour
+    }
+    
+    mean_time_to_happen = {
+		months = 24
     }
     
     immediate = {
@@ -67,7 +57,7 @@ country_event = {
     }
     
 	option = {
-		name = legion_ruler.2.option.a
+		name = legion_ruler.3.option.a
 		
 		kill_ruler = yes
 	}

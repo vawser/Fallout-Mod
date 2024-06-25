@@ -1,0 +1,194 @@
+
+unity_fev_uplift = {
+	sprite = "GFX_unity_fev_uplift_aspect_icon"
+	cost = 100
+	modifier = {
+			
+	}
+	effect = {	
+		custom_tooltip = unity_fev_uplift_tt
+		hidden_effect = {
+			every_owned_province = { #Hide
+				add_devastation = 3	
+			}
+			add_country_modifier = {
+				name = unity_uplift_mod
+				duration = 5475
+			}	
+		}
+	}
+	trigger = {
+		any_owned_province = {
+			trade_goods = radioactive_waste 
+		}
+		culture_group = super_mutant_group 
+	}
+	ai_will_do = {
+		factor = 10
+
+		#modifier = {
+		#	factor = 5
+		#	any_owned_province = {
+		#		NOT = { culture_group = super_mutant_group }  
+		#	}
+		#}
+	}
+}
+
+unity_pure_vaultdweller_uplift = {
+	sprite = "GFX_unity_pure_vaultdweller_uplift"
+	cost = 100
+	modifier = {
+			
+	}
+	effect = {	
+		if = {
+			limit = {
+				culture_group = super_mutant_group
+			}
+			custom_tooltip = unity_pure_vaultdweller_uplift_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						culture_group = vault_dweller_group
+					}
+					change_culture = ROOT
+				}
+			}
+		}
+		else = {
+			custom_tooltip = unity_pure_vaultdweller_uplift_non_mutant_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						culture_group = vault_dweller_group
+					}
+					change_culture = super_mutant 
+				}
+			}		
+		}
+	}
+	
+	potential = {
+		any_known_country = {
+			culture_group = vault_dweller_group 
+		}
+	}
+	
+	trigger = {
+		any_owned_province = {
+			culture_group = vault_dweller_group 
+		}
+	}
+	ai_will_do = {
+		factor = 10
+
+		#modifier = {
+		#	factor = 5
+		#	any_owned_province = {
+		#		NOT = { culture_group = super_mutant_group }  
+		#	}
+		#}
+	}
+}
+
+unity_recruit_children_of_the_cathedral = {
+	sprite = "GFX_unity_recruit_children_of_the_cathedral_aspect_icon"
+	cost = 100
+	modifier = {
+			
+	}
+	effect = {
+		custom_tooltip = unity_recruit_children_of_the_cathedral_tt
+		hidden_effect = { 
+			define_advisor = {
+				type = fm_inquisitor 
+				skill = 2
+				culture = children_of_the_cathedral 
+				religion = unity
+				discount = yes
+			}	
+			#add_country_modifier = {
+			#	name = unity_coa_recruit
+			#	duration = 5475
+			#}			
+		}
+	}
+	trigger = {
+		any_owned_province = {
+			AND = {
+				NOT = {
+					culture_group = super_mutant_group
+				}
+				religion = unity
+			}
+		}
+		culture_group = super_mutant_group 
+	}
+	ai_will_do = {
+		factor = 10
+
+		#modifier = {
+		#	factor = 5
+		#	any_owned_province = {
+		#		NOT = { culture_group = super_mutant_group }  
+		#	}
+		#}
+	}
+}
+
+unity_encourage_mutant_settlement = {
+	sprite = "GFX_unity_encourage_mutant_settlement_icon"
+	cost = 100
+	modifier = {
+			
+	}
+	effect = {
+		custom_tooltip = unity_encourage_mutant_settlement_tt
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_colony = yes
+				}
+				add_colonysize = 100
+			}
+		}
+	}
+	trigger = {
+		
+	}
+	ai_will_do = {
+		factor = 10
+
+		#modifier = {
+		#	factor = 5
+		#	any_owned_province = {
+		#		NOT = { culture_group = super_mutant_group }  
+		#	}
+		#}
+	}
+}
+
+unity_egalitarian_society = {
+	cost = 200
+	modifier = {
+			
+	}
+	effect = {
+		add_stability = 1	
+		#add_legitimacy = 5
+	}
+	trigger = {
+		
+	}
+	ai_will_do = {
+		factor = 10
+
+		#modifier = {
+		#	factor = 5
+		#	any_owned_province = {
+		#		NOT = { culture_group = super_mutant_group }  
+		#	}
+		#}
+	}
+}

@@ -1,0 +1,41 @@
+boneyard_ideas = {
+    start = {
+		global_manpower_modifier = 0.10		
+		production_efficiency = 0.10	
+    }
+    bonus = {
+		land_maintenance_modifier = -0.10	
+    }
+    
+    trigger = {
+        tag = BYD
+    }
+    free = yes
+    
+    boneyard_idea_1 = { # Unifying Angels Boneyard
+		state_maintenance_modifier = -0.20
+		core_creation = -0.05
+    }
+    boneyard_idea_2 = { # Currency Control
+		global_tax_modifier = 0.15		
+		monthly_gold_inflation_modifier = -0.1	
+		
+    }
+    boneyard_idea_3 = { # Resisting Raiders 
+		infantry_power = 0.10		
+    }
+    boneyard_idea_4 = { # Follower Connection
+		technology_cost = -0.03	
+    }
+    boneyard_idea_5 = { # The Many Settlements
+		annexation_relations_impact = -0.25	
+    }
+    boneyard_idea_6 = { # Legacy Of Unity
+		global_religious_conversion_resistance = 0.2	
+		tolerance_own = 1	
+    }
+    boneyard_idea_7 = { #Deathclaw Hunting
+		native_uprising_chance = -0.25	
+    }
+}
+

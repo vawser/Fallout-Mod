@@ -338,3 +338,53 @@ beastlord_reform = {
     
 	ai = { factor = 1 }
 }
+
+masters_army_remnant_reform = {
+    icon                        = "union" #CHANGE
+    legacy_equivalent           = masters_army_remnant_legacy
+    valid_for_new_country       = no 
+    allow_normal_conversion     = no 
+	allow_convert               = no 
+    valid_for_nation_designer   = yes
+	nation_designer_cost        = 0
+    lock_level_when_selected    = yes
+    
+    nomad                   = yes
+    monarchy                = no
+    heir                    = no
+    raze_province           = yes
+    
+    modifiers = {
+        diplomatic_upkeep = -1	
+        army_tradition_from_battle = 0.35	
+		shock_damage = 0.05
+		raze_power_gain = 0.10			
+        
+        land_forcelimit = 5
+        
+        governing_capacity = -100
+        
+        max_absolutism = 10
+    }
+    
+    conditional = {
+        allow = {
+            has_dlc = "Cradle of Civilization"
+        }
+        
+        government_abilities = {
+            mutation_mechanic
+        }
+    }
+    
+    custom_attributes = {
+        autocratic_succession = yes
+		locked_government_type = yes
+	}
+    
+    potential = {
+        have_had_reform = masters_army_remnant_reform
+    }
+    
+    ai = { factor = 0 }
+}

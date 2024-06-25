@@ -1,0 +1,49 @@
+namespace = flatwoods
+
+# Vault-tec Agricultural Research Center
+country_event = {
+	id = flatwoods.1
+	title = flatwoods.1.title
+	desc = flatwoods.1.desc
+    picture = WV_FLATWOODS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		tag = FAT
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] -  flatwoods.1" }
+        }
+    }
+    
+    #mean_time_to_happen = {
+	#	days = 1
+    #}
+    
+	# Reopen Research Centre
+	option = {
+		name = flatwoods.1.option.a
+		2177 = {
+			add_province_triggered_modifier = flatwood_robotic
+		}
+		# REVOLT 50% list? 
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = { # Abandon it
+		name = flatwoods.1.option.b
+		2177 = {
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+}

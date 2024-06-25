@@ -1,25 +1,30 @@
 # set_variable = { which = province_id value = 390  }
 
-owner = BOS
-controller = BOS
-add_core = BOS
+owner = BIT
+controller = BIT
 add_core = BIT
 is_city = yes
 
-base_tax = 1
-base_production = 2
+base_tax = 5
+base_production = 3
 base_manpower = 2
 
-culture = lost_hills_chapter
-religion = creatorism
+culture = new_california
+religion = secular
 
 hre = no # hre = yes
-
+center_of_trade = 1
 trade_goods = meat
 
 2282.1.1 = {
-    # owner = NCR
-    # controller = NCR
-    # add_core = NCR
+    owner = NCR
+    controller = NCR
+    add_core = NCR
+}
+
+2290.1.1 = {
+    owner = BOS
+    controller = BOS
+    add_core = BOS
 }
 

@@ -1,9 +1,6 @@
 # set_variable = { which = province_id value = 547  }
 
-add_core = INS
-owner = INS
-controller = INS
-is_city = yes
+is_city = no
 
 base_tax = 2
 base_production = 1
@@ -13,6 +10,12 @@ culture = ghoul
 religion = secular
 
 hre = no
-
+center_of_trade = 1
 trade_goods = radioactive_waste
 
+2290.1.1 = {
+    owner = INS
+    controller = INS
+    add_core = INS
+    is_city = yes
+}

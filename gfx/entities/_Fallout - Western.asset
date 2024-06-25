@@ -26,7 +26,23 @@ entity = {
 #----------------------------------------------
 entity = {
     name = "westerngfx_CAVALRY_1"
-    pdxmesh = "american_truck_mesh"
+    pdxmesh = "US_motorized_mesh"
+		
+    default_state = "idle"
+    state = { 
+        name = "idle"				
+        animation = "idle" 				
+    }
+    state = { 
+        name = "move"				
+        animation = "move" 				
+    }
+    state = { 
+        name = "attack"				
+        animation = "idle" 				
+    }
+    scale = 1
+    version = 1
 }
     
 

@@ -5,19 +5,31 @@ controller = HID
 add_core = HID
 
 is_city = yes
-base_tax = 3
-base_production = 2
+base_tax = 6
+base_production = 4
 base_manpower = 3
 
 culture = hidebark
 religion = animism
 
-trade_goods = prewar_technology
+trade_goods = rare_metals 
 hre = no
-center_of_trade = 1
+center_of_trade = 2
 
 fbs_fort_1 = yes
 
+
+2282.1.1 = {
+    owner = CAE
+    controller = CAE
+    add_core = CAE
+}
+
+2290.1.1 = {
+    owner = HID
+    controller = HID
+    add_province_triggered_modifier = cae_currency_hub
+}
 
 
 

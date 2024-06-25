@@ -1,0 +1,52 @@
+# Moleminer
+moleminer_ideas = {
+    start = {
+        monthly_gold_inflation_modifier = -0.2	
+        shock_damage_received = -0.10	
+    }
+    
+    bonus = {
+        production_efficiency = 0.15	
+    }
+    
+    trigger = {
+		OR = {
+			tag = AHP
+			tag = KER
+			tag = MGH
+		}
+    }
+    free = yes
+    
+    # Mining Equiptment 
+    moleminer_idea_1 = {
+        global_trade_goods_size_modifier = 0.1	
+    }
+    # Underground Cities 
+    moleminer_idea_2 = {
+        global_monthly_devastation = -0.05
+		development_cost_in_primary_culture = -0.1	
+    }
+    # Mining Suits
+    moleminer_idea_3 = {
+        land_attrition = -0.10	
+    }
+    # Treasure Hunters
+    moleminer_idea_4 = {
+        available_province_loot = 0.20	
+    }
+    # Molerat Domestication
+    moleminer_idea_5 = {
+        global_unrest = -1	
+		development_cost = -0.05	
+    }
+    # Moleminer Traders
+    moleminer_idea_6 = {
+        caravan_power = 0.15	
+    }
+    # Heavy Ordinance
+    moleminer_idea_7 = {
+        shock_damage = 0.10	
+    }
+}
+

@@ -100,38 +100,16 @@ country_decisions = {
     
 	follow_the_original_directive = {
 		potential = {
-			technology_group = tech_bos
-            NOT = { has_country_modifier = directive_selection_cooldown }
+			has_reform = brotherhood_reform
+			NOT = { has_country_modifier = original_directive }
+			NOT = { has_country_modifier = brotherhood_fascist_directive }
 		}
 		allow =  {
-			technology_group = tech_bos
-            if = {
-                limit = {
-                    has_country_modifier = brotherhood_fascist_directive
-                }
-                stability = 1
-            }
+			has_reform = brotherhood_reform
+            years_of_income = 1
 		}
 	  	effect = {
-            hidden_effect = {
-                add_country_modifier = {
-                    name = directive_selection_cooldown
-                    duration = 10950
-                    hidden = yes
-                }
-            }
-            if = {
-                limit = {
-                    has_country_modifier = brotherhood_fascist_directive
-                }
-                add_stability = -1
-                remove_country_modifier = brotherhood_fascist_directive
-                add_country_modifier = { 
-                    name = brotherhood_unrest
-                    duration = 3650
-                }
-            }
-            
+            add_years_of_income = -1
 			add_country_modifier = { 
 				name = original_directive
 				duration = -1
@@ -139,7 +117,6 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-            
 			modifier = {
 				factor = 1
 				NOT = { tag = BRO }
@@ -149,38 +126,16 @@ country_decisions = {
 	
 	adopt_a_more_fascist_directive = {
 		potential = {	
-			technology_group = tech_bos
-            NOT = { has_country_modifier = directive_selection_cooldown }
+			has_reform = brotherhood_reform
+			NOT = { has_country_modifier = original_directive }
+			NOT = { has_country_modifier = brotherhood_fascist_directive }
 		}
 		allow =  {
-            technology_group = tech_bos
-            if = {
-                limit = {
-                    has_country_modifier = brotherhood_fascist_directive
-                }
-                stability = 1
-            }
+			has_reform = brotherhood_reform
+            years_of_income = 1
 		}
 	  	effect = {
-            hidden_effect = {
-                add_country_modifier = {
-                    name = directive_selection_cooldown
-                    duration = 10950
-                    hidden = yes
-                }
-            }
-            if = {
-                limit = {
-                    has_country_modifier = original_directive
-                }
-                add_stability = -1
-                remove_country_modifier = original_directive
-                add_country_modifier = { 
-                    name = brotherhood_unrest
-                    duration = 3650
-                }
-            }
-            
+            add_years_of_income = -1
 			add_country_modifier = { 
 				name = brotherhood_fascist_directive
 				duration = -1
@@ -195,79 +150,28 @@ country_decisions = {
 		}
 	}
     
-    lower_recruitment_standards = {
+    lift_recruitment_restrictions = {
 		potential = {	
-			technology_group = tech_bos
-            NOT = { has_country_modifier = recruitment_standard_cooldown }
-            OR = {
-                has_country_modifier = recruitment_standard_extreme
-                has_country_modifier = recruitment_standard_high
-                has_country_modifier = recruitment_standard_medium
-            }
+			has_reform = brotherhood_reform
+			NOT = { has_country_modifier = lifted_recruitment_restrictions }
 		}
 		allow =  {
-			OR = {
-                has_country_modifier = recruitment_standard_extreme
-                has_country_modifier = recruitment_standard_high
-                has_country_modifier = recruitment_standard_medium
-            }
+			has_reform = brotherhood_reform
             stability = 1
 		}
 	  	effect = {
-            hidden_effect = {
-                add_country_modifier = {
-                    name = recruitment_standard_cooldown
-                    duration = 10950
-                    hidden = yes
-                }
-            }
-            
-            add_stability = -1
+            add_stability = -5
 			add_country_modifier = { 
+				name = lifted_recruitment_restrictions
+				duration = -1
+			}
+            add_country_modifier = { 
 				name = brotherhood_unrest
 				duration = 3650
 			}
             capital_scope = {
                 noble_rebels = 3
             }
-            
-            # Extreme -> High
-            if = {
-                limit = {
-                    has_country_modifier = recruitment_standard_extreme
-                }
-                
-                remove_country_modifier = recruitment_standard_extreme
-                add_country_modifier = {
-                    name = recruitment_standard_high
-                    duration = -1
-                }
-            }
-            # High -> Medium
-            else_if = {
-                limit = {
-                    has_country_modifier = recruitment_standard_high
-                }
-                
-                remove_country_modifier = recruitment_standard_high
-                add_country_modifier = {
-                    name = recruitment_standard_medium
-                    duration = -1
-                }
-            }
-            # Medium -> Low
-            else_if = {
-                limit = {
-                    has_country_modifier = recruitment_standard_medium
-                }
-                
-                remove_country_modifier = recruitment_standard_medium
-                add_country_modifier = {
-                    name = recruitment_standard_low
-                    duration = -1
-                }
-            }
-            
 		}
 		ai_will_do = {
 			factor = 1
@@ -275,110 +179,7 @@ country_decisions = {
 			modifier = {
 				factor = 0
 				
-                NOT = { stability = 2 }
-			}
-            
-            # These chapters won't ever lower standards
-            modifier = {
-				factor = 0
-				
-                OR = {
-                    tag = BOS
-                    tag = MCT
-                    tag = VB1
-                    tag = VBO
-                }
-			}
-            
-            # Stop adjusting after growing to a certain size
-            modifier = {
-				factor = 0
-				
-                total_development = 300
-			}
-		}
-	}
-    
-    raise_recruitment_standards = {
-		potential = {	
-			technology_group = tech_bos
-            NOT = { has_country_modifier = recruitment_standard_cooldown }
-            OR = {
-                has_country_modifier = recruitment_standard_high
-                has_country_modifier = recruitment_standard_medium
-                has_country_modifier = recruitment_standard_low
-            }
-		}
-		allow =  {
-			OR = {
-                has_country_modifier = recruitment_standard_high
-                has_country_modifier = recruitment_standard_medium
-                has_country_modifier = recruitment_standard_low
-            }
-            manpower = 10
-		}
-	  	effect = {
-            hidden_effect = {
-                add_country_modifier = {
-                    name = recruitment_standard_cooldown
-                    duration = 10950
-                    hidden = yes
-                }
-            }
-            add_manpower = -10
-            
-            # High -> Extreme
-            if = {
-                limit = {
-                    has_country_modifier = recruitment_standard_high
-                }
-                
-                remove_country_modifier = recruitment_standard_high
-                add_country_modifier = {
-                    name = recruitment_standard_extreme
-                    duration = -1
-                }
-            }
-            # Medium -> High
-            else_if = {
-                limit = {
-                    has_country_modifier = recruitment_standard_medium
-                }
-                
-                remove_country_modifier = recruitment_standard_medium
-                add_country_modifier = {
-                    name = recruitment_standard_high
-                    duration = -1
-                }
-            }
-            # Low -> Medium
-            else_if = {
-                limit = {
-                    has_country_modifier = recruitment_standard_low
-                }
-                
-                remove_country_modifier = recruitment_standard_low
-                add_country_modifier = {
-                    name = recruitment_standard_low
-                    duration = -1
-                }
-            }
-            
-		}
-		ai_will_do = {
-			factor = 1
-            
-			modifier = {
-				factor = 0
-				
-                NOT = { manpower = 30 }
-			}
-            
-            # Stop adjusting after growing to a certain size
-            modifier = {
-				factor = 0
-				
-                total_development = 300
+                NOT = { total_development = 300 }
 			}
 		}
 	}

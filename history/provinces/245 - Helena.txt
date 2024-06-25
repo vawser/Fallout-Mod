@@ -1,11 +1,8 @@
 
-owner = RSB
-controller = RSB
-add_core = RSB
-is_city = yes
+is_city = no
 
 base_tax = 1
-base_production = 2
+base_production = 1
 base_manpower = 2
 
 culture = rustbucket
@@ -13,7 +10,6 @@ religion = survivalist
 
 trade_goods = unknown
 hre = no
-
 center_of_trade = 1
 
 2000.1.1 = {
@@ -21,6 +17,13 @@ center_of_trade = 1
 		name = trade_post
 		duration = -1 
 	}
+}
+
+2290.1.1 = {
+    owner = RSB
+    controller = RSB
+    add_core = RSB
+    is_city = yes
 }
 
 

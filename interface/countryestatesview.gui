@@ -292,7 +292,7 @@
 	windowType = {
 		name = "crown_land_interaction_item"
 		position = { x = 0 y = 0 }
-		size = { x = 40 y = 40 }
+		size = { x = 48 y = 48 }
 		show_position = { x = 0 y = 0 }
 		moveable = 0
 
@@ -506,21 +506,39 @@
 			maxHeight = 32
 			format = left
 		}
-        
+
+
 		gridBoxType = {
 			name = "crown_land_interactions"
-			position = { x = 40 y = 240 }
+			position = { x = 270 y = 180 }
 			size = { width = 200 height = 100 }
-			slotsize = { width = 40 height = 40 }
-			max_slots_horizontal = 12
+			slotsize = { width = 48 height = 48 }
+			max_slots_horizontal = 3
 			format = "UPPER_LEFT"
 		}
 
 		smoothListboxType = {
 			name = "estates_listbox"
 			backGround = ""
-			position = { x = 30 y = 280 }
-			size = { x = 500 y = 125 }
+			position = { x = 30 y = 240 }
+
+			if_resolution = {
+				max_height = 867
+				size = { x = 500 y = 300 }
+			}
+
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				size = { x = 500 y = 150 }
+			}
+
+			if_resolution = {
+				min_height = 1048
+				size = { x = 500 y = 150 }
+			}
+
+			
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0

@@ -236,7 +236,7 @@ spread_religious_propaganda_action = {
 	
 	is_visible = {
         NOT = { has_country_modifier = recently_sent_religious_propaganda }
-        has_idea = fallout_propaganda_ideas_6
+        has_idea = fallout_propaganda_ideas_7
 		FROM = {
             NOT = { religion = ROOT }
             any_owned_province = {
@@ -960,7 +960,7 @@ manipulate_opinion = {
             if = {
                 limit = {
                     ROOT = {
-                        has_idea = fallout_espionage_ideas_3
+                        has_idea = fallout_espionage_ideas_7
                     }
                 }
                 

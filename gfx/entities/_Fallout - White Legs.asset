@@ -25,7 +25,22 @@ entity = {
 entity = {
     name = "WLS_CAVALRY_1"
     pdxmesh = "legion_truck_mesh"
-    version = 1
+		
+    default_state = "idle"
+    state = { 
+        name = "idle"				
+        animation = "idle" 				
+    }
+    state = { 
+        name = "move"				
+        animation = "move" 				
+    }
+    state = { 
+        name = "attack"				
+        animation = "idle" 				
+    }
+    scale = 1
+    version = 2
 }
     
 

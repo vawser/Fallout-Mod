@@ -1,8 +1,5 @@
 
-is_city = yes
-add_core = TNK
-owner = TNK
-controller = TNK
+is_city = no
 
 base_tax = 2
 base_production = 1
@@ -12,7 +9,7 @@ culture = robot
 religion = robotics
 
 hre = no
-
+center_of_trade = 1
 trade_goods = prewar_technology
 
 2000.1.1 = {
@@ -20,5 +17,12 @@ trade_goods = prewar_technology
 		name = pf_science_facility
 		duration = -1 
 	}
+}
+
+2290.1.1 = {
+	add_core = TNK
+        owner = TNK
+        controller = TNK
+        is_city = yes
 }
 

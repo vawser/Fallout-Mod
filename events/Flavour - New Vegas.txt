@@ -1054,37 +1054,3 @@ country_event = {
 		# }		
 	# }
 # }
-
-
-# Empty Casinos
-country_event = {
-	id = new_vegas.30
-	title = new_vegas.30.title
-	desc = new_vegas.30.desc
-    picture = STRIP_CASINO_eventPicture
-	
-	trigger = {
-        tag = NVG
-        war_with = NCR
-        NOT = { has_country_modifier = new_vegas_empty_casinos }
-    }
-    
-    immediate = {
-        hidden_effect = {
-            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - new_vegas.30" }
-        }
-    }
-    
-    mean_time_to_happen = {
-        months = 120
-    }
-    
-	option = {
-		name = new_vegas.30.option.a
-		
-        add_country_modifier = {
-            name = new_vegas_empty_casinos
-            duration = 3650
-        }
-	}
-}

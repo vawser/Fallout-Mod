@@ -158,12 +158,7 @@ can_colonize_province = {
             has_terrain = fm_irradiated_wasteland
 		}
 		allow = {
-			FROM = { 
-                OR = {
-                    has_idea = fallout_settlement_ideas_1 
-                    has_idea = fallout_expansion_ideas_7
-                }
-            }
+			FROM = { has_idea = fallout_settlement_ideas_1 }
 		}
 	}
 }
@@ -175,12 +170,7 @@ can_colonize_province_siberian_frontier = {
             has_terrain = fm_irradiated_wasteland
 		}
 		allow = {
-			FROM = { 
-                OR = {
-                    has_idea = fallout_settlement_ideas_7
-                    has_idea = fallout_expansion_ideas_7
-                }
-            }
+			FROM = { has_idea = fallout_settlement_ideas_1 }
 		}
 	}
 }
@@ -231,20 +221,4 @@ is_possible_hre_province = {
 will_demand_annexation = {
 	
 	
-}
-
-can_join_hre = {
-	condition = {
-		tooltip = "PERMANENTLY_LEFT_HRE"
-		potential = {
-		}
-		allow = {
-			NOT = {
-				has_country_flag = permanently_left_hre_flag
-			}
-		}
-	}
-}
-
-can_leave_hre = {
 }

@@ -1,90 +1,65 @@
-tactical_doctrine_grand_battle_plan = {
-	can_select = {
-		mil_power = 250
-        is_at_war = no
-	}
+# fleet_in_being =
+# {
+	# can_select = {
+		# is_primitive = no
+	# }
 	
-	country_modifier = {
-        army_tradition_from_battle = 0.33
-        global_regiment_cost = -0.1
-        global_regiment_recruit_speed = -0.1
-	}
-    
-    effect = {
-        add_mil_power = -250
-    }
+	# country_modifier = {
+		# naval_maintenance_modifier = -0.15
+	# }
 	
-	button_gfx = 1
-}
-tactical_doctrine_mobile_warfare = {
-	can_select = {
-		mil_power = 250
-        is_at_war = no
-	}
+	# button_gfx = 1
+# }
+
+# free_oarsmen =
+# {
+	# can_select = {
+		# is_primitive = no
+	# }
+
+	# country_modifier = {
+		# galley_power = 0.15
+	# }
 	
-	country_modifier = {
-        movement_speed = 0.1
-        reinforce_speed = 0.1
-        reserves_organisation = 0.1
-	}
-    
-    effect = {
-        add_mil_power = -250
-    }
+	# button_gfx = 2
+# }
+
+# merchant_navy =
+# {
+	# can_select = {
+		# is_primitive = no
+	# }
+
+	# country_modifier = {
+		# global_ship_trade_power = 0.33
+	# }
 	
-	button_gfx = 4
-}
-tactical_doctrine_superior_firepower = {
-	can_select = {
-		mil_power = 250
-        is_at_war = no
-	}
+	# button_gfx = 3
+# }
+
+# ship_boarding =
+# {
+	# can_select = {
+		# is_primitive = no
+	# }
+
+	# country_modifier = {
+		# capture_ship_chance = 0.33
+	# }
 	
-	country_modifier = {
-        fire_damage = 0.1
-        backrow_artillery_damage = 0.1
-        leader_siege = 1.0
-	}
-    
-    effect = {
-        add_mil_power = -250
-    }
-	
-	button_gfx = 3
-}
-tactical_doctrine_mass_assault = {
-	can_select = {
-		mil_power = 250
-        is_at_war = no
-	}
-	
-	country_modifier = {
-        war_exhaustion = -0.03
-        land_maintenance_modifier = -0.1
-        manpower_recovery_speed = 0.1
-	}
-    
-    effect = {
-        add_mil_power = -250
-    }
-	
-	button_gfx = 2
-}
-tactical_doctrine_defence_in_depth = {
-	can_select = {
-		mil_power = 250
-        is_at_war = no
-	}
-	
-	country_modifier = {
-        defensiveness = 0.1
-        own_territory_dice_roll_bonus = 1.0
-        hostile_attrition = 1.0
-	}
-    
-    effect = {
-        add_mil_power = -250
-    }
-	
-	button_gfx = 5
-}
+	# button_gfx = 4
+# }
+
+# wooden_wall =
+# {
+	# can_select = {
+		# is_primitive = no
+	# }
+
+	# country_modifier = {
+		# own_coast_naval_combat_bonus = 1.0
+	# }
+
+	# button_gfx = 5
+# }
+

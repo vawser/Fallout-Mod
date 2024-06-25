@@ -133,6 +133,15 @@ country_event = {
             name = VAU_CHEATERS
             duration = 1850
         }
+		if = {
+			limit = {
+				AND = {
+					uses_karma = yes
+					has_dlc = "Common Sense"
+				}
+			}
+			add_karma = -5
+		}	
 	}		
 }
 
@@ -292,6 +301,15 @@ country_event = {
             name = VAU_DEP_SYNDROME_MEDICATED
             duration = 1000
         }
+		if = {
+			limit = {
+				AND = {
+					uses_karma = yes
+					has_dlc = "Common Sense"
+				}
+			}
+			add_karma = 2
+		}	
 	}	
 }
 

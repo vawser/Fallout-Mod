@@ -1,0 +1,230 @@
+##These are Generic missions, available to all tags that don't have an override.
+##Below are mission series, within them are the actual missions.
+#
+##---------------------------------------------------
+## Mojave Express
+#moj_missions_1_dummy = {
+#	slot = 1
+#    
+#	ai = yes
+#    has_country_shield = yes
+#    
+#	potential = {
+#        tag = MOJ
+#	}
+#	
+#	moj_ulysses_legacy = {
+#		icon = mission_usa_flag # CUSTOM GFX NEEDED
+#		position = 3
+#		required_missions = { moj_corporate_restructuring }
+#        
+#		trigger = { 
+#			owns_core_province = 1422
+#        }
+#		effect = {
+#			add_republican_tradition = 10
+#			# CUSTOM GOVLEVEL EFFECT
+#			set_country_flag = moj_america_path #CHANGE TO EVENT
+#			swap_non_generic_missions = yes	
+#		}
+#	}
+#
+#}
+#
+#moj_missions_1_america = {
+#	slot = 1
+#    
+#	ai = yes
+#    has_country_shield = yes
+#    
+#	potential = {
+#        tag = MOJ
+#		has_country_flag = moj_america_path
+#	}
+#	
+#	moj_ulysses_B = {
+#		icon = mission_usa_flag # CUSTOM GFX NEEDED
+#		position = 4
+#		required_missions = { moj_ulysses_legacy }
+#        
+#		trigger = { 
+#			owns_core_province = 1422
+#        }
+#		effect = {
+#			add_republican_tradition = 10
+#			# CUSTOM GOVLEVEL EFFECT
+#		}
+#	}
+#
+#}
+#
+#moj_missions_2_dummy = {
+#	slot = 2
+#    
+#	ai = yes
+#    has_country_shield = yes
+#    
+#	potential = {
+#        tag = MOJ
+#	}
+#	
+#	moj_corporate_restructuring = {
+#		icon = mission_government_ruins # CUSTOM GFX NEEDED
+#		position = 2
+#		required_missions = { moj_active_couriers }
+#        
+#		trigger = { 
+#			reform_level = 2
+#        }
+#		effect = {
+#			add_republican_tradition = 10
+#			# CUSTOM GOVLEVEL EFFECT
+#		}
+#	}
+#
+#}
+#
+#moj_missions_3_dummy = {
+#	slot = 3
+#    
+#	ai = yes
+#    has_country_shield = yes
+#    
+#	potential = {
+#        tag = MOJ
+#	}
+#	
+#	moj_active_couriers = {
+#		icon = mission_road 
+#		required_missions = { }
+#        
+#		trigger = { 
+#			num_of_diplomatic_relations = 3
+#			#NOT = { has_country_modifier = totem_wls }
+#        }
+#		effect = {
+#			add_treasury = 50	
+#			add_country_modifier = {
+#				name = moj_active_couriers_mod
+#				duration = 4554
+#			}		
+#		}
+#	}
+#	
+#	moj_mojave_branch_office = {
+#		icon = mission_lucky_38 
+#		position = 3
+#		required_missions = { moj_active_couriers }
+#		
+#		provinces_to_highlight = {
+#			province_id = 118
+#		}
+#        
+#		trigger = { 
+#			OR = {
+#				118 = {
+#					reverse_has_opinion = {
+#						who = ROOT
+#						value = 80
+#					}
+#				}
+#				owns_core_province = 118
+#			}
+#        }
+#		effect = {
+#
+#			every_country = {
+#				limit = {
+#					owns_core_province = 118
+#					NOT = {
+#						tag = ROOT
+#					}
+#				}
+#				add_treasury = 50	#REWORK
+#			}
+#			add_country_modifier = {
+#				name = moj_return_to_vegas
+#				duration = 5554
+#			}				
+#			add_mercantilism = 3	
+#		}
+#	}
+#
+#}
+#
+#
+#
+#moj_missions_4_dummy = {
+#	slot = 4
+#    
+#	ai = yes
+#    has_country_shield = yes
+#    
+#	potential = {
+#        tag = MOJ
+#	}
+#	
+#	moj_mercenary_contracts = {
+#		icon = mission_military_store
+#		position = 2
+#		required_missions = { moj_active_couriers }
+#        
+#		trigger = { 
+#			full_idea_group = fallout_mercenary_army_ideas 
+#        }
+#		effect = {
+#			#UNLOCK UNIQUE MERC GROUP
+#		}
+#	}
+#
+#}
+#
+#moj_missions_5_dummy = {
+#	slot = 5
+#    
+#	ai = yes
+#    has_country_shield = yes
+#    
+#	potential = {
+#        tag = MOJ
+#	}
+#	
+#	moj_hub_dominance = {
+#		icon = mission_road 
+#		required_missions = { }
+#		
+#		provinces_to_highlight = {
+#			province_id = 2080
+#			province_id = 562
+#			province_id = 563
+#			province_id = 565
+#			province_id = 564
+#		}
+#        
+#		trigger = { 
+#			owns_core_province = 2080
+#			owns_core_province = 562
+#			owns_core_province = 563
+#			owns_core_province = 565
+#			owns_core_province = 564
+#        }
+#		effect = {
+#			add_treasury = 50	
+#			2080 = {
+#				add_base_tax = 2	
+#				add_base_production = 2	
+#				add_base_manpower = 2
+#				add_province_modifier = { 
+#					name = mojave_express_hq
+#					duration = -1  
+#				}				
+#			}
+#		}
+#	}
+#	
+#	# JUNKTOWN
+#	
+#	# MOJ OUTPOST
+#
+#}
+

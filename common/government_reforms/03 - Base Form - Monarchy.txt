@@ -45,8 +45,8 @@ legion_reform = {
         army_tradition = 1
         discipline = 0.05
         
-        land_forcelimit = 15
-        naval_forcelimit = 15
+        land_forcelimit = 10
+        naval_forcelimit = 10
 
         governing_capacity = 250
 
@@ -93,6 +93,9 @@ new_vegas_reform = {
         global_tax_modifier = 0.2
         monarch_diplomatic_power = 1
         
+        land_forcelimit = 5
+        naval_forcelimit = 5
+
         governing_capacity = 250
 
         max_absolutism = 10
@@ -217,7 +220,23 @@ shi_reform = {
         
         max_absolutism = 10
     }
-    
+	
+    conditional = {
+        allow = {
+            has_dlc = "Domination"
+        }
+        
+        government_abilities = {
+            shi_research_department_mechanic
+        }
+    }   
+
+    factions = {
+        chemistry_and_mechanics_researchers 
+        xeno_and_botany_researchers
+        medical_and_fev_researchers
+    }	
+	
     custom_attributes = {
         shi_succession = yes
 		locked_government_type = yes
@@ -226,6 +245,8 @@ shi_reform = {
     potential = {
         have_had_reform = shi_reform
     }
+
+
 }
 
 # New Reno

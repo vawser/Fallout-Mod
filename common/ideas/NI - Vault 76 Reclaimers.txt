@@ -1,0 +1,52 @@
+# Vault 76 Reclaimers
+vault_reclaimer_ideas = {
+    start = {
+        global_tax_income = 12	
+        relation_with_same_culture = 20		
+    }
+    
+    bonus = {
+        discipline = 0.05
+    }
+    
+    trigger = {
+		OR = {
+			tag = FAT
+			tag = SUT
+			tag = MGN
+		}
+    }
+    free = yes
+    
+    # C.A.M.P
+    vault_reclaimer_idea_1 = {
+        colonists = 1	
+		colony_cost_modifier = -0.15	
+    }
+    # Campaign Against The Scorched 
+    vault_reclaimer_idea_2 = {
+        leader_land_shock = 1	
+    }
+    # Vault-Tec Training
+    vault_reclaimer_idea_3 = {
+        idea_cost = -0.1	
+    }
+    # Scorchbeast Vaccine 
+    vault_reclaimer_idea_4 = {
+        diplomatic_reputation = 1	
+    }
+    # Seventy Sixers
+    vault_reclaimer_idea_5 = {
+        same_culture_advisor_cost = -0.15	
+		manpower_in_own_culture_provinces = 0.10	
+    }
+    # Rebuilding West Virginia
+    vault_reclaimer_idea_6 = {
+        build_cost = -0.15	
+    }
+    # Skilled Settlers
+    vault_reclaimer_idea_7 = {
+        global_trade_goods_size_modifier = 0.1	
+    }
+}
+

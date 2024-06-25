@@ -9,15 +9,26 @@ base_tax = 1
 base_production = 1
 base_manpower = 2
 
-culture = powder_ganger
-religion = survivalist
+culture = borrego 
+religion = secular
 
 hre = no # hre = yes
-
+center_of_trade = 1
 trade_goods = munitions
 
 2282.1.1 = {
-    # owner = NCR
-    # controller = NCR
-    # add_core = NCR
+    owner = NCR
+    controller = NCR
+    add_core = NCR
 }
+
+2290.1.1 = {
+    owner = FIE
+    controller = FIE
+    add_core = FIE
+    culture = fiends
+    religion = survivalist 
+}
+
+
+

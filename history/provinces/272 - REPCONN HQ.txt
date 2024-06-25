@@ -1,23 +1,17 @@
 # set_variable = { which = province_id value = 272  }
 
-owner = MCT
-controller = MCT
-add_core = MCT
-is_city = yes
+is_city = no
 
-base_tax = 1
-base_production = 3
-base_manpower = 1
+base_tax = 2
+base_production = 1
+base_manpower = 2
 
 culture = robot
 religion = robotics
 
 hre = no
-
+center_of_trade = 1
 trade_goods = prewar_technology
-
-
-
 
 
 2280.1.1 = {
@@ -28,7 +22,12 @@ trade_goods = prewar_technology
 }
 
 
-
+2290.1.1 = {
+    owner = MCT
+    controller = MCT
+    add_core = MCT
+    is_city = no
+}
 
 
 

@@ -909,3 +909,209 @@ country_event = {
 		add_treasury = 15		
 	}
 }
+
+#"Research Project - Chemistry and Mechanics Researchers" 
+## The scientists representing the Chemistry and Mechanics researchers have assemble a portfolio of projects to choose from which require funding.  
+country_event = {
+	id = shi.23
+	title = shi.23.title
+	desc = shi.23.desc
+    picture = INS_LAB_eventPicture
+
+    is_triggered_only = yes
+
+	trigger = {
+		#tag = SHI 
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.23" }
+        }
+    }
+    
+	option = {		#Finalise Polymeric Combat Armour designs
+		name = shi.23.option.a
+		trigger = {
+			NOT = {
+				has_country_flag = shi_polymeric_armour_trigger
+			}	
+		}
+		add_country_modifier = {
+    		name = shi_polymeric_combat_armour
+    		duration = -1
+		}	
+		add_treasury = -45
+		set_country_flag = shi_polymeric_armour_trigger
+	}
+	
+	option = {		# Prioritise administrative technology
+		name = shi.23.option.b
+		add_country_modifier = {
+    		name = shi_admin_bonus_a
+    		duration = 1200
+		}		
+	}
+	
+	option = {		# Use Experimental Chems on population 
+		name = shi.23.option.c
+        trigger = {		
+			any_owned_province = {
+				trade_goods = drugs 
+				controlled_by = owner
+			}		
+		}
+		# COMMUNICATE VIA LOCAL INSTEAD BELLOW - TODO 
+		every_owned_province = {
+			limit = {
+				trade_goods = drugs 
+				controlled_by = owner
+			}
+			add_adm_power = 5
+			add_province_modifier = {
+				name = shi_chem_experimentation
+				duration = 2400			
+			}
+		}	
+	}
+	
+}
+
+#"Research Project - Xeno and Botany Researchers" 
+## The scientists representing the Xeno and Botany researchers have assemble a portfolio of projects to choose from which require funding.  
+country_event = {
+	id = shi.24
+	title = shi.24.title
+	desc = shi.24.desc
+    picture = INS_LAB_eventPicture
+
+    is_triggered_only = yes
+
+	trigger = {
+		#tag = SHI 
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.24" }
+        }
+    }
+    
+	option = {		#Finalise Polymeric Combat Armour designs
+		name = shi.24.option.a
+		trigger = {
+			owns = 2076
+			NOT = {
+				has_country_flag = shi_rad_plants_trigger
+			}	
+		}
+		2076 = {
+			add_permanent_province_modifier = {
+				name = shi_rad_plants
+				duration = -1	
+			}
+		}
+		set_country_flag = shi_rad_plants_trigger
+		add_treasury = -45
+	}
+	
+	option = {		# Prioritise administrative technology
+		name = shi.24.option.b
+		add_country_modifier = {
+    		name = shi_admin_bonus_b
+    		duration = 1200
+		}		
+	}
+	
+	option = {		# botanical experimentation 
+		name = shi.24.option.c
+        trigger = {		
+			any_core_province  = {
+				trade_goods = food
+				controlled_by = owner
+			}		
+		}
+		random_core_province = {
+			limit = {
+				trade_goods = food 
+				controlled_by = owner
+			}
+			add_base_production = 1	
+		}	
+	}
+	
+}
+
+#"Research Project - Medical and FEV Researchers" 
+## The scientists representing the Medical and FEV researchers have assemble a portfolio of projects to choose from which require funding. 
+country_event = {
+	id = shi.25
+	title = shi.25.title
+	desc = shi.25.desc
+    picture = INS_LAB_eventPicture
+
+    is_triggered_only = yes
+
+	trigger = {
+		#tag = SHI 
+	}
+	
+    immediate = {
+        hidden_effect = {
+            if = { limit = { has_global_flag = enable_event_logging } log = "[Root.GetName] - shi.25" }
+        }
+    }
+    
+	#option = {		#CHANGE
+	#	name = shi.25.option.a
+	#	trigger = {
+	#		NOT = {
+	#			has_country_flag = shi_polymeric_armour
+	#		}	
+	#	}
+	#	add_country_modifier = {
+    #		name = shi_polymeric_combat_armour
+    #		duration = -1
+	#	}	
+	#	add_treasury = -45
+	#	set_country_flag = shi_polymeric_armour
+	#}
+	
+	option = {		# Prioritise administrative technology
+		name = shi.25.option.b
+		add_country_modifier = {
+    		name = shi_admin_bonus_c
+    		duration = 1200
+		}		
+	}
+	
+	option = {		# FEV Experimentation
+		name = shi.25.option.c
+       trigger = {		
+			any_core_province  = {
+				trade_goods = radioactive_waste 
+				controlled_by = owner
+			}		
+		}
+		random_list = {
+			50 = {
+				random_core_province = {
+					limit = {
+						trade_goods = radioactive_waste 
+						controlled_by = owner
+					}
+					add_base_production = 1	
+				}	
+			}
+			50 = {
+				define_advisor = {
+					type = fm_researcher 
+					discount = yes
+					skill = 3
+					culture = super_mutant 
+				}
+			}
+		}	
+	}
+	
+}
